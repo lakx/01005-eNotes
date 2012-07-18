@@ -1,0 +1,118 @@
+\input{../Strukturfiler/preambel}
+\setcounter{chapter}{0} %SÆT DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% HERFRA SKAL DU SKRIVE ELLER INDSÆTTE %%%%
+%%% DEN FIL DU ØNSKER %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Talrummene $\mathbb R^n $ og $\mathbb C^n $} \label{tn1}
+
+enoten er under revision.
+
+\input{../Strukturfiler/postambel} 
+
+\begin{basis}
+Denne eNote handler om talrummet $\mathbb R^n $, der er fundamentalt at forstå for at følge med i eNoterne om Lineær Algebra.
+\end{basis}
+
+\section{Talrummet $\mathbb R^n $}
+
+Talrummet $\mathbb R ^n$ består af alle ordnede talsæt som indeholder $n$ reelle elementer. Fx er $(1,4,5)$ og $(1,5,4)$ to forskellige talsæt som tilhører $\mathbb R ^3$. Mere formelt kan vi opskrive skrive $\mathbb R ^n$ på mængdeform således:
+\begin{equation}\label{eqRn}
+\mathbf R ^n=\{(a_1,a_2,...,a_n)\,|\,a_i \in \mathbb R\}\,.
+\end{equation}
+
+Vi indfører addition af elementer i $\mathbb R ^n$ og multiplikation af et element i $\mathbb R ^n$ med et reelt tal ved følgende definition:
+
+\begin{definition}\label{tn1.defRegneOP}
+Lad $(a_1,a_2,...,a_n)$ og $(b_1,b_2,...,b_n)$ være elementer i $\mathbb R ^n$ og lad $k$ være et reelt tal (en \emph{skalar}).
+\textit{Summen} af talsættene defineres ved ligningen
+\begin{equation}\label{eqRnSum}
+(a_1,a_2,...,a_n)+(b_1,b_2,...,b_n)=(a_1+b_1,a_2+b_2,...,a_n+b_n),
+\end{equation}
+og \textit{produktet} af $(a_1,a_2,...,a_n)$ med $k$ ved
+\begin{equation}\label{eqRnMult}
+k\cdot(a_1,a_2,...,a_n)=(a_1,a_2,...,a_n)\cdot k=(k\cdot a_1,k\cdot a_2,...,k\cdot a_n\,).
+\end{equation}
+\end{definition}
+
+Addition og multiplikation med skalar foregår således pladsvis.
+
+\begin{example}
+Et eksempel på addition af to talsæt i  $\mathbb R ^4$ er
+$(1,2,3,4)+(2,1,-2,-5)=(3,3,1,-1)$.
+\end{example}
+\begin{example}
+Et eksempel på multiplikation af tallet 5 med et talsæt i  $\mathbb R ^3$ er
+$5\cdot(2,4,5)=(10,20,25)$.
+\end{example}
+
+Som kort notation for talsæt vil vi bruge små \textbf{fede} bogstaver, vi kan for eksempel skrive 
+$$\mathbf{a}=(3,2,1)\,\,\,\mathrm{eller}\,\,\,\mathbf{b}=(b_1,b_2,...,b_n)\,.$$
+For talsættet $(0,0,...,0)$, som kaldes \emph{nulelementet} i $\mathbb R ^n$, benyttes skrivemåden $$\mathbf{0}=(0,0,...,0)\,.$$
+
+Når man skal foretage mere sammensatte regneopgaver i talrummene, får man brug for de følgende regneregler.
+
+\begin{theorem}
+Med de i definition \ref{tn1.defRegneOP} indførte regneoperationer opfylder talrummet $\mathbb R ^n$ for enhver værdi af $n$ de følgende otte regneregler:
+\begin{enumerate}
+\item
+$ \ma + \mb = \mb + \ma $ \,(addition er kommutativ) 
+\item
+$ (\ma + \mb) + \mc = \ma + (\mb + \mc) $ \,(addition er associativ) 
+\item
+Der findes \textit{neutralt element} for addition betegnet $\mnul$ således at $\ma + \mnul = \ma $ for alle $\ma \in \reel^n$ 
+\item
+Til ethvert $\ma$ findes et \textit{modsat element} $-\ma \in \reel^n$ således at $ \ma + (-\ma) = \mnul $ 
+\item
+$ k_1(k_2\ma) = (k_1k_2)\ma $ \,(produkt med skalarer er associativt) 
+\item
+$ (k_1 + k_2)\ma = k_1\ma + k_2\ma $ \,(distributiv regel) 
+\item
+$ k_1(\ma+\mb) = k_1\ma + k_1\mb $ \,(distributiv regel)  
+\item
+$ 1\ma = \ma $ \,(1 er neutral i produkt med skalar) 
+\end{enumerate}
+\end{theorem}
+
+\begin{bevis}
+Alle regneregler bevises ved simpel udregning. Lad os som eksempel se på regel 2 og regel 5 i $\mathbb R ^2$.
+\begin{itemize}
+\item
+Der er givet talsættene $\ma=(1,1)$, $\mb=(2,0)$ og $\mc=(0,3)\,$. Først bruger vi venstresiden og derefter højresiden i regneregel 2:
+\begin{align*}
+(\ma + \mb) + \mc&=\big((1,1)+(2,0)\big)+(0,3)=(3,1)+(0,3)=(3,4)\\
+\ma + (\mb + \mc)&=(1,1)+\big((2,0)+(0,3)\big)=(1,1)+(2,3)=(3,4)\,.
+\end{align*}
+\item
+Der er givet talsættet $\ma=(1,-4)$ og skalarerne $k_1 = -2$ og $k_2 = 3\,$. Først bruger vi venstresiden og derefter højresiden i regneregel 5:
+\begin{align*}
+k_1(k_2\ma)&= -2(3(1,-4))=-2(3,-12)=(-6,24)\\
+(k_1k_2)\ma&=(-2\cdot 3)(1,-4)=(-6)(1,-4)=(-6,24)\,.
+\end{align*}
+\end{itemize}
+Regnereglerne 2 og 5 er altså opfyldte for de valgte eksempler, og det er klart at de også er det i alle andre eksempler, og også for andre valg af $n$ i $\mathbb R ^n$.
+\end{bevis}
+
+\section{Om $\mathbb R^n $ opfattet som et vektorrum}
+Talrummene er typiske eksempler på vektorrum, se om dette i \tref{NUID18-tn7}{eNote}. Når vi tænker på et talsæt som en vektor, skriver man det ofte som en \ind{søjlevektor}{søjlevektor}. Man har da to ækvivalente skrivemåder, her med et eksempel fra $\mathbb R^4$ :
+$$\mv=(1,2,3,4)\,\,\,\mathrm{og}\,\,\,
+\mv=\begin{matr}{r}1\\2\\3\\4\end{matr}\,.$$
+Hvis man i en bestemt sammenhæng har brug for at opfatte talsættet som en \ind{rækkevektor}{rækkevektor} udfører man en såkaldt transponering som ændrer en søjlevektor til en rækkevektor (og omvendt), den har symbolet T:
+$$\mv\transp =(1,2,3,4)\transp=
+\begin{matr}{rrrr}1&2&3&4\end{matr}\,.$$
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% HER SKAL DU STOPPE MED AT SKRIVE %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{../Strukturfiler/postambel} 

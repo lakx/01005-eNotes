@@ -1,0 +1,9 @@
+#! /usr/bin/php -q
+<?php
+	exec("ENV");
+    echo exec("latexml --VERSION");
+#    echo exec("latexml --inputencoding=latin1 --dest=eNote_HTML.xml eNote_HTML.tex");
+ #    echo exec("latexmlpost --format=html -novalidate -dest=HTMLOUTPUT/eNote_HTML.html eNote_HTML.xml");
+#echo "
+#";
+?>

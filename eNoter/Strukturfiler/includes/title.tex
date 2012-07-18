@@ -1,0 +1,34 @@
+% =      Title Layout      =
+\usepackage{titlesec}
+\makeatletter
+\titleformat{\chapter}
+	[display] % Shape
+	{\titlefont\Huge\flushleft} % Title and label format
+	{\titlefont\LARGE\bfseries \titlegraphicwide{dturoed}\textcolor{dtugraa}{\@chapapp~\thechapter}} % label
+	{0.9em} % label/title separation
+	{} % before code
+	[] % after code
+\makeatother
+\titleformat{\section}
+	[hang] % Shape
+	{\titlefont\Large\flushleft} % Title and label format
+	{\thesection} % label
+	{0.9em} % label/title separation
+	{} % before code
+	[] % after code
+\titleformat{\subsection}
+	[hang] % Shape
+	{\titlefont\large} % Title and label format
+	{\thesubsection} % label
+	{0.9em} % label/title separation
+	{} % before code
+	[] % after code
+\titlespacing{\subsection}{0pt}{*6}{*1.5}
+\titleformat{\subsubsection}
+	[hang] % Shape
+	{\titlefont} % Title and label format
+	{\thesubsubsection} % label
+	{0.9em} % label/title separation
+	{} % before code
+	[] % after code
+

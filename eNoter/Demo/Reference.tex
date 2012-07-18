@@ -1,0 +1,417 @@
+\input{../Strukturfiler/preambel}
+\setcounter{chapter}{998} %SÆT DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% HERFRA SKAL DU SKRIVE ELLER INDSÆTTE %%%%
+%%% DEN FIL DU ØNSKER %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\chapter{Lorem Ipsum Dolor 1} \label{tn999}
+
+%\includegraphics[width=0.20\textwidth]{pictures/3linjer2.jpg}
+%\includegraphics[trim=6.5cm 11cm 5cm 10cm,width=0.30\textwidth,clip]{pictures/vektor9.pdf}
+%\includegraphics{pictures/Alert02}
+%\includegraphics{pictures/Alert02.png}
+%\includegraphics{pictures/3linjer2.jpg}
+%\includegraphics{pictures/vektor9.pdf}
+
+\begin{basis}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dolor nibh, facilisis non $a^2 + b^2 = c^2$ semper at, ullamcorper ultrices felis. Aliquam ut dui diam. \trefA{tn999} Cras porta posuere dolor vitae laoreet. In eu sem purus. 
+\end{basis}
+
+\section{Donec dolor nib}
+\label{tn999.linlign}
+
+En \ind{lineær ligning}{lineær ligning} med $n$ ubekendte er en ligning af formen
+\begin{equation}\label{TN999.1}
+a_1\cdot x_1+a_2\cdot x_2+...+a_n\cdot x_n=b\,.
+\end{equation}
+Tallene $a_1,\,a_2,\,...\,,a_n$ kaldes \textit{koefficienterne} og tallet $b$ kaldes \textit{højresiden}. Koefficienterne og højresiden betragtes som kendte tal, mens $x_1,\,x_2,\,...\,x_n$ er de ubekendte. Ligningen kaldes \textit{homogen}, hvis $b=0$, ellers \textit{inhomogen}.
+
+
+\begin{exercise}
+	\begin{question}
+		Hvad står der på Anders Ands nummerplade?
+		\begin{enumerate}
+			\item (*!) 313
+			\item () 121
+			\item () 131
+			\item () $\pi$
+		\end{enumerate}
+	\end{question}
+	\begin{facit}
+		Det er i hvert fald ikke $\pi$ ... !
+	\end{facit}
+	\begin{question}
+		Når man snakker om solen så ...
+		\begin{enumerate}
+			\item () danser den.
+			\item () spiser den.
+			\item (*) skinner den.
+			\item () bliver den vred.
+		\end{enumerate}
+	\end{question}
+\end{exercise}
+
+\begin{example}[Hello Newer World!]\label{TN2.2}
+Den lineære ligning
+\begin{equation}
+0x_1+0x_2+0x_3+0x_4=0\,\,\Leftrightarrow\,\,0=0
+\end{equation}
+hvor alle koefficienterne samt højresiden er 0, er et eksempel på en \ind{triviel ligning}{triviel} ligning. Ligningens løsningsmængde består af alle $\mathbf x=(x_1,\,x_2,\,x_3,\,x_4) \in \mathbb R^4$.\bs
+
+Hvis alle ligningens koefficienter er 0, men højresiden er forskellig fra 0, opstår en \ind{inkonsistent ligning}{inkonsistent} ligning, som ingen løsninger har, det gælder fx ligningen
+\begin{equation}
+0x_1+0x_2+0x_3+0x_4=1\,\,\Leftrightarrow\,\,0=1\,.
+\end{equation}
+\end{example}
+
+
+\begin{exercise}\label{TN2.3}
+En lineær ligning er givet ved
+\begin{equation}
+x_1+2x_2-3x_3=-2\,.
+\end{equation}
+Angiv løsningsmængden for ligningen på standard-parameterform.
+\end{exercise}
+
+
+\begin{bevis}
+
+Første del af beviset for sætning \ref{TN2.6} er enkelt: Da løsningsmængden for et ligningssystem er identisk med \emph{fællesmængden} $F$ af løsningsmængderne til hver af de ligninger der indgår i systemet, ændres $F$ naturligvis ikke ved at ligningernes rækkefølge ændres, derfor er ro$_1$ tilladt.\bs
+De to næste rækkeoperationer kan forklares ud fra sædvanlige \textit{omformningsregler} for én ligning:\bs
+Da en lignings løsningsmængde ikke ændres ved at den ganges med en konstant $k\neq 0$, vil $F$ ikke kunne påvirkes af at en ligning erstattes af ligningen ganget med en konstant forskellig fra 0. Derfor er ro$_2$ tilladt.\bs
+%\onlinemediathumb{0}{AB23CD}{Animeret illustration af beviset}
+Lad os til sidst kalde de to ligninger som ro$_3$ handler om, for henholdsvis $a$ og $b$. Ved at gange $b$ med en konstant opnår vi en ny ligning $b_2$ der har samme løsningsmængde som $b$, vi har jo blot benyttet ro$_2$. Når vi derefter lægger venstresiden af $b_2$ til venstresiden af $a$ og derefter højresiden af $b_2$ til højresiden af $a$, opnår vi en ny ligning $a_2$. Hvis et vilkårligt talsæt $\mathbf x$ tilhører løsningsmængden for $b$ og dermed for $b_2$, så vil $\mathbf x$ tilhøre løsningsmængden for $a_2$ netop når $\mathbf x$ tilhører løsningsmængden for $a$. Derfor ændres $F$ ikke ved at $a$ erstattes af $a_2$ i ligningssystemet, hvorfor ro$_3$ er tilladt.
+\end{bevis}
+
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dolor nibh, facilisis non semper at, ullamcorper ultrices felis. Aliquam ut dui diam. Cras porta posuere dolor vitae laoreet. In eu sem purus. Vestibulum at sem est, vel adipiscing sapien. Mauris non erat sed arcu egestas dignissim eu id turpis. 
+
+
+\begin{definition}
+Ved en \textit{løsning} til ligningen 
+\begin{equation}\label{TN999.1b}
+a_1\cdot x_1+a_2\cdot x_2+...+a_n\cdot x_n=b\,.
+\end{equation}
+forstås et talsæt $\mathbf{x}=(x_1,\,x_2,\,...\,,x_n) \in \mathbb R^n$ der ved indsættelse i ligningen får den til at passe, det vil sige at venstresiden er lig med højresiden. \bs
+Ved \ind{fuldstændig løsning}{den fuldstændige løsning} eller blot \ind{løsningsmængde}{løsningsmængden} forstås alle tænkelige løsninger til ligningen samlet i én mængde.
+\end{definition}
+
+
+\begin{theorem}\label{TN2.6}
+Man ændrer ikke på et lineært ligningssystems løsningsmængde hvis man omformer ligningssystemet ved en af de følgende tre \ind{rækkeoperationer}{rækkeoperationer}:
+\begin{enumerate}
+\item[ro$_1$:] Lader to af ligningerne bytte række.
+\item[ro$_2$:] Ganger en af ligningerne med en konstant som ikke er 0.
+\item[ro$_3$:] Til en ligning lægger en konstant ganget en af de øvrige ligninger.
+\end{enumerate}
+\end{theorem}
+
+
+
+\begin{lemma}
+En lineær ligning er givet ved
+\begin{equation}
+x_1+2x_2-3x_3=-2\,.
+\end{equation}
+Angiv løsningsmængden for ligningen på standard-parameterform.
+\end{lemma}
+
+
+
+\begin{corollary}
+Vi fastlægger her en kort notation for hver af de tre rækkeoperationer: \medskip \\
+\begin{tabular}{lrl}
+ro$_1$:& $R_i\leftrightarrow R_j\,$:& Ligningen i række $i$ ombyttes med ligningen i række $j$.\medskip \\ 
+ro$_2$:&$k\cdot R_i\,$:& Ligningen i række $i$ ganges med $k$.\medskip \\ 
+ro$_3$:&$R_j+k\cdot R_i\,$:& Til ligningen i række $j$ lægges $k$ ganget ligningen i række $i$.
+\end{tabular}
+\end{corollary}
+
+
+\begin{method}
+
+\begin{equation}
+\begin{array}{r}
+1+1+2\cdot 2-6=0\\
+2\cdot 1-1-2-6=0
+\end{array}
+\hspace{0.5cm}\Leftrightarrow \hspace{0.5cm}
+\begin{array}{r}
+0=0\\
+-7=0
+\end{array}
+\end{equation}
+
+In vitae ipsum eget diam pretium sodales. Curabitur placerat arcu quis tellus ullamcorper facilisis. Maecenas nibh nisl, convallis consequat pellentesque non, dignissim auctor purus. Pellentesque diam est, sollicitudin vitae ultricies vitae, eleifend quis leo. Cras eget convallis odio. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+\end{method}
+
+
+\begin{explain}
+
+%\onlinemedia{0}{AB23CD}{Video case story}
+In vitae ipsum eget diam pretium sodales. Curabitur placerat arcu quis tellus ullamcorper facilisis. Maecenas nibh nisl, convallis consequat pellentesque non, dignissim auctor purus. 
+
+\begin{equation}
+\mathbf T= \begin{matr}{c|c} \mathbf A & \mathbf b \end{matr}
+=
+\begin{matr}{cccc|c}
+ a_{11} & a_{12} & \cdots & a_{1n} & b_1\\
+ a_{21} & a_{22} & \cdots & a_{2n} & b_2\\
+ \vdots&\vdots&&\vdots&\vdots\\
+ a_{m1}&a_{m2}&\cdots&a_{mn} & b_m
+\end{matr}
+\end{equation}
+
+Pellentesque diam est, sollicitudin vitae ultricies vitae, eleifend quis leo. Cras eget convallis odio. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+
+\end{explain}
+
+ Quisque diam libero, dictum vel bibendum quis, fringilla a sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce lobortis molestie mi, vel dictum turpis adipiscing id. Morbi commodo mattis tempor. Phasellus nisi elit, tempus eu bibendum ut, feugiat eget purus.
+\begin{equation}\label{TN2.8b}
+\begin{aligned}
+-x_2 + x_3 &= 2\\
+2x_1 + 4x_2 - 2x_3 &= 2\\
+3x_1 + 4x_2 + x_3 &= 9
+\end{aligned}
+\end{equation}
+
+\begin{remark}
+In vitae ipsum eget diam pretium sodales. Curabitur placerat arcu quis tellus ullamcorper facilisis. Maecenas nibh nisl, convallis consequat pellentesque non, dignissim auctor purus. 
+
+\begin{equation}\label{TN2.8b}
+\begin{aligned}
+-x_2 + x_3 &= 2\\
+2x_1 + 4x_2 - 2x_3 &= 2\\
+3x_1 + 4x_2 + x_3 &= 9
+\end{aligned}
+\end{equation}
+
+Pellentesque diam est, sollicitudin vitae ultricies vitae, eleifend quis leo. Cras eget convallis odio. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+\end{remark}
+
+\begin{equation} R_3 - 3\cdot R_1: \nonumber \end{equation}
+
+
+Nam sit amet est nec sapien facilisis iaculis vel et ligula. Suspendisse varius elementum ornare. Sed at arcu vel nisl vulputate sollicitudin nec ut magna. Vestibulum leo nibh, iaculis vel pharetra vitae, placerat eu tortor. Aliquam non metus ac tortor pharetra lacinia vitae at dui. Morbi in ante eget elit feugiat posuere at eu magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vitae lorem nunc. Quisque diam libero, dictum vel bibendum quis, fringilla a sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce lobortis molestie mi, vel dictum turpis adipiscing id. Morbi commodo mattis tempor. Phasellus nisi elit, tempus eu bibendum ut, feugiat eget purus.
+
+
+\section{Reduktion af lineære ligningssystemer}
+Lineære ligningssystemer kan reduceres, dvs. gøres enklere, ved hjælp af en metode der kaldes Gauss-elimination. Metoden har flere forskellige varianter, og den særlige variant der benyttes i disse noter, går under navnet \ind{GaussJordan-elimination}{GaussJordan-elimination}. Det algebraiske grundlag for alle varianterne er at man kan omforme et lineært ligningssy\-stemer ved såkaldte \ind{rækkeoperationer}{rækkeoperationer} uden at man derved ændrer på ligningssystemets løsningsmængde. Når ligningssystemet er reduceret mest muligt, er det som regel nemt aflæse og opstille dets løsningsmængde.
+
+
+
+\begin{obs}
+\begin{equation} R_3 - 3\cdot R_1: \nonumber \end{equation}
+
+
+Hvis vi opfatter ligning (\ref{TN2.2}) som ligningen for en plan i rummet, så angiver ligning (\ref{TN2.3}) en \textit{parameterfremstilling} for den samme plan, hvor første søjlevektor på højresiden angiver \textit{begyndelsespunktet} på planen, og de to sidste søjlevektorer er \textit{retningsvektorer}. (Her: REFERENCE til transfernote om geometriske vektorer).
+\end{obs}
+
+
+
+\begin{info}
+
+\begin{equation}(-1)\cdot R_2\,: \nonumber 
+\end{equation}
+
+Hvis vi opfatter ligning (\ref{TN2.2}) som ligningen for en plan i rummet, så angiver ligning (\ref{TN2.3}) en \textit{parameterfremstilling} for den samme plan, hvor første søjlevektor på højresiden angiver \textit{begyndelsespunktet} på planen, og de to sidste søjlevektorer er \textit{retningsvektorer}. (Her: REFERENCE til transfernote om geometriske vektorer).
+\end{info}
+
+
+
+\begin{think}
+
+\begin{equation}
+(-1)\cdot R_2\,: \nonumber 
+\end{equation}
+
+Hvis vi opfatter ligning (\ref{TN2.2}) som ligningen for en plan i rummet, så angiver ligning (\ref{TN2.3}) en \textit{parameterfremstilling} for den samme plan, hvor første søjlevektor på højresiden angiver \textit{begyndelsespunktet} på planen, og de to sidste søjlevektorer er \textit{retningsvektorer}. (Her: REFERENCE til transfernote om geometriske vektorer).
+
+\begin{equation}(-1)\cdot R_2\,: \nonumber \end{equation}
+
+\end{think}
+
+
+
+\begin{aha}
+Hvis vi opfatter ligning (\ref{TN2.2}) som ligningen for en plan i rummet, så angiver ligning (\ref{TN2.3}) en \textit{parameterfremstilling} for den samme plan, hvor første søjlevektor på højresiden angiver \textit{begyndelsespunktet} på planen, og de to sidste søjlevektorer er \textit{retningsvektorer}. (Her: REFERENCE til transfernote om geometriske vektorer).
+\end{aha}
+
+% CROSS VIRKER IKKE!!
+%\begin{cross}
+%Hvis vi opfatter ligning (\ref{TN2.2}) som ligningen for en plan i rummet, så angiver ligning (\ref{TN2.3}) en \textit{parameterfremstilling} for den samme plan, hvor første søjlevektor på højresiden angiver \textit{begyndelsespunktet} på planen, og de to sidste søjlevektorer er \textit{retningsvektorer}. (Her: REFERENCE til transfernote om geometriske vektorer).
+%\end{cross}
+
+
+\begin{build}
+Hvis vi opfatter ligning (\ref{TN2.2}) som ligningen for en plan i rummet, så angiver ligning (\ref{TN2.3}) en \textit{parameterfremstilling} for den samme plan, hvor første søjlevektor på højresiden angiver \textit{begyndelsespunktet} på planen, og de to sidste søjlevektorer er \textit{retningsvektorer}. (Her: REFERENCE til transfernote om geometriske vektorer).
+\end{build}
+
+
+Nam sit amet est nec sapien facilisis iaculis vel et ligula. Suspendisse varius elementum ornare. Sed at arcu vel nisl vulputate sollicitudin nec ut magna. Vestibulum leo nibh, iaculis vel pharetra vitae, placerat eu tortor. Aliquam non metus ac tortor pharetra lacinia vitae at dui. Morbi in ante eget elit feugiat posuere at eu magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vitae lorem nunc. Quisque diam libero, dictum vel bibendum quis, fringilla a sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce lobortis molestie mi, vel dictum turpis adipiscing id. Morbi commodo mattis tempor. Phasellus nisi elit, tempus eu bibendum ut, feugiat eget purus.
+
+
+\begin{equation}(-1)\cdot R_2\,: \end{equation}
+
+
+\begin{equation}
+(-1)\cdot R_2\,: 
+\end{equation}
+
+
+\begin{equation}(-1)\cdot R_2\,:
+ \end{equation}
+
+\begin{equation}
+(-1)\cdot R_2\,: \end{equation}
+
+
+
+
+
+\section{Nam sit amet}
+Nam sit amet est nec sapien facilisis iaculis vel et ligula. Suspendisse varius elementum ornare. Sed at arcu vel nisl vulputate sollicitudin nec ut magna. Vestibulum leo nibh, iaculis vel pharetra vitae, placerat eu tortor. Aliquam non metus ac tortor pharetra lacinia vitae at dui. Morbi in ante eget elit feugiat posuere at eu magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vitae lorem nunc. Quisque diam libero, dictum vel bibendum quis, fringilla a sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce lobortis molestie mi, vel dictum turpis adipiscing id. Morbi commodo mattis tempor. Phasellus nisi elit, tempus eu bibendum ut, feugiat eget purus.
+
+\subsection{Aliquam non metus}
+Aliquam non metus ac tortor pharetra lacinia vitae at dui. Morbi in ante eget elit feugiat posuere at eu magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vitae lorem nunc. Quisque diam libero, dictum vel bibendum quis, fringilla a sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce lobortis molestie mi, vel dictum turpis adipiscing id. Morbi commodo mattis tempor. Phasellus nisi elit, tempus eu bibendum ut, feugiat eget purus.
+
+
+\subsection{Fusce lobortis molestie}
+
+\begin{theorem}
+
+En lineær ligning er givet ved
+\begin{equation}
+x_1+2x_2-3x_3=-2\,.
+\end{equation}
+Angiv løsningsmængden for ligningen på standard-parameterform.
+
+
+\begin{obs}
+Hvis vi opfatter ligning (\ref{TN2.2}) som ligningen for en plan i rummet, så angiver ligning (\ref{TN2.3}) en \textit{parameterfremstilling} for den samme plan, hvor første søjlevektor på højresiden angiver \textit{begyndelsespunktet} på planen, og de to sidste søjlevektorer er \textit{retningsvektorer}. (Her: REFERENCE til transfernote om geometriske vektorer).
+\end{obs}
+
+Nam sit amet est nec sapien facilisis iaculis vel et ligula. Suspendisse varius elementum ornare. Sed at arcu vel nisl vulputate sollicitudin nec ut magna. Vestibulum leo nibh, iaculis vel pharetra vitae, placerat eu tortor. Aliquam non metus ac tortor pharetra lacinia vitae at dui. Morbi in ante eget elit feugiat posuere at eu magna. Cum sociis natoque penatibus et magnis dis parturient montes,
+
+\begin{info}
+Hvis vi opfatter ligning (\ref{TN2.2}) som ligningen for en plan i rummet, så angiver ligning (\ref{TN2.3}) en \textit{parameterfremstilling} for den samme plan, hvor første søjlevektor på højresiden angiver \textit{begyndelsespunktet} på planen, og de to sidste søjlevektorer er \textit{retningsvektorer}. (Her: REFERENCE til transfernote om geometriske vektorer).
+\end{info}
+
+
+
+\begin{think}
+Hvis vi opfatter ligning (\ref{TN2.2}) som ligningen for en plan i rummet, så angiver ligning (\ref{TN2.3}) en \textit{parameterfremstilling} for den samme plan, hvor første søjlevektor på højresiden angiver \textit{begyndelsespunktet} på planen, og de to sidste søjlevektorer er \textit{retningsvektorer}. (Her: REFERENCE til transfernote om geometriske vektorer).
+\end{think}
+
+
+
+\begin{aha}
+Hvis vi opfatter ligning (\ref{TN2.2}) som ligningen for en plan i rummet, så angiver ligning (\ref{TN2.3}) en \textit{parameterfremstilling} for den samme plan, hvor første søjlevektor på højresiden angiver \textit{begyndelsespunktet} på planen, og de to sidste søjlevektorer er \textit{retningsvektorer}. (Her: REFERENCE til transfernote om geometriske vektorer).
+\end{aha}
+
+
+%\begin{cross}
+%Hvis vi opfatter ligning (\ref{TN2.2}) som ligningen for en plan i rummet, så angiver ligning (\ref{TN2.3}) en \textit{parameterfremstilling} for den samme plan, hvor første søjlevektor på højresiden angiver \textit{begyndelsespunktet} på planen, og de to sidste søjlevektorer er \textit{retningsvektorer}. (Her: REFERENCE til transfernote om geometriske vektorer).
+%\end{cross}
+
+
+\begin{build}
+Hvis vi opfatter ligning (\ref{TN2.2}) som ligningen for en plan i rummet, så angiver ligning (\ref{TN2.3}) en \textit{parameterfremstilling} for den samme plan, hvor første søjlevektor på højresiden angiver \textit{begyndelsespunktet} på planen, og de to sidste søjlevektorer er \textit{retningsvektorer}. (Her: REFERENCE til transfernote om geometriske vektorer).
+\end{build}
+\end{theorem}
+
+
+
+
+
+\begin{equation}
+(-1)\cdot R_2\,: 
+\end{equation}
+
+
+
+
+\begin{example}\label{TN2.2}
+Den lineære ligning
+\begin{equation}
+0x_1+0x_2+0x_3+0x_4=0\,\,\Leftrightarrow\,\,0=0
+\end{equation}
+hvor alle koefficienterne samt højresiden er 0, er et eksempel på en \ind{triviel ligning}{triviel} ligning. Ligningens løsningsmængde består af alle $\mathbf x=(x_1,\,x_2,\,x_3,\,x_4) \in \mathbb R^4$.\bs
+
+Hvis alle ligningens koefficienter er 0, men højresiden er forskellig fra 0, opstår en \ind{inkonsistent ligning}{inkonsistent} ligning, som ingen løsninger har, det gælder fx ligningen
+\begin{equation}
+0x_1+0x_2+0x_3+0x_4=1\,\,\Leftrightarrow\,\,0=1\,.
+\end{equation}
+
+\end{example}
+
+
+
+\begin{example}\label{TN2.2}
+
+%\onlinemedia{-20}{AB23CD}{Guided videoeksempel}
+Den lineære ligning
+\begin{equation}
+0x_1+0x_2+0x_3+0x_4=0\,\,\Leftrightarrow\,\,0=0
+\end{equation}
+hvor alle koefficienterne samt højresiden er 0, er et eksempel på en \ind{triviel ligning}{triviel} ligning. Ligningens løsningsmængde består af alle $\mathbf x=(x_1,\,x_2,\,x_3,\,x_4) \in \mathbb R^4$.\bs
+
+
+Hvis alle ligningens koefficienter er 0, men højresiden er forskellig fra 0, opstår en \ind{inkonsistent ligning}{inkonsistent} ligning, som ingen løsninger har, det gælder fx ligningen
+\begin{equation}
+0x_1+0x_2+0x_3+0x_4=1\,\,\Leftrightarrow\,\,0=1\,.
+\end{equation}
+
+\end{example}
+
+
+
+
+\begin{example}\label{TN2.2}
+Den lineære ligning
+\begin{equation}
+0x_1+0x_2+0x_3+0x_4=0\,\,\Leftrightarrow\,\,0=0
+\end{equation}
+hvor alle koefficienterne samt højresiden er 0, er et eksempel på en \ind{triviel ligning}{triviel} ligning. Ligningens løsningsmængde består af alle $\mathbf x=(x_1,\,x_2,\,x_3,\,x_4) \in \mathbb R^4$.\bs
+
+Hvis alle ligningens koefficienter er 0, men højresiden er forskellig fra 0, opstår en \ind{inkonsistent ligning}{inkonsistent} ligning, som ingen løsninger har, det gælder fx ligningen
+\begin{equation}
+0x_1+0x_2+0x_3+0x_4=1\,\,\Leftrightarrow\,\,0=1\,.
+\end{equation}
+
+\end{example}
+
+\begin{exercise}
+	\begin{question}
+		Hvad er 2+2?
+		\begin{itemize}
+			\item (*) $4$
+			\item () $17 - 41$
+			\item (*) $\sqrt{16}$
+			\item () $42$
+		\end{itemize}
+	\end{question}
+\end{exercise}
+
+
+\begin{summary}
+
+
+asdf
+\end{summary}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% HER SKAL DU STOPPE MED AT SKRIVE %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{../Strukturfiler/postambel}
+

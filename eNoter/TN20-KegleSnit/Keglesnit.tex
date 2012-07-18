@@ -1,0 +1,779 @@
+
+\input{../Strukturfiler/preambel}
+\setcounter{chapter}{19} %SÆT DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% HERFRA SKAL DU SKRIVE ELLER INDSÆTTE %%%%
+%%% DEN FIL DU ØNSKER %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Andengradsligninger i to og tre  variable} \label{tn20}
+
+
+
+
+\begin{basis}
+I denne eNote vil vi igen beskæftige os med andengradspolynomierne i to og tre variable
+som også er behandlet og undersøgt med forskellige teknikker i henholdsvis \tref{NUID33-tn18}{eNote} og  \tref{NUID34-tn19}{eNote}.
+Ved den indledende behandling af funktioner af to variable definerede vi niveau-mængderne $\mathcal{K}_{c}(f)$ for funktioner $f(x,y)$ af to variable, se \tref{NUID28-tn15}{eNote}.
+Vi skal se i denne eNote, at for andengradspolynomier i to variable er niveaumængderne typisk velkendte kurver i $(x,y)$-planen som for  eksempel
+ellipser og hyperbler og det er formålet med denne eNote at vise hvilke typer niveaukurver der optræder for givne ligninger. Vi vil dertil i udstrakt grad benytte den reduktionsmetode, der er udviklet i \tref{NUID33-tn18}{eNote}. Den virker for andengradspolynomier af både to og tre (og flere) variable, og som vi skal se, kan de tilhørende niveau-kurver og -flader identificeres ud fra en kort navneliste. Niveaukurverne for andengradspolymier i to variable og niveaufladerne for andengradspolynomier i tre variable  kendes klassisk under navnene henholdsvis \ind{keglesnit}{keglesnit} og \ind{keglesnitsflader}{keglesnitsflader}.
+\end{basis}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Andengradsligninger i to variable}
+
+Fra \tref{NUID33-tn18}{eNote} ved vi fra inspektion af de viste niveaukurver, at der typisk optræder ellipser og hyperbler
+eller ellipse-lignende og hyperbel-lignende kurver som niveaukur\-ver for funktioner af to variable -- især omkring stationære punkter. Det er ikke nogen tilfældighed; andengradspolynomier har netop sådanne niveaukurver.  Og passende valg\-te andengradspolynomier er jo samtidig gode approksimationer til givne glatte funktioner af to variable.\\
+
+
+I det følgende vil vi med nogle eksempler gennemgå standardmetoden til reduktion af de ligninger, der fremkommer når vi vil finde de punkter i $\mathbb{R}^{2}$ for hvilke et givet andengradspolynomium er $0$, altså netop de punkter, der udgør niveaumængden $\mathcal{K}_{0}(f)$ for $f(x,y)$.
+
+
+\begin{example}[Ellipse] \label{exampEllip01}
+For et andengradspolynomium $f(x,y)$ bestemmer vi følgende ingredienser til reduktion af polynomiet på præcis den måde som er gennemgået i \tref{NUID33-tn18}{eNote}. Vi har specielt igen brug for den positive ortogonale substitutionsmatrix $\mathbf{Q}$ som diagonaliserer matricen $\frac{1}{2}\cdot \mathbf{H}f(x,y)$ for derved at opnå et udtryk for $f(x,y)$ som ikke indeholder produkt\-led -- nu i de nye koordianter $\widetilde{x}$ og $\widetilde{y}$. Resultatet af reduktionen er $\widetilde{f}(\widetilde{x}, \widetilde{y})$ som vist nedenfor:
+\begin{equation}
+\begin{aligned}
+f(x,y) &= 2\cdot x^{2} + 2\cdot y^{2} + 2\cdot x\cdot y -8\cdot x -10 \cdot y + 13 \quad . \\  \\
+\bm{\nabla}f(x,y) &= (4\cdot x +2\cdot y-8\, , \,2\cdot x + 4\cdot y -10) \quad . \\  \\
+\frac{1}{2}\cdot \mathbf{H}f(x,y) &= \left[
+                     \begin{array}{cc}
+                       2 & 1 \\
+                       1 & 2 \\
+                     \end{array}
+                   \right] \quad . \\ \\
+\bm{\Lambda} &= \left[
+                     \begin{array}{cc}
+                       3 & 0 \\
+                       0 & 1 \\
+                     \end{array}
+                   \right] \quad . \\ \\
+\mathbf{Q} &= \left[
+                     \begin{array}{cc}
+                       \sqrt{2}/2 & -\sqrt{2}/2 \\
+                       \sqrt{2}/2 & \sqrt{2}/2 \\
+                     \end{array}
+                   \right] = \left[
+                     \begin{array}{cc}
+                       \cos(\pi/4) & -\sin(\pi/4) \\
+                        \sin(\pi/4) &  \cos(\pi/4)\\
+                     \end{array}
+                   \right] \quad . \\ \\
+\widetilde{f}(\widetilde{x}, \widetilde{y}) & = 3\cdot \widetilde{x}^{2} + \widetilde{y}^{2} - 9\cdot\sqrt{2}\cdot\widetilde{x} - \sqrt{2}\cdot\widetilde{y} +13 \\
+&= 3\cdot\left(\widetilde{x} - \frac{3}{2}\cdot\sqrt{2} \right)^{2} + \left(\widetilde{y} - \frac{1}{2}\cdot\sqrt{2} \right)^{2} -1 \quad. \\
+\end{aligned}
+\end{equation}
+Den sidste ligning i ovenstående beregning af det reducerede andengradspolynomium $\widetilde{f}(\widetilde{x}, \widetilde{y})$ fremkommer ved \ind{kvadratkomplettering}{kvadratkomplettering}. Den kan foretages for  $\widetilde{x}$-leddene først og dernæst for $\widetilde{y}$-leddene. For de førstnævnte foregår det sådan:
+
+\begin{equation}
+\begin{aligned}
+3\cdot \widetilde{x}^{2} - 9\cdot\sqrt{2}\cdot \widetilde{x} &= 3\cdot (\widetilde{x}^{2} - 3\cdot \sqrt{2} \cdot \widetilde{x}) \\
+&= 3\cdot \left( \left(\widetilde{x} - \frac{3}{2}\sqrt{2}\right)^{2} - \frac{9}{2}\right) \quad.
+\end{aligned}
+\end{equation}
+
+
+Den andengradsligning som giver niveaukurven $\mathcal{K}_{0}(f)$ er nu  bestemt ved hver af følgende ækvivalente ligninger:
+\begin{equation}
+\begin{aligned}
+f(x,y) &= 0 = \widetilde{f}(\widetilde{x}, \widetilde{y})  \\ \\
+\left(\frac{\widetilde{x} - \frac{3}{2}\cdot\sqrt{2}}{\frac{1}{\sqrt{3}}}\right)^{2} &+ \left(\widetilde{y} - \frac{1}{2}\cdot\sqrt{2} \right)^{2} = 1 \quad .
+\end{aligned}
+\end{equation}
+Denne sidste ligning fremstiller en {\emph{ellipse}} med centrum i $\vekind{e}{\mathbf{C}} = (x_{0}, y_{0}) =  (1,2)$ (med hensyn til de gamle koordinater) svarende til
+$\vekind{v}{\mathbf{C}} = (\widetilde{x}_{0}, \widetilde{y}_{0}) =  (\frac{3}{2}\cdot\sqrt{2}\, , \, \frac{1}{2}\cdot\sqrt{2} )$ (med hensyn til de nye koordinater)  og halvakserne $\frac{1}{\sqrt{3}}$ og  $1$ , se figurerne \ref{figEllip01} og  \ref{figEllip01Kvad}. Det nye koordinatsystem fremkommer ved drejning af det gamle koordinatsystem med drejningsvinklen $\phi = \pi/4$. \\
+
+Funktionen $f(x,y)$ har  et stationært punkt i centrum for ellipsen, hvor funktionsværdien er $-1$. Hesse-matricen er positiv definit og derfor er det stationære punkt et egentligt lokalt minimumpunkt. Der er tydeligvis tale om et globalt minimumpunkt.
+
+\end{example}
+
+
+\begin{figure}[ht]
+\centerline{ \includegraphics[height=60mm]{FIGS/plot2DEllipLift01.pdf} \includegraphics[height=60mm]{FIGS/plot2DGradEllip01.pdf}}
+\begin{center}
+\caption{Grafen for funktionen $f(x,y) = 2\cdot x^{2} + 2\cdot y^{2} + 2\cdot x\cdot y -8\cdot x -10 \cdot y + 13 $ samt niveaukurver og gradientvektorfelt for funktionen. Bemærk specielt niveaukurven svarende til niveau $0$, som er den ellipse vi analyserer i eksempel \ref{exampEllip01}.} \label{figEllip01}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[ht]
+\centerline{  \includegraphics[height=60mm]{FIGS/plot2DNivEllipLift01.pdf} \includegraphics[height=60mm]{FIGS/plotEllipKvad01.pdf}}
+\begin{center}
+\caption{Grafen for funktionen med den elliptiske niveaukurve i niveau $0$ for funktionen i eksempel \ref{exampEllip01}.} \label{figEllip01Kvad}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[ht]
+\centerline{  \includegraphics[height=60mm]{FIGS/plot2DNivEllipLift02.pdf} \includegraphics[height=60mm]{FIGS/plotEllipKvad02.pdf}}
+\begin{center}
+\caption{Grafen for den funktion, der blot er løftet $1/2$ i forhold til værdierne for funktionen i eksempel \ref{exampEllip01}. Niveaukurven $\mathcal{K}_{0}(f)$ i niveau $0$ er tilsvarende \emph{mindre} med tilsvarende mindre halvakser, men den er orienteret efter de samme akseretninger.} \label{figEllip02Kvad}
+\end{center}
+\end{figure}
+
+
+
+
+\begin{example}[Ellipse] \label{exampEllip02}
+\begin{equation}
+\begin{aligned}
+f(x,y) &= 29\cdot x^{2} + 36\cdot y^{2} + 24\cdot x \cdot y - 152\cdot x -336\cdot y + 620 \quad . \\   \\
+\bm{\nabla}f(x,y) &= (58\cdot x + 24 \cdot y -152\, , \, 72\cdot y + 24 \cdot x - 336)  \quad . \\   \\
+\frac{1}{2}\cdot \mathbf{H}f(x,y) &= \left[
+                     \begin{array}{cc}
+                       29 & 12 \\
+                       12 & 36 \\
+                     \end{array}
+                   \right] \quad . \\  \\
+\bm{\Lambda} &= \left[
+                     \begin{array}{cc}
+                       45 & 0 \\
+                       0 & 20 \\
+                     \end{array}
+                   \right]\quad . \\   \\
+\mathbf{Q} &= \left[
+                     \begin{array}{cc}
+                       3/5 & -4/5 \\
+                       4/5 & 3/5 \\
+                     \end{array}
+                   \right]  \quad . \\  \\
+\widetilde{f}(\widetilde{x}, \widetilde{y}) & =  45 \cdot \widetilde{x}^{2} + 20 \cdot \widetilde{y}^{2} - 360\cdot \widetilde{x} - 80\cdot \widetilde{y} + 620 \\
+&= 45\cdot\left( \widetilde{x} - 4 \right)^{2} + 20\cdot\left(\widetilde{y} - 2 \right)^{2} - 180  \quad. \\
+\end{aligned}
+\end{equation}
+Den andengradsligning som giver niveaukurven $\mathcal{K}_{0}(f)$ er derfor givet ved hver enkelt af følgende ækvivalente ligninger:
+\begin{equation}
+\begin{aligned}
+f(x,y) &= 0 =
+\widetilde{f}(\widetilde{x}, \widetilde{y}) \\
+\left(\frac{ \widetilde{x} - 4}{2} \right)^{2} &+ \left(\frac{\widetilde{y} - 2 }{3}\right)^{2} = 1 \quad . \\
+\end{aligned}
+\end{equation}
+Dette er ligningen for en \emph{ellipse} med centrum i $\vekind{e}{\mathbf{C}} = (x_{0}, y_{0}) =  (4/5, 22/5)$ (med hensyn til de gamle koordinater) svarende til
+$\vekind{v}{\mathbf{C}} = (\widetilde{x}_{0}, \widetilde{y}_{0}) =  (4, 2 )$ (med hensyn til de nye koordinater)  og halvakserne $2$ og $3$, se figur \ref{figEllipKvadBig}. Det nye koordinatsystem fremkommer ved drejning af det gamle koordinatsystem med drejningsvinklen $\phi = \arccos(3/5)$.\\
+
+Andengradspolynomiet $f(x,y)$ har et stationært punkt i centrum med værdien $-180$. Hesse-matricen er positiv definit og derfor er det stationære punkt et egentligt lokalt minimumpunkt  med minimumværdi $-180$. Der er igen tydeligvis tale om et globalt minimumpunkt.
+\end{example}
+
+
+
+\begin{figure}[ht]
+\centerline{\includegraphics[height=60mm]{FIGS/plotEllipKvadBig.pdf}}
+\begin{center}
+\caption{Niveaukurven $\mathcal{K}_{0}(f)$ for andengradspolynomiet  $f(x,y) = 29\cdot x^{2} + 36\cdot y^{2} + 24\cdot x \cdot y - 152\cdot x -336\cdot y + 620$ fra eksempel \ref{exampEllip02}.} \label{figEllipKvadBig}
+\end{center}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{example}[Hyperbel] \label{exampHyp02}
+Vi ser igen  på \tref{NUID34-exampRedPoly1}{eksempel} fra  \tref{NUID34-tn19}{eNote} som handler om andengradspolynomiet $f(x,y)$ med følgende data:
+\begin{equation}
+\begin{aligned}
+f(x,y) &= 11\cdot x^{2} + 4\cdot y^{2} - 24\cdot x\cdot y - 20\cdot x + 40\cdot y - 60 \quad . \\   \\
+\bm{\nabla}f(x,y) &= (22\cdot x - 24 \cdot y - 20\, , \, -24\cdot x + 8\cdot y + 40) \quad . \\  \\
+\frac{1}{2}\cdot \mathbf{H}f(x,y) &= \left[
+               \begin{array}{cc}
+                 11 & -12 \\
+                 -12 & 4 \\
+               \end{array}
+             \right] \quad . \\  \\
+\bm{\Lambda} &= \left[
+                     \begin{array}{cc}
+                       20 & 0 \\
+                       0 & -5 \\
+                     \end{array}
+                   \right] \quad . \\  \\
+\mathbf{Q}&= \left[
+              \begin{array}{cc}
+                4/5 & 3/5 \\
+                -3/5 & 4/5 \\
+              \end{array}
+            \right]  = \left[
+                         \begin{array}{cc}
+                           \cos(\varphi) & - \sin(\varphi) \\
+                           \sin(\varphi) & \cos(\varphi) \\
+                         \end{array}
+                       \right] \quad , \quad  \textrm{hvor}\quad \varphi = -\arcsin(3/5) \quad . \\   \\
+\widetilde{f}(\widetilde{x}, \widetilde{y}) & = 20\cdot  \widetilde{x}^{2} - 5\cdot \widetilde{y}^{2}-40 \cdot \widetilde{x} + 20\cdot \widetilde{y} -60\\
+&= 20\cdot (\widetilde{x}-1)^{2} - 5\cdot (\widetilde{y}-2)^{2} -60 \quad. \\
+\end{aligned}
+\end{equation}
+Den andengradsligning som giver niveaukurven $\mathcal{K}_{0}(f)$ er derfor givet ved hver af følgende ligninger:
+\begin{equation}
+\begin{aligned}
+f(x,y) &= 0 =
+\widetilde{f}(\widetilde{x}, \widetilde{y})\\
+\left(\frac{\widetilde{x}-1}{\sqrt{3}}\right)^{2} &- \left(\frac{\widetilde{y}- 2}{2\cdot\sqrt{3}} \right)^{2} = 1 \quad . \\
+\end{aligned}
+\end{equation}
+Ligningerne fremstiller en \emph{hyperbel} med centrum i $\vekind{e}{\mathbf{C}} = (x_{0}, y_{0}) =  (2,1)$ (med hensyn til de gamle koordinater) svarende til
+$\vekind{v}{\mathbf{C}} = (\widetilde{x}_{0}, \widetilde{y}_{0}) = (1, 2)$ (med hensyn til de nye koordinater)  og halvakserne $\sqrt{3}$ og $2\cdot\sqrt{3}$. Det nye koordinatsystem fremkommer ved drejning af det gamle koordinatsystem med drejningsvinklen $\phi = -\arcsin(3/5)$.\\
+
+Funktionen har et stationært punkt i centrum med værdien $-60$. Hesse-matricen er indefinit og derfor er det stationære punkt hverken et lokalt minimumpunkt eller maksimumpunkt.
+\end{example}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{example}[Hyperbel] \label{exampHyp01}
+En anden hyperbel er givet ved $\mathcal{K}_{0}(f)$ for følgende andengradspolynomium:
+\begin{equation}
+\begin{aligned}
+f(x,y) &= -\frac{5}{4}\cdot x^{2} + \frac{1}{4}\cdot y^{2} + \frac{3}{2}\cdot \sqrt{3}\cdot x \cdot y + 5\cdot x -3\cdot \sqrt{3}\cdot y  -\frac{21}{4} \quad . \\   \\
+\bm{\nabla}f(x,y) &= (-\frac{5}{2}\cdot x  + \frac{3}{2}\cdot \sqrt{3}\cdot y + 5\, , \, \frac{3}{2}\cdot \sqrt{3} \cdot x + \frac{1}{2}\cdot y - 3 \cdot \sqrt{3}) \quad . \\   \\
+\frac{1}{2}\cdot \mathbf{H}f(x,y) &= \left[
+                     \begin{array}{cc}
+                       -5/2 & 3\cdot \sqrt{3}/4 \\
+                       \sqrt{3}/4 & 1/4 \\
+                     \end{array}
+                   \right] \quad . \\  \\
+\bm{\Lambda} &= \left[
+                     \begin{array}{cc}
+                       1 & 0 \\
+                       0 & -2 \\
+                     \end{array}
+                   \right] \quad . \\  \\
+\mathbf{Q} &= \left[
+                     \begin{array}{cc}
+                       1/2 & -\sqrt{3}/2 \\
+                       \sqrt{3}/2 & 1/2 \\
+                     \end{array}
+                   \right] = \left[
+                     \begin{array}{cc}
+                       \cos(\pi/3) & -\sin(\pi/3) \\
+                        \sin(\pi/3) &  \cos(\pi/3)\\
+                     \end{array}
+                   \right] \quad . \\  \\
+\widetilde{f}(\widetilde{x}, \widetilde{y}) & =  \widetilde{x}^{2} - 2\cdot \widetilde{y}^{2} - 2 \cdot \widetilde{x} - 4\cdot \sqrt{3}\cdot \widetilde{y} - \frac{21}{4}\\
+&= (\widetilde{x}-1)^{2} - 2\cdot (\widetilde{y}+ \sqrt{3})^{2} - \frac{1}{4} \quad.
+\end{aligned}
+\end{equation}
+Den andengradsligning som giver niveaukurven $\mathcal{K}_{0}(f)$ er derfor givet ved hver af følgende ækvivalente ligninger, hvor den sidste fås ved kvadratkomplettering:
+\begin{equation}
+\begin{aligned}
+f(x,y) &= 0 =
+\widetilde{f}(\widetilde{x}, \widetilde{y}) = 0 \\
+\left(\frac{\widetilde{x}-1}{\frac{1}{2}}\right)^{2} &- \left(\frac{\widetilde{y}+ \sqrt{3}}{\frac{1}{2\cdot \sqrt{2}}} \right)^{2} = 1 \quad . \\
+\end{aligned}
+\end{equation}
+Det er en \emph{hyperbel} med centrum i $\vekind{e}{\mathbf{C}} = (x_{0}, y_{0}) =  (2,0)$ (med hensyn til de gamle koordinater) svarende til
+$\vekind{v}{\mathbf{C}} = (\widetilde{x}_{0}, \widetilde{y}_{0}) = (1, -\sqrt{3} )$ (med hensyn til de nye koordinater)  og halvakserne $1/2$ og $1/(2\cdot \sqrt{2})$, se figur \ref{figHyp01Kvad}. Det nye koordinatsystem fremkommer ved drejning af det gamle koordinatsystem med drejningsvinklen $\phi = \frac{\pi}{3}$.\\
+
+Funktionen har et stationært punkt i centrum med værdien $-1/4$. Hesse-matricen er indefinit og derfor er det stationære punkt hverken et lokalt minimumpunkt eller maksimumpunkt, som det også tydeligt fremgår af figur \ref{figHyp01Kvad}.
+\end{example}
+
+
+
+\begin{figure}[ht]
+\centerline{  \includegraphics[height=60mm]{FIGS/plot2DNivHypLift01.pdf} \includegraphics[height=60mm]{FIGS/plot2DGradHyp01.pdf} \includegraphics[height=60mm]{FIGS/plotHypKvad01.pdf}}
+\begin{center}
+\caption{Grafen for funktionen fra eksempel \ref{exampHyp01} med snit i niveau $0$, gradientfelt, niveaukurver og specielt niveaukurven $\mathcal{K}_{0}(f)$.} \label{figHyp01Kvad}
+\end{center}
+\end{figure}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Andengradsligninger i tre variable} \label{chpSymmMat}
+
+For andengradspolynomier $f(x,y,z)$ i tre variable kan vi gennemføre samme analyse som ovenfpor men nu af de niveaumængder i rummet, dvs. de niveau-flader der fremkommer ved at sætte $f(x,y, z)=0$. Vi viser metoden via nogle eksempler:
+
+\begin{example}[Ellipsoide] \label{exampEllip3D01}
+Et andengradspolynomium i tre variable undersøges:
+\begin{equation}
+\begin{aligned}
+f(x,y,z) &= 7\cdot x^{2} + 6\cdot y^{2} + 5\cdot z^{2} - 4\cdot x\cdot y - 4\cdot y \cdot z  -2\cdot x +20 \cdot y  - 10\cdot z + 15 \quad . \\   \\
+\bm{\nabla}f(x,y,z) &= (14\cdot x -4\cdot y-2, -4\cdot x + 12\cdot y - 4 \cdot z +20, -4\cdot y + 10\cdot z -10  ) \quad . \\  \\
+\frac{1}{2}\cdot \mathbf{H}f(x,y,z) &= \left[
+                     \begin{array}{ccc}
+                       7 & -2 & 0\\
+                       -2 & 6 & -2 \\
+                       0 & -2 & 5\\
+                     \end{array}
+                   \right] \quad . \\  \\
+\bm{\Lambda} &= \left[
+                     \begin{array}{ccc}
+                       9 & 0 & 0 \\
+                       0 & 6 & 0 \\
+                       0 & 0 & 3 \\
+                     \end{array}
+                   \right] \quad . \\  \\
+\mathbf{Q} &= \left[
+                     \begin{array}{ccc}
+                       2/3 & -2/3 & -1/3 \\
+                      -2/3& -1/3& -2/3\\
+                       1/3 & 2/3 & -2/3\\
+                     \end{array}
+                   \right]\quad . \\  \\
+\widetilde{f}(\widetilde{x}, \widetilde{y}, \widetilde{z}) & = 9\cdot \widetilde{x}^{2} + 6\cdot \widetilde{y}^{2} + 3 \cdot \widetilde{z}^{2} -18\cdot \widetilde{x} - 12\cdot \widetilde{y} -6\cdot \widetilde{z} +15 \\
+&= 9\cdot\left(\widetilde{x} - 1\right)^{2} + 6\cdot\left(\widetilde{y} - 1 \right)^{2} + 3\cdot \left(\widetilde{z} - 1 \right)^{2}-3 \quad.
+\end{aligned}
+\end{equation}
+Den andengradsligning som giver niveaufladen $\mathcal{K}_{0}(f)$ er derfor givet ved hver af følgende ækvivalente ligninger:
+\begin{equation}
+\begin{aligned}
+f(x,y,z) &= 0 =
+\widetilde{f}(\widetilde{x}, \widetilde{y}, \widetilde{z})  \\
+\left(\frac{\widetilde{x} - 1}{\frac{1}{\sqrt{3}}}\right)^{2} &+ \left(\frac{\widetilde{y} - 1}{\frac{1}{\sqrt{2}}}\right)^{2} +  \left(\widetilde{z} - 1\right)^{2} = 1 \quad .
+\end{aligned}
+\end{equation}
+Det er ligningen for en \emph{ellipsoide} med centrum i $\vekind{e}{\mathbf{C}} = (x_{0}, y_{0}, z_{0}) =  (-1/3, -5/3, 173)$ (med hensyn til de gamle koordinater) svarende til
+$\vekind{v}{\mathbf{C}} = (\widetilde{x}_{0}, \widetilde{y}_{0}, \widetilde{z}_{0}) =  (1,1,1)$ (med hensyn til de nye koordinater)  og halvakserne $\frac{1}{\sqrt{3}}$ og $\frac{1}{\sqrt{2}}$, og $1$, se figur \ref{figEllip3D01Kvad} og navnetabellen i afsnit \ref{secNavnetabel}. Det nye koordinatsystem fremkommer ved rotation af det gamle koordinatsystem med den positive ortogonale substitution  $\mathbf{Q}$.
+\end{example}
+
+
+
+\begin{figure}[ht]
+\centerline{  \includegraphics[height=80mm]{FIGS/plotEllip3D01Kvad.pdf}}
+\begin{center}
+\caption{Niveaufladen $\mathcal{K}_{0}(f)$ for den funktion som er analyseret i eksempel \ref{exampEllip3D01}. Det nye roterede koordinatsystem hvori ellipsoiden har reduceret form er antydet med den røde $\widetilde{x}$-akse, blå $\widetilde{y}$-akse, og grønne $\widetilde{z}$-akse.} \label{figEllip3D01Kvad}
+\end{center}
+\end{figure}
+
+
+
+
+\begin{think}
+Funktionen $f(x,y,z)$, som er undersøgt i eksempel \ref{exampEllip3D01}, har et {\emph{stationært punkt}} i det fundne centrum med værdien $-3$. Hesse-matricen er positiv definit og derfor er det stationære punkt for $f(x,y,z)$ i rummet et egentligt lokalt minimumpunkt, et globalt minimumpunkt.
+\end{think}
+
+\begin{aha}
+Hvis vi kunne tegne grafen for funktionen $f(x,y,z)$ i det $4$-dimensionale $(x,y,z,w)$-rum, dvs. hvis vi betragtede mængden af de punkter i $\mathbb{R}^{4}$ der kan skrives på formen $(x, y, z, f(x,y,z))$ når $(x,y,z)$ gennemløber $(x,y,z)$-rummet i $\mathbb{R}^{4}$, så vil niveaufladen for $f(x,y,z)$ være den mængde vi får i $(x,y,z)$-rummet  ved at sætte $w=0$, altså netop $f(x,y,z) = 0$.
+\end{aha}
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{example}[Hyperboloide med \'{e}t net] \label{exampHypEt3D01}
+\begin{equation}
+\begin{aligned}
+f(x,y,z) &= x^{2} + 2\cdot y^{2} + z^{2} + 2\cdot x - 4\cdot y + 2\cdot z - 4 \cdot x \cdot z -1          \quad . \\   \\
+\bm{\nabla}f(x,y,z) &= (2\cdot x - 4\cdot z +2, -4\cdot y - 4, -4\cdot x + 2\cdot z  + 2  ) \quad . \\   \\
+\frac{1}{2}\cdot \mathbf{H}f(x,y,z) &= \left[
+                     \begin{array}{ccc}
+                       1 & 0 & -2\\
+                       0 & 2 & 0\\
+                       -2 & 0 & 1\\
+                     \end{array}
+                   \right]\quad . \\   \\
+\bm{\Lambda} &= \left[
+                     \begin{array}{ccc}
+                       3 & 0 & 0 \\
+                       0 & 2& 0 \\
+                       0 & 0 & -1 \\
+                     \end{array}
+                   \right] \quad . \\  \\
+\mathbf{Q} &= \left[
+                     \begin{array}{ccc}
+                       -\sqrt{2}/2 & 0 & -\sqrt{2}/2 \\
+                      0& 1& 0\\
+                       \sqrt{2}/2 &0 &  -\sqrt{2}/2\\
+                     \end{array}
+                   \right] \quad . \\
+\end{aligned}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+\widetilde{f}(\widetilde{x}, \widetilde{y}, \widetilde{z}) & = 3\cdot \widetilde{x}^{2} + 2\cdot \widetilde{y}^{2} - \widetilde{z}^{2} - 4\cdot \widetilde{y} -2\cdot \sqrt{2} \cdot \widetilde{z} -1 \\
+&= 3 \cdot \widetilde{x}^{2} + 2\cdot\left(\widetilde{y} - 1 \right)^{2} - \left(\widetilde{z}+ \sqrt{2} \right)^{2}-1 \quad. \\
+\end{aligned}
+\end{equation}
+Den andengradsligning som giver niveaufladen $\mathcal{K}_{0}(f)$ er derfor givet ved hver af følgende ækvivalente ligninger:
+\begin{equation}
+\begin{aligned}
+f(x,y,z) &= 0=
+\widetilde{f}(\widetilde{x}, \widetilde{y}, \widetilde{z}) \\
+\left(\frac{\widetilde{x}}{\frac{1}{\sqrt{3}}}\right)^{2} &+ \left(\frac{\widetilde{y} - 1}{\frac{1}{\sqrt{2}}}\right)^{2} -  \left(\widetilde{z} +\sqrt{2}\right)^{2} = 1 \quad .
+\end{aligned}
+\end{equation}
+Ligningerne  repræsenterer en \emph{hyperboloide med \'{e}t net} der har  centrum i $\vekind{e}{\mathbf{C}} = (x_{0}, y_{0}, z_{0}) =  (1,1,1)$ (med hensyn til de gamle koordinater) svarende til
+$\vekind{v}{\mathbf{C}} = (\widetilde{x}_{0}, \widetilde{y}_{0}) =  (0, 1, -\sqrt{2})$ (med hensyn til de nye koordinater)  og halvakserne $\frac{1}{\sqrt{3}}$ og $\frac{1}{\sqrt{2}}$, og $1$, se figur \ref{figHypEt3D01Kvad} og navnetabellen i afsnit \ref{secNavnetabel}. Det nye koordinatsystem fremkommer ved rotation af det gamle koordinatsystem med den positive ortogonale substitution  $\mathbf{Q}$.
+\end{example}
+
+\begin{think}
+Funktionen $f(x,y,z)$, som er undersøgt i eksempel \ref{exampHypEt3D01},  har et {\emph{stationært punkt}} i det fundne centrum med værdien $-1$. Hesse-matricen er indefinit og derfor er det stationære punkt for $f(x,y,z)$ i rummet hverken  minimumpunkt eller maksimumpunkt.
+\end{think}
+
+
+
+
+\begin{figure}[ht]
+\centerline{  \includegraphics[height=80mm]{FIGS/plotHypEt3D01Kvad.pdf}}
+\begin{center}
+\caption{Niveaufladen $\mathcal{K}_{0}(f)$ for funktionen som analyseres i eksempel \ref{exampHypEt3D01}.} \label{figHypEt3D01Kvad}
+\end{center}
+\end{figure}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{example}[Hyperboloide med to net] \label{exampHypTo3D01}
+Et andengradspolynomium $f(x,y,z)$ er givet ved følgende data:
+\begin{equation}
+\begin{aligned}
+f(x,y,z) &= -x^{2} + \frac{1}{2}\cdot y^{2} + \frac{1}{2}\cdot z^{2} + 2\cdot x + 4\cdot y + 4\cdot z - 5 \cdot y \cdot z -6         \quad . \\  \\
+\bm{\nabla}f(x,y,z) &= (-2\cdot x  +2,  y - 5\cdot z+4, -5\cdot y + z +4  ) \quad . \\  \\
+\frac{1}{2}\cdot \mathbf{H}f(x,y,z) &= \left[
+                     \begin{array}{ccc}
+                       -1 & 0 & 0\\
+                       0 & 1/2 & -5/2\\
+                       0 & -5/2 & 1/2\\
+                     \end{array}
+                   \right] \quad . \\  \\
+\bm{\Lambda} &= \left[
+                     \begin{array}{ccc}
+                       3 & 0 & 0 \\
+                       0 & 2& 0 \\
+                       0 & 0 & -1 \\
+                     \end{array}
+                   \right] \quad . \\  \\
+\mathbf{Q} &= \left[
+                     \begin{array}{ccc}
+                       0 & 1 & 0 \\
+                       -\sqrt{2}/2& 0&  \sqrt{2}/2\\
+                       \sqrt{2}/2 &0 &  \sqrt{2}/2\\
+                     \end{array}
+                   \right] \quad . \\   \\
+\widetilde{f}(\widetilde{x}, \widetilde{y}, \widetilde{z}) & = 3\cdot \widetilde{x}^{2} - \widetilde{y}^{2} - 2\cdot \widetilde{z}^{2} + 2 \cdot \widetilde{y}  +  4\cdot \sqrt{2} \cdot \widetilde{z} - 6 \\
+&= 3 \cdot \widetilde{x}^{2} - \left(\widetilde{y} - 1 \right)^{2} - 2 \cdot \left(\widetilde{z}- \sqrt{2} \right)^{2}-1 \quad.
+\end{aligned}
+\end{equation}
+Den andengradsligning som giver niveaufladen $\mathcal{K}_{0}(f)$ er derfor givet ved:
+\begin{equation}
+\begin{aligned}
+f(x,y,z) &= 0 =
+\widetilde{f}(\widetilde{x}, \widetilde{y}, \widetilde{z}) \\
+\left(\frac{\widetilde{x}}{\frac{1}{\sqrt{3}}}\right)^{2} &-  \left(\widetilde{y} -1\right)^{2} - \left(\frac{\widetilde{z} - \sqrt{2}}{\frac{1}{\sqrt{2}}}\right)^{2} = 1 \quad .
+\end{aligned}
+\end{equation}
+Det er ligningen for en \emph{hyperboloide med to  net} der har  centrum i $\vekind{e}{\mathbf{C}} = (x_{0}, y_{0}, z_{0}) =  (1,1,1)$ (med hensyn til de gamle koordinater) svarende til
+$\vekind{v}{\mathbf{C}} = (\widetilde{x}_{0}, \widetilde{y}_{0}) =  (0, 1, \sqrt{2})$ (med hensyn til de nye koordinater)  og halvakserne $\frac{1}{\sqrt{3}}$, $\frac{1}{\sqrt{2}}$ og $1$ --  se figur \ref{figHypTo3D01Kvad}.
+\end{example}
+
+
+
+\begin{figure}[ht]
+\centerline{  \includegraphics[height=80mm]{FIGS/plotHypTo3D01Kvad.pdf}}
+\begin{center}
+\caption{En hyperboloide med to net er niveaufladen $\mathcal{K}_{0}(f)$ for den funktion, der analyseres i eksempel \ref{exampHypTo3D01}.} \label{figHypTo3D01Kvad}
+\end{center}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Navnetabel for andengradspolynomiers niveauflader} \label{secNavnetabel}
+
+De maksimalt reducerede udtryk for andengradspolynomiers niveauflader præsenteres her under antagelse af at eventuelt centrum (eller såkaldt toppunkt) optræder i $\vekind{v}{\mathbf{C}} = (0,0,0)$. For en given konkret niveauflade kan navnet aflæses fra tabellen; beliggenheden angives med koordinaterne for det fundne centrum $\mathbf{C}$ for niveaufladen;  orienteringen angives ved den fundne substitutionsmatrix $\mathbf{Q}$ og størrelsen af niveaufladen angives ved de enkelte halvakser $a$, $b$, og  $c$, eller $p$ og $k$ i de enkelte tilfælde for så vidt de optræder i den reducerede ligning for niveaufladen.
+
+\begin{equation*} \label{eqAndenGrad3D}
+\begin{array}{|l|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+ \textrm{Ligning} & \textrm{Navn} & \textrm{Punktet $(0,0,0)$} & \textrm{Eksempel} \\ \hline \hline
+  \frac{\widetilde{x}^{2}}{a^{2}} +  \frac{\widetilde{y}^{2}}{b^{2}} +   \frac{\widetilde{z}^{2}}{c^{2}} =1  & \textrm{ellipsoide} & \textrm{centrum} & \textrm{\ref{exampEllip3D01}} \\ \hline
+  \frac{\widetilde{x}^{2}}{a^{2}} +  \frac{\widetilde{y}^{2}}{b^{2}} -  \frac{\widetilde{z}^{2}}{c^{2}} =1 & \textrm{hyperboloide med \'{e}t net} & \textrm{centrum} & \textrm{\ref{exampHypEt3D01}}\\ \hline
+     \frac{\widetilde{x}^{2}}{a^{2}} - \frac{\widetilde{y}^{2}}{b^{2}} -   \frac{\widetilde{z}^{2}}{c^{2}} =1 & \textrm{hyperboloide med to net} & \textrm{centrum} & \textrm{\ref{exampHypTo3D01}}\\ \hline
+  \frac{\widetilde{x}^{2}}{a^{2}} +  \frac{\widetilde{y}^{2}}{b^{2}} -   \frac{\widetilde{z}^{2}}{c^{2}} =0 & \textrm{keglesnitskegleflade} & \textrm{centrum} & \textrm{fig \ref{figGrafFlad}}\\ \hline
+    \frac{\widetilde{x}^{2}}{a^{2}} +  \frac{\widetilde{y}^{2}}{b^{2}}  = \widetilde{z} & \textrm{elliptisk paraboloide} & \textrm{toppunkt}&  \textrm{fig \ref{figGrafFlad}}\\ \hline
+   \frac{\widetilde{x}^{2}}{a^{2}} - \frac{\widetilde{y}^{2}}{b^{2}}  = \widetilde{z} & \textrm{hyperbolsk paraboloide} & \textrm{toppunkt}& \textrm{fig \ref{figGrafFlad}} \\ \hline
+     \frac{\widetilde{x}^{2}}{a^{2}}= p\cdot \widetilde{z} & \textrm{parabolsk cylinderflade} & \textrm{toppunkt} & \textrm{fig \ref{figGrafFlad}} \\ \hline
+ \frac{\widetilde{x}^{2}}{a^{2}} + \frac{\widetilde{y}^{2}}{b^{2}}  = 1 & \textrm{elliptisk cylinderflade} & \textrm{centrum} & \\ \hline
+  \frac{\widetilde{x}^{2}}{a^{2}} - \frac{\widetilde{y}^{2}}{b^{2}}  = 1 & \textrm{hyperbolsk cylinderflade} & \textrm{centrum} & \\ \hline
+\frac{\widetilde{x}^{2}}{a^{2}} +  \frac{\widetilde{y}^{2}}{b^{2}} +   \frac{\widetilde{z}^{2}}{c^{2}}  = 0 & \textrm{punktet $(0,0,0)$} & \textrm{''centrum''} & \\ \hline
+ \frac{\widetilde{x}^{2}}{a^{2}} +  \frac{\widetilde{y}^{2}}{b^{2}}  = 0 & \textrm{$\widetilde{z}$-aksen} &  & \\ \hline
+  \frac{\widetilde{x}^{2}}{a^{2}} -  \frac{\widetilde{y}^{2}}{b^{2}}  = 0 & \textrm{to planer gennem $\widetilde{z}$-aksen} &  & \\ \hline
+\widetilde{x}^{2} =  k > 0  & \textrm{to planer parallelle med $(\widetilde{y},\widetilde{z})$-planen} &  & \\ \hline
+ \widetilde{x}^{2} =  0  & \textrm{$(\widetilde{y},\widetilde{z})$-planen} &  & \\ \hline
+ \hline
+\end{array}
+\end{equation*}
+
+
+
+
+
+\begin{figure}[ht]
+\centerline{  \includegraphics[height=45mm]{FIGS/plotKKegle.pdf} \includegraphics[height=45mm]{FIGS/plotEllipPar.pdf} \includegraphics[height=45mm]{FIGS/plotHypPar.pdf} \includegraphics[height=45mm]{FIGS/plotParCyl.pdf} }
+\begin{center}
+\caption{En keglesnitskegleflade, en elliptisk paraboloide, en hyperbolsk paraboloide, og en parabolsk cylinderflade.} \label{figGrafFlad}
+\end{center}
+\end{figure}
+
+
+
+
+
+
+
+\begin{exercise} \label{exercKomplet}
+Vis, at listen i navnetabellen over niveauflader for andengradspolynomier i tre variable er komplet; dvs.  enhver totalt reduceret andengradsligning i tre variable (som indeholder mindst \'{e}n af de variable $\widetilde{x}$, $\widetilde{y}$, eller $\widetilde{z}$ med grad $2$) er at finde på listen.
+\end{exercise}
+
+\begin{exercise} \label{exercExtract2D}
+Vis, at enhver totalt reduceret andengradsligning i to variable fremkommer af tabellen over totalt reducerede andengradsligninger i tre variable ved at sætte $\widetilde{z}=0$.
+\end{exercise}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Parametrisering af en ellipsoide}\label{secEllipsoideParam}
+
+Vi vil her kort skitsere hvordan man kan \emph{parametrisere} en niveauflade for et andengrads\-polynomium i tre variable med henblik på at kunne plotte og undersøge dens øvrige geometriske egenskaber. Som eksempel vil vi benytte en ellipsoide
+med givet (eller fundet) centrum $\mathbf{C}$, givne halvakser (aflæst fra diaognalmatricen  $\Lambda$), og givne orienterings-vektorer $\vekind{e}{\mathbf{v}_{1}}$, $\vekind{e}{\mathbf{v}_{2}}$, og  $\vekind{e}{\mathbf{v}_{3}}$ (fra den positive ortogonale substitutionsmatrix $\mathbf{Q}$) -- altså net\-op ud fra de data der bestemmes via reduktionsanalysen eksemplificeret ovenfor.\\
+
+ Vi antager for eksemplets skyld, at der her er tale om en ellipsoide, således at $\mathbf{A} = \frac{1}{2}\cdot \mathbf{H}f(x,y, z)$ er positiv definit, dvs. alle tre egenværdier $\lambda_{1}$, $\lambda_{2}$, og $\lambda_{3}$ er positive for $\mathbf{A} = \frac{1}{2}\cdot \mathbf{H}f(x,y, z)$. Tilsvarende konstruktion kan gennemføres for enhver af  de andre niveauflader.\\
+
+Vi antager, at ellipsoidens ligning i reduceret form er givet ved
+\begin{equation}
+\lambda_{1}\cdot(\widetilde{x}- \widetilde{x_{0}})^{2} + \lambda_{2}\cdot(\widetilde{y}- \widetilde{y_{0}})^{2} +\lambda_{3}\cdot(\widetilde{z}- \widetilde{z_{0}})^{2} = d^{2} \quad,
+\end{equation}
+hvor $d$ er en positiv konstant og hvor $\vekind{v}{\mathbf{C}} = (\widetilde{x_{0}}, \widetilde{y_{0}}, \widetilde{z_{0}})$ er koordinaterne for ellipsoidens centrum med hensyn til det nye koordinatsystem, således at centerkoordinaterne med hensyn til det gamle system er givet ved:
+$\vekind{e}{\mathbf{C}} = \mathbf{Q}\cdot \vekind{v}{\mathbf{C}}$.
+ Vi har altså følgende ingredienser til rådighed til konstruktionen af ellipsoiden:
+\begin{equation}
+\begin{aligned}
+\vekind{e}{\mathbf{C}} &= (C_{1}, C_{2}, C_{3}) \\
+a&= \frac{d}{\sqrt{\lambda_{1}}} \\
+b&= \frac{d}{\sqrt{\lambda_{2}}} \\
+c&= \frac{d}{\sqrt{\lambda_{3}}} \\
+\mathbf{Q} &= \left[
+               \begin{array}{ccc}
+                 \vekind{e}{\mathbf{v}_{1}} &   \vekind{e}{\mathbf{v}_{2}} &   \vekind{e}{\mathbf{v}_{3}}\\
+               \end{array}
+             \right] \quad .
+\end{aligned}
+\end{equation}
+
+Vi vil udelukkende betragte koordinater, der refererer til den sædvanlige basis e i $(\mathbb{R}^{n}, \bm{\cdot})$.
+
+En kugleflade $\mathcal{S}_{1}$ med radius $1$ og centrum i $(0,0,0)$ kan  beskrives som mængden af de punkter $(x,y,z)$, der har afstanden $1$ til $(0,0,0)$:
+\begin{equation} \label{eqSph}
+\begin{aligned}
+\rho_{(0,0,0)}(x,y,z) &= 1 \quad , \quad \textrm{som er ækvivalent med} \\
+\quad \sqrt{x^{2} + y^{2} + z^{2}} &= 1 \quad , \quad \textrm{eller} \\
+x^{2} + y^{2} + z^{2} &= 1 \quad.
+\end{aligned}
+\end{equation}
+
+Kuglefladen kan også præsenteres ved hjælp af {\emph{geografiske koordinater}} $u$ og $v$, hvor $u \in [0, \pi]$ og $v\in [-\pi, \pi]$:
+\begin{equation}
+\mathcal{S} \quad : \quad (x,y,z) = \mathbf{r}(u,v) = (\sin(u)\cdot \cos(v), \sin(u)\cdot \sin(v), \cos(u) ) \quad.
+\end{equation}
+Når $u$ og $v$ gennemløber deres respektive intervaller $u \in [0, \pi]$ og $v\in [-\pi, \pi]$ så får vi punkter $(x,y,z) = \mathbf{r}(u,v)$ på kuglefladen -- og alle punkterne rammes.
+Lad os se på den første af de to påstande, altså at alle punkterne $\mathbf{r}(u,v)$ ligger på kuglefladen. Indsæt $x=\sin(u)\cdot \cos(v)$, $y= \sin(u)\cdot \sin(v)$, og $z= \cos(u)$ i kuglens ligning \ref{eqSph}:
+\begin{equation}
+\begin{aligned}
+x^{2} + y^{2} + z^{2} &= \sin^{2}(u)\cdot \cos^{2}(v) + \sin^{2}(u)\cdot \sin^{2}(v) + \cos^{2}(u) \\
+&= \sin^{2}(u)\cdot \left(\sin^{2}(u) +  \cos^{2}(u)\right) + \cos^{2}(u) \\
+&= \sin^{2}(u) + \cos^{2}(u) = 1 \quad,
+\end{aligned}
+\end{equation}
+så alle punkterne der fremstilles på formen $\mathbf{r}(u,v)$ ligger på kuglefladen.
+
+\begin{exercise} \label{exercSphCheck}
+Vis, at den anden påstand om $\mathbf{r}(u,v)$ også er rigtig, altså at alle punkter på kuglefladen 'rammes' af $\mathbf{r}(u,v)$ når $u$ og $v$ gennemløber intervallerne $u \in [0, \pi]$ og $v \in [-\pi, \pi]$. Findes der punkter på kuglefladen som rammes mere end \'{e}n gang? Beskriv i så fald den punktmængde og hvor 'mange gange' de punkter rammes.
+\end{exercise}
+
+Vi skalerer kuglefladen med de tre egenværdier i hver koordinatakseretning og får dermed en fremstilling af en ellipsoide med de korrekte, ønskede, halvakser:
+\begin{equation}
+{\mathbf{r}_{1}}(u,v) = (\frac{d}{\sqrt{\lambda_{1}}}\cdot \sin(u)\cdot \cos(v), \frac{d}{\sqrt{\lambda_{2}}}\cdot \sin(u)\cdot \sin(v),  \frac{d}{\sqrt{\lambda_{3}}}\cdot \cos(u) )    \quad ,
+\end{equation}
+hvor $\quad  u \in [0, \pi] \, , \,  v\in [-\pi, \pi]$
+således at ethvert punkt $x, y,z$ som rammes af afbildningen  ${\mathbf{r}}_{1}(u,v)$ nu tilfredsstiller:
+\begin{equation}
+\begin{aligned}
+\lambda_{1}\cdot {x}^{2} + \lambda_{2}\cdot {y}^{2} + \lambda_{3}\cdot {z}^{2} &= d^{2} \\ \\
+\left(\frac{{x}}{\frac{d}{\sqrt{\lambda_{1}}}}\right)^{2} + \left(\frac{{y}}{\frac{d}{\sqrt{\lambda_{2}}}}\right)^{2} + \left(\frac{{z}}{\frac{d}{\sqrt{\lambda_{3}}}}\right)^{2}  &= 1
+\end{aligned}
+\end{equation}
+eller, hvis vi benytter halvaksebetegnelserne $a$, $b$, og $c$:
+\begin{equation}
+\left(\frac{{x}}{a}\right)^{2} + \left(\frac{{y}}{b}\right)^{2} + \left(\frac{{z}}{c}\right)^{2}  = 1 \quad ,
+\end{equation}
+som netop er ligningen for en standard ellipsoide med de ønskede halvakser men konstrueret i $(x,y,z)$-systemet. De punkter der fremstilles ved ${\mathbf{r}_{1}}(u,v)$ ligger alle på denne elipsoide.\\
+
+Til sidst roterer vi ellipsoiden med rotationsmatricen $\mathbf{Q}$ og parallelforskyder til det korrekte ønskede centrum:
+
+\begin{equation} \label{eqPamEllipGen}
+{\mathbf{r}}_{2}(u,v) = \mathbf{Q}\cdot \mathbf{{r}}_{1}(u,v) + \mathbf{C} \quad.
+\end{equation}
+Alle de punkter, der har stedvektorer givet ved ${\mathbf{r}}_{2}(u,v)$ ligger nu på den ønskede ellipsoide og alle punkterne på ellipsoiden rammes når
+$\quad  u \in [0, \pi] \, , \,  v\in [-\pi, \pi]$.
+
+\begin{example}[Ellipsoide parametrisering] \label{exampEllipsoide}
+En konkret ellipsoide er givet ved følgende data, som stammer fra en undersøgelse af andengradspolynomiet
+\begin{equation}
+ f(x,y, z) =  2\cdot x^{2} + 2\cdot y^{2} + 2\cdot z^{2} - 2\cdot x - 4\cdot y - 2 \cdot z - 2\cdot x \cdot z + 3 \quad :
+\end{equation}
+\begin{equation}
+\begin{aligned}
+\vekind{e}{\mathbf{C}} &= (1,1,1) \\
+a&= \frac{1}{\sqrt{3}} \\
+b&= \frac{1}{\sqrt{2}} \\
+c&= 1 \\
+\mathbf{Q} &= \left[
+                \begin{array}{ccc}
+                  -1/\sqrt{2} & 0 & -1/\sqrt{2} \\
+                  0 & 1 & 0 \\
+                  1/\sqrt{2} & 0 & -1/\sqrt{2} \\
+                \end{array}
+              \right] \quad .
+\end{aligned}
+\end{equation}
+
+Vi vil konstruere en parameterfremstilling på formen ${\mathbf{r}}_{2}(u,v)$ som i (\ref{eqPamEllipGen}) for den givne ellipsoide.
+Den skalerede kugleflade er givet ved:
+\begin{equation}
+{\mathbf{r}_{1}}(u,v) = \left(\frac{1}{\sqrt{3}}\cdot \sin(u) \cdot \cos(v) , \frac{1}{\sqrt{2}}\cdot \sin(u) \cdot \sin(v) , \cos(u) \right)
+\end{equation}
+og den $\mathbf{Q}$-roterede skalerede kugleflade parallelforskudt til punktet $(1,1,1)$ får derefter parameterfremstillingen:
+\begin{equation}
+\begin{aligned}
+{\mathbf{r}}_{2}(u,v)  &= \\
+&= (-\frac{1}{\sqrt{6}}\cdot \sin(u)\cdot \cos(v) - \frac{1}{\sqrt{2}}\cdot \cos(u) +1 \, , \\  \,
+&\phantom{aaaa}\frac{1}{\sqrt{2}}\cdot \sin(u)\cdot \sin(v) + 1 \, , \\
+&\phantom{aaaa}\frac{1}{\sqrt{6}}\cdot \sin(u)\cdot \cos(v) - \frac{1}{\sqrt{2}}\cdot \cos(u) + 1) \quad.
+\end{aligned}
+\end{equation}
+Konstruktionen er antydet i figur \ref{figEllConstr}.
+\end{example}
+
+\begin{figure}[ht]
+\centerline{  \includegraphics[height=40mm]{FIGS/plotEllConstr1.pdf} \includegraphics[height=40mm]{FIGS/plotEllConstr2.pdf} \includegraphics[height=40mm]{FIGS/plotEllConstr3.pdf}
+\includegraphics[height=40mm]{FIGS/plotEllConstr4.pdf}}
+\begin{center}
+\caption{Konstruktion af ellipsoiden fra eksempel \ref{exampEllipsoide}  ud fra data om beliggenhed, akser, og rotations\-matrix.} \label{figEllConstr}
+\end{center}
+\end{figure}
+
+\begin{example}[Ellipsoidedata] \label{exampFunkEll}
+Den konstruerede ellipsoide i eksempel \ref{exampEllipsoide} er $0$-niveaufladen for andengradspolynomiet med følgende data:
+\begin{equation}
+\begin{aligned}
+f(x,y, z) &=  2\cdot x^{2} + 2\cdot y^{2} + 2\cdot z^{2} - 2\cdot x - 4\cdot y - 2 \cdot z - 2\cdot x \cdot z + 3\quad . \\   \\
+\bm{\nabla}f(x,y,z) &= ( 4\cdot x - 2\cdot z -2\, , \, 4\cdot y - 4 \, , \, -2\cdot x + 4 \cdot z - 2  ) \quad . \\  \\
+\frac{1}{2}\cdot \mathbf{H}f(x,y,z) &= \left[
+                     \begin{array}{ccc}
+                       2 & 0 & -1\\
+                       0 & 2 & 0 \\
+                       -1 & 0 & 2\\
+                     \end{array}
+                   \right] \quad . \\  \\
+\bm{\Lambda} &= \left[
+                     \begin{array}{ccc}
+                       3 & 0 & 0 \\
+                       0 & 2 & 0 \\
+                       0 & 0 & 1 \\
+                     \end{array}
+                   \right] \quad . \\  \\
+\mathbf{Q} &= \left[
+                     \begin{array}{ccc}
+                       - \sqrt{2}/2 & 0 & - \sqrt{2}/2 \\
+                     0& 1& 0\\
+                      \sqrt{2}/2 &0 & - \sqrt{2}/2\\
+                     \end{array}
+                   \right]\quad . \\  \\
+\widetilde{f}(\widetilde{x}, \widetilde{y}, \widetilde{z}) & = 3\cdot \widetilde{x}^{2} + 2\cdot \widetilde{y}^{2} + \widetilde{z}^{2}  -4\cdot \widetilde{y}+  2\cdot\sqrt{2}\cdot \widetilde{z} +3 \\
+&= 3\cdot \widetilde{x}^{2} + 2\cdot\left(\widetilde{y} - 1 \right)^{2} + \left(\widetilde{z} +\sqrt{2} \right)^{2}-1 \quad.
+\end{aligned}
+\end{equation}
+Den andengradsligning som giver niveaufladen $\mathcal{K}_{0}(f)$ er derfor givet ved ligningen:
+\begin{equation}
+\left(\frac{\widetilde{x}}{\frac{1}{\sqrt{3}}}\right)^{2} + \left(\frac{\widetilde{y} - 1}{\frac{1}{\sqrt{2}}}\right)^{2} +  \left(\widetilde{z} +\sqrt{2}\right)^{2} = 1 \quad ,
+\end{equation}
+hvorfra vi aflæser de ovenfor givne halvakser $a =\frac{1}{\sqrt{3}}$, $b=\frac{1}{\sqrt{2}}$, og $c=1$ samt centerkoordinaterne $\vekind{v}(\mathbf{C}) = (0, 1, -\sqrt{2})$ som via substitutionsmatricen $\mathbf{Q}$ svarer til koordinaterne $\vekind{e}(\mathbf{C}) = (1,1,1)$ med hensyn til standard-basis e.
+\end{example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{summary}
+Hovedresultatet i denne eNote er en identifikation -- via en række konkrete eksempler -- af de mulige niveaukurver og -flader for andengradspolynomier i to og tre variable. Metoden er reduktionsmetoden for kvadratiske former og andengradspolynomier,  som er indført i \tref{NUID33-tn18}{eNote}. Baseret på samme metode angives en strategi til parametrisering og præsentation af de enkelte niveauflader for funktioner af tre variable.
+\end{summary}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% HER SKAL DU STOPPE MED AT SKRIVE %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{../Strukturfiler/postambel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

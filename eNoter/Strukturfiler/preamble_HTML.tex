@@ -1,0 +1,121 @@
+\documentclass[a4paper,12pt]{report}
+
+
+\usepackage[latin1]{inputenc}
+\usepackage[danish]{babel}
+\usepackage{hyperref}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm} %Matematikpakker
+
+\usepackage{comment}
+
+\setlength{\parindent}{0mm} %Ingen Indhak i første linje i afsnit
+
+% Necessary for including graphics (HTML, should be compatible with both DVI and PDF generation!):
+\usepackage{graphicx}
+
+\usepackage{color} %Farvepakke
+\usepackage{array}
+\usepackage{multirow} %Til at flette rækker i tabeller.
+
+% =     Fonts (select one)    =
+\usepackage{bm} % bold math, must be loaded after the fontpackages
+
+% % Til overskrifter
+\DeclareTextFontCommand{\th}{\fontencoding{T1}\fontfamily{phv}\fontseries{b}\selectfont}
+\newcommand\titlefont{\fontencoding{T1}\fontfamily{phv}\selectfont}
+
+% =     PGF grafik      =
+%\usepackage{tikz}
+\newcommand\titlegraphic[1]{}
+
+
+% = Farver
+\input{../Strukturfiler/includes/farver.tex}
+
+% = Counter
+\newcounter{evncount}[chapter]
+\setcounter{evncount}{0}
+\renewcommand{\theevncount}{\thechapter.\arabic{evncount}}
+\renewcommand{\theequation}{\thechapter-\arabic{equation}}
+
+\newcounter{opgavecount}[section]
+\setcounter{opgavecount}{0}
+\newcounter{spgcount}[opgavecount]
+\setcounter{spgcount}{0}
+\renewcommand{\thespgcount}{\alph{spgcount})}
+
+% = Længder
+%\newlength{\envtblsep}\setlength{\envtblsep}{1\FrameSep}
+%\newlength{\obsl}\setlength{\obsl}{\textwidth-1.2cm-13.2pt}
+
+
+
+% Box environments defined for HTML rendering: Environment key (lowercase) must match environment name (UPPERCASE); Real title is set up in enoteserver extension during rendering (might need localization for instance.)
+% A synchronized configuration must be kept in tx_enoteserver_utils->LaTeX_boxEnrironments
+% Any box environment should follow one of these forms (with numbering, without numbering) regardless of it's layout in the PDF:
+\newenvironment{example}[1][]{\refstepcounter{evncount} \th{EXAMPLE \theevncount: #1} \par }{ }
+\newenvironment{exercise}[1][]{\refstepcounter{evncount} \th{EXERCISE \theevncount: #1} \par }{ }
+\newenvironment{bevis}[1][]{\th{BEVIS: #1} \par }{ }
+\newenvironment{definition}[1][]{\refstepcounter{evncount} \th{DEFINITION \theevncount: #1} \par }{ }
+\newenvironment{theorem}[1][]{\refstepcounter{evncount} \th{THEOREM \theevncount: #1} \par }{ }
+\newenvironment{lemma}[1][]{\refstepcounter{evncount} \th{LEMMA \theevncount: #1} \par }{ }
+\newenvironment{corollary}[1][]{\refstepcounter{evncount} \th{COROLLARY \theevncount: #1} \par }{ }
+\newenvironment{method}[1][]{\refstepcounter{evncount} \th{METHOD \theevncount: #1} \par }{ }
+\newenvironment{explain}[1][]{\refstepcounter{evncount} \th{EXPLAIN \theevncount: #1} \par }{ }
+\newenvironment{remark}[1][]{\refstepcounter{evncount} \th{REMARK \theevncount: #1} \par }{ }
+\newenvironment{summary}{\th{SUMMARY} \par }{ }
+
+%\newcommand{\bevisslut}{\begin{scriptsize} \begin{flushright} $ \blacksquare $ \end{flushright} \end{scriptsize}}
+
+
+% notice environments:
+\newenvironment{obs}{\par====OBS-BEGIN====\par}{\par====OBS-END====\par}
+\newenvironment{info}{\par====INFO-BEGIN====\par}{\par====INFO-END====\par}
+\newenvironment{think}{\par====THINK-BEGIN====\par}{\par====THINK-END====\par}
+\newenvironment{aha}{\par====AHA-BEGIN====\par}{\par====AHA-END====\par}
+\newenvironment{build}{\par====BUILD-BEGIN====\par}{\par====BUILD-END====\par}
+ 
+%\newenvironment{basis}{\par====BASIS-BEGIN====\par}{\par====BASIS-END====\par}
+\newenvironment{basis}{\em}{\em}
+
+\newenvironment{vink}{\par====VINK-BEGIN====\par}{\par====VINK-END====\par}
+\newenvironment{facit}{\par====FACIT-BEGIN====\par}{\par====FACIT-END====\par}
+\newenvironment{question}{\par====QUESTION-BEGIN====\par}{\par====QUESTION-END====\par}
+
+% Dividers:
+\newcommand{\exercisebegin}[1][]{\refstepcounter{opgavecount} \th{EXERCISEBEGIN \theopgavecount:  #1} \par}
+\newcommand{\quizexercisebegin}[1][]{\refstepcounter{opgavecount} \th{QUIZEXERCISEBEGIN \theopgavecount:  #1} \par}
+\newcommand{\ugedagdatotitel}[4]{ \th{UGEDAGDATOTITEL #1 -- #2 dag (#3) : #4} \par }
+
+
+% Pure layout:
+\newcommand{\afsnit}[1]{\bigskip\th{\textcolor{mingroen}{#1}} \\ }
+\newenvironment{skema}[1]{\begin{tabular}{#1}}{\end{tabular}}
+
+
+% ========================
+\input{../Strukturfiler/includes/makroer.tex}
+
+
+
+% Medialink: SCREEN: (QRcode) + thumbnail image + kode
+\newcommand{\onlinemedia}[3]{
+	\includegraphics[width=3cm]{qr/#2.png} 
+	\href{http://qr.dtu.dk/#2}{#3}
+}
+\newcommand{\onlinemediathumb}[3]{
+	\includegraphics[width=3cm]{qr/#2.png} 
+	\includegraphics[width=3cm]{qr/#2_thumb.png} 
+	\href{http://qr.dtu.dk/#2}{#3}
+}
+
+
+
+% = Index =
+
+\usepackage{makeidx}
+\newcommand\ind[2]{\index{#1}\textbf{\textit{\textcolor{black}{#2}}}}
+
+
+\begin{document}

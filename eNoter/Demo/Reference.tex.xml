@@ -1,0 +1,1915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths=".,//Users/kasper/Sites/typo3/enoteserver/fileadmin/enoteserver/preview/enoten/Demo/"?>
+<?latexml options="a4paper,12pt" class="report"?>
+<?latexml package="a4wide"?>
+<?latexml options="latin1" package="inputenc"?>
+<?latexml options="danish" package="babel"?>
+<!-- %\usepackage[T1]{fontenc} -->
+<!-- %\usepackage{ae,aecompl} -->
+<!-- %\usepackage{xr-hyper} %Externe hyper-ref -->
+<?latexml package="hyperref"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML">
+  <ERROR class="undefined">\hypersetup</ERROR>
+  <para xml:id="p1">
+    <p>bookmarksnumbered=true<!-- %Til hyperreferencer. Referencer med farver 
+     %\usepackage{needspace} % giver mulighed for at kræve at der skal være et antal tomme linier på siden før ellers indsættes et sideskift.
+     %\usepackage{framed} %Bokse--></p>
+  </para>
+  <?latexml package="amsmath,amsfonts,amssymb,amsthm,mathtools"?>
+  <!-- %Matematikpakker 
+     %Ingen Indhak i første linje i afsnit-->
+  <?latexml package="color"?>
+  <!-- %Farvepakke 
+     %\usepackage{setspace}
+     %\usepackage{calc}-->
+  <?latexml package="array"?>
+  <?latexml package="colortbl"?>
+  <?latexml package="multirow"?>
+  <!-- %Til at flette rækker i tabeller. 
+     %**** ../Strukturfiler/preambel_HTML.tex Line 25 ****
+     %\usepackage{longtable}
+     %\usepackage{microtype}
+     %\usepackage{graphicx}
+     %= Sidehoved =
+     %\usepackage{fancyhdr}
+     %\pagestyle{fancy}
+     %\renewcommand{\sectionmark}[1]{\markright{\protect\titlegraphic{minorange}\thesection~\MakeUppercase{#1}}} % \thesection.\
+     %\fancyhead{}
+     %\fancyfoot{}
+     %\fancyhead[R]{\titlefont\thepage}
+     %\fancyhead[C]{}
+     %\fancyhead[L]{\titlefont\MakeUppercase{TN~\thechapter}~\hspace*{1ex}\rightmark}
+     %\renewcommand\headrulewidth{0pt}
+     %\fancypagestyle{plain}{\fancyfoot[C]{}}% {\titlefont\footnotesize\thepage}}
+     %\setlength{\headheight}{15pt}
+     %=     Fonts (select one)    =
+     %\usepackage[adobe-utopia]{mathdesign} % incompatible with maple code
+     %\usepackage{lmodern} % default LaTeX
+     %\usepackage{kpfonts}
+     %\usepackage[osf]{mathpazo}\linespread{1.05} % Palatino needs more leading (space between lines)
+     %\usepackage{pxfonts}\linespread{1.05} % Palatino with math
+     %\usepackage{mathpple}\linespread{1.05} % Palatino with Euler math
+     %\usepackage{tgpagella}
+     %**** ../Strukturfiler/preambel_HTML.tex Line 50 ****
+     %\usepackage[urw-garamond]{mathdesign}
+     %\usepackage[math]{anttor}
+     %\usepackage{kmath,kerkis}
+     %\usepackage{fouriernc}-->
+  <?latexml package="bm"?>
+  <!-- %bold math, must be loaded after the fontpackages 
+     %=============================
+     %% Til overskrifter
+     %=      Title Layout      =
+     %\usepackage{titlesec}
+     %\makeatletter
+     %\titleformat{\chapter}
+     %[display] % Shape
+     %{\titlefont\Huge\flushleft} % Title and label format
+     %{\titlefont\LARGE\bfseries \titlegraphic{minorange}\@chapapp~\thechapter} % label
+     %{0.9em} % label/title separation
+     %{} % before code
+     %[] % after code
+     %\makeatother
+     %\titleformat{\section}
+     %[hang] % Shape
+     %{\titlefont\Large\flushleft} % Title and label format
+     %**** ../Strukturfiler/preambel_HTML.tex Line 75 ****
+     %{\thesection} % label
+     %{0.9em} % label/title separation
+     %{} % before code
+     %[] % after code
+     %\titleformat{\subsection}
+     %[hang] % Shape
+     %{\titlefont\large} % Title and label format
+     %{\thesubsection} % label
+     %{0.9em} % label/title separation
+     %{} % before code
+     %[] % after code
+     %\titlespacing{\subsection}{0pt}{*6}{*1.5}
+     %\titleformat{\subsubsection}
+     %[hang] % Shape
+     %{\titlefont} % Title and label format
+     %{\thesubsubsection} % label
+     %{0.9em} % label/title separation
+     %{} % before code
+     %[] % after code
+     %=     PGF grafik      =
+     %\usepackage{tikz}
+     %**** ../Strukturfiler/preambel_HTML.tex Line 100 ****
+     %= Farver
+     %= Counter
+     %= Længder
+     %\newlength{\envtblsep}\setlength{\envtblsep}{1\FrameSep}
+     %\newlength{\obsl}\setlength{\obsl}{\textwidth-1.2cm-13.2pt}
+     %**** ../Strukturfiler/preambel_HTML.tex Line 125 ****
+     %Box environments defined for HTML rendering: Environment key (lowercase) must match environment name (UPPERCASE); Real title is set up in enoteserver extension during rendering (might need localization for instance.)
+     %A synchronized configuration must be kept in tx_enoteserver_utils->LaTeX_boxEnrironments
+     %Any box environment should follow one of these forms (with numbering, without numbering) regardless of it's layout in the PDF:
+     %notice environments:
+     %**** ../Strukturfiler/preambel_HTML.tex Line 150 ****
+     %= Forudsætning = basis
+     %========================
+     %MAKROER
+     %\newenvironment{matr}[1][]{\hspace*{-.8mm}\left[\hspace*{-1mm}\begin{array}{#1}}{\end{array}\hspace*{-1mm}\right]\hspace*{-.8mm}}
+     %**** ../Strukturfiler/preambel_HTML.tex Line 175 ****
+     %**** ../Strukturfiler/preambel_HTML.tex Line 200 ****
+     %Lambda-matrix
+     %de komplekse tal
+     %eksponentialfunktionen. lodret 'e', og altså ikke kursiv ligesom andre bogstaver.
+     %= Index =
+     %**** ../Strukturfiler/preambel_HTML.tex Line 225 ****-->
+  <?latexml package="makeidx"?>
+  <!-- %\makeindex 
+     %\usepackage{index}
+     %\makeindex
+     %\newindex{nor}{adx}{and}{Stikordsregister}
+     %\newindex{sym}{adx}{and}{Symbolliste}
+     %\newcommand\indN[2]{{\index[nor]{#1}\textit{\textcolor{red}{#2}}}}
+     %\newcommand\indS[2]{{\index[sym]{#1}\textit{\textcolor{red}{#2}}}}
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     %\usepackage[notref,notcite]{showkeys}
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     %\usepackage{index}
+     %\makeindex
+     %\newindex{nor}{adx}{and}{Stikordsregister}
+     %\newindex{sym}{adx}{and}{Symbolliste}
+     %\newcommand\indN[2]{{\index[nor]{#1}\textit{\textcolor{red}{#2}}}}
+     %\newcommand\indS[2]{{\index[sym]{#1}\textit{\textcolor{red}{#2}}}}
+     %**** ../Strukturfiler/preambel_HTML.tex Line 250 ****
+     %\usepackage{multind}
+     %\makeindex{generel}
+     %\makeindex{symbol}
+     %= Hyperreferencer =
+     %\externaldocument[TN2-]{../TN02-Ligningssystemer/TNdriver}
+     %\externaldocument[TN3-]{../TN03-Matricer_og_Matrixalgebra/Matricer_og_matrixalgebra}
+     %\externaldocument[TN4-]{../TN04-Kvadratiske_matricer/TNdriver}
+     %\externaldocument[TN5-]{../TN05-Determinanter/Determinanter}
+     %\externaldocument[TN10-]{../TN10-1.ordens_differentialligninger/TNdriver}
+     %\externaldocument[TN11-]{../TN11-1.ordens_differentialligningssystemer/TNdriver}
+     %\externaldocument[TN12-]{../TN12-2.ordens_differentialligninger/TNdriver}
+     %SÆT DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     %%% HERFRA SKAL DU SKRIVE ELLER INDSÆTTE %%%%
+     %%% DEN FIL DU ØNSKER %%%%%%%%%%%%%%%%%%%%%%%
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+  <subsubsection refnum="998.0.0.1" xml:id="Ch998.S0.SS0.SSS1">
+    <title>====MARKER====</title>
+  </subsubsection>
+  <chapter refnum="999" xml:id="Ch999" labels="LABEL:tn999">
+    <title>Lorem Ipsum Dolor 1</title>
+    <para xml:id="Ch999.p1">
+      <p>====BASIS-BEGIN====
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dolor nibh, facilisis non <Math mode="inline" tex="a^{2}+b^{2}=c^{2}" xml:id="Ch999.p1.m1" text="a ^ 2 + b ^ 2 = c ^ 2"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">c</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMApp></XMath></Math> semper at, ullamcorper ultrices felis. Aliquam ut dui diam. Cras porta posuere dolor vitae laoreet. In eu sem purus.
+====BASIS-END====</p>
+    </para>
+    <subsubsection refnum="999.0.0.1" xml:id="Ch999.S0.SS0.SSS1">
+      <title>====MARKER====</title>
+    </subsubsection>
+    <section refnum="999.1" xml:id="Ch999.S1" labels="LABEL:tn999.linlign">
+      <title>Donec dolor nibh</title>
+      <para xml:id="Ch999.S1.p1">
+        <p>En <indexmark><indexphrase key="lineærligning">lineær ligning</indexphrase></indexmark><text font="bold italic">lineær ligning</text> med <Math mode="inline" tex="n" xml:id="Ch999.S1.p1.m1" text="n"><XMath><XMTok role="UNKNOWN" font="italic">n</XMTok></XMath></Math> ubekendte er en ligning af formen</p>
+        <equation refnum="999-1" xml:id="Ch999.E1" labels="LABEL:TN999.1">
+          <Math mode="display" tex="a_{1}\cdot x_{1}+a_{2}\cdot x_{2}+...+a_{n}\cdot x_{n}=b\,." xml:id="Ch999.E1.m1" text="a _ 1 cdot x _ 1 + a _ 2 cdot x _ 2 + ldots + a _ n cdot x _ n = b">
+            <XMath>
+              <!-- %**** Reference.tex.modForLaTeXML Line 25 **** -->
+              <XMApp punctuation=".">
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                  <XMApp>
+                    <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                      <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                      <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                      <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                      <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                      <XMTok meaning="2" role="NUMBER">2</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMTok role="ID" name="ldots">…</XMTok>
+                  <XMApp>
+                    <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                      <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                      <XMTok role="UNKNOWN" font="italic">n</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                      <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                      <XMTok role="UNKNOWN" font="italic">n</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMApp>
+                <XMTok role="UNKNOWN" font="italic">b</XMTok>
+              </XMApp>
+            </XMath>
+          </Math>
+        </equation>
+        <p>Tallene <Math mode="inline" tex="a_{1},\, a_{2},\,...\,,a_{n}" xml:id="Ch999.S1.p1.m2" text="list@(a _ 1, a _ 2, ldots, a _ n)"><XMath><XMApp><XMTok meaning="list" role="FENCED" separators=",,,"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok role="ID" name="ldots">…</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp></XMApp></XMath></Math> kaldes <text font="italic">koefficienterne</text> og tallet <Math mode="inline" tex="b" xml:id="Ch999.S1.p1.m3" text="b"><XMath><XMTok role="UNKNOWN" font="italic">b</XMTok></XMath></Math> kaldes <text font="italic">højresiden</text>. Koefficienterne og højresiden betragtes som kendte tal, mens <Math mode="inline" tex="x_{1},\, x_{2},\,...\, x_{n}" xml:id="Ch999.S1.p1.m4" text="list@(x _ 1, x _ 2, ldots * x _ n)"><XMath><XMApp><XMTok meaning="list" role="FENCED" separators=",,"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok meaning="times" role="MULOP">⁢</XMTok><XMTok role="ID" name="ldots">…</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp></XMApp></XMApp></XMath></Math> er de ubekendte. Ligningen kaldes <text font="italic">homogen</text>, hvis <Math mode="inline" tex="b=0" xml:id="Ch999.S1.p1.m5" text="b = 0"><XMath><XMApp><XMTok meaning="equals" role="RELOP">=</XMTok><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>, ellers <text font="italic">inhomogen</text>.</p>
+      </para>
+      <subsubsection refnum="999.1.0.1" xml:id="Ch999.S1.SS0.SSS1" labels="LABEL:TN2.2">
+        <title>====MARKER====</title>
+        <para xml:id="Ch999.S1.SS0.SSS1.p1">
+          <p><text font="HASH(0xb74d34) bold">EXAMPLE 999.1: Hello World!</text></p>
+        </para>
+        <para xml:id="Ch999.S1.SS0.SSS1.p2">
+          <p>Den lineære ligning</p>
+          <equation refnum="999-2" xml:id="Ch999.E2">
+            <Math mode="display" tex="0x_{1}+0x_{2}+0x_{3}+0x_{4}=0\,\,\Leftrightarrow\,\, 0=0" xml:id="Ch999.E2.m1" text="0 * x _ 1 + 0 * x _ 2 + 0 * x _ 3 + 0 * x _ 4 = 0 Leftrightarrow 0 = 0">
+              <XMath>
+                <XMApp>
+                  <XMTok name="Leftrightarrow" role="METARELOP">⇔</XMTok>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMApp>
+                      <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok meaning="0" role="NUMBER">0</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok meaning="0" role="NUMBER">0</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok meaning="0" role="NUMBER">0</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok meaning="0" role="NUMBER">0</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                          <XMTok meaning="4" role="NUMBER">4</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMApp>
+                    <XMTok meaning="0" role="NUMBER">0</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMTok meaning="0" role="NUMBER">  0</XMTok>
+                    <XMTok meaning="0" role="NUMBER">0</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMath>
+            </Math>
+          </equation>
+          <p>hvor alle koefficienterne samt højresiden er 0, er et eksempel på en <indexmark><indexphrase key="trivielligning">triviel ligning</indexphrase></indexmark><text font="bold italic">triviel</text> ligning. Ligningens løsningsmængde består af alle <Math mode="inline" tex="\mathbf{x}=(x_{1},\, x_{2},\, x_{3},\, x_{4})\in\mathbb{R}^{4}" xml:id="Ch999.S1.SS0.SSS1.p2.m1" text="x = vector@(x _ 1, x _ 2, x _ 3, x _ 4) element-of R ^ 4"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok role="UNKNOWN" font="bold">x</XMTok><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="vector" role="FENCED" argclose=")" argopen="(" separators=",,,"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp><XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="blackboard">R</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMath></Math>.<break/></p>
+        </para>
+        <para xml:id="Ch999.S1.SS0.SSS1.p3">
+          <p>Hvis alle ligningens koefficienter er 0, men højresiden er forskellig fra 0, opstår en <indexmark><indexphrase key="inkonsistentligning">inkonsistent ligning</indexphrase></indexmark><text font="bold italic">inkonsistent</text> ligning, som ingen løsninger har, det gælder fx ligningen</p>
+          <equation refnum="999-3" xml:id="Ch999.E3">
+            <Math mode="display" tex="0x_{1}+0x_{2}+0x_{3}+0x_{4}=1\,\,\Leftrightarrow\,\, 0=1\,." xml:id="Ch999.E3.m1" text="0 * x _ 1 + 0 * x _ 2 + 0 * x _ 3 + 0 * x _ 4 = 1 Leftrightarrow 0 = 1.">
+              <XMath>
+                <XMApp>
+                  <XMTok name="Leftrightarrow" role="METARELOP">⇔</XMTok>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMApp>
+                      <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok meaning="0" role="NUMBER">0</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok meaning="0" role="NUMBER">0</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok meaning="0" role="NUMBER">0</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok meaning="0" role="NUMBER">0</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                          <XMTok meaning="4" role="NUMBER">4</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMApp>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMTok meaning="0" role="NUMBER">  0</XMTok>
+                    <XMTok role="NUMBER" meaning="1.">1 .</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMath>
+            </Math>
+          </equation>
+        </para>
+      </subsubsection>
+      <subsubsection refnum="999.1.0.2" xml:id="Ch999.S1.SS0.SSS2" labels="LABEL:TN2.3">
+        <title>====MARKER====</title>
+        <para xml:id="Ch999.S1.SS0.SSS2.p1">
+          <p><text font="HASH(0xb74d34) bold">EXERCISE 999.2: </text></p>
+        </para>
+        <!-- %**** Reference.tex.modForLaTeXML Line 50 **** -->
+        <para xml:id="Ch999.S1.SS0.SSS2.p2">
+          <p>En lineær ligning er givet ved</p>
+          <equation refnum="999-4" xml:id="Ch999.E4">
+            <Math mode="display" tex="x_{1}+2x_{2}-3x_{3}=-2\,." xml:id="Ch999.E4.m1" text="(x _ 1 + 2 * x _ 2) - 3 * x _ 3 = - 2.">
+              <XMath>
+                <XMApp>
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMApp>
+                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                    <XMApp>
+                      <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                        <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                        <XMTok meaning="1" role="NUMBER">1</XMTok>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMTok meaning="3" role="NUMBER">3</XMTok>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                        <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                        <XMTok meaning="3" role="NUMBER">3</XMTok>
+                      </XMApp>
+                    </XMApp>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                    <XMTok role="NUMBER" meaning="2.">2 .</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMath>
+            </Math>
+          </equation>
+          <p>Angiv løsningsmængden for ligningen på standard-parameterform.</p>
+        </para>
+      </subsubsection>
+      <subsubsection refnum="999.1.0.3" xml:id="Ch999.S1.SS0.SSS3">
+        <title>====MARKER====</title>
+        <para xml:id="Ch999.S1.SS0.SSS3.p1">
+          <p><text font="HASH(0xb74d34) bold">BEVIS: </text></p>
+        </para>
+        <para xml:id="Ch999.S1.SS0.SSS3.p2">
+          <p>Første del af beviset for sætning <ref labelref="LABEL:TN2.6"/> er enkelt: Da løsningsmængden for et ligningssystem er identisk med <emph>fællesmængden</emph> <Math mode="inline" tex="F" xml:id="Ch999.S1.SS0.SSS3.p2.m1" text="F"><XMath><XMTok role="UNKNOWN" font="italic">F</XMTok></XMath></Math> af løsningsmængderne til hver af de ligninger der indgår i systemet, ændres <Math mode="inline" tex="F" xml:id="Ch999.S1.SS0.SSS3.p2.m2" text="F"><XMath><XMTok role="UNKNOWN" font="italic">F</XMTok></XMath></Math> naturligvis ikke ved at ligningernes rækkefølge ændres, derfor er ro<Math mode="inline" tex="{}_{1}" xml:id="Ch999.S1.SS0.SSS3.p2.m3" text="1@()"><XMath><XMApp role="FLOATSUBSCRIPT" scriptpos="2"><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math> tilladt.<break/>De to næste rækkeoperationer kan forklares ud fra sædvanlige <text font="italic">omformningsregler</text> for én ligning:<break/>Da en lignings løsningsmængde ikke ændres ved at den ganges med en konstant <Math mode="inline" tex="k\neq 0" xml:id="Ch999.S1.SS0.SSS3.p2.m4" text="k not-equals 0"><XMath><XMApp><XMTok meaning="not-equals" name="neq" role="RELOP">≠</XMTok><XMTok role="UNKNOWN" font="italic">k</XMTok><XMTok meaning="0" role="NUMBER">0</XMTok></XMApp></XMath></Math>, vil <Math mode="inline" tex="F" xml:id="Ch999.S1.SS0.SSS3.p2.m5" text="F"><XMath><XMTok role="UNKNOWN" font="italic">F</XMTok></XMath></Math> ikke kunne påvirkes af at en ligning erstattes af ligningen ganget med en konstant forskellig fra 0. Derfor er ro<Math mode="inline" tex="{}_{2}" xml:id="Ch999.S1.SS0.SSS3.p2.m6" text="2@()"><XMath><XMApp role="FLOATSUBSCRIPT" scriptpos="2"><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math> tilladt.<break/></p>
+        </para>
+        <para xml:id="Ch999.S1.SS0.SSS3.p3">
+          <p>====QRCODE-BEGIN====AB23CD Animeret illustration af beviset====QRCODE-END====</p>
+        </para>
+        <para xml:id="Ch999.S1.SS0.SSS3.p4">
+          <p>Lad os til sidst kalde de to ligninger som ro<Math mode="inline" tex="{}_{3}" xml:id="Ch999.S1.SS0.SSS3.p4.m1" text="3@()"><XMath><XMApp role="FLOATSUBSCRIPT" scriptpos="2"><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp></XMath></Math> handler om, for henholdsvis <Math mode="inline" tex="a" xml:id="Ch999.S1.SS0.SSS3.p4.m2" text="a"><XMath><XMTok role="UNKNOWN" font="italic">a</XMTok></XMath></Math> og <Math mode="inline" tex="b" xml:id="Ch999.S1.SS0.SSS3.p4.m3" text="b"><XMath><XMTok role="UNKNOWN" font="italic">b</XMTok></XMath></Math>. Ved at gange <Math mode="inline" tex="b" xml:id="Ch999.S1.SS0.SSS3.p4.m4" text="b"><XMath><XMTok role="UNKNOWN" font="italic">b</XMTok></XMath></Math> med en konstant opnår vi en ny ligning <Math mode="inline" tex="b_{2}" xml:id="Ch999.S1.SS0.SSS3.p4.m5" text="b _ 2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math> der har samme løsningsmængde som <Math mode="inline" tex="b" xml:id="Ch999.S1.SS0.SSS3.p4.m6" text="b"><XMath><XMTok role="UNKNOWN" font="italic">b</XMTok></XMath></Math>, vi har jo blot benyttet ro<Math mode="inline" tex="{}_{2}" xml:id="Ch999.S1.SS0.SSS3.p4.m7" text="2@()"><XMath><XMApp role="FLOATSUBSCRIPT" scriptpos="2"><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math>. Når vi derefter lægger venstresiden af <Math mode="inline" tex="b_{2}" xml:id="Ch999.S1.SS0.SSS3.p4.m8" text="b _ 2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math> til venstresiden af <Math mode="inline" tex="a" xml:id="Ch999.S1.SS0.SSS3.p4.m9" text="a"><XMath><XMTok role="UNKNOWN" font="italic">a</XMTok></XMath></Math> og derefter højresiden af <Math mode="inline" tex="b_{2}" xml:id="Ch999.S1.SS0.SSS3.p4.m10" text="b _ 2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math> til højresiden af <Math mode="inline" tex="a" xml:id="Ch999.S1.SS0.SSS3.p4.m11" text="a"><XMath><XMTok role="UNKNOWN" font="italic">a</XMTok></XMath></Math>, opnår vi en ny ligning <Math mode="inline" tex="a_{2}" xml:id="Ch999.S1.SS0.SSS3.p4.m12" text="a _ 2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math>. Hvis et vilkårligt talsæt <Math mode="inline" tex="\mathbf{x}" xml:id="Ch999.S1.SS0.SSS3.p4.m13" text="x"><XMath><XMTok role="UNKNOWN" font="bold">x</XMTok></XMath></Math> tilhører løsningsmængden for <Math mode="inline" tex="b" xml:id="Ch999.S1.SS0.SSS3.p4.m14" text="b"><XMath><XMTok role="UNKNOWN" font="italic">b</XMTok></XMath></Math> og dermed for <Math mode="inline" tex="b_{2}" xml:id="Ch999.S1.SS0.SSS3.p4.m15" text="b _ 2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">b</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math>, så vil <Math mode="inline" tex="\mathbf{x}" xml:id="Ch999.S1.SS0.SSS3.p4.m16" text="x"><XMath><XMTok role="UNKNOWN" font="bold">x</XMTok></XMath></Math> tilhøre løsningsmængden for <Math mode="inline" tex="a_{2}" xml:id="Ch999.S1.SS0.SSS3.p4.m17" text="a _ 2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math> netop når <Math mode="inline" tex="\mathbf{x}" xml:id="Ch999.S1.SS0.SSS3.p4.m18" text="x"><XMath><XMTok role="UNKNOWN" font="bold">x</XMTok></XMath></Math> tilhører løsningsmængden for <Math mode="inline" tex="a" xml:id="Ch999.S1.SS0.SSS3.p4.m19" text="a"><XMath><XMTok role="UNKNOWN" font="italic">a</XMTok></XMath></Math>. Derfor ændres <Math mode="inline" tex="F" xml:id="Ch999.S1.SS0.SSS3.p4.m20" text="F"><XMath><XMTok role="UNKNOWN" font="italic">F</XMTok></XMath></Math> ikke ved at <Math mode="inline" tex="a" xml:id="Ch999.S1.SS0.SSS3.p4.m21" text="a"><XMath><XMTok role="UNKNOWN" font="italic">a</XMTok></XMath></Math> erstattes af <Math mode="inline" tex="a_{2}" xml:id="Ch999.S1.SS0.SSS3.p4.m22" text="a _ 2"><XMath><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">a</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math> i ligningssystemet, hvorfor ro<Math mode="inline" tex="{}_{3}" xml:id="Ch999.S1.SS0.SSS3.p4.m23" text="3@()"><XMath><XMApp role="FLOATSUBSCRIPT" scriptpos="2"><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp></XMath></Math> er tilladt.</p>
+        </para>
+      </subsubsection>
+      <subsubsection refnum="999.1.0.4" xml:id="Ch999.S1.SS0.SSS4">
+        <title>====MARKER====</title>
+        <para xml:id="Ch999.S1.SS0.SSS4.p1">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dolor nibh, facilisis non semper at, ullamcorper ultrices felis. Aliquam ut dui diam. Cras porta posuere dolor vitae laoreet. In eu sem purus. Vestibulum at sem est, vel adipiscing sapien. Mauris non erat sed arcu egestas dignissim eu id turpis.
+<!-- %**** Reference.tex.modForLaTeXML Line 75 **** --></p>
+        </para>
+      </subsubsection>
+      <subsubsection refnum="999.1.0.5" xml:id="Ch999.S1.SS0.SSS5">
+        <title>====MARKER====</title>
+        <para xml:id="Ch999.S1.SS0.SSS5.p1">
+          <p><text font="HASH(0xb74d34) bold">DEFINITION 999.3: </text></p>
+        </para>
+        <para xml:id="Ch999.S1.SS0.SSS5.p2">
+          <p>Ved en <text font="italic">løsning</text> til ligningen</p>
+          <equation refnum="999-5" xml:id="Ch999.E5" labels="LABEL:TN999.1b">
+            <Math mode="display" tex="a_{1}\cdot x_{1}+a_{2}\cdot x_{2}+...+a_{n}\cdot x_{n}=b\,." xml:id="Ch999.E5.m1" text="a _ 1 cdot x _ 1 + a _ 2 cdot x _ 2 + ldots + a _ n cdot x _ n = b">
+              <XMath>
+                <XMApp punctuation=".">
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMApp>
+                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                    <XMApp>
+                      <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                        <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                        <XMTok meaning="1" role="NUMBER">1</XMTok>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                        <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                        <XMTok meaning="1" role="NUMBER">1</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                        <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                        <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMTok role="ID" name="ldots">…</XMTok>
+                    <XMApp>
+                      <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                        <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                        <XMTok role="UNKNOWN" font="italic">n</XMTok>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                        <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                        <XMTok role="UNKNOWN" font="italic">n</XMTok>
+                      </XMApp>
+                    </XMApp>
+                  </XMApp>
+                  <XMTok role="UNKNOWN" font="italic">b</XMTok>
+                </XMApp>
+              </XMath>
+            </Math>
+          </equation>
+          <p>forstås et talsæt <Math mode="inline" tex="\mathbf{x}=(x_{1},\, x_{2},\,...\,,x_{n})\in\mathbb{R}^{n}" xml:id="Ch999.S1.SS0.SSS5.p2.m1" text="x = vector@(x _ 1, x _ 2, ldots, x _ n) element-of R ^ n"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok role="UNKNOWN" font="bold">x</XMTok><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="vector" role="FENCED" argclose=")" argopen="(" separators=",,,"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMTok role="ID" name="ldots">…</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp></XMApp><XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="blackboard">R</XMTok><XMTok role="UNKNOWN" font="italic">n</XMTok></XMApp></XMApp></XMath></Math> der ved indsættelse i ligningen får den til at passe, det vil sige at venstresiden er lig med højresiden. <break/>Ved <indexmark><indexphrase key="fuldstændigløsning">fuldstændig løsning</indexphrase></indexmark><text font="bold italic">den fuldstændige løsning</text> eller blot <indexmark><indexphrase key="løsningsmængde">løsningsmængde</indexphrase></indexmark><text font="bold italic">løsningsmængden</text> forstås alle tænkelige løsninger til ligningen samlet i én mængde.</p>
+        </para>
+      </subsubsection>
+      <subsubsection refnum="999.1.0.6" xml:id="Ch999.S1.SS0.SSS6" labels="LABEL:TN2.6">
+        <title>====MARKER====</title>
+        <para xml:id="Ch999.S1.SS0.SSS6.p1">
+          <p><text font="HASH(0xb74d34) bold">THEOREM 999.4: </text></p>
+        </para>
+        <para xml:id="Ch999.S1.SS0.SSS6.p2">
+          <p>Man ændrer ikke på et lineært ligningssystems løsningsmængde hvis man omformer ligningssystemet ved en af de følgende tre <indexmark><indexphrase key="rækkeoperationer">rækkeoperationer</indexphrase></indexmark><text font="bold italic">rækkeoperationer</text>:</p>
+          <enumerate xml:id="Ch999.I1">
+            <item refnum="1" xml:id="Ch999.I1.i1">
+              <tag>ro<Math mode="inline" tex="{}_{1}" xml:id="Ch999.I1.i1.m1" text="1@()"><XMath><XMApp role="FLOATSUBSCRIPT" scriptpos="3"><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math>:</tag>
+              <para xml:id="Ch999.I1.i1.p1">
+                <p>Lader to af ligningerne bytte række.</p>
+              </para>
+            </item>
+            <item refnum="2" xml:id="Ch999.I1.i2">
+              <tag>ro<Math mode="inline" tex="{}_{2}" xml:id="Ch999.I1.i2.m1" text="2@()"><XMath><XMApp role="FLOATSUBSCRIPT" scriptpos="3"><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math>:</tag>
+              <para xml:id="Ch999.I1.i2.p1">
+                <p>Ganger en af ligningerne med en konstant som ikke er 0.</p>
+              </para>
+            </item>
+            <item refnum="3" xml:id="Ch999.I1.i3">
+              <tag>ro<Math mode="inline" tex="{}_{3}" xml:id="Ch999.I1.i3.m1" text="3@()"><XMath><XMApp role="FLOATSUBSCRIPT" scriptpos="3"><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp></XMath></Math>:</tag>
+              <para xml:id="Ch999.I1.i3.p1">
+                <p>Til en ligning lægger en konstant ganget en af de øvrige ligninger.</p>
+              </para>
+            </item>
+          </enumerate>
+        </para>
+        <!-- %**** Reference.tex.modForLaTeXML Line 100 **** -->
+      </subsubsection>
+      <subsubsection refnum="999.1.0.7" xml:id="Ch999.S1.SS0.SSS7">
+        <title>====MARKER====</title>
+        <para xml:id="Ch999.S1.SS0.SSS7.p1">
+          <p><text font="HASH(0xb74d34) bold">LEMMA 999.5: </text></p>
+        </para>
+        <para xml:id="Ch999.S1.SS0.SSS7.p2">
+          <p>En lineær ligning er givet ved</p>
+          <equation refnum="999-6" xml:id="Ch999.E6">
+            <Math mode="display" tex="x_{1}+2x_{2}-3x_{3}=-2\,." xml:id="Ch999.E6.m1" text="(x _ 1 + 2 * x _ 2) - 3 * x _ 3 = - 2.">
+              <XMath>
+                <XMApp>
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMApp>
+                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                    <XMApp>
+                      <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                        <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                        <XMTok meaning="1" role="NUMBER">1</XMTok>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMTok meaning="3" role="NUMBER">3</XMTok>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                        <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                        <XMTok meaning="3" role="NUMBER">3</XMTok>
+                      </XMApp>
+                    </XMApp>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                    <XMTok role="NUMBER" meaning="2.">2 .</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMath>
+            </Math>
+          </equation>
+          <p>Angiv løsningsmængden for ligningen på standard-parameterform.</p>
+        </para>
+      </subsubsection>
+      <subsubsection refnum="999.1.0.8" xml:id="Ch999.S1.SS0.SSS8">
+        <title>====MARKER====</title>
+        <para xml:id="Ch999.S1.SS0.SSS8.p1">
+          <p><text font="HASH(0xb74d34) bold">COROLLARY 999.6: </text></p>
+        </para>
+        <para xml:id="Ch999.S1.SS0.SSS8.p2">
+          <p>Vi fastlægger her en kort notation for hver af de tre rækkeoperationer: <break/><tabular><tbody><tr><td align="left">ro<Math mode="inline" tex="{}_{1}" xml:id="Ch999.S1.SS0.SSS8.p2.m1" text="1@()"><XMath><XMApp role="FLOATSUBSCRIPT" scriptpos="8"><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp></XMath></Math>:</td><td align="right"><Math mode="inline" tex="R_{i}\leftrightarrow R_{j}\," xml:id="Ch999.S1.SS0.SSS8.p2.m2" text="R _ i leftrightarrow R _ j"><XMath><XMApp><XMTok name="leftrightarrow" role="METARELOP">↔</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post8"/><XMTok role="UNKNOWN" font="italic">R</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post8"/><XMTok role="UNKNOWN" font="italic">R</XMTok><XMTok role="UNKNOWN" font="italic">j</XMTok></XMApp></XMApp></XMath></Math>:</td><td align="left">Ligningen i række <Math mode="inline" tex="i" xml:id="Ch999.S1.SS0.SSS8.p2.m3" text="i"><XMath><XMTok role="UNKNOWN" font="italic">i</XMTok></XMath></Math> ombyttes med ligningen i række <Math mode="inline" tex="j" xml:id="Ch999.S1.SS0.SSS8.p2.m4" text="j"><XMath><XMTok role="UNKNOWN" font="italic">j</XMTok></XMath></Math>.</td></tr><tr><td align="left">ro<Math mode="inline" tex="{}_{2}" xml:id="Ch999.S1.SS0.SSS8.p2.m5" text="2@()"><XMath><XMApp role="FLOATSUBSCRIPT" scriptpos="8"><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp></XMath></Math>:</td><td align="right"><Math mode="inline" tex="k\cdot R_{i}\," xml:id="Ch999.S1.SS0.SSS8.p2.m6" text="k cdot R _ i"><XMath><XMApp><XMTok name="cdot" role="MULOP">⋅</XMTok><XMTok role="UNKNOWN" font="italic">k</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post8"/><XMTok role="UNKNOWN" font="italic">R</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp></XMApp></XMath></Math>:</td><td align="left">Ligningen i række <Math mode="inline" tex="i" xml:id="Ch999.S1.SS0.SSS8.p2.m7" text="i"><XMath><XMTok role="UNKNOWN" font="italic">i</XMTok></XMath></Math> ganges med <Math mode="inline" tex="k" xml:id="Ch999.S1.SS0.SSS8.p2.m8" text="k"><XMath><XMTok role="UNKNOWN" font="italic">k</XMTok></XMath></Math>.</td></tr><tr><td align="left">ro<Math mode="inline" tex="{}_{3}" xml:id="Ch999.S1.SS0.SSS8.p2.m9" text="3@()"><XMath><XMApp role="FLOATSUBSCRIPT" scriptpos="8"><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp></XMath></Math>:</td><td align="right"><Math mode="inline" tex="R_{j}+k\cdot R_{i}\," xml:id="Ch999.S1.SS0.SSS8.p2.m10" text="R _ j + k cdot R _ i"><XMath><XMApp><XMTok meaning="plus" role="ADDOP">+</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post8"/><XMTok role="UNKNOWN" font="italic">R</XMTok><XMTok role="UNKNOWN" font="italic">j</XMTok></XMApp><XMApp><XMTok name="cdot" role="MULOP">⋅</XMTok><XMTok role="UNKNOWN" font="italic">k</XMTok><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post8"/><XMTok role="UNKNOWN" font="italic">R</XMTok><XMTok role="UNKNOWN" font="italic">i</XMTok></XMApp></XMApp></XMApp></XMath></Math>:</td><td align="left">Til ligningen i række <Math mode="inline" tex="j" xml:id="Ch999.S1.SS0.SSS8.p2.m11" text="j"><XMath><XMTok role="UNKNOWN" font="italic">j</XMTok></XMath></Math> lægges <Math mode="inline" tex="k" xml:id="Ch999.S1.SS0.SSS8.p2.m12" text="k"><XMath><XMTok role="UNKNOWN" font="italic">k</XMTok></XMath></Math> ganget ligningen i række <Math mode="inline" tex="i" xml:id="Ch999.S1.SS0.SSS8.p2.m13" text="i"><XMath><XMTok role="UNKNOWN" font="italic">i</XMTok></XMath></Math>.</td></tr></tbody></tabular></p>
+        </para>
+        <!-- %**** Reference.tex.modForLaTeXML Line 125 **** -->
+      </subsubsection>
+      <subsubsection refnum="999.1.0.9" xml:id="Ch999.S1.SS0.SSS9">
+        <title>====MARKER====</title>
+        <para xml:id="Ch999.S1.SS0.SSS9.p1">
+          <p><text font="HASH(0xb74d34) bold">METHOD 999.7: </text></p>
+        </para>
+        <para xml:id="Ch999.S1.SS0.SSS9.p2">
+          <equation refnum="999-7" xml:id="Ch999.E7">
+            <Math mode="display" tex="\begin{array}[]{r}1+1+2\cdot 2-6=0\\&#10;2\cdot 1-1-2-6=0\end{array}\Leftrightarrow\begin{array}[]{r}0=0\\&#10;-7=0\end{array}" xml:id="Ch999.E7.m1" text="Array[[(1 + 1 + 2 cdot 2) - 6 = 0], [2 cdot 1 - 1 - 2 - 6 = 0]] Leftrightarrow Array[[0 = 0], [- 7 = 0]]">
+              <XMath>
+                <XMApp>
+                  <XMTok name="Leftrightarrow" role="METARELOP">⇔</XMTok>
+                  <XMArray role="ARRAY">
+                    <XMRow>
+                      <XMCell align="right">
+                        <XMApp>
+                          <XMTok meaning="equals" role="RELOP">=</XMTok>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              <XMApp>
+                                <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                                <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                <XMTok meaning="2" role="NUMBER">2</XMTok>
+                              </XMApp>
+                            </XMApp>
+                            <XMTok meaning="6" role="NUMBER">6</XMTok>
+                          </XMApp>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                        </XMApp>
+                      </XMCell>
+                    </XMRow>
+                    <XMRow>
+                      <XMCell align="right">
+                        <XMApp>
+                          <XMTok meaning="equals" role="RELOP">=</XMTok>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                              <XMTok meaning="2" role="NUMBER">2</XMTok>
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            </XMApp>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                            <XMTok meaning="6" role="NUMBER">6</XMTok>
+                          </XMApp>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                        </XMApp>
+                      </XMCell>
+                    </XMRow>
+                  </XMArray>
+                  <XMArray role="ARRAY">
+                    <XMRow>
+                      <XMCell align="right">
+                        <XMApp>
+                          <XMTok meaning="equals" role="RELOP">=</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                        </XMApp>
+                      </XMCell>
+                    </XMRow>
+                    <XMRow>
+                      <XMCell align="right">
+                        <XMApp>
+                          <XMTok meaning="equals" role="RELOP">=</XMTok>
+                          <XMApp>
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMTok meaning="7" role="NUMBER">7</XMTok>
+                          </XMApp>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                        </XMApp>
+                      </XMCell>
+                    </XMRow>
+                  </XMArray>
+                </XMApp>
+              </XMath>
+            </Math>
+          </equation>
+        </para>
+        <para xml:id="Ch999.S1.SS0.SSS9.p3">
+          <p>In vitae ipsum eget diam pretium sodales. Curabitur placerat arcu quis tellus ullamcorper facilisis. Maecenas nibh nisl, convallis consequat pellentesque non, dignissim auctor purus. Pellentesque diam est, sollicitudin vitae ultricies vitae, eleifend quis leo. Cras eget convallis odio. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </para>
+      </subsubsection>
+      <subsubsection refnum="999.1.0.10" xml:id="Ch999.S1.SS0.SSS10">
+        <title>====MARKER====</title>
+        <para xml:id="Ch999.S1.SS0.SSS10.p1">
+          <p><text font="HASH(0xb74d34) bold">EXPLAIN 999.8: </text></p>
+        </para>
+        <para xml:id="Ch999.S1.SS0.SSS10.p2">
+          <p>====QRCODE-BEGIN====AB23CD Video case story====QRCODE-END====
+<!-- %**** Reference.tex.modForLaTeXML Line 150 **** --></p>
+        </para>
+        <para xml:id="Ch999.S1.SS0.SSS10.p3">
+          <p>In vitae ipsum eget diam pretium sodales. Curabitur placerat arcu quis tellus ullamcorper facilisis. Maecenas nibh nisl, convallis consequat pellentesque non, dignissim auctor purus.</p>
+        </para>
+        <para xml:id="Ch999.S1.SS0.SSS10.p4">
+          <equation refnum="999-8" xml:id="Ch999.E8">
+            <Math mode="display" tex="\mathbf{T}=\begin{bmatrix}\begin{array}[]{c|c}\mathbf{A}&amp;\mathbf{b}\end{array}\end{bmatrix}=\begin{bmatrix}\begin{array}[]{cccc|c}a_{{11}}&amp;a_{{12}}&amp;\cdots&amp;a_{{1n}}&amp;b_{1}\\&#10;a_{{21}}&amp;a_{{22}}&amp;\cdots&amp;a_{{2n}}&amp;b_{2}\\&#10;\vdots&amp;\vdots&amp;&amp;\vdots&amp;\vdots\\&#10;a_{{m1}}&amp;a_{{m2}}&amp;\cdots&amp;a_{{mn}}&amp;b_{m}\end{array}\end{bmatrix}" xml:id="Ch999.E8.m1" text="T = Matrix[[Array[[A, b]]]] = Matrix[[Array[[a _ 11, a _ 12, cdots, a _ (1 * n), b _ 1], [a _ 21, a _ 22, cdots, a _ (2 * n), b _ 2], [vdots, vdots, , vdots, vdots], [a _ (m * 1), a _ (m * 2), cdots, a _ (m * n), b _ m]]]]">
+              <XMath>
+                <XMApp>
+                  <XMTok meaning="multirelation"/>
+                  <XMTok role="UNKNOWN" font="bold">T</XMTok>
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMArray close="]" name="Matrix" open="[">
+                    <XMRow>
+                      <XMCell align="center">
+                        <XMArray role="ARRAY">
+                          <XMRow>
+                            <XMCell align="center" border="r">
+                              <XMTok role="UNKNOWN" font="bold">A</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok role="UNKNOWN" font="bold">b</XMTok>
+                            </XMCell>
+                          </XMRow>
+                        </XMArray>
+                      </XMCell>
+                    </XMRow>
+                  </XMArray>
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMArray close="]" name="Matrix" open="[">
+                    <XMRow>
+                      <XMCell align="center">
+                        <XMArray role="ARRAY">
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post12"/>
+                                <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                <XMTok meaning="11" role="NUMBER">11</XMTok>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post12"/>
+                                <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                <XMTok meaning="12" role="NUMBER">12</XMTok>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok name="cdots" role="ID">⋯</XMTok>
+                            </XMCell>
+                            <XMCell align="center" border="r">
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post12"/>
+                                <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                  <XMTok role="UNKNOWN" font="italic">n</XMTok>
+                                </XMApp>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post12"/>
+                                <XMTok role="UNKNOWN" font="italic">b</XMTok>
+                                <XMTok meaning="1" role="NUMBER">1</XMTok>
+                              </XMApp>
+                            </XMCell>
+                          </XMRow>
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post12"/>
+                                <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                <XMTok meaning="21" role="NUMBER">21</XMTok>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post12"/>
+                                <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                <XMTok meaning="22" role="NUMBER">22</XMTok>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok name="cdots" role="ID">⋯</XMTok>
+                            </XMCell>
+                            <XMCell align="center" border="r">
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post12"/>
+                                <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                  <XMTok role="UNKNOWN" font="italic">n</XMTok>
+                                </XMApp>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post12"/>
+                                <XMTok role="UNKNOWN" font="italic">b</XMTok>
+                                <XMTok meaning="2" role="NUMBER">2</XMTok>
+                              </XMApp>
+                            </XMCell>
+                          </XMRow>
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMTok name="vdots" role="ID">⋮</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok name="vdots" role="ID">⋮</XMTok>
+                            </XMCell>
+                            <XMCell/>
+                            <XMCell align="center" border="r">
+                              <XMTok name="vdots" role="ID">⋮</XMTok>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok name="vdots" role="ID">⋮</XMTok>
+                            </XMCell>
+                          </XMRow>
+                          <XMRow>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post12"/>
+                                <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                  <XMTok role="UNKNOWN" font="italic">m</XMTok>
+                                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                                </XMApp>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post12"/>
+                                <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                  <XMTok role="UNKNOWN" font="italic">m</XMTok>
+                                  <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                </XMApp>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMTok name="cdots" role="ID">⋯</XMTok>
+                            </XMCell>
+                            <XMCell align="center" border="r">
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post12"/>
+                                <XMTok role="UNKNOWN" font="italic">a</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                  <XMTok role="UNKNOWN" font="italic">m</XMTok>
+                                  <XMTok role="UNKNOWN" font="italic">n</XMTok>
+                                </XMApp>
+                              </XMApp>
+                            </XMCell>
+                            <XMCell align="center">
+                              <XMApp>
+                                <XMTok role="SUBSCRIPTOP" scriptpos="post12"/>
+                                <XMTok role="UNKNOWN" font="italic">b</XMTok>
+                                <XMTok role="UNKNOWN" font="italic">m</XMTok>
+                              </XMApp>
+                            </XMCell>
+                          </XMRow>
+                        </XMArray>
+                      </XMCell>
+                    </XMRow>
+                  </XMArray>
+                </XMApp>
+              </XMath>
+            </Math>
+          </equation>
+        </para>
+        <para xml:id="Ch999.S1.SS0.SSS10.p5">
+          <p>Pellentesque diam est, sollicitudin vitae ultricies vitae, eleifend quis leo. Cras eget convallis odio. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </para>
+      </subsubsection>
+      <subsubsection refnum="999.1.0.11" xml:id="Ch999.S1.SS0.SSS11">
+        <title>====MARKER====</title>
+        <para xml:id="Ch999.S1.SS0.SSS11.p1">
+          <p>Quisque diam libero, dictum vel bibendum quis, fringilla a sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce lobortis molestie mi, vel dictum turpis adipiscing id. Morbi commodo mattis tempor. Phasellus nisi elit, tempus eu bibendum ut, feugiat eget purus.</p>
+          <equation refnum="999-9" xml:id="Ch999.E9" labels="LABEL:TN2.8b">
+            <Math mode="display" tex="\begin{aligned}\displaystyle-x_{2}+x_{3}&amp;\displaystyle=2\\&#10;\displaystyle 2x_{1}+4x_{2}-2x_{3}&amp;\displaystyle=2\\&#10;\displaystyle 3x_{1}+4x_{2}+x_{3}&amp;\displaystyle=9\end{aligned}" xml:id="Ch999.E9.m1" text="aligned[[(- x _ 2) + x _ 3, absent = 2], [(2 * x _ 1 + 4 * x _ 2) - 2 * x _ 3, absent = 2], [3 * x _ 1 + 4 * x _ 2 + x _ 3, absent = 9]]">
+              <XMath>
+                <XMArray name="aligned">
+                  <XMRow>
+                    <XMCell align="right">
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMCell>
+                    <XMCell align="left">
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                      </XMApp>
+                    </XMCell>
+                  </XMRow>
+                  <XMRow>
+                    <XMCell align="right">
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                              <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="4" role="NUMBER">4</XMTok>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                              <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                              <XMTok meaning="2" role="NUMBER">2</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                    </XMCell>
+                    <XMCell align="left">
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                      </XMApp>
+                    </XMCell>
+                  </XMRow>
+                  <XMRow>
+                    <XMCell align="right">
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="4" role="NUMBER">4</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMCell>
+                    <XMCell align="left">
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMTok meaning="9" role="NUMBER">9</XMTok>
+                      </XMApp>
+                    </XMCell>
+                  </XMRow>
+                </XMArray>
+              </XMath>
+            </Math>
+          </equation>
+        </para>
+      </subsubsection>
+      <subsubsection refnum="999.1.0.12" xml:id="Ch999.S1.SS0.SSS12">
+        <title>====MARKER====</title>
+        <para xml:id="Ch999.S1.SS0.SSS12.p1">
+          <p><text font="HASH(0xb74d34) bold">REMARK 999.9: </text></p>
+        </para>
+        <para xml:id="Ch999.S1.SS0.SSS12.p2">
+          <p>In vitae ipsum eget diam pretium sodales. Curabitur placerat arcu quis tellus ullamcorper facilisis. Maecenas nibh nisl, convallis consequat pellentesque non, dignissim auctor purus.</p>
+        </para>
+        <para xml:id="Ch999.S1.SS0.SSS12.p3">
+          <equation refnum="999-10" xml:id="Ch999.E10" labels="LABEL:TN2.8b">
+            <Math mode="display" tex="\begin{aligned}\displaystyle-x_{2}+x_{3}&amp;\displaystyle=2\\&#10;\displaystyle 2x_{1}+4x_{2}-2x_{3}&amp;\displaystyle=2\\&#10;\displaystyle 3x_{1}+4x_{2}+x_{3}&amp;\displaystyle=9\end{aligned}" xml:id="Ch999.E10.m1" text="aligned[[(- x _ 2) + x _ 3, absent = 2], [(2 * x _ 1 + 4 * x _ 2) - 2 * x _ 3, absent = 2], [3 * x _ 1 + 4 * x _ 2 + x _ 3, absent = 9]]">
+              <XMath>
+                <XMArray name="aligned">
+                  <XMRow>
+                    <XMCell align="right">
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMCell>
+                    <XMCell align="left">
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                      </XMApp>
+                    </XMCell>
+                  </XMRow>
+                  <XMRow>
+                    <XMCell align="right">
+                      <XMApp>
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                              <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok meaning="4" role="NUMBER">4</XMTok>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                              <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                              <XMTok meaning="2" role="NUMBER">2</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                    </XMCell>
+                    <XMCell align="left">
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMTok meaning="2" role="NUMBER">2</XMTok>
+                      </XMApp>
+                    </XMCell>
+                  </XMRow>
+                  <XMRow>
+                    <XMCell align="right">
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="4" role="NUMBER">4</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post7"/>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMCell>
+                    <XMCell align="left">
+                      <XMApp>
+                        <XMTok meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok meaning="absent"/>
+                        <XMTok meaning="9" role="NUMBER">9</XMTok>
+                      </XMApp>
+                    </XMCell>
+                  </XMRow>
+                </XMArray>
+              </XMath>
+            </Math>
+          </equation>
+        </para>
+        <para xml:id="Ch999.S1.SS0.SSS12.p4">
+          <p>Pellentesque diam est, sollicitudin vitae ultricies vitae, eleifend quis leo. Cras eget convallis odio. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </para>
+      </subsubsection>
+      <subsubsection refnum="999.1.0.13" xml:id="Ch999.S1.SS0.SSS13">
+        <title>====MARKER====</title>
+        <para xml:id="Ch999.S1.SS0.SSS13.p1">
+          <equation refnum="999-11" xml:id="Ch999.E11">
+            <Math mode="display" tex="R_{3}-3\cdot R_{1}:" xml:id="Ch999.E11.m1">
+              <XMath>
+                <XMTok role="UNKNOWN" font="italic">R</XMTok>
+                <XMApp role="POSTSUBSCRIPT" scriptpos="2">
+                  <XMTok meaning="3" role="NUMBER">3</XMTok>
+                </XMApp>
+                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                <XMTok meaning="3" role="NUMBER">3</XMTok>
+                <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                <XMTok role="UNKNOWN" font="italic">R</XMTok>
+                <XMApp role="POSTSUBSCRIPT" scriptpos="2">
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+                <XMTok name="colon" role="METARELOP">:</XMTok>
+              </XMath>
+            </Math>
+          </equation>
+        </para>
+        <!-- %**** Reference.tex.modForLaTeXML Line 200 **** -->
+        <para xml:id="Ch999.S1.SS0.SSS13.p2">
+          <p>Nam sit amet est nec sapien facilisis iaculis vel et ligula. Suspendisse varius elementum ornare. Sed at arcu vel nisl vulputate sollicitudin nec ut magna. Vestibulum leo nibh, iaculis vel pharetra vitae, placerat eu tortor. Aliquam non metus ac tortor pharetra lacinia vitae at dui. Morbi in ante eget elit feugiat posuere at eu magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vitae lorem nunc. Quisque diam libero, dictum vel bibendum quis, fringilla a sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce lobortis molestie mi, vel dictum turpis adipiscing id. Morbi commodo mattis tempor. Phasellus nisi elit, tempus eu bibendum ut, feugiat eget purus.</p>
+        </para>
+      </subsubsection>
+      <subsubsection refnum="999.1.0.14" xml:id="Ch999.S1.SS0.SSS14">
+        <title>====MARKER====</title>
+      </subsubsection>
+    </section>
+    <section refnum="999.2" xml:id="Ch999.S2">
+      <title>Reduktion af lineære ligningssystemer</title>
+      <para xml:id="Ch999.S2.p1">
+        <p>Lineære ligningssystemer kan reduceres, dvs. gøres enklere, ved hjælp af en metode der kaldes Gauss-elimination. Metoden har flere forskellige varianter, og den særlige variant der benyttes i disse noter, går under navnet <indexmark><indexphrase key="GaussJordanelimination">GaussJordan-elimination</indexphrase></indexmark><text font="bold italic">GaussJordan-elimination</text>. Det algebraiske grundlag for alle varianterne er at man kan omforme et lineært ligningssystemer ved såkaldte <indexmark><indexphrase key="rækkeoperationer">rækkeoperationer</indexphrase></indexmark><text font="bold italic">rækkeoperationer</text> uden at man derved ændrer på ligningssystemets løsningsmængde. Når ligningssystemet er reduceret mest muligt, er det som regel nemt aflæse og opstille dets løsningsmængde.</p>
+      </para>
+      <para xml:id="Ch999.S2.p2">
+        <p>====OBS-BEGIN====</p>
+      </para>
+      <para xml:id="Ch999.S2.p3">
+        <equation refnum="999-12" xml:id="Ch999.E12">
+          <Math mode="display" tex="R_{3}-3\cdot R_{1}:" xml:id="Ch999.E12.m1">
+            <XMath>
+              <XMTok role="UNKNOWN" font="italic">R</XMTok>
+              <XMApp role="POSTSUBSCRIPT" scriptpos="2">
+                <XMTok meaning="3" role="NUMBER">3</XMTok>
+              </XMApp>
+              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+              <XMTok meaning="3" role="NUMBER">3</XMTok>
+              <XMTok name="cdot" role="MULOP">⋅</XMTok>
+              <XMTok role="UNKNOWN" font="italic">R</XMTok>
+              <XMApp role="POSTSUBSCRIPT" scriptpos="2">
+                <XMTok meaning="1" role="NUMBER">1</XMTok>
+              </XMApp>
+              <XMTok name="colon" role="METARELOP">:</XMTok>
+            </XMath>
+          </Math>
+        </equation>
+      </para>
+      <para xml:id="Ch999.S2.p4">
+        <p>Hvis vi opfatter ligning (<ref labelref="LABEL:TN2.2"/>) som ligningen for en plan i rummet, så angiver ligning (<ref labelref="LABEL:TN2.3"/>) en <text font="italic">parameterfremstilling</text> for den samme plan, hvor første søjlevektor på højresiden angiver <text font="italic">begyndelsespunktet</text> på planen, og de to sidste søjlevektorer er <text font="italic">retningsvektorer</text>. (Her: REFERENCE til transfernote om geometriske vektorer).</p>
+      </para>
+      <para xml:id="Ch999.S2.p5">
+        <p>====OBS-END====</p>
+      </para>
+      <para xml:id="Ch999.S2.p6">
+        <p>====INFO-BEGIN====</p>
+      </para>
+      <para xml:id="Ch999.S2.p7">
+        <equation refnum="999-13" xml:id="Ch999.E13">
+          <Math mode="display" tex="(-1)\cdot R_{2}\,:" xml:id="Ch999.E13.m1">
+            <XMath>
+              <XMTok role="OPEN">(</XMTok>
+              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+              <XMTok meaning="1" role="NUMBER">1</XMTok>
+              <XMTok role="CLOSE">)</XMTok>
+              <XMTok name="cdot" role="MULOP">⋅</XMTok>
+              <XMTok role="UNKNOWN" font="italic">R</XMTok>
+              <XMApp role="POSTSUBSCRIPT" scriptpos="2">
+                <XMTok meaning="2" role="NUMBER">2</XMTok>
+              </XMApp>
+              <XMHint name="thinspace"/>
+              <XMTok name="colon" role="METARELOP">:</XMTok>
+            </XMath>
+          </Math>
+        </equation>
+      </para>
+      <para xml:id="Ch999.S2.p8">
+        <p>Hvis vi opfatter ligning (<ref labelref="LABEL:TN2.2"/>) som ligningen for en plan i rummet, så angiver ligning (<ref labelref="LABEL:TN2.3"/>) en <text font="italic">parameterfremstilling</text> for den samme plan, hvor første søjlevektor på højresiden angiver <text font="italic">begyndelsespunktet</text> på planen, og de to sidste søjlevektorer er <text font="italic">retningsvektorer</text>. (Her: REFERENCE til transfernote om geometriske vektorer).
+<!-- %**** Reference.tex.modForLaTeXML Line 225 **** --></p>
+      </para>
+      <para xml:id="Ch999.S2.p9">
+        <p>====INFO-END====</p>
+      </para>
+      <para xml:id="Ch999.S2.p10">
+        <p>====THINK-BEGIN====</p>
+      </para>
+      <para xml:id="Ch999.S2.p11">
+        <equation refnum="999-14" xml:id="Ch999.E14">
+          <Math mode="display" tex="(-1)\cdot R_{2}\,:" xml:id="Ch999.E14.m1">
+            <XMath>
+              <XMTok role="OPEN">(</XMTok>
+              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+              <XMTok meaning="1" role="NUMBER">1</XMTok>
+              <XMTok role="CLOSE">)</XMTok>
+              <XMTok name="cdot" role="MULOP">⋅</XMTok>
+              <XMTok role="UNKNOWN" font="italic">R</XMTok>
+              <XMApp role="POSTSUBSCRIPT" scriptpos="2">
+                <XMTok meaning="2" role="NUMBER">2</XMTok>
+              </XMApp>
+              <XMHint name="thinspace"/>
+              <XMTok name="colon" role="METARELOP">:</XMTok>
+            </XMath>
+          </Math>
+        </equation>
+      </para>
+      <para xml:id="Ch999.S2.p12">
+        <p>Hvis vi opfatter ligning (<ref labelref="LABEL:TN2.2"/>) som ligningen for en plan i rummet, så angiver ligning (<ref labelref="LABEL:TN2.3"/>) en <text font="italic">parameterfremstilling</text> for den samme plan, hvor første søjlevektor på højresiden angiver <text font="italic">begyndelsespunktet</text> på planen, og de to sidste søjlevektorer er <text font="italic">retningsvektorer</text>. (Her: REFERENCE til transfernote om geometriske vektorer).</p>
+      </para>
+      <para xml:id="Ch999.S2.p13">
+        <equation refnum="999-15" xml:id="Ch999.E15">
+          <Math mode="display" tex="(-1)\cdot R_{2}\,:" xml:id="Ch999.E15.m1">
+            <XMath>
+              <XMTok role="OPEN">(</XMTok>
+              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+              <XMTok meaning="1" role="NUMBER">1</XMTok>
+              <XMTok role="CLOSE">)</XMTok>
+              <XMTok name="cdot" role="MULOP">⋅</XMTok>
+              <XMTok role="UNKNOWN" font="italic">R</XMTok>
+              <XMApp role="POSTSUBSCRIPT" scriptpos="2">
+                <XMTok meaning="2" role="NUMBER">2</XMTok>
+              </XMApp>
+              <XMHint name="thinspace"/>
+              <XMTok name="colon" role="METARELOP">:</XMTok>
+            </XMath>
+          </Math>
+        </equation>
+      </para>
+      <para xml:id="Ch999.S2.p14">
+        <p>====THINK-END====</p>
+      </para>
+      <para xml:id="Ch999.S2.p15">
+        <p>====AHA-BEGIN====</p>
+      </para>
+      <para xml:id="Ch999.S2.p16">
+        <p>Hvis vi opfatter ligning (<ref labelref="LABEL:TN2.2"/>) som ligningen for en plan i rummet, så angiver ligning (<ref labelref="LABEL:TN2.3"/>) en <text font="italic">parameterfremstilling</text> for den samme plan, hvor første søjlevektor på højresiden angiver <text font="italic">begyndelsespunktet</text> på planen, og de to sidste søjlevektorer er <text font="italic">retningsvektorer</text>. (Her: REFERENCE til transfernote om geometriske vektorer).</p>
+      </para>
+      <para xml:id="Ch999.S2.p17">
+        <p>====AHA-END====</p>
+      </para>
+      <!-- %CROSS VIRKER IKKE!! 
+     %\begin{cross}
+     %Hvis vi opfatter ligning (\ref{TN2.2}) som ligningen for en plan i rummet, så angiver ligning (\ref{TN2.3}) en \textit{parameterfremstilling} for den samme plan, hvor første søjlevektor på højresiden angiver \textit{begyndelsespunktet} på planen, og de to sidste søjlevektorer er \textit{retningsvektorer}. (Her: REFERENCE til transfernote om geometriske vektorer).
+     %**** Reference.tex.modForLaTeXML Line 250 ****
+     %\end{cross}-->
+      <para xml:id="Ch999.S2.p18">
+        <p>====BUILD-BEGIN====</p>
+      </para>
+      <para xml:id="Ch999.S2.p19">
+        <p>Hvis vi opfatter ligning (<ref labelref="LABEL:TN2.2"/>) som ligningen for en plan i rummet, så angiver ligning (<ref labelref="LABEL:TN2.3"/>) en <text font="italic">parameterfremstilling</text> for den samme plan, hvor første søjlevektor på højresiden angiver <text font="italic">begyndelsespunktet</text> på planen, og de to sidste søjlevektorer er <text font="italic">retningsvektorer</text>. (Her: REFERENCE til transfernote om geometriske vektorer).</p>
+      </para>
+      <para xml:id="Ch999.S2.p20">
+        <p>====BUILD-END====</p>
+      </para>
+      <para xml:id="Ch999.S2.p21">
+        <p>Nam sit amet est nec sapien facilisis iaculis vel et ligula. Suspendisse varius elementum ornare. Sed at arcu vel nisl vulputate sollicitudin nec ut magna. Vestibulum leo nibh, iaculis vel pharetra vitae, placerat eu tortor. Aliquam non metus ac tortor pharetra lacinia vitae at dui. Morbi in ante eget elit feugiat posuere at eu magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vitae lorem nunc. Quisque diam libero, dictum vel bibendum quis, fringilla a sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce lobortis molestie mi, vel dictum turpis adipiscing id. Morbi commodo mattis tempor. Phasellus nisi elit, tempus eu bibendum ut, feugiat eget purus.</p>
+      </para>
+      <para xml:id="Ch999.S2.p22">
+        <equation refnum="999-16" xml:id="Ch999.E16">
+          <Math mode="display" tex="(-1)\cdot R_{2}\,:" xml:id="Ch999.E16.m1">
+            <XMath>
+              <XMTok role="OPEN">(</XMTok>
+              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+              <XMTok meaning="1" role="NUMBER">1</XMTok>
+              <XMTok role="CLOSE">)</XMTok>
+              <XMTok name="cdot" role="MULOP">⋅</XMTok>
+              <XMTok role="UNKNOWN" font="italic">R</XMTok>
+              <XMApp role="POSTSUBSCRIPT" scriptpos="2">
+                <XMTok meaning="2" role="NUMBER">2</XMTok>
+              </XMApp>
+              <XMHint name="thinspace"/>
+              <XMTok name="colon" role="METARELOP">:</XMTok>
+            </XMath>
+          </Math>
+        </equation>
+      </para>
+      <para xml:id="Ch999.S2.p23">
+        <equation refnum="999-17" xml:id="Ch999.E17">
+          <Math mode="display" tex="(-1)\cdot R_{2}\,:" xml:id="Ch999.E17.m1">
+            <XMath>
+              <XMTok role="OPEN">(</XMTok>
+              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+              <XMTok meaning="1" role="NUMBER">1</XMTok>
+              <XMTok role="CLOSE">)</XMTok>
+              <XMTok name="cdot" role="MULOP">⋅</XMTok>
+              <XMTok role="UNKNOWN" font="italic">R</XMTok>
+              <XMApp role="POSTSUBSCRIPT" scriptpos="2">
+                <XMTok meaning="2" role="NUMBER">2</XMTok>
+              </XMApp>
+              <XMHint name="thinspace"/>
+              <XMTok name="colon" role="METARELOP">:</XMTok>
+            </XMath>
+          </Math>
+        </equation>
+      </para>
+      <para xml:id="Ch999.S2.p24">
+        <equation refnum="999-18" xml:id="Ch999.E18">
+          <Math mode="display" tex="(-1)\cdot R_{2}\,:" xml:id="Ch999.E18.m1">
+            <XMath>
+              <XMTok role="OPEN">(</XMTok>
+              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+              <XMTok meaning="1" role="NUMBER">1</XMTok>
+              <XMTok role="CLOSE">)</XMTok>
+              <XMTok name="cdot" role="MULOP">⋅</XMTok>
+              <XMTok role="UNKNOWN" font="italic">R</XMTok>
+              <XMApp role="POSTSUBSCRIPT" scriptpos="2">
+                <XMTok meaning="2" role="NUMBER">2</XMTok>
+              </XMApp>
+              <XMHint name="thinspace"/>
+              <XMTok name="colon" role="METARELOP">:</XMTok>
+            </XMath>
+          </Math>
+        </equation>
+      </para>
+      <para xml:id="Ch999.S2.p25">
+        <equation refnum="999-19" xml:id="Ch999.E19">
+          <Math mode="display" tex="(-1)\cdot R_{2}\,:" xml:id="Ch999.E19.m1">
+            <XMath>
+              <XMTok role="OPEN">(</XMTok>
+              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+              <XMTok meaning="1" role="NUMBER">1</XMTok>
+              <XMTok role="CLOSE">)</XMTok>
+              <XMTok name="cdot" role="MULOP">⋅</XMTok>
+              <XMTok role="UNKNOWN" font="italic">R</XMTok>
+              <XMApp role="POSTSUBSCRIPT" scriptpos="2">
+                <XMTok meaning="2" role="NUMBER">2</XMTok>
+              </XMApp>
+              <XMHint name="thinspace"/>
+              <XMTok name="colon" role="METARELOP">:</XMTok>
+            </XMath>
+          </Math>
+        </equation>
+      </para>
+      <!-- %**** Reference.tex.modForLaTeXML Line 275 **** -->
+      <subsubsection refnum="999.2.0.1" xml:id="Ch999.S2.SS0.SSS1">
+        <title>====MARKER====</title>
+      </subsubsection>
+    </section>
+    <section refnum="999.3" xml:id="Ch999.S3">
+      <title>Nam sit amet</title>
+      <para xml:id="Ch999.S3.p1">
+        <p>Nam sit amet est nec sapien facilisis iaculis vel et ligula. Suspendisse varius elementum ornare. Sed at arcu vel nisl vulputate sollicitudin nec ut magna. Vestibulum leo nibh, iaculis vel pharetra vitae, placerat eu tortor. Aliquam non metus ac tortor pharetra lacinia vitae at dui. Morbi in ante eget elit feugiat posuere at eu magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vitae lorem nunc. Quisque diam libero, dictum vel bibendum quis, fringilla a sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce lobortis molestie mi, vel dictum turpis adipiscing id. Morbi commodo mattis tempor. Phasellus nisi elit, tempus eu bibendum ut, feugiat eget purus.</p>
+      </para>
+      <subsubsection refnum="999.3.0.1" xml:id="Ch999.S3.SS0.SSS1">
+        <title>====MARKER====</title>
+      </subsubsection>
+      <subsection refnum="999.3.1" xml:id="Ch999.S3.SS1">
+        <title>Aliquam non metus</title>
+        <para xml:id="Ch999.S3.SS1.p1">
+          <p>Aliquam non metus ac tortor pharetra lacinia vitae at dui. Morbi in ante eget elit feugiat posuere at eu magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vitae lorem nunc. Quisque diam libero, dictum vel bibendum quis, fringilla a sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce lobortis molestie mi, vel dictum turpis adipiscing id. Morbi commodo mattis tempor. Phasellus nisi elit, tempus eu bibendum ut, feugiat eget purus.</p>
+        </para>
+        <subsubsection refnum="999.3.1.1" xml:id="Ch999.S3.SS1.SSS1">
+          <title>====MARKER====</title>
+        </subsubsection>
+      </subsection>
+      <subsection refnum="999.3.2" xml:id="Ch999.S3.SS2">
+        <title>Fusce lobortis molestie</title>
+        <subsubsection refnum="999.3.2.1" xml:id="Ch999.S3.SS2.SSS1">
+          <title>====MARKER====</title>
+          <para xml:id="Ch999.S3.SS2.SSS1.p1">
+            <p><text font="HASH(0xb74d34) bold">THEOREM 999.10: </text></p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS1.p2">
+            <p>En lineær ligning er givet ved</p>
+            <equation refnum="999-20" xml:id="Ch999.E20">
+              <Math mode="display" tex="x_{1}+2x_{2}-3x_{3}=-2\,." xml:id="Ch999.E20.m1" text="(x _ 1 + 2 * x _ 2) - 3 * x _ 3 = - 2.">
+                <XMath>
+                  <XMApp>
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMApp>
+                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok meaning="3" role="NUMBER">3</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                          <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                          <XMTok meaning="3" role="NUMBER">3</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                      <XMTok role="NUMBER" meaning="2.">2 .</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMath>
+              </Math>
+            </equation>
+            <p>Angiv løsningsmængden for ligningen på standard-parameterform.
+<!-- %**** Reference.tex.modForLaTeXML Line 300 **** --></p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS1.p3">
+            <p>====OBS-BEGIN====</p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS1.p4">
+            <p>Hvis vi opfatter ligning (<ref labelref="LABEL:TN2.2"/>) som ligningen for en plan i rummet, så angiver ligning (<ref labelref="LABEL:TN2.3"/>) en <text font="italic">parameterfremstilling</text> for den samme plan, hvor første søjlevektor på højresiden angiver <text font="italic">begyndelsespunktet</text> på planen, og de to sidste søjlevektorer er <text font="italic">retningsvektorer</text>. (Her: REFERENCE til transfernote om geometriske vektorer).</p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS1.p5">
+            <p>====OBS-END====</p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS1.p6">
+            <p>Nam sit amet est nec sapien facilisis iaculis vel et ligula. Suspendisse varius elementum ornare. Sed at arcu vel nisl vulputate sollicitudin nec ut magna. Vestibulum leo nibh, iaculis vel pharetra vitae, placerat eu tortor. Aliquam non metus ac tortor pharetra lacinia vitae at dui. Morbi in ante eget elit feugiat posuere at eu magna. Cum sociis natoque penatibus et magnis dis parturient montes,</p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS1.p7">
+            <p>====INFO-BEGIN====</p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS1.p8">
+            <p>Hvis vi opfatter ligning (<ref labelref="LABEL:TN2.2"/>) som ligningen for en plan i rummet, så angiver ligning (<ref labelref="LABEL:TN2.3"/>) en <text font="italic">parameterfremstilling</text> for den samme plan, hvor første søjlevektor på højresiden angiver <text font="italic">begyndelsespunktet</text> på planen, og de to sidste søjlevektorer er <text font="italic">retningsvektorer</text>. (Her: REFERENCE til transfernote om geometriske vektorer).</p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS1.p9">
+            <p>====INFO-END====</p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS1.p10">
+            <p>====THINK-BEGIN====</p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS1.p11">
+            <p>Hvis vi opfatter ligning (<ref labelref="LABEL:TN2.2"/>) som ligningen for en plan i rummet, så angiver ligning (<ref labelref="LABEL:TN2.3"/>) en <text font="italic">parameterfremstilling</text> for den samme plan, hvor første søjlevektor på højresiden angiver <text font="italic">begyndelsespunktet</text> på planen, og de to sidste søjlevektorer er <text font="italic">retningsvektorer</text>. (Her: REFERENCE til transfernote om geometriske vektorer).</p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS1.p12">
+            <p>====THINK-END====</p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS1.p13">
+            <p>====AHA-BEGIN====</p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS1.p14">
+            <p>Hvis vi opfatter ligning (<ref labelref="LABEL:TN2.2"/>) som ligningen for en plan i rummet, så angiver ligning (<ref labelref="LABEL:TN2.3"/>) en <text font="italic">parameterfremstilling</text> for den samme plan, hvor første søjlevektor på højresiden angiver <text font="italic">begyndelsespunktet</text> på planen, og de to sidste søjlevektorer er <text font="italic">retningsvektorer</text>. (Her: REFERENCE til transfernote om geometriske vektorer).</p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS1.p15">
+            <p>====AHA-END====</p>
+          </para>
+          <!-- %**** Reference.tex.modForLaTeXML Line 325 **** 
+     %\begin{cross}
+     %Hvis vi opfatter ligning (\ref{TN2.2}) som ligningen for en plan i rummet, så angiver ligning (\ref{TN2.3}) en \textit{parameterfremstilling} for den samme plan, hvor første søjlevektor på højresiden angiver \textit{begyndelsespunktet} på planen, og de to sidste søjlevektorer er \textit{retningsvektorer}. (Her: REFERENCE til transfernote om geometriske vektorer).
+     %\end{cross}-->
+          <para xml:id="Ch999.S3.SS2.SSS1.p16">
+            <p>====BUILD-BEGIN====</p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS1.p17">
+            <p>Hvis vi opfatter ligning (<ref labelref="LABEL:TN2.2"/>) som ligningen for en plan i rummet, så angiver ligning (<ref labelref="LABEL:TN2.3"/>) en <text font="italic">parameterfremstilling</text> for den samme plan, hvor første søjlevektor på højresiden angiver <text font="italic">begyndelsespunktet</text> på planen, og de to sidste søjlevektorer er <text font="italic">retningsvektorer</text>. (Her: REFERENCE til transfernote om geometriske vektorer).</p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS1.p18">
+            <p>====BUILD-END====</p>
+          </para>
+        </subsubsection>
+        <subsubsection refnum="999.3.2.2" xml:id="Ch999.S3.SS2.SSS2">
+          <title>====MARKER====</title>
+          <para xml:id="Ch999.S3.SS2.SSS2.p1">
+            <equation refnum="999-21" xml:id="Ch999.E21">
+              <Math mode="display" tex="(-1)\cdot R_{2}\,:" xml:id="Ch999.E21.m1">
+                <XMath>
+                  <XMTok role="OPEN">(</XMTok>
+                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  <XMTok role="CLOSE">)</XMTok>
+                  <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                  <XMTok role="UNKNOWN" font="italic">R</XMTok>
+                  <XMApp role="POSTSUBSCRIPT" scriptpos="2">
+                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                  </XMApp>
+                  <XMHint name="thinspace"/>
+                  <XMTok name="colon" role="METARELOP">:</XMTok>
+                </XMath>
+              </Math>
+            </equation>
+          </para>
+        </subsubsection>
+        <subsubsection refnum="999.3.2.3" xml:id="Ch999.S3.SS2.SSS3" labels="LABEL:TN2.2">
+          <title>====MARKER====</title>
+          <!-- %**** Reference.tex.modForLaTeXML Line 350 **** -->
+          <para xml:id="Ch999.S3.SS2.SSS3.p1">
+            <p><text font="HASH(0xb74d34) bold">EXAMPLE 999.11: </text></p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS3.p2">
+            <p>Den lineære ligning</p>
+            <equation refnum="999-22" xml:id="Ch999.E22">
+              <Math mode="display" tex="0x_{1}+0x_{2}+0x_{3}+0x_{4}=0\,\,\Leftrightarrow\,\, 0=0" xml:id="Ch999.E22.m1" text="0 * x _ 1 + 0 * x _ 2 + 0 * x _ 3 + 0 * x _ 4 = 0 Leftrightarrow 0 = 0">
+                <XMath>
+                  <XMApp>
+                    <XMTok name="Leftrightarrow" role="METARELOP">⇔</XMTok>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="4" role="NUMBER">4</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMTok meaning="0" role="NUMBER">  0</XMTok>
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMath>
+              </Math>
+            </equation>
+            <p>hvor alle koefficienterne samt højresiden er 0, er et eksempel på en <indexmark><indexphrase key="trivielligning">triviel ligning</indexphrase></indexmark><text font="bold italic">triviel</text> ligning. Ligningens løsningsmængde består af alle <Math mode="inline" tex="\mathbf{x}=(x_{1},\, x_{2},\, x_{3},\, x_{4})\in\mathbb{R}^{4}" xml:id="Ch999.S3.SS2.SSS3.p2.m1" text="x = vector@(x _ 1, x _ 2, x _ 3, x _ 4) element-of R ^ 4"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok role="UNKNOWN" font="bold">x</XMTok><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="vector" role="FENCED" argclose=")" argopen="(" separators=",,,"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp><XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="blackboard">R</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMath></Math>.<break/></p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS3.p3">
+            <p>Hvis alle ligningens koefficienter er 0, men højresiden er forskellig fra 0, opstår en <indexmark><indexphrase key="inkonsistentligning">inkonsistent ligning</indexphrase></indexmark><text font="bold italic">inkonsistent</text> ligning, som ingen løsninger har, det gælder fx ligningen</p>
+            <equation refnum="999-23" xml:id="Ch999.E23">
+              <Math mode="display" tex="0x_{1}+0x_{2}+0x_{3}+0x_{4}=1\,\,\Leftrightarrow\,\, 0=1\,." xml:id="Ch999.E23.m1" text="0 * x _ 1 + 0 * x _ 2 + 0 * x _ 3 + 0 * x _ 4 = 1 Leftrightarrow 0 = 1.">
+                <XMath>
+                  <XMApp>
+                    <XMTok name="Leftrightarrow" role="METARELOP">⇔</XMTok>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="4" role="NUMBER">4</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMTok meaning="0" role="NUMBER">  0</XMTok>
+                      <XMTok role="NUMBER" meaning="1.">1 .</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMath>
+              </Math>
+            </equation>
+          </para>
+        </subsubsection>
+        <subsubsection refnum="999.3.2.4" xml:id="Ch999.S3.SS2.SSS4" labels="LABEL:TN2.2">
+          <title>====MARKER====</title>
+          <para xml:id="Ch999.S3.SS2.SSS4.p1">
+            <p><text font="HASH(0xb74d34) bold">EXAMPLE 999.12: </text></p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS4.p2">
+            <p>Den lineære ligning</p>
+            <equation refnum="999-24" xml:id="Ch999.E24">
+              <Math mode="display" tex="0x_{1}+0x_{2}+0x_{3}+0x_{4}=0\,\,\Leftrightarrow\,\, 0=0" xml:id="Ch999.E24.m1" text="0 * x _ 1 + 0 * x _ 2 + 0 * x _ 3 + 0 * x _ 4 = 0 Leftrightarrow 0 = 0">
+                <XMath>
+                  <XMApp>
+                    <XMTok name="Leftrightarrow" role="METARELOP">⇔</XMTok>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="4" role="NUMBER">4</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMTok meaning="0" role="NUMBER">  0</XMTok>
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMath>
+              </Math>
+            </equation>
+            <p>hvor alle koefficienterne samt højresiden er 0, er et eksempel på en <indexmark><indexphrase key="trivielligning">triviel ligning</indexphrase></indexmark><text font="bold italic">triviel</text> ligning. Ligningens løsningsmængde består af alle <Math mode="inline" tex="\mathbf{x}=(x_{1},\, x_{2},\, x_{3},\, x_{4})\in\mathbb{R}^{4}" xml:id="Ch999.S3.SS2.SSS4.p2.m1" text="x = vector@(x _ 1, x _ 2, x _ 3, x _ 4) element-of R ^ 4"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok role="UNKNOWN" font="bold">x</XMTok><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="vector" role="FENCED" argclose=")" argopen="(" separators=",,,"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp><XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="blackboard">R</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMath></Math>.<break/></p>
+          </para>
+          <!-- %**** Reference.tex.modForLaTeXML Line 375 **** -->
+          <para xml:id="Ch999.S3.SS2.SSS4.p3">
+            <p>====QRCODE-BEGIN====AB23CD Guided videoeksempel====QRCODE-END====</p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS4.p4">
+            <p>Hvis alle ligningens koefficienter er 0, men højresiden er forskellig fra 0, opstår en <indexmark><indexphrase key="inkonsistentligning">inkonsistent ligning</indexphrase></indexmark><text font="bold italic">inkonsistent</text> ligning, som ingen løsninger har, det gælder fx ligningen</p>
+            <equation refnum="999-25" xml:id="Ch999.E25">
+              <Math mode="display" tex="0x_{1}+0x_{2}+0x_{3}+0x_{4}=1\,\,\Leftrightarrow\,\, 0=1\,." xml:id="Ch999.E25.m1" text="0 * x _ 1 + 0 * x _ 2 + 0 * x _ 3 + 0 * x _ 4 = 1 Leftrightarrow 0 = 1.">
+                <XMath>
+                  <XMApp>
+                    <XMTok name="Leftrightarrow" role="METARELOP">⇔</XMTok>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="4" role="NUMBER">4</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMTok meaning="0" role="NUMBER">  0</XMTok>
+                      <XMTok role="NUMBER" meaning="1.">1 .</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMath>
+              </Math>
+            </equation>
+          </para>
+        </subsubsection>
+        <subsubsection refnum="999.3.2.5" xml:id="Ch999.S3.SS2.SSS5" labels="LABEL:TN2.2">
+          <title>====MARKER====</title>
+          <para xml:id="Ch999.S3.SS2.SSS5.p1">
+            <p><text font="HASH(0xb74d34) bold">EXAMPLE 999.13: </text></p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS5.p2">
+            <p>Den lineære ligning</p>
+            <equation refnum="999-26" xml:id="Ch999.E26">
+              <Math mode="display" tex="0x_{1}+0x_{2}+0x_{3}+0x_{4}=0\,\,\Leftrightarrow\,\, 0=0" xml:id="Ch999.E26.m1" text="0 * x _ 1 + 0 * x _ 2 + 0 * x _ 3 + 0 * x _ 4 = 0 Leftrightarrow 0 = 0">
+                <XMath>
+                  <XMApp>
+                    <XMTok name="Leftrightarrow" role="METARELOP">⇔</XMTok>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="4" role="NUMBER">4</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMTok meaning="0" role="NUMBER">  0</XMTok>
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMath>
+              </Math>
+            </equation>
+            <p>hvor alle koefficienterne samt højresiden er 0, er et eksempel på en <indexmark><indexphrase key="trivielligning">triviel ligning</indexphrase></indexmark><text font="bold italic">triviel</text> ligning. Ligningens løsningsmængde består af alle <Math mode="inline" tex="\mathbf{x}=(x_{1},\, x_{2},\, x_{3},\, x_{4})\in\mathbb{R}^{4}" xml:id="Ch999.S3.SS2.SSS5.p2.m1" text="x = vector@(x _ 1, x _ 2, x _ 3, x _ 4) element-of R ^ 4"><XMath><XMApp><XMTok meaning="multirelation"/><XMTok role="UNKNOWN" font="bold">x</XMTok><XMTok meaning="equals" role="RELOP">=</XMTok><XMApp><XMTok meaning="vector" role="FENCED" argclose=")" argopen="(" separators=",,,"/><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="1" role="NUMBER">1</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="2" role="NUMBER">2</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="3" role="NUMBER">3</XMTok></XMApp><XMApp><XMTok role="SUBSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="italic">x</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp><XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok><XMApp><XMTok role="SUPERSCRIPTOP" scriptpos="post2"/><XMTok role="UNKNOWN" font="blackboard">R</XMTok><XMTok meaning="4" role="NUMBER">4</XMTok></XMApp></XMApp></XMath></Math>.<break/></p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS5.p3">
+            <p>Hvis alle ligningens koefficienter er 0, men højresiden er forskellig fra 0, opstår en <indexmark><indexphrase key="inkonsistentligning">inkonsistent ligning</indexphrase></indexmark><text font="bold italic">inkonsistent</text> ligning, som ingen løsninger har, det gælder fx ligningen</p>
+            <equation refnum="999-27" xml:id="Ch999.E27">
+              <Math mode="display" tex="0x_{1}+0x_{2}+0x_{3}+0x_{4}=1\,\,\Leftrightarrow\,\, 0=1\,." xml:id="Ch999.E27.m1" text="0 * x _ 1 + 0 * x _ 2 + 0 * x _ 3 + 0 * x _ 4 = 1 Leftrightarrow 0 = 1.">
+                <XMath>
+                  <XMApp>
+                    <XMTok name="Leftrightarrow" role="METARELOP">⇔</XMTok>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="2" role="NUMBER">2</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="3" role="NUMBER">3</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok role="UNKNOWN" font="italic">x</XMTok>
+                            <XMTok meaning="4" role="NUMBER">4</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMTok meaning="0" role="NUMBER">  0</XMTok>
+                      <XMTok role="NUMBER" meaning="1.">1 .</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMath>
+              </Math>
+            </equation>
+            <!-- %**** Reference.tex.modForLaTeXML Line 400 **** -->
+          </para>
+        </subsubsection>
+        <subsubsection refnum="999.3.2.6" xml:id="Ch999.S3.SS2.SSS6">
+          <title>====MARKER====</title>
+          <para xml:id="Ch999.S3.SS2.SSS6.p1">
+            <p><text font="HASH(0xb74d34) bold">SUMMARY</text></p>
+          </para>
+          <para xml:id="Ch999.S3.SS2.SSS6.p2">
+            <p>asdf</p>
+          </para>
+        </subsubsection>
+        <subsubsection refnum="999.3.2.7" xml:id="Ch999.S3.SS2.SSS7">
+          <title>====MARKER====</title>
+          <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     %%% HER SKAL DU STOPPE MED AT SKRIVE %%%%%%%%
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+        </subsubsection>
+      </subsection>
+    </section>
+  </chapter>
+</document>

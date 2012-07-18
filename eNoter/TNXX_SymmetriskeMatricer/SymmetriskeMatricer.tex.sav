@@ -1,0 +1,765 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{../Strukturfiler/preambel}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% HERFRA SKAL DU SKRIVE ELLER INDSÆTTE %%%%
+%%% DEN FIL DU ØNSKER %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\setcounter{chapter}{112}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Symmetriske matricer} \label{chpSymmMat}
+
+
+\begin{basis}
+Vi ser på matricer $A$, der er {\em{kvadratformede}} og {\em{symmetriske}};  $\bm{A}$  altså en $(n \times n)-$matrix for $n \geq 2$, se TransferNote \ref{TN4}, og desuden er $\bm{A} = \bm{A}\transp$. Der forudsættes kendskab til matrixalgebra (\ref{TN3}), determinant-begrebet (\ref{TN5}), lineære afbildninger af det Euklidiske vektorrum $(\mathbb{R}^{n}, \cdot)$ ind i sig selv, det tilhørende egenværdi- og egenvektorproblem, REFERENCE \ref{TN} og Gram--Scmidt ortonormalisering i givne udspændte underrum af $(\mathbb{R}^{n}, \cdot)$ med det inducerede skalarprodukt.
+\end{basis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Det Euklidiske vektorrum $(\mathbb{R}^{n}, \cdot)$} \label{secNeed}
+
+I vektorrummet $(\mathbb{R}^{n}$ indføres et indre produkt, et skalarprodukt,  som en naturlig generalisering af det velkendte skalarprodukt fra plangeometrien.
+
+\begin{definition}
+Lad $\bm{a}$ og $\bm{b}$ være to givne vektorer i $\mathbb{R}^{n}$ med koordinaterne $(a_{1}, . . . , a_{n})$ og $(b_{1}, . . . , b_{n})$ med hensyn til den sædvanlige basis i $\mathbb{R}^{n}$. Så definerer vi \ind{skalarprodukt}{skalarproduktet}, \ind{indre produkt}{det indre produkt}, af de to vektorer på følgende måde:
+\begin{equation}
+\bm{a} \cdot \bm{b} = a_{1}b_{1} + a_{2}b_{2} + \cdot \cdot \cdot a_{n}b_{n} = \sum_{i=1}^{n}a_{i}b_{i} \quad .
+\end{equation}
+Når $\mathbb{R}^{n}$ udstyres med dette (sædvanlige, naturlige) valg af skalarprodukt er $(\mathbb{R}^{n}, \cdot)$ dermed et eksempel på et såkaldt \ind{Euklidisk vektorrum $(\mathbb{R}^{n}, \cdot)$}{Euklidisk vektorrum}, se den generelle definition i REFERENCE \ref{TN}.
+\end{definition}
+
+\begin{think}
+Skalarproduktet kan udtrykkes ved matrix-produktet:
+\begin{equation}
+\bm{a} \cdot \bm{b} = _{\bm{e}}\bm{a}\transp \,\, _{\bm{e}}\bm{b} = [a_{1} \, \, . \, \, . \, \, . \, \, a_{n}]\left[
+                                                                                          \begin{array}{c}
+                                                                                            b_{1} \\
+                                                                                            \cdot \\
+                                                                                            \cdot \\
+                                                                                            \cdot \\
+                                                                                            b_{n} \\
+                                                                                          \end{array}
+                                                                                        \right]
+\end{equation}
+\end{think}
+
+Hovedpointen ved indførelsen af et skalarprodukt er, at vi nu kan tale om længder af vektorerne i det givne  vektorrum, her $\mathbb{R}^{n}$:
+
+\begin{definition}
+Lad $\bm{a}$ være en vektor i $\mathbb{R}^{n}$ med koordinaterne $(a_{1}, . . . , a_{n})$ med hensyn til den sædvanlige basis i $\mathbb{R}^{n}$. Så er \ind{længden af en vektor $\bm{a}$}{længden af $\bm{a}$} defineret ved
+\begin{equation}
+\Vert \bm{a} \Vert = \sqrt{\bm{a} \cdot \bm{a}} = \sqrt{\sum_{i=1}^{n}a_{i}^{2}} \quad.
+\end{equation}
+Længden af $\bm{a}$ kaldes også \ind{normen af en vektor $\bm{a}$}{normen af $\bm{a}$} med hensyn til skalarproduktet i $(\mathbb{R}^{n}, \cdot)$.
+En vektor $\bm{a}$ kaldes en \ind{en egentlig vektor}{egentlig vektor}, hvis $\Vert \bm{a} \Vert > 0$, dvs. hvis $ \bm{a} \neq \bm{0}$.
+\end{definition}
+
+Vinklen mellem to vektorer i $\mathbb{R}^{n}$ defineres tilsvarende:
+
+\begin{definition}
+Lad  $\bm{a}$ og $\bm{b}$ være to givne egentlige vektorer i $\mathbb{R}^{n}$ med koordinaterne $(a_{1}, . . . , a_{n})$ og $(b_{1}, . . . , b_{n})$ med hensyn til den sædvanlige basis i $\mathbb{R}^{n}$. Så er \ind{vinklen mellem to vektorer $\bm{a}$ og $\bm{b}$}{vinklen mellem $\bm{a}$ og $\bm{b}$} defineret ved den værdi af $\theta$ i intervallet $[0, \pi]$ som opfylder
+\begin{equation}
+\cos(\theta) = \frac{\bm{a} \cdot \bm{b}}{\Vert \bm{a} \Vert \, \Vert \bm{b} \Vert} \quad.
+\end{equation}
+Hvis $\cos(\theta) = 0$, altså hvis $\bm{a} \cdot \bm{b}$ siger vi, at de to vektorer er \ind{ortogonale vektorer}{ortogonale}.
+\end{definition}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Beregning af skalarprodukt i en anden basis} \label{secSkalarBeregnNyBasis}
+
+Hvis vi benytter en anden basis end den sædvanlige i $(\mathbb{R}^{n}, \cdot)$, hvad er så skalarproduktet af to
+vektorer med hensyn til denne nye basis i $\mathbb{R}^{n}$, altså hvordan ser udtrykket for skalarproduktet ud i koordinaterne for vektorerne med hensyn til den nye basis? Det vil vi nu undersøge. \bs
+
+Lad altså $\{\bm{d}\} = \{\bm{d}_{1}, \bm{d}_{2}, \cdot \cdot \cdot , \bm{d}_{n} \}$ betegne en basis i $\mathbb{R}^{n}$, og lad $\bm{a} = \, _{\bm{d}}(\widetilde{a}_{1}, \widetilde{a}_{1}, \cdot \cdot \cdot, \widetilde{a}_{n})$ betegne koordinaterne for $\bm{a}$ med hensyn til basis $\{\bm{d}\}$ og tilsvarende $\bm{b} = \, _{\bm{d}}(\widetilde{b}_{1}, \widetilde{b}_{1}, \cdot \cdot \cdot, \widetilde{b}_{n})$ koordinaterne for $\bm{b}$ med hensyn til basis $\{\bm{d}\}$. \bs
+
+Vi lader $\bm{P} = _{\bm{e}}\bm{P}_{\bm{d}}$ betegne koordinatskifte-matricen fra $\{\bm{d}\}$ til $\{ \bm{e} \}$ koordinater:
+\begin{equation}
+\bm{P} = \left[ _{\bm{e}}\bm{d}_{1}\,\, _{\bm{e}}\bm{d}_{2}\,\, \cdot \,\, \cdot \,\, \cdot \,\, _{\bm{e}}\bm{d}_{n} \right] \quad ,
+\end{equation}
+hvor $_{\bm{e}}\bm{d}_{1}$ betegner koordinatsøjlen indeholdende $\bm{d}_{1}$'s koordinater med hensyn til basis $\{ \bm{e} \}$,  således at
+\begin{equation}
+\begin{aligned}
+_{\bm{e}}\bm{a} &= \bm{P} \left( _{\bm{d}}\bm{a}\right) \\
+_{\bm{e}}\bm{b} &= \bm{P} \left(_{\bm{d}}\bm{b}\right) \quad ,
+\end{aligned}
+\end{equation}
+sådan at skalarproduktet er
+\begin{equation}
+\begin{aligned}
+\bm{a}\cdot \bm{b} &= [a_{1} \, \, a_{2} \, \, \cdot \,\, \cdot \, \, a_{n}] \left[
+                                           \begin{array}{c}
+                                             b_{1} \\
+                                             b_{2} \\
+                                             \cdot  \\
+                                             \cdot \\
+                                             b_{n} \\
+                                           \end{array}
+                                         \right] \\
+&= \left( _{\bm{e}}\bm{a}\right) \transp \left(_{\bm{e}}\bm{b} \right) \\
+&= \left({\bm{P}} _{\bm{d}}\bm{a}\right) \transp \left({\bm{P}} _{\bm{d}}\bm{b} \right) \\
+&= \left(_{\bm{d}}\bm{a}\transp\right) \left(\bm{P}\transp \bm{P} \right)\left(_{\bm{d}}\bm{b}\right) \\
+&= [\widetilde{a}_{1} \, \, \widetilde{a}_{2} \, \, \cdot \,\, \cdot \, \, \widetilde{a}_{n}] \left(\bm{P}\transp \bm{P} \right) \left[
+                                           \begin{array}{c}
+                                             \widetilde{b}_{1} \\
+                                             \widetilde{b}_{2} \\
+                                             \cdot  \\
+                                             \cdot \\
+                                             \widetilde{b}_{n} \\
+                                           \end{array}
+                                         \right] \quad .
+\end{aligned}
+\end{equation}
+Det vil sige, at skalarproduktet i $(\mathbb{R}^{n}, \cdot)$ kan beregnes med hensyn til en vilkårlig basis ved brug af basis-skift-matricen som vist ovenfor via matricen $\bm{G} = \bm{P}\transp \bm{P}$. Elementerne $g_{ij}$ i matricen $\bm{G}$ findes let ved
+at bruge skalarprodukt-omskrivningen ovenfor på for eksempel de to vektorer $\bm{d}_{2}$ og $\bm{d}_{3}$:
+\begin{equation}
+\bm{d}_{2}\cdot \bm{d}_{3} =  [0 \, \, 1 \, \, \cdot \,\, \cdot \, \, 0]\,\, \bm{G} \left[
+                                           \begin{array}{c}
+                                            0 \\
+                                             0 \\
+                                             1  \\
+                                             \cdot \\
+                                             0 \\
+                                           \end{array}
+                                         \right] = g_{23} \quad .
+\end{equation}
+På samme måde får vi for alle andre valg af $i$ og $j$ at: $g_{ij} = \bm{d}_{i}\cdot \bm{d}_{j}$. 
+
+\begin{aha} \label{ahaOrtoBeregn}
+Specielt følger det af ovenstående, at hvis de nye vektorer i den nye basis $\{ \bm{d} \}$ alle er parvis ortogonale og har længden $1$, så er $\bm{G} = \bm{P}\transp \bm{P} = \bm{E}_{n \times n}$, og i en sådan basis er skalarproduktet udtrykt ved samme simple koordinatformel som i den sædvanlige basis. Det er derfor at foretrække at arbejde i sådanne baser.
+\end{aha}
+
+
+\begin{definition}
+Ortogonal matrix og egenskaberne, se nedenfor, copy to here.
+\end{definition}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Gram--Schmidt ortonormalisering}
+Vi beskriver her en procedure til at bestemme en ortonormal basis i et underrum af vektorrummet $(\mathbb{R}^{n}, \cdot)$. Lad $U$ være et $p-$dimensionalt underrum af $\mathbb{R}^{n}$; vi antager, at $U$ er udspændt af $p$ givne lineært uafhængige vektorer $\{ \bm{u}_{1}, \cdot  \cdot \cdot, \bm{u}_{p} \}$, som altså derved udgør en basis $\{ \bm{u} \}$ for $U$. Proceduren går ud på at konstruere en ny basis $\{ \bm{v} \} = \{ \bm{v}_{1}, \bm{v}_{2}, \cdot \cdot \cdot ,  \bm{v}_{p} \}$ for underrummet $U$ ud fra den givne basis $\{ \bm{u} \}$ sådan at de nye vektorer er {\em{parvis ortogonale og har længden $1$}}.
+
+\begin{method}
+Gram--Schmidt ortonormalisering af $\spanVec(\bm{u}_{1}, \cdot  \cdot \cdot, \bm{u}_{p} )$ i $(\mathbb{R}^{n}, \cdot)$:
+\begin{enumerate}
+\item Begynd med at normere $\bm{u}_{1}$ og kald resultatet $\bm{v}_{1}$, dvs.:
+\begin{equation}
+\bm{v}_{1} = \frac{\bm{u}_{1}}{\Vert \bm{u}_{1} \Vert} \quad .
+\end{equation}
+\item Den næste $\bm{v}-$vektor $\bm{v}_{2}$ vælges nu i $\spanVec(\bm{u}_{1}, \bm{u}_{2})$ men sådan at det samtidig sikres, at $\bm{v}_{2}$ er ortogonal på $\bm{v}_{1}$, altså $\bm{v}_{2}\cdot \bm{v}_{1} = 0$; til sidst normeres. (Først konstrueres en {\em{hjælpevektor}} $\bm{w}_{2}$.)
+\begin{equation}
+\begin{aligned}
+\bm{w}_{2} &= \bm{u}_{2} - \left(\bm{u}_{2} \cdot \bm{v}_{1}\right)\bm{v}_{1} \\
+\bm{v}_{2} &= \frac{\bm{w}_{2}}{\Vert \bm{w}_{2} \Vert} \quad .
+\end{aligned}
+\end{equation}
+Læg mærke til, at $\bm{w}_{2}$ (og derfor også $\bm{v}_{2}$) så er ortogonal på $\bm{v}_{1}$:
+\begin{equation}
+\begin{aligned}
+\bm{w}_{2} \cdot \bm{v}_{1} &= \left(\bm{u}_{2} - \left(\bm{u}_{2} \cdot \bm{v}_{1}\right)\bm{v}_{1}\right) \cdot \bm{v}_{1} \\
+&= \bm{u}_{2} \cdot \bm{v}_{1} - \left(\bm{u}_{2} \cdot \bm{v}_{1} \right) \bm{v}_{1} \cdot \bm{v}_{1} \\
+&= \bm{u}_{2} \cdot \bm{v}_{1} - \left(\bm{u}_{2} \cdot \bm{v}_{1} \right) \Vert \bm{v}_{1} \Vert^{2} \\
+&=  \bm{u}_{2} \cdot \bm{v}_{1} - \left(\bm{u}_{2} \cdot \bm{v}_{1} \right)\\
+&= 0 \quad .
+\end{aligned}
+\end{equation}
+\item Således fortsættes
+\begin{equation}
+\begin{aligned}
+\bm{w}_{i} &= \bm{u}_{i} -  \left(\bm{u}_{i} \cdot \bm{v}_{1}\right)\bm{v}_{1} - \left(\bm{u}_{i} \cdot \bm{v}_{2}\right)\bm{v}_{2} - \cdot \cdot \cdot -\left(\bm{u}_{i} \cdot \bm{v}_{i-1}\right)\bm{v}_{i-1}\\
+\bm{v}_{i} &= \frac{\bm{w}_{i}}{\Vert \bm{w}_{i} \Vert} \quad .
+\end{aligned}
+\end{equation}
+\item Indtil sidste vektor $\bm{u}_{p}$ er brugt:
+\begin{equation}
+\begin{aligned}
+\bm{w}_{p} &= \bm{u}_{p} -  \left(\bm{u}_{p} \cdot \bm{v}_{1}\right)\bm{v}_{1} - \left(\bm{u}_{p} \cdot \bm{v}_{2}\right)\bm{v}_{2} - \cdot \cdot \cdot -\left(\bm{u}_{p} \cdot \bm{v}_{p-1}\right)\bm{v}_{p-1}\\
+\bm{v}_{p} &= \frac{\bm{w}_{p}}{\Vert \bm{w}_{p} \Vert} \quad .
+\end{aligned}
+\end{equation}
+\end{enumerate}
+\end{method}
+
+
+\begin{example} \label{exampLAbog8.11}
+I $(\mathbb{R}^{4}, \cdot)$ vil vi ved hjælp af Gram--Schmidt ortonormaliserings-metoden finde en ortonormal basis $\{ \bm{v} \} = \{ \bm{v}_{1}, \bm{v}_{2}, \bm{v}_{3},\}$ for det $3-$dimensionale underrum $U$, der er udspændt af de tre givne lineært uafhængige (!) vektorer
+\begin{equation*}
+\begin{aligned}
+\bm{u}_{1} &= {_{\bm{e}}(2,2,4,1)} \quad , \quad \bm{u}_{2} = {_{\bm{e}}(0,0,-5,-5)} \quad , \quad \bm{u}_{3} = {_{\bm{e}}(5,3,3,-3)} \quad .
+\end{aligned}
+\end{equation*}
+Vi konstruerer de nye basisvektorer med hensyn til den sædvanlige basis $\{ \bm{e} \}$ i $\mathbb{R}^{4}$ ved at gå igennem ortonormaliseringsproceduren (der er $3$ 'step' da der i dette eksempel er $3$ lineært uafhængige vek\-to\-rer i $U$)\,:
+\begin{enumerate}
+\item
+\begin{equation}
+\bm{v}_{1} = \frac{\bm{u}_{1}}{\Vert \bm{u}_{1} \Vert} = \frac{1}{5}(2,2,4,1) \quad .
+\end{equation}
+\item
+\begin{equation}
+\begin{aligned}
+\bm{w}_{2} &= \bm{u}_{2} - \left(\bm{u}_{2}\cdot\bm{v}_{1}\right)\bm{v}_{1} = \bm{u}_{2} + 5\bm{v}_{1} = (2,2,-1,-4)\\
+\bm{v}_{2} &= \frac{\bm{w}_{2}}{\Vert \bm{w}_{2} \Vert} = \frac{1}{5}(2,2,-1, -4) \quad .
+\end{aligned}
+\end{equation}
+\item
+\begin{equation}
+\begin{aligned}
+\bm{w}_{3} &= \bm{u}_{3} - \left(\bm{u}_{3}\cdot\bm{v}_{1}\right)\bm{v}_{1} - \left(\bm{u}_{3}\cdot\bm{v}_{2}\right)\bm{v}_{2} = \bm{u}_{3} - 5\bm{v}_{1} - 5\bm{v}_{1} = (1,-1,0,0)\\
+\bm{v}_{3} &= \frac{\bm{w}_{3}}{\Vert \bm{w}_{3} \Vert} = \frac{1}{\sqrt{2}}(1,-1,0,0) \quad .
+\end{aligned}
+\end{equation}
+\end{enumerate}
+Vi har dermed konstrueret en ortonormal basis for underrummet $U$ bestående af de vektorer, der med hensyn til den sædvanlige basis har koordinaterne:
+\begin{equation*}
+\begin{aligned}
+\bm{v}_{1} &= \frac{1}{5}(2,2,4,1) \quad , \quad \bm{v}_{2} = \frac{1}{5}(2,2,-1,-4) \quad , \quad \bm{v}_{3} = \frac{1}{\sqrt{2}}(1,-1,0,0) \quad .
+\end{aligned}
+\end{equation*}
+
+Vi kan checke, at der virkelig er tale om en ortonormal basis ved at stille vektorerne op som søjler i en matrix, som dermed får typen $(4 \times 3)$ således :
+\begin{equation}
+\bm{V} =  \left[
+            \begin{array}{ccc}
+             {2}/{5} & {2}/{5} & {1}/{\sqrt{2}} \\
+              {2}/{5} & {2}/{5} & -{1}/{\sqrt{2}} \\
+              {4}/{5} & -{1}/{5} & 0 \\
+             {1}/{5} & -{4}/{5} & 0 \\
+            \end{array}
+          \right]
+\end{equation}
+Matricen $\bm{W}$ kan ikke være en ortogonal matrix (på grund af typen), men alligevel kan $\bm{V}$ tilfredsstille følgende ligning, som viser, at de tre nye basisvektorer netop er parvis ortogonale og alle har længden $1$ !
+\begin{equation}
+\begin{aligned}
+\bm{V}\transp \bm{V} &=  \left[
+                          \begin{array}{cccc}
+                            {2}/{5} & {2}/{5} & {4}/{5} & {1}/{5} \\
+                            {2}/{5} & {2}/{5} & -{1}/{5} & -{4}/{5} \\
+                            {1}/{\sqrt{2}} & -{1}/{\sqrt{2}} & 0 & 0 \\
+                          \end{array}
+                        \right]
+            \left[
+            \begin{array}{ccc}
+             {2}/{5} & {2}/{5} & {1}/{\sqrt{2}} \\
+              {2}/{5} & {2}/{5} & -{1}/{\sqrt{2}} \\
+              {4}/{5} & -{1}/{5} & 0 \\
+             {1}/{5} & -{4}/{5} & 0 \\
+            \end{array}
+          \right] \\
+&= \left[
+                      \begin{array}{ccc}
+                        1 & 0 & 0 \\
+                        0 & 1 & 0 \\
+                        0 & 0 & 1 \\
+                      \end{array}
+                    \right] \quad .
+\end{aligned}
+\end{equation}
+
+\end{example}
+
+
+\begin{exercise} \label{exercLA10.39}
+I $(\mathbb{R}^{4}, \cdot)$ er givet følgende vektorer med hensyn til den sædvanlige basis $\{ \bm{e} \}$:
+\begin{equation*}
+\begin{aligned}
+\bm{u}_{1} &= {_{\bm{e}}(1,1,1,1)} \quad , \quad \bm{u}_{2} = {_{\bm{e}}(3,1,1,3)} \quad , \quad \bm{u}_{3} = {_{\bm{e}}(2,0,-2,4)} \quad , \quad \bm{u}_{4} = {_{\bm{e}}(1,1,-1,3)} \quad .
+\end{aligned}
+\end{equation*}
+Vi lader $U$ betegne det underrum i $(\mathbb{R}^{4}$, som er udspændt af de fire givne vektorer, altså
+\begin{equation}
+U = \spanVec(\bm{u}_{1}, \bm{u}_{2}, \bm{u}_{3}, \bm{u}_{4}) \quad .
+\end{equation}
+\begin{enumerate}
+\item Vis, at $\{ \bm{u} \} = \{ \bm{u}_{1}, \bm{u}_{2}, \bm{u}_{3}\} $ er en basis for $U$, og find koordinatmatricen for $\bm{u}_{4}$ med hensyn til denne basis.
+\item Angiv en ortonormal basis for $U$.
+\end{enumerate}
+\end{exercise}
+
+
+\begin{example} \label{exampOrto3D}
+I $(\mathbb{R}^{3}, \cdot)$ kræves en given første enheds-vektor $\bm{v}_{1}$ benyttet til en ny ortonormal basis
+$\{ \bm{v} \} = \{ \bm{v}_{1}, \bm{v}_{2}, \bm{v}_{3}\}$ og opgaven er at finde de to andre vektorer til basen. Lad os antage at den givne vektor er $ \bm{v}_{1} = (3,0,4)/5$. Det ses umiddelbart, at f.eks.  $\bm{v}_{2} = (0, 1,0)$ er en enhedsvektor, der er ortogonal på $\bm{v}_{1}$. En sidste vektor til den ortonormale basis kan så findes direkte ved brug af krydsproduktet: $\bm{v}_{3} = \bm{v}_{1} \times \bm{v}_{2} = (4, -3, 0)/5$.
+\end{example}
+
+\section{Det ortogonale komplement til et underrum}
+Lad  $U$ være et underrum  i $(\mathbb{R}^{n}, \cdot)$, som er udspændt af $p$ givne lineært uafhængige vektorer, $U = \spanVec(\bm{u}_{1}, \bm{u}_{2}, \cdot \cdot \cdot , \bm{u}_{p})$. Mængden af de vektorer i $(\mathbb{R}^{n}, \cdot)$ som hver for sig er ortogonal på samtlige vektorer i $U$ er selv et underrum i $(\mathbb{R}^{n}, \cdot)$, og det har dimensionen $n-p$:
+
+\begin{definition}
+Det \ind{ortogonale komplement}{ortogonale komplement} til et underrum $U$ i $(\mathbb{R}^{n}, \cdot)$ betegnes med $U^{\bot}$ og består af alle vektorer i $(\mathbb{R}^{n}, \cdot)$ som er ortogonale på hver eneste vektor i $U$:
+\begin{equation}
+U^{\bot} = \{ \bm{x} \in \mathbb{R}^{n} \, | \, \bm{x} \cdot \bm{u} = 0 \, \, , \, \,\textrm{for alle \, $\bm{u} \in U$} \, \}
+\end{equation}
+\end{definition} 
+
+\begin{theorem}
+Det ortogonale komplement $U^{\bot}$ til et givet underrum $U$ i $\,(\mathbb{R}^{n}, \cdot)$ er selv et underrum i $(\mathbb{R}^{n}, \cdot)$ med dimensionen $\, \dim(U^{\bot}) = n-p \, $ .
+\end{theorem}
+\begin{bevis}
+Det er let at checke alle underrums-egenskaberne; for eksempel er det klart, at hvis $\bm{a}$ og $\bm{b}$ er ortogonale på alle vektorerne i $U$ og $k$ er et reelt tal,  så er $\bm{a} + k\bm{b}$ også ortogonal på alle vektorerne i $U$. Da den eneste vektor, der er ortogonal på sig selv er $\bm{0}$ er det også den eneste vektor i fællesmængden $U \cap U^{bot} = \{ \bm{0} \}$. 
+\end{bevis}
+
+\begin{example}
+LLL
+\end{example}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Lineære afbildninger af $(\mathbb{R}^{n}, \cdot)$ ind i $(\mathbb{R}^{n}, \cdot)$} \label{secLinAfb}
+
+En lineær afbildning $f$ af $(\mathbb{R}^{n}, \cdot)$ ind i sig selv vil typisk ændre længder af vektorer og vinkler mellem vektorer; givet to vektorer $\bm{a}$ og $\bm{b}$ hvad er så relationen mellem $\bm{a}\cdot \bm{b}$ og $f(\bm{a}) \cdot f(\bm{b})$? \bs
+
+Som bekendt kan den lineære afbildning repræsenteres ved en matrix $\bm{F}$ med hensyn til en given basis i $(\mathbb{R}^{n}, \cdot)$. Lad os vælge den sædvanlige basis $\{ \bm{e} \}$. Så er $f$ repræsenteret ved $ \bm{F} = {_{\bm{e}}\bm{F}}{_{\bm{e}}}$ og
+\begin{equation} \label{eqLinAfbSkalar}
+\begin{aligned}
+f(\bm{a}) \cdot f(\bm{b}) &= \left(\bm{F}{_{\bm{e}}}\bm{a}\right)\transp \cdot  \left(\bm{F}_{\bm{e}}\bm{b}\right)\\
+&= \left(_{\bm{e}}\bm{a}\right)\transp \bm{F}\transp \bm{F} \left(_{\bm{e}}\bm{b}\right) \quad .
+\end{aligned}
+\end{equation}
+
+\begin{definition}
+En lineær afbildning $\,\,f\, : \, (\mathbb{R}^{n}, \cdot) \mapsto (\mathbb{R}^{n}, \cdot)$ kaldes en \ind{isometri}{isometri} hvis der for alle vektorer  $\bm{a}$ og $\bm{b}$ i $\mathbb{R}^{n}$ gælder:
+\begin{equation}
+f(\bm{a}) \cdot f(\bm{b}) = \bm{a} \cdot \bm{b} \quad .
+\end{equation}
+\end{definition}
+
+\begin{theorem}
+En lineær afbildning $\,\,f\, : \, (\mathbb{R}^{n}, \cdot) \mapsto (\mathbb{R}^{n}, \cdot)$ er en isometri hvis og kun hvis dens afbildningsmatrix $\bm{F} = {_{\bm{d}}}\bm{F}{_{\bm{d}}}$ med hensyn til en {\em{vilkårlig ortogonal basis}} $\{ \bm{d} \}$ for $(\mathbb{R}^{n}, \cdot)$  er ortogonal.
+\end{theorem}
+\begin{bevis}
+Det følger af ligning (\ref{eqLinAfbSkalar}), at $f(\bm{a}) \cdot f(\bm{b}) = \bm{a} \cdot \bm{b}$ for alle $\bm{a}$ og $\bm{b}$ hvis og kun hvis $\bm{F}\transp \bm{F} = \bm{E}_{n \times n}$, når $\bm{F}$ er matricen for $f$ med hensyn til den sædvanlige basis $\{ \bm{e} \}$. Lad så $\{ \bm{d} \}$ være en vilkårlig anden ortonormal basis, og lad $\bm{D}$ betegne den tilhørende ortogonale(!) basisskiftematrix. Med hensyn til den nye basis er afbildningsmatricen for $f$ givet ved $\bm{D}^{-1}\,\bm{F}\bm{D} = \bm{D}\transp \bm{F} \bm{D}$, og den matrix er ortogonal hvis og kun hvis $\bm{F}$ er ortogonal fordi:
+\begin{equation}
+\begin{aligned}
+\left(\bm{D}\transp \bm{F}\bm{D}\right)\transp\left(\bm{D}\transp \bm{F}\bm{D}\right) &= \left(\bm{D}\transp \bm{F}\transp \bm{D}\right)\left(\bm{D}\transp \bm{F}\bm{D}\right)\\
+ &=  \bm{D}\transp \bm{F}\transp \bm{F}\bm{D} \quad ,
+\end{aligned}
+\end{equation}
+og det sidste udtryk er netop enhedsmatricen $\bm{E}_{n \times n}$ hvis og kun hvis $\bm{F}$ er ortogonal.
+\end{bevis}
+
+
+En isometri bevarer længder af vektorer og vinkler mellem vektorer:
+
+\begin{exercise}
+Lad $\,\,f\, : \, (\mathbb{R}^{n}, \cdot) \mapsto (\mathbb{R}^{n}, \cdot)$ være en isometri. Vis, at så er
+$\Vert f(\bm{a}) \Vert = \Vert \bm{a} \Vert$ for alle vektorer $\bm{a} \in \mathbb{R}^{n}$.
+\end{exercise}
+
+\begin{exercise}
+Lad $\,\,f\, : \, (\mathbb{R}^{n}, \cdot) \mapsto (\mathbb{R}^{n}, \cdot)$ være en isometri. Lad $\bm{a}$ og $\bm{b}$ være to egentlige vektorer i $\mathbb{R}^{n}$ og lad $\theta$ være vinklen mellem $\bm{a}$ og $\bm{b}$. Vis, at så er vinklen mellem
+$f(\bm{a})$ og $f(\bm{b})$ også den samme vinkel $\theta$.
+\end{exercise}
+
+Længde-bevarelse er karakteristisk for isometrier:
+
+\begin{theorem}
+Hvis alle vektorer bevarer deres længde ved en lineær afbildning $f$, så er $f$ en isometri.
+\end{theorem}
+\begin{bevis}
+Vektor-summen $\bm{a} + \bm{b}$ har samme længde som sit billede, så der gælder:
+\begin{equation} \label{eqPolarise}
+\begin{aligned}
+f(\bm{a} + \bm{b}) \cdot f(\bm{a} + \bm{b}) &= (\bm{a} + \bm{b}) \cdot (\bm{a} + \bm{b}) \\
+\left((f(\bm{a}) + f(\bm{b})\right) \cdot \left((f(\bm{a}) + f(\bm{b})\right) &= \bm{a}\cdot \bm{a} + 2\bm{a}\cdot \bm{b} + \bm{b}\cdot \bm{b} \\
+f(\bm{a}) \cdot f(\bm{a}) + 2f(\bm{a}) \cdot f(\bm{b}) + f(\bm{b}) \cdot f(\bm{b}) &= \Vert \bm{a} \Vert + 2\bm{a}\cdot \bm{b} + \Vert \bm{b} \Vert \\
+\Vert f(\bm{a}) \Vert + 2f(\bm{a}) \cdot f(\bm{b}) + \Vert f(\bm{b})\Vert &= \Vert \bm{a} \Vert + 2\bm{a}\cdot \bm{b} + \Vert \bm{b} \Vert \quad ,
+\end{aligned}
+\end{equation}
+og da vi også har pr. antagelse, at $\Vert f(\bm{a}) \Vert = \Vert \bm{a} \Vert$ og $\Vert f(\bm{b}) \Vert = \Vert \bm{b} \Vert$ så får vi af den sidste ligning i (\ref{eqPolarise}) ovenfor: $f(\bm{a}) \cdot f(\bm{b}) = \bm{a}\cdot \bm{b}$, og det var det, vi skulle vise.
+\end{bevis}
+
+\begin{aha}
+Vinkel-bevarelse er derimod {\em{ikke}} forbeholdt isometrier; giv et eksempel på en lineær afbildning $\,\,f\, : \, (\mathbb{R}^{n}, \cdot) \mapsto (\mathbb{R}^{n}, \cdot)$ som bevarer vinkler mellem vektorer, men som ikke er en isometri. Vink: Prøv at gange med en konstant.
+\end{aha}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Symmetriske afbildninger af $(\mathbb{R}^{n}, \cdot)$ ind i $(\mathbb{R}^{n}, \cdot)$ } \label{secSymLinAfb}
+
+En meget vigtig klasse af lineære afbildninger af  $(\mathbb{R}^{n}, \cdot)$ ind i sig selv er de symmetriske:
+
+\begin{definition}
+En lineær afbildning $\,\,f\, : \, (\mathbb{R}^{n}, \cdot) \mapsto (\mathbb{R}^{n}, \cdot)$ siges at være \ind{en symmetrisk lineær afbildning}{symmetrisk} hvis der gælder at
+\begin{equation}
+f(\bm{a}) \cdot \bm{b} = \bm{a} \cdot f(\bm{b}) \quad \textrm{for alle $\bm{a}$ og $\bm{b}$ i $\mathbb{R}^{n}$} \quad .
+\end{equation}
+\end{definition}
+
+Vi kender symmetri-begrebet for kvadratformede matricer:
+
+\begin{definition}
+En kvadratformet matrix $\bm{A}$ er {\em{symmetrisk}} hvis den er lig med sin egen transponerede
+\begin{equation}
+\bm{A} = \bm{A}\transp \quad ,
+\end{equation}
+altså hvis $a_{ij}$ = $a_{j\,i}$ for alle elementerne i matricen.
+\end{definition}
+
+Der er en simpel sammenhæng mellem symmetriske matricer og symmetriske afbildninger, hvis vi vel at mærke benytter {\em{ortonormale baser}} til at beskrive en given afbildningen med en matrix:
+
+\begin{theorem}
+Lad $\bm{F} = {_{\bm{d}}}\bm{F}_{\bm{d}}$ betegne matricen for en given lineær afbildning $\,\,f\, : \, (\mathbb{R}^{n}, \cdot) \mapsto (\mathbb{R}^{n}, \cdot)$  med hensyn til en ortonormal basis $\{ \bm{d} \}$. Så er $\bm{F}$ en symmetrisk matrix hvis og kun hvis $f$ er en symmetrisk afbildning.
+\end{theorem}
+\begin{bevis}
+Vi lader ${_{\bm{d}}}\bm{a} = {_{\bm{d}}}(\widetilde{a}_{1}, \widetilde{a}_{2}, \cdot \cdot \cdot, \widetilde{a}_{n})$ og ${_{\bm{d}}}\bm{b} = {_{\bm{d}}}(\widetilde{b}_{1}, \widetilde{b}_{2}, \cdot \cdot \cdot, \widetilde{b}_{n})$ betegne koordinaterne for to vektorer $\bm{a}$ og $\bm{b}$ med hensyn til den ortonormale basis $\{\bm{d}\}$. Da basen er otonormal kan vi beregne skalarprodukter med den sædvanlige koordinatformel, se \includegraphics[height=5mm]{../Strukturfiler/FIGS/think}\ref{ahaOrtoBeregn}. Vi har derfor:
+\begin{equation}
+\begin{aligned}
+f(\bm{a}) \cdot \bm{b} &= \left(\bm{F}\, {_{\bm{d}}}\bm{a} \right)\transp \, \left({_{\bm{d}}\bm{b}}\right) = \left({_{\bm{d}}}\bm{a}\right)\transp \bm{F}\transp \, \left({_{\bm{d}}\bm{b}}\right) \, \, , \, \, \textrm{og} \\
+\bm{a} \cdot f(\bm{b}) &= \left({_{\bm{d}}}\bm{a} \right)\transp \,\left( \bm{F} \,{_{\bm{d}}\bm{b}}\right) = \left({_{\bm{d}}}\bm{a} \right)\transp \,\bm{F} \,\left({_{\bm{d}}\bm{b}}\right)\quad ,
+\end{aligned}
+\end{equation}
+hvoraf følger, at $f(\bm{a}) \cdot \bm{b} = \bm{a} \cdot f(\bm{b})$ for alle $\bm{a}$ og $\bm{b}$ hvis og kun hvis $\bm{F}\transp = \bm{F}$.
+\end{bevis}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Indledning} \label{secIntro}
+
+\begin{definition}
+En kvadratformet matrix $\bm{A}$ er {\em{symmetrisk}} hvis den er lig med sin egen transponerede
+\begin{equation}
+\bm{A} = \bm{A}\transp \quad ,
+\end{equation}
+altså hvis $a_{ij}$ = $a_{j\,i}$ for alle elementer i matricen.
+\end{definition}
+
+\begin{theorem}
+Lad $\bm{v}$ og $\bm{w}$ betegne to vektorer i vektorrummet $\mathbb{R}^{n}$ med det sædvanlige skalarprodukt. Hvis $\bm{A}$ er en
+$(n \times n)-$matrix gælder
+\begin{equation} \label{eqMatDot}
+\left(\bm{A}\,\bm{v} \right)\cdot \bm{w} = \bm{v} \cdot \left(\bm{A}\transp\,\bm{w}\right) \quad ,
+\end{equation}
+hvor prikproduktet er det sædvanlige i $\mathbb{R}^{n}\,\,$:
+\begin{equation}
+\bm{c} \cdot \bm{q} = c_{1}q_{1} + c_{2}q_{2} + \cdot \cdot \cdot + c_{n}q_{n}
+\quad .
+\end{equation}
+\end{theorem}
+
+\begin{bevis}
+Vi benytter, at prikproduktet kan udtrykkes ved et matrixprodukt:
+\begin{equation}
+\bm{c} \cdot \bm{q} = c_{1}q_{1} + c_{2}q_{2} + \cdot \cdot \cdot + c_{n}q_{n} = \bm{c}\transp \bm{q}
+\quad ,
+\end{equation}
+sådan at
+\begin{equation}
+\begin{aligned}
+\left(\bm{A}\,\bm{v} \right)\cdot \bm{w} &= \left(\bm{A}\,\bm{v} \right)\transp \bm{w} \\
+&= \left(\bm{v}\transp \bm{A}\transp  \right) \bm{w} \\
+&= \bm{v}\transp \left(\bm{A}\transp  \bm{w}  \right) \\
+&= \bm{v} \cdot \left(\bm{A}\transp  \bm{w}  \right) \quad .
+\end{aligned}
+\end{equation}
+\end{bevis}
+
+Det kan vi bruge til at karakterisere symmetriske matricer:
+
+\begin{theorem}
+En matrix $\bm{A}$ er en symmetrisk $(n \times n)-$matrix hvis og kun hvis
+\begin{equation} \label{eqSymDot}
+\left(\bm{A}\,\bm{v} \right)\cdot \bm{w} = \bm{v} \cdot \left(\bm{A}\,\bm{w}\right)
+\end{equation}
+for alle vektorer $\bm{v}$ og $\bm{w}$ i $\mathbb{R}^{n}$.
+\end{theorem}
+\begin{bevis}
+Hvis $\bm{A}$ er symmetrisk, så har vi at $\bm{A} = \bm{A}\transp$ og derfor ligning (\ref{eqSymDot}) direkte fra (\ref{eqMatDot}). Omvendt, hvis vi antager at (\ref{eqSymDot}) gælder for alle $\bm{v}$ og $\bm{w}$, så skal vi vise, at $\bm{A}$ er symmetrisk. Men det følger let ved blot at {\em{vælge}} passende vektorer, f.eks. $\bm{v} = \bm{e}_{2} = (0, 1, 0, ..., 0)$ og $\bm{w} = \bm{e}_{3} = (0, 0, 1, ..., 0)$ og indsætte i (\ref{eqSymDot}) som nedenfor. Bemærk, at $\bm{A}\,\bm{e}_{i}$ er den $i$'te søjle-vektor i $\bm{A}$.
+\begin{equation}
+\begin{aligned}
+\left(\bm{A}\,\bm{e}_{2} \right)\cdot \bm{e}_{3} &= a_{23} \\
+&= \bm{e}_{2} \cdot \left(\bm{A}\,\bm{e}_{3}\right) \\
+&= \left(\bm{A}\,\bm{e}_{3}\right)\cdot \bm{e}_{2} \\
+&= a_{32} \quad,
+\end{aligned}
+\end{equation}
+sådan at $a_{23} = a_{32}$. Helt tilsvarende fås for alle andre valg af indices $i$ og $j$ at $a_{ij}= a_{j\,i}$ -- og det var det vi skulle vise.
+\end{bevis}
+
+En basis i $\mathbb{R}^{n}$ består (som bekendt fra TransferNote \ref{TNxx}) af $n$ lineært uafhængige vektorer $\{a_{1}, . . . , a_{n}\}$. Hvis vektorerne derudover er parvis ortogonale og har længden $1$ med hensyn til det sædvanlige prikprodukt, så er $\{\bm{a}_{1}, . . . , \bm{a}_{n}\}$ en \ind{ortonormal basis for $\mathbb{R}^{n}\,$}{ortonormal basis for $\mathbb{R}^{n}\,$} :
+
+\begin{definition} \label{defOrtoBasis}
+En basis $\{\bm{a}\} = \{ \bm{a}_{1}, . . . , \bm{a}_{n} \}$ er en {\em{ortonormal basis}} hvis
+\begin{equation} \label{eqOrtoBasis}
+\bm{a}_{i} \cdot \bm{a}_{j} = \left(\begin{aligned} & 1 \quad \textrm{for $i = j$} \\ & 0 \quad \textrm{for $i \neq j$}\end{aligned}\, \, \right)
+\end{equation}
+\end{definition}
+
+\begin{exercise}
+Vis, at hvis $n$ vektorer $\{ \bm{a}_{1}, . . . , \bm{a}_{n} \}$ i $\mathbb{R}^{n}$ opfylder ligningen (\ref{eqOrtoBasis}), så er
+$\{\bm{a}\} = \{ \bm{a}_{1}, . . . , \bm{a}_{n} \}$ automatisk en {\em{basis}} for $\mathbb{R}^{n}$, dvs. vektorerne er garanteret lineært uafhængige og udspænder hele $\mathbb{R}^{n}$.
+\end{exercise}
+
+
+\begin{example} \label{exampRotBasis}
+Vis, at følgende $3$ vektorer $\{\bm{a}_{1}, \bm{a}_{2}, \bm{a}_{3}$ udgør en ortonormal basis $\{\bm{a}\}$ for $\mathbb{R}^{3}$  for enhver given værdi af
+$\theta \in \mathbb{R}$ :
+\begin{equation}
+\begin{aligned}
+\bm{a}_{1} &= (\cos(\theta), 0 , -\sin(\theta)) \\
+\bm{a}_{2} &= (0, 1, 0) \\
+\bm{a}_{3} &= (\sin(\theta), 0, \cos(\theta)) \quad .
+\end{aligned}
+\end{equation}
+\end{example}
+
+Hvis vi sætter vektorerne fra en ortonormal basis ind som søjler i en matrix fås en \ind{ortogonal matrix}{ortogonal matrix}:
+
+\begin{definition}
+En $(n \times n)-$matrix $\bm{A}$ siges at være {\em{ortogonal}} hvis søjlevektorerne i $\bm{A}$ udgør en
+ortonormal basis for  $\mathbb{R}^{n}$, altså hvis søjlevektorerne er parvis ortogonale og alle har længden $1$ som også udtrykt i ligning (\ref{eqOrtoBasis}).
+\end{definition}
+
+\begin{info}
+Bemærk, at {\em{ortogonale matricer}} alternativt (og måske mere betegnende) kunne kaldes {\em{ortonormale}}, idet søjlerne i matricen ikke bare er parvis ortogonale men også normerede, så de alle har længde $1$. Vi vil følge international skik og brug og kalder matricerne ortogonale.
+\end{info}
+
+Det er let at checke om en given matrix er ortogonal:
+
+\begin{theorem}
+En $(n \times n)-$matrix $\bm{D}$ er ortogonal hvis og kun hvis
+\begin{equation}
+\bm{D}\transp \bm{D} = \bm{E}_{n \times n} \quad .
+\end{equation}
+\end{theorem}
+\begin{bevis}
+Se TransferNote \ref{TN3} definition \ref{tn3.prodmatrix} vedr. beregningen af matrixproduktet, og sammenlign dernæst med betingelsen for ortogonalitet i ligning (\ref{eqOrtoBasis}).
+\end{bevis}
+
+Ortogonale matricer er {\em{regulære}}:
+
+\begin{exercise}
+Vis, at for at en matrix $\bm{A}$ kan være ortogonal, så er det en nødvendig betingelse at
+\begin{equation}
+| \det(\bm{A}) |  = 1 \quad .
+\end{equation}
+Vis at den betingelse ikke er tilstrækkelig, altså at der findes matricer, som opfylder denne determinant-betingelse, men som ikke er ortogonale.
+\end{exercise}
+
+\begin{exercise}
+Vis, at en given $(n \times n)-$matrix $\bm{D}$ er ortogonal hvis og kun hvis
+\begin{equation}
+\bm{D}\transp = \bm{D}^{-1} \quad .
+\end{equation}
+\end{exercise}
+
+
+\begin{definition}
+En otonormal matrix $\bm{D}$ kaldes \ind{positiv ortogonal matrix}{positiv ortogonal} hvis  $\det(\bm{D}) > 0$ og
+den kaldes  \ind{negativ ortogonal matrix}{negativ ortogonal} hvis  $\det(\bm{D}) < 0$. Læg mærke til, at determinanten af en ortogonal matrix aldrig er $0$, så alle ortogonale matricer er enten positive eller negative.
+\end{definition}
+
+\begin{exercise} \label{exercLA8.24}
+Givet matricen
+\begin{equation}
+\bm{A} = \left[
+           \begin{array}{cccc}
+             0 & -a & 0 & a \\
+             a & 0 & a & 0\\
+             0 & -a & 0 & -a \\
+             -a & 0 & a & 0 \\
+           \end{array}
+         \right] \quad , \quad \textrm{hvor $a \in \mathbb{R}$} \quad .
+\end{equation}
+Bestem de værdier af $a$ for hvilke $\bm{A}$ er ortogonal og angiv i hvert tilfælde om $\bm{A}$ er positiv ortogonal eller negativ ortogonal.
+\end{exercise}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Spektralsætningen for symmetriske matricer} \label{secSpektral}
+
+Symmetriske matricer har lutter reelle egenværdier:
+
+\begin{theorem} \label{thmSymReel}
+Lad $\bm{A}$ betegne en symmetrisk $(n \times n)-$matrix. Så har det karakteristiske polynomium $\mathcal{K}_{\bm{A}}(\lambda)$ for
+præcis $n$ reelle rødder:
+\begin{equation}
+\lambda_{1} \geq \lambda_{2} \geq \cdot \cdot \cdot \geq \lambda_{n} \quad.
+\end{equation}
+Dvs. $\bm{A}$ har $n$ reelle egenværdier.
+\end{theorem}
+
+\begin{info}
+Hvis f.eks. $\{7, 3,3, 2, 2,2,1\}$ er rødderne i $\mathcal{K}_{\bm{A}}(\lambda)$ for en $(7 \times 7)-$matrix $\bm{A}$, så skal disse rødder altså repræsenteres {\em{med deres respektive multiplicitet}} i egenværdi-listen:
+\begin{equation*}
+\lambda_{1} = 7 \geq \lambda_{2} = 3 \geq \lambda_{3} = 3 \geq \lambda_{4} = 2 \geq \lambda_{5} = 2 \geq \lambda_{6} = 2 \geq \lambda_{7} = 1 \quad.
+\end{equation*}
+\end{info}
+Da sætning \ref{thmSymReel} udtrykker en helt afgørende egenskab ved symmetriske matricer, vil vi her give et bevis for den:
+\begin{bevis}
+Fra algebraens fundamentalsætning REFRENCE ved vi, at $\mathcal{K}_{\bm{A}}(\lambda)$ har præcis $n$ komplekse rødder - vi ved bare ikke om de er reelle; det er det vi skal vise. Så vi lader $\alpha + i\,\beta$ være en kompleks rod i $\mathcal{K}_{\bm{A}}(\lambda)$ og skal så vise, at $\beta = 0$.
+Vi har altså
+\begin{equation}
+\det\left(\bm{A} - (\alpha + i\,\beta)\bm{E}\right) = 0 \quad ,
+\end{equation}
+og derfor også, at
+\begin{equation}
+\det\left(\bm{A} - (\alpha + i\,\beta)\bm{E} \right)\det\left(\bm{A} - (\alpha - i\,\beta)\bm{E} \right) = 0
+\end{equation}
+sådan at
+\begin{equation}
+\begin{aligned}
+\det\left(\left(\bm{A} - (\alpha + i\,\beta)\bm{E} \right)\left(\bm{A} - (\alpha - i\,\beta)\bm{E} \right)\right) &= 0 \\
+\det\left(\left(\bm{A} - \alpha\,\bm{E} \right)^{2} + \beta^{2}\,\bm{E} \right) &= 0 \quad .
+\end{aligned}
+\end{equation}
+Den sidste ligning giver nu, at rangen af  $\left(\left(\bm{A} - \alpha\,\bm{E} \right)^{2} + \beta^{2}\,\bm{E} \right)$ er mindre end $n$; det medfører nu via TransferNote TN2 REFERENCE, at der findes egentlige løsninger $\bm{x}$ til det tilsvarende ligningssystem
+\begin{equation} \label{eqProofSymReel}
+\left(\left(\bm{A} - \alpha\,\bm{E} \right)^{2} + \beta^{2}\,\bm{E} \right)\bm{x} = \bm{0} \quad .
+\end{equation}
+Lad os vælge sådan en egentlig løsning $\bm{v}$ til (\ref{eqProofSymReel}) med $\Vert \bm{v} \Vert > 0$. Ved at benytte, at $\bm{A}$ antages at være symmetrisk har vi så:
+\begin{equation}
+\begin{aligned}
+0 &= \left(\left( \left(\bm{A} - \alpha\,\bm{E} \right)^{2} + \beta^{2}\,\bm{E}\right) \bm{v}\right)\cdot \bm{v} \\
+&= \left(\left(\bm{A} - \alpha\,\bm{E} \right)^{2}\bm{v}\right)\cdot \bm{v} + \beta^{2}\left(\bm{v} \cdot \bm{v} \right) \\
+&= \left(\left(\bm{A} - \alpha\,\bm{E} \right)\bm{v}\right)\left(\left(\bm{A} - \alpha\,\bm{E} \right)\bm{v}\right) + \beta^{2}\Vert \bm{v} \Vert \\
+&= \Vert \left(\bm{A} - \alpha\,\bm{E} \right)\bm{v} \Vert^{2} + \beta^{2}\Vert \bm{v} \Vert \quad,
+\end{aligned}
+\end{equation}
+men da $\Vert \bm{v} \Vert > 0$ så må vi konkludere, at $\beta = 0$, fordi ellers kan det sidste udtryk i ovenstående udledning ikke være $0$; og det var det vi skulle vise.
+\end{bevis}
+
+\begin{exercise}
+Hvor var det så lige, at vi {\em{faktisk brugte}} symmetrien af $\bm{A}$ i ovenstående bevis?
+\end{exercise}
+
+\begin{info}
+Til hver egenværdi $\lambda_{i}$ for en given matrix $\bm{A}$ hører et egenvektorrum $\mathcal{E}_{\lambda_{i}}$, som er et større eller mindre underrum i $\mathbb{R}^{n}$ cf. TransferNote REFERENCE. Hvis to eller flere egenværdier for en given matrix er ens, dvs. hvis der er tale om en multipel (f.eks. $k$ gange) rod $\lambda_{i} = \lambda_{i+1} = \cdot \cdot \cdot \lambda_{i+k-1}$ i det karakteristiske polynomium, så er de tilhørende egenvektorrum selvfølgelig også ens: $\mathcal{E}_{\lambda_{i}} = \mathcal{E}_{\lambda_{i+1}} = \cdot \cdot \cdot \mathcal{E}_{\lambda_{i+k-1}}$. Vi vil vise nedenfor i sætning \ref{thmSpektral} at for symmetriske matricer er dimensionen af det fælles egenvektorrum $\mathcal{E}_{\lambda_{i}}$ præcis lig med multipliciteten $k$ af egenvektoren $\lambda_{i}$. \bs
+
+Derimod, hvis to egenværdier $\lambda_{i}$ og $\lambda_{j}$ for en {\em{symmetrisk}} matrix er {\em{forskellige}}, så er de to tilhørende egenvektorrum {\em{ortogonale}}, $\mathcal{E}_{\lambda_{i}} \bot \mathcal{E}_{\lambda_{j}}$ i følgende forstand:
+\end{info}
+
+
+
+\begin{theorem} \label{thmForskEgenval}
+Lad $\bm{A}$ være en symmetrisk matrix og lad $\lambda_{1}$ og $\lambda_{2}$ være to forskellige egenværdier for
+$\bm{A}$ og lad $\bm{v}_{1}$ og $\bm{v}_{2}$ betegne to tilhørende egenvektorer. Så er $\bm{v}_{1} \cdot \bm{v}_{2} = 0$.
+\end{theorem}
+\begin{bevis}
+Da $\bm{A}$ er symmetrisk har vi fra (\ref{eqSymDot}):
+\begin{equation}
+\begin{aligned}
+0 &= \left(\bm{A}\bm{v}_{1}\right)\cdot \bm{v}_{2} - \bm{v}_{1}\cdot\left(\bm{A}\bm{v}_{2}\right) \\
+&= \lambda_{1}\bm{v}_{1}\cdot \bm{v}_{2} - \bm{v}_{1}\cdot \left(\lambda_{2}\bm{v}_{2}\right) \\
+&= \lambda_{1}\bm{v}_{1}\cdot \bm{v}_{2} - \lambda_{2}\bm{v}_{1}\cdot \bm{v}_{2} \\
+&= \left(\lambda_{1} - \lambda_{2}\right)\bm{v}_{1}\cdot\bm{v}_{2} \quad ,
+\end{aligned}
+\end{equation}
+og da $\lambda_{1} \neq \lambda_{2}$ får vi derfor følgende konklusion: $\bm{v}_{1}\cdot\bm{v}_{2}$, og det var det, vi skulle vise.
+\end{bevis}
+
+
+Vi kan nu formulere en af de oftest anvendte resultater for symmetriske matricer, spektralsætningen:
+
+\begin{theorem} \label{thmSpektral}
+Lad $\bm{A}$ betegne en {\em{symmetrisk $(n \times n)-$matrix}}. Så findes der en
+positiv ortogonal matrix $\bm{D}$ således at
+\begin{equation}
+\bm{\Lambda} = \bm{D}^{-1}\bm{A}\bm{D} = \bm{D}\transp \bm{A}\bm{D}\quad \textrm{er en diagonal-matrix} \quad .
+\end{equation}
+Diagonalmatricen konstrueres meget simpelt ud fra de $n$ reelle egenværdier  $\lambda_{1} \geq \lambda_{2} \geq \cdot \cdot \cdot \geq \lambda_{n}$ for $\bm{A}$ således:
+\begin{equation}
+\bm{\Lambda} = \diag(\lambda_{1}, \lambda_{2}, . . . , \lambda_{n}) = \left[
+                                                                        \begin{array}{cccc}
+                                                                          \lambda_{1} & 0 & \cdot & 0 \\
+                                                                          0 &  \lambda_{2} & \cdot & 0 \\
+                                                                          \cdot & \cdot & \cdot & \cdot \\
+                                                                          0 & 0 & \cdot &  \lambda_{n} \\
+                                                                        \end{array}
+                                                                      \right]
+\quad,
+\end{equation}
+(Husk: En symmetrisk matrix har præcis $n$ reelle egenværdier når vi tæller dem med multiplicitet.) \bs
+
+Den positive ortogonale matrix $\bm{D}$ konstrueres dernæst ved som søjler i matricen at bruge egenvektorer fra de tilhørende egenvektor-rum $\mathcal{E}_{\lambda_{1}}$, $\mathcal{E}_{\lambda_{2}}, \cdot \cdot \cdot , \mathcal{E}_{\lambda_{n}}$ i den rigtige rækkefølge:
+\begin{equation}
+\bm{D} = \left[\bm{v}_{1}\,\, \bm{v}_{2} \, \, \cdot \cdot \cdot  \bm{v}_{2}\, \right] \quad ,
+\end{equation}
+hvor $\bm{v}_{1} \in \mathcal{E}_{\lambda_{1}}$, $\bm{v}_{2} \in \mathcal{E}_{\lambda_{2}}$, $\cdot$ $\cdot$ $\cdot$, $\bm{v}_{n} \in \mathcal{E}_{\lambda_{n}}\,\,$, idet valget af egenvektorer i de respektive egenvektorrum foretages således at
+\begin{enumerate}
+\item De valgte egenvektorer hørende til samme egenværdi er ortogonale  (brug Gram--Schmidt ortogonalisering)
+\item De valgte egenvektorer har alle længden $1$ (ellers skal de bare normeres)
+\item Den resulterende matrix $\bm{D}$ er {\em{positiv}} ortogonal (hvis den ikke er det, så skift fortegn på \'{e}n af de valgte egenvektorer)
+\end{enumerate}
+At dette kan lade sig gøre følger af de ovenstående resultater og bemærkninger - vi angiver det konstruktive bevis nedenfor.
+\end{theorem}
+\begin{bevis}
+Vi skal først bemærke, at hvis $\lambda_{i} = \lambda_{j}$, så er også $\mathcal{E}_{\lambda_{i}} = \mathcal{E}_{\lambda_{i}}$. Når først vi har fundet alle egenværdierne, så er problemet om der er et tilstrækkeligt antal tilhørende egenvektorer, der kan bruges til konstruktionen af $\bm{D}$ og 'fylde $\bm{D}$ ud'. Men det går lige præcis op.
+Specielt, hvis alle egenværdierne er forskellige, så fås sætningen direkte af sætning \ref{thmForskEgenval} pånær normeringen. \bs
+
+
+
+
+
+
+\end{bevis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{summary}
+\begin{itemize}
+\item Integrate
+\item For this
+\item Actually
+\end{itemize}
+\end{summary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% HER SKAL DU STOPPE MED AT SKRIVE %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{../Strukturfiler/postambel} 

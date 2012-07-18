@@ -1,1 +1,15 @@
 .DS_Store
+*.aux
+*.bbl
+*.blg
+*.db
+*.dvi
+*.eps
+*.idx
+*.ilg
+*.ind
+*.log
+*.txt
+*.tex.bak
+*.out
+*.synctex.gz

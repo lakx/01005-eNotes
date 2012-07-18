@@ -1,0 +1,100 @@
+% ========================
+
+% MAKROER
+
+%\newenvironment{matr}[1][]{\hspace*{-.8mm}\left[\hspace*{-1mm}\begin{array}{#1}}{\end{array}\hspace*{-1mm}\right]\hspace*{-.8mm}}
+\newcommand{\bevisslut}{\begin{scriptsize} \begin{flushright} $ \blacksquare $ \end{flushright} \end{scriptsize}}
+
+\newcommand{\tref}[2]{\hyperref[#1]{#2 \ref*{#1}}}
+\newcommand{\thref}[2]{\hyperref[#1]{#2}}
+
+\newcommand{\refA}[1]{\colorbox{yellow}{\ref{#1}}}
+\newcommand{\hrefA}[2]{\colorbox{yellow}{\href{#1}{#2}}}
+\newcommand{\trefA}[2]{\colorbox{yellow}{\hyperref[#1]{#2 \ref*{#1}}}}
+\newcommand{\threfA}[2]{\colorbox{yellow}{\hyperref[#1]{#2}}}
+
+\newenvironment{matr}[1]{\hspace*{-.8mm}\begin{bmatrix}\hspace*{-1mm}\begin{array}{#1}}{\end{array}\hspace*{-1mm}\end{bmatrix}\hspace*{-.8mm}}
+\newcommand{\transp}{\hspace*{-.6mm}^{\top}}
+
+\newcommand{\maengde}[2]{\left\lbrace \hspace*{-1mm} \begin{array}{c|c} #1 & #2 \end{array} \hspace*{-1mm} \right\rbrace}
+
+\newenvironment{eqnalign}[1]{\setlength{\arraycolsep}{1.3pt}\begin{equation}\begin{array}{#1}}{\end{array}\end{equation}\par}
+\newcommand{\eqnl}{\setlength{\arraycolsep}{1.3pt}}
+
+\newcommand{\matind}[3]{{_\mathrm{#1}\mathbf{#2}_\mathrm{#3}}}
+\newcommand{\vekind}[2]{{_\mathrm{#1}\mathbf{#2}}}
+\newcommand{\jac}[2]{{\mathrm{Jacobi}_\mathbf{#1} (#2)}}
+\newcommand{\diver}[2]{{\mathrm{div}\mathbf{#1} (#2)}}
+\newcommand{\rot}[1]{{\mathbf{rot}\mathbf{(#1)}}}
+
+\newcommand{\am}{\mathrm{am}}
+\newcommand{\gm}{\mathrm{gm}}
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Span}{\mathrm{span}}
+\newcommand{\mU}{\mathbf{U}}
+
+\newcommand{\ms}{\medskip\\}
+\newcommand{\bs}{\bigskip\\}
+
+\newcommand{\mA}{\mathbf{A}}
+\newcommand{\mB}{\mathbf{B}}
+\newcommand{\mC}{\mathbf{C}}
+\newcommand{\mD}{\mathbf{D}}
+\newcommand{\mE}{\mathbf{E}}
+\newcommand{\mF}{\mathbf{F}}
+\newcommand{\mK}{\mathbf{K}}
+\newcommand{\mI}{\mathbf{I}}
+\newcommand{\mM}{\mathbf{M}}
+\newcommand{\mN}{\mathbf{N}}
+\newcommand{\mQ}{\mathbf{Q}}
+\newcommand{\mT}{\mathbf{T}}
+\newcommand{\mV}{\mathbf{V}}
+\newcommand{\mW}{\mathbf{W}}
+\newcommand{\mX}{\mathbf{X}}
+\newcommand{\ma}{\mathbf{a}}
+\newcommand{\mb}{\mathbf{b}}
+\newcommand{\mc}{\mathbf{c}}
+\newcommand{\md}{\mathbf{d}}
+\newcommand{\me}{\mathbf{e}}
+\newcommand{\mn}{\mathbf{n}}
+\newcommand{\mr}{\mathbf{r}}
+\newcommand{\mv}{\mathbf{v}}
+\newcommand{\mw}{\mathbf{w}}
+\newcommand{\mx}{\mathbf{x}}
+\newcommand{\mxb}{\mathbf{x_{bet}}}
+\newcommand{\my}{\mathbf{y}}
+\newcommand{\mz}{\mathbf{z}}
+\newcommand{\reel}{\mathbb{R}}
+\newcommand{\mL}{\bm{\Lambda}} %Lambda-matrix
+\newcommand{\mnul}{\bm{0}}
+\newcommand{\trap}[1]{\mathrm{trap}(#1)}
+\newcommand{\Det}{\operatorname{Det}}
+\newcommand{\adj}{\operatorname{adj}}
+\newcommand{\Ar}{\operatorname{Areal}}
+\newcommand{\Vol}{\operatorname{Vol}}
+\newcommand{\Rum}{\operatorname{Rum}}
+\newcommand{\diag}{\operatorname{\bf{diag}}}
+\newcommand{\bidiag}{\operatorname{\bf{bidiag}}}
+\newcommand{\spanVec}[1]{\mathrm{span}\{#1\}}
+\newcommand{\Div}{\operatorname{Div}}
+\newcommand{\Rot}{\operatorname{\mathbf{Rot}}}
+
+\newcommand{\Jac}{\operatorname{Jacobi}}
+\newcommand{\Tan}{\operatorname{Tan}}
+\newcommand{\Ort}{\operatorname{Ort}}
+\newcommand{\Flux}{\operatorname{Flux}}
+\newcommand{\Cmass}{\operatorname{Cm}}
+\newcommand{\Imom}{\operatorname{Im}}
+\newcommand{\Pmom}{\operatorname{Pm}}
+\newcommand{\IS}{\operatorname{I}}
+\newcommand{\IIS}{\operatorname{II}}
+\newcommand{\IIIS}{\operatorname{III}}
+\newcommand{\Le}{\operatorname{L}}
+\newcommand{\app}{\operatorname{app}}
+\newcommand{\M}{\operatorname{M}}
+\newcommand{\re}{\mathrm{Re}}
+\newcommand{\im}{\mathrm{Im}}
+
+\newcommand{\compl}{\mathbb{C}} %de komplekse tal
+\newcommand{\e}{\mathrm{e}} %eksponentialfunktionen. lodret 'e', og altså ikke kursiv ligesom andre bogstaver.
+

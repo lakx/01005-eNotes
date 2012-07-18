@@ -1,0 +1,206 @@
+
+
+
+/* GENERAL fonts */
+/*
+TD,P, OL, UL, DIV, H1, H2 {
+    font-family: Verdana, Arial, sans-serif;
+	font-size: 14px;
+}
+P {
+	line-height: 1.8em;
+    
+}
+H1 { font-size: 15px; }
+H2 { font-size: 18px; }
+.boxheader, H3,H4 { font-size: 16px; font-weight: bold; }
+P, H1, H2 {margin: 0px 0px 5px 0px;}
+
+
+TABLE#menutable {
+	background-color: #B7D9EA;
+}
+
+TABLE#menutable TD	{
+  border-top: 1px solid #65B6E3;
+  border-right: 1px solid #65B6E3;
+  padding-top:1px;
+  padding-bottom:1px;
+  padding-left:10px;
+  padding-right:10px;
+  white-space: nowrap;
+}
+
+TABLE#menutable TD#menu_header	{
+ 	background-color: #4284B5; 
+ 	font-family:Arial Black; 
+	color:white;"
+}
+
+*/
+
+/*  MENU 1, level 1, normal state (NO) */
+/*
+TD.menu1-level1-no A, TD.menu1-level1-act A {
+  color: #215780;
+}
+TD.menu1-level1-act {
+	background-color: #B7EADB;
+}
+TD.menu1-level1-no A:hover {
+  color: black;
+}
+TD.menu1-level1-act A:hover {
+  color: black;
+}
+
+
+*/
+
+
+
+/* Content column */
+/*
+DIV#content {
+	padding-left: 5px;
+	padding-right: 15px;
+	padding-top: 0px;
+	vertical-align: top; 
+	width:910px;
+}
+
+.csc-textpic-caption {
+	font-size: 10px;
+	font-style: italic;
+	
+}
+
+DIV#content h1 {
+    clear: both;
+    margin: 0em 0em 0em 0em;
+    padding: 0.5em 0em 0em 0.1em;
+    font-size: 1.7em;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #FF6300;
+    border-bottom: 0.05em solid #FF9853;
+    line-height: 1em;
+}
+
+#content p {
+    margin: 0em 0em 0.5em 0em;
+    padding: 0.35em;
+}
+
+#content a:link {
+    color: #2E668B;
+	text-decoration: none;
+}
+    
+#content a:visited {
+    color: #255270; 
+	text-decoration: none;
+}
+
+#content a:hover, #content a:active {
+    color: #000;
+}
+
+*/
+
+
+
+/* Formatting of the container that holds the LaTeX output: */
+div.enoteHTML {width:100%;}
+
+	/* Typical paragraph types */
+div.enoteHTML h2 {font-size: 18pt; padding-bottom:10px;}	/* \chapter{} */
+div.enoteHTML h3 {font-size: 14pt; padding-bottom:10px;}	/* \section{} */
+div.enoteHTML h4 {font-size: 12pt; padding-bottom:10px;}	/* \subsection{} */
+div.enoteHTML p {font-size: 10pt;font-family: "Verdana", sansserif; line-height: 1.4em; margin-bottom: 1em;margin-top: 1em;}
+div.enoteHTML .text {font-size: 10pt;font-family: "Verdana", sansserif;}
+div.enoteHTML TABLE.noticeenv p {margin-bottom: 0em; margin-top: 0em;}
+
+	/* All math images aligned with text vertically: */
+div.enoteHTML img.math { vertical-align: middle }
+
+	/* General LaTex classes: */
+div.enoteHTML .bold       { font-weight: bold; }
+div.enoteHTML .italic     { font-style: italic; }
+div.enoteHTML .typewriter { font-family: monospace; }
+
+	/* Equation environment: */
+div.enoteHTML table.equation {width:100%;}
+div.enoteHTML table.equation td {text-align: center; vertical-align: middle;}
+div.enoteHTML .refnum {color: black;}
+
+
+	/* Box environments: */
+div.enoteHTML div.boxdivenv h3 {font-size: 12pt; padding-bottom:10px;}
+
+div.enoteHTML div.boxdivenv-example {border-left:7px #66cc00 solid;padding:7px; margin-top: 10px;}
+div.enoteHTML div.boxdivenv-example h3 {color: #52A400; }
+
+div.enoteHTML div.boxdivenv-exercise {border-left:7px #FF9900 solid;padding:7px; margin-top: 10px;}
+div.enoteHTML div.boxdivenv-exercise h3 {color: #DD7A00;}
+
+div.enoteHTML div.boxdivenv-exercisebegin {border-left:7px #FF9900 solid;padding:7px; margin-top: 10px;}
+div.enoteHTML div.boxdivenv-exercisebegin h3 {color: #DD7A00;}
+
+div.enoteHTML div.boxdivenv-bevis {border-left:7px #6D6D6D solid;padding:7px; margin-top: 10px;}
+
+div.enoteHTML div.boxdivenv-definition, 
+	div.enoteHTML div.boxdivenv-theorem,
+	div.enoteHTML div.boxdivenv-lemma,
+	div.enoteHTML div.boxdivenv-corollary {border:2px #3366CC solid;padding:7px; margin-top: 10px;background-color: #F7F7FC;}
+div.enoteHTML div.boxdivenv-definition h3, 
+	div.enoteHTML div.boxdivenv-theorem h3,
+	div.enoteHTML div.boxdivenv-lemma h3,
+	div.enoteHTML div.boxdivenv-corollary h3 {color: #2652AA;}
+
+div.enoteHTML div.boxdivenv-method, 
+	div.enoteHTML div.boxdivenv-explain,
+	div.enoteHTML div.boxdivenv-remark {border:2px black solid;padding:7px; margin-top: 10px;background-color: #F7F7F7;}
+
+div.enoteHTML div.boxdivenv-summary {background-color: #FFFFC9;}
+
+	/* Notice environments: */
+div.enoteHTML TABLE.noticeenv {padding:7px; margin-top: 10px;}
+div.enoteHTML TABLE.noticeenv td.iconcell {border-right: 1px solid black; padding-right: 10px;}
+div.enoteHTML TABLE.noticeenv td.contentcell {padding-left: 10px;}
+div.enoteHTML TABLE.noticeenv-OBS {padding:7px; margin-top: 10px;}
+div.enoteHTML TABLE.noticeenv img.noticeicon {margin-top:10px;}
+
+
+	/* Special environments: */
+div.enoteHTML div.basis P {font-style: italic; }
+div.enoteHTML div.qrcode {border: 5px solid black;}
+
+/*======================================================================
+ Blocks, Lists, Floats */
+
+/*
+.inline-block { display:inline-block; }
+div.equation { display:block; width:95%; text-align:center; }
+.equation span.refnum.left { position:absolute; left:2em; }
+.equation span.refnum.right { position:absolute; right:2em; }
+.equation td { width:auto; }
+*/
+/*======================================================================
+ Low-level Basics */
+/*
+.red        { color:red; }
+.centering  { text-align:center; }
+.flushleft  { text-align:left; }
+.flushright { text-align:right; }
+.ERROR      { color:red; }
+cite        { font-style: normal; }
+.Huge       { font-size:300%; }
+
+DIV.enoteHTML .medium     { font-weight: normal; }
+DIV.enoteHTML .sansserif  { font-family: sans-serif; }
+
+DIV.enoteHTML .upright    { font-style: normal; }
+DIV.enoteHTML .slanted    { font-style: oblique; }
+DIV.enoteHTML table.equationgroup { width:100%;}
+
+*/

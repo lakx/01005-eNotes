@@ -1,0 +1,77 @@
+\documentclass[a4paper,11pt]{report}
+\usepackage[left=1.8cm,top=2.6cm,right=1.8cm,bottom=1.8cm,headsep=0.6cm]{geometry} %Margin
+
+
+\input{../Strukturfiler/includes/packages.tex}
+
+
+% = Sidehoved =
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\renewcommand{\sectionmark}[1]{\markright{\protect\titlegraphic{minorange}\thesection~\MakeUppercase{#1}}} % \thesection.\
+%\renewcommand{\rightmark}{\chaptermark}
+%\fancyhead{}
+%\fancyfoot[C]{\thepage}
+\fancyhead[L]{\th{Matematik 1}}
+\fancyhead[R]{\th{\thepage}}
+\fancyfoot{}
+%\fancyhead[C]{}
+%\fancyhead[L]{\titlefont\MakeUppercase{OPGAVER}~\hspace*{1ex}}
+\renewcommand\headrulewidth{0pt}
+%\fancypagestyle{plain}
+%\setlength{\headheight}{15pt}
+
+
+% =     Fonts (select one)    =
+\input{../Strukturfiler/includes/fonts.tex}
+
+
+\renewcommand{\thesection}{\arabic{section}}
+
+% =      Title Layout      =
+\usepackage{titlesec}
+\makeatletter
+\titleformat{\chapter}
+	[display] % Shape
+	{\titlefont\Huge\flushleft} % Title and label format
+	{\titlefont\LARGE\bfseries \titlegraphic{minorange}\@chapapp~\thechapter} % label
+	{0.9em} % label/title separation
+	{} % before code
+	[] % after code
+\makeatother
+\titleformat{\section}
+	[hang] % Shape
+	{\titlefont\large\flushleft} % Title and label format
+	{} % label
+	{0em} % label/title separation
+	{\titlegraphic{minorange}\textcolor{minorange}} % before code
+	[] % after code
+\titleformat{\subsection}
+	[hang] % Shape
+	{\titlefont\large} % Title and label format
+	{\thesubsection} % label
+	{0.9em} % label/title separation
+	{} % before code
+	[] % after code
+\titlespacing{\subsection}{0pt}{*6}{*1.5}
+\titleformat{\subsubsection}
+	[hang] % Shape
+	{\titlefont} % Title and label format
+	{\thesubsubsection} % label
+	{0.9em} % label/title separation
+	{} % before code
+	[] % after code
+
+
+% Includes:
+\input{../Strukturfiler/includes/farver.tex}
+\input{../Strukturfiler/includes/struktur.tex}
+\input{../Strukturfiler/includes/makroer.tex}
+
+% ###SERVER_EXCLUDE_BEGIN###
+\input{../Strukturfiler/includes/externaldocuments.tex}
+% ###SERVER_EXCLUDE_END###
+
+
+% Begin document
+\begin{document}
