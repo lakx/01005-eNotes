@@ -1,18 +1,18 @@
 
 \input{../Strukturfiler/preambel}
-\setcounter{chapter}{23} %SÆT DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
+\setcounter{chapter}{23} %SÃ†T DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% HERFRA SKAL DU SKadsfRIVE ELLER INDSÆTTE %%%%
-%%% DEN FIL DU ØNSKER %%%%%%%%%%%%%%%%%%%%%%%
+%%% HERFRA SKAL DU SKadsfRIVE ELLER INDSÃ†TTE %%%%
+%%% DEN FIL DU Ã˜NSKER %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 % REF: TransferNote \ref{TN4-tn4} \nameref{TN4-tn4}
 %
-% \tref{NUID14-thm.koma}{sætning} \tref{NUID28-tn15}{eNote}
+% \tref{NUID14-thm.koma}{sÃ¦tning} \tref{NUID28-tn15}{eNote}
 %
 %\tref{NUID34-tn19}{eNote} Symmetriske matricer
 %\tref{NUID33-tn18}{eNote} Taylor i 2 variable
@@ -41,7 +41,7 @@
 
 
 \begin{basis}
-I \tref{NUID12-tn6}{eNote}  indføres og studeres vektorer i plan og rum. I \tref{NUID29-tn16}{eNote} ser vi på gradienterne for funktioner $f(x,y)$ af to variable. Et gradientvektorfelt for en funktion af to variable er -- som navnet rigeligt antyder -- et eksempel på et plant vektorfelt. I denne eNote vil vi begynde at studere vektorfelter helt generelt. Både i planen og i rummet. Vi vil præcisere, hvad det betyder at \emph{flyde med et givet vektorfelt} og beregne, hvor man kommer hen i rummet  eller i planen på den måde i løbet af et givet tidsrum. For at finde disse såkaldte \emph{flow-kurver} får vi  brug for at kunne løse (her passende simple) første ordens differentialligningssystemer hvorved \tref{NUID13-tn12}{eNote} ligesom de ovenfor nævnte eNoter bliver aktuelt materiale for nærværende eNote. Vi vil også begynde på at undersøge, hvad der sker med større systemer af punkter eller partikler når de hver for sig flyder med vektorfeltet.
+I \tref{NUID12-tn6}{eNote}  indfÃ¸res og studeres vektorer i plan og rum. I \tref{NUID29-tn16}{eNote} ser vi pÃ¥ gradienterne for funktioner $f(x,y)$ af to variable. Et gradientvektorfelt for en funktion af to variable er -- som navnet rigeligt antyder -- et eksempel pÃ¥ et plant vektorfelt. I denne eNote vil vi begynde at studere vektorfelter helt generelt. BÃ¥de i planen og i rummet. Vi vil prÃ¦cisere, hvad det betyder at \emph{flyde med et givet vektorfelt} og beregne, hvor man kommer hen i rummet  eller i planen pÃ¥ den mÃ¥de i lÃ¸bet af et givet tidsrum. For at finde disse sÃ¥kaldte \emph{flow-kurver} fÃ¥r vi  brug for at kunne lÃ¸se (her passende simple) fÃ¸rste ordens differentialligningssystemer hvorved \tref{NUID13-tn12}{eNote} ligesom de ovenfor nÃ¦vnte eNoter bliver aktuelt materiale for nÃ¦rvÃ¦rende eNote. Vi vil ogsÃ¥ begynde pÃ¥ at undersÃ¸ge, hvad der sker med stÃ¸rre systemer af punkter eller partikler nÃ¥r de hver for sig flyder med vektorfeltet.
 \end{basis}
 
 
@@ -59,7 +59,7 @@ I \tref{NUID12-tn6}{eNote}  indføres og studeres vektorer i plan og rum. I \tref
 \section{Vektorfelter} \label{secVektorfelter}
 
 Et {vektorfelt} $\mathbf{V}$ i \emph{rummet} er givet ved $3$ glatte funktioner
-$V_{1}(x,y,z)\,$, $V_{2}(x,y,z)\,$ og  $V_{3}(x,y,z)\,$ som hver er funktioner af de tre variable $x$, $y$, og $z$ således:
+$V_{1}(x,y,z)\,$, $V_{2}(x,y,z)\,$ og  $V_{3}(x,y,z)\,$ som hver er funktioner af de tre variable $x$, $y$, og $z$ sÃ¥ledes:
 \begin{equation}
 {\mathbf{V}}(x,y,z) = \left(V_{1}(x,y,z)\,, V_{2}(x,y,z)\,,
 V_{3}(x,y,z)\,\right) \quad {\text{for}}\quad (x,y,z) \in
@@ -67,7 +67,7 @@ V_{3}(x,y,z)\,\right) \quad {\text{for}}\quad (x,y,z) \in
 \end{equation}
 
 \begin{info}
-Et vektorfelt $\mathbf{V}(x,y,z)$ \emph{tegnes} og angives sædvanligvis i rummet ved i et passende antal udvalgte punkter $(x_{i}, y_{i}, z_{i})$ at afsætte vektoren som en pil med fodpunkt i  $(x_{i}, y_{i}, z_{i})$ og spidspunkt i $(x_{i}+ V_{1}(x_{i}, y_{i}, z_{i}), y_{i}+V_{2}(x_{i}, y_{i}, z_{i}), z_{i}+ V_{3}(x_{i}, y_{i}, z_{i}))$. Der kan være gode grunde til at angive vektorfeltet på andre måder. F.eks. hvis der er stor variation i længden af vektorerne i et givet område, så kan det være en fordel at benytte \emph{tykkelsen} af pilene som en længde-indikerende parameter.
+Et vektorfelt $\mathbf{V}(x,y,z)$ \emph{tegnes} og angives sÃ¦dvanligvis i rummet ved i et passende antal udvalgte punkter $(x_{i}, y_{i}, z_{i})$ at afsÃ¦tte vektoren som en pil med fodpunkt i  $(x_{i}, y_{i}, z_{i})$ og spidspunkt i $(x_{i}+ V_{1}(x_{i}, y_{i}, z_{i}), y_{i}+V_{2}(x_{i}, y_{i}, z_{i}), z_{i}+ V_{3}(x_{i}, y_{i}, z_{i}))$. Der kan vÃ¦re gode grunde til at angive vektorfeltet pÃ¥ andre mÃ¥der. F.eks. hvis der er stor variation i lÃ¦ngden af vektorerne i et givet omrÃ¥de, sÃ¥ kan det vÃ¦re en fordel at benytte \emph{tykkelsen} af pilene som en lÃ¦ngde-indikerende parameter.
 \end{info}
 
 Et vektorfelt i planen er tilsvarende givet ved to koordinatfunktioner $V_{1}(x,y)\,$ og $V_{2}(x,y)\,$ som hver er glatte funktioner af de to variable $x$ og $y$:
@@ -76,12 +76,12 @@ Et vektorfelt i planen er tilsvarende givet ved to koordinatfunktioner $V_{1}(x,
 \mathbb{R}^{2} \quad .
 \end{equation}
 
-Gradientvektorfeltet for en glat funktion $f(x,y)$  af to variable (som indføres og studeres i \tref{NUID29-tn16}{eNote})  er et eksempel på et vektorfelt i planen, se figur \ref{figGradFelt}. \\
+Gradientvektorfeltet for en glat funktion $f(x,y)$  af to variable (som indfÃ¸res og studeres i \tref{NUID29-tn16}{eNote})  er et eksempel pÃ¥ et vektorfelt i planen, se figur \ref{figGradFelt}. \\
 
 \begin{figure}[h]
 \centerline{\includegraphics[height=90mm]{FIGS/plotVar2Fig4}\,\,\includegraphics[height=90mm]{FIGS/plotGrad4}}
 \begin{center}
-\caption{\small{En grafflade for en funktion af to variable og det tilhørende gradientvektorfelt i planen sammen med nogle af niveaukurverne. Gradientvektorfeltet er overalt vinkelret på niveaukurverne, se \tref{NUID29-tn16}{eNote}.}}
+\caption{\small{En grafflade for en funktion af to variable og det tilhÃ¸rende gradientvektorfelt i planen sammen med nogle af niveaukurverne. Gradientvektorfeltet er overalt vinkelret pÃ¥ niveaukurverne, se \tref{NUID29-tn16}{eNote}.}}
 \label{figGradFelt}
 \end{center}
 \end{figure}
@@ -91,7 +91,7 @@ Som for funktioner af tre variable defineres gradientvektorfeltet for funktioner
 
 \begin{definition}[Gradientfelt i rummet] \label{defGradFelt3D}
 Lad $f(x,y,z)$ betegne en glat funktion af tre variable i $\mathbb{R}^{3}$.
-Så defineres gradientvektorfeltet for $f(x,y,z)$ på følgende måde ved hjælp af de tre første partielle afledede af $f(x,y,z)$:
+SÃ¥ defineres gradientvektorfeltet for $f(x,y,z)$ pÃ¥ fÃ¸lgende mÃ¥de ved hjÃ¦lp af de tre fÃ¸rste partielle afledede af $f(x,y,z)$:
 \begin{equation}
 \bm{\nabla}f(x,y,z) = \left(f'_{x}(x,y,z)\, , \, f'_{y}(x,y,z) \, , \, f'_{z}(x,y,z)\right) \quad , \quad (x,y,z) \in \mathbb{R}^{3} \quad .
 \end{equation}
@@ -102,18 +102,18 @@ Vi lader $f(x,y,z)$ betegne andengradspolynomiet
 \begin{equation}
 f(x,y, z) =  2\cdot x^{2} + 2\cdot y^{2} + 2\cdot z^{2} - 2\cdot x \cdot z - 2\cdot x - 4\cdot y - 2 \cdot z +3 \quad .
 \end{equation}
-Gradientvektorfeltet for $f(x,y,z)$ er så:
+Gradientvektorfeltet for $f(x,y,z)$ er sÃ¥:
 \begin{equation}
 \bm{\nabla}f(x,y,z) = ( 4\cdot x - 2\cdot z -2\, , \, 4\cdot y - 4 \, , \, -2\cdot x + 4 \cdot z - 2  ) \quad .
 \end{equation}
-Se  figur \ref{figGradFelt3D}. Vi refererer til \tref{NUID35-exampEllipsoide}{eksempel} i  \tref{NUID35-tn20}{eNote} vedrørende konstruktionen af den viste ellipsoide-niveauflade $\mathcal{K}_{0}(f)$ for $f(x,y,z)$. Niveaufladen og det beregnede gradientvektorfelt er antydet i figur \ref{figGradFelt3D}. Gradientvektorfeltet ses at være vinkelret på niveaufladen.
+Se  figur \ref{figGradFelt3D}. Vi refererer til \tref{NUID35-exampEllipsoide}{eksempel} i  \tref{NUID35-tn20}{eNote} vedrÃ¸rende konstruktionen af den viste ellipsoide-niveauflade $\mathcal{K}_{0}(f)$ for $f(x,y,z)$. Niveaufladen og det beregnede gradientvektorfelt er antydet i figur \ref{figGradFelt3D}. Gradientvektorfeltet ses at vÃ¦re vinkelret pÃ¥ niveaufladen.
 \end{example}
 
 
 \begin{figure}[ht]
 \centerline{\includegraphics[height=90mm]{FIGS/plotGradFeltEllip2}\includegraphics[height=90mm]{FIGS/plotGradFeltEllip1}}
 \begin{center}
-\caption{\small{Niveauflade (i åbnet version) for en funktion (andengradspolynomium) af tre variable og nogle tilhørende gradientvektorer fra gradientvektorfeltet i rummet.}}
+\caption{\small{Niveauflade (i Ã¥bnet version) for en funktion (andengradspolynomium) af tre variable og nogle tilhÃ¸rende gradientvektorer fra gradientvektorfeltet i rummet.}}
 \label{figGradFelt3D}
 \end{center}
 \end{figure}
@@ -121,26 +121,26 @@ Se  figur \ref{figGradFelt3D}. Vi refererer til \tref{NUID35-exampEllipsoide}{ek
 
 
 \begin{aha}
-Man kan nu meget vel spørge om \emph{alle} glatte vektorfelter i planen og \emph{alle} glatte vektorfelter i rummet
-\emph{stammer fra} en funktion på den måde, at de hver for sig er gradientvektorfeltet for en eller anden funktion af henholdsvis to og tre variable. Men så simpelt er det ikke!
+Man kan nu meget vel spÃ¸rge om \emph{alle} glatte vektorfelter i planen og \emph{alle} glatte vektorfelter i rummet
+\emph{stammer fra} en funktion pÃ¥ den mÃ¥de, at de hver for sig er gradientvektorfeltet for en eller anden funktion af henholdsvis to og tre variable. Men sÃ¥ simpelt er det ikke!
 \end{aha}
 
 
 \begin{example}[Et vektorfelt som ikke er et gradientvektorfelt] \label{exampNonGradFelt}
-Lad $\mathbf{V}(x,y)$ betegne det meget simple vektorfelt i planen $\mathbf{V}(x,y) = (-y, x)$, hvor $(x,y)\in \mathbb{R}^{2}$. Så findes der ikke nogen funktion $f(x,y)$ som opfylder at $\bm{\nabla}f(x,y) = \mathbf{V}(x,y)$. \\
+Lad $\mathbf{V}(x,y)$ betegne det meget simple vektorfelt i planen $\mathbf{V}(x,y) = (-y, x)$, hvor $(x,y)\in \mathbb{R}^{2}$. SÃ¥ findes der ikke nogen funktion $f(x,y)$ som opfylder at $\bm{\nabla}f(x,y) = \mathbf{V}(x,y)$. \\
 
-Hvis vi nemlig (indtil modstrid) antager, at der findes en sådan funktion med den egenskab:
+Hvis vi nemlig (indtil modstrid) antager, at der findes en sÃ¥dan funktion med den egenskab:
 \begin{equation}
 \begin{aligned}
-\bm{\nabla}f(x,y) &= \mathbf{V}(x,y) \quad , \quad \textrm{sådan at} \\
-\left(f'_{x}(x,y), f'_{y}(x,y) \right) &= (-y, x) \quad , \quad \textrm{så får vi at} \\ \\
+\bm{\nabla}f(x,y) &= \mathbf{V}(x,y) \quad , \quad \textrm{sÃ¥dan at} \\
+\left(f'_{x}(x,y), f'_{y}(x,y) \right) &= (-y, x) \quad , \quad \textrm{sÃ¥ fÃ¥r vi at} \\ \\
 f'_{x}(x,y) &= -y \\
 f'_{y}(x,y) &= x \quad , \quad \textrm{og dermed} \\ \\
 f''_{x y}(x,y) &= -1 \\
 f''_{y x}(x,y) &= 1 \quad ,
 \end{aligned}
 \end{equation}
-og det stemmer jo ikke overens med at der for alle glatte funktioner gælder
+og det stemmer jo ikke overens med at der for alle glatte funktioner gÃ¦lder
 \begin{equation}
 f''_{x y}(x,y) = f''_{yx}(x,y) \quad , \quad \textrm{for alle} \quad (x,y) \in \mathbb{R}^{2} \quad .
 \end{equation}
@@ -148,14 +148,14 @@ Det viser, at der ikke findes nogen funktion hvis gradientvektorfelt er det givn
 \end{example}
 
 \begin{think}
-Gradientvektorfelterne er altså kun eksempler på vektorfelter -- men en meget stor og meget vigtig samling af eksempler på vektorfelter.
+Gradientvektorfelterne er altsÃ¥ kun eksempler pÃ¥ vektorfelter -- men en meget stor og meget vigtig samling af eksempler pÃ¥ vektorfelter.
 \end{think}
 
 \begin{aha}
-Et vektorfelt $\mathbf{V}(x,y)$ i planen kan let udvides til et vektorfelt $\mathbf{W}(x,y,z)$ i rummet ved simpelthen at parallelforskyde alle vektorerne fra planen i  $z$-aksens retning og iøvrigt sætte
+Et vektorfelt $\mathbf{V}(x,y)$ i planen kan let udvides til et vektorfelt $\mathbf{W}(x,y,z)$ i rummet ved simpelthen at parallelforskyde alle vektorerne fra planen i  $z$-aksens retning og iÃ¸vrigt sÃ¦tte
 $W_{3}(x,y,z) = 0$ for alle $(x,y,z) \in \mathbb{R}^{3}$: \\
 
-Det helt generelle plane vektorfelt $\mathbf{V}(x,y) = (V_{1}(x,y), V_{2}(x,y))$ har således følgende rumlige udvidelse:
+Det helt generelle plane vektorfelt $\mathbf{V}(x,y) = (V_{1}(x,y), V_{2}(x,y))$ har sÃ¥ledes fÃ¸lgende rumlige udvidelse:
 \begin{equation}
 \begin{aligned}
 \mathbf{W}(x,y,z) &= (V_{1}(x,y), V_{2}(x,y), 0) \quad \textrm{dvs.} \\ \\
@@ -164,7 +164,7 @@ W_{2}(x,y,z) &= V_{2}(x,y) \quad ,\\
 W_{3}(x,y,z) &= 0 \quad .
 \end{aligned}
 \end{equation}
-Se figur \ref{figVFUdvidet} som antyder de rumlige udvidelser af tre forskellige  vektorfelter $\mathbf{V}(x,y) = (1,0)$, $\mathbf{V}(x,y) = (x,y)$, og $\mathbf{V}(x,y) = (-y, x)$,  altså $\mathbf{W}(x,y,z) = (1,0,0)$, $\mathbf{W}(x,y,z) = (x,y,0)$, og $\mathbf{W}(x,y,z) = (-y, x, 0)$ henholdsvis.
+Se figur \ref{figVFUdvidet} som antyder de rumlige udvidelser af tre forskellige  vektorfelter $\mathbf{V}(x,y) = (1,0)$, $\mathbf{V}(x,y) = (x,y)$, og $\mathbf{V}(x,y) = (-y, x)$,  altsÃ¥ $\mathbf{W}(x,y,z) = (1,0,0)$, $\mathbf{W}(x,y,z) = (x,y,0)$, og $\mathbf{W}(x,y,z) = (-y, x, 0)$ henholdsvis.
 \end{aha}
 
 \begin{figure}[ht]
@@ -186,9 +186,9 @@ Se figur \ref{figVFUdvidet} som antyder de rumlige udvidelser af tre forskellige
 
 
 
-Nogle vektorfelter er særlig simple. Det gælder især
+Nogle vektorfelter er sÃ¦rlig simple. Det gÃ¦lder isÃ¦r
 de vektorfelter hvor alle 3 koordinatfunktioner
-er polynomier af højest første grad i de rumlige
+er polynomier af hÃ¸jest fÃ¸rste grad i de rumlige
 variable $(x,y,z)$, dvs.
 \begin{equation}
 \begin{aligned}
@@ -197,14 +197,14 @@ variable $(x,y,z)$, dvs.
 b_{3}\,) \quad .
 \end{aligned}
 \end{equation}
-I så fald kan vektorfeltet skrives kort ved hjælp af den matrix,
+I sÃ¥ fald kan vektorfeltet skrives kort ved hjÃ¦lp af den matrix,
 $\,{\mathbf{A}}\,$, der har elementerne $\,a_{ij}\,$ og den vektor,
 ${\mathbf{b}}$, der har koordinaterne $\,b_{i}\,$:
 
-\begin{definition}[Vektorfelt af første grad] \label{defVFgrad1}
-Et {\em{{vektorfelt  af første grad}}} er et
-vektorfelt  ${\mathbf{V}}(x,y,z)$, der kan skrives på følgende form ved
-hjælp af en konstant matrix ${\,\mathbf{A}\,}$ og en
+\begin{definition}[Vektorfelt af fÃ¸rste grad] \label{defVFgrad1}
+Et {\em{{vektorfelt  af fÃ¸rste grad}}} er et
+vektorfelt  ${\mathbf{V}}(x,y,z)$, der kan skrives pÃ¥ fÃ¸lgende form ved
+hjÃ¦lp af en konstant matrix ${\,\mathbf{A}\,}$ og en
 konstant vektor $\,{\mathbf{b}}\,$:
 \begin{equation} \label{eqVFmatrix}
 {\mathbf{V}}^{\top} \, = \,  \left({\mathbf{V}}(x,y,z)\right)^{\top}\, = \,{\mathbf{A}}\cdot \left[
@@ -214,7 +214,7 @@ konstant vektor $\,{\mathbf{b}}\,$:
                                                               \right]
 ^{\top} + \, {\mathbf{b}}^{\top} \quad ,
 \end{equation}
-hvor $\, \, ^{\top}$ betyder transponering af de respektive matricer, sådan at
+hvor $\, \, ^{\top}$ betyder transponering af de respektive matricer, sÃ¥dan at
 \begin{equation}
 \left[
   \begin{array}{c}
@@ -245,18 +245,18 @@ hvor $\, \, ^{\top}$ betyder transponering af de respektive matricer, sådan at
 
 
 \begin{example}[Konstant vektorfelt] \label{exVFkonstant}
-Et konstant vektorfelt kan for eksempel modellere en konstant vind lokalt tæt
+Et konstant vektorfelt kan for eksempel modellere en konstant vind lokalt tÃ¦t
 ved $(x,y)$-planen (jord\-over\-fla\-den):
 \begin{equation}
 {\mathbf{V}}(x,y,z) = {\mathbf{b}} \quad ,
 \end{equation}
 hvor ${\mathbf{b}}$ er en konstant vektor, f.eks. ${\mathbf{b}} = (0, 7,
-0)$  -- hvis vinden blæser med $7 km/t$ i $y$-aksens retning.
+0)$  -- hvis vinden blÃ¦ser med $7 km/t$ i $y$-aksens retning.
 \end{example}
 
 
 \begin{example}[Roterende vektorfelt] \label{exVFrot}
-Et eksempel på et såkaldt {\emph{roterende vektorfelt}} er givet ved
+Et eksempel pÃ¥ et sÃ¥kaldt {\emph{roterende vektorfelt}} er givet ved
 \begin{equation}
 {\mathbf{V}}(x,y,z) = (-y, x, 0) \quad .
 \end{equation}
@@ -274,68 +274,68 @@ Sporet af en kvadratisk $n \times n$-matrix $\bm{A}$ med elementerne $a_{i\,j}$ 
 
 \begin{exercise}\label{exerVFrot}
 Find ${\,\mathbf{A}\,}$ og $\,{\mathbf{b}}\,$ (som i Definition \ref{defVFgrad1}) for vektorfeltet i
-eksempel  \ref{exVFrot}. Hvad er sporet af ${\,\mathbf{A}\,}$ i dette tilfælde tilfælde? Kan ${\,\mathbf{A}\,}$ diagonaliseres (diagonalisering beskrives i \tref{NUID3-tn4}{eNote})?
+eksempel  \ref{exVFrot}. Hvad er sporet af ${\,\mathbf{A}\,}$ i dette tilfÃ¦lde tilfÃ¦lde? Kan ${\,\mathbf{A}\,}$ diagonaliseres (diagonalisering beskrives i \tref{NUID3-tn4}{eNote})?
 \end{exercise}
 
 
 \begin{example}[Eksplosions- og implosions-vektorfelter] \label{exVFexplode}
-Et eksempel på hvad vi kunne kalde et {\emph{eksplosionsvektorfelt}} er givet
-ved følgende koordinatfunktioner (se hvorfor i figur \ref{figVFexplode}):
+Et eksempel pÃ¥ hvad vi kunne kalde et {\emph{eksplosionsvektorfelt}} er givet
+ved fÃ¸lgende koordinatfunktioner (se hvorfor i figur \ref{figVFexplode}):
 \begin{equation}
 {\mathbf{V}}(x,y,z) = (x, y, z) \quad .
 \end{equation}
-Tilsvarende er følgende et eksempel på et vektorfelt, som vi kan kalde et \emph{implosionsvektorfelt} (se hvorfor i figur \ref{figVFimplode}):
+Tilsvarende er fÃ¸lgende et eksempel pÃ¥ et vektorfelt, som vi kan kalde et \emph{implosionsvektorfelt} (se hvorfor i figur \ref{figVFimplode}):
 \begin{equation}
 {\mathbf{V}}(x,y,z) = (-x, -y, -z) \quad .
 \end{equation}
 \end{example}
 
 \begin{exercise} \label{exerVFexplode}
-Find ${\,\mathbf{A}\,}$ og $\,{\mathbf{b}}\,$ for vektorfelterne i ovenstående
+Find ${\,\mathbf{A}\,}$ og $\,{\mathbf{b}}\,$ for vektorfelterne i ovenstÃ¥ende
 eksempel \ref{exVFexplode}. Hvad er sporet af ${\,\mathbf{A}\,}$ for de to vektorfelter? Kan
 ${\,\mathbf{A}\,}$ diagonaliseres?
 \end{exercise}
 
 Vi vil nu begrunde de (dynamiske) navne, som vi har givet
-vektorfelterne i ovenstående eksempler \ref{exVFrot} og \ref{exVFexplode}.
-For at gøre det vil vi bevæge os sammen med -- eller flyde langs med -- vektorfeltet i en meget præcis forstand,
+vektorfelterne i ovenstÃ¥ende eksempler \ref{exVFrot} og \ref{exVFexplode}.
+For at gÃ¸re det vil vi bevÃ¦ge os sammen med -- eller flyde langs med -- vektorfeltet i en meget prÃ¦cis forstand,
 som vi nu vil definere.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Flowkurver for et vektorfelt} \label{secFlow}
-Lad os først repetere, at hvis vi har
+Lad os fÃ¸rst repetere, at hvis vi har
 givet en kurve med en parameterfremstilling
 \begin{equation}
 K_{\mathbf r}: \quad {\mathbf r}(t) \, = \, \left(x(t), y(t), z(t)\right)
 \in \mathbb{R}^3 \quad , \, \, \,  t \in [a,b] \quad,
 \end{equation}
-så har denne kurve til enhver værdi af parameteren $t$  en tangentvektor nemlig
+sÃ¥ har denne kurve til enhver vÃ¦rdi af parameteren $t$  en tangentvektor nemlig
 \begin{equation}
 {\mathbf{r'}}(t) = (x'(t), \,y'(t),
 \,z'(t))\quad .
 \end{equation}
 Hvis vi betragter parameteren $t\in [a,b]$ som en \emph{tids-parameter} for den
-bevægelse (af en partikel)  i rummet, der er givet ved ${\mathbf r}(t)$, så er
+bevÃ¦gelse (af en partikel)  i rummet, der er givet ved ${\mathbf r}(t)$, sÃ¥ er
 ${\mathbf{r'}}(t)$ hastigheden af partiklen til tidspunktet $t$.\\
 
-Hvis vi konstruerer tilstrækkelig mange kurver (en kurve igennem ethvert punkt i rummet), der ikke skærer hverken sig selv eller hinanden får
-vi på den måde et vektorfelt i rummet.\\
+Hvis vi konstruerer tilstrÃ¦kkelig mange kurver (en kurve igennem ethvert punkt i rummet), der ikke skÃ¦rer hverken sig selv eller hinanden fÃ¥r
+vi pÃ¥ den mÃ¥de et vektorfelt i rummet.\\
 
-Det oplagte {\em{omvendte}} spørgsmål er nu: Givet et startpunkt $p
+Det oplagte {\em{omvendte}} spÃ¸rgsmÃ¥l er nu: Givet et startpunkt $p
 = (x_{0}, y_{0}, z_{0})$ og givet et vektorfelt ${\mathbf{V}}(x,y,z)$ i
-rummet, findes der så en parametriseret kurve $\,{\mathbf{r}}(t)$
-igennem $p$ (med $\,{\mathbf{r}}(0) = (x_{0}, y_{0}, z_{0})\,$), således
+rummet, findes der sÃ¥ en parametriseret kurve $\,{\mathbf{r}}(t)$
+igennem $p$ (med $\,{\mathbf{r}}(0) = (x_{0}, y_{0}, z_{0})\,$), sÃ¥ledes
 at kurvens tangentvektorfelt hele vejen {\em{langs med kurven}}
 netop er det givne vektorfelt ${\mathbf{V}}(x,y,z)$ {\em{langs med
-kurven}}? Hvis det er tilfældet så vil vi kalde kurven $\,{\mathbf{r}}(t)$
+kurven}}? Hvis det er tilfÃ¦ldet sÃ¥ vil vi kalde kurven $\,{\mathbf{r}}(t)$
 en \emph{integralkurve} eller en \emph{flowkurve} for vektorfeltet.
 Disse
-navne skyldes dels at kurven kan findes ved integration (løsning af et
-differentialligningssystem) og dels at bevægelsen langs kurven er
-som at flyve eller flyde  med det givne vektorfelt, altså med en fart og en
-retning, som vektorfeltet angiver på ethvert sted for bevægelsen, idet kravet til bevægelsen
+navne skyldes dels at kurven kan findes ved integration (lÃ¸sning af et
+differentialligningssystem) og dels at bevÃ¦gelsen langs kurven er
+som at flyve eller flyde  med det givne vektorfelt, altsÃ¥ med en fart og en
+retning, som vektorfeltet angiver pÃ¥ ethvert sted for bevÃ¦gelsen, idet kravet til bevÃ¦gelsen
 $\mathbf{r}(t)$  jo udtrykkes ved:
 
 \begin{definition}[Flowkurver, Integralkurver] \label{defFlowIntKurver}
@@ -348,7 +348,7 @@ opfylder flowkurve-ligningen:
 \begin{equation}
 {\mathbf{V}}(\mathbf{r}(t)) = \mathbf{r}'(t) \quad \textrm{for alle} \quad t \in [a,b]\quad ,
 \end{equation}
-som er ækvivalent med følgende første ordens differential-ligningssystem
+som er Ã¦kvivalent med fÃ¸lgende fÃ¸rste ordens differential-ligningssystem
 \begin{equation}
 \left[
   \begin{array}{c}
@@ -368,21 +368,21 @@ som er ækvivalent med følgende første ordens differential-ligningssystem
 
 
 \begin{aha}
-Hvis $\mathbf{V}(x,y,z)$ er givet og hvis vi har fået givet et startpunkt $p = \mathbf{r}(a)$ for en flowkurve, så er opgaven selvfølgelig den typiske, at finde løsningen til differentialligningssystemet med denne begyndelsesbetingelse, dvs. finde koordinatfunktionerne $x(t)$, $y(t)$, og $z(t)$ således at $p = (x(a), y(a), z(a))$. \\
+Hvis $\mathbf{V}(x,y,z)$ er givet og hvis vi har fÃ¥et givet et startpunkt $p = \mathbf{r}(a)$ for en flowkurve, sÃ¥ er opgaven selvfÃ¸lgelig den typiske, at finde lÃ¸sningen til differentialligningssystemet med denne begyndelsesbetingelse, dvs. finde koordinatfunktionerne $x(t)$, $y(t)$, og $z(t)$ sÃ¥ledes at $p = (x(a), y(a), z(a))$. \\
 
 Med andre ord:
-Hvis vi har givet et vektorfelt i rummet så går opgaven ud på at starte en bevægelse af en partikel (en lille kugle) langs vektorfeltet
-sådan at kuglens hastighedsvektor til ethvert tidspunkt er givet ved vektorfeltets værdi i det punkt hvor kuglen befinder sig til det tidspunkt.
-Og det er naturligvis interessant at kunne afgøre \emph{hvor} kuglen befinder sig efter lang tid. Og det er interessant at finde ud af, hvordan en kugle-hob
-(partikler som til start er tæt på hinanden) udvikler sig i tiden -- bliver hoben tættere eller tyndere, mast sammen eller trukket ud?
+Hvis vi har givet et vektorfelt i rummet sÃ¥ gÃ¥r opgaven ud pÃ¥ at starte en bevÃ¦gelse af en partikel (en lille kugle) langs vektorfeltet
+sÃ¥dan at kuglens hastighedsvektor til ethvert tidspunkt er givet ved vektorfeltets vÃ¦rdi i det punkt hvor kuglen befinder sig til det tidspunkt.
+Og det er naturligvis interessant at kunne afgÃ¸re \emph{hvor} kuglen befinder sig efter lang tid. Og det er interessant at finde ud af, hvordan en kugle-hob
+(partikler som til start er tÃ¦t pÃ¥ hinanden) udvikler sig i tiden -- bliver hoben tÃ¦ttere eller tyndere, mast sammen eller trukket ud?
 \end{aha}
 
 
-Der gælder følgende eksistens- og entydighedssætning som er grundlaget for vore første eksempler og de første overvejelser om de naturlige spørgsmål der vedrører flowkurver og deres opførsel.
+Der gÃ¦lder fÃ¸lgende eksistens- og entydighedssÃ¦tning som er grundlaget for vore fÃ¸rste eksempler og de fÃ¸rste overvejelser om de naturlige spÃ¸rgsmÃ¥l der vedrÃ¸rer flowkurver og deres opfÃ¸rsel.
 
-\begin{theorem}[Eksistens og entydighedssætningen] \label{thmVFgrad1}
-Lad  $\,{\mathbf{V}}(x,y,z)\,$ være et vektorfelt af  \emph{første grad},  givet ved en koefficientmatrix $\mathbf{A}$ og en vektor $\mathbf{b}$ som i definition \ref{defVFgrad1}. Lad
- $\,(x_{0}, y_{0}, z_{0})\,$ betegne et vilkårligt punkt i rummet. Så
+\begin{theorem}[Eksistens og entydighedssÃ¦tningen] \label{thmVFgrad1}
+Lad  $\,{\mathbf{V}}(x,y,z)\,$ vÃ¦re et vektorfelt af  \emph{fÃ¸rste grad},  givet ved en koefficientmatrix $\mathbf{A}$ og en vektor $\mathbf{b}$ som i definition \ref{defVFgrad1}. Lad
+ $\,(x_{0}, y_{0}, z_{0})\,$ betegne et vilkÃ¥rligt punkt i rummet. SÃ¥
 findes der netop \'{e}n kurve $\,{\mathbf{r}}(t)$,
 der opfylder de to betingelser:
 \begin{equation}\label{eqDifSystVF}
@@ -392,7 +392,7 @@ der opfylder de to betingelser:
  t \in [-\infty, \infty] \quad .
 \end{aligned}
 \end{equation}
-Den sidste ligning (\ref{eqDifSystVF})  er ækvivalent med følgende differentialligningssystem med en konstant koefficientmatrix $\mathbf{A}$:
+Den sidste ligning (\ref{eqDifSystVF})  er Ã¦kvivalent med fÃ¸lgende differentialligningssystem med en konstant koefficientmatrix $\mathbf{A}$:
 \begin{equation}
 \begin{aligned}
 \left[
@@ -430,35 +430,35 @@ Den sidste ligning (\ref{eqDifSystVF})  er ækvivalent med følgende differentiall
 \end{equation}
 \end{theorem}
 
-Hvis vi har givet et vektorfelt af  første
-grad, så kan vi altså ''starte'' et punkt, en partikel, et vilkårligt sted i rummet og lade den ''flyde'' med vektorfeltet sådan at partiklen
-befinder sig på en entydigt bestemt flowkurve til enhver tid derefter.
+Hvis vi har givet et vektorfelt af  fÃ¸rste
+grad, sÃ¥ kan vi altsÃ¥ ''starte'' et punkt, en partikel, et vilkÃ¥rligt sted i rummet og lade den ''flyde'' med vektorfeltet sÃ¥dan at partiklen
+befinder sig pÃ¥ en entydigt bestemt flowkurve til enhver tid derefter.
 
 \begin{aha}
-To flowkurver kan ikke skære hinanden, fordi hvis de gjorde det ville der jo ikke være en \emph{entydig} flowkurve igennem skæringspunktet.
+To flowkurver kan ikke skÃ¦re hinanden, fordi hvis de gjorde det ville der jo ikke vÃ¦re en \emph{entydig} flowkurve igennem skÃ¦ringspunktet.
 \end{aha}
 
 \begin{info}
-Sætningen kan udvides til vektorfelter der ikke
-nødvendigvis er af  første grad, men så er
-det ikke længere sikkert, at alle
+SÃ¦tningen kan udvides til vektorfelter der ikke
+nÃ¸dvendigvis er af  fÃ¸rste grad, men sÃ¥ er
+det ikke lÃ¦ngere sikkert, at alle
 tids-parameterintervallerne for flowkurverne er
 hele det dobbeltuendelige interval $\,\mathbb{R}= ]-\infty,
 \infty[\,$. Integralkurverne for et vektorfelt af
- første grad kan findes og vises med
+ fÃ¸rste grad kan findes og vises med
 Maple og er eksemplificeret i
 figurerne \ref{figVFrot}, \ref{figVFexplode}, og
 \ref{figVFimplode}. \\
 
 Hvis vektorfeltet ikke er af
- første grad er der som sagt ingen garanti
+ fÃ¸rste grad er der som sagt ingen garanti
 for, at flowkurverne kan bestemmes explicit (heller ikke
-med Maple), men i visse tilfælde kan numeriske værktøjer jo
-alligevel benyttes med succes indenfor de ''vinduer'' hvor løsningerne findes og er veldefinerede.
+med Maple), men i visse tilfÃ¦lde kan numeriske vÃ¦rktÃ¸jer jo
+alligevel benyttes med succes indenfor de ''vinduer'' hvor lÃ¸sningerne findes og er veldefinerede.
 \end{info}
 
-Begrundelsen, beviset, for sætning
-\ref{thmVFgrad1} er kendt fra studiet af systemer af lineære
+Begrundelsen, beviset, for sÃ¦tning
+\ref{thmVFgrad1} er kendt fra studiet af systemer af lineÃ¦re
 koblede differentialligninger, se \tref{NUID13-tn12}{eNote}. Lad os kort
 repetere de overvejelser, der skal i sving ved at finde flowkurverne for nogle af de simpleste vektorfelter.
 
@@ -467,12 +467,12 @@ Det konstante vektorfelt ${\mathbf{V}}(x,y,z) = (0,7,0)$ har flowkurver
 $(x(t), y(t), z(t))$ som skal opfylde de to betingelser:
 Begyndelsebetingelsen $(x(0), y(0), z(0)) = (x_{0}, y_{0}, z_{0})$
 og de $3$ differentialligninger for $x(t)$, $y(t)$, og $z(t)$, som
-følger af hastighedsvektor-betingelsen
+fÃ¸lger af hastighedsvektor-betingelsen
 \begin{equation}
 {\mathbf{r}}'(t) = (x'(t),
 y'(t), z'(t)) = {\mathbf{V}}(x(t), y(t), z(t)) = (0, 7, 0) \quad .
 \end{equation}
-Opgaven er at finde de tre koordinatfunktioner  $x(t)$, $y(t)$, og $z(t)$ sådan at
+Opgaven er at finde de tre koordinatfunktioner  $x(t)$, $y(t)$, og $z(t)$ sÃ¥dan at
 \begin{equation}
 \begin{aligned}
 x'(t) &= 0 \\
@@ -481,11 +481,11 @@ z'(t) &= 0  \quad .
 \end{aligned}
 \end{equation}
 De 3
-differentialligninger er i dette tilfælde ikke koblede og de løses
-direkte med de angivne begyndelsebetingelser med følgende resultat:
+differentialligninger er i dette tilfÃ¦lde ikke koblede og de lÃ¸ses
+direkte med de angivne begyndelsebetingelser med fÃ¸lgende resultat:
 $x(t) = x_{0}$, $y(t) = y_{0} + 7\,t$, og $z(t) = z_{0}$. Dvs.
 flowkurverne er (ikke overraskende) alle de rette linjer parallelle
-med $y$-aksen, parametriseret sådan at alle har farten $7$.
+med $y$-aksen, parametriseret sÃ¥dan at alle har farten $7$.
 \end{example}
 
 
@@ -498,7 +498,7 @@ y_{0}, z_{0})$ samt differential\-lig\-nin\-gerne
 \begin{equation}
 {\mathbf{r}}'(t) = (x'(t), y'(t), z'(t)) = (-y(t), x(t), 1) \quad.
 \end{equation}
-Opgaven er altså her at finde de tre koordinatfunktioner  $x(t)$, $y(t)$, og $z(t)$ sådan at
+Opgaven er altsÃ¥ her at finde de tre koordinatfunktioner  $x(t)$, $y(t)$, og $z(t)$ sÃ¥dan at
 \begin{equation}
 \begin{aligned}
 x'(t) &= -y(t) \\
@@ -508,15 +508,15 @@ z'(t) &=  1 \quad .
 \end{equation}
 
 Differentialligningerne for $x(t)$ og
-$y(t)$ er koblede lineære differentialligninger
-med konstante koefficienter og løses præcis som i
- \tref{NUID13-tn12}{eNote} . Bemærk, at systemmatricen
+$y(t)$ er koblede lineÃ¦re differentialligninger
+med konstante koefficienter og lÃ¸ses prÃ¦cis som i
+ \tref{NUID13-tn12}{eNote} . BemÃ¦rk, at systemmatricen
 allerede er fundet i opgave \ref{exerVFrot}.
 Resultatet er $x(t) = x_{0}\cos(t) -
 y_{0}\sin(t)\,$, $y(t) =
 x_{0}\sin(t)+y_{0}\cos(t)\,$, og $z(t) = z_{0} +
 t$. Disse flowkurver kan findes og inspiceres med
-Maple. Det fremgår også
+Maple. Det fremgÃ¥r ogsÃ¥
 deraf at det er ganske rimeligt at kalde
 vektorfeltet et roterende vektorfelt. Se figur
 \ref{figVFrot}.
@@ -528,7 +528,7 @@ vektorfeltet et roterende vektorfelt. Se figur
 \begin{center}
 \caption{\small{Det roterende vektorfelt fra
 eksempel \ref{exVFrotFlow}, en ''flowkurve'' for en enkelt partikel og  systemet af
-flowkurver, som går igennem en terning (den nederste terning flyder langs flowkurverne med vektorfeltet indtil tiden $\pi$.}}
+flowkurver, som gÃ¥r igennem en terning (den nederste terning flyder langs flowkurverne med vektorfeltet indtil tiden $\pi$.}}
 \label{figVFrot}
 \end{center}
 \end{figure}
@@ -536,12 +536,12 @@ flowkurver, som går igennem en terning (den nederste terning flyder langs flowku
 
 \begin{exercise} \label{exerFlowDeform}
 Lad $\,{\mathbf{V}}(x,y,z) = (-y, x, 0)\,$ og benyt Maple
-til at finde flowkurver og bevægelsen af punkter i samme terning som i figur
-\ref{figVFrot} når tidsintervallet for flowet sættes til $\,T = [0,
-2\,\pi]\,$. Sammenlign dernæst med 'virkningen' af vektorfelterne
-$\,{\mathbf{W}}(x,y,z) = (-y, -x, 0)\,$  $\,{\mathbf{W}}(x,y,z) = (-y, 2\,x, 0)\,$ på terningens punkter i samme
-tidsinterval. Forklar forskellene på de tre 'virkninger' af de tre
-forskellige vektorfelter på terningen.
+til at finde flowkurver og bevÃ¦gelsen af punkter i samme terning som i figur
+\ref{figVFrot} nÃ¥r tidsintervallet for flowet sÃ¦ttes til $\,T = [0,
+2\,\pi]\,$. Sammenlign dernÃ¦st med 'virkningen' af vektorfelterne
+$\,{\mathbf{W}}(x,y,z) = (-y, -x, 0)\,$  $\,{\mathbf{W}}(x,y,z) = (-y, 2\,x, 0)\,$ pÃ¥ terningens punkter i samme
+tidsinterval. Forklar forskellene pÃ¥ de tre 'virkninger' af de tre
+forskellige vektorfelter pÃ¥ terningen.
 \end{exercise}
 
 
@@ -561,7 +561,7 @@ og differentialligningerne
 {\mathbf{r}}'(t) = (x'(t),
 y'(t), z'(t)) = (x(t), y(t), z(t)) \quad .
 \end{equation}
-Vi  finder de tre koordinatfunktioner  $x(t)$, $y(t)$, og $z(t)$ sådan at
+Vi  finder de tre koordinatfunktioner  $x(t)$, $y(t)$, og $z(t)$ sÃ¥dan at
 \begin{equation}
 \begin{aligned}
 x'(t) &= x(t) \\
@@ -570,29 +570,29 @@ z'(t) &=  z(t) \quad .
 \end{aligned}
 \end{equation}
  Differentialligningerne
-for $x(t)$, $y(t)$, og $z(t)$ er her u-koblede lineære
-differentialligninger, som let løses en af gangen. Resultatet er
+for $x(t)$, $y(t)$, og $z(t)$ er her u-koblede lineÃ¦re
+differentialligninger, som let lÃ¸ses en af gangen. Resultatet er
 \begin{equation}
 x(t) = x_{0}\exp(t)\quad , \qquad
 y(t) = y_{0}\exp(t)\quad , \quad \textrm{og}
 \quad z(t) = z_{0}\exp(t) \quad .
 \end{equation}
- Bemærk, at
-hvis $(x(0), y(0), z(0)) = (0,0,0)$ så er $(x(t),
+ BemÃ¦rk, at
+hvis $(x(0), y(0), z(0)) = (0,0,0)$ sÃ¥ er $(x(t),
 y(t), z(t)) = (0,0,0)$ for alle $\, t \in
 [-\infty, \infty] \,$. Flowkurven 'igennem'
 punktet $\,(0,0,0)\,$ er derfor ikke nogen
-egentlig 'kurve' men består 'kun' af punktet
-selv. Bemærk også, at alle andre flowkurver
-kommer vilkårligt tæt på punktet $(0,0,0)$ for $t
+egentlig 'kurve' men bestÃ¥r 'kun' af punktet
+selv. BemÃ¦rk ogsÃ¥, at alle andre flowkurver
+kommer vilkÃ¥rligt tÃ¦t pÃ¥ punktet $(0,0,0)$ for $t
 \to -\infty$, idet $\,\exp(t) \to 0$ for $t \to
--\infty\,$, men de går ikke igennem punktet. Hvis
-vi følger flowkurverne i figur \ref{figVFexplode}
+-\infty\,$, men de gÃ¥r ikke igennem punktet. Hvis
+vi fÃ¸lger flowkurverne i figur \ref{figVFexplode}
 tilbage i tid fra $t = 0$ igennem negative
-værdier vil vi derfor se en eksponentielt
+vÃ¦rdier vil vi derfor se en eksponentielt
 aftagende {\em{{implosion}}} af terningen. Hvis vi
-derimod følger flowkurverne frem i tid fra $t =
-0$ igennem større og større positive værdier for
+derimod fÃ¸lger flowkurverne frem i tid fra $t =
+0$ igennem stÃ¸rre og stÃ¸rre positive vÃ¦rdier for
 $t$ vil vi se en eksponentielt voksende
 eks\-plo\-sion af terningen. Flowkurverne kan
 igen findes og inspiceres med
@@ -603,7 +603,7 @@ Implosionsvektorfeltet er givet ved
 \begin{equation}
 {\mathbf{V}}(x,y,z) = (-x, -y, -z)
 \end{equation}
-med de ''tids-omvendte'' løsninger (i forhold til eksplosionsvektorfeltet)
+med de ''tids-omvendte'' lÃ¸sninger (i forhold til eksplosionsvektorfeltet)
 \begin{equation}
 x(t) = x_{0}\exp(-t)\quad , \qquad
 y(t) = y_{0}\exp(-t)\quad , \quad \textrm{og}
@@ -619,7 +619,7 @@ Se figur \ref{figVFimplode}.
 \begin{center}
 \caption{\small{Eksplosionsvektorfeltet fra
 eksempel \ref{exVFexplodeFlow} sammen med de
-integralkurver, som går igennem en terning. Terningen er vist solid til tiden $t=1$ og ''åben'' til tiden $t=0$. Sammenlign med figur \ref{figVFimplode}.}}
+integralkurver, som gÃ¥r igennem en terning. Terningen er vist solid til tiden $t=1$ og ''Ã¥ben'' til tiden $t=0$. Sammenlign med figur \ref{figVFimplode}.}}
 \label{figVFexplode}
 \end{center}
 \end{figure}
@@ -630,7 +630,7 @@ integralkurver, som går igennem en terning. Terningen er vist solid til tiden $t
 \begin{center}
 \caption{\small{Implosionsvektorfeltet fra
 eksempel \ref{exVFexplodeFlow} sammen med de
-integralkurver, som går igennem en terning.  Terningen er vist solid til tiden $t=1$ og ''åben'' til tiden $t=0$. Sammenlign med figur \ref{figVFexplode}.}}
+integralkurver, som gÃ¥r igennem en terning.  Terningen er vist solid til tiden $t=1$ og ''Ã¥ben'' til tiden $t=0$. Sammenlign med figur \ref{figVFexplode}.}}
 \label{figVFimplode}
 \end{center}
 \end{figure}
@@ -664,14 +664,14 @@ $\frac{1}{4}$.
 
 \section{Divergensen af et vektorfelt} \label{secDiv}
 
-Med henblik på den geometriske analyse af vektorfelter og deres flowkurve-egenskaber vil vi her indføre to værktøjer, to begreber,  til
+Med henblik pÃ¥ den geometriske analyse af vektorfelter og deres flowkurve-egenskaber vil vi her indfÃ¸re to vÃ¦rktÃ¸jer, to begreber,  til
 lokal beskrivelse af generelle glatte vektorfelter. Beskrivelsen er lokal fordi begge begreberne er udtrykt ved de partielle afledede af vektorfeltets koordinatfunktioner.
 
 \begin{definition}
 Lad ${\mathbf{V}}(x,y,z) \,= \, (V_{1}(x,y,z), \, V_{2}(x,y,z), \,
-V_{3}(x,y,z) \,)\,$ være et vektorfelt i rummet. {\em{{Divergensen}}}
+V_{3}(x,y,z) \,)\,$ vÃ¦re et vektorfelt i rummet. {\em{{Divergensen}}}
 af $\,{\mathbf{V}}\,$ i punktet $\,(x_{0},y_{0},z_{0})\,$ defineres
-således:
+sÃ¥ledes:
 \begin{equation}
 \operatorname{Div}({\mathbf{V}})(x_{0},y_{0},z_{0}) \, = \,
 \frac{\partial V_{1}}{\partial
@@ -694,7 +694,7 @@ Divergensen af et glat vektorfelt i $\mathbf{R}^{3}$ er en glat \emph{funktion} 
 \end{think}
 
 \begin{aha}
-Læg mærke til, at divergensen af et plant vektorfelt er det samme som divergensen af feltets rumlige udvidelse.
+LÃ¦g mÃ¦rke til, at divergensen af et plant vektorfelt er det samme som divergensen af feltets rumlige udvidelse.
 \end{aha}
 
 
@@ -709,7 +709,7 @@ Implosionsvektorfeltet ${\mathbf{V}}(x,y,z) = (-x, -y, -z)$ har divergensen
  $\,\operatorname{Div}({\mathbf{V}}) = -3\,$. \\
 
  Det roterende vektorfelt
-$\,{\mathbf{V}}(x,y,z) = (-y, x, 0)$ har også konstant divergens:
+$\,{\mathbf{V}}(x,y,z) = (-y, x, 0)$ har ogsÃ¥ konstant divergens:
 $\,\operatorname{Div}({\mathbf{V}}) = 0\,$.
 \end{example}
 
@@ -720,8 +720,8 @@ Bestem $\,\operatorname{Div}({\mathbf{V}})\,$ i ethvert punkt i rummet.
 \end{exercise}
 
 \begin{exercise}
-Lad ${\mathbf{V}}(x,y,z)$ være et vektorfelt af
-  første grad med matrix-fremstilling som i
+Lad ${\mathbf{V}}(x,y,z)$ vÃ¦re et vektorfelt af
+  fÃ¸rste grad med matrix-fremstilling som i
 ligning (\ref{eqVFmatrix}). Vis, at divergensen
 af ${\mathbf{V}}(x,y,z)$ er konstant lig med sporet
 af ${\mathbf{A}}$.
@@ -730,7 +730,7 @@ af ${\mathbf{A}}$.
 
 
 \begin{exercise}
-Lad ${\mathbf{V}}(x,y,z) = {\bm{\nabla}}h(x,y,z)$ være gradientvektorfeltet
+Lad ${\mathbf{V}}(x,y,z) = {\bm{\nabla}}h(x,y,z)$ vÃ¦re gradientvektorfeltet
 for en given funktion $\,h(x,y,z)\,$. Vis, at divergensen af
 ${\mathbf{V}}(x,y,z)$ er
 \begin{equation}
@@ -744,7 +744,7 @@ ${\mathbf{V}}(x,y,z)$ er
 gives sin egen betegnelse:
 
 \begin{definition}
-Lad $h(x,y,z)$ betegne en glat funktion i $\mathbb{R}^{3}$. Så skriver vi:
+Lad $h(x,y,z)$ betegne en glat funktion i $\mathbb{R}^{3}$. SÃ¥ skriver vi:
 \begin{equation}
 \begin{aligned}
 \Delta h(x,y,z) &= \operatorname{Div}({\bm{\nabla}}h(x,y,z)) \\
@@ -757,7 +757,7 @@ Funktionen $\Delta h(x,y,z)$ kaldes {\emph{den Laplace-afledede}} af funktionen 
 \end{definition}
 
 \begin{example}[Laplace afledede]\label{exampLaplacians}
-Laplace-afledede af nogle elementære funktioner af tre variable:
+Laplace-afledede af nogle elementÃ¦re funktioner af tre variable:
 \begin{equation}
 \begin{array}{|l|c|c|}
   \hline
@@ -790,13 +790,13 @@ Den Laplace afledede af en glat funktion $f(x,y,z)$ er sporet af $3 \times 3$-He
 
 \section{Rotationen af et vektorfelt} \label{secRot}
 
-Det andet helt centrale begreb og værktøj til analyse af vektorfelter er følgende:
+Det andet helt centrale begreb og vÃ¦rktÃ¸j til analyse af vektorfelter er fÃ¸lgende:
 
 \begin{definition}[Rotation af vektorfelt] \label{defRot}
 Lad ${\mathbf{V}}(x,y,z)\,= \, (V_{1}(x,y,z), \, V_{2}(x,y,z), \,
-V_{3}(x,y,z) \,)\,$ være et vektorfelt i rummet. {\em{{Rotationen} }}
+V_{3}(x,y,z) \,)\,$ vÃ¦re et vektorfelt i rummet. {\em{{Rotationen} }}
 af $\,{\mathbf{V}}\,$ i punktet $\,(x_{0},y_{0},z_{0})\,$ defineres som
-følgende {\em{vektor}}:
+fÃ¸lgende {\em{vektor}}:
 \begin{equation}
 \begin{aligned}
 \operatorname{\mathbf{Rot}}({\mathbf{V}})(x_{0},y_{0},z_{0}) \, = \, \Large{(} \, \,  &\frac{\partial
@@ -820,7 +820,7 @@ Rotationen  af et glat vektorfelt i $\mathbf{R}^{3}$ er selv et glat  \emph{vekt
 Eksplosionsvektorfeltet ${\mathbf{V}}(x,y,z) = (x, y, z)$ har konstant
 rotation $\,\operatorname{\mathbf{Rot}}({\mathbf{V}}) = {\mathbf{0}}\,$. \\
 
-Implosionsvektorfeltet ${\mathbf{V}}(x,y,z) = (-x, -y, -z)$ har (ikke overraskende) også konstant
+Implosionsvektorfeltet ${\mathbf{V}}(x,y,z) = (-x, -y, -z)$ har (ikke overraskende) ogsÃ¥ konstant
 rotation $\,\operatorname{\mathbf{Rot}}({\mathbf{V}}) = {\mathbf{0}}\,$. \\
 
 
@@ -829,7 +829,7 @@ $\,{\mathbf{V}}(x,y,z) = (-y, x, 0)$ har (heldigvis) konstant rotation
 forskellig fra $\,{\mathbf{0}}\,$:  $\,\operatorname{\mathbf{Rot}}({\mathbf{V}}) = (0, 0, 2)\,$.
 
 Det roterende vektorfeltet (som roterer \emph{med uret})
-$\,{\mathbf{V}}(x,y,z) = (y, -x, 0)$ har (heldigvis) også konstant rotation som er den modsatte af rotationen mod uret:
+$\,{\mathbf{V}}(x,y,z) = (y, -x, 0)$ har (heldigvis) ogsÃ¥ konstant rotation som er den modsatte af rotationen mod uret:
  $\,\operatorname{\mathbf{Rot}}({\mathbf{V}}) = (0, 0, -2)\,$.
 
 \end{example}
@@ -841,8 +841,8 @@ Bestem $\,\operatorname{\mathbf{Rot}}({\mathbf{V}})\,$ i ethvert punkt i rummet.
 \end{exercise}
 
 \begin{exercise}
-Lad ${\mathbf{V}}(x,y,z)$ være et vektorfelt af
- første grad med matrix-fremstilling som i
+Lad ${\mathbf{V}}(x,y,z)$ vÃ¦re et vektorfelt af
+ fÃ¸rste grad med matrix-fremstilling som i
 ligning (\ref{eqVFmatrix}). Vis, at rotationen af
 ${\mathbf{V}}(x,y,z)$ er en konstant vektor og udtryk
 vektoren ved elementerne i ${\mathbf{A}}$.
@@ -856,16 +856,16 @@ vektoren ved elementerne i ${\mathbf{A}}$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{En bro mellem divergens og rotation} \label{secBridge}
 
-Vi nævner her nogle sammenhænge mellem divergens, rotation og gradientvektorfelter:
+Vi nÃ¦vner her nogle sammenhÃ¦nge mellem divergens, rotation og gradientvektorfelter:
 
 \begin{theorem}[Divergens versus Rotation] \label{thmDivversRot}
-Lad $h(x,y,z)$ betegne en glat funktion i rummet. Så er
+Lad $h(x,y,z)$ betegne en glat funktion i rummet. SÃ¥ er
 \begin{equation}\label{eqRotAfNabla}
 \operatorname{\mathbf{Rot}} ({\bm{\nabla}}h ) \, = \, {\mathbf{0}}\quad .
 \end{equation}
 Lad $\,{\mathbf{V}}(x,y,z)\,$ og
 $\,{\mathbf{W}}(x,y,z)\,$ betegne to vektorfelter i
-$\mathbb{R}^{3}$. Så gælder følgende identitet
+$\mathbb{R}^{3}$. SÃ¥ gÃ¦lder fÃ¸lgende identitet
 \begin{equation}\label{eqDivCrossprod}
 \operatorname{Div}({\mathbf{V}}\times {\mathbf{W}}) \, = \,
 \operatorname{\mathbf{Rot}}({\mathbf{V}})\cdot {\mathbf{W}} - {\mathbf{V}}\cdot
@@ -873,8 +873,8 @@ $\mathbb{R}^{3}$. Så gælder følgende identitet
 \end{equation}
 Specielt har vi derfor: Hvis  $\,{\mathbf{W}}$ er et
 gradient-vektorfelt for en funktion $h(x,y,z)$
-i $\mathbb{R}^{3}$, dvs.  på kort form $\,{\mathbf{W}} \, = \,
-{\bm{\nabla}}h\,$, så er
+i $\mathbb{R}^{3}$, dvs.  pÃ¥ kort form $\,{\mathbf{W}} \, = \,
+{\bm{\nabla}}h\,$, sÃ¥ er
 \begin{equation}\label{eqRotDivGrad}
 \operatorname{Div}({\mathbf{V}}\times {\bm{\nabla}}h) =
 \operatorname{\mathbf{Rot}}({\mathbf{V}})\cdot{\bm{\nabla}}h \quad .
@@ -889,16 +889,16 @@ Vis ved direkte udregning, at de to ligninger (\ref{eqRotAfNabla}) og (\ref{eqDi
 
 
 \begin{info}
-Ud fra de helt simple overvejelser og eksempler vi har været igennem i denne eNote er det rimeligt at forvente, at divergensen er et mål for hvor meget
-en given samling af partikler spredes eller samles når de flyder med vektorfeltet. Det er netop indholdet af Gauss' sætning som er så vigtig for
+Ud fra de helt simple overvejelser og eksempler vi har vÃ¦ret igennem i denne eNote er det rimeligt at forvente, at divergensen er et mÃ¥l for hvor meget
+en given samling af partikler spredes eller samles nÃ¥r de flyder med vektorfeltet. Det er netop indholdet af Gauss' sÃ¦tning som er sÃ¥ vigtig for
 anvendelserne af disse begreber, at den har sin egen eNote26. \\
 
- Tilsvarende må vi forvente, at den totale rotation af en samling af partikler, der flyder med vektorfeltet kan udtrykkes ved hjælp af rotationsvektorfeltet for det given vektorfelt. Det er netop indholdet af Stokes' sætning, der også -- af samme grund -- har sin helt egen eNote27.
+ Tilsvarende mÃ¥ vi forvente, at den totale rotation af en samling af partikler, der flyder med vektorfeltet kan udtrykkes ved hjÃ¦lp af rotationsvektorfeltet for det given vektorfelt. Det er netop indholdet af Stokes' sÃ¦tning, der ogsÃ¥ -- af samme grund -- har sin helt egen eNote27.
 \end{info}
 
 \section{Flow af kurver og flader}\label{secKurveFladeFlow}
-Som allerede antydet med figurerne \ref{figVFrot}, \ref{figVFexplode}, og \ref{figVFimplode} kan vi lade ethvert geometrisk veldefineret område, flade, eller kurve flyde med et givet vektorfelt --  på den måde  at ethvert punkt på objektet følger den entydige flowkurve for vektorfeltet, der netop går igennem punktet. Ideen er som sagt at forstå vektorfeltets geometri ved at observere hvordan det 'flyder rundt med' og deformerer geometriske
-objekter. Se også figurerne \ref{figVFKurveFlow} og \ref{figVFfladeFlow}.
+Som allerede antydet med figurerne \ref{figVFrot}, \ref{figVFexplode}, og \ref{figVFimplode} kan vi lade ethvert geometrisk veldefineret omrÃ¥de, flade, eller kurve flyde med et givet vektorfelt --  pÃ¥ den mÃ¥de  at ethvert punkt pÃ¥ objektet fÃ¸lger den entydige flowkurve for vektorfeltet, der netop gÃ¥r igennem punktet. Ideen er som sagt at forstÃ¥ vektorfeltets geometri ved at observere hvordan det 'flyder rundt med' og deformerer geometriske
+objekter. Se ogsÃ¥ figurerne \ref{figVFKurveFlow} og \ref{figVFfladeFlow}.
 
 
 \begin{figure}[h]
@@ -919,28 +919,28 @@ objekter. Se også figurerne \ref{figVFKurveFlow} og \ref{figVFfladeFlow}.
 
 
 \subsection{Flow af niveaukurver og niveauflader} \label{secLevelFlow}
-Gradientvektorfelterne for funktioner af to og tre variable deformerer også kurver og flader via de respektive flowkurver.
-Man kunne nu forledes til at  tænke, at niveaukurver og niveauflader nok flyder over i andre niveaukurver og niveauflader ved gradientvektorflowet. Så simpelt er det ikke -- men næsten.
+Gradientvektorfelterne for funktioner af to og tre variable deformerer ogsÃ¥ kurver og flader via de respektive flowkurver.
+Man kunne nu forledes til at  tÃ¦nke, at niveaukurver og niveauflader nok flyder over i andre niveaukurver og niveauflader ved gradientvektorflowet. SÃ¥ simpelt er det ikke -- men nÃ¦sten.
 
 \begin{think}
-Ved nærmere eftertanke vil man indse, at det heller ikke kan være rigtigt at gradientvektorfeltet generelt skulle flyde niveaumængder i niveaumængder. Hvis f.eks. to nabo-niveaukurver i figur \ref{figGradFelt} ligger tæt på hinanden,  så er gradientvektoren tilsvarende stor og omvendt hvis to nabo-niveaukurver ligger længere fra hinanden,  så er gradientvektoren tilsvarende mindre. Dvs. der hvor gradienvektorerne er store skal vi flyde langsomt og der for de er små skal vi flyde hurtigt for at niveaukurverne kan flyde over i hinanden.
+Ved nÃ¦rmere eftertanke vil man indse, at det heller ikke kan vÃ¦re rigtigt at gradientvektorfeltet generelt skulle flyde niveaumÃ¦ngder i niveaumÃ¦ngder. Hvis f.eks. to nabo-niveaukurver i figur \ref{figGradFelt} ligger tÃ¦t pÃ¥ hinanden,  sÃ¥ er gradientvektoren tilsvarende stor og omvendt hvis to nabo-niveaukurver ligger lÃ¦ngere fra hinanden,  sÃ¥ er gradientvektoren tilsvarende mindre. Dvs. der hvor gradienvektorerne er store skal vi flyde langsomt og der for de er smÃ¥ skal vi flyde hurtigt for at niveaukurverne kan flyde over i hinanden.
 \end{think}
 
 
-\begin{theorem}[Niveau-mængde flow] \label{thmLevelFlow}
+\begin{theorem}[Niveau-mÃ¦ngde flow] \label{thmLevelFlow}
 Lad $f(x,y,z)$ betegne en glat funktion af tre variable med et egentligt gradientvektorfelt $\bm{\nabla}f(x,y,z) \neq \mathbf{0}$.
-Lad $\mathbf{V}(x,y,z)$ være det kvadratisk normerede gradientvektorfelt:
+Lad $\mathbf{V}(x,y,z)$ vÃ¦re det kvadratisk normerede gradientvektorfelt:
 \begin{equation}
 \mathbf{V}(x,y,z) = \frac{\bm{\nabla}f(x,y,z)}{|\, \bm{\nabla}f(x,y,z)\,|^{2}} \quad .
 \end{equation}
-Hvis vi lader ethvert punkt $p$ på niveaufladen $\mathcal{K}_{c}(f)$ flyde tiden $t_{0}$ med den flowkurve for $\mathbf{V}(x,y,z)$ som starter i $p$, så vil hele niveaufladen flyde over i niveaufladen $\mathcal{K}_{c+t_{0}}(f)$.\\
+Hvis vi lader ethvert punkt $p$ pÃ¥ niveaufladen $\mathcal{K}_{c}(f)$ flyde tiden $t_{0}$ med den flowkurve for $\mathbf{V}(x,y,z)$ som starter i $p$, sÃ¥ vil hele niveaufladen flyde over i niveaufladen $\mathcal{K}_{c+t_{0}}(f)$.\\
 
-Et tilsvarende resultat gælder  for gradientvektorfelter for glatte funktioner $f(x,y)$ af to variable og deres tilhørende niveaukurver i planen.
+Et tilsvarende resultat gÃ¦lder  for gradientvektorfelter for glatte funktioner $f(x,y)$ af to variable og deres tilhÃ¸rende niveaukurver i planen.
 \end{theorem}
 \begin{bevis}
-Vi skal bare vise, at hvis vi starter (til tiden $t=0$) i et punkt $p$ hvor $f(p) = c$ så lander vi med flowkurven $\mathbf{r}(t)$ for vektorfeltet $\mathbf{V}(x,y,z)$ efter tiden $t_{0}$ i et punkt $\mathbf{r}(t_{0})$ hvor $f(x,y,z)$ har værdien $f(\mathbf{r}(t_{0})) = c + t_{0}$. \\
+Vi skal bare vise, at hvis vi starter (til tiden $t=0$) i et punkt $p$ hvor $f(p) = c$ sÃ¥ lander vi med flowkurven $\mathbf{r}(t)$ for vektorfeltet $\mathbf{V}(x,y,z)$ efter tiden $t_{0}$ i et punkt $\mathbf{r}(t_{0})$ hvor $f(x,y,z)$ har vÃ¦rdien $f(\mathbf{r}(t_{0})) = c + t_{0}$. \\
 
- Vi bruger kædereglen for tilvæksten af funktionsværdier langs en flowkurve, se \tref{NUID28-tn15}{eNote}:
+ Vi bruger kÃ¦dereglen for tilvÃ¦ksten af funktionsvÃ¦rdier langs en flowkurve, se \tref{NUID28-tn15}{eNote}:
 \begin{equation} \label{eqChainFlow}
 \frac{d}{dt}f(\mathbf{r}(t)) = \bm{\nabla}f(\mathbf{r}(t)) \bm{\cdot} \mathbf{r}'(t) \quad ,
 \end{equation}
@@ -953,7 +953,7 @@ og da $\mathbf{r}(t)$ er en flowkurve for $\mathbf{V}(x,y,z)$ ved vi, at $\mathb
 &= 1 \quad .
 \end{aligned}
 \end{equation}
-Heraf fås det ønskede direkte:
+Heraf fÃ¥s det Ã¸nskede direkte:
 \begin{equation}
 \begin{aligned}
 f(\mathbf{r}(t_{0})) &= c + \int_{0}^{t_{0}} \frac{d}{dt}f(\mathbf{r}(t)) \, dt \\
@@ -969,13 +969,13 @@ f(\mathbf{r}(t_{0})) &= c + \int_{0}^{t_{0}} \frac{d}{dt}f(\mathbf{r}(t)) \, dt 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{summary}
-Vi har i denne eNote etableret de første begreber og metoder til analyse af vektorfelter i plan og rum.
+Vi har i denne eNote etableret de fÃ¸rste begreber og metoder til analyse af vektorfelter i plan og rum.
 \begin{itemize}
 \item Nogle men ikke alle vektorfelter fremkommer som gradientvektorfelter for funktioner $f(x,y,z)$ (her af tre variable):
 \begin{equation}
 \bm{\nabla}f(x,y,z) = \left(f'_{x}(x,y,z)\, , \, f'_{y}(x,y,z) \, , \, f'_{z}(x,y,z)\right) \quad , \quad (x,y,z) \in \mathbb{R}^{3} \quad .
 \end{equation}
-\item Ethvert vektorfelt $\mathbf{V}(x,y,z)$ af første grad kan skrives og angives ved hjælp af en systemmatrix $\mathbf{A}$ og en konstant vektor $\mathbf{b}$:
+\item Ethvert vektorfelt $\mathbf{V}(x,y,z)$ af fÃ¸rste grad kan skrives og angives ved hjÃ¦lp af en systemmatrix $\mathbf{A}$ og en konstant vektor $\mathbf{b}$:
 \begin{equation}
 \left[
   \begin{array}{c}
@@ -1001,7 +1001,7 @@ Vi har i denne eNote etableret de første begreber og metoder til analyse af vekt
                                                         \end{array}
                                                       \right] \quad .
 \end{equation}
-\item For at forstå geometrien af et givet vektorfelt er det vigtigt at kunne bestemme vektorfeltets flow-kurver -- det er de parametriserede kurver $\mathbf{r}(t) = (x(t), y(t), z(t))$, $t\in [a,b]$, som i alle kurve-punkter har det givne vektorfelt som tangentvektor. Hvis vektorfeltet er givet ved $\mathbf{V}(x,y,z) = (V_{1}(x,y,z), V_{2}(x,y,z), V_{3}(x,y,z))$, så er flowkurve-ligningen:
+\item For at forstÃ¥ geometrien af et givet vektorfelt er det vigtigt at kunne bestemme vektorfeltets flow-kurver -- det er de parametriserede kurver $\mathbf{r}(t) = (x(t), y(t), z(t))$, $t\in [a,b]$, som i alle kurve-punkter har det givne vektorfelt som tangentvektor. Hvis vektorfeltet er givet ved $\mathbf{V}(x,y,z) = (V_{1}(x,y,z), V_{2}(x,y,z), V_{3}(x,y,z))$, sÃ¥ er flowkurve-ligningen:
 \begin{equation}
 \left[
   \begin{array}{c}
@@ -1017,7 +1017,7 @@ Vi har i denne eNote etableret de første begreber og metoder til analyse af vekt
                                                   \end{array}
                                                 \right] \quad .
 \end{equation}
-\item Divergensen af et vektorfelt $\mathbf{V}(x,y,z)$ har vi defineret som den funktion, der i et vilkårligt punkt $(x_{0}, y_{0}, z_{0})$ har værdien:
+\item Divergensen af et vektorfelt $\mathbf{V}(x,y,z)$ har vi defineret som den funktion, der i et vilkÃ¥rligt punkt $(x_{0}, y_{0}, z_{0})$ har vÃ¦rdien:
 \begin{equation}
 \operatorname{Div}({\mathbf{V}})(x_{0},y_{0},z_{0}) \, = \,
 \frac{\partial V_{1}}{\partial
@@ -1026,8 +1026,8 @@ V_{2}}{\partial y}(x_{0},y_{0},z_{0}) +
 \frac{\partial V_{3}}{\partial
 z}(x_{0},y_{0},z_{0}) \quad ,
 \end{equation}
-og vi har antydet med meget simple eksempler, at divergensen er et lokalt  mål for hvor meget vektorfeltet spreder eller samler  en given mængde af partikler, der flyder med vektorfeltet, dvs. følger vektorfeltets flowkurver.
-\item Rotationen af et vektorfelt har vi defineret som følgende vektorfelt
+og vi har antydet med meget simple eksempler, at divergensen er et lokalt  mÃ¥l for hvor meget vektorfeltet spreder eller samler  en given mÃ¦ngde af partikler, der flyder med vektorfeltet, dvs. fÃ¸lger vektorfeltets flowkurver.
+\item Rotationen af et vektorfelt har vi defineret som fÃ¸lgende vektorfelt
 \begin{equation}
 \begin{aligned}
 \operatorname{\mathbf{Rot}}({\mathbf{V}})(x_{0},y_{0},z_{0}) \, = \, \Large{(} \, \,  &\frac{\partial
@@ -1040,7 +1040,7 @@ V_{3}}{\partial x}(x_{0},y_{0},z_{0})\, , \\
 \frac{\partial V_{1}}{\partial y}(x_{0},y_{0},z_{0})\,\,  \Large{)} \quad ,
 \end{aligned}
 \end{equation}
-og vi har antydet med meget simple eksempler, at rotationen er et lokalt  mål for hvor meget vektorfeltet roterer en given mængde af partikler, der flyder med vektorfeltet dvs. følger vektorfeltets flowkurver.
+og vi har antydet med meget simple eksempler, at rotationen er et lokalt  mÃ¥l for hvor meget vektorfeltet roterer en given mÃ¦ngde af partikler, der flyder med vektorfeltet dvs. fÃ¸lger vektorfeltets flowkurver.
 \end{itemize}
 \end{summary}
 

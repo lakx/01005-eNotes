@@ -1,21 +1,21 @@
 \input{../Strukturfiler/preambel}
-\setcounter{chapter}{9} %SÆT DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
+\setcounter{chapter}{9} %SÃ†T DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% HERFRA SKAL DU SKRIVE ELLER INDSÆTTE %%%%
-%%% DEN FIL DU ØNSKER %%%%%%%%%%%%%%%%%%%%%%%
+%%% HERFRA SKAL DU SKRIVE ELLER INDSÃ†TTE %%%%
+%%% DEN FIL DU Ã˜NSKER %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Similaritet og diagonalisering} \label{tn10}
 
 \begin{basis}
-I denne note forklares, hvordan nogle kvadratiske matricer kan diagonaliseres ved hjælp af egenvektorer. Det forudsættes derfor at man ved, hvordan egenværdier og egenvektorer til en kvadratisk matrix bestemmes og desuden er bekendt med tilhørende begreber, så som algebraisk og geometrisk multiplicitet. 
+I denne note forklares, hvordan nogle kvadratiske matricer kan diagonaliseres ved hjÃ¦lp af egenvektorer. Det forudsÃ¦ttes derfor at man ved, hvordan egenvÃ¦rdier og egenvektorer til en kvadratisk matrix bestemmes og desuden er bekendt med tilhÃ¸rende begreber, sÃ¥ som algebraisk og geometrisk multiplicitet. 
 \end{basis}
 
-Hvis vi betragter en lineær afbildning $\,f:V\rightarrow V\,$ af et $n$-dimensionalt vektorrum $V$ ind i sig selv, så vil afbildningsmatricen for $f$ med hensyn til en vilkårlig basis for $f$ være en kvadratisk, $n \times n$ matrix. Er der givet to baser $a$ og $b$ for $V$, er 
-%fremgår det af metode XREF at relationen mellem de to tilsvarende $n \times n$
+Hvis vi betragter en lineÃ¦r afbildning $\,f:V\rightarrow V\,$ af et $n$-dimensionalt vektorrum $V$ ind i sig selv, sÃ¥ vil afbildningsmatricen for $f$ med hensyn til en vilkÃ¥rlig basis for $f$ vÃ¦re en kvadratisk, $n \times n$ matrix. Er der givet to baser $a$ og $b$ for $V$, er 
+%fremgÃ¥r det af metode XREF at relationen mellem de to tilsvarende $n \times n$
 relationen mellem de tilsvarende afbildningsmatricer $\matind aFa$ henholdsvis $\matind bFb$ givet ved
 \begin{equation}\label{afbMskifte}
 \matind bFb = (\matind aMb)^{-1} \cdot \matind aFa \cdot \matind aMb 
@@ -23,58 +23,58 @@ relationen mellem de tilsvarende afbildningsmatricer $\matind aFa$ henholdsvis $
 hvor
 $\,\matind aMb = \begin{matr}{cccc} \vekind ab_1 & \vekind ab_2 & \cdots & \vekind ab_n \end{matr}\,$
 er basisskiftematricen der skifter fra $b$ til $a$ koordinater.\bs
-Af særlig interesse er det, hvis der findes en basis $v$ bestående af egenvektorer for $f\,.$ Lad nemlig $a$ være en vilkårlig basis for $V\,$ og $\matind aFa$ den hertil hørende afbildningsmatrix for $f\,$. Lad endvidere $v$ være en egenvektorbasis for $V$ med hensyn til $f\,.$ Af \tref{NUID23-MainTh}{sætning} i eNote 9 fremgår det at afbildningsmatricen for $f$ med hensyn til $v$-basis er en diagonalmatrix $\mL$ hvori diagonalelementerne er egenværdierne for $f\,.$ Hvis 
-$\mV$ betegner basisskiftematricen, som skifter fra $v$-koordinater til $a$-koordinatvektorerne, vil $\mL$ ifølge (\ref{afbMskifte}) fremkomme således
+Af sÃ¦rlig interesse er det, hvis der findes en basis $v$ bestÃ¥ende af egenvektorer for $f\,.$ Lad nemlig $a$ vÃ¦re en vilkÃ¥rlig basis for $V\,$ og $\matind aFa$ den hertil hÃ¸rende afbildningsmatrix for $f\,$. Lad endvidere $v$ vÃ¦re en egenvektorbasis for $V$ med hensyn til $f\,.$ Af \tref{NUID23-MainTh}{sÃ¦tning} i eNote 9 fremgÃ¥r det at afbildningsmatricen for $f$ med hensyn til $v$-basis er en diagonalmatrix $\mL$ hvori diagonalelementerne er egenvÃ¦rdierne for $f\,.$ Hvis 
+$\mV$ betegner basisskiftematricen, som skifter fra $v$-koordinater til $a$-koordinatvektorerne, vil $\mL$ ifÃ¸lge (\ref{afbMskifte}) fremkomme sÃ¥ledes
 \begin{equation}\label{afbMskifteDiag}
 \mL = \mV^{-1} \cdot \matind aFa \cdot \mV\,. 
 \end{equation}%\bs
-Formel \ref{afbMskifte} og formel \ref{afbMskifteDiag} inspirer naturligt til spørgsmål der tager udgangspunkt i kvadratiske matricer: Hvilke betingelser skal være opfyldt for at to givne kvadratiske matricer kan fortolkes som  afbildningsmatricer for den samme lineære afbildning med hensyn til to forskellige baser? Og hvilke betingelser skal en kvadratisk matrix opfylde for at den er afbildningsmatrix for en lineær afbildning, som i en anden basis har en diagonalmatrix som afbildningsmatrix? Vi studerer først disse spørgsmål i en ren matrixalgebra-opsætning, og vender i sidste delafsnit tilbage til afbildningssynsvinklen. Til dette formål indføres nu begrebet similære matricer.\bs
+Formel \ref{afbMskifte} og formel \ref{afbMskifteDiag} inspirer naturligt til spÃ¸rgsmÃ¥l der tager udgangspunkt i kvadratiske matricer: Hvilke betingelser skal vÃ¦re opfyldt for at to givne kvadratiske matricer kan fortolkes som  afbildningsmatricer for den samme lineÃ¦re afbildning med hensyn til to forskellige baser? Og hvilke betingelser skal en kvadratisk matrix opfylde for at den er afbildningsmatrix for en lineÃ¦r afbildning, som i en anden basis har en diagonalmatrix som afbildningsmatrix? Vi studerer fÃ¸rst disse spÃ¸rgsmÃ¥l i en ren matrixalgebra-opsÃ¦tning, og vender i sidste delafsnit tilbage til afbildningssynsvinklen. Til dette formÃ¥l indfÃ¸res nu begrebet similÃ¦re matricer.\bs
 
-\section{Similære matricer}
+\section{SimilÃ¦re matricer}
 
-\begin{definition}[Similære matricer]\label{DefSim}
-Givet $n\times n$-matricerne $\mA$ og $\mB\,.$ Man siger at $\mA$ er \textit{similær med} $\mB$ hvis der findes en regulær matrix $\mM$ således at
+\begin{definition}[SimilÃ¦re matricer]\label{DefSim}
+Givet $n\times n$-matricerne $\mA$ og $\mB\,.$ Man siger at $\mA$ er \textit{similÃ¦r med} $\mB$ hvis der findes en regulÃ¦r matrix $\mM$ sÃ¥ledes at
 \begin{equation}\label{tn8.defSimilar} 
 \mB=\mM^{-1}\,\mA\,\mM\,.
 \end{equation}
 \end{definition}
 
-\begin{example}[Similære matricer]
+\begin{example}[SimilÃ¦re matricer]
 Givet matricerne $\,\mA=\begin{matr}{rr}2&3\\3&-4\end{matr}\,$ og $\,\mB=\begin{matr}{rr}8&21\\-3&-10\end{matr}\,.$\bs
-Matricen $\,\mM=\begin{matr}{rr}2&3\\1&2\end{matr}\,$ er regulær og har den inverse matrix $\,\mM^{-1}=\begin{matr}{rr}2&-3\\-1&2\end{matr}\,.$\bs Betragt følgende udregning:
+Matricen $\,\mM=\begin{matr}{rr}2&3\\1&2\end{matr}\,$ er regulÃ¦r og har den inverse matrix $\,\mM^{-1}=\begin{matr}{rr}2&-3\\-1&2\end{matr}\,.$\bs Betragt fÃ¸lgende udregning:
 $$\begin{matr}{rr}2&-3\\-1&2\end{matr}
 \begin{matr}{rr}2&3\\3&-4\end{matr}
 \begin{matr}{rr}2&3\\1&2\end{matr}
 =\begin{matr}{rr}8&21\\-3&-10\end{matr}\,.$$\bs
-Den viser at $\,\mA\,$ er similær med $\,\mB\,$. 
+Den viser at $\,\mA\,$ er similÃ¦r med $\,\mB\,$. 
 \end{example}
 
 \begin{aha}
-Hvis $\mA$ at være similær med $\mB$, så er $\mB$ også  similær med $\mA,$. Hvis vi nemlig sætter $\mathbf N=\mM^{-1}$, så er $\mathbf N$ regulær, og
+Hvis $\mA$ at vÃ¦re similÃ¦r med $\mB$, sÃ¥ er $\mB$ ogsÃ¥  similÃ¦r med $\mA,$. Hvis vi nemlig sÃ¦tter $\mathbf N=\mM^{-1}$, sÃ¥ er $\mathbf N$ regulÃ¦r, og
 $$ \mB=\mM^{-1}\,\mA\,\mM
 \,\Leftrightarrow\,
 \mM\,\mB\,\mM^{-1}=\mA
 \,\Leftrightarrow\,
 \mA=\mathbf N^{-1}\,\mB\,\mathbf N\,,$$
-Derfor bruger man også talemåden: $\mA$ og $\mB$ er \textit{similære matricer}\,.
+Derfor bruger man ogsÃ¥ talemÃ¥den: $\mA$ og $\mB$ er \textit{similÃ¦re matricer}\,.
 \end{aha}
 
 \begin{theorem}[Similaritet er transitivt]\label{tn8.thSimilar}
-Lad $\mA\,$, $\mB$ og $\mC$ være $n\times n$-matricer. Hvis $\mA$ er similær med $\mB$, og $\mB$ er similær med $\mC\,$, så er $\mA$ similær med $\mC\,.$
+Lad $\mA\,$, $\mB$ og $\mC$ vÃ¦re $n\times n$-matricer. Hvis $\mA$ er similÃ¦r med $\mB$, og $\mB$ er similÃ¦r med $\mC\,$, sÃ¥ er $\mA$ similÃ¦r med $\mC\,.$
  
 \end{theorem}
 
 \begin{exercise}
-Bevis sætning \ref{tn8.thSimilar}.
+Bevis sÃ¦tning \ref{tn8.thSimilar}.
 \end{exercise}
 
-Om egenværdierne for similære matricer gælder følgende sætning.
+Om egenvÃ¦rdierne for similÃ¦re matricer gÃ¦lder fÃ¸lgende sÃ¦tning.
 
-\begin{theorem}[Similaritet og egenværdier] \label{saet.sim}
-Hvis $ \mA $ er similær med $\mB\,$, har de to matricer identiske egenværdier med de samme tilhørende algebraiske og geometriske multipliciteter.
+\begin{theorem}[Similaritet og egenvÃ¦rdier] \label{saet.sim}
+Hvis $ \mA $ er similÃ¦r med $\mB\,$, har de to matricer identiske egenvÃ¦rdier med de samme tilhÃ¸rende algebraiske og geometriske multipliciteter.
 \end{theorem}
 \begin{bevis}
-At $ \mA $ og $\mB$ har de samme egenværdier med de samme tilhørende  algebraiske multipliciteter de har det samme karakteristiske polynomium: Lad $\mM$ være en regulær matrix der opfylder $\,\mB = \mM^{-1} \mA \mM\,$, og lad som sædvanlig $\mE$ betegne enhedsmatricen af samme kvadratiske form som de tre nævnte matricer. Så gælder:
+At $ \mA $ og $\mB$ har de samme egenvÃ¦rdier med de samme tilhÃ¸rende  algebraiske multipliciteter de har det samme karakteristiske polynomium: Lad $\mM$ vÃ¦re en regulÃ¦r matrix der opfylder $\,\mB = \mM^{-1} \mA \mM\,$, og lad som sÃ¦dvanlig $\mE$ betegne enhedsmatricen af samme kvadratiske form som de tre nÃ¦vnte matricer. SÃ¥ gÃ¦lder:
 \begin{equation}
 \begin{aligned}
 \det(\mB - \lambda\mE) &= \det(\mM^{-1} \mA \mM - \lambda \mM^{-1} \mE \mM) \\
@@ -82,20 +82,20 @@ At $ \mA $ og $\mB$ har de samme egenværdier med de samme tilhørende  algebraisk
 &= \det(\mA - \lambda\mE)\,.
 \end{aligned}
 \end{equation}
-Hermed vist at de to matricer har samme karakteristiske polynomium og dermed de samme egenværdier med de samme tilhørende  algebraiske multipliciteter. At de har samme egenværdier fremgår i øvrigt af sætning \ref{tn8.thSimilar2}, som vi viser nedenfor: Når $\mA$ og $\mB$ kan repræsentere den samme lineære afbildning $f$ med hensyn til to forskellige baser, har de identiske egenværdier, nemlig egenværdierne for $f$.\bs Men egenværdierne har også de samme geometriske multipliciteter. Dette følger af at egenrummene for $\mA$ og $\mB$ med hensyn til enhver af egenværdierne kan fortolkes som to forskellige koordinatfremstilllinger for dette samme egenrum, nemlig egenrummet for $f$ med hensyn til den pågældende egenværdi 
+Hermed vist at de to matricer har samme karakteristiske polynomium og dermed de samme egenvÃ¦rdier med de samme tilhÃ¸rende  algebraiske multipliciteter. At de har samme egenvÃ¦rdier fremgÃ¥r i Ã¸vrigt af sÃ¦tning \ref{tn8.thSimilar2}, som vi viser nedenfor: NÃ¥r $\mA$ og $\mB$ kan reprÃ¦sentere den samme lineÃ¦re afbildning $f$ med hensyn til to forskellige baser, har de identiske egenvÃ¦rdier, nemlig egenvÃ¦rdierne for $f$.\bs Men egenvÃ¦rdierne har ogsÃ¥ de samme geometriske multipliciteter. Dette fÃ¸lger af at egenrummene for $\mA$ og $\mB$ med hensyn til enhver af egenvÃ¦rdierne kan fortolkes som to forskellige koordinatfremstilllinger for dette samme egenrum, nemlig egenrummet for $f$ med hensyn til den pÃ¥gÃ¦ldende egenvÃ¦rdi 
 \end{bevis}
-%Lad $\lambda$ være en egenværdi for $\mB\,.$ Så findes egenrummet for $\lambda$ som den fuldstændige løsning til det lineære ligningssystem der har totalmatricen
+%Lad $\lambda$ vÃ¦re en egenvÃ¦rdi for $\mB\,.$ SÃ¥ findes egenrummet for $\lambda$ som den fuldstÃ¦ndige lÃ¸sning til det lineÃ¦re ligningssystem der har totalmatricen
 %\begin{equation}
 %\mT=\left[\mB-\lambda \mE\,|\,\mnul \right]\,. 
 %\end{equation}
-%På grund af similariteten har vi
+%PÃ¥ grund af similariteten har vi
 %\begin{equation}
 %\mB\mv=\mM^{-1}\mA\mM\mv
 %=\lambda\mv \Leftrightarrow \mA(\mM\mv)=\mM\lambda\mv=\lambda(\mM\mv)\,.
 %\end{equation}
-%Her har vi opskrevet egenværdi
+%Her har vi opskrevet egenvÃ¦rdi
 
-%.\bs Tilbage står at vise at egenværdierne også har de samme algebraiske multipliciteter. At dette er tilfældet følger af at de har det samme karakteristiske polynomium: Lad $\mM$ være en regulær matrix der opfylder $\,\mB = \mM^{-1} \mA \mM\,$, og lad som sædvanlig $\mE$ betegne enhedsmatricen af samme kvadratiske form som de tre nævnte matricer. Så gælder:
+%.\bs Tilbage stÃ¥r at vise at egenvÃ¦rdierne ogsÃ¥ har de samme algebraiske multipliciteter. At dette er tilfÃ¦ldet fÃ¸lger af at de har det samme karakteristiske polynomium: Lad $\mM$ vÃ¦re en regulÃ¦r matrix der opfylder $\,\mB = \mM^{-1} \mA \mM\,$, og lad som sÃ¦dvanlig $\mE$ betegne enhedsmatricen af samme kvadratiske form som de tre nÃ¦vnte matricer. SÃ¥ gÃ¦lder:
 %\begin{equation}
 %\begin{aligned}
 %\det(\mB - \lambda\mE) &= \det(\mM^{-1} \mA \mM - \lambda \mM^{-1} \mE \mM) \\
@@ -107,18 +107,18 @@ Hermed vist at de to matricer har samme karakteristiske polynomium og dermed de 
 %\end{bevis}
 
 \begin{obs}
-Læg mærke til at sætning \ref{saet.sim} siger at to similære matricer har samme egenværdier, men ikke omvendt: at to matricer, som har samme egenværdier, er similære. Der er en forskel, og kun det første udsagn er sandt.
+LÃ¦g mÃ¦rke til at sÃ¦tning \ref{saet.sim} siger at to similÃ¦re matricer har samme egenvÃ¦rdier, men ikke omvendt: at to matricer, som har samme egenvÃ¦rdier, er similÃ¦re. Der er en forskel, og kun det fÃ¸rste udsagn er sandt.
 \end{obs}
 
 \begin{obs}
-To similære matricer $ \mA $ og $ \mB $ har samme egenværdier, men en egenvektor for den ene er i almindelighed ikke egenvektor for den anden. Men der gælder at hvis $ \mv $ er en egenvektor for $\mA$ tilhørende egenværdien $ \lambda $, så er $\mM^{-1}\mv$ en egenvektor for $\mB$ tilhørende egenværdien $ \lambda $, hvor $\mM$ er den regulære matrix der opfylder $\,\mB = \mM^{-1} \mA \mM\,$. Der gælder nemlig:
+To similÃ¦re matricer $ \mA $ og $ \mB $ har samme egenvÃ¦rdier, men en egenvektor for den ene er i almindelighed ikke egenvektor for den anden. Men der gÃ¦lder at hvis $ \mv $ er en egenvektor for $\mA$ tilhÃ¸rende egenvÃ¦rdien $ \lambda $, sÃ¥ er $\mM^{-1}\mv$ en egenvektor for $\mB$ tilhÃ¸rende egenvÃ¦rdien $ \lambda $, hvor $\mM$ er den regulÃ¦re matrix der opfylder $\,\mB = \mM^{-1} \mA \mM\,$. Der gÃ¦lder nemlig:
 \begin{equation}
 \mA\mv = \lambda\mv \quad  \Leftrightarrow \quad \mM^{-1} \mA \mv = \mM^{-1} \lambda \mv \quad \Leftrightarrow \quad \mB (\mM^{-1} \mv) = \lambda (\mM^{-1} \mv) \,.
 \end{equation}
 \end{obs}
 
 \begin{exercise}
-Gør rede for at to kvadratiske $n\times n$-matricer er similære, hvis de har identiske egenværdier med samme tilhørende geometriske multipliciteter, og at summen af de geometriske multipliciteter er $n\,$. 
+GÃ¸r rede for at to kvadratiske $n\times n$-matricer er similÃ¦re, hvis de har identiske egenvÃ¦rdier med samme tilhÃ¸rende geometriske multipliciteter, og at summen af de geometriske multipliciteter er $n\,$. 
 \end{exercise}
 
 
@@ -128,32 +128,32 @@ Gør rede for at to kvadratiske $n\times n$-matricer er similære, hvis de har ide
 
 \section{Diagonalisering af matricer}
 
-%Vi starter med at redegøre for hvordan egenværdiproblemet kan kaste afgørende nyt lys over \ind{similære matricer}{similære matricer}, som blev indført i eNote 8, jf. \tref{NUID21-secSimilar}{afsnit}.
-%Vi minder om at similaritet handler om et særligt forhold mellem tre kvadratiske $n\times n$-matricer $\,\mA\,$, $\,\mB\,$ og $\,\mM\,$. $\,\mA\,$ kaldes similær med   $\,\mB\,$ hvis der findes en regulær matrix $\,\mM\,$ således at 
+%Vi starter med at redegÃ¸re for hvordan egenvÃ¦rdiproblemet kan kaste afgÃ¸rende nyt lys over \ind{similÃ¦re matricer}{similÃ¦re matricer}, som blev indfÃ¸rt i eNote 8, jf. \tref{NUID21-secSimilar}{afsnit}.
+%Vi minder om at similaritet handler om et sÃ¦rligt forhold mellem tre kvadratiske $n\times n$-matricer $\,\mA\,$, $\,\mB\,$ og $\,\mM\,$. $\,\mA\,$ kaldes similÃ¦r med   $\,\mB\,$ hvis der findes en regulÃ¦r matrix $\,\mM\,$ sÃ¥ledes at 
 %\begin{equation*}\label{tn10.defSimilar} 
 %\mB=\mM^{-1}\,\mA\,\mM\,.
 %\end{equation*}
 %\end{definition}
-Betragt en matrix $\,\mA\,$ og en regulær matrix $\,\mV\,$ som er givet ved
+Betragt en matrix $\,\mA\,$ og en regulÃ¦r matrix $\,\mV\,$ som er givet ved
 \begin{equation}\label{exSim1} 
 \mA=\begin{matr}{rr}1&-2\\1&4\end{matr}\,\,\,\mathrm{og}\,\,\,\mV=\begin{matr}{rr}-1&-2\\1&1\end{matr}\,.\end{equation}
-Da der gælder at
+Da der gÃ¦lder at
 \begin{equation*}\label{exSim2} 
 \mV^{-1}\,\mA\,\mV=
 \begin{matr}{rr}1&2\\-1&-1\end{matr}
 \begin{matr}{rr}1&-2\\1&4\end{matr}
 \begin{matr}{rr}-1&-2\\1&1\end{matr}=
 \begin{matr}{rr}3&0\\0&2\end{matr}\,,\end{equation*}
-besidder $\,\mA\,$ en særlig egenskab: den er similær med en diagonalmatrix, nemlig diagonalmatricen
+besidder $\,\mA\,$ en sÃ¦rlig egenskab: den er similÃ¦r med en diagonalmatrix, nemlig diagonalmatricen
 $$
 \mL=\begin{matr}{rr}3&0\\0&2\end{matr}\,.$$
 Man siger i den forbindelse at $\,\mA\,$ er blevet \ind{diagonalisering}{diagonaliseret ved similartransformation}.\bs
-Vi vil nu for en vilkårlig given kvadratisk matrix $\,\mA\,$ stille spørgsmålet om den kan diagonaliseres ved similartransformation eller ej. Vi opstiller derfor ligningen 
+Vi vil nu for en vilkÃ¥rlig given kvadratisk matrix $\,\mA\,$ stille spÃ¸rgsmÃ¥let om den kan diagonaliseres ved similartransformation eller ej. Vi opstiller derfor ligningen 
 \begin{equation*}\label{simLign}
 \mV^{-1}\,\mA\,\mV=\mL,
 \end{equation*}
-hvor $\,\mV\,$ er en regulær matrix og $\,\mL\,$ en diagonalmatrix. Vi beviser nedenfor at ligningen har en løsning netop hvis søjlerne i $\,\mV\,$ er lineært uafhængige egenvektorer for $\,\mA\,$, og diagonalelelementerne i $\,\mL\,$ er egenværdierne for $\,\mA\,$ opført således at den $i$-te søjle i $\,\mV\,$ er egenvektor hørende til egenværdien den $i$-te søjle i $\,\mL\,$.\bs
-Vi bemærker at dette er i overensstemmelse med eksempel-matricerne i (\ref{exSim1}) ovenfor:
+hvor $\,\mV\,$ er en regulÃ¦r matrix og $\,\mL\,$ en diagonalmatrix. Vi beviser nedenfor at ligningen har en lÃ¸sning netop hvis sÃ¸jlerne i $\,\mV\,$ er lineÃ¦rt uafhÃ¦ngige egenvektorer for $\,\mA\,$, og diagonalelelementerne i $\,\mL\,$ er egenvÃ¦rdierne for $\,\mA\,$ opfÃ¸rt sÃ¥ledes at den $i$-te sÃ¸jle i $\,\mV\,$ er egenvektor hÃ¸rende til egenvÃ¦rdien den $i$-te sÃ¸jle i $\,\mL\,$.\bs
+Vi bemÃ¦rker at dette er i overensstemmelse med eksempel-matricerne i (\ref{exSim1}) ovenfor:
 \begin{equation}\label{simLignA}
 \begin{matr}{rr}1&-2\\1&4\end{matr}
 \begin{matr}{r}-1\\1\end{matr}=
@@ -165,12 +165,12 @@ og
 \begin{matr}{r}-2\\1\end{matr}=
 \begin{matr}{r}-4\\2\end{matr}=
 2\begin{matr}{r}-2\\1\end{matr}\,.\end{equation}
-Vi ser i (\ref{simLignA}) at første søjle i $\,\mV\,$ som forventet er egenvektor for $\,\mA\,$ hørende til det første diagonalelement i $\mL$, og vi ser i (\ref{simLignB}) at den anden søjle i $\,\mV\,$ er egenvektor hørende til det andet diagonalelement i $\mL$.
+Vi ser i (\ref{simLignA}) at fÃ¸rste sÃ¸jle i $\,\mV\,$ som forventet er egenvektor for $\,\mA\,$ hÃ¸rende til det fÃ¸rste diagonalelement i $\mL$, og vi ser i (\ref{simLignB}) at den anden sÃ¸jle i $\,\mV\,$ er egenvektor hÃ¸rende til det andet diagonalelement i $\mL$.
 
-%Vi samler disse overvejelser i den følgende sætning:
+%Vi samler disse overvejelser i den fÃ¸lgende sÃ¦tning:
 
 \begin{theorem}[Diagonalisering ved similartransformation] \label{saet.diag}
-Hvis en kvadratisk matrix $n\times n$-matrix $\,\mA\,$ har $ n $ lineært uafhængige egenvektorer $\, \mv_1, \mv_2, \ldots, \mv_n \,$ respektivt tilhørende de $n$ (ikke nødvendigvis forskellige) egenværdier $\lambda_1, \lambda_2, \ldots, \lambda_n\,$ kan den diagonaliseres ved similartransformationen 
+Hvis en kvadratisk matrix $n\times n$-matrix $\,\mA\,$ har $ n $ lineÃ¦rt uafhÃ¦ngige egenvektorer $\, \mv_1, \mv_2, \ldots, \mv_n \,$ respektivt tilhÃ¸rende de $n$ (ikke nÃ¸dvendigvis forskellige) egenvÃ¦rdier $\lambda_1, \lambda_2, \ldots, \lambda_n\,$ kan den diagonaliseres ved similartransformationen 
 \begin{equation}
 \mV^{-1} \mA \mV = \mL \quad \Leftrightarrow \quad \mA = \mV \mL \mV^{-1} \, ,
 \end{equation}
@@ -178,12 +178,12 @@ hvor
 \begin{equation}
 \mV = \begin{matr}{cccc} \mv_1 & \mv_2 & \cdots & \mv_n \end{matr} \quad \mathrm{og} \quad \mL = \diag(\lambda_1, \lambda_2, \ldots, \lambda_n) \, .
 \end{equation}
-Hvis $\,\mA\,$ ikke har $ n $ lineært uafhængige egenvektorer, kan den ikke diagonaliseres ved similartransformation.
+Hvis $\,\mA\,$ ikke har $ n $ lineÃ¦rt uafhÃ¦ngige egenvektorer, kan den ikke diagonaliseres ved similartransformation.
 \end{theorem}
 
 \begin{bevis}
-Antag at $ \mA$ har $n$ lineært uafhængige egenvektorer 
-$ \mv_1, \mv_2, \ldots, \mv_n $, og at $\mv_i$ for $i=1\ldots n$ hører til egenværdien $\lambda_i$. Så gælder de følgende $n$ ligninger:
+Antag at $ \mA$ har $n$ lineÃ¦rt uafhÃ¦ngige egenvektorer 
+$ \mv_1, \mv_2, \ldots, \mv_n $, og at $\mv_i$ for $i=1\ldots n$ hÃ¸rer til egenvÃ¦rdien $\lambda_i$. SÃ¥ gÃ¦lder de fÃ¸lgende $n$ ligninger:
 
 \begin{equation}
 \mA\mv_1 = \lambda_1 \mv_1 \quad , \quad \mA\mv_2 = \lambda_2 \mv_2 \quad , \quad \ldots \quad , \quad \mA\mv_n = \lambda_n \mv_n
@@ -196,69 +196,69 @@ De $ n $ ligninger kan samles i et ligningssystem:
 \Leftrightarrow \; \mA \mV &= \mV \mL
 \end{aligned}
 \end{equation}
-Nu er alle egenvektorerne indsat (lodret efter hinanden) i matricen $ \mV $ i samme rækkefølge som egenværdierne er i diagonalen af matricen $ \mL $, som udenfor diagonalen kun indeholder nuller. Da egenvektorerne er lineært uafhængige er matricen $ \mV $ regulær. Derfor findes den inverse $ \mV^{-1} $, og den ganges på fra venstre på begge sider af lighedstegnet:
+Nu er alle egenvektorerne indsat (lodret efter hinanden) i matricen $ \mV $ i samme rÃ¦kkefÃ¸lge som egenvÃ¦rdierne er i diagonalen af matricen $ \mL $, som udenfor diagonalen kun indeholder nuller. Da egenvektorerne er lineÃ¦rt uafhÃ¦ngige er matricen $ \mV $ regulÃ¦r. Derfor findes den inverse $ \mV^{-1} $, og den ganges pÃ¥ fra venstre pÃ¥ begge sider af lighedstegnet:
 \begin{equation}
 \mV^{-1} \mA \mV = \mV^{-1} \mV \mL \; \Leftrightarrow \; \mV^{-1} \mA \mV = \mL\,.
 \end{equation}
-Hermed er første del af af sætningen vist. Antag omvendt at $ \mA $ kan diagonaliseres ved en similartransformation. Så findes der en regulær matrix $ \mV=\begin{matr}{cccc} \mv_1 & \mv_2 & \cdots & \mv_n \end{matr} $ og en diagonalmatrix $ \mL=\mathbf {diag}(\lambda_1,\lambda_2,\ldots \lambda_n) $ således at
+Hermed er fÃ¸rste del af af sÃ¦tningen vist. Antag omvendt at $ \mA $ kan diagonaliseres ved en similartransformation. SÃ¥ findes der en regulÃ¦r matrix $ \mV=\begin{matr}{cccc} \mv_1 & \mv_2 & \cdots & \mv_n \end{matr} $ og en diagonalmatrix $ \mL=\mathbf {diag}(\lambda_1,\lambda_2,\ldots \lambda_n) $ sÃ¥ledes at
 \begin{equation} \label{tn10.bagfra}
 \mV^{-1} \mA \mV = \mL\,.
 \end{equation}
-Hvis vi nu gentager omformingerne i første del af beviset  blot i modsat rækkefølge, ses det at (\ref{tn10.bagfra}) er ensbetydende med de følgende $n$ ligninger:
+Hvis vi nu gentager omformingerne i fÃ¸rste del af beviset  blot i modsat rÃ¦kkefÃ¸lge, ses det at (\ref{tn10.bagfra}) er ensbetydende med de fÃ¸lgende $n$ ligninger:
 \begin{equation}
 \mA\mv_1 = \lambda_1 \mv_1 \quad , \quad \mA\mv_2 = \lambda_2 \mv_2 \quad , \quad \ldots \quad , \quad \mA\mv_n = \lambda_n \mv_n
 \end{equation}
-hvoraf det fremgår at $\mv_i$ for $i=1\ldots n$ er en egenvektor for $ \mA $ tilhørende egenværdien $ \lambda_i $. \bs
-Diagonalisering ved similartransformation kan derfor kun opnås på den måde der er omtalt i sætningens første del.
+hvoraf det fremgÃ¥r at $\mv_i$ for $i=1\ldots n$ er en egenvektor for $ \mA $ tilhÃ¸rende egenvÃ¦rdien $ \lambda_i $. \bs
+Diagonalisering ved similartransformation kan derfor kun opnÃ¥s pÃ¥ den mÃ¥de der er omtalt i sÃ¦tningens fÃ¸rste del.
 \end{bevis}
 
-Den følgende sætning kan være til stor hjælp når man i forskellige sammenhænge undersøger om matricer kan diagonaliseres ved similartransformation. Hovedresultatet har vi allerede givet i sætning \ref{saet.diag}, men her  forfines betingelserne idet vi trækker på tidligere viste sætninger om egenværdiproblemet for lineære afbildninger og matricer.
+Den fÃ¸lgende sÃ¦tning kan vÃ¦re til stor hjÃ¦lp nÃ¥r man i forskellige sammenhÃ¦nge undersÃ¸ger om matricer kan diagonaliseres ved similartransformation. Hovedresultatet har vi allerede givet i sÃ¦tning \ref{saet.diag}, men her  forfines betingelserne idet vi trÃ¦kker pÃ¥ tidligere viste sÃ¦tninger om egenvÃ¦rdiproblemet for lineÃ¦re afbildninger og matricer.
 
 \begin{theorem}[Matricers diagonaliserbarhed]\label{diagonaliserbarhed}
-For en given $n\times n$-matrix $ \mA $ gælder:\bs
+For en given $n\times n$-matrix $ \mA $ gÃ¦lder:\bs
  $ \mA $ kan diagonaliseres ved similartransformation 
 \begin{enumerate}
 \item
-hvis der findes $n$ forskellige egenværdier for  $ \mA\,$.
+hvis der findes $n$ forskellige egenvÃ¦rdier for  $ \mA\,$.
 \item
- hvis summen af egenværdiernes geometriske multipliciteter er $\,n\,$.
+ hvis summen af egenvÃ¦rdiernes geometriske multipliciteter er $\,n\,$.
 \end{enumerate}
  $ \mA $ kan \textit{ikke} diagonaliseres ved similartransformation 
 \begin{enumerate}
 \setcounter{enumi}{2}
 \item
-hvis summen af egenværdiernes geometriske multipliciteter er mindre end $n\,$.
+hvis summen af egenvÃ¦rdiernes geometriske multipliciteter er mindre end $n\,$.
 \item
-hvis der findes blot én egenværdi $\lambda$ med $\,\mathrm{gm}(\lambda)<\mathrm{am}(\lambda)\,$.
+hvis der findes blot Ã©n egenvÃ¦rdi $\lambda$ med $\,\mathrm{gm}(\lambda)<\mathrm{am}(\lambda)\,$.
 %\item
-%hvis summen af egenværdiernes algebraiske multipliciteter er mindre end $n\,$.
+%hvis summen af egenvÃ¦rdiernes algebraiske multipliciteter er mindre end $n\,$.
 \end{enumerate}
 \end{theorem}
 \begin{bevis}
-Ad. 1. Hvis der vælges en egentlig egenvektor fra hvert af de $n$ egenrum, følger det af  \tref{NUID23-th.evLinUafh}{hjælpesætning} at det samlede sæt af $n$ egenvektorer er lineært uafhængigt. Derfor kan $\,\mA\,$ ifølge sætning \ref{saet.diag} diagonaliseres ved similartransformation.\bs
+Ad. 1. Hvis der vÃ¦lges en egentlig egenvektor fra hvert af de $n$ egenrum, fÃ¸lger det af  \tref{NUID23-th.evLinUafh}{hjÃ¦lpesÃ¦tning} at det samlede sÃ¦t af $n$ egenvektorer er lineÃ¦rt uafhÃ¦ngigt. Derfor kan $\,\mA\,$ ifÃ¸lge sÃ¦tning \ref{saet.diag} diagonaliseres ved similartransformation.\bs
 Ad. 2:
-Hvis der vælges en basis for hvert af egenrummene, så er det samlede sæt af de valgte $n$ egenvektorer ifølge \tref{NUID23-th.evLinUafh}{hjælpesætning} lineært uafhængigt. Derfor kan $\,\mA\,$ ifølge sætning \ref{saet.diag} diagonaliseres ved similartransformation .\bs
+Hvis der vÃ¦lges en basis for hvert af egenrummene, sÃ¥ er det samlede sÃ¦t af de valgte $n$ egenvektorer ifÃ¸lge \tref{NUID23-th.evLinUafh}{hjÃ¦lpesÃ¦tning} lineÃ¦rt uafhÃ¦ngigt. Derfor kan $\,\mA\,$ ifÃ¸lge sÃ¦tning \ref{saet.diag} diagonaliseres ved similartransformation .\bs
 Ad. 3:
-Hvis summen af de geometriske multipliciteter er mindre en $n$, findes der ikke $n$ lineært uafhængige egenvektorer for. Derfor kan $\,\mA\,$ ifølge sætning \ref{saet.diag} ikke diagonaliseres ved similartransformation. \bs 
+Hvis summen af de geometriske multipliciteter er mindre en $n$, findes der ikke $n$ lineÃ¦rt uafhÃ¦ngige egenvektorer for. Derfor kan $\,\mA\,$ ifÃ¸lge sÃ¦tning \ref{saet.diag} ikke diagonaliseres ved similartransformation. \bs 
 Ad. 4:
-Da der i følge \tref{NUID23-saet.reg}{sætning} pkt. 1 gælder at summen af de algebraiske multipliciteter højst er $n$, og da der ifølge samme sætning pkt. 2 for enhver egenværdi $\lambda$ gælder at $\,\mathrm{gm}(\lambda)\leq \mathrm{am}(\lambda)\,$, kan summen af de geometriske multipliciteter ikke blive $n$, hvis blot én af egenværdiernes geometriske multiplicitet er mindre end dens algebraiske. Derfor kan $\,\mA\,$ ifølge  det i netop beviste ikke diagonaliseres ved similartransformation.
+Da der i fÃ¸lge \tref{NUID23-saet.reg}{sÃ¦tning} pkt. 1 gÃ¦lder at summen af de algebraiske multipliciteter hÃ¸jst er $n$, og da der ifÃ¸lge samme sÃ¦tning pkt. 2 for enhver egenvÃ¦rdi $\lambda$ gÃ¦lder at $\,\mathrm{gm}(\lambda)\leq \mathrm{am}(\lambda)\,$, kan summen af de geometriske multipliciteter ikke blive $n$, hvis blot Ã©n af egenvÃ¦rdiernes geometriske multiplicitet er mindre end dens algebraiske. Derfor kan $\,\mA\,$ ifÃ¸lge  det i netop beviste ikke diagonaliseres ved similartransformation.
 %Ad. 5:
-%Hvis summen af de algebraiske multipliciteter er mindre end $n\,$, må summen af de geometriske i følge \tref{NUID23-saet.reg}{sætning} pkt. 2 også være mindre end $n\,$. Derfor kan $\,\mA\,$ ifølge sætning \ref{saet.diag} ikke diagonaliseres ved similartransformation. 
+%Hvis summen af de algebraiske multipliciteter er mindre end $n\,$, mÃ¥ summen af de geometriske i fÃ¸lge \tref{NUID23-saet.reg}{sÃ¦tning} pkt. 2 ogsÃ¥ vÃ¦re mindre end $n\,$. Derfor kan $\,\mA\,$ ifÃ¸lge sÃ¦tning \ref{saet.diag} ikke diagonaliseres ved similartransformation. 
 \end{bevis}
 
 
 \begin{info}
-Et typisk særtilfælde er at en kvadratisk $n\times n$-matrix har i alt $ n $ forskellige egenværdier. Sætning \ref{diagonaliserbarhed} pkt. 1 sikrer at alle matricer af denne type kan diagonaliseres ved similartransformation.
+Et typisk sÃ¦rtilfÃ¦lde er at en kvadratisk $n\times n$-matrix har i alt $ n $ forskellige egenvÃ¦rdier. SÃ¦tning \ref{diagonaliserbarhed} pkt. 1 sikrer at alle matricer af denne type kan diagonaliseres ved similartransformation.
 \end{info}
 
-I de følgende eksempler skal vi se, hvordan man konkret kan undersøge om diagonalisering ved similartransformation er mulig og i givet fald gennemføre den.
+I de fÃ¸lgende eksempler skal vi se, hvordan man konkret kan undersÃ¸ge om diagonalisering ved similartransformation er mulig og i givet fald gennemfÃ¸re den.
 
 \begin{example} \label{eks.firstdiag}
 Den kvadratiske matrix
 \begin{equation}
 \mA = \begin{matr}{rrr} 5 & 3 & 2 \\ 2 & 10 & 4 \\ 2 & 6 & 8 \end{matr}
 \end{equation}
-har egenværdierne $ \lambda_{1}=4 $ og $ \lambda_2 = 15\,.$ $ \mv_1 = (-2,0,1) $ og $ \mv_2 = (-3,1,0) $ er lineært uafhængige vektorer der hører til $ \lambda_{1}$ og $ \mv_3 = (1,2,2) $ er en egentlig egenvektor der hører til $ \lambda_{2}$. Det samlede sæt af de tre nævnte egenvektorer er lineært uafhængigt ifølge  \tref{NUID23-th.evLinUafh}{hjælpesætning}. Det er derfor ifølge sætning \ref{saet.diag} muligt at diagonalisere $ \mA $, fordi der findes $ n = 3 $ lineært uafhængige egenvektorer. Man kan derfor skrive at $ \mL = \mV^{-1} \mA \mV $, hvor
+har egenvÃ¦rdierne $ \lambda_{1}=4 $ og $ \lambda_2 = 15\,.$ $ \mv_1 = (-2,0,1) $ og $ \mv_2 = (-3,1,0) $ er lineÃ¦rt uafhÃ¦ngige vektorer der hÃ¸rer til $ \lambda_{1}$ og $ \mv_3 = (1,2,2) $ er en egentlig egenvektor der hÃ¸rer til $ \lambda_{2}$. Det samlede sÃ¦t af de tre nÃ¦vnte egenvektorer er lineÃ¦rt uafhÃ¦ngigt ifÃ¸lge  \tref{NUID23-th.evLinUafh}{hjÃ¦lpesÃ¦tning}. Det er derfor ifÃ¸lge sÃ¦tning \ref{saet.diag} muligt at diagonalisere $ \mA $, fordi der findes $ n = 3 $ lineÃ¦rt uafhÃ¦ngige egenvektorer. Man kan derfor skrive at $ \mL = \mV^{-1} \mA \mV $, hvor
 \begin{equation}
 \mL = \begin{matr}{rrr} \lambda_1 & 0 & 0 \\ 0 & \lambda_1 & 0 \\ 0 & 0 & \lambda_2 \end{matr} = \begin{matr}{rrr} 4 & 0 & 0 \\ 0 & 4 & 0 \\ 0 & 0 & 15 \end{matr} \quad \mathrm{og} \quad \mV = \begin{matr}{ccc} \mv_1 & \mv_2 & \mv_3 \end{matr} = \begin{matr}{rrr} -2 & -3 & 1 \\ 0 & 1 & 2 \\ 1 & 0 & 2 \end{matr}\,.
 \end{equation}
@@ -266,26 +266,26 @@ har egenværdierne $ \lambda_{1}=4 $ og $ \lambda_2 = 15\,.$ $ \mv_1 = (-2,0,1) $
 
 \section{Kompleks diagonalisering}
 
-Hvad vi indtil nu har sagt om similære matricer gælder generelt for kvadratiske, \textit{komplekse} matricer. Grundligningen for diagonalisering ved similartransformation: 
+Hvad vi indtil nu har sagt om similÃ¦re matricer gÃ¦lder generelt for kvadratiske, \textit{komplekse} matricer. Grundligningen for diagonalisering ved similartransformation: 
 \begin{equation*}\label{simLignKompl}
 \mV^{-1}\,\mA\,\mV=\mL,
 \end{equation*}
-skal derfor forstås i bredest mulig forstand, hvor matricerne $\,\mA,\,\mV\,$ og $\,\mL\,$ er komplekse $n\times n$-matricer. Indtil nu har vi indskrænket os til reelle eksempler, det vil sige eksempler hvor det har været muligt at opfylde grundligningen (\ref{simLignKompl})med reelle matricer. Vi vil i det følgende beskæftige os med en særlig situation, som er typisk i tekniske anvendelser af diagonalisering: Til en given \textit{reel} $n\times n$ matrix $\mA$ søges en regulær matrix $\mM$ og en diagonalmatrix $\mL$ som opfylder grundligningen i bred ramme hvor $\mM$ og $\mL$ muligvis er komplekse (ikke reelle) $n\times n$ matricer.\bs
+skal derfor forstÃ¥s i bredest mulig forstand, hvor matricerne $\,\mA,\,\mV\,$ og $\,\mL\,$ er komplekse $n\times n$-matricer. Indtil nu har vi indskrÃ¦nket os til reelle eksempler, det vil sige eksempler hvor det har vÃ¦ret muligt at opfylde grundligningen (\ref{simLignKompl})med reelle matricer. Vi vil i det fÃ¸lgende beskÃ¦ftige os med en sÃ¦rlig situation, som er typisk i tekniske anvendelser af diagonalisering: Til en given \textit{reel} $n\times n$ matrix $\mA$ sÃ¸ges en regulÃ¦r matrix $\mM$ og en diagonalmatrix $\mL$ som opfylder grundligningen i bred ramme hvor $\mM$ og $\mL$ muligvis er komplekse (ikke reelle) $n\times n$ matricer.\bs
 
-Det følgendee eksempel viser en reel $3 \times 3$ matrix som ikke kan diagonaliseres reelt fordi dens karakteristiske polynomium kun har én reel rod. Til gengæld kan den diagonailseres komplekst. 
+Det fÃ¸lgendee eksempel viser en reel $3 \times 3$ matrix som ikke kan diagonaliseres reelt fordi dens karakteristiske polynomium kun har Ã©n reel rod. Til gengÃ¦ld kan den diagonailseres komplekst. 
 
 \begin{example}[Kompleks diagonalisering af reel matrix] \label{eks.firstdiag}
 Den kvadratiske matrix
 \begin{equation}
 \mA = \begin{matr}{rrr} 2 & 0 & 5 \\ 0 & 0 & 1 \\ 0 & -1 & 0 \end{matr}
 \end{equation}
-har egenværdierne $ \lambda_{1}=2\,$, $ \lambda_2 = -i\,$ og $ \lambda_3 = i\,.$ $ \mv_1 =(1,0,0)$ er en egentlig egenvektor der hører til $ \lambda_{1}\,, $ $\mv_2 = (-2+i,i,1) $ en egentlig egenvektor der hører til $ \lambda_{2}\,, $ og $\mv_3 = (-2-i,-i,1) $ en egentlig egenvektor der hører til $ \lambda_{3}\,$. Det samlede sæt af de tre nævnte egenvektorer er lineært uafhængigt ifølge  \tref{NUID23-th.evLinUafh}{hjælpesætning}. Det er derfor ifølge sætning \ref{saet.diag} muligt at diagonalisere $ \mA $. Man kan derfor skrive $ \mL = \mV^{-1} \mA \mV $, hvor
+har egenvÃ¦rdierne $ \lambda_{1}=2\,$, $ \lambda_2 = -i\,$ og $ \lambda_3 = i\,.$ $ \mv_1 =(1,0,0)$ er en egentlig egenvektor der hÃ¸rer til $ \lambda_{1}\,, $ $\mv_2 = (-2+i,i,1) $ en egentlig egenvektor der hÃ¸rer til $ \lambda_{2}\,, $ og $\mv_3 = (-2-i,-i,1) $ en egentlig egenvektor der hÃ¸rer til $ \lambda_{3}\,$. Det samlede sÃ¦t af de tre nÃ¦vnte egenvektorer er lineÃ¦rt uafhÃ¦ngigt ifÃ¸lge  \tref{NUID23-th.evLinUafh}{hjÃ¦lpesÃ¦tning}. Det er derfor ifÃ¸lge sÃ¦tning \ref{saet.diag} muligt at diagonalisere $ \mA $. Man kan derfor skrive $ \mL = \mV^{-1} \mA \mV $, hvor
 \begin{equation}
 \mL = \begin{matr}{rrr} \lambda_1 & 0 & 0 \\ 0 & \lambda_2 & 0 \\ 0 & 0 & \lambda_3 \end{matr} = \begin{matr}{rrr} 2 & 0 & 0 \\ 0 & -i & 0 \\ 0 & 0 & i \end{matr} \quad \mathrm{og} \quad \mV = \begin{matr}{ccc} \mv_1 & \mv_2 & \mv_3 \end{matr} = \begin{matr}{ccc} 1 & -2+i & -2-i \\ 0 & i & -i \\ 0 & 1 & 1 \end{matr}\,.
 \end{equation}
 \end{example}
 
-Det næste eksempel viser en reel, kvadratisk matrix som ikke kan diagonaliseres, hverken reelt eller komplekst. 
+Det nÃ¦ste eksempel viser en reel, kvadratisk matrix som ikke kan diagonaliseres, hverken reelt eller komplekst. 
 
 
 \begin{example}[Ikke-diagonaliserbar kvadratisk matrix]
@@ -293,7 +293,7 @@ Givet den kvadratiske matrix
 \begin{equation}
 \mA = \begin{matr}{rrr} 4 & 1 & -2 \\ 1 & 4 & 1 \\ 0 & 0 & 3 \end{matr} \, ,
 \end{equation}
-og $ \mA $ har egenværdierne  $ \lambda_{1}= 3 $ og $ \lambda_3 = 5 $. Egenværdien $3$ har den algebraiske multiplicitet 2, men der kun vælges én lineært uafhængig egenvektor, for eksempel $ \mv_1 = (1,-1,0) $. Egenværdien har altså geometrisk multiplicitet 1. Derfor er det ifølge sætning \ref{saet.diag} ikke muligt at diagonalisere $ \mA $ ved similartransformation.
+og $ \mA $ har egenvÃ¦rdierne  $ \lambda_{1}= 3 $ og $ \lambda_3 = 5 $. EgenvÃ¦rdien $3$ har den algebraiske multiplicitet 2, men der kun vÃ¦lges Ã©n lineÃ¦rt uafhÃ¦ngig egenvektor, for eksempel $ \mv_1 = (1,-1,0) $. EgenvÃ¦rdien har altsÃ¥ geometrisk multiplicitet 1. Derfor er det ifÃ¸lge sÃ¦tning \ref{saet.diag} ikke muligt at diagonalisere $ \mA $ ved similartransformation.
 \end{example}
 
 \begin{exercise}
@@ -301,54 +301,54 @@ Til matricen
 \begin{equation}
 \mA = \begin{matr}{rr} 2 & 9 \\ 1 & -6 \end{matr}
 \end{equation}
-ønskes følgende bestemt:
+Ã¸nskes fÃ¸lgende bestemt:
 \begin{enumerate}
-\item Alle egenværdier og deres algebraiske multipliciteter.
-\item Samtlige tilhørende lineært uafhængige egenvektorer og derved egenværdiernes geometriske multipliciteter.
-\item Hvis det er muligt, skal $ \mA $ diagonaliseres: Bestem en diagonalmatrix $ \mL $ og en regulær matrix $ \mV $, hvorom der gælder, at $ \mV^{-1}\mA \mV = \mL $. Hvilke krav er der for at diagonaliseringen kan lade sig gøre? Hvilke tal og vektorer indgår i $ \mL $ og $ \mV\, $?
+\item Alle egenvÃ¦rdier og deres algebraiske multipliciteter.
+\item Samtlige tilhÃ¸rende lineÃ¦rt uafhÃ¦ngige egenvektorer og derved egenvÃ¦rdiernes geometriske multipliciteter.
+\item Hvis det er muligt, skal $ \mA $ diagonaliseres: Bestem en diagonalmatrix $ \mL $ og en regulÃ¦r matrix $ \mV $, hvorom der gÃ¦lder, at $ \mV^{-1}\mA \mV = \mL $. Hvilke krav er der for at diagonaliseringen kan lade sig gÃ¸re? Hvilke tal og vektorer indgÃ¥r i $ \mL $ og $ \mV\, $?
 \end{enumerate}
 \end{exercise}
 
-\section{Diagonalisering af lineære afbildninger}
-I indledningen til den eNote stillede vi spørgsmålet: Hvilke betingelser skal være opfyldt for at to givne kvadratiske matricer kan fortolkes som afbildningsmatricer for den samme lineære afbildning med hensyn til to forskellige baser? Svaret er enkelt:
+\section{Diagonalisering af lineÃ¦re afbildninger}
+I indledningen til den eNote stillede vi spÃ¸rgsmÃ¥let: Hvilke betingelser skal vÃ¦re opfyldt for at to givne kvadratiske matricer kan fortolkes som afbildningsmatricer for den samme lineÃ¦re afbildning med hensyn til to forskellige baser? Svaret er enkelt:
 
-\begin{theorem}[Similære matricer som afbildningsmatricer]\label{tn8.thSimilar2}
-Der er givet et $\,n$-dimensionalt vektorrum $V\,$. To $\,n\times n\,$ matricer $\mA$ og $\mB$ er afbildningsmatricer for den samme lineære afbildning $\,f:V\rightarrow V\,$ med hensyn til to forskellige baser for $V$, hvis og kun hvis  $\mA$ og $\mB$ er similære.
+\begin{theorem}[SimilÃ¦re matricer som afbildningsmatricer]\label{tn8.thSimilar2}
+Der er givet et $\,n$-dimensionalt vektorrum $V\,$. To $\,n\times n\,$ matricer $\mA$ og $\mB$ er afbildningsmatricer for den samme lineÃ¦re afbildning $\,f:V\rightarrow V\,$ med hensyn til to forskellige baser for $V$, hvis og kun hvis  $\mA$ og $\mB$ er similÃ¦re.
 \end{theorem}
 
 \begin{exercise}
-Bevis sætning \ref{tn8.thSimilar2}
+Bevis sÃ¦tning \ref{tn8.thSimilar2}
 \end{exercise}
 
-I indledningen spurgte vi også: Og hvilke betingelser skal en kvadratisk matrix opfylde for at den er afbildningsmatrix for en lineær afbildning, som i en anden basis har en diagonalmatrix som afbildningsmatrix? Svaret fremgår af sætning \ref{saet.diag} kombineret med sætning \ref{tn8.thSimilar2}: Matricen skal have $n$ lineært uafhængige egenvektorer.\bs
+I indledningen spurgte vi ogsÃ¥: Og hvilke betingelser skal en kvadratisk matrix opfylde for at den er afbildningsmatrix for en lineÃ¦r afbildning, som i en anden basis har en diagonalmatrix som afbildningsmatrix? Svaret fremgÃ¥r af sÃ¦tning \ref{saet.diag} kombineret med sÃ¦tning \ref{tn8.thSimilar2}: Matricen skal have $n$ lineÃ¦rt uafhÃ¦ngige egenvektorer.\bs
 
-Vi slutter eNoten af med et eksempel på diagonalisering af en lineær afbildning, det vil sige finder en passende basis med hensym til hvilken der afbildningsmatrix er en diagonalmatrix.
+Vi slutter eNoten af med et eksempel pÃ¥ diagonalisering af en lineÃ¦r afbildning, det vil sige finder en passende basis med hensym til hvilken der afbildningsmatrix er en diagonalmatrix.
 
-\begin{example}[Diagonalisering af lineær afbildning]
-En lineær afbildning $ f: P_1(\reel) \rightarrow P_1(\reel) $ er givet med følgende afbildningsmatrix med hensyn til standard monomiebasis m:
+\begin{example}[Diagonalisering af lineÃ¦r afbildning]
+En lineÃ¦r afbildning $ f: P_1(\reel) \rightarrow P_1(\reel) $ er givet med fÃ¸lgende afbildningsmatrix med hensyn til standard monomiebasis m:
 \begin{equation}
 \matind mFm = \begin{matr}{rr} -17 & -21 \\ 14 & 18 \end{matr}
 \end{equation}
-Det betyder, at $ f(1) = -17 + 14x $ og $ f(x) = -21 + 18x $. Det ønskes undersøgt, om der findes en (reel) egenbasis for $ f $ og i bekræftende tilfælde, hvordan afbildningsmatricen ser ud med hensyn til denne basis, og hvad basisvektorerne er. \bs
-Egenværdierne til $ \matind mFm $ bestemmes:
+Det betyder, at $ f(1) = -17 + 14x $ og $ f(x) = -21 + 18x $. Det Ã¸nskes undersÃ¸gt, om der findes en (reel) egenbasis for $ f $ og i bekrÃ¦ftende tilfÃ¦lde, hvordan afbildningsmatricen ser ud med hensyn til denne basis, og hvad basisvektorerne er. \bs
+EgenvÃ¦rdierne til $ \matind mFm $ bestemmes:
 \begin{equation}
 \det\!\left(\begin{matr}{cc} -17-\lambda & -21 \\ 14 & 18-\lambda \end{matr}\right) = \lambda^2-\lambda-12 = (\lambda+3)(\lambda-4) = 0\,.
 \end{equation}
-Det er allerede nu muligt at bekræfte, at der findes en reel egenbasis til $ f $, da der findes $ 2 = \dim(P_2(\reel)) $ egenværdier, nemlig $ \lambda_1 = -3 $ og $ \lambda_2 = 4 $, som hver har algebraisk multiplicitet 1. Egenvektorer til $ \lambda_1 $ bestemmes:
+Det er allerede nu muligt at bekrÃ¦fte, at der findes en reel egenbasis til $ f $, da der findes $ 2 = \dim(P_2(\reel)) $ egenvÃ¦rdier, nemlig $ \lambda_1 = -3 $ og $ \lambda_2 = 4 $, som hver har algebraisk multiplicitet 1. Egenvektorer til $ \lambda_1 $ bestemmes:
 \begin{equation}
 \begin{matr}{cc|c} -17+3 & -21 & 0 \\ 14 & 18+3 & 0 \end{matr} \rightarrow \begin{matr}{rr|c} 1 & \frac{3}{2} & 0 \\ 0 & 0 & 0 \end{matr}
 \end{equation}
-Det giver en egenvektor $ \vekind mv_1 = (-3,2) $, hvis den frie parameter sættes til 2. Tilsvarende fås den anden egenvektor:
+Det giver en egenvektor $ \vekind mv_1 = (-3,2) $, hvis den frie parameter sÃ¦ttes til 2. Tilsvarende fÃ¥s den anden egenvektor:
 \begin{equation}
 \begin{matr}{cc|c} -17-4 & -21 & 0 \\ 14 & 18-4 & 0 \end{matr} \rightarrow \begin{matr}{cc|c} 1 & 1 & 0 \\ 0 & 0 & 0 \end{matr}
 \end{equation}
-Det giver en egenvektor $ \vekind mv_2 = (-1,1) $, hvis den frie parameter sættes til 1. \bs
-Der findes altså en reel egenbasis v til $ f $, der er givet med basisvektorerne $ \vekind mv_1 $ og $ \vekind mv_2 $. Vi har da at
+Det giver en egenvektor $ \vekind mv_2 = (-1,1) $, hvis den frie parameter sÃ¦ttes til 1. \bs
+Der findes altsÃ¥ en reel egenbasis v til $ f $, der er givet med basisvektorerne $ \vekind mv_1 $ og $ \vekind mv_2 $. Vi har da at
 \begin{equation}
 \matind mMv = \begin{matr}{rr} -3 & -1 \\ 2 & 1 \end{matr} \quad \mathrm{og} \quad \matind vFv = \begin{matr}{rr} -3 & 0 \\ 0 & 4 \end{matr}
 \end{equation}
-Basen består af vektorerne $ \mv_1 = -3 + 2x $ og $ \mv_2 = -1 + x $ og afbildningen er meget ``simpel'' med hensyn til denne basis. \bs
-Man kan gøre prøve med afbildningen af $ \mv_1 $:
+Basen bestÃ¥r af vektorerne $ \mv_1 = -3 + 2x $ og $ \mv_2 = -1 + x $ og afbildningen er meget ``simpel'' med hensyn til denne basis. \bs
+Man kan gÃ¸re prÃ¸ve med afbildningen af $ \mv_1 $:
 \begin{equation}
 \begin{aligned}
 f(\mv_1) &= f(-3 + 2x) = -3 \cdot f(1) + 2 \cdot f(x) \\

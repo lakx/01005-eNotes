@@ -1,10 +1,10 @@
 \input{../Strukturfiler/preambel}
-\setcounter{chapter}{29} %SÆT DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
+\setcounter{chapter}{29} %SÃ†T DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% HERFRA SKAL DU SKRIVE ELLER INDSÆTTE %%%%
-%%% DEN FIL DU ØNSKER %%%%%%%%%%%%%%%%%%%%%%%
+%%% HERFRA SKAL DU SKRIVE ELLER INDSÃ†TTE %%%%
+%%% DEN FIL DU Ã˜NSKER %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Polynomier} \label{tn29}
@@ -15,112 +15,112 @@
 
 
 \begin{basis}
-I denne eNote introduceres og undersøges talmængden $\mathbb C\,$, de komplekse tal. Da $\mathbb C\,$ betragtes som en udvidelse af $\mathbb R\,$ forudsætter eNoten almindeligt kendskab til de reelle tal, herunder de elementære reelle funktioner som de trigonometriske funktioner og den naturlige eksponentialfunktion. Kendskab til vektorer i planen vil også være en fordel.
+I denne eNote introduceres og undersÃ¸ges talmÃ¦ngden $\mathbb C\,$, de komplekse tal. Da $\mathbb C\,$ betragtes som en udvidelse af $\mathbb R\,$ forudsÃ¦tter eNoten almindeligt kendskab til de reelle tal, herunder de elementÃ¦re reelle funktioner som de trigonometriske funktioner og den naturlige eksponentialfunktion. Kendskab til vektorer i planen vil ogsÃ¥ vÃ¦re en fordel.
 \end{basis}
 
 \section{Indledning}
 
 En binom andengradsligning som
 $$x^2=25$$
-har to reelle løsninger, nemlig
+har to reelle lÃ¸sninger, nemlig
 $$x=5\,\,\,\mathrm{og}\,\,\,x=-5$$
 idet
 $$5^2=25\,\,\,\mathrm{og}\,\,\,(-5)^2=25\,.$$ 
 
 \input{../Strukturfiler/postambel} 
 
-På tilsvarende vis har ligningen
+PÃ¥ tilsvarende vis har ligningen
 $$x^2=2$$
- to løsninger, nemlig
+ to lÃ¸sninger, nemlig
 $$x=\sqrt 2\,\,\,\mathrm{og}\,\,\,x=-\sqrt 2$$
 idet
 $$\sqrt 2\,^2=2\,\,\,\mathrm{og}\,\,\,{(-\sqrt 2)}\,^2=2\,.$$
 Med ligningen 
 $$x^2=k\,\,,\,\,k\in\reel$$
-skal vi passe mere på, her afhænger alt nemlig af fortegnet på $k\,$. Hvis $k\geq 0$ har ligningen løsningerne 
+skal vi passe mere pÃ¥, her afhÃ¦nger alt nemlig af fortegnet pÃ¥ $k\,$. Hvis $k\geq 0$ har ligningen lÃ¸sningerne 
 $$x=\sqrt k\,\,\,\mathrm{og}\,\,\,x=-\sqrt k$$
 idet
 $$\sqrt k\,^2=k\,\,\,\mathrm{og}\,\,\,{(-\sqrt k})\,^2=k\,.$$
-Men hvis $k<0\,$, har ligningen ingen løsninger, da der ikke findes reelle tal hvis kvadrat er negativt. \bs 
-Men nu stiller vi os det spørgsmål, om man kunne forestille sig en større mængde af tal end de reelle, en mængde der indeholder alle de reelle reelle tal og derudover også løsninger på en ligning som 
+Men hvis $k<0\,$, har ligningen ingen lÃ¸sninger, da der ikke findes reelle tal hvis kvadrat er negativt. \bs 
+Men nu stiller vi os det spÃ¸rgsmÃ¥l, om man kunne forestille sig en stÃ¸rre mÃ¦ngde af tal end de reelle, en mÃ¦ngde der indeholder alle de reelle reelle tal og derudover ogsÃ¥ lÃ¸sninger pÃ¥ en ligning som 
 $$x^2=-1\,.$$
-Ligningen måtte da i analogi med de ovenstående ligninger have to løsninger
+Ligningen mÃ¥tte da i analogi med de ovenstÃ¥ende ligninger have to lÃ¸sninger
 $$x=\sqrt{-1} \,\,\,\mathrm{og}\,\,\,x=-\sqrt{-1}\,.$$
-Lad os være dristige og antage at dette faktisk er muligt, og kalde tallet $\sqrt{-1}$ for $i\,$. Ligningen
+Lad os vÃ¦re dristige og antage at dette faktisk er muligt, og kalde tallet $\sqrt{-1}$ for $i\,$. Ligningen
 $$x^2=-1$$
-har da to løsninger, nemlig
+har da to lÃ¸sninger, nemlig
 $$x=i\,\,\,\mathrm{og}\,\,\,x=-i$$
 idet
 $$i^2={\sqrt{-1}}\,^2=-1\,\,\,\mathrm{og}\,\,\,(-i)^2={(-\sqrt{-1}\,)}\,^2=-1\,.$$
-Vi stiller nu det ekstra krav til det hypotetiske tal $\,i\,$ at man skal kunne regne med det efter de samme regneregler som gælder de reelle tal. Man skal for eksempel kunne gange $i$ med et reelt tal $b$ og lægge denne størrelse til et andet reelt tal $a$ til. Herved opstår en ny slags tal $z$ af typen 
+Vi stiller nu det ekstra krav til det hypotetiske tal $\,i\,$ at man skal kunne regne med det efter de samme regneregler som gÃ¦lder de reelle tal. Man skal for eksempel kunne gange $i$ med et reelt tal $b$ og lÃ¦gge denne stÃ¸rrelse til et andet reelt tal $a$ til. Herved opstÃ¥r en ny slags tal $z$ af typen 
 $$z=a+ib\,\,,\,\,(a,b)\in \mathbb R^2\,.$$
-Nedenfor beskriver vi hvordan de nævnte ambitioner kan imødekommes. Vi ser på hvordan strukturen af en sådan større talmængde må være, og hvilke lovmæssigheder den indeholder. Talmængden kalder vi \textit{de komplekse tal} og giver den symbolet $\mathbb C\,$. Der skal altså gælde at $\mathbb R$ er en ægte delmængde af $\mathbb C\,$. Som allerede antydet må $\mathbb C\,$ være \textit{to-dimensional}!
+Nedenfor beskriver vi hvordan de nÃ¦vnte ambitioner kan imÃ¸dekommes. Vi ser pÃ¥ hvordan strukturen af en sÃ¥dan stÃ¸rre talmÃ¦ngde mÃ¥ vÃ¦re, og hvilke lovmÃ¦ssigheder den indeholder. TalmÃ¦ngden kalder vi \textit{de komplekse tal} og giver den symbolet $\mathbb C\,$. Der skal altsÃ¥ gÃ¦lde at $\mathbb R$ er en Ã¦gte delmÃ¦ngde af $\mathbb C\,$. Som allerede antydet mÃ¥ $\mathbb C\,$ vÃ¦re \textit{to-dimensional}!
 
-\section{Indføring af komplekse tal}
+\section{IndfÃ¸ring af komplekse tal}
 
-I det følgende vil vi betragte ethvert talpar $(a,b)\in \reel^2$ som et tal, et \textit{komplekst} tal. Geometrisk vil det sige at der til ethvert punkt i $(x,y)$-planen svarer et unikt komplekst tal. På figur 29.1 er vist seks punkter, det vil sige seks komplekse tal. 
+I det fÃ¸lgende vil vi betragte ethvert talpar $(a,b)\in \reel^2$ som et tal, et \textit{komplekst} tal. Geometrisk vil det sige at der til ethvert punkt i $(x,y)$-planen svarer et unikt komplekst tal. PÃ¥ figur 29.1 er vist seks punkter, det vil sige seks komplekse tal. 
 
 \begin{center}
 	\includegraphics[trim=3cm 9.5cm 3cm 9.5cm,width=0.5\textwidth,clip]{Geometer/KompleksPlan1.pdf}\\
 Figur 29.1: Seks komplekse tal i $(x,y)$-planen.		
 \end{center}
 
-Vi vil nu ændre skrivemåden for de komplekse tal, idet vi indsætter dem i den komplekse talplan hvis førsteakse vi kalder \textit{realaksen} og andenakse for \textit{imaginæraksen}. Ændringen gennemføres således:
+Vi vil nu Ã¦ndre skrivemÃ¥den for de komplekse tal, idet vi indsÃ¦tter dem i den komplekse talplan hvis fÃ¸rsteakse vi kalder \textit{realaksen} og andenakse for \textit{imaginÃ¦raksen}. Ã†ndringen gennemfÃ¸res sÃ¥ledes:
 \begin{enumerate}
 \item
-Alle komplekse tal af typen $(a,0)$, det vil sige de tal der ligger på realaksen, skrives som $a\,$. 
+Alle komplekse tal af typen $(a,0)$, det vil sige de tal der ligger pÃ¥ realaksen, skrives som $a\,$. 
 \item
-Det komplekse tal $(0,1)$ skrives som $i\,$. Bogstavet $i$ kaldes den \textit{imaginære} enhed.
+Det komplekse tal $(0,1)$ skrives som $i\,$. Bogstavet $i$ kaldes den \textit{imaginÃ¦re} enhed.
 \item
-Alle komplekse tal af typen $(0,b)$, det vil sige de tal der ligger på imaginæraksen, skrives som $i\cdot b$ eller alternativt $b\cdot i$. Ofte udelades gangetegnet, så der blot skrives $ib$ eller $bi$. Hvis $b=0\,$, er $ib=0\,$. 
+Alle komplekse tal af typen $(0,b)$, det vil sige de tal der ligger pÃ¥ imaginÃ¦raksen, skrives som $i\cdot b$ eller alternativt $b\cdot i$. Ofte udelades gangetegnet, sÃ¥ der blot skrives $ib$ eller $bi$. Hvis $b=0\,$, er $ib=0\,$. 
 \item
-Alle komplekse tal af typen $(a,b)$ skrives som $a+i\cdot b$ eller alternativt $a+b\cdot i\,$. Også her kan gangetegnet udelades.
+Alle komplekse tal af typen $(a,b)$ skrives som $a+i\cdot b$ eller alternativt $a+b\cdot i\,$. OgsÃ¥ her kan gangetegnet udelades.
 \end{enumerate}
-På figur 29.2 ses en opdatering af situationen fra figur 29.1 med de nævnte ændringer.
+PÃ¥ figur 29.2 ses en opdatering af situationen fra figur 29.1 med de nÃ¦vnte Ã¦ndringer.
 
 \begin{center}
 	\includegraphics[trim=3cm 9.5cm 3cm 9.5cm,width=0.5\textwidth,clip]{Geometer/KompleksPlan2.pdf}\\
 Figur 29.2: Seks komplekse tal i den komplekse talplan.		
 \end{center}
 
-\begin{definition}[Komplekse tals rektangulære form]
-Ved et komplekst tal $z$ forstås et talpar $(a,b)\in \reel^2$. Mængden af komplekse tal betegnes $\mathbb C\,.$\bs
-Det komplekse tal $(0,1)$ tildeles symbolet $i$.\bs Standardskrivemåden for det komplekse tal $z=(a,b)$ er 
- $z=a+ib$ eller alternativt $z=a+bi$. Den kaldes det komplekse tals \textit{rektangulære} form.\bs
-Bemærk følgende forkortede skrivemåder: $(a,0)$ skrives blot som $a$ og $(0,b)$ som $ib=bi$. Endvidere: $0i=i0=0\,,\,1i=i1=i\,,\,(-1)i=i(-1)=-i$ og for $k>0:$ $(-k)i=i(-k)=-ik=-ki\,$.
+\begin{definition}[Komplekse tals rektangulÃ¦re form]
+Ved et komplekst tal $z$ forstÃ¥s et talpar $(a,b)\in \reel^2$. MÃ¦ngden af komplekse tal betegnes $\mathbb C\,.$\bs
+Det komplekse tal $(0,1)$ tildeles symbolet $i$.\bs StandardskrivemÃ¥den for det komplekse tal $z=(a,b)$ er 
+ $z=a+ib$ eller alternativt $z=a+bi$. Den kaldes det komplekse tals \textit{rektangulÃ¦re} form.\bs
+BemÃ¦rk fÃ¸lgende forkortede skrivemÃ¥der: $(a,0)$ skrives blot som $a$ og $(0,b)$ som $ib=bi$. Endvidere: $0i=i0=0\,,\,1i=i1=i\,,\,(-1)i=i(-1)=-i$ og for $k>0:$ $(-k)i=i(-k)=-ik=-ki\,$.
 \end{definition}
 
 
 \begin{example}[Den komplekse talplan]
-Vi indsætter de komplekse tal $-2,\,0,\,1,\,i,\,2-i,\,1+2i,-2+3i$ og $-1-2i$ i den komplekse talplan:
+Vi indsÃ¦tter de komplekse tal $-2,\,0,\,1,\,i,\,2-i,\,1+2i,-2+3i$ og $-1-2i$ i den komplekse talplan:
 \begin{center}
 	\includegraphics[trim=3cm 8cm 3cm 8cm,width=0.5\textwidth,clip]{Geometer/KompleksPlan3.pdf}\\
-Figur 29.3: Eksempler på komplekse tal 
+Figur 29.3: Eksempler pÃ¥ komplekse tal 
 \end{center}
 \end{example}
 
-\begin{definition}[Realdel og Imaginærdel]
+\begin{definition}[Realdel og ImaginÃ¦rdel]
  
-Ved \textit{realdelen} af det komplekse tal $z=(a,b)$ forstås det reelle tal
+Ved \textit{realdelen} af det komplekse tal $z=(a,b)$ forstÃ¥s det reelle tal
 \begin{equation}
 \mathrm{Re}(z)=\mathrm{Re}(a+ib)=a\,, 
 \end{equation}
-og ved \textit{imaginærdelen} forstås det reelle tal
+og ved \textit{imaginÃ¦rdelen} forstÃ¥s det reelle tal
 \begin{equation}
 \mathrm{Im}(z)=\mathrm{Im}(a+ib)=b\,.
 \end{equation}
 \end{definition}
 
 \begin{aha}
-Ethvert komplekst tal $z$ kan opskrives på rektangulær form således
+Ethvert komplekst tal $z$ kan opskrives pÃ¥ rektangulÃ¦r form sÃ¥ledes
 $$z=\mathrm{Re}(z)+i\mathrm{Im}(z)\,.$$
 \end{aha}
 
-\begin{example}[Realværdi og Imaginærværdi]
+\begin{example}[RealvÃ¦rdi og ImaginÃ¦rvÃ¦rdi]
 
 Tre komplekse tal er givet ved:
 $$z_1=3-2i\,,\,\,z_2=i5\,,\, z_3=25+i\,.$$
-Vi finder realdelen og imaginærdelen af tallene:
+Vi finder realdelen og imaginÃ¦rdelen af tallene:
 \begin{equation}
 \mathrm{Re}(z_1)=3\,,\,\mathrm{Im}(z_1)=-2\,,\,
 \mathrm{Re}(z_2)=0\,,\,\mathrm{Im}(z_2)=5\,,\,
@@ -129,9 +129,9 @@ Vi finder realdelen og imaginærdelen af tallene:
 \end{example}
 
 \section{Regning med komplekse tal}
-Det karakteristiske ved de størrelser vi kalder tal, er at vi kan regne med dem i over\-ensstemmelse
+Det karakteristiske ved de stÃ¸rrelser vi kalder tal, er at vi kan regne med dem i over\-ensstemmelse
 med de fire klassiske regningsarter (addition, subtraktion, multiplikation og division).
-Vi må derfor definere disse regningsarter for de komplekse tal og starter med at indføre
+Vi mÃ¥ derfor definere disse regningsarter for de komplekse tal og starter med at indfÃ¸re
 sum og differens.
  
 \begin{definition}[Sum og differens af komplekse tal]\label{tn29_sum}
@@ -146,13 +146,13 @@ z_1-z_2=(a-c)+i(b-d)\,.
 \end{equation}
 \end{definition}
 \begin{aha}
-En stor fordel ved $a+ib$ formen af komplekse tal er at man ikke behøver huske formlerne i definition \ref{tn29_sum}! Men kan nemlig addere og subtrahere komplekse tal på samme måde som reelle tal, når blot $i$ behandles efter de samme regler som ville gælde en reel konstant. Den indførte sum kan nemlig udregnes ved ''sædvanlige'' regneregler således:
+En stor fordel ved $a+ib$ formen af komplekse tal er at man ikke behÃ¸ver huske formlerne i definition \ref{tn29_sum}! Men kan nemlig addere og subtrahere komplekse tal pÃ¥ samme mÃ¥de som reelle tal, nÃ¥r blot $i$ behandles efter de samme regler som ville gÃ¦lde en reel konstant. Den indfÃ¸rte sum kan nemlig udregnes ved ''sÃ¦dvanlige'' regneregler sÃ¥ledes:
 $$z_1+z_2=(a+ib)+(c+id)=(a+c)+(ib+id)=(a+c)+i(b+d),$$
-og den indførte differens tilsvarende:
+og den indfÃ¸rte differens tilsvarende:
 $$z_1-z_2=(a+ib)-(c+id)=(a-c)+(ib-id)=(a-c)+i(b-d)\,.$$
 \end{aha}
 \begin{example}
-Det bemærkes at addition og subtraktion i den komplekse talplan svarer til addition og subtraktion af vektorer i planen. I figur 29.4 er et eksempel på addition ved parallelogram-metoden:
+Det bemÃ¦rkes at addition og subtraktion i den komplekse talplan svarer til addition og subtraktion af vektorer i planen. I figur 29.4 er et eksempel pÃ¥ addition ved parallelogram-metoden:
 \begin{center}
 	\includegraphics[trim=3cm 9cm 3cm 10cm,width=0.5\textwidth,clip]{Geometer/KompleksPlan4.pdf}\\
 Figur 29.4: Addition ved parallelogram-metoden 
@@ -161,7 +161,7 @@ Figur 29.4: Addition ved parallelogram-metoden
 
 
 \begin{definition}[Multiplikation af komplekse tal]\label{tn29_produkt}
-Vi definerer først kvadratet på den imaginære enhed $i\,$:
+Vi definerer fÃ¸rst kvadratet pÃ¥ den imaginÃ¦re enhed $i\,$:
 $$i^2=i\cdot i =-1\,.$$
 Lad $z_1=a+ib$ og $z_2=c+id$.\bs
 Produktet $z_1\,z_2$ defineres ved
@@ -170,70 +170,70 @@ z_1\,z_2=z_1\cdot z_2= (ac-bd)+i(ad+bc)\,.
 \end{equation}
 \end{definition}
 \begin{aha}
-Bemærk at man strengt taget ikke behøver huske formel (\ref{tn29_produkt1}). Vi kan  multiplicere  komplekse tal på samme måde som reelle tal, når blot $i$ behandles efter de samme regler som ville gælde en reel konstant, og det huskes at $i^2=-1$. Det indførte produkt kan nemlig udregnes ved ''sædvanlige'' regneregler således:
+BemÃ¦rk at man strengt taget ikke behÃ¸ver huske formel (\ref{tn29_produkt1}). Vi kan  multiplicere  komplekse tal pÃ¥ samme mÃ¥de som reelle tal, nÃ¥r blot $i$ behandles efter de samme regler som ville gÃ¦lde en reel konstant, og det huskes at $i^2=-1$. Det indfÃ¸rte produkt kan nemlig udregnes ved ''sÃ¦dvanlige'' regneregler sÃ¥ledes:
 $$z_1z_2=(a+ib)(c+id)=ac+iad+ibc+i^2bd$$
 $$=(ac-bd)+i(ad+bc)\,.$$
 \end{aha}
 
 \begin{definition}[Division af komplekse tal]\label{tn29_broek}
-Lad $z_1=a+ib$ og $z_2=c+id\,$, hvor ikke både $c$ og $d$ er lig med $0$.\bs
-Brøken $\,\displaystyle{\frac{z_1}{z_2}}\,$ defineres ved 
+Lad $z_1=a+ib$ og $z_2=c+id\,$, hvor ikke bÃ¥de $c$ og $d$ er lig med $0$.\bs
+BrÃ¸ken $\,\displaystyle{\frac{z_1}{z_2}}\,$ defineres ved 
 \begin{equation}\label{tn29_broek1}
 \frac{z_1}{z_2}=\frac{ac+bd}{c^2+d^2}+i\,\frac{bc-ad}{c^2+d^2}\,.
 \end{equation}
 \end{definition}
 
 \begin{aha}
-Heller ikke ved division behøver man huske formlen.  Division af komplekse tal kan udføres ved hjælp af ``sædvanlige'' regneregler for reelle tal, når blot $i$ behandles efter de samme regler som ville gælde en reel konstant, og det huskes at $i^2=-1$. Den indførte division (\ref{tn29_broek1}) kan nemlig udregnes således:\\
+Heller ikke ved division behÃ¸ver man huske formlen.  Division af komplekse tal kan udfÃ¸res ved hjÃ¦lp af ``sÃ¦dvanlige'' regneregler for reelle tal, nÃ¥r blot $i$ behandles efter de samme regler som ville gÃ¦lde en reel konstant, og det huskes at $i^2=-1$. Den indfÃ¸rte division (\ref{tn29_broek1}) kan nemlig udregnes sÃ¥ledes:\\
 $$\frac{z_1}{z_2}=\frac{a+ib}{c+id}
 =\frac{(a+ib)(c-id)}{(c+id)(c-id)}$$
 $$=\frac{(ac+bd)+i(bc-ad)}{c^2+d^2}
 =\frac{ac+bd}{c^2+d^2}+i\,\frac{bc-ad}{c^2+d^2}\,.$$
 \end{aha}
 
-Efter indføringen af de fire sædvanlige regnearter for komplekse tal, kan vi nu præcisere sammenhængen mellem de reelle tal og de komplekse. Da vi har valgt at skrive tal på formen $a+i0$ som $a\,$, ligner alle de komplekse tal der ligger på realaksen, almindelige reelle tal. Realaksen er simpelthen en almindelig reel talakse. De regnearter vi har indført for komplekse tal, stemmer for alle tal på realaksen overens med de sædvanlige regnearter for reelle tal. Lad os eksemplificere dette med multiplikation.\bs
-To komplekse tal er på rektangulær form givet ved $a$ og $c\,$. Vi udregner deres produkt ved hjælp af (\ref{tn29_produkt1}):
+Efter indfÃ¸ringen af de fire sÃ¦dvanlige regnearter for komplekse tal, kan vi nu prÃ¦cisere sammenhÃ¦ngen mellem de reelle tal og de komplekse. Da vi har valgt at skrive tal pÃ¥ formen $a+i0$ som $a\,$, ligner alle de komplekse tal der ligger pÃ¥ realaksen, almindelige reelle tal. Realaksen er simpelthen en almindelig reel talakse. De regnearter vi har indfÃ¸rt for komplekse tal, stemmer for alle tal pÃ¥ realaksen overens med de sÃ¦dvanlige regnearter for reelle tal. Lad os eksemplificere dette med multiplikation.\bs
+To komplekse tal er pÃ¥ rektangulÃ¦r form givet ved $a$ og $c\,$. Vi udregner deres produkt ved hjÃ¦lp af (\ref{tn29_produkt1}):
 $$
 a\cdot c=(a+i\cdot0)(c+i\cdot0)=(a\cdot c-0\cdot0)+i(a\cdot0+0\cdot c)=a\cdot c+i\cdot0=a\cdot c\,.
 $$
-På tilsvarende vis vises at de indførte definitioner på kompleks addition, subtraktion og division på realaksen stemmer overens med de reelle.\bs
+PÃ¥ tilsvarende vis vises at de indfÃ¸rte definitioner pÃ¥ kompleks addition, subtraktion og division pÃ¥ realaksen stemmer overens med de reelle.\bs
 Derfor kan de komplekse tal betragtes som en \textit{udvidelse} eller \textit{generalisering} af de reelle tal.
 
 
-\section{Polære koordinater}
-Den oplagte måde at angive et punkt i et sædvanligt
-$(x,y)$-koordinatsystem på, er naturligvis punktets rektangulære koordinater. I mange situationer er det imidlertid nyttigt at kunne bestemme et punkt ved dets \textit{polære koordinater}, som består af punktets afstand til Origo samt punktets \textit{retningsvinkel} fra $x$-aksen til forbindelseslinjen mellem Origo og punktet, idet den regnes positiv hvis den udmåles mod uret, og negativ hvis den udmåles med uret.\bs
+\section{PolÃ¦re koordinater}
+Den oplagte mÃ¥de at angive et punkt i et sÃ¦dvanligt
+$(x,y)$-koordinatsystem pÃ¥, er naturligvis punktets rektangulÃ¦re koordinater. I mange situationer er det imidlertid nyttigt at kunne bestemme et punkt ved dets \textit{polÃ¦re koordinater}, som bestÃ¥r af punktets afstand til Origo samt punktets \textit{retningsvinkel} fra $x$-aksen til forbindelseslinjen mellem Origo og punktet, idet den regnes positiv hvis den udmÃ¥les mod uret, og negativ hvis den udmÃ¥les med uret.\bs
 
-I det følgende indfører vi på tilsvarende vis polære koordinater for komplekse tal. Lad os først præcisere en orientering af den komplekse talplan:
+I det fÃ¸lgende indfÃ¸rer vi pÃ¥ tilsvarende vis polÃ¦re koordinater for komplekse tal. Lad os fÃ¸rst prÃ¦cisere en orientering af den komplekse talplan:
 
 \begin{definition}[Orientering af den komplekse talplan]
-Orientering af den komplekse talplan fastlægges ved at en cirkel med centrum i tallet $0$ gennemløbes \textit{mod uret}.
+Orientering af den komplekse talplan fastlÃ¦gges ved at en cirkel med centrum i tallet $0$ gennemlÃ¸bes \textit{mod uret}.
 \begin{center}
 	\includegraphics[trim=3cm 10.8cm 3cm 10.6cm,width=0.44\textwidth,clip]{Geometer/orientering.pdf}\\
 Figur 29.5: Den komplekse talplans orientering		
 \end{center}
 \end{definition}
 
-Ingredienserne i polære koordinater for et komplekst tal er tallets absolutværdi og tallets argument. Dem indfører vi nu.
+Ingredienserne i polÃ¦re koordinater for et komplekst tal er tallets absolutvÃ¦rdi og tallets argument. Dem indfÃ¸rer vi nu.
 
-\begin{definition}[Absolutværdi og argument]
+\begin{definition}[AbsolutvÃ¦rdi og argument]
 Givet et komplekst tal $z\,$.\bs 
-Ved \textit{absolutværdien} af $z$ forstås afstanden fra Origo til $z\,$. Absolutværdien skrives $|\,z\,|$ og kaldes også for $z$'s \textit{modulus} eller \textit{numeriske værdi}.\bs
+Ved \textit{absolutvÃ¦rdien} af $z$ forstÃ¥s afstanden fra Origo til $z\,$. AbsolutvÃ¦rdien skrives $|\,z\,|$ og kaldes ogsÃ¥ for $z$'s \textit{modulus} eller \textit{numeriske vÃ¦rdi}.\bs
 Antag $z\neq 0\,$. Enhver vinkel fra realaksens positive del til forbindelseslinjen mellem Origo og $z$ kaldes et \textit{argument} for $z$ og betegnes arg$(z)\,$. Vinklen regnes med fortegn i overensstemmelse med orienteringen af den komplekse talplan.
 \begin{center}
 	\includegraphics[trim=3cm 12cm 3cm 11.5cm,width=0.5\textwidth,clip]{Geometer/polar.pdf}\\
-Figur 29.6: Absolutværdi og argument
+Figur 29.6: AbsolutvÃ¦rdi og argument
 \end{center}
-Et sammenhørende par $$\big(\,|\,z\,|\,,\mathrm{arg}(z)\,\big )$$ af absolutværdien af $z$ og et argument for $z$  kaldes for \textit{polære koordinater} for $z\,$.
+Et sammenhÃ¸rende par $$\big(\,|\,z\,|\,,\mathrm{arg}(z)\,\big )$$ af absolutvÃ¦rdien af $z$ og et argument for $z$  kaldes for \textit{polÃ¦re koordinater} for $z\,$.
 \end{definition}
 
-Bemærk at argumentet for et tal $z$ ikke er entydigt. Hvis man for eksempel til et valgt\- argument for $z$ lægger vinklen $2\pi\,$, opnår man igen en gyldig retningsvinkel for halvlinjen fra $0$ til $z$ og dermed et nyt argument for tallet. Således ses at $z$ har uendeligt mange argumenter.\bs
-Man kan imidlertid altid vælge et argument for $z$ som ligger i intervallet fra $-\pi$ til $\pi$. Der er tradition for at give dette argument en fortrinsstilling, det kaldes for tallets hovedargument.\bs
+BemÃ¦rk at argumentet for et tal $z$ ikke er entydigt. Hvis man for eksempel til et valgt\- argument for $z$ lÃ¦gger vinklen $2\pi\,$, opnÃ¥r man igen en gyldig retningsvinkel for halvlinjen fra $0$ til $z$ og dermed et nyt argument for tallet. SÃ¥ledes ses at $z$ har uendeligt mange argumenter.\bs
+Man kan imidlertid altid vÃ¦lge et argument for $z$ som ligger i intervallet fra $-\pi$ til $\pi$. Der er tradition for at give dette argument en fortrinsstilling, det kaldes for tallets hovedargument.\bs
 \begin{definition}[Hovedargument]
-Ved \textit{hovedargumentet} for $z\in \mathbb C\,$ forstås det entydigt bestemte argument for $z$ som opfylder
+Ved \textit{hovedargumentet} for $z\in \mathbb C\,$ forstÃ¥s det entydigt bestemte argument for $z$ som opfylder
 $$\arg(z)\in\mathrm{]}-\pi,\pi\,\mathrm{]}\,.$$
 \end{definition}
-Hvis $v_o$ er hovedargumentet for $z\,$, så er samtlige argumenter for $z$ fastlagt ved 
+Hvis $v_o$ er hovedargumentet for $z\,$, sÃ¥ er samtlige argumenter for $z$ fastlagt ved 
 \begin{equation}
 \arg(z)=v_o+p\cdot 2\pi\,\,,\,p\in \mathbb Z\,.
 \end{equation}
@@ -243,141 +243,141 @@ Hvis $v_o$ er hovedargumentet for $z\,$, så er samtlige argumenter for $z$ fastl
 	\includegraphics[trim=3cm 8.5cm 3cm 9.5cm,width=0.55\textwidth,clip]{Geometer/retningsvinkel2.pdf}\\
 Figur 29.7: Hovedargumenter
 \end{center}
-%Ved brug af Pythagoras fås at alle de fire angivne tal har absolutværdien $\sqrt{2}\,$.
-På figuren er angivet fire komplekse tal som ligger på vinkelhalveringslinjer mellem akserne. Deres hovedargumenter aflæses umiddelbart: $2+2i$ har hovedargumentet $\frac {\pi}4\,$, $2-2i$ har hovedargumentet $-\frac {\pi}4\,$, $-2+2i$ har hovedargumentet $\frac {3\pi}4\,$, og endelig har $-2-2i$ ho\-ved\-argumentet $-\frac {3\pi}4\,$.
+%Ved brug af Pythagoras fÃ¥s at alle de fire angivne tal har absolutvÃ¦rdien $\sqrt{2}\,$.
+PÃ¥ figuren er angivet fire komplekse tal som ligger pÃ¥ vinkelhalveringslinjer mellem akserne. Deres hovedargumenter aflÃ¦ses umiddelbart: $2+2i$ har hovedargumentet $\frac {\pi}4\,$, $2-2i$ har hovedargumentet $-\frac {\pi}4\,$, $-2+2i$ har hovedargumentet $\frac {3\pi}4\,$, og endelig har $-2-2i$ ho\-ved\-argumentet $-\frac {3\pi}4\,$.
 \end{example}
 
  
-Vi har nu to forskellige fremgangsmåder til rådighed
-til beskrivelse af komplekse tal. Et komplekst tal kan angives på rektangulær form eller ved hjælp af dets polære koordinater. I metode \ref{tn29_omform} demonstreres det hvordan man kan veksle mellem de to fremgangsmåder. 
+Vi har nu to forskellige fremgangsmÃ¥der til rÃ¥dighed
+til beskrivelse af komplekse tal. Et komplekst tal kan angives pÃ¥ rektangulÃ¦r form eller ved hjÃ¦lp af dets polÃ¦re koordinater. I metode \ref{tn29_omform} demonstreres det hvordan man kan veksle mellem de to fremgangsmÃ¥der. 
 
-\begin{method}[Rektangulære og polær koordinater]\label{tn29_omform}
-Vi betragter et komplekst tal $z\neq 0$ med rektangulær form $z=a+ib$. Antag videre at $z$ har absolutværdien $|\,z\,|=r$ og et argument arg$(z)=v\,$: 
+\begin{method}[RektangulÃ¦re og polÃ¦r koordinater]\label{tn29_omform}
+Vi betragter et komplekst tal $z\neq 0$ med rektangulÃ¦r form $z=a+ib$. Antag videre at $z$ har absolutvÃ¦rdien $|\,z\,|=r$ og et argument arg$(z)=v\,$: 
 \begin{center}
 	\includegraphics[trim=3cm 10.5cm 3cm 10.5cm,width=0.6\textwidth,clip]{Geometer/omformning1.pdf}\\
 Figur 29.8: Omformning af koordinater
 \end{center}
 \begin{enumerate}
 \item
-Rektangulær form fås ud fra de polære koordinater således:
+RektangulÃ¦r form fÃ¥s ud fra de polÃ¦re koordinater sÃ¥ledes:
 \begin{equation}\label{tn29_omform1}
 a=r\cos(v)\,\,\,\mathrm{og}\,\,\,b=r\sin(v)\,.
 \end{equation}
 \item
-Absolutværdien fås ud fra den rektangulære form således:
+AbsolutvÃ¦rdien fÃ¥s ud fra den rektangulÃ¦re form sÃ¥ledes:
 \begin{equation}\label{tn29_omform2}
 r=\sqrt{a^2+b^2}\,.
 \end{equation}
 \item
-Et argument fås ud fra den rektangulære form således:
+Et argument fÃ¥s ud fra den rektangulÃ¦re form sÃ¥ledes:
 \begin{equation}\label{tn29_omform3}
 \cos(v)=\frac a r \,\,\,\mathrm{og}\,\,\,\sin(v)=\frac b r\,. 
 \end{equation}
 \end{enumerate}
 \end{method}
 \begin{aha}
-NB: Når $z$ som på figuren i metode \ref{tn29_omform} er tegnet i 1. kvadrant, er det oplagt at regel (\ref{tn29_omform1}) og (\ref{tn29_omform3}) kommer fra velkendte sætninger om cosinus og sinus til spidse vinkler i retvinklede trekanter og (\ref{tn29_omform2}) fra Pythagoras' sætning. Med de samme sætninger kan det vises at de indførte metoder gælder uanset hvilken kvadrant $z$ ligger i. 
+NB: NÃ¥r $z$ som pÃ¥ figuren i metode \ref{tn29_omform} er tegnet i 1. kvadrant, er det oplagt at regel (\ref{tn29_omform1}) og (\ref{tn29_omform3}) kommer fra velkendte sÃ¦tninger om cosinus og sinus til spidse vinkler i retvinklede trekanter og (\ref{tn29_omform2}) fra Pythagoras' sÃ¦tning. Med de samme sÃ¦tninger kan det vises at de indfÃ¸rte metoder gÃ¦lder uanset hvilken kvadrant $z$ ligger i. 
 \end{aha}
 
-\begin{example}[Fra rektangulær til polær form]\label{tn29_exOmform}
-Vi vil finde de polære koordinater for tallet $z=-\sqrt 3+i\,$ ved hjælp af metode \ref{tn29_omform}.
+\begin{example}[Fra rektangulÃ¦r til polÃ¦r form]\label{tn29_exOmform}
+Vi vil finde de polÃ¦re koordinater for tallet $z=-\sqrt 3+i\,$ ved hjÃ¦lp af metode \ref{tn29_omform}.
 \begin{center}
 	\includegraphics[trim=3cm 11cm 3cm 11cm,width=0.5\textwidth,clip]{Geometer/omformning3.pdf}\\
-Figur 29.9: Bestemme polære koordinater 
+Figur 29.9: Bestemme polÃ¦re koordinater 
 \end{center}
 
-Vi bestemmer først absolutværdien:
+Vi bestemmer fÃ¸rst absolutvÃ¦rdien:
 $$
 r=|\,z\,|=\sqrt{(-\sqrt 3)\,^2+1^2}=\sqrt{3+1}=2\,.
 $$
 Ud fra ligningen
 $$\cos(v)=-\frac{\sqrt 3}2$$
-får vi to bud på et hovedargument for $z\,$, nemlig
+fÃ¥r vi to bud pÃ¥ et hovedargument for $z\,$, nemlig
 $$v=\frac{5\pi}6\,\,\,\mathrm{og}\,\,\,v=-\frac{5\pi}6\,.$$
-På figuren kan vi aflæse at figuren ligger i 2. kvadrant, og at det korrekte hovedargument må være det førstnævnte. Men dette kan også fastlægges uden inspektion af figuren, idet også ligningen
+PÃ¥ figuren kan vi aflÃ¦se at figuren ligger i 2. kvadrant, og at det korrekte hovedargument mÃ¥ vÃ¦re det fÃ¸rstnÃ¦vnte. Men dette kan ogsÃ¥ fastlÃ¦gges uden inspektion af figuren, idet ogsÃ¥ ligningen
 $$\sin(v)=\frac12$$
-skal være opfyldt. Fra denne får vi også to bud på et hovedargument for $z\,$, nemlig
+skal vÃ¦re opfyldt. Fra denne fÃ¥r vi ogsÃ¥ to bud pÃ¥ et hovedargument for $z\,$, nemlig
 $$v=\frac{\pi}6\,\,\,\mathrm{og}\,\,\,v=\frac{5\pi}6\,.$$
 
 Da kun $\begin{displaystyle}v=\frac{5\pi}6\end{displaystyle} $ opfylder begge ligninger, ser vi at $\begin{displaystyle} \arg(z)=\frac{5\pi}6\,.\end{displaystyle} $\bs
 
-Hermed har vi fundet det polære koordinatsæt for $z\,$:
+Hermed har vi fundet det polÃ¦re koordinatsÃ¦t for $z\,$:
 $$(r,v)=\big(|\,z\,|,\arg(z)\,\big)=\big(2,\frac{5\pi}6\big)\,.$$
 \end{example}
 
-%Ved hjælp af omformingsreglerne i metode \ref{tn29_omform} opnår vi en ny bekvem skriveform for komplekse tal idet vi har:
+%Ved hjÃ¦lp af omformingsreglerne i metode \ref{tn29_omform} opnÃ¥r vi en ny bekvem skriveform for komplekse tal idet vi har:
 %$$z=a+ib=r\cos(v)+ir\sin(v)=r\big(\cos(v)+i\sin(v)\big)\,.$$
 
 %\begin{definition}[Trigonometrisk form]
-%Ved \textit{trigonometrisk form} for et komplekst tal $z$ med $|\,z\,|=r$ og arg$(z)=v\,$ forstås skrivemåden
+%Ved \textit{trigonometrisk form} for et komplekst tal $z$ med $|\,z\,|=r$ og arg$(z)=v\,$ forstÃ¥s skrivemÃ¥den
 %\begin{equation}
 %z=r\big(\cos(v)+i\sin(v)\big)\,.
 %\end{equation}
 %\end{definition}
 
-Multiplikation og division af to komplekse tal på rektangulær form er lidt omstændelig som det fremgår af definition \ref{tn29_produkt}. Og endnu værre bliver det når man skal opløfte komplekse tal til høje potenser. Men hvis man benytter sig af tallenes polære form, viser det sig at disse regnearter bliver overraskende enkle. Til dette får vi brug for regneregler for absolutværdi og argument, regneregler som også er interessante i sig selv. \bs 
-\begin{theorem}[Regneregler for absolutværdi]\label{tn29_RegnAbs}
-Absolutværdien for produktet af to komplekse tal $z_1$ og $z_2$ fås ved
+Multiplikation og division af to komplekse tal pÃ¥ rektangulÃ¦r form er lidt omstÃ¦ndelig som det fremgÃ¥r af definition \ref{tn29_produkt}. Og endnu vÃ¦rre bliver det nÃ¥r man skal oplÃ¸fte komplekse tal til hÃ¸je potenser. Men hvis man benytter sig af tallenes polÃ¦re form, viser det sig at disse regnearter bliver overraskende enkle. Til dette fÃ¥r vi brug for regneregler for absolutvÃ¦rdi og argument, regneregler som ogsÃ¥ er interessante i sig selv. \bs 
+\begin{theorem}[Regneregler for absolutvÃ¦rdi]\label{tn29_RegnAbs}
+AbsolutvÃ¦rdien for produktet af to komplekse tal $z_1$ og $z_2$ fÃ¥s ved
 \begin{equation}\label{tn29_RegnAbs1}
 |\,z_1\cdot z_2\,|=|\,z_1\,|\cdot|\,z_2\,|\,.
 %\arg(z_1z_2)&=\arg(z_1)+\arg(z_2)
 \end{equation}
-Absolutværdien for kvotienten af to komplekse tal $z_1$ og $z_2\,$, hvor $z_2\neq 0\,$, fås ved
+AbsolutvÃ¦rdien for kvotienten af to komplekse tal $z_1$ og $z_2\,$, hvor $z_2\neq 0\,$, fÃ¥s ved
 \begin{equation}\label{tn29_RegnAbs2}
 \left|\,\frac{z_1}{z_2}\,\right|=\frac{\left|\,z_1\,\right|}{\left|\,z_2\,\right|}
 %\arg(z_1z_2)&=\arg(z_1)+\arg(z_2)
 \end{equation}
-%Sagt i ord er absolutværdien af et produkt lig med produktet af absolutværdien af hver af faktorerne. Mens et argument for et produktet fås ved summen af et argument for hver af faktorerne.\bs
-Absolutværdien af den $n$'te potens af et  komplekst tal $z$ fås ved:
+%Sagt i ord er absolutvÃ¦rdien af et produkt lig med produktet af absolutvÃ¦rdien af hver af faktorerne. Mens et argument for et produktet fÃ¥s ved summen af et argument for hver af faktorerne.\bs
+AbsolutvÃ¦rdien af den $n$'te potens af et  komplekst tal $z$ fÃ¥s ved:
 \begin{equation}\label{tn29_RegnAbs3}
 |\,{z_1}^n\,|=|\,z_1\,|^n\\
 %\arg(z^n)&=n\arg(z)
 \end{equation}
 \end{theorem}
 \begin{bevis}
-Med i næste opdatering af eNoten.
+Med i nÃ¦ste opdatering af eNoten.
 \end{bevis}
 
 \begin{theorem}[Regneregler for argumenter]\label{tn29_RegnArg}
-Et argument for produktet af to komplekse tal $z_1$ og $z_2$ fås ved
+Et argument for produktet af to komplekse tal $z_1$ og $z_2$ fÃ¥s ved
 \begin{equation}\label{tn29_RegnArg1}
 \arg(z_1\cdot z_2)=\arg(z_1)+\arg(z_2)
 \end{equation}
-Et argument for kvotienten af to komplekse tal $z_1$ og $z_2$ hvor $z_2\neq 0\,$, fås ved
+Et argument for kvotienten af to komplekse tal $z_1$ og $z_2$ hvor $z_2\neq 0\,$, fÃ¥s ved
 \begin{equation}\label{tn29_RegnArg2}
 \arg\left(\frac{z_1}{z_2}\right)=\arg(z_1)-\arg(z_2)
 \end{equation}
-Et argument for den $n$'te potens af et  komplekst tal $z$ fås ved:
+Et argument for den $n$'te potens af et  komplekst tal $z$ fÃ¥s ved:
 \begin{equation}\label{tn29_RegnArg3}
 \arg(z^n)=n\arg(z)
 \end{equation}
 \end{theorem}
 \begin{bevis}
-Med i næste opdatering af eNoten.
+Med i nÃ¦ste opdatering af eNoten.
 \end{bevis}
 
-\begin{example}[Multiplikation vha. polær koordinater]\label{PolarMult}
-To komplekse tal $z_1$ og $z_2$ er givet ved de polære koordinater $\big(\frac 12,\frac{\pi}4\,\big)$ henholdsvis $\big(2,\frac{2\pi}3\,\big)\,$.
+\begin{example}[Multiplikation vha. polÃ¦r koordinater]\label{PolarMult}
+To komplekse tal $z_1$ og $z_2$ er givet ved de polÃ¦re koordinater $\big(\frac 12,\frac{\pi}4\,\big)$ henholdsvis $\big(2,\frac{2\pi}3\,\big)\,$.
 \begin{center}
 	\includegraphics[trim=3cm 10cm 3cm 12cm,width=0.6\textwidth,clip]{Geometer/multiplikation.pdf}\\
 Figur 29.10: Multiplikation 
 \end{center}
- Vi udregner produktet af $z_1$ og $z_2$ ved hjælp af deres absolutværdier og argumenter:
+ Vi udregner produktet af $z_1$ og $z_2$ ved hjÃ¦lp af deres absolutvÃ¦rdier og argumenter:
 $$|\,z_1z_2\,|=|\,z_1\,|\,|\,z_2\,|=\frac12\cdot2=1$$
 $$\arg(z_1z_2)=\arg(z_1)+\arg(z_2)=\frac{\pi}{4}+\frac{2\pi}{3}=\frac{11\pi}{12}$$
-$\,z_1z_2$ er altså det entydigt bestemte tal som har absolutværdien $1$ og argumentet $\frac{11\pi}{12}\,.$
+$\,z_1z_2$ er altsÃ¥ det entydigt bestemte tal som har absolutvÃ¦rdien $1$ og argumentet $\frac{11\pi}{12}\,.$
 \end{example}
  
 \section{Konjugering af komplekse tal}
 
-At konjugere et komplekst tal svarer til at det spejles i realaksen som vist på figur 29.11.
+At konjugere et komplekst tal svarer til at det spejles i realaksen som vist pÃ¥ figur 29.11.
 \begin{center}
 	\includegraphics[trim=3cm 9.6cm 3cm 10cm,width=0.6\textwidth,clip]{Geometer/konjugering.pdf}\\
 Figur 29.11: Spejling i realaksen 
 \end{center}
 
 \begin{definition}
-Ved det konjugerede tal til et komplekst tal på rektangulær form $z=a+ib$ forstås tallet $\overline z$ givet ved
+Ved det konjugerede tal til et komplekst tal pÃ¥ rektangulÃ¦r form $z=a+ib$ forstÃ¥s tallet $\overline z$ givet ved
 \begin{equation}
 \overline z=a-ib
 \end{equation}
@@ -387,12 +387,12 @@ Det er indlysende at det konjugerede tal til et konjugeret tal er det oprindelig
 \begin{equation}
 \overline{\overline z}=z\,.
 \end{equation}
-Det fremgår også klart af definitionen at  konjugerede tal har samme absolutværdi og modsatte argumenter:
+Det fremgÃ¥r ogsÃ¥ klart af definitionen at  konjugerede tal har samme absolutvÃ¦rdi og modsatte argumenter:
 \begin{equation}
 |\,\overline z\,|=|\,z\,|\,\,\,\mathrm{og}
 \,\,\,\arg(\overline z)=-\arg(z)\,.
 \end{equation}
-.\bs Endelig bemærker vi at alle komplekse tal på realaksen er identiske med deres konjugerede tal, og at de er de eneste komplekse tal der opfylder denne egenskab. Vi kan hermed opstille et kriterium for den reelle delmængde i mængden af komplekse tal:\bs
+.\bs Endelig bemÃ¦rker vi at alle komplekse tal pÃ¥ realaksen er identiske med deres konjugerede tal, og at de er de eneste komplekse tal der opfylder denne egenskab. Vi kan hermed opstille et kriterium for den reelle delmÃ¦ngde i mÃ¦ngden af komplekse tal:\bs
 \begin{theorem}[Realkriteriet]\label{tn29_reeltKriterium}
 $$\reel=\left\{z\in \mathbb C\,|\,\overline z=z\right\}\,.$$
 \end{theorem}
@@ -401,7 +401,7 @@ Antag at $z=a+ib$ hvor $a$ og $b$ er reelle. Vi har da
 $$\overline z =z \Leftrightarrow a-ib=a+ib \Leftrightarrow b=0\,.$$
 Da $z=a\,$ er det et reelt tal. 
 \end{bevis}
-For konjugering i forbindelse med de fire sædvanlige regnearter gælder der følgende meget simple regneregler\bs
+For konjugering i forbindelse med de fire sÃ¦dvanlige regnearter gÃ¦lder der fÃ¸lgende meget simple regneregler\bs
 \begin{theorem}[Regneregler for konjugering]
 \begin{enumerate}
 \item $\overline{z_1+z_2}=\overline{z_1}+\overline{z_2}$
@@ -413,33 +413,33 @@ For konjugering i forbindelse med de fire sædvanlige regnearter gælder der følge
 
 \end{theorem}
 \begin{bevis}
-Beviset gennemføres ved simpel udregning af formlernes venstreside og højreside
+Beviset gennemfÃ¸res ved simpel udregning af formlernes venstreside og hÃ¸jreside
 \end{bevis}
 
-\begin{theorem}[Konjugering og absolutværdi]
-For et komplekst tal $z$ gælder
+\begin{theorem}[Konjugering og absolutvÃ¦rdi]
+For et komplekst tal $z$ gÃ¦lder
 \begin{equation}
 z\cdot \overline z =|\,z\,|^2
 \end{equation}
 \end{theorem}
 \begin{bevis}
-Vi antager at $z=a+ib$ hvor $a$ og $b$ er reelle. Sætningen følger da af
+Vi antager at $z=a+ib$ hvor $a$ og $b$ er reelle. SÃ¦tningen fÃ¸lger da af
 $$
 z\cdot \overline z = (a+ib)(a-ib)=a^2+b^2=|\,z\,|^2$$
 \end{bevis}
 
-\section{Eksponentialfunktion med imaginær variabel}
+\section{Eksponentialfunktion med imaginÃ¦r variabel}
 
-Den sædvanlige eksponentialfunktion $f(x)=\e^x$ med reel variabel $x$ har som bekendt de karakteristiske egenskaber 
+Den sÃ¦dvanlige eksponentialfunktion $f(x)=\e^x$ med reel variabel $x$ har som bekendt de karakteristiske egenskaber 
 \begin{equation}
 \e^0=1\quad \mathrm{og} \quad\,\e^{x_1+x_2}=\e^{x_1}\cdot\e^{x_2}\,.
 \end{equation}
-Ved gentagen brug af den sidste får vi desuden  egenskaben 
+Ved gentagen brug af den sidste fÃ¥r vi desuden  egenskaben 
 \begin{equation}
 (\e^{x})^n=\e^{nx}\quad ,\,n\in \mathbb N\,.
 \end{equation}
 
-I dette afsnit vil vi indføre en  eksponentialfunktion med \textit{imaginær variabel}, som senere i denne eNote udvides til en kompleks eksponentialfunktion $f(z)=\e^z$ for ethvert $z\in \mathbb C\,$. Vi vil kræve at $f(z)$ stemmer overens med den reelle eksponentialfunktion når $z\in \mathbb R\,,$ og at $f(z)$ besidder de samme karakteristiske egenskaber som den reelle. Men her starter vi med specialtilfældet at variablen er rent imaginær.
+I dette afsnit vil vi indfÃ¸re en  eksponentialfunktion med \textit{imaginÃ¦r variabel}, som senere i denne eNote udvides til en kompleks eksponentialfunktion $f(z)=\e^z$ for ethvert $z\in \mathbb C\,$. Vi vil krÃ¦ve at $f(z)$ stemmer overens med den reelle eksponentialfunktion nÃ¥r $z\in \mathbb R\,,$ og at $f(z)$ besidder de samme karakteristiske egenskaber som den reelle. Men her starter vi med specialtilfÃ¦ldet at variablen er rent imaginÃ¦r.
 
 \begin{definition}\label{tn29_eiy}
 For ethvert $v\in \mathbb R\,$ defineres funktionen  $\e^{iv}$ ved
@@ -453,18 +453,18 @@ Figur 29.12: Enhedscirklen i komplekse talplan
 \end{definition}
 
 \begin{aha}
-Bemærk at tallet $\e^{iv}$ for ethvert $v$ ligger på enhedscirklen i den komplekse talplan med centrum i $0\,$. Heraf følger:
+BemÃ¦rk at tallet $\e^{iv}$ for ethvert $v$ ligger pÃ¥ enhedscirklen i den komplekse talplan med centrum i $0\,$. Heraf fÃ¸lger:
 \begin{equation}
 |\,\e^{iv}\,|=1\,.
 \end{equation}
-Bemærk endvidere at argumentet for $\e^{iv}$ straks aflæses i eksponenten således:
+BemÃ¦rk endvidere at argumentet for $\e^{iv}$ straks aflÃ¦ses i eksponenten sÃ¥ledes:
 \begin{equation}
 \arg(\e^{iv})=v\,.
 \end{equation}
 \end{aha}
-Vi viser nu at den i definition \ref{tn29_eiy} indførte funktion $\e^{iv}$ har egenskaber der svarer til den reelle eksponentialfunktion.\bs 
+Vi viser nu at den i definition \ref{tn29_eiy} indfÃ¸rte funktion $\e^{iv}$ har egenskaber der svarer til den reelle eksponentialfunktion.\bs 
 \begin{theorem}[Regneregler for $\e^{iv}$]\label{tn29_Th_eiy}
-For funktionen $\e^{iv}\,\,,\,v\in \reel$ gælder
+For funktionen $\e^{iv}\,\,,\,v\in \reel$ gÃ¦lder
 \begin{enumerate}
 \item
 $\e^{0i}=1$
@@ -477,120 +477,120 @@ $(\e^{iv})^n=\e^{inv}\,\,,\,n\in\mathbb N$
 \begin{bevis}
 \begin{enumerate}
 \item
-Der gælder oplagt $\e^{i0}=\cos(0)=1\,.$
+Der gÃ¦lder oplagt $\e^{i0}=\cos(0)=1\,.$
 \item
-Lad $v_1$ og $v_2$ være to reelle tal. Fra (\ref{tn29_RegnAbs1}) fås $$|\,\e^{iv_1}\e^{iv_2}\,|=|\,\e^{iv_1}\,|\,|\,\e^{iv_2}\,|=1\,.$$
-Fra (\ref{tn29_RegnArg1}) fås $$\arg(\e^{iv_1}\e^{iv_2})=\arg(\e^{iv_1})+\arg(\e^{iv_2})=v_1+v_2\,.$$
-Nu indsætter vi den fundne absolutværdi og argument for $\e^{iv_1}\e^{iv_2}\,$ i dette tals eksponentielle form: 
+Lad $v_1$ og $v_2$ vÃ¦re to reelle tal. Fra (\ref{tn29_RegnAbs1}) fÃ¥s $$|\,\e^{iv_1}\e^{iv_2}\,|=|\,\e^{iv_1}\,|\,|\,\e^{iv_2}\,|=1\,.$$
+Fra (\ref{tn29_RegnArg1}) fÃ¥s $$\arg(\e^{iv_1}\e^{iv_2})=\arg(\e^{iv_1})+\arg(\e^{iv_2})=v_1+v_2\,.$$
+Nu indsÃ¦tter vi den fundne absolutvÃ¦rdi og argument for $\e^{iv_1}\e^{iv_2}\,$ i dette tals eksponentielle form: 
 $$\e^{iv_1}\e^{iv_2}=\e^{i(v_1+v_2)}=\e^{iv_1+iv_2}\,.$$
 \item
-På tilsvarende vis fås fra (\ref{tn29_RegnAbs3}) og (\ref{tn29_RegnArg3}) at 
+PÃ¥ tilsvarende vis fÃ¥s fra (\ref{tn29_RegnAbs3}) og (\ref{tn29_RegnArg3}) at 
 \begin{equation}
 (\e^{iv})^n=\e^{inv}\,.
 \end{equation}
 \end{enumerate}
 \end{bevis}
 
-Vi kan herefter indføre en i mange sammenhænge bekvem og meget benyttet skrivemåde for komplekse tal.
+Vi kan herefter indfÃ¸re en i mange sammenhÃ¦nge bekvem og meget benyttet skrivemÃ¥de for komplekse tal.
 
 \begin{theorem}[Eksponentiel form]
-Ethvert komplekst tal $z$ kan skrives på formen
+Ethvert komplekst tal $z$ kan skrives pÃ¥ formen
 \begin{equation}\label{tn29_ekspForm1}
 z=r\e^{iv}\,,
 \end{equation}
-hvor $r=|\,z\,|$ og $v=\arg(z)\,$. Skrivemåden kaldes tallets \textit{eksponentielle form}.
+hvor $r=|\,z\,|$ og $v=\arg(z)\,$. SkrivemÃ¥den kaldes tallets \textit{eksponentielle form}.
 \end{theorem}
 \begin{bevis}
-Vi finder først absolutværdi af $r\e^{iv}\,$:
+Vi finder fÃ¸rst absolutvÃ¦rdi af $r\e^{iv}\,$:
 $$|\,r\e^{iv}\,|=|\,r\,|\,|\,\e^{iv}\,|=r\,.$$
-Dernæst et argumemt for $r\e^{iv}\,$:
+DernÃ¦st et argumemt for $r\e^{iv}\,$:
 $$\arg(r\e^{iv})=\arg(r)+\arg(\e^{iv})=0+v=v\,.$$ 
-Hermed er det vist at $z$ og $r\e^{iv}$ har samme absolutværdi og samme argument, og derfor er identiske.
+Hermed er det vist at $z$ og $r\e^{iv}$ har samme absolutvÃ¦rdi og samme argument, og derfor er identiske.
 \end{bevis}
 
-Når komplekse tal angives på eksponentiel form, foregår multiplikation, division og potensopløftning uden videre efter sædvanlige elementære regneregler og potensregler kendt fra reelle tal. Vi giver nu et eksempel på dette i forbindelse med multiplikation, sammenlign med eksempel \ref{PolarMult}.
+NÃ¥r komplekse tal angives pÃ¥ eksponentiel form, foregÃ¥r multiplikation, division og potensoplÃ¸ftning uden videre efter sÃ¦dvanlige elementÃ¦re regneregler og potensregler kendt fra reelle tal. Vi giver nu et eksempel pÃ¥ dette i forbindelse med multiplikation, sammenlign med eksempel \ref{PolarMult}.
 
-\begin{example}[Multiplikation på eksponentiel form]
-To komplekse tal er givet på eksponentiel form:
+\begin{example}[Multiplikation pÃ¥ eksponentiel form]
+To komplekse tal er givet pÃ¥ eksponentiel form:
 $$z_1=\frac 12\,\e^{\frac{\pi}{4} i}\,\,\,\mathrm{og}\,\,\,
 z_2=2\,\e^{\frac{3\pi}{2} i}\,.$$
-Produktet af tallene fås på eksponentiel form ved
+Produktet af tallene fÃ¥s pÃ¥ eksponentiel form ved
 $$z_1z_2=\big(\frac 12\,\e^{\frac{\pi}{4}i}\big)\big(2\,\e^{\frac{3\pi}{2}i}\big)=
 (\frac 12\cdot 2)\e^{\frac{\pi}{4}i+\frac{3\pi}{2}i}=
 1\e^{i(\frac{\pi}{4}+\frac{3\pi}{2})}=
 \e^{\frac{7\pi}{4}\,i}\,.
 $$
 \end{example}
-I det følgende vil vi vise hvordan såkaldte \textit{binome ligninger} kan løses ved hjælp af eksponentiel form. En binom ligning er en \textit{toleddet} polynomiumsligning med formen
+I det fÃ¸lgende vil vi vise hvordan sÃ¥kaldte \textit{binome ligninger} kan lÃ¸ses ved hjÃ¦lp af eksponentiel form. En binom ligning er en \textit{toleddet} polynomiumsligning med formen
 \begin{equation}
 z^n=w
 \end{equation}
 hvor $w\in \mathbb C\,$ og $n\in\mathbb N\,$.\bs
 
-Vi viser først et eksempel på løsning af en binom ligning ved hjælp af eksponentiel form og opstiller derefter den generelle metode.
+Vi viser fÃ¸rst et eksempel pÃ¥ lÃ¸sning af en binom ligning ved hjÃ¦lp af eksponentiel form og opstiller derefter den generelle metode.
 
-\begin{example}[Binom ligning på eksponentiel form]\label{tn29_binom}
-Find samtlige løsninger på den binome ligning
+\begin{example}[Binom ligning pÃ¥ eksponentiel form]\label{tn29_binom}
+Find samtlige lÃ¸sninger pÃ¥ den binome ligning
 \begin{equation}\label{tn29_binom1}
 z^4=-8+8\sqrt 3 i\,.
 \end{equation}
-Løsning:\\
-Ideen er at vi skriver såvel $z$ som højresiden på eksponentiel form.\bs 
+LÃ¸sning:\\
+Ideen er at vi skriver sÃ¥vel $z$ som hÃ¸jresiden pÃ¥ eksponentiel form.\bs 
 Hvis $z$ har den eksponentielle form $z=s\e^{iu}\,$, kan ligningens venstreside udregnes ved 
 \begin{equation}\label{tn29_binom2}
 z^4=(s\e^{iu})^4=s^4\,(e^{iu})^4=s^4\,e^{i4u}
 \end{equation}
-Højresidens absolutværdi $r$ findes ved
+HÃ¸jresidens absolutvÃ¦rdi $r$ findes ved
 $$r=|\,-8+8\sqrt 3\,|=\sqrt{(-8)^2+(8\sqrt 3)^2}=16\,.$$
-Højresidens argument $v$ opfylder:
+HÃ¸jresidens argument $v$ opfylder:
 $$\cos(v)=\frac{-8}{16}=-\frac{1}{2}\,\,\,\mathrm{og}\,\,\,
 \sin(v)=\frac{8\sqrt 3} {16}=\frac{\sqrt 3}{2}\,.$$
-Ved hjælp af de to ligninger kan højresidens hovedargument fastlægges til 
+Ved hjÃ¦lp af de to ligninger kan hÃ¸jresidens hovedargument fastlÃ¦gges til 
 $$v=\arg(-8+8\sqrt 3)=\frac {2\pi}3\,,$$
 og dermed den eksponentielle form
 \begin{equation}\label{tn29_binom3}
 r\e^{iv}\,=16\e^{\frac {2\pi}3\,i}\,.
 \end{equation}
-Vi indsætter nu (\ref{tn29_binom2}) og (\ref{tn29_binom3}) i (\ref{tn29_binom1})
+Vi indsÃ¦tter nu (\ref{tn29_binom2}) og (\ref{tn29_binom3}) i (\ref{tn29_binom1})
 $$
 s^4\,e^{i4u}=16\e^{\frac {2\pi}3\,i}\,.
 $$
-Da ventresidens absolutværdi skal være lig højresidens får vi
+Da ventresidens absolutvÃ¦rdi skal vÃ¦re lig hÃ¸jresidens fÃ¥r vi
 $$
 s^4=16\,\,\Leftrightarrow\,\, s=\sqrt[4]{16}=2.
 $$
 
-Venstresidens argument $4u$ og højresidens argument $\frac {2\pi}3$ skal være ens på nær et multiplum af $2\pi\,$. Heraf fås
+Venstresidens argument $4u$ og hÃ¸jresidens argument $\frac {2\pi}3$ skal vÃ¦re ens pÃ¥ nÃ¦r et multiplum af $2\pi\,$. Heraf fÃ¥s
 $$4u=\frac {2\pi}3+p2\pi\,\,
 \Leftrightarrow\,\, u =\frac {\pi}6 +p\frac {\pi}2 \,\,,\,\,p\in \mathbb Z\,.
 $$
-Disse uendeligt mange argumenter svarer vel at mærke kun til \textit{fire} halvlinjer ud fra $0\,$, bestemt ved de argumenter der fås ved $p=0,p=1,p=2$ og $p=3\,$. For alle andre værdier af $p$ vil den tilsvarende halvlinje være identisk med en af de fire nævnte. For eksempel vil halvlinjen for $p=4$ være givet ved argumentet
+Disse uendeligt mange argumenter svarer vel at mÃ¦rke kun til \textit{fire} halvlinjer ud fra $0\,$, bestemt ved de argumenter der fÃ¥s ved $p=0,p=1,p=2$ og $p=3\,$. For alle andre vÃ¦rdier af $p$ vil den tilsvarende halvlinje vÃ¦re identisk med en af de fire nÃ¦vnte. For eksempel vil halvlinjen for $p=4$ vÃ¦re givet ved argumentet
 $$u=\frac {\pi}6 +4\,\frac{\pi}2=\frac {\pi}6+2\pi\,,$$
-det vil sige samme halvlinje som svarer til $p=0\,$, da forskellen på argumenterne er $2\pi\,$.\bs
-Den givne ligning (\ref{tn29_binom1}) har derfor netop fire løsninger, som ligger på de nævnte fire halvlinjer i afstanden $s=2$ fra $0\,$. Angivet på  eksponentiel form:
+det vil sige samme halvlinje som svarer til $p=0\,$, da forskellen pÃ¥ argumenterne er $2\pi\,$.\bs
+Den givne ligning (\ref{tn29_binom1}) har derfor netop fire lÃ¸sninger, som ligger pÃ¥ de nÃ¦vnte fire halvlinjer i afstanden $s=2$ fra $0\,$. Angivet pÃ¥  eksponentiel form:
 $$z=2\,\e^{i(\frac {\pi}6 +p\frac {\pi}2 )}\,\,,\,\,p=0\,,\,1\,,\,2\,,\,3\,.$$
-Eller omregnet hver for sig til rektangulær form ved brug af definition \ref{tn29_eiy}
+Eller omregnet hver for sig til rektangulÃ¦r form ved brug af definition \ref{tn29_eiy}
 $$z_0=\sqrt 3+i\,,\,z_1=-1+i\sqrt 3\,,\,z_2=-\sqrt 3-i\,,\,z_3=1-i\sqrt 3\,.$$
 \end{example}
 
-Alle løsningerne for en binom ligning ligger på en cirkel med centrum i $0$ og radius lig med højresidens absolutværdi.  Forbindelseslinjerne mellem Origo og løsningerne deler cirklen i lige store vinkler som det eksemplificeres på figur 29.13. 
+Alle lÃ¸sningerne for en binom ligning ligger pÃ¥ en cirkel med centrum i $0$ og radius lig med hÃ¸jresidens absolutvÃ¦rdi.  Forbindelseslinjerne mellem Origo og lÃ¸sningerne deler cirklen i lige store vinkler som det eksemplificeres pÃ¥ figur 29.13. 
 
 \begin{center}
 	\includegraphics[trim=3cm 7.8cm 3cm 9.2cm,width=0.4\textwidth,clip]{Geometer/4lsn.pdf}\\
-Figur 29.13: Løsningerne fra eksempel \ref{tn29_binom}
+Figur 29.13: LÃ¸sningerne fra eksempel \ref{tn29_binom}
 \end{center}
 
 
-Fremgangsmåden i eksempel \ref{tn29_binom} generaliserer vi i den følgende sætning. Sætningen bevises i eNote 30 om polynomier.
+FremgangsmÃ¥den i eksempel \ref{tn29_binom} generaliserer vi i den fÃ¸lgende sÃ¦tning. SÃ¦tningen bevises i eNote 30 om polynomier.
 
-\begin{theorem}[Binom ligning løst vha. eksponentiel form]
+\begin{theorem}[Binom ligning lÃ¸st vha. eksponentiel form]
 Givet et komplekst tal $w\,$, som ikke er $0\,$, og som har den eksponentielle form
 $$w=r\e^{iv}\,.$$
 Den binome ligning
 \begin{equation}
 z^n=w=r\e^{iv}\,\,,\,n\in \mathbb N
 \end{equation}
-har $n$ løsninger som kan findes ved formlen
+har $n$ lÃ¸sninger som kan findes ved formlen
 \begin{equation}
 z=\sqrt[n]{r}\,\,\e^{i(\frac vn+p\frac{2\pi}n)}\,\,\,\mathrm{hvor} \,\,\,
 p=0\,,\,1\,,...\,,\,n-1\,.
@@ -598,21 +598,21 @@ p=0\,,\,1\,,...\,,\,n-1\,.
 \end{theorem}
 \section{Den komplekse eksponentialfunktion}
 
-Som tidligere nævnt i denne eNote er det muligt at udvide  definitionsmængden for den velkendte reelle eksponentialfunktion $\e^x$ fra de reelle tal til de komplekse tal, således at den udvidede komplekse eksponentialfunktion på realaksen svarer overens med den reelle. Og således at de karakteristiske egenskaber for den reelle eksponentialfunktion overføres til den komplekse. 
+Som tidligere nÃ¦vnt i denne eNote er det muligt at udvide  definitionsmÃ¦ngden for den velkendte reelle eksponentialfunktion $\e^x$ fra de reelle tal til de komplekse tal, sÃ¥ledes at den udvidede komplekse eksponentialfunktion pÃ¥ realaksen svarer overens med den reelle. Og sÃ¥ledes at de karakteristiske egenskaber for den reelle eksponentialfunktion overfÃ¸res til den komplekse. 
 
 \begin{definition}[Kompleks eksponentialfunktion]\label{tn29_ez}
-For et hvert komplekst tal $z$ med rektangulær form $z=x+iy$ defineres den komplekse eksponentialfunktion $\e^z$ ved
+For et hvert komplekst tal $z$ med rektangulÃ¦r form $z=x+iy$ defineres den komplekse eksponentialfunktion $\e^z$ ved
 \begin{equation}\label{tn29_ez1}
 \e^z=\e^{x+iy}=\e^x\e^{iy}=\e^x\big(\cos(y)+i\sin(y)\,\big)\,.
 \end{equation}
 \end{definition}
 
 \begin{aha}
-Bemærk at hvis $z$ i (\ref{tn29_ez1}) er reel, det vil sige hvis $y=0\,$, så er (\ref{tn29_ez1}) den sædvanlige reelle eksponentialfunktion $\e^x\,.$\bs
-Bemærk at hvis $x=0$ i (\ref{tn29_ez1}), så er (\ref{tn29_ez1}) den i definition \ref{tn29_eiy} indførte eksponentialfunktion for ren imaginær variabel.
+BemÃ¦rk at hvis $z$ i (\ref{tn29_ez1}) er reel, det vil sige hvis $y=0\,$, sÃ¥ er (\ref{tn29_ez1}) den sÃ¦dvanlige reelle eksponentialfunktion $\e^x\,.$\bs
+BemÃ¦rk at hvis $x=0$ i (\ref{tn29_ez1}), sÃ¥ er (\ref{tn29_ez1}) den i definition \ref{tn29_eiy} indfÃ¸rte eksponentialfunktion for ren imaginÃ¦r variabel.
 \end{aha}
 
-Vi betragter nu det komplekse tal $\e^z$ hvor $z$ er et vilkårligt komplekst tal med rektangulær form $z=x+iy$ hvor ikke både $x$ og $y$ er lig med $0$. Vi har umiddelbart fra definition \ref{tn29_ez} den \textit{eksponentielle form} af $\e^z\,$
+Vi betragter nu det komplekse tal $\e^z$ hvor $z$ er et vilkÃ¥rligt komplekst tal med rektangulÃ¦r form $z=x+iy$ hvor ikke bÃ¥de $x$ og $y$ er lig med $0$. Vi har umiddelbart fra definition \ref{tn29_ez} den \textit{eksponentielle form} af $\e^z\,$
 $$
 \e^z=\e^x\e^{iy}\,,
 $$
@@ -620,7 +620,7 @@ der viser at
 $$
 |\,\e^z\,|=\e^x\,\,\,\mathrm{og} \,\,\,\arg{\e^z}=y\,.
 $$ 
-Dette giver $\e^z$ en bemærkelsesværdig placering i den komplekse talplan som vist på figur 29.14.
+Dette giver $\e^z$ en bemÃ¦rkelsesvÃ¦rdig placering i den komplekse talplan som vist pÃ¥ figur 29.14.
 
 \begin{center}
 	\includegraphics[trim=3cm 7.5cm 3cm 9cm,width=0.4\textwidth,clip]{Geometer/eksponentielForm2.pdf}\\
@@ -628,63 +628,63 @@ Figur 29.14: Geometrisk fortolkning af $\e^z$
 \end{center}
 
 \begin{example}[Eksponentiel ligning]\label{exEkspLign}
-Bestem samtlige løsninger for ligningen
+Bestem samtlige lÃ¸sninger for ligningen
 \begin{equation}\label{exEkspLign1}
 \e^z=-\sqrt 3+i\,.
 \end{equation}
-Løsning:\\
-Vi skriver først $z$ på rektangulær form: $z=x+iy\,$.\\ 
-I eksempel \ref{tn29_exOmform} har vi fundet at højresiden i \ref{exEkspLign1} har absolutværdien $r=2$ og hovedargumentet $v=\frac{5\pi}6\,$. Da venstresiden og højresiden skal have samme absolutværdi og samme argument på nær et vilkårligt multiplum af $2\pi\,$ fås
+LÃ¸sning:\\
+Vi skriver fÃ¸rst $z$ pÃ¥ rektangulÃ¦r form: $z=x+iy\,$.\\ 
+I eksempel \ref{tn29_exOmform} har vi fundet at hÃ¸jresiden i \ref{exEkspLign1} har absolutvÃ¦rdien $r=2$ og hovedargumentet $v=\frac{5\pi}6\,$. Da venstresiden og hÃ¸jresiden skal have samme absolutvÃ¦rdi og samme argument pÃ¥ nÃ¦r et vilkÃ¥rligt multiplum af $2\pi\,$ fÃ¥s
 $$
 |\,\e^z\,|=\e^x=r=2\,\,\Leftrightarrow\,\,x=\ln(2)\,,$$
 $$\arg(z)=y=v+p2\pi=\frac{5\pi}6 + p2\pi\,\,,\,p\in \mathbb Z\,.$$
-Samtlige løsninger for \ref{exEkspLign1} er dermed
+Samtlige lÃ¸sninger for \ref{exEkspLign1} er dermed
 $$z=x+iy=\ln(2)+i(\frac{5\pi}6 + p2\pi)\,\,,\,p\in \mathbb Z\,.$$
  
 \end{example}
 
-For de reelle trigonometriske funktioner $\cos(x)$ og $\sin(x)$ vides at der for ethvert helt tal $p$ gælder $\cos(x+p2\pi)=\cos(x)$ og $\sin(x+p2\pi)=\sin(x)\,$. Hvis man forskyder grafen for $\cos(x)$ eller $\sin(x)$ med et vilkårligt multiplum af $2\pi\,$, vil den derfor gå over i sig selv. Funktionerne kaldes derfor \textit{periodiske} med \textit{perioden} $2\pi\,$.\bs
-Et lignende fænomen kan ses i eksempel \ref{exEkspLign} hvor den givne eksponentielle lig\-ning har uendeligt mange løsninger der kun adskiller sig fra hinanden ved forskellige multipla af $2\pi i\,$. Det skyldes at den komplekse eksponentialfunktion har den ima\-ginære periode $2\pi i\,$! Og dette hænger i høj grad sammen med periodiciteten af de trigonometriske funktioner.
+For de reelle trigonometriske funktioner $\cos(x)$ og $\sin(x)$ vides at der for ethvert helt tal $p$ gÃ¦lder $\cos(x+p2\pi)=\cos(x)$ og $\sin(x+p2\pi)=\sin(x)\,$. Hvis man forskyder grafen for $\cos(x)$ eller $\sin(x)$ med et vilkÃ¥rligt multiplum af $2\pi\,$, vil den derfor gÃ¥ over i sig selv. Funktionerne kaldes derfor \textit{periodiske} med \textit{perioden} $2\pi\,$.\bs
+Et lignende fÃ¦nomen kan ses i eksempel \ref{exEkspLign} hvor den givne eksponentielle lig\-ning har uendeligt mange lÃ¸sninger der kun adskiller sig fra hinanden ved forskellige multipla af $2\pi i\,$. Det skyldes at den komplekse eksponentialfunktion har den ima\-ginÃ¦re periode $2\pi i\,$! Og dette hÃ¦nger i hÃ¸j grad sammen med periodiciteten af de trigonometriske funktioner.
 
 \begin{theorem}[Periodicitet af $\e^z$]
-For ethvert komplekst tal $z$ og ethvert helt tal $p$ gælder
+For ethvert komplekst tal $z$ og ethvert helt tal $p$ gÃ¦lder
 \begin{equation}
 \e^{z+p2\pi i}=\e^z\,.
 \end{equation}
 \end{theorem}
 \begin{bevis}
-Antag at $z$ har rektangulær form $z=x+iy\,$ og $p\in \mathbb Z\,.$\bs
-Der gælder
+Antag at $z$ har rektangulÃ¦r form $z=x+iy\,$ og $p\in \mathbb Z\,.$\bs
+Der gÃ¦lder
 $$
 \e^{z+p2\pi i}
 =\e^{x+i(y+p2\pi)}
 =\e^x\big(\cos(y+p2\pi)+i\sin(y+p2\pi)\,\big)$$
 $$=\e^x\big(\cos(y)+i\sin(y\pi)\,\big)
 =\e^z\,.$$
-Hermed er sætningen vist.
+Hermed er sÃ¦tningen vist.
 \end{bevis}
-Vi viser nu at $\e^z$ faktisk har den karakteristiske ``eksponentielle'' egenskab kendt fra den reelle eksponentialfunktion og som i \ref{tn29_Th_eiy} blev udvidet til eksponentialfunktionen med imaginær variabel.\bs 
+Vi viser nu at $\e^z$ faktisk har den karakteristiske ``eksponentielle'' egenskab kendt fra den reelle eksponentialfunktion og som i \ref{tn29_Th_eiy} blev udvidet til eksponentialfunktionen med imaginÃ¦r variabel.\bs 
 \begin{theorem}[Regneregel for $\e^z$]\label{tn29_Th_ez}
-For vilkårlige komplekse tal $z_1$ og $z_2$ opfylder den komplekse eksponentialfunktion
+For vilkÃ¥rlige komplekse tal $z_1$ og $z_2$ opfylder den komplekse eksponentialfunktion
 \begin{equation}
 \e^{z_1+z_2}=\e^{z_1}\cdot\e^{z_2}\,.
 \end{equation}
 \end{theorem}
 \begin{bevis}
-Med i næste opdatering af eNoten.
+Med i nÃ¦ste opdatering af eNoten.
 \end{bevis}
 
 \section{Komplekse funktioner af en reel variabel}
 
-Lad $c$ være et vilkårligt komplekst tal. Vi vil til ethvert reelt tal $t$ knytte det komplekse tal
+Lad $c$ vÃ¦re et vilkÃ¥rligt komplekst tal. Vi vil til ethvert reelt tal $t$ knytte det komplekse tal
 \begin{equation}\label{tn29_komplFunk}
 f(t)=\e^{ct}\,.
 \end{equation}
-Denne funktion er et eksempel på de såkaldte \textit{komplekse funktioner af en reel variabel}, som vi indfører generelt i det følgende. Derefter  fokuseres specielt på typen (\ref{tn29_komplFunk}) der har vid udbredelse i såvel teoretisk som anvendt matematik. \bs
+Denne funktion er et eksempel pÃ¥ de sÃ¥kaldte \textit{komplekse funktioner af en reel variabel}, som vi indfÃ¸rer generelt i det fÃ¸lgende. Derefter  fokuseres specielt pÃ¥ typen (\ref{tn29_komplFunk}) der har vid udbredelse i sÃ¥vel teoretisk som anvendt matematik. \bs
 
 \begin{definition}
 Ved en \textit{kompleks funktion} $f:\reel\longrightarrow \mathbb C$
-af en reel variabel $t$ forstås en funktion af typen
+af en reel variabel $t$ forstÃ¥s en funktion af typen
 \begin{equation}
 f(t)=g(t)+ih(t)
 \end{equation}
@@ -704,21 +704,21 @@ $$f'(t)=1+i(2t)\,.$$
 \end{example}
 
 \begin{example}[Kompleks funktion af reel variabel]
-Den i definition \ref{tn29_eiy} indførte funktion 
+Den i definition \ref{tn29_eiy} indfÃ¸rte funktion 
 $$g(t)=\e^{it}=\cos(t)+i\sin(t)\,\,,\,t\in\reel\,$$
 er en kompleks funktion af en reel variabel. Den  har differentialkvotienten
 $$g'(t)=-\sin(t)+i\cos(t)\,.$$
 \end{example}
 
-For sædvanlige reelle eksponentialfunktioner af typen 
+For sÃ¦dvanlige reelle eksponentialfunktioner af typen 
 $$f(x)=\e^{kx}\,\,,\,k\in\reel\,$$
-gælder der som bekendt
+gÃ¦lder der som bekendt
 \begin{equation}\label{tn29_diffekx}
 f'(x)=kf(x)=k\e^{kx}\,.
 \end{equation}
 Vi slutter eNoten af med at vise at den komplekse eksponentialfunktion opfylder en differentiationsregel der helt svarer til \ref{tn29_diffekx}.\bs
 \begin{theorem}[Differentiation af $\e^{ct}$]\label{tn29_diffecz}
-Betragt for et vilkårligt $c\in\mathbb C$ og for $t\in\reel$ den komplekse funktion funktion 
+Betragt for et vilkÃ¥rligt $c\in\mathbb C$ og for $t\in\reel$ den komplekse funktion funktion 
 \begin{equation}
 f(t)=\e^{ct}\,.
 \end{equation}
@@ -728,10 +728,10 @@ f'(t)=cf(t)=c\e^{ct}\,.
 \end{equation}
 \end{theorem}
 \begin{bevis}
-Med i næste opdatering af eNoten.
+Med i nÃ¦ste opdatering af eNoten.
 \end{bevis}
 
-Hvis $c$ i sætning \ref{tn29_diffecz} er reel, udtrykker (\ref{diffez1}) naturligvis blot sædvanlig differentiation af den reelle eksponentialfunktion som i (\ref{tn29_diffekx}). Også hvad differentiation angår er den komplekse eksponentialfunktion dermed en udvidelse af den reelle. \bs
-Hermed afsluttes indføringen af den komplekse eksponentialfunktion.
+Hvis $c$ i sÃ¦tning \ref{tn29_diffecz} er reel, udtrykker (\ref{diffez1}) naturligvis blot sÃ¦dvanlig differentiation af den reelle eksponentialfunktion som i (\ref{tn29_diffekx}). OgsÃ¥ hvad differentiation angÃ¥r er den komplekse eksponentialfunktion dermed en udvidelse af den reelle. \bs
+Hermed afsluttes indfÃ¸ringen af den komplekse eksponentialfunktion.
 
 \input{../Strukturfiler/postambel} 

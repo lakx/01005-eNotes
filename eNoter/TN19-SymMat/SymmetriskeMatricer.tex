@@ -1,25 +1,25 @@
 
 \input{../Strukturfiler/preambel}
-\setcounter{chapter}{18} %SÆT DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
+\setcounter{chapter}{18} %SÃ†T DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% HERFRA SKAL DU SKRIVE ELLER INDSÆTTE %%%%
-%%% DEN FIL DU ØNSKER %%%%%%%%%%%%%%%%%%%%%%%
+%%% HERFRA SKAL DU SKRIVE ELLER INDSÃ†TTE %%%%
+%%% DEN FIL DU Ã˜NSKER %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Symmetriske matricer} \label{tn19}
 
 \begin{basis}
-I denne eNote vil vi beskæftige os med  et af de mest benyttede resultater fra lineær algebra -- den såkaldte {\emph{spektralsætning}} for symmetriske matricer. Den siger kort fortalt, at {\emph{alle}} symmetriske matricer kan {\emph{diagonaliseres}} ved en similartransformation, altså ved et basisskift foretaget med en passende substitutionsmatrix. \\
+I denne eNote vil vi beskÃ¦ftige os med  et af de mest benyttede resultater fra lineÃ¦r algebra -- den sÃ¥kaldte {\emph{spektralsÃ¦tning}} for symmetriske matricer. Den siger kort fortalt, at {\emph{alle}} symmetriske matricer kan {\emph{diagonaliseres}} ved en similartransformation, altsÃ¥ ved et basisskift foretaget med en passende substitutionsmatrix. \\
 
-Indførelsen af disse begreber og tilhørende metoder blev givet i
-\tref{NUID24-tn10}{eNote}, som derfor er en fundamental basis for nærværende eNote. \\
+IndfÃ¸relsen af disse begreber og tilhÃ¸rende metoder blev givet i
+\tref{NUID24-tn10}{eNote}, som derfor er en fundamental basis for nÃ¦rvÃ¦rende eNote. \\
 
-Netop i den eNote blev det klart, at ikke alle matricer kan diagonaliseres. Diagonalisering kræver, at der er tilstrækkelig mange egenværdier (de algebraiske multipliciteter summer op til at være størst mulig) og at deres egenvektorrum faktisk udfylder hele vektorrummet (de geometriske multipliciteter summer op til at være størst mulig). Det er disse egenskaber, som vi vil beskæftige os med, men nu for symmetriske matricer, der viser sig at opfylde  betingelserne og faktisk mere til: De egenvektorer vi benytter i den resulterende substitutionsmatrix kan vælges parvis ortogonale, sådan at den nye basis fremkommer ved en rotation af den gamle sædvanlige basis i $\mathbb{R}^{n}$.\\
+Netop i den eNote blev det klart, at ikke alle matricer kan diagonaliseres. Diagonalisering krÃ¦ver, at der er tilstrÃ¦kkelig mange egenvÃ¦rdier (de algebraiske multipliciteter summer op til at vÃ¦re stÃ¸rst mulig) og at deres egenvektorrum faktisk udfylder hele vektorrummet (de geometriske multipliciteter summer op til at vÃ¦re stÃ¸rst mulig). Det er disse egenskaber, som vi vil beskÃ¦ftige os med, men nu for symmetriske matricer, der viser sig at opfylde  betingelserne og faktisk mere til: De egenvektorer vi benytter i den resulterende substitutionsmatrix kan vÃ¦lges parvis ortogonale, sÃ¥dan at den nye basis fremkommer ved en rotation af den gamle sÃ¦dvanlige basis i $\mathbb{R}^{n}$.\\
 
-For at kunne diskutere og anvende spektralsætningen mest effektivt må vi først indføre et naturligt skalarprodukt for vektorer i $\mathbb{R}^{n}$ sådan at vi kan måle vinkler og længder i alle dimensioner. Det gør vi selvfølgelig med udgangspunkt i det velkendte sædvanlige skalarprodukt fra $\mathbb{R}^{2}$  og $\mathbb{R}^{3}$. Som antydet vil vi specielt benytte baser bestående af parvis ortogonale vektorer til at opstille og forstå hvad spektralsætningen går ud på og hvad vi kan bruge den til.
+For at kunne diskutere og anvende spektralsÃ¦tningen mest effektivt mÃ¥ vi fÃ¸rst indfÃ¸re et naturligt skalarprodukt for vektorer i $\mathbb{R}^{n}$ sÃ¥dan at vi kan mÃ¥le vinkler og lÃ¦ngder i alle dimensioner. Det gÃ¸r vi selvfÃ¸lgelig med udgangspunkt i det velkendte sÃ¦dvanlige skalarprodukt fra $\mathbb{R}^{2}$  og $\mathbb{R}^{3}$. Som antydet vil vi specielt benytte baser bestÃ¥ende af parvis ortogonale vektorer til at opstille og forstÃ¥ hvad spektralsÃ¦tningen gÃ¥r ud pÃ¥ og hvad vi kan bruge den til.
 \end{basis}
 
 
@@ -31,20 +31,20 @@ For at kunne diskutere og anvende spektralsætningen mest effektivt må vi først i
 
 
 
-I vektorrummet $\mathbb{R}^{n}$ indføres et indre produkt, dvs. et skalarprodukt,  som er en naturlig generalisering af det velkendte skalarprodukt fra plangeometri og rumgeometri, se \tref{NUID12-tn6}{eNote}.
+I vektorrummet $\mathbb{R}^{n}$ indfÃ¸res et indre produkt, dvs. et skalarprodukt,  som er en naturlig generalisering af det velkendte skalarprodukt fra plangeometri og rumgeometri, se \tref{NUID12-tn6}{eNote}.
 
 
 \begin{definition}[Skalarprodukt] \label{defSkalarProd}
-Lad $\mathbf{a}$ og $\mathbf{b}$ være to givne vektorer i $\mathbb{R}^{n}$ med koordinaterne henholdsvis  $(a_{1}, . . . , a_{n})$ og $(b_{1}, . . . , b_{n})$ med hensyn til den sædvanlige basis e i $\mathbb{R}^{n}$:
+Lad $\mathbf{a}$ og $\mathbf{b}$ vÃ¦re to givne vektorer i $\mathbb{R}^{n}$ med koordinaterne henholdsvis  $(a_{1}, . . . , a_{n})$ og $(b_{1}, . . . , b_{n})$ med hensyn til den sÃ¦dvanlige basis e i $\mathbb{R}^{n}$:
 \begin{equation}
 \vekind ea = (a_{1}, . . . , a_{n})\quad  , \quad \textrm{og} \quad  \vekind eb = (b_{1}, . . . , b_{n})\quad .
 \end{equation}
 
-Så definerer vi \ind{skalarprodukt}{skalarproduktet},  \ind{indre produkt}{det indre produkt}, af de to vektorer på følgende måde:
+SÃ¥ definerer vi \ind{skalarprodukt}{skalarproduktet},  \ind{indre produkt}{det indre produkt}, af de to vektorer pÃ¥ fÃ¸lgende mÃ¥de:
 \begin{equation}
 \mathbf{a} {\bm{\cdot}} \mathbf{b} =  a_{1}b_{1} + a_{2}b_{2} + \cdot \cdot \cdot a_{n}b_{n} = \sum_{i=1}^{n}a_{i}b_{i} \quad .
 \end{equation}
-Når $\mathbb{R}^{n}$ udstyres med dette skalarprodukt er $(\mathbb{R}^{n}, \bm{\cdot})$ dermed et eksempel på et såkaldt \ind{Euklidisk vektorrum $(\mathbb{R}^{n}, \bm{\cdot})$}{Euklidisk vektorrum}, eller et \ind{vektorrum med indre produkt}{vektorrum med indre produkt}.
+NÃ¥r $\mathbb{R}^{n}$ udstyres med dette skalarprodukt er $(\mathbb{R}^{n}, \bm{\cdot})$ dermed et eksempel pÃ¥ et sÃ¥kaldt \ind{Euklidisk vektorrum $(\mathbb{R}^{n}, \bm{\cdot})$}{Euklidisk vektorrum}, eller et \ind{vektorrum med indre produkt}{vektorrum med indre produkt}.
 \end{definition}
 
 \begin{think}
@@ -67,10 +67,10 @@ Skalarproduktet kan udtrykkes som et matrix-produkt:
 \end{equation}
 \end{think}
 
-For det indførte skalarprodukt gælder følgende regneregler
+For det indfÃ¸rte skalarprodukt gÃ¦lder fÃ¸lgende regneregler
 
 \begin{theorem}[Regneregler for skalarprodukt]\label{reglerSkalarProd}
-Hvis $\ma\,$, $\mb\,$ og $\mc\,$ er vektorer i $(\mathbb{R}^{n}, \bm{\cdot})$ og $k$ er et vilkårligt reelt tal gælder:
+Hvis $\ma\,$, $\mb\,$ og $\mc\,$ er vektorer i $(\mathbb{R}^{n}, \bm{\cdot})$ og $k$ er et vilkÃ¥rligt reelt tal gÃ¦lder:
 \begin{equation}\label{RR1}
 \ma \bm{\cdot} \mb = \mb \bm{\cdot} \ma
 \end{equation}
@@ -84,19 +84,19 @@ Hvis $\ma\,$, $\mb\,$ og $\mc\,$ er vektorer i $(\mathbb{R}^{n}, \bm{\cdot})$ og
 \end{equation}
 \end{theorem}
 
-En hovedpointe ved indførelsen af et skalarprodukt er, at vi nu kan tale om {\emph{længder af vektorerne}} i $(\mathbb{R}^{n}, \bm{\cdot})$:
+En hovedpointe ved indfÃ¸relsen af et skalarprodukt er, at vi nu kan tale om {\emph{lÃ¦ngder af vektorerne}} i $(\mathbb{R}^{n}, \bm{\cdot})$:
 
-\begin{definition}[Længden af en vektor] \label{defLength}
-Lad $\mathbf{a}$ være en vektor i $(\mathbb{R}^{n}, \bm{\cdot})$ med koordinaterne $(a_{1}, . . . , a_{n})$ med hensyn til standard $e$-basis i $\mathbb{R}^{n}$. Så er \ind{længden af en vektor $\mathbf{a}$}{længden af $\mathbf{a}$} defineret ved
+\begin{definition}[LÃ¦ngden af en vektor] \label{defLength}
+Lad $\mathbf{a}$ vÃ¦re en vektor i $(\mathbb{R}^{n}, \bm{\cdot})$ med koordinaterne $(a_{1}, . . . , a_{n})$ med hensyn til standard $e$-basis i $\mathbb{R}^{n}$. SÃ¥ er \ind{lÃ¦ngden af en vektor $\mathbf{a}$}{lÃ¦ngden af $\mathbf{a}$} defineret ved
 \begin{equation}
 \vert \mathbf{a} \vert = \sqrt{\mathbf{a} \bm{\cdot} \mathbf{a}} = \sqrt{\sum_{i=1}^{n}a_{i}^{2}} \quad.
 \end{equation}
-Længden af $\mathbf{a}$ kaldes også \ind{normen af en vektor $\mathbf{a}$}{normen af $\mathbf{a}$} med hensyn til skalarproduktet i $(\mathbb{R}^{n}, \bm{\cdot})$.
+LÃ¦ngden af $\mathbf{a}$ kaldes ogsÃ¥ \ind{normen af en vektor $\mathbf{a}$}{normen af $\mathbf{a}$} med hensyn til skalarproduktet i $(\mathbb{R}^{n}, \bm{\cdot})$.
 En vektor $\mathbf{a}$ kaldes en \ind{egentlig vektor}{egentlig vektor} hvis $\vert \mathbf{a} \vert > 0\,$.
 \end{definition}
 
 \begin{aha}
-Det følger af definition \ref{defSkalarProd} at der gælder
+Det fÃ¸lger af definition \ref{defSkalarProd} at der gÃ¦lder
 \begin{equation}\label{0regel1}
 \begin{aligned}
 \ma {\bm{\cdot}}\ma &\geq 0\,\,\,\textrm{for alle}\,\,\,\ma \in (\mathbb{R}^{n}, \bm{\cdot})\,\,\,\mathrm{og}\\
@@ -110,28 +110,28 @@ Heraf ses umiddelbart at
 \left|\ma\right|&= 0 \Leftrightarrow \ma=\mnul\,.
 \end{aligned}
 \end{equation}
-En \textit{egentlig} vektor er altså en vektor som ikke er $\mathbf 0$-vektoren. \bs
-Endelig følger det af definition \ref{defSkalarProd} og definition \ref{defLength} at der for $\ma \in (\mathbb{R}^{n}, \bm{\cdot})$ og et vilkårligt reelt tal $k$ gælder  gælder
+En \textit{egentlig} vektor er altsÃ¥ en vektor som ikke er $\mathbf 0$-vektoren. \bs
+Endelig fÃ¸lger det af definition \ref{defSkalarProd} og definition \ref{defLength} at der for $\ma \in (\mathbb{R}^{n}, \bm{\cdot})$ og et vilkÃ¥rligt reelt tal $k$ gÃ¦lder  gÃ¦lder
 \begin{equation}\label{kUdenfor}
 \left|k\ma\right|=\left|k\right|\,\left|\ma\right|\,.
 \end{equation}
 \end{aha}
 
-Vi er nu i stand til at vise følgende vigtige sætning:
+Vi er nu i stand til at vise fÃ¸lgende vigtige sÃ¦tning:
 
 \begin{theorem}[Cauchy-Schwarz' ulighed]
-For vilkårlige vektorer $\ma\,$ og $\mb$ i $(\mathbb{R}^{n}, \bm{\cdot})$ gælder
+For vilkÃ¥rlige vektorer $\ma\,$ og $\mb$ i $(\mathbb{R}^{n}, \bm{\cdot})$ gÃ¦lder
 \begin{equation}\label{C-S}
 \left|\mathbf{a} \bm{\cdot} \mathbf{b}\right| \leq \left|\,\ma\,\right|\,\left|\,\mb\,\right|\,,
 \end{equation}
-hvor lighedstegnet gælder, hvis og kun hvis $\ma\,$ og $\mb$ er lineært afhængige.
+hvor lighedstegnet gÃ¦lder, hvis og kun hvis $\ma\,$ og $\mb$ er lineÃ¦rt afhÃ¦ngige.
 \end{theorem}
 \begin{bevis}
-Hvis $\mb=\mnul\,$, er begge sider i (\ref{C-S}) lig $0$ og uligheden dermed opfyldt. I det følgende forudsættes $\mb$ at være en egentlig vektor.\bs
-Vi sætter $k=\mb\bm{\cdot}\mb$ og $\displaystyle{\me=\frac{1}{\sqrt{k}}}\,\mb\,$. Så følger det af (\ref{RR3}) at
+Hvis $\mb=\mnul\,$, er begge sider i (\ref{C-S}) lig $0$ og uligheden dermed opfyldt. I det fÃ¸lgende forudsÃ¦ttes $\mb$ at vÃ¦re en egentlig vektor.\bs
+Vi sÃ¦tter $k=\mb\bm{\cdot}\mb$ og $\displaystyle{\me=\frac{1}{\sqrt{k}}}\,\mb\,$. SÃ¥ fÃ¸lger det af (\ref{RR3}) at
 $$\me \bm{\cdot}\me=(\frac{1}{\sqrt{k}}\,\mb)\bm{\cdot}(\frac{1}{\sqrt{k}}\,\mb)=\frac{1}{k}\,(\mb\bm{\cdot}\mb)=1$$
 og dermed at $\left|\me\right|=1\,$.\bs
-Ved at indsætte $\mb=\sqrt k\, \me$ i venstresiden og højresiden af (\ref{C-S}) får vi ved brug af (\ref{RR3}) og (\ref{kUdenfor}):
+Ved at indsÃ¦tte $\mb=\sqrt k\, \me$ i venstresiden og hÃ¸jresiden af (\ref{C-S}) fÃ¥r vi ved brug af (\ref{RR3}) og (\ref{kUdenfor}):
 $$\left|\ma\bm{\cdot}\mb\right|=|\,\ma\,\bm{\cdot}({\sqrt{k}}\,\me)\,|=
 {\sqrt{k}}\left|\ma\bm{\cdot}\me\right|$$
 og
@@ -139,53 +139,53 @@ $$
 \left|\ma\right|\,\left|\mb\right|=
 \left|\ma\right|\,|\,{\sqrt{k}}\,\me\,|=
 {\sqrt{k}}\left|\ma\right|\,\left|\me\right|\,.$$
-Vi behøver derfor kun at vise at der for vilkårlige $\ma$ og $\me$
+Vi behÃ¸ver derfor kun at vise at der for vilkÃ¥rlige $\ma$ og $\me$
 %i  $(\mathbb{R}^{n}, \bm{\cdot})$
-, hvor $\left|\me\right|=1\,$, gælder
+, hvor $\left|\me\right|=1\,$, gÃ¦lder
 \begin{equation}\label{C-S2}
 \left|\mathbf{a} \bm{\cdot} \mathbf{e}\right| \leq \left|\,\ma\,\right|
 \end{equation}
-hvor lighedstegnet skal gælde, hvis og kun hvis $\ma\,$ og $\me$ er lineært afhængige.\bs
-For et vilkårligt $t\in \reel$ gælder ifølge (\ref{0regel1}), (\ref{RR2}) og (\ref{RR3}):
+hvor lighedstegnet skal gÃ¦lde, hvis og kun hvis $\ma\,$ og $\me$ er lineÃ¦rt afhÃ¦ngige.\bs
+For et vilkÃ¥rligt $t\in \reel$ gÃ¦lder ifÃ¸lge (\ref{0regel1}), (\ref{RR2}) og (\ref{RR3}):
 $$0\leq (\ma-t\me)\bm{\cdot}(\ma-t\me)=
 \ma\bm{\cdot}\ma+t^2(\me\bm{\cdot}\me)-2t(\ma\bm{\cdot}\me)
 =\ma\bm{\cdot}\ma+t^2-2t(\ma\bm{\cdot}\me)\,.$$
-Hvis vi her specielt vælger $t=\ma\bm{\cdot}\me\,$, får vi
+Hvis vi her specielt vÃ¦lger $t=\ma\bm{\cdot}\me\,$, fÃ¥r vi
 $$
 0\leq \ma\bm{\cdot}\ma-(\ma\bm{\cdot}\me)^2
 \,\Leftrightarrow\, \left|\ma\bm{\cdot}\me\right|
 \leq \sqrt{\ma\bm{\cdot}\ma}=\left|\ma\right|\,.
 $$
-Da det ifølge (\ref{0regel1}) gælder at $(\ma-t\me)\bm{\cdot}(\ma-t\me)=0$ hvis og kun hvis $(\ma-t\me)=\mnul\,$, ser vi at $\left|\mathbf{a} \bm{\cdot} \mathbf{e}\right| =  \left|\,\ma\,\right|$ hvis og kun hvis $\ma$ og $\me$ er lineært afhængige. Beviset er hermed fuldført.
+Da det ifÃ¸lge (\ref{0regel1}) gÃ¦lder at $(\ma-t\me)\bm{\cdot}(\ma-t\me)=0$ hvis og kun hvis $(\ma-t\me)=\mnul\,$, ser vi at $\left|\mathbf{a} \bm{\cdot} \mathbf{e}\right| =  \left|\,\ma\,\right|$ hvis og kun hvis $\ma$ og $\me$ er lineÃ¦rt afhÃ¦ngige. Beviset er hermed fuldfÃ¸rt.
 \end{bevis}
 
-Af Cauchy-Schwarz' ulighed følger trekantuligheden, som er en generalsering af den fra elementær plangeometri kendte sætning, at en side i en trekant altid er mindre end eller lig med summen af de to øvrige sider:
+Af Cauchy-Schwarz' ulighed fÃ¸lger trekantuligheden, som er en generalsering af den fra elementÃ¦r plangeometri kendte sÃ¦tning, at en side i en trekant altid er mindre end eller lig med summen af de to Ã¸vrige sider:
 
 \begin{corollary}[Trekant-uligheden]\label{trekantulighed}
-For vilkårlige vektorer $\ma\,$ og $\mb$ og i $(\mathbb{R}^{n}, \bm{\cdot})$ gælder
+For vilkÃ¥rlige vektorer $\ma\,$ og $\mb$ og i $(\mathbb{R}^{n}, \bm{\cdot})$ gÃ¦lder
 \begin{equation}
 \left|\ma+\mb\right|\leq \left|\ma\right|+\left|\mb\right|\,.
 \end{equation}
 \end{corollary}
 
 \begin{exercise}
-Bevis følgesætning \ref{trekantulighed}.
+Bevis fÃ¸lgesÃ¦tning \ref{trekantulighed}.
 \end{exercise}
 
-Bemærk at der af Cauchy-Schwarz' ulighed følger:
+BemÃ¦rk at der af Cauchy-Schwarz' ulighed fÃ¸lger:
 
 \begin{equation}
 -1\leq \frac{\mathbf{a} \bm{\cdot} \mathbf{b}}{\vert \mathbf{a} \vert \cdot \vert \mathbf{b} \vert} \leq 1\quad.
 \end{equation}
 
-{\emph{Vinklen mellem to vektorer}} i $(\mathbb{R}^{n}, \bm{\cdot})$ kan derfor indføres således:
+{\emph{Vinklen mellem to vektorer}} i $(\mathbb{R}^{n}, \bm{\cdot})$ kan derfor indfÃ¸res sÃ¥ledes:
 
 \begin{definition}[Vinklen mellem vektorer] \label{defVinkel}
-Lad  $\mathbf{a}$ og $\mathbf{b}$ være to givne egentlige vektorer i $(\mathbb{R}^{n}, \bm{\cdot})$ med koordinaterne $(a_{1}, . . . , a_{n})$ og $(b_{1}, . . . , b_{n})$ med hensyn til den sædvanlige basis i $(\mathbb{R}^{n}, \bm{\cdot})$. Så er \ind{vinklen mellem to vektorer $\mathbf{a}$ og $\mathbf{b}$}{vinklen mellem $\mathbf{a}$ og $\mathbf{b}$} defineret ved den værdi af $\theta$ i intervallet $[0, \pi]$ som opfylder
+Lad  $\mathbf{a}$ og $\mathbf{b}$ vÃ¦re to givne egentlige vektorer i $(\mathbb{R}^{n}, \bm{\cdot})$ med koordinaterne $(a_{1}, . . . , a_{n})$ og $(b_{1}, . . . , b_{n})$ med hensyn til den sÃ¦dvanlige basis i $(\mathbb{R}^{n}, \bm{\cdot})$. SÃ¥ er \ind{vinklen mellem to vektorer $\mathbf{a}$ og $\mathbf{b}$}{vinklen mellem $\mathbf{a}$ og $\mathbf{b}$} defineret ved den vÃ¦rdi af $\theta$ i intervallet $[0, \pi]$ som opfylder
 \begin{equation}
 \cos(\theta) = \frac{\mathbf{a} \bm{\cdot} \mathbf{b}}{\vert \mathbf{a} \vert \cdot \vert \mathbf{b} \vert} \quad.
 \end{equation}
-Hvis $\mathbf{a} \bm{\cdot} \mathbf{b} = 0 $ så siger vi, at de to egentlige vektorer er \ind{ortogonale vektorer}{ortogonale} eller \ind{vinkelrette}{vinkelrette} på hinanden. Det optræder præcis når $\cos(\theta) = 0$, altså når $\theta = \pi/2$.
+Hvis $\mathbf{a} \bm{\cdot} \mathbf{b} = 0 $ sÃ¥ siger vi, at de to egentlige vektorer er \ind{ortogonale vektorer}{ortogonale} eller \ind{vinkelrette}{vinkelrette} pÃ¥ hinanden. Det optrÃ¦der prÃ¦cis nÃ¥r $\cos(\theta) = 0$, altsÃ¥ nÃ¥r $\theta = \pi/2$.
 \end{definition}
 
 
@@ -206,16 +206,16 @@ En kvadratformet matrix $\mathbf{A}$ er \ind{symmetrisk matrix}{symmetrisk} hvis
 \begin{equation}
 \mathbf{A} = \mathbf{A}\transp \quad ,
 \end{equation}
-altså hvis $a_{ij}$ = $a_{j\,i}$ for alle elementerne i matricen.
+altsÃ¥ hvis $a_{ij}$ = $a_{j\,i}$ for alle elementerne i matricen.
 \end{definition}
 
 
-Hvad har symmetriske matricer med skalarproduktet at gøre? Det ser vi på her:
+Hvad har symmetriske matricer med skalarproduktet at gÃ¸re? Det ser vi pÃ¥ her:
 
 
 \begin{theorem}
-Lad $\mathbf{v}$ og $\mathbf{w}$ betegne to vektorer i vektorrummet $(\mathbb{R}^{n}, \bm{\cdot})$ med det indførte skalarprodukt. Hvis $\mathbf{A}$ er en vilkårlig
-$(n \times n)-$matrix gælder
+Lad $\mathbf{v}$ og $\mathbf{w}$ betegne to vektorer i vektorrummet $(\mathbb{R}^{n}, \bm{\cdot})$ med det indfÃ¸rte skalarprodukt. Hvis $\mathbf{A}$ er en vilkÃ¥rlig
+$(n \times n)-$matrix gÃ¦lder
 \begin{equation} \label{eqMatDot}
 \left(\mathbf{A}\,\mathbf{v} \right){\bm{\cdot}} \mathbf{w} = \mathbf{v} {\bm{\cdot}} \left(\mathbf{A}\transp\,\mathbf{w}\right) \quad .
 \end{equation}
@@ -243,7 +243,7 @@ En matrix $\mathbf{A}$ er en symmetrisk $(n \times n)-$matrix hvis og kun hvis
 for alle vektorer $\mathbf{v}$ og $\mathbf{w}$ i $(\mathbb{R}^{n}, \bm{\cdot})$.
 \end{theorem}
 \begin{bevis}
-Hvis $\mathbf{A}$ er symmetrisk, så har vi at $\mathbf{A} = \mathbf{A}\transp$ og derfor ligning (\ref{eqSymDot}) direkte fra (\ref{eqMatDot}). Omvendt, hvis vi antager at (\ref{eqSymDot}) gælder for alle $\mathbf{v}$ og $\mathbf{w}$, så skal vi vise, at $\mathbf{A}$ er symmetrisk. Men det følger let ved blot at {\em{vælge}} passende vektorer, f.eks. $\mathbf{v} = \mathbf{e}_{2} = (0, 1, 0, ..., 0)$ og $\mathbf{w} = \mathbf{e}_{3} = (0, 0, 1, ..., 0)$ og indsætte i (\ref{eqSymDot}) som nedenfor. Bemærk, at $\mathbf{A}\,\mathbf{e}_{i}$ er den $i$'te søjle-vektor i $\mathbf{A}$.
+Hvis $\mathbf{A}$ er symmetrisk, sÃ¥ har vi at $\mathbf{A} = \mathbf{A}\transp$ og derfor ligning (\ref{eqSymDot}) direkte fra (\ref{eqMatDot}). Omvendt, hvis vi antager at (\ref{eqSymDot}) gÃ¦lder for alle $\mathbf{v}$ og $\mathbf{w}$, sÃ¥ skal vi vise, at $\mathbf{A}$ er symmetrisk. Men det fÃ¸lger let ved blot at {\em{vÃ¦lge}} passende vektorer, f.eks. $\mathbf{v} = \mathbf{e}_{2} = (0, 1, 0, ..., 0)$ og $\mathbf{w} = \mathbf{e}_{3} = (0, 0, 1, ..., 0)$ og indsÃ¦tte i (\ref{eqSymDot}) som nedenfor. BemÃ¦rk, at $\mathbf{A}\,\mathbf{e}_{i}$ er den $i$'te sÃ¸jle-vektor i $\mathbf{A}$.
 \begin{equation}
 \begin{aligned}
 \left(\mathbf{A}\,\mathbf{e}_{2} \right)\cdot \mathbf{e}_{3} &= a_{23} \\
@@ -252,10 +252,10 @@ Hvis $\mathbf{A}$ er symmetrisk, så har vi at $\mathbf{A} = \mathbf{A}\transp$ o
 &= a_{32} \quad,
 \end{aligned}
 \end{equation}
-sådan at $a_{23} = a_{32}$. Helt tilsvarende fås for alle andre valg af indices $i$ og $j$ at $a_{ij}= a_{j\,i}$ -- og det var det vi skulle vise.
+sÃ¥dan at $a_{23} = a_{32}$. Helt tilsvarende fÃ¥s for alle andre valg af indices $i$ og $j$ at $a_{ij}= a_{j\,i}$ -- og det var det vi skulle vise.
 \end{bevis}
 
-En basis a i $(\mathbb{R}^{n}, \bm{\cdot})$ består (som bekendt fra \tref{NUID18-tn7}{eNote}) af $n$ lineært uafhængige vektorer $(\mathbf{a}_{1}, . . . , \mathbf{a}_{n})$. Hvis vektorerne derudover er parvis ortogonale og har længden $1$ med hensyn til det indførte skalarprodukt, så er $(\mathbf{a}_{1}, . . . , \mathbf{a}_{n})$ en \ind{ortonormal basis for $(\mathbb{R}^{n}, \bm{\cdot})$}{ortonormal basis for $(\mathbb{R}^{n}, \bm{\cdot})$} :
+En basis a i $(\mathbb{R}^{n}, \bm{\cdot})$ bestÃ¥r (som bekendt fra \tref{NUID18-tn7}{eNote}) af $n$ lineÃ¦rt uafhÃ¦ngige vektorer $(\mathbf{a}_{1}, . . . , \mathbf{a}_{n})$. Hvis vektorerne derudover er parvis ortogonale og har lÃ¦ngden $1$ med hensyn til det indfÃ¸rte skalarprodukt, sÃ¥ er $(\mathbf{a}_{1}, . . . , \mathbf{a}_{n})$ en \ind{ortonormal basis for $(\mathbb{R}^{n}, \bm{\cdot})$}{ortonormal basis for $(\mathbb{R}^{n}, \bm{\cdot})$} :
 
 \begin{definition} \label{defOrtoBasis}
 En basis a $= (\mathbf{a}_{1}, . . . , \mathbf{a}_{n})$ er en {\em{ortonormal basis}} hvis
@@ -270,13 +270,13 @@ En basis a $= (\mathbf{a}_{1}, . . . , \mathbf{a}_{n})$ er en {\em{ortonormal ba
 \end{definition}
 
 \begin{exercise}
-Vis, at hvis $n$ vektorer $( \mathbf{a}_{1}, . . . , \mathbf{a}_{n} )$ i $(\mathbb{R}^{n}, \bm{\cdot})$ opfylder ligningen (\ref{eqOrtoBasis}), så er
-a $= ( \mathbf{a}_{1}, . . . , \mathbf{a}_{n} )$ automatisk en {\em{basis}} for $(\mathbb{R}^{n}, \bm{\cdot})$, dvs. vektorerne er garanteret lineært uafhængige og udspænder hele $(\mathbb{R}^{n}, \bm{\cdot})$.
+Vis, at hvis $n$ vektorer $( \mathbf{a}_{1}, . . . , \mathbf{a}_{n} )$ i $(\mathbb{R}^{n}, \bm{\cdot})$ opfylder ligningen (\ref{eqOrtoBasis}), sÃ¥ er
+a $= ( \mathbf{a}_{1}, . . . , \mathbf{a}_{n} )$ automatisk en {\em{basis}} for $(\mathbb{R}^{n}, \bm{\cdot})$, dvs. vektorerne er garanteret lineÃ¦rt uafhÃ¦ngige og udspÃ¦nder hele $(\mathbb{R}^{n}, \bm{\cdot})$.
 \end{exercise}
 
 
 \begin{exercise} \label{exercRotBasis}
-Vis, at følgende $3$ vektorer $(\mathbf{a}_{1}, \mathbf{a}_{2}, \mathbf{a}_{3})$ udgør en ortonormal basis a for $(\mathbb{R}^{3}, \bm{\cdot})$  for enhver given værdi af
+Vis, at fÃ¸lgende $3$ vektorer $(\mathbf{a}_{1}, \mathbf{a}_{2}, \mathbf{a}_{3})$ udgÃ¸r en ortonormal basis a for $(\mathbb{R}^{3}, \bm{\cdot})$  for enhver given vÃ¦rdi af
 $\theta \in \mathbb{R}$ :
 \begin{equation}
 \begin{aligned}
@@ -287,15 +287,15 @@ $\theta \in \mathbb{R}$ :
 \end{equation}
 \end{exercise}
 
-Hvis vi sætter vektorerne fra en ortonormal basis ind som søjler i en matrix fås en \ind{ortogonal matrix}{ortogonal matrix}:
+Hvis vi sÃ¦tter vektorerne fra en ortonormal basis ind som sÃ¸jler i en matrix fÃ¥s en \ind{ortogonal matrix}{ortogonal matrix}:
 
 \begin{definition}\label{def_ortogonal_matrix}
-En $(n \times n)-$matrix $\mathbf{A}$ siges at være {\em{ortogonal}} hvis søjlevektorerne i $\mathbf{A}$ udgør en
-ortonormal basis for  $(\mathbb{R}^{n}, \bm{\cdot})$, altså hvis søjlevektorerne er parvis ortogonale og alle har længden $1$ -- som også udtrykt i ligning (\ref{eqOrtoBasis}).
+En $(n \times n)-$matrix $\mathbf{A}$ siges at vÃ¦re {\em{ortogonal}} hvis sÃ¸jlevektorerne i $\mathbf{A}$ udgÃ¸r en
+ortonormal basis for  $(\mathbb{R}^{n}, \bm{\cdot})$, altsÃ¥ hvis sÃ¸jlevektorerne er parvis ortogonale og alle har lÃ¦ngden $1$ -- som ogsÃ¥ udtrykt i ligning (\ref{eqOrtoBasis}).
 \end{definition}
 
 \begin{think}
-Bemærk, at {\em{ortogonale matricer}} alternativt (og måske mere betegnende) kunne kaldes {\em{ortonormale}}, idet søjlerne i matricen ikke bare er parvis ortogonale men også normerede, så de alle har længde $1$. Vi vil følge international skik og brug og kalder matricerne ortogonale.
+BemÃ¦rk, at {\em{ortogonale matricer}} alternativt (og mÃ¥ske mere betegnende) kunne kaldes {\em{ortonormale}}, idet sÃ¸jlerne i matricen ikke bare er parvis ortogonale men ogsÃ¥ normerede, sÃ¥ de alle har lÃ¦ngde $1$. Vi vil fÃ¸lge international skik og brug og kalder matricerne ortogonale.
 \end{think}
 
 Det er let at checke om en given matrix er ortogonal:
@@ -305,23 +305,23 @@ En $(n \times n)-$matrix $\mathbf{Q}$ er ortogonal hvis og kun hvis
 \begin{equation}
 \mathbf{Q}\transp \cdot \mathbf{Q} = \mathbf{E}_{n \times n} \quad ,
 \end{equation}
-som er helt ækvivalent med
+som er helt Ã¦kvivalent med
 \begin{equation}
 \mathbf{Q}\transp = \mathbf{Q}^{-1}  \quad .
 \end{equation}
 \end{theorem}
 \begin{bevis}
-Se \tref{NUID2-tn3}{eNote} om beregningen af matrixproduktet og sammenlign dernæst med betingelsen for ortogonalitet af søjlevektorerne i $\mathbf{Q}$ (ligning (\ref{eqOrtoBasis})).
+Se \tref{NUID2-tn3}{eNote} om beregningen af matrixproduktet og sammenlign dernÃ¦st med betingelsen for ortogonalitet af sÃ¸jlevektorerne i $\mathbf{Q}$ (ligning (\ref{eqOrtoBasis})).
 \end{bevis}
 
-Ortogonale matricer er {\em{regulære}}:
+Ortogonale matricer er {\em{regulÃ¦re}}:
 
 \begin{exercise}
-Vis, at for at en matrix $\mathbf{A}$ kan være ortogonal, så er det en nødvendig betingelse at
+Vis, at for at en matrix $\mathbf{A}$ kan vÃ¦re ortogonal, sÃ¥ er det en nÃ¸dvendig betingelse at
 \begin{equation}
 | \det(\mathbf{A}) |  = 1 \quad .
 \end{equation}
-Vis at den betingelse ikke er tilstrækkelig, altså at der findes matricer, som opfylder denne determinant-betingelse, men som ikke er ortogonale.
+Vis at den betingelse ikke er tilstrÃ¦kkelig, altsÃ¥ at der findes matricer, som opfylder denne determinant-betingelse, men som ikke er ortogonale.
 \end{exercise}
 
 
@@ -331,7 +331,7 @@ den kaldes  \ind{negativ ortogonal matrix}{negativ ortogonal} hvis  $\det(\mathb
 \end{definition}
 
 \begin{aha}
- Læg mærke til, at determinanten af en ortogonal matrix aldrig er $0$, så enhver ortogonal matrix er enten positiv ortogonal  eller negativ ortogonal.
+ LÃ¦g mÃ¦rke til, at determinanten af en ortogonal matrix aldrig er $0$, sÃ¥ enhver ortogonal matrix er enten positiv ortogonal  eller negativ ortogonal.
 \end{aha}
 
 
@@ -347,7 +347,7 @@ Givet matricen
            \end{array}
          \right] \quad , \quad \textrm{hvor $a \in \mathbb{R}$} \quad .
 \end{equation}
-Bestem de værdier af $a$ for hvilke $\mathbf{A}$ er ortogonal og angiv i hvert tilfælde om $\mathbf{A}$ er positiv ortogonal eller negativ ortogonal.
+Bestem de vÃ¦rdier af $a$ for hvilke $\mathbf{A}$ er ortogonal og angiv i hvert tilfÃ¦lde om $\mathbf{A}$ er positiv ortogonal eller negativ ortogonal.
 \end{exercise}
 
 
@@ -369,23 +369,23 @@ Bestem de værdier af $a$ for hvilke $\mathbf{A}$ er ortogonal og angiv i hvert t
 
 
 \section{Gram--Schmidt ortonormalisering}
-Vi beskriver her en procedure til at bestemme en ortonormal basis i et underrum af vektorrummet $(\mathbb{R}^{n}, \bm{\cdot})$. Lad $U$ være et $p-$dimensionalt underrum af $(\mathbb{R}^{n}, \bm{\cdot})$; vi antager, at $U$ er udspændt af $p$ givne lineært uafhængige vektorer $( \mathbf{u}_{1}, \cdot  \cdot \cdot, \mathbf{u}_{p} )$, som altså derved udgør en basis  u for $U$. Gram--Schmidt ortonormaliseringen går ud på at konstruere en ny basis v $= ( \mathbf{v}_{1}, \mathbf{v}_{2}, \cdot \cdot \cdot ,  \mathbf{v}_{p} )$ for underrummet $U$ ud fra den givne basis u sådan at de nye vektorer $\mathbf{v}_{1}, \mathbf{v}_{2}, \cdot \cdot \cdot ,  \mathbf{v}_{p}$ er {\em{parvis ortogonale og har længden $1$}}.
+Vi beskriver her en procedure til at bestemme en ortonormal basis i et underrum af vektorrummet $(\mathbb{R}^{n}, \bm{\cdot})$. Lad $U$ vÃ¦re et $p-$dimensionalt underrum af $(\mathbb{R}^{n}, \bm{\cdot})$; vi antager, at $U$ er udspÃ¦ndt af $p$ givne lineÃ¦rt uafhÃ¦ngige vektorer $( \mathbf{u}_{1}, \cdot  \cdot \cdot, \mathbf{u}_{p} )$, som altsÃ¥ derved udgÃ¸r en basis  u for $U$. Gram--Schmidt ortonormaliseringen gÃ¥r ud pÃ¥ at konstruere en ny basis v $= ( \mathbf{v}_{1}, \mathbf{v}_{2}, \cdot \cdot \cdot ,  \mathbf{v}_{p} )$ for underrummet $U$ ud fra den givne basis u sÃ¥dan at de nye vektorer $\mathbf{v}_{1}, \mathbf{v}_{2}, \cdot \cdot \cdot ,  \mathbf{v}_{p}$ er {\em{parvis ortogonale og har lÃ¦ngden $1$}}.
 
 \begin{method}[Gram--Schmidt ortonormalisering] \label{metodeGramSchmidt}
-Gram--Schmidt ortonormalisering af $p$ lineært uafhængige vektorer $\mathbf{u}_{1}, \cdot  \cdot \cdot, \mathbf{u}_{p}$ i $(\mathbb{R}^{n}, \bm{\cdot})$:
+Gram--Schmidt ortonormalisering af $p$ lineÃ¦rt uafhÃ¦ngige vektorer $\mathbf{u}_{1}, \cdot  \cdot \cdot, \mathbf{u}_{p}$ i $(\mathbb{R}^{n}, \bm{\cdot})$:
 \begin{enumerate}
 \item Begynd med at normere $\mathbf{u}_{1}$ og kald resultatet $\mathbf{v}_{1}$, dvs.:
 \begin{equation}
 \mathbf{v}_{1} = \frac{\mathbf{u}_{1}}{\vert \mathbf{u}_{1} \vert} \quad .
 \end{equation}
-\item Den næste vektor $\mathbf{v}_{2}$ i basen \, v \,  vælges nu i $\spanVec{\mathbf{u}_{1}, \mathbf{u}_{2}}$ men sådan at det samtidig sikres, at $\mathbf{v}_{2}$ er ortogonal på $\mathbf{v}_{1}$, altså $\mathbf{v}_{2} {\bm{\cdot}} \mathbf{v}_{1} = 0$; til sidst normeres. Først konstrueres en {\em{hjælpevektor}} $\mathbf{w}_{2}$.
+\item Den nÃ¦ste vektor $\mathbf{v}_{2}$ i basen \, v \,  vÃ¦lges nu i $\spanVec{\mathbf{u}_{1}, \mathbf{u}_{2}}$ men sÃ¥dan at det samtidig sikres, at $\mathbf{v}_{2}$ er ortogonal pÃ¥ $\mathbf{v}_{1}$, altsÃ¥ $\mathbf{v}_{2} {\bm{\cdot}} \mathbf{v}_{1} = 0$; til sidst normeres. FÃ¸rst konstrueres en {\em{hjÃ¦lpevektor}} $\mathbf{w}_{2}$.
 \begin{equation}
 \begin{aligned}
 \mathbf{w}_{2} &= \mathbf{u}_{2} - \left(\mathbf{u}_{2} \bm{\cdot} \mathbf{v}_{1}\right)\mathbf{v}_{1} \\
 \mathbf{v}_{2} &= \frac{\mathbf{w}_{2}}{\vert \mathbf{w}_{2} \vert} \quad .
 \end{aligned}
 \end{equation}
-Læg mærke til, at $\mathbf{w}_{2}$ (og derfor også $\mathbf{v}_{2}$) så er ortogonal på $\mathbf{v}_{1}$:
+LÃ¦g mÃ¦rke til, at $\mathbf{w}_{2}$ (og derfor ogsÃ¥ $\mathbf{v}_{2}$) sÃ¥ er ortogonal pÃ¥ $\mathbf{v}_{1}$:
 \begin{equation}
 \begin{aligned}
 \mathbf{w}_{2} \bm{\cdot} \mathbf{v}_{1} &= \left(\mathbf{u}_{2} - \left(\mathbf{u}_{2} \bm{\cdot} \mathbf{v}_{1}\right)\mathbf{v}_{1}\right) \bm{\cdot} \mathbf{v}_{1} \\
@@ -395,7 +395,7 @@ Læg mærke til, at $\mathbf{w}_{2}$ (og derfor også $\mathbf{v}_{2}$) så er ortog
 &= 0 \quad .
 \end{aligned}
 \end{equation}
-\item Således fortsættes
+\item SÃ¥ledes fortsÃ¦ttes
 \begin{equation}
 \begin{aligned}
 \mathbf{w}_{i} &= \mathbf{u}_{i} -  \left(\mathbf{u}_{i} \bm{\cdot} \mathbf{v}_{1}\right)\mathbf{v}_{1} - \left(\mathbf{u}_{i} \bm{\cdot} \mathbf{v}_{2}\right)\mathbf{v}_{2} - \cdot \cdot \cdot -\left(\mathbf{u}_{i} \bm{\cdot} \mathbf{v}_{i-1}\right)\mathbf{v}_{i-1}\\
@@ -410,18 +410,18 @@ Læg mærke til, at $\mathbf{w}_{2}$ (og derfor også $\mathbf{v}_{2}$) så er ortog
 \end{aligned}
 \end{equation}
 \end{enumerate}
-De konstruerede v-vektorer udspænder samme underrum $U$ som de givne lineært uafhængige u-vektorer,  $U = \spanVec{\mathbf{u}_{1}, \cdot  \cdot \cdot, \mathbf{u}_{p} } = \spanVec{\mathbf{v}_{1}, \cdot  \cdot \cdot, \mathbf{v}_{p} } $ og v $= ( \mathbf{v}_{1}, \cdot  \cdot \cdot, \mathbf{v}_{p})$ udgør en ortonormal basis for $U$.
+De konstruerede v-vektorer udspÃ¦nder samme underrum $U$ som de givne lineÃ¦rt uafhÃ¦ngige u-vektorer,  $U = \spanVec{\mathbf{u}_{1}, \cdot  \cdot \cdot, \mathbf{u}_{p} } = \spanVec{\mathbf{v}_{1}, \cdot  \cdot \cdot, \mathbf{v}_{p} } $ og v $= ( \mathbf{v}_{1}, \cdot  \cdot \cdot, \mathbf{v}_{p})$ udgÃ¸r en ortonormal basis for $U$.
 \end{method}
 
 
 \begin{example} \label{exampLAbog8.11}
-I $(\mathbb{R}^{4}, {\bm{\cdot}})$ vil vi ved hjælp af Gram--Schmidt ortonormaliserings-metoden finde en ortonormal basis v $= ( \mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3})$ for det $3-$dimensionale underrum $U$, der er udspændt af tre givne lineært uafhængige (!) vektorer som har følgende koordinater med hensyn til standard e-basis i $\mathbb{R}^{4}$:
+I $(\mathbb{R}^{4}, {\bm{\cdot}})$ vil vi ved hjÃ¦lp af Gram--Schmidt ortonormaliserings-metoden finde en ortonormal basis v $= ( \mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3})$ for det $3-$dimensionale underrum $U$, der er udspÃ¦ndt af tre givne lineÃ¦rt uafhÃ¦ngige (!) vektorer som har fÃ¸lgende koordinater med hensyn til standard e-basis i $\mathbb{R}^{4}$:
 \begin{equation*}
 \begin{aligned}
 \mathbf{u}_{1} &= (2,2,4,1) \quad , \quad \mathbf{u}_{2} = {(0,0,-5,-5)} \quad , \quad \mathbf{u}_{3} = {(5,3,3,-3)} \quad .
 \end{aligned}
 \end{equation*}
-Vi konstruerer de nye basisvektorer med hensyn til standard e-basis i $\mathbb{R}^{4}$ ved at gå igennem ortonormaliseringsproceduren. Der er $3$ 'step' da der i dette eksempel er $3$ lineært uafhængige vek\-to\-rer i $U$\,:
+Vi konstruerer de nye basisvektorer med hensyn til standard e-basis i $\mathbb{R}^{4}$ ved at gÃ¥ igennem ortonormaliseringsproceduren. Der er $3$ 'step' da der i dette eksempel er $3$ lineÃ¦rt uafhÃ¦ngige vek\-to\-rer i $U$\,:
 \begin{enumerate}
 \item
 \begin{equation}
@@ -442,14 +442,14 @@ Vi konstruerer de nye basisvektorer med hensyn til standard e-basis i $\mathbb{R
 \end{aligned}
 \end{equation}
 \end{enumerate}
-Vi har dermed konstrueret en ortonormal basis for underrummet $U$ bestående af de vektorer, der med hensyn til den sædvanlige basis har koordinaterne:
+Vi har dermed konstrueret en ortonormal basis for underrummet $U$ bestÃ¥ende af de vektorer, der med hensyn til den sÃ¦dvanlige basis har koordinaterne:
 \begin{equation*}
 \begin{aligned}
 \mathbf{v}_{1} &= \frac{1}{5}\cdot(2,2,4,1) \quad , \quad \mathbf{v}_{2} = \frac{1}{5}\cdot(2,2,-1,-4) \quad , \quad \mathbf{v}_{3} = \frac{1}{\sqrt{2}}\cdot(1,-1,0,0) \quad .
 \end{aligned}
 \end{equation*}
 
-Vi kan checke, at der virkelig er tale om en ortonormal basis ved at stille vektorerne op som søjler i en matrix, som dermed får typen $(4 \times 3)$ således :
+Vi kan checke, at der virkelig er tale om en ortonormal basis ved at stille vektorerne op som sÃ¸jler i en matrix, som dermed fÃ¥r typen $(4 \times 3)$ sÃ¥ledes :
 \begin{equation}
 \mathbf{V} =  \left[
             \begin{array}{rrr}
@@ -460,7 +460,7 @@ Vi kan checke, at der virkelig er tale om en ortonormal basis ved at stille vekt
             \end{array}
           \right]
 \end{equation}
-Matricen $\mathbf{V}$ kan ikke være en ortogonal matrix (på grund af typen), men alligevel kan $\mathbf{V}$ tilfredsstille følgende ligning, som viser, at de tre nye basisvektorer netop er parvis ortogonale og alle har længden $1$ !
+Matricen $\mathbf{V}$ kan ikke vÃ¦re en ortogonal matrix (pÃ¥ grund af typen), men alligevel kan $\mathbf{V}$ tilfredsstille fÃ¸lgende ligning, som viser, at de tre nye basisvektorer netop er parvis ortogonale og alle har lÃ¦ngden $1$ !
 \begin{equation}
 \begin{aligned}
 \mathbf{V}\transp \cdot \mathbf{V} &=  \left[
@@ -492,13 +492,13 @@ Matricen $\mathbf{V}$ kan ikke være en ortogonal matrix (på grund af typen), men
 
 
 \begin{exercise} \label{exercLA10.39}
-I $(\mathbb{R}^{4}, \bm{\cdot})$ er givet følgende vektorer med hensyn til den sædvanlige basis e:
+I $(\mathbb{R}^{4}, \bm{\cdot})$ er givet fÃ¸lgende vektorer med hensyn til den sÃ¦dvanlige basis e:
 \begin{equation*}
 \begin{aligned}
 \mathbf{u}_{1} &= {(1,1,1,1)} \quad , \quad \mathbf{u}_{2} = {(3,1,1,3)} \quad , \quad \mathbf{u}_{3} = {(2,0,-2,4)} \quad , \quad \mathbf{u}_{4} = {(1,1,-1,3)} \quad .
 \end{aligned}
 \end{equation*}
-Vi lader $U$ betegne det underrum i $(\mathbb{R}^{4}, {\bm{\cdot}})$, som er udspændt af de fire givne vektorer, altså
+Vi lader $U$ betegne det underrum i $(\mathbb{R}^{4}, {\bm{\cdot}})$, som er udspÃ¦ndt af de fire givne vektorer, altsÃ¥
 \begin{equation}
 U = \spanVec{\mathbf{u}_{1}, \mathbf{u}_{2}, \mathbf{u}_{3}, \mathbf{u}_{4}} \quad .
 \end{equation}
@@ -510,8 +510,8 @@ U = \spanVec{\mathbf{u}_{1}, \mathbf{u}_{2}, \mathbf{u}_{3}, \mathbf{u}_{4}} \qu
 
 
 \begin{example} \label{exampOrto3D}
-I $(\mathbb{R}^{3}, \bm{\cdot})$ kræves en given første enheds-vektor $\mathbf{v}_{1}$ benyttet til en ny ortonormal basis
-v$= ( \mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3})$ og opgaven er at finde de to andre vektorer til basen. Lad os antage at den givne vektor er $ \mathbf{v}_{1} = (3,0,4)/5$. Det ses umiddelbart, at f.eks.  $\mathbf{v}_{2} = (0, 1,0)$ er en enhedsvektor, der er ortogonal på $\mathbf{v}_{1}$. En sidste vektor til den ortonormale basis kan så findes direkte ved brug af \emph{krydsproduktet}: $\quad \mathbf{v}_{3} = \mathbf{v}_{1} \times \mathbf{v}_{2} = \frac{1}{5}\cdot(-4, 0, 3)$.
+I $(\mathbb{R}^{3}, \bm{\cdot})$ krÃ¦ves en given fÃ¸rste enheds-vektor $\mathbf{v}_{1}$ benyttet til en ny ortonormal basis
+v$= ( \mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3})$ og opgaven er at finde de to andre vektorer til basen. Lad os antage at den givne vektor er $ \mathbf{v}_{1} = (3,0,4)/5$. Det ses umiddelbart, at f.eks.  $\mathbf{v}_{2} = (0, 1,0)$ er en enhedsvektor, der er ortogonal pÃ¥ $\mathbf{v}_{1}$. En sidste vektor til den ortonormale basis kan sÃ¥ findes direkte ved brug af \emph{krydsproduktet}: $\quad \mathbf{v}_{3} = \mathbf{v}_{1} \times \mathbf{v}_{2} = \frac{1}{5}\cdot(-4, 0, 3)$.
 \end{example}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -519,10 +519,10 @@ v$= ( \mathbf{v}_{1}, \mathbf{v}_{2}, \mathbf{v}_{3})$ og opgaven er at finde de
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Det ortogonale komplement til et underrum}
-Lad  $U$ være et underrum  i $(\mathbb{R}^{n}, \bm{\cdot})$, som er udspændt af $p$ givne lineært uafhængige vektorer, $U = \spanVec{\mathbf{u}_{1}, \mathbf{u}_{2}, \cdot \cdot \cdot , \mathbf{u}_{p}}$. Mængden af de vektorer i $(\mathbb{R}^{n}, \bm{\cdot})$ som hver for sig er ortogonal på samtlige vektorer i $U$ er selv et underrum i $(\mathbb{R}^{n}, \bm{\cdot})$, og det har dimensionen $n-p$:
+Lad  $U$ vÃ¦re et underrum  i $(\mathbb{R}^{n}, \bm{\cdot})$, som er udspÃ¦ndt af $p$ givne lineÃ¦rt uafhÃ¦ngige vektorer, $U = \spanVec{\mathbf{u}_{1}, \mathbf{u}_{2}, \cdot \cdot \cdot , \mathbf{u}_{p}}$. MÃ¦ngden af de vektorer i $(\mathbb{R}^{n}, \bm{\cdot})$ som hver for sig er ortogonal pÃ¥ samtlige vektorer i $U$ er selv et underrum i $(\mathbb{R}^{n}, \bm{\cdot})$, og det har dimensionen $n-p$:
 
 \begin{definition}
-Det \ind{ortogonale komplement}{ortogonale komplement} til et underrum $U$ i $(\mathbb{R}^{n}, \bm{\cdot})$ betegnes med $U^{\bot}$ og består af alle vektorer i $(\mathbb{R}^{n}, \bm{\cdot})$ som er ortogonale på hver eneste vektor i $U$:
+Det \ind{ortogonale komplement}{ortogonale komplement} til et underrum $U$ i $(\mathbb{R}^{n}, \bm{\cdot})$ betegnes med $U^{\bot}$ og bestÃ¥r af alle vektorer i $(\mathbb{R}^{n}, \bm{\cdot})$ som er ortogonale pÃ¥ hver eneste vektor i $U$:
 \begin{equation}
 U^{\bot} = \{ \mathbf{x} \in \mathbb{R}^{n} \, | \, \mathbf{x} \bm{\cdot} \mathbf{u} = 0 \, \, , \, \,\textrm{for alle \, $\mathbf{u} \in U$} \, \} \quad .
 \end{equation}
@@ -532,16 +532,16 @@ U^{\bot} = \{ \mathbf{x} \in \mathbb{R}^{n} \, | \, \mathbf{x} \bm{\cdot} \mathb
 Det ortogonale komplement $U^{\bot}$ til et givet $p-$dimensionalt underrum $U$ i $\,(\mathbb{R}^{n}, \bm{\cdot})$ er selv et underrum i $(\mathbb{R}^{n}, \bm{\cdot})$ og det har dimensionen $\, \dim(U^{\bot}) = n-p \, $ .
 \end{theorem}
 \begin{bevis}
-Det er let at checke alle underrums-egenskaberne for $U^{\bot}$; det er klart, at hvis $\mathbf{a}$ og $\mathbf{b}$ er ortogonale på alle vektorerne i $U$ og $k$ er et reelt tal,  så er $\mathbf{a} + k\mathbf{b}$ også ortogonal på alle vektorerne i $U$. Da den eneste vektor, der er ortogonal på sig selv er $\mathbf{0}$ er dette også den eneste vektor i fællesmængden: $U \cap U^{\bot} = \{ \mathbf{0} \}$. Hvis vi lader v$= ( \mathbf{v}_{1}, \cdot \cdot \cdot , \mathbf{v}_{p}) $ betegne en {\em{ortonormal basis}} for  $U$ og w$ = ( \mathbf{w}_{1}, \cdot \cdot \cdot , \mathbf{w}_{r})$ en ortonormal basis for $U^{\bot}$, så er  $(  \mathbf{v}_{1}, \cdot \cdot \cdot , \mathbf{v}_{p}, \mathbf{w}_{1}, \cdot \cdot \cdot , \mathbf{w}_{r})$ en ortonormal basis for underrummet $S = \spanVec{\mathbf{v}_{1}, \cdot \cdot \cdot , \mathbf{v}_{p}, \mathbf{w}_{1}, \cdot \cdot \cdot , \mathbf{w}_{r}}$ i $(\mathbb{R}^{n}, \bm{\cdot})$. Hvis vi nu antager, at  $S$ ikke er hele $(\mathbb{R}^{n}, \bm{\cdot})$, så kan basen for $S$ udvides med mindst \'{e}n vektor så det udvidede system er lineært uafhængig i $(\mathbb{R}^{n}, \bm{\cdot})$; dermed får vi - ved at bruge det sidste step i Gram--Schmidt metoden - en ny vektor, som er ortogonal på alle vektorer i $U$ men som ikke er element i $U^{\bot}$; og det er en modstrid, fordi  $U^{\bot}$ er defineret til at være {\em{alle}} de vektorer i $(\mathbb{R}^{n}, \bm{\cdot})$, som er ortogonal på hver enkelt vektor i $U$. Derfor er antagelsen om, at $S$ ikke er hele $(\mathbb{R}^{n}, \bm{\cdot})$ forkert. Det vil sige, at $S = \mathbb{R}^{n}$ og derfor er $r + p = n$, sådan at $\dim(U^{\bot}) = r = n-p$; og det var det vi skulle vise.
+Det er let at checke alle underrums-egenskaberne for $U^{\bot}$; det er klart, at hvis $\mathbf{a}$ og $\mathbf{b}$ er ortogonale pÃ¥ alle vektorerne i $U$ og $k$ er et reelt tal,  sÃ¥ er $\mathbf{a} + k\mathbf{b}$ ogsÃ¥ ortogonal pÃ¥ alle vektorerne i $U$. Da den eneste vektor, der er ortogonal pÃ¥ sig selv er $\mathbf{0}$ er dette ogsÃ¥ den eneste vektor i fÃ¦llesmÃ¦ngden: $U \cap U^{\bot} = \{ \mathbf{0} \}$. Hvis vi lader v$= ( \mathbf{v}_{1}, \cdot \cdot \cdot , \mathbf{v}_{p}) $ betegne en {\em{ortonormal basis}} for  $U$ og w$ = ( \mathbf{w}_{1}, \cdot \cdot \cdot , \mathbf{w}_{r})$ en ortonormal basis for $U^{\bot}$, sÃ¥ er  $(  \mathbf{v}_{1}, \cdot \cdot \cdot , \mathbf{v}_{p}, \mathbf{w}_{1}, \cdot \cdot \cdot , \mathbf{w}_{r})$ en ortonormal basis for underrummet $S = \spanVec{\mathbf{v}_{1}, \cdot \cdot \cdot , \mathbf{v}_{p}, \mathbf{w}_{1}, \cdot \cdot \cdot , \mathbf{w}_{r}}$ i $(\mathbb{R}^{n}, \bm{\cdot})$. Hvis vi nu antager, at  $S$ ikke er hele $(\mathbb{R}^{n}, \bm{\cdot})$, sÃ¥ kan basen for $S$ udvides med mindst \'{e}n vektor sÃ¥ det udvidede system er lineÃ¦rt uafhÃ¦ngig i $(\mathbb{R}^{n}, \bm{\cdot})$; dermed fÃ¥r vi - ved at bruge det sidste step i Gram--Schmidt metoden - en ny vektor, som er ortogonal pÃ¥ alle vektorer i $U$ men som ikke er element i $U^{\bot}$; og det er en modstrid, fordi  $U^{\bot}$ er defineret til at vÃ¦re {\em{alle}} de vektorer i $(\mathbb{R}^{n}, \bm{\cdot})$, som er ortogonal pÃ¥ hver enkelt vektor i $U$. Derfor er antagelsen om, at $S$ ikke er hele $(\mathbb{R}^{n}, \bm{\cdot})$ forkert. Det vil sige, at $S = \mathbb{R}^{n}$ og derfor er $r + p = n$, sÃ¥dan at $\dim(U^{\bot}) = r = n-p$; og det var det vi skulle vise.
 \end{bevis}
 
 \begin{example}
-Det ortogonale komplement til $U = \spanVec{\mathbf{a}, \mathbf{b}}$ i $\mathbb{R}^{3}$ (for lineært uafhængige vektorer -- og derfor egentlige vektorer -- $\mathbf{a}$ og $\mathbf{b}$) er $U^{\bot} = \spanVec{\mathbf{a} \times \mathbf{b}}$.
+Det ortogonale komplement til $U = \spanVec{\mathbf{a}, \mathbf{b}}$ i $\mathbb{R}^{3}$ (for lineÃ¦rt uafhÃ¦ngige vektorer -- og derfor egentlige vektorer -- $\mathbf{a}$ og $\mathbf{b}$) er $U^{\bot} = \spanVec{\mathbf{a} \times \mathbf{b}}$.
 \end{example}
 
 \begin{exercise}
 Bestem det ortogonale komplement til underrummet $U = \spanVec{\mathbf{u}_{1}, \mathbf{u}_{2}, \mathbf{u}_{3}}$
-i $(\mathbb{R}^{4}, \bm{\cdot})$, når de udspændende vektorer er givet ved deres respektive koordinater med hensyn til den sædvanlige basis e i $\mathbb{R}^{4}$ således:
+i $(\mathbb{R}^{4}, \bm{\cdot})$, nÃ¥r de udspÃ¦ndende vektorer er givet ved deres respektive koordinater med hensyn til den sÃ¦dvanlige basis e i $\mathbb{R}^{4}$ sÃ¥ledes:
 \begin{equation}
 \mathbf{u}_{1} = {(1,1,1,1)} \quad , \quad \mathbf{u}_{2} = {(3,1,1,3)} \quad , \quad \mathbf{u}_{3} = {(2,0,-2,4)} \quad .
 \end{equation}
@@ -559,50 +559,50 @@ i $(\mathbb{R}^{4}, \bm{\cdot})$, når de udspændende vektorer er givet ved deres
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Spektralsætningen for symmetriske matricer} \label{secSpektral}
+\section{SpektralsÃ¦tningen for symmetriske matricer} \label{secSpektral}
 
-Vi vil nu tage fat på at formulere spektralsætningen og begynder med følgende ikke-trivielle observation om symmetriske matricer:
+Vi vil nu tage fat pÃ¥ at formulere spektralsÃ¦tningen og begynder med fÃ¸lgende ikke-trivielle observation om symmetriske matricer:
 
 
 \begin{theorem} \label{thmSymReel}
-Lad $\mathbf{A}$ betegne en symmetrisk $(n \times n)-$matrix. Så har det karakteristiske polynomium $\mathcal{K}_{\mathbf{A}}(\lambda)$ for $\mathbf{A}$
-præcis $n$ reelle rødder (regnet med multiplicitet):
+Lad $\mathbf{A}$ betegne en symmetrisk $(n \times n)-$matrix. SÃ¥ har det karakteristiske polynomium $\mathcal{K}_{\mathbf{A}}(\lambda)$ for $\mathbf{A}$
+prÃ¦cis $n$ reelle rÃ¸dder (regnet med multiplicitet):
 \begin{equation}
 \lambda_{1} \geq \lambda_{2} \geq \cdot \cdot \cdot \geq \lambda_{n} \quad.
 \end{equation}
-Dvs. $\mathbf{A}$ har $n$ reelle egenværdier (regnet med multiplicitet).
+Dvs. $\mathbf{A}$ har $n$ reelle egenvÃ¦rdier (regnet med multiplicitet).
 \end{theorem}
 
 \begin{think}
-Hvis f.eks. $\{7, 3,3, 2, 2,2,1\}$ er rødderne i $\mathcal{K}_{\mathbf{A}}(\lambda)$ for en $(7 \times 7)-$matrix $\mathbf{A}$, så skal disse rødder altså repræsenteres {\em{med deres respektive multiplicitet}} i egenværdi-listen:
+Hvis f.eks. $\{7, 3,3, 2, 2,2,1\}$ er rÃ¸dderne i $\mathcal{K}_{\mathbf{A}}(\lambda)$ for en $(7 \times 7)-$matrix $\mathbf{A}$, sÃ¥ skal disse rÃ¸dder altsÃ¥ reprÃ¦senteres {\em{med deres respektive multiplicitet}} i egenvÃ¦rdi-listen:
 \begin{equation*}
 \lambda_{1} = 7 \geq \lambda_{2} = 3 \geq \lambda_{3} = 3 \geq \lambda_{4} = 2 \geq \lambda_{5} = 2 \geq \lambda_{6} = 2 \geq \lambda_{7} = 1 \quad.
 \end{equation*}
 \end{think}
-Da sætning \ref{thmSymReel} udtrykker en helt afgørende egenskab ved symmetriske matricer, vil vi her give et bevis for den:
+Da sÃ¦tning \ref{thmSymReel} udtrykker en helt afgÃ¸rende egenskab ved symmetriske matricer, vil vi her give et bevis for den:
 \begin{bevis}
-Fra algebraens fundamentalsætning ved vi, at $\mathcal{K}_{\mathbf{A}}(\lambda)$ har præcis $n$ komplekse rødder - vi ved bare ikke om de er reelle; det er det vi skal vise. Så vi lader $\alpha + i\,\beta$ være en kompleks rod i $\mathcal{K}_{\mathbf{A}}(\lambda)$ og skal så vise, at $\beta = 0$. Læg mærke til, at $\alpha$ og $\beta$ naturligvis begge er reelle tal.
+Fra algebraens fundamentalsÃ¦tning ved vi, at $\mathcal{K}_{\mathbf{A}}(\lambda)$ har prÃ¦cis $n$ komplekse rÃ¸dder - vi ved bare ikke om de er reelle; det er det vi skal vise. SÃ¥ vi lader $\alpha + i\,\beta$ vÃ¦re en kompleks rod i $\mathcal{K}_{\mathbf{A}}(\lambda)$ og skal sÃ¥ vise, at $\beta = 0$. LÃ¦g mÃ¦rke til, at $\alpha$ og $\beta$ naturligvis begge er reelle tal.
 
-Vi har altså
+Vi har altsÃ¥
 \begin{equation}
 \det\left(\mathbf{A} - (\alpha + i\,\beta)\mathbf{E}\right) = 0 \quad ,
 \end{equation}
-og derfor også, at
+og derfor ogsÃ¥, at
 \begin{equation}
 \det\left(\mathbf{A} - (\alpha + i\,\beta)\mathbf{E} \right) \cdot \det\left(\mathbf{A} - (\alpha - i\,\beta)\mathbf{E} \right) = 0
 \end{equation}
-sådan at
+sÃ¥dan at
 \begin{equation}
 \begin{aligned}
 \det\left(\left(\mathbf{A} - (\alpha + i\,\beta)\mathbf{E} \right)\cdot\left(\mathbf{A} - (\alpha - i\,\beta)\mathbf{E} \right)\right) &= 0 \\
 \det\left(\left(\mathbf{A} - \alpha\,\mathbf{E} \right)^{2} + \beta^{2}\,\mathbf{E} \right) &= 0 \quad .
 \end{aligned}
 \end{equation}
-Den sidste ligning giver, at rangen af  den reelle matrix $\left(\left(\mathbf{A} - \alpha\,\mathbf{E} \right)^{2} + \beta^{2}\,\mathbf{E} \right)$ er mindre end $n$; det medfører nu (se \tref{NUID1-tn2}{eNote}), at der findes egentlige reelle løsninger $\mathbf{x}$ til det tilsvarende ligningssystem
+Den sidste ligning giver, at rangen af  den reelle matrix $\left(\left(\mathbf{A} - \alpha\,\mathbf{E} \right)^{2} + \beta^{2}\,\mathbf{E} \right)$ er mindre end $n$; det medfÃ¸rer nu (se \tref{NUID1-tn2}{eNote}), at der findes egentlige reelle lÃ¸sninger $\mathbf{x}$ til det tilsvarende ligningssystem
 \begin{equation} \label{eqProofSymReel}
 \left(\left(\mathbf{A} - \alpha\,\mathbf{E} \right)^{2} + \beta^{2}\,\mathbf{E} \right)\mathbf{x} = \mathbf{0} \quad .
 \end{equation}
-Lad os vælge sådan en egentlig reel løsning $\mathbf{v}$ til (\ref{eqProofSymReel}) med $\vert \mathbf{v} \vert > 0$. Ved at benytte, at $\mathbf{A}$ antages at være symmetrisk har vi så:
+Lad os vÃ¦lge sÃ¥dan en egentlig reel lÃ¸sning $\mathbf{v}$ til (\ref{eqProofSymReel}) med $\vert \mathbf{v} \vert > 0$. Ved at benytte, at $\mathbf{A}$ antages at vÃ¦re symmetrisk har vi sÃ¥:
 \begin{equation}
 \begin{aligned}
 0 &= \left(\left( \left(\mathbf{A} - \alpha\,\mathbf{E} \right)^{2} + \beta^{2}\,\mathbf{E}\right) \mathbf{v}\right)\cdot \mathbf{v} \\
@@ -611,22 +611,22 @@ Lad os vælge sådan en egentlig reel løsning $\mathbf{v}$ til (\ref{eqProofSymRee
 &= \vert \left(\mathbf{A} - \alpha\,\mathbf{E} \right)\mathbf{v} \vert^{2} + \beta^{2}\vert \mathbf{v} \vert^{2} \quad,
 \end{aligned}
 \end{equation}
-men da $\vert \mathbf{v} \vert > 0$ så må vi konkludere, at $\beta = 0$, fordi ellers kan det sidste udtryk i ovenstående omskrivninger  ikke være $0$; og det var det vi skulle vise.
+men da $\vert \mathbf{v} \vert > 0$ sÃ¥ mÃ¥ vi konkludere, at $\beta = 0$, fordi ellers kan det sidste udtryk i ovenstÃ¥ende omskrivninger  ikke vÃ¦re $0$; og det var det vi skulle vise.
 \end{bevis}
 
 \begin{exercise}
-Hvor var det så lige, at vi {\em{faktisk brugte}} symmetrien af $\mathbf{A}$ i ovenstående bevis?
+Hvor var det sÃ¥ lige, at vi {\em{faktisk brugte}} symmetrien af $\mathbf{A}$ i ovenstÃ¥ende bevis?
 \end{exercise}
 
 \begin{think}
-Til hver egenværdi $\lambda_{i}$ for en given matrix $\mathbf{A}$ hører et egenvektorrum $E_{\lambda_{i}}$, som er et større eller mindre underrum i $(\mathbb{R}^{n}, \bm{\cdot})$. Hvis to eller flere egenværdier for en given matrix er ens, dvs. hvis der er tale om en multipel (f.eks. $k$ gange) rod $\lambda_{i} = \lambda_{i+1} = \cdot \cdot \cdot \lambda_{i+k-1}$ i det karakteristiske polynomium, så er de tilhørende egenvektorrum selvfølgelig også ens: $E_{\lambda_{i}} = E_{\lambda_{i+1}} = \cdot \cdot \cdot E_{\lambda_{i+k-1}}$. Vi vil se nedenfor i sætning \ref{thmSpektral} at for symmetriske matricer er dimensionen af det fælles egenvektorrum $E_{\lambda_{i}}$ præcis lig med den algebraiske multiplicitet $k$ af egenvektoren $\lambda_{i}$.
+Til hver egenvÃ¦rdi $\lambda_{i}$ for en given matrix $\mathbf{A}$ hÃ¸rer et egenvektorrum $E_{\lambda_{i}}$, som er et stÃ¸rre eller mindre underrum i $(\mathbb{R}^{n}, \bm{\cdot})$. Hvis to eller flere egenvÃ¦rdier for en given matrix er ens, dvs. hvis der er tale om en multipel (f.eks. $k$ gange) rod $\lambda_{i} = \lambda_{i+1} = \cdot \cdot \cdot \lambda_{i+k-1}$ i det karakteristiske polynomium, sÃ¥ er de tilhÃ¸rende egenvektorrum selvfÃ¸lgelig ogsÃ¥ ens: $E_{\lambda_{i}} = E_{\lambda_{i+1}} = \cdot \cdot \cdot E_{\lambda_{i+k-1}}$. Vi vil se nedenfor i sÃ¦tning \ref{thmSpektral} at for symmetriske matricer er dimensionen af det fÃ¦lles egenvektorrum $E_{\lambda_{i}}$ prÃ¦cis lig med den algebraiske multiplicitet $k$ af egenvektoren $\lambda_{i}$.
 \end{think}
 
-Hvis to egenværdier $\lambda_{i}$ og $\lambda_{j}$ for en {\em{symmetrisk}} matrix er {\em{forskellige}}, så er de to tilhørende egenvektorrum {\em{ortogonale}}, $E_{\lambda_{i}} \bot E_{\lambda_{j}}$ i følgende forstand:
+Hvis to egenvÃ¦rdier $\lambda_{i}$ og $\lambda_{j}$ for en {\em{symmetrisk}} matrix er {\em{forskellige}}, sÃ¥ er de to tilhÃ¸rende egenvektorrum {\em{ortogonale}}, $E_{\lambda_{i}} \bot E_{\lambda_{j}}$ i fÃ¸lgende forstand:
 
 \begin{theorem} \label{thmForskEgenval}
-Lad $\mathbf{A}$ være en symmetrisk matrix og lad $\lambda_{1}$ og $\lambda_{2}$ være to forskellige egenværdier for
-$\mathbf{A}$ og lad $\mathbf{v}_{1}$ og $\mathbf{v}_{2}$ betegne to tilhørende egenvektorer. Så er $\mathbf{v}_{1} \cdot \mathbf{v}_{2} = 0$, dvs. de er ortogonale.
+Lad $\mathbf{A}$ vÃ¦re en symmetrisk matrix og lad $\lambda_{1}$ og $\lambda_{2}$ vÃ¦re to forskellige egenvÃ¦rdier for
+$\mathbf{A}$ og lad $\mathbf{v}_{1}$ og $\mathbf{v}_{2}$ betegne to tilhÃ¸rende egenvektorer. SÃ¥ er $\mathbf{v}_{1} \cdot \mathbf{v}_{2} = 0$, dvs. de er ortogonale.
 \end{theorem}
 \begin{bevis}
 Da $\mathbf{A}$ er symmetrisk har vi fra (\ref{eqSymDot}):
@@ -638,21 +638,21 @@ Da $\mathbf{A}$ er symmetrisk har vi fra (\ref{eqSymDot}):
 &= \left(\lambda_{1} - \lambda_{2}\right)\mathbf{v}_{1}{\bm{\cdot}} \mathbf{v}_{2} \quad ,
 \end{aligned}
 \end{equation}
-og da $\lambda_{1} \neq \lambda_{2}$ får vi derfor følgende konklusion: $\mathbf{v}_{1}{\bm{\cdot}} \mathbf{v}_{2} = 0$, og det var det, vi skulle vise.
+og da $\lambda_{1} \neq \lambda_{2}$ fÃ¥r vi derfor fÃ¸lgende konklusion: $\mathbf{v}_{1}{\bm{\cdot}} \mathbf{v}_{2} = 0$, og det var det, vi skulle vise.
 \end{bevis}
 
 
-Vi kan nu formulere en af de oftest anvendte resultater for symmetriske matricer, \ind{spektralsætningen for symmetriske matricer}{spektralsætningen for symmetriske matricer}, som af gode grunde også kaldes sætningen om \ind{diagonalisering af symmetriske matricer}{diagonalisering af symmetriske matricer}:
+Vi kan nu formulere en af de oftest anvendte resultater for symmetriske matricer, \ind{spektralsÃ¦tningen for symmetriske matricer}{spektralsÃ¦tningen for symmetriske matricer}, som af gode grunde ogsÃ¥ kaldes sÃ¦tningen om \ind{diagonalisering af symmetriske matricer}{diagonalisering af symmetriske matricer}:
 
 \begin{theorem} \label{thmSpektral}
-Lad $\mathbf{A}$ betegne en {\em{symmetrisk $(n \times n)-$matrix}}. Så findes der en
-positiv ortogonal matrix $\mathbf{Q}$ således at
+Lad $\mathbf{A}$ betegne en {\em{symmetrisk $(n \times n)-$matrix}}. SÃ¥ findes der en
+positiv ortogonal matrix $\mathbf{Q}$ sÃ¥ledes at
 \begin{equation}
 \bm{\Lambda} = \mathbf{Q}^{-1}\mathbf{A}\mathbf{Q} = \mathbf{Q}\transp \mathbf{A}\mathbf{Q}\quad \textrm{er en diagonal-matrix} \quad .
 \end{equation}
 Det vil sige, at en reel symmetrisk matrix kan diagonaliseres ved anvendelse af en positiv ortogonal substitution, se  \tref{NUID24-tn10}{eNote}.\\
 
-Diagonalmatricen kan konstrueres meget simpelt ud fra de $n$ reelle egenværdier  $\lambda_{1} \geq \lambda_{2} \geq \cdot \cdot \cdot \geq \lambda_{n}$ for $\mathbf{A}$ således:
+Diagonalmatricen kan konstrueres meget simpelt ud fra de $n$ reelle egenvÃ¦rdier  $\lambda_{1} \geq \lambda_{2} \geq \cdot \cdot \cdot \geq \lambda_{n}$ for $\mathbf{A}$ sÃ¥ledes:
 \begin{equation}
 \bm{\Lambda} = \diag(\lambda_{1}, \lambda_{2}, . . . , \lambda_{n}) = \left[
                                                                         \begin{array}{rrrr}
@@ -664,31 +664,31 @@ Diagonalmatricen kan konstrueres meget simpelt ud fra de $n$ reelle egenværdier 
                                                                       \right]
 \quad,
 \end{equation}
-Husk: En symmetrisk matrix har præcis $n$ reelle egenværdier når vi tæller dem med multiplicitet. \bs
+Husk: En symmetrisk matrix har prÃ¦cis $n$ reelle egenvÃ¦rdier nÃ¥r vi tÃ¦ller dem med multiplicitet. \bs
 
-Den positive ortogonale matrix $\mathbf{Q}$ konstrueres dernæst ved som søjler i matricen at bruge egenvektorer fra de tilhørende egenvektor-rum $E_{\lambda_{1}}$, $E_{\lambda_{2}}, \cdot \cdot \cdot , E_{\lambda_{n}}$ i den rigtige rækkefølge:
+Den positive ortogonale matrix $\mathbf{Q}$ konstrueres dernÃ¦st ved som sÃ¸jler i matricen at bruge egenvektorer fra de tilhÃ¸rende egenvektor-rum $E_{\lambda_{1}}$, $E_{\lambda_{2}}, \cdot \cdot \cdot , E_{\lambda_{n}}$ i den rigtige rÃ¦kkefÃ¸lge:
 \begin{equation}
 \mathbf{Q} = \left[\mathbf{v}_{1}\,\, \mathbf{v}_{2} \, \, \cdot \cdot \cdot  \mathbf{v}_{n}\, \right] \quad ,
 \end{equation}
-hvor $\mathbf{v}_{1} \in E_{\lambda_{1}}$, $\mathbf{v}_{2} \in E_{\lambda_{2}}$, $\cdot$ $\cdot$ $\cdot$, $\mathbf{v}_{n} \in E_{\lambda_{n}}\,\,$, idet valget af egenvektorer i de respektive egenvektorrum foretages således at
+hvor $\mathbf{v}_{1} \in E_{\lambda_{1}}$, $\mathbf{v}_{2} \in E_{\lambda_{2}}$, $\cdot$ $\cdot$ $\cdot$, $\mathbf{v}_{n} \in E_{\lambda_{n}}\,\,$, idet valget af egenvektorer i de respektive egenvektorrum foretages sÃ¥ledes at
 \begin{enumerate}
-\item De valgte egenvektorer hørende til samme egenværdi er ortogonale  (brug Gram--Schmidt ortogonalisering i hvert fælles egenvektorrum)
-\item De valgte egenvektorer har alle længden $1$ (ellers skal de bare normeres)
-\item Den resulterende matrix $\mathbf{Q}$ er {\em{positiv}} ortogonal (hvis den ikke er det, så skift fortegn på \'{e}n af de valgte egenvektorer)
+\item De valgte egenvektorer hÃ¸rende til samme egenvÃ¦rdi er ortogonale  (brug Gram--Schmidt ortogonalisering i hvert fÃ¦lles egenvektorrum)
+\item De valgte egenvektorer har alle lÃ¦ngden $1$ (ellers skal de bare normeres)
+\item Den resulterende matrix $\mathbf{Q}$ er {\em{positiv}} ortogonal (hvis den ikke er det, sÃ¥ skift fortegn pÃ¥ \'{e}n af de valgte egenvektorer)
 \end{enumerate}
-At dette kan lade sig gøre følger af de ovenstående resultater og bemærkninger -- vi gennemgår en række konstruktive eksempler nedenfor.
+At dette kan lade sig gÃ¸re fÃ¸lger af de ovenstÃ¥ende resultater og bemÃ¦rkninger -- vi gennemgÃ¥r en rÃ¦kke konstruktive eksempler nedenfor.
 \end{theorem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Eksempler på diagonalisering}
+\section{Eksempler pÃ¥ diagonalisering}
 
-Her er nogle typiske eksempler der viser, hvordan man diagonaliserer passende små symmetriske matricer, dvs. symmetriske matricer af type $(2 \times 2)$ eller type $(3 \times 3)$:
+Her er nogle typiske eksempler der viser, hvordan man diagonaliserer passende smÃ¥ symmetriske matricer, dvs. symmetriske matricer af type $(2 \times 2)$ eller type $(3 \times 3)$:
 
 \begin{example}[Diagonalisering ved ortogonal substitution] \label{exampLAbog8.16}
-En symmetrisk $(3 \times 3)-$matrix $\mathbf{A}$ er givet således:
+En symmetrisk $(3 \times 3)-$matrix $\mathbf{A}$ er givet sÃ¥ledes:
 \begin{equation}
 \mathbf{A} = \left[
                \begin{array}{rrr}
@@ -698,11 +698,11 @@ En symmetrisk $(3 \times 3)-$matrix $\mathbf{A}$ er givet således:
                \end{array}
              \right] \quad .
 \end{equation}
-Vi vil bestemme en positiv ortogonal matrix $\mathbf{Q}$ således at $\mathbf{Q}^{-1}\mathbf{A}\mathbf{Q}$ er en diagonalmatrix:
+Vi vil bestemme en positiv ortogonal matrix $\mathbf{Q}$ sÃ¥ledes at $\mathbf{Q}^{-1}\mathbf{A}\mathbf{Q}$ er en diagonalmatrix:
 \begin{equation}
 \mathbf{Q}^{-1}\mathbf{A}\mathbf{Q} = \mathbf{Q}\transp\mathbf{A}\mathbf{Q} =  \bm{\Lambda} \quad .
 \end{equation}
-Først bestemmes egenværdierne for $\mathbf{A}$: Det karakteristiske polynomium for $\mathbf{A}$ er
+FÃ¸rst bestemmes egenvÃ¦rdierne for $\mathbf{A}$: Det karakteristiske polynomium for $\mathbf{A}$ er
 \begin{equation}
 \mathcal{K}_{\mathbf{A}}(\lambda) = \det\left(\left[
                \begin{array}{ccc}
@@ -712,8 +712,8 @@ Først bestemmes egenværdierne for $\mathbf{A}$: Det karakteristiske polynomium f
                \end{array}
              \right] \right)  = (\lambda-1)^{2}\cdot(7-\lambda) \quad ,
 \end{equation}
-så $\mathbf{A}$ har egenværdierne $\lambda_{1} = 7$, $\lambda_{2} = 1$, og $\lambda_{3} = 1$.
-Dermed ved vi allerede nu via sætning \ref{thmSpektral}, at det er muligt at konstruere en positiv ortogonal matrix $\mathbf{Q}$ således at
+sÃ¥ $\mathbf{A}$ har egenvÃ¦rdierne $\lambda_{1} = 7$, $\lambda_{2} = 1$, og $\lambda_{3} = 1$.
+Dermed ved vi allerede nu via sÃ¦tning \ref{thmSpektral}, at det er muligt at konstruere en positiv ortogonal matrix $\mathbf{Q}$ sÃ¥ledes at
 \begin{equation}
 \mathbf{Q}^{-1}\mathbf{A}\mathbf{Q} = \diag(7,1,1) = \left[
                                            \begin{array}{rrr}
@@ -723,9 +723,9 @@ Dermed ved vi allerede nu via sætning \ref{thmSpektral}, at det er muligt at kon
                                            \end{array}
                                          \right] \quad .
 \end{equation}
-Resten af opgaven består nu i at finde de egenvektorer for $\mathbf{A}$ der kan bruges som søjler i den ortogonale matrix $\mathbf{Q}$. \\
+Resten af opgaven bestÃ¥r nu i at finde de egenvektorer for $\mathbf{A}$ der kan bruges som sÃ¸jler i den ortogonale matrix $\mathbf{Q}$. \\
 
-Egenvektorerne for $\mathbf{A}$ hørende til egenværdien $\lambda_{1} = 7$ fås ved at løse det homogene ligningssystem, der har koefficientmatricen
+Egenvektorerne for $\mathbf{A}$ hÃ¸rende til egenvÃ¦rdien $\lambda_{1} = 7$ fÃ¥s ved at lÃ¸se det homogene ligningssystem, der har koefficientmatricen
 \begin{equation}
 \mathbf{K}_{\mathbf{A}}(7) = \mathbf{A} - 7\mathbf{E} = \left[
                                           \begin{array}{rrr}
@@ -735,7 +735,7 @@ Egenvektorerne for $\mathbf{A}$ hørende til egenværdien $\lambda_{1} = 7$ fås ve
                                           \end{array}
                                         \right] \quad ,
 \end{equation}
-som med passende rækkeoperationer ses at have
+som med passende rÃ¦kkeoperationer ses at have
 \begin{equation}
 \trap{\mathbf{K}_{\mathbf{A}}(7)} = \left[
                                           \begin{array}{rrr}
@@ -745,11 +745,11 @@ som med passende rækkeoperationer ses at have
                                           \end{array}
                                         \right] \quad .
 \end{equation}
-Egenvektor-løsningerne til det tilsvarende homogene ligningssystem aflæses til
+Egenvektor-lÃ¸sningerne til det tilsvarende homogene ligningssystem aflÃ¦ses til
 \begin{equation}
 \mathbf{u} = t \cdot (1, -2, 1) \quad , \quad t \in \mathbb{R} \quad ,
 \end{equation}
-sådan at $E_{7}= \spanVec{(1,-2,1)}$. Den normerede egenvektor $\mathbf{v}_{1} = (1/\sqrt{6})\cdot (1, -2, 1)$ er derfor en ortonormal basis for $E_{7}$ (og den kan altså bruges som første søjle vektor i den søgte $\mathbf{Q}$:
+sÃ¥dan at $E_{7}= \spanVec{(1,-2,1)}$. Den normerede egenvektor $\mathbf{v}_{1} = (1/\sqrt{6})\cdot (1, -2, 1)$ er derfor en ortonormal basis for $E_{7}$ (og den kan altsÃ¥ bruges som fÃ¸rste sÃ¸jle vektor i den sÃ¸gte $\mathbf{Q}$:
 \begin{equation}
 \mathbf{Q}= \left[
           \begin{array}{rrr}
@@ -759,9 +759,9 @@ sådan at $E_{7}= \spanVec{(1,-2,1)}$. Den normerede egenvektor $\mathbf{v}_{1} =
           \end{array}
         \right] \quad .
 \end{equation}
-Vi ved fra sætning \ref{thmSpektral}, at de to resterende søjler fås ved tilsvarende at finde alle egenvektorerne $E_{1}$  hørende til egenværdien $\lambda_{2} = \lambda_{3} = 1$ og dernæst udvælge to ortonormale egenvektorer fra $E_{1}$. \\
+Vi ved fra sÃ¦tning \ref{thmSpektral}, at de to resterende sÃ¸jler fÃ¥s ved tilsvarende at finde alle egenvektorerne $E_{1}$  hÃ¸rende til egenvÃ¦rdien $\lambda_{2} = \lambda_{3} = 1$ og dernÃ¦st udvÃ¦lge to ortonormale egenvektorer fra $E_{1}$. \\
 
-Reduktionsmatricen hørende til egenværdien $1$ er
+Reduktionsmatricen hÃ¸rende til egenvÃ¦rdien $1$ er
 \begin{equation}
 \mathbf{K}_{\mathbf{A}}(1) = \mathbf{A} - \mathbf{E} = \left[
                                           \begin{array}{rrr}
@@ -771,7 +771,7 @@ Reduktionsmatricen hørende til egenværdien $1$ er
                                           \end{array}
                                         \right] \quad ,
 \end{equation}
-som igen via passende rækkeoperationer ses at have
+som igen via passende rÃ¦kkeoperationer ses at have
 \begin{equation}
 \trap{\mathbf{K}_{\mathbf{A}}(1)} = \left[
                                           \begin{array}{rrr}
@@ -781,22 +781,22 @@ som igen via passende rækkeoperationer ses at have
                                           \end{array}
                                         \right] \quad .
 \end{equation}
-Egenvektor-løsningerne til det tilsvarende homogene ligningssystem aflæses til
+Egenvektor-lÃ¸sningerne til det tilsvarende homogene ligningssystem aflÃ¦ses til
 \begin{equation}
 \mathbf{u} = t_{1} \cdot (2,1,0) + t_{2} \cdot (-1,0, 1) \quad , \quad t_{1} \in \mathbb{R} \quad , \quad t_{2} \in \mathbb{R} \quad ,
 \end{equation}
-sådan at $E_{1}= \spanVec{(-1,0,1), (2,1,0) }$. \\
+sÃ¥dan at $E_{1}= \spanVec{(-1,0,1), (2,1,0) }$. \\
 
-Vi finder en ortonormal basis for $E_{1}$ ved hjælp af Gram--Schmidt ortonormalisering af $\spanVec{ (-1,0,1),  (2,1,0)}$ således:
-Da vi allerede har defineret $\mathbf{v}_{1}$ sætter vi $\mathbf{v}_{2}$ til at være
+Vi finder en ortonormal basis for $E_{1}$ ved hjÃ¦lp af Gram--Schmidt ortonormalisering af $\spanVec{ (-1,0,1),  (2,1,0)}$ sÃ¥ledes:
+Da vi allerede har defineret $\mathbf{v}_{1}$ sÃ¦tter vi $\mathbf{v}_{2}$ til at vÃ¦re
 \begin{equation}
 \mathbf{v}_{2} = \frac{(-1,0,1)}{\vert (-1, 0,1) \vert} = (1/\sqrt{2})\cdot(-1,0,1) \quad ,
 \end{equation}
-og dernæst, som i Gram--Schmidt proceduren:
+og dernÃ¦st, som i Gram--Schmidt proceduren:
 \begin{equation}
 \mathbf{w}_{3} = (2,1,0) - \left((2,1,0)\bm{\cdot}\mathbf{v}_{2}\right)\cdot \mathbf{v}_{2} = (1,1,1) \quad .
 \end{equation}
-Ved normering får vi derved endelig $\mathbf{v}_{3} = (1/\sqrt{3})\cdot(1,1,1)$ og dermed har vi alle ingredienserne til den søgte ortogonale matrix $\mathbf{Q}$:
+Ved normering fÃ¥r vi derved endelig $\mathbf{v}_{3} = (1/\sqrt{3})\cdot(1,1,1)$ og dermed har vi alle ingredienserne til den sÃ¸gte ortogonale matrix $\mathbf{Q}$:
 \begin{equation}
 \mathbf{Q} = [ \mathbf{v}_{1} \, \mathbf{v}_{2} \, \mathbf{{v}_{3}} ] = \left[
                                                             \begin{array}{rrr}
@@ -806,7 +806,7 @@ Ved normering får vi derved endelig $\mathbf{v}_{3} = (1/\sqrt{3})\cdot(1,1,1)$ 
                                                             \end{array}
                                                           \right] \quad .
 \end{equation}
-Det skal til sidst undersøges, om de valgte egenvektorer giver en positiv ortogonal matrix. Da
+Det skal til sidst undersÃ¸ges, om de valgte egenvektorer giver en positiv ortogonal matrix. Da
 \begin{equation}
 \det\left( \left[
              \begin{array}{ccc}
@@ -816,7 +816,7 @@ Det skal til sidst undersøges, om de valgte egenvektorer giver en positiv ortogo
              \end{array}
            \right] \right) = -6 < 0 \quad,
 \end{equation}
-er $\mathbf{Q}$ negativ ortogonal. En positiv ortogonal matrix fås ved at skifte fortegn på en af søjlerne i $\mathbf{Q}$, eksempelvis den sidste. Bemærk, at en vektor $\mathbf{v}$ er en egenvektor for $\mathbf{A}$ hvis og kun hvis $-\mathbf{v}$ også er en egenvektor for $\mathbf{A}$. Vi har altså, at
+er $\mathbf{Q}$ negativ ortogonal. En positiv ortogonal matrix fÃ¥s ved at skifte fortegn pÃ¥ en af sÃ¸jlerne i $\mathbf{Q}$, eksempelvis den sidste. BemÃ¦rk, at en vektor $\mathbf{v}$ er en egenvektor for $\mathbf{A}$ hvis og kun hvis $-\mathbf{v}$ ogsÃ¥ er en egenvektor for $\mathbf{A}$. Vi har altsÃ¥, at
 \begin{equation}
 \mathbf{Q} = \left(
                \begin{array}{ccc}
@@ -864,9 +864,9 @@ Det eftervises ved en direkte udregning:
                                                                     \right] \quad ,
 \end{aligned}
 \end{equation}
-så pengene passer. \\
+sÃ¥ pengene passer. \\
 
-Vi skal også til slut lige bemærke her, at i stedet for at bruge Gram--Schmidt ortonormalisering  til bestemmelse af $\mathbf{v}_{3}$ kunne vi have brugt krydsproduktet $\mathbf{v}_{1} \times \mathbf{v}_{2}$ (se \ref{exampOrto3D}):
+Vi skal ogsÃ¥ til slut lige bemÃ¦rke her, at i stedet for at bruge Gram--Schmidt ortonormalisering  til bestemmelse af $\mathbf{v}_{3}$ kunne vi have brugt krydsproduktet $\mathbf{v}_{1} \times \mathbf{v}_{2}$ (se \ref{exampOrto3D}):
 \begin{equation}
 \mathbf{v}_{3} = \mathbf{v}_{1} \times \mathbf{v}_{2} = (1/\sqrt{3})\cdot (-1, -1, -1) \quad .
 \end{equation}
@@ -874,7 +874,7 @@ Vi skal også til slut lige bemærke her, at i stedet for at bruge Gram--Schmidt o
 
 
 \begin{example}[Diagonalisering ved ortogonal substitution]\label{exampLAbog8.21}
-En symmetrisk $(2 \times 2)-$matrix $\mathbf{A}$ er givet således:
+En symmetrisk $(2 \times 2)-$matrix $\mathbf{A}$ er givet sÃ¥ledes:
 \begin{equation}
 \mathbf{A} = \left[
                \begin{array}{rr}
@@ -883,11 +883,11 @@ En symmetrisk $(2 \times 2)-$matrix $\mathbf{A}$ er givet således:
                \end{array}
              \right]  \quad .
 \end{equation}
-Vi vil bestemme en positiv ortogonal matrix $\mathbf{Q}$ således at $\mathbf{Q}^{-1}\mathbf{A}\mathbf{Q}$ er en diagonalmatrix:
+Vi vil bestemme en positiv ortogonal matrix $\mathbf{Q}$ sÃ¥ledes at $\mathbf{Q}^{-1}\mathbf{A}\mathbf{Q}$ er en diagonalmatrix:
 \begin{equation}
 \mathbf{Q}^{-1}\mathbf{A}\mathbf{Q} = \mathbf{Q}\transp\mathbf{A}\mathbf{Q} =  \bm{\Lambda} \quad .
 \end{equation}
-Først bestemmes egenværdierne for $\mathbf{A}$: Det karakteristiske polynomium for $\mathbf{A}$ er
+FÃ¸rst bestemmes egenvÃ¦rdierne for $\mathbf{A}$: Det karakteristiske polynomium for $\mathbf{A}$ er
 \begin{equation}
 \mathcal{K}_{\mathbf{A}}(\lambda) = \det\left( \left[
                                                  \begin{array}{cc}
@@ -897,7 +897,7 @@ Først bestemmes egenværdierne for $\mathbf{A}$: Det karakteristiske polynomium f
                                                \right]
 \right)  = (\lambda-20)\cdot(\lambda+5) \quad ,
 \end{equation}
-så $\mathbf{A}$ har egenværdierne $\lambda_{1} = 20$ og $\lambda_{2} = -5$. Dermed har vi nu:
+sÃ¥ $\mathbf{A}$ har egenvÃ¦rdierne $\lambda_{1} = 20$ og $\lambda_{2} = -5$. Dermed har vi nu:
 \begin{equation}
 \bm{\Lambda} = \left[
                  \begin{array}{cc}
@@ -907,7 +907,7 @@ så $\mathbf{A}$ har egenværdierne $\lambda_{1} = 20$ og $\lambda_{2} = -5$. Derm
                \right] \quad .
 \end{equation}
 
-Egenvektorerne for $\mathbf{A}$ hørende til egenværdien $\lambda_{1} = 20$ fås ved at løse det homogene ligningssystem, der har koefficientmatricen
+Egenvektorerne for $\mathbf{A}$ hÃ¸rende til egenvÃ¦rdien $\lambda_{1} = 20$ fÃ¥s ved at lÃ¸se det homogene ligningssystem, der har koefficientmatricen
 \begin{equation}
 \mathbf{K}_{\mathbf{A}}(20) = \mathbf{A} - 20\mathbf{E} = \left[
                                                             \begin{array}{cc}
@@ -917,7 +917,7 @@ Egenvektorerne for $\mathbf{A}$ hørende til egenværdien $\lambda_{1} = 20$ fås v
                                                           \right]
  \quad ,
 \end{equation}
-som med passende rækkeoperationer ses at have den ækvivalente trappe-matrix:
+som med passende rÃ¦kkeoperationer ses at have den Ã¦kvivalente trappe-matrix:
 \begin{equation}
 \trap{\mathbf{K}_{\mathbf{A}}(20)} = \left[
                                        \begin{array}{cc}
@@ -928,11 +928,11 @@ som med passende rækkeoperationer ses at have den ækvivalente trappe-matrix:
 \quad .
 \end{equation}
 
-Egenvektor-løsningerne til det tilsvarende homogene ligningssystem aflæses til
+Egenvektor-lÃ¸sningerne til det tilsvarende homogene ligningssystem aflÃ¦ses til
 \begin{equation}
 \mathbf{u} = t\cdot(4, -3) \quad , \quad t \in \mathbb{R} \quad ,
  \end{equation}
- sådan at $E_{20}= \spanVec{(4,-3)}$. Den normerede egenvektor $\mathbf{v}_{1} = (1/5)\cdot (4, -3)$ er derfor en ortonormal basis for $E_{20}$ (og den kan altså bruges som første søjle vektor i den søgte $\mathbf{Q}$:
+ sÃ¥dan at $E_{20}= \spanVec{(4,-3)}$. Den normerede egenvektor $\mathbf{v}_{1} = (1/5)\cdot (4, -3)$ er derfor en ortonormal basis for $E_{20}$ (og den kan altsÃ¥ bruges som fÃ¸rste sÃ¸jle vektor i den sÃ¸gte $\mathbf{Q}$:
 \begin{equation}
 \mathbf{Q}= \left[
               \begin{array}{rr}
@@ -942,7 +942,7 @@ Egenvektor-løsningerne til det tilsvarende homogene ligningssystem aflæses til
             \right]
 \quad .
 \end{equation}
-Den sidste søjle i $\mathbf{Q}$ er en egenvektor hørende til den anden egenværdi $\lambda_{2} = -5$ og kan derfor findes ud fra den totale løsningsmængde $E_{-5}$ til det homogene ligningssystem, der har koefficientmatricen
+Den sidste sÃ¸jle i $\mathbf{Q}$ er en egenvektor hÃ¸rende til den anden egenvÃ¦rdi $\lambda_{2} = -5$ og kan derfor findes ud fra den totale lÃ¸sningsmÃ¦ngde $E_{-5}$ til det homogene ligningssystem, der har koefficientmatricen
 \begin{equation}
 \mathbf{K}_{\mathbf{A}}(-5) = \mathbf{A} - 5\cdot\mathbf{E} = \left[
                                                             \begin{array}{rr}
@@ -952,7 +952,7 @@ Den sidste søjle i $\mathbf{Q}$ er en egenvektor hørende til den anden egenværdi
                                                           \right]
  \quad ,
 \end{equation}
-men da vi jo ved, at den søgte egenvektor er ortogonal på egenvektoren $\mathbf{v}_{1}$, kan vi umiddelbart blot bruge tværvektoren, $\mathbf{v}_{2}= (1/5)\cdot(3, 4)$, som klart er en enhedsvektor, der er ortogonal på $\mathbf{v}_{1}$. Det er let at checke, at $\mathbf{v}_{2}$ er en egenvektor for $\mathbf{A}$ hørende til egenværdien $-5$\,:
+men da vi jo ved, at den sÃ¸gte egenvektor er ortogonal pÃ¥ egenvektoren $\mathbf{v}_{1}$, kan vi umiddelbart blot bruge tvÃ¦rvektoren, $\mathbf{v}_{2}= (1/5)\cdot(3, 4)$, som klart er en enhedsvektor, der er ortogonal pÃ¥ $\mathbf{v}_{1}$. Det er let at checke, at $\mathbf{v}_{2}$ er en egenvektor for $\mathbf{A}$ hÃ¸rende til egenvÃ¦rdien $-5$\,:
 \begin{equation}
 \mathbf{K}_{\mathbf{A}}(-5)\cdot\mathbf{v}_{2} =  \left[
                                                             \begin{array}{rr}
@@ -971,7 +971,7 @@ men da vi jo ved, at den søgte egenvektor er ortogonal på egenvektoren $\mathbf{
                                                                          \end{array}
                                                                        \right] \quad .
 \end{equation}
-Vi indsætter derfor $\mathbf{v}_{2}$ som anden søjle i $\mathbf{Q}$ og får
+Vi indsÃ¦tter derfor $\mathbf{v}_{2}$ som anden sÃ¸jle i $\mathbf{Q}$ og fÃ¥r
 \begin{equation}
 \mathbf{Q} = \left[
            \begin{array}{rr}
@@ -980,7 +980,7 @@ Vi indsætter derfor $\mathbf{v}_{2}$ som anden søjle i $\mathbf{Q}$ og får
            \end{array}
          \right] \quad .
 \end{equation}
-Denne matrix har determinanten $\det\left( \mathbf{Q} \right) = 1 > 0$, så $\mathbf{Q}$ er en positiv ortogonal substitutionsmatrix, der
+Denne matrix har determinanten $\det\left( \mathbf{Q} \right) = 1 > 0$, sÃ¥ $\mathbf{Q}$ er en positiv ortogonal substitutionsmatrix, der
 opfylder at $\mathbf{Q}^{-1}\mathbf{A}\mathbf{Q}$ er en diagonalmatrix:
 \begin{equation}
 \begin{aligned}
@@ -1013,7 +1013,7 @@ opfylder at $\mathbf{Q}^{-1}\mathbf{A}\mathbf{Q}$ er en diagonalmatrix:
 \end{example}
 
 \begin{example}[Diagonalisering ved ortogonal substitution] \label{exampLAbog8.22}
-En symmetrisk $(3 \times 3)-$matrix $\mathbf{A}$ er givet således:
+En symmetrisk $(3 \times 3)-$matrix $\mathbf{A}$ er givet sÃ¥ledes:
 \begin{equation}
 \mathbf{A} = \left[
                \begin{array}{rrr}
@@ -1023,11 +1023,11 @@ En symmetrisk $(3 \times 3)-$matrix $\mathbf{A}$ er givet således:
                \end{array}
              \right] \quad .
 \end{equation}
-Vi vil bestemme en positiv ortogonal matrix $\mathbf{Q}$ således at $\mathbf{Q}^{-1}\mathbf{A}\mathbf{Q}$ er en diagonalmatrix:
+Vi vil bestemme en positiv ortogonal matrix $\mathbf{Q}$ sÃ¥ledes at $\mathbf{Q}^{-1}\mathbf{A}\mathbf{Q}$ er en diagonalmatrix:
 \begin{equation}
 \mathbf{Q}^{-1}\mathbf{A}\mathbf{Q} = \mathbf{Q}\transp\mathbf{A}\mathbf{Q} =  \bm{\Lambda} \quad .
 \end{equation}
-Først bestemmes egenværdierne for $\mathbf{A}$: Det karakteristiske polynomium for $\mathbf{A}$ er
+FÃ¸rst bestemmes egenvÃ¦rdierne for $\mathbf{A}$: Det karakteristiske polynomium for $\mathbf{A}$ er
 \begin{equation}
 \mathcal{K}_{\mathbf{A}}(\lambda) = \det\left(\left[
                \begin{array}{rrr}
@@ -1037,8 +1037,8 @@ Først bestemmes egenværdierne for $\mathbf{A}$: Det karakteristiske polynomium f
                \end{array}
              \right] \right)  = -(\lambda-3)\cdot(\lambda-6)\cdot(\lambda - 9) \quad ,
 \end{equation}
-hvoraf vi aflæser de tre forskellige egenværdier $\lambda_{1}= 9$, $\lambda_{2}= 6$, og $\lambda_{3}= 3$ og dermed
-den diagonalmatrix vi på vej til at kunne skrive som $\mathbf{Q}^{-1}\mathbf{A}\mathbf{Q}$ \, :
+hvoraf vi aflÃ¦ser de tre forskellige egenvÃ¦rdier $\lambda_{1}= 9$, $\lambda_{2}= 6$, og $\lambda_{3}= 3$ og dermed
+den diagonalmatrix vi pÃ¥ vej til at kunne skrive som $\mathbf{Q}^{-1}\mathbf{A}\mathbf{Q}$ \, :
 \begin{equation}
 \bm{\Lambda} = \diag(9, 6, 3) = \left[
                                   \begin{array}{rrr}
@@ -1048,7 +1048,7 @@ den diagonalmatrix vi på vej til at kunne skrive som $\mathbf{Q}^{-1}\mathbf{A}\
                                   \end{array}
                                 \right]
 \end{equation}
-Egenvektorerne for $\mathbf{A}$ hørende til egenværdien $\lambda_{3} = 3$ fås ved at løse det homogene ligningssystem, der har koefficientmatricen
+Egenvektorerne for $\mathbf{A}$ hÃ¸rende til egenvÃ¦rdien $\lambda_{3} = 3$ fÃ¥s ved at lÃ¸se det homogene ligningssystem, der har koefficientmatricen
 \begin{equation}
 \mathbf{K}_{\mathbf{A}}(3) = \mathbf{A} - 3\cdot\mathbf{E} = \left[
                                           \begin{array}{rrr}
@@ -1058,7 +1058,7 @@ Egenvektorerne for $\mathbf{A}$ hørende til egenværdien $\lambda_{3} = 3$ fås ve
                                           \end{array}
                                         \right] \quad ,
 \end{equation}
-som med passende rækkeoperationer ses at have
+som med passende rÃ¦kkeoperationer ses at have
 \begin{equation}
 \trap{\mathbf{K}_{\mathbf{A}}(3)} = \left[
                                           \begin{array}{rrr}
@@ -1068,11 +1068,11 @@ som med passende rækkeoperationer ses at have
                                           \end{array}
                                         \right] \quad .
 \end{equation}
-Egenvektor-løsningerne til det tilsvarende homogene ligningssystem aflæses til
+Egenvektor-lÃ¸sningerne til det tilsvarende homogene ligningssystem aflÃ¦ses til
 \begin{equation}
 \mathbf{u}_{3} = t\cdot(1, 2,2) \quad , \quad t \in \mathbb{R} \quad ,
  \end{equation}
- sådan at $E_{3}= \spanVec{(1,2,2)}$. Den normerede egenvektor $\mathbf{v}_{1} = (1/3)\cdot (1, 2, 2)$ er derfor en ortonormal basis for $E_{3}$ og den kan altså bruges som {\textit{tredje søjle vektor}} i den søgte $\mathbf{Q}$; bemærk nemlig, at vi netop har fundet egenvektorrummet til den {\textit{tredje egenværdi}} på listen over egenværdier for $\mathbf{A}$\,:
+ sÃ¥dan at $E_{3}= \spanVec{(1,2,2)}$. Den normerede egenvektor $\mathbf{v}_{1} = (1/3)\cdot (1, 2, 2)$ er derfor en ortonormal basis for $E_{3}$ og den kan altsÃ¥ bruges som {\textit{tredje sÃ¸jle vektor}} i den sÃ¸gte $\mathbf{Q}$; bemÃ¦rk nemlig, at vi netop har fundet egenvektorrummet til den {\textit{tredje egenvÃ¦rdi}} pÃ¥ listen over egenvÃ¦rdier for $\mathbf{A}$\,:
 \begin{equation}
 \mathbf{Q}= \left[
           \begin{array}{rrr}
@@ -1082,7 +1082,7 @@ Egenvektor-løsningerne til det tilsvarende homogene ligningssystem aflæses til
           \end{array}
         \right] \quad .
 \end{equation}
-Vi ved fra sætning \ref{thmSpektral}, at de to resterende søjler fås ved tilsvarende at finde  egenvektorrummene $E_{6}$  hørende til egenværdien $\lambda_{2} = 6$, og egenvektorrummet $E_{9}$  hørende til egenværdien $\lambda_{1} = 9$.\\
+Vi ved fra sÃ¦tning \ref{thmSpektral}, at de to resterende sÃ¸jler fÃ¥s ved tilsvarende at finde  egenvektorrummene $E_{6}$  hÃ¸rende til egenvÃ¦rdien $\lambda_{2} = 6$, og egenvektorrummet $E_{9}$  hÃ¸rende til egenvÃ¦rdien $\lambda_{1} = 9$.\\
 
 For $\lambda_{2}  = 6$ har vi:
 \begin{equation}
@@ -1094,7 +1094,7 @@ For $\lambda_{2}  = 6$ har vi:
                                           \end{array}
                                         \right] \quad ,
 \end{equation}
-som med passende rækkeoperationer ses at have følgende ækvivalente trappematrix:
+som med passende rÃ¦kkeoperationer ses at have fÃ¸lgende Ã¦kvivalente trappematrix:
 \begin{equation}
 \trap{\mathbf{K}_{\mathbf{A}}(6)} = \left[
                                           \begin{array}{rrr}
@@ -1104,11 +1104,11 @@ som med passende rækkeoperationer ses at have følgende ækvivalente trappematrix:
                                           \end{array}
                                         \right] \quad .
 \end{equation}
-Egenvektor-løsningerne til det tilsvarende homogene ligningssystem aflæses til
+Egenvektor-lÃ¸sningerne til det tilsvarende homogene ligningssystem aflÃ¦ses til
 \begin{equation}
 \mathbf{u}_{2} = t\cdot(-2, -1, 2)\quad , \quad t \in \mathbb{R} \quad ,
  \end{equation}
- sådan at $E_{6}= \spanVec{(-2, -1, 2)}$. Den normerede egenvektor $\mathbf{v}_{2} = (1/3)\cdot (-2, -1, 2)$ er derfor en ortonormal basis for $E_{6}$ (og den kan altså bruges som {\textit{anden søjle vektor}} i den søgte $\mathbf{Q}$:
+ sÃ¥dan at $E_{6}= \spanVec{(-2, -1, 2)}$. Den normerede egenvektor $\mathbf{v}_{2} = (1/3)\cdot (-2, -1, 2)$ er derfor en ortonormal basis for $E_{6}$ (og den kan altsÃ¥ bruges som {\textit{anden sÃ¸jle vektor}} i den sÃ¸gte $\mathbf{Q}$:
 \begin{equation}
 \mathbf{Q}= \left[
           \begin{array}{rrr}
@@ -1118,7 +1118,7 @@ Egenvektor-løsningerne til det tilsvarende homogene ligningssystem aflæses til
           \end{array}
         \right] \quad .
 \end{equation}
-I stedet for på samme måde at bestemme egenvektorrummet $E_{9}$ for den resterende egenværdi $\lambda_{1} = 9$ benytter vi, at det egenvektorrum er udspændt af en vektor $\mathbf{v}_{1}$, der er ortogonal på både $\mathbf{v}_{3}$ og $\mathbf{v}_{2}$, altså kan vi bruge $\mathbf{v}_{1} = \mathbf{v}_{2} \times \mathbf{v}_{3} = (1/3) \cdot (-2, 2, -1)$, således at vi dermed endelig har
+I stedet for pÃ¥ samme mÃ¥de at bestemme egenvektorrummet $E_{9}$ for den resterende egenvÃ¦rdi $\lambda_{1} = 9$ benytter vi, at det egenvektorrum er udspÃ¦ndt af en vektor $\mathbf{v}_{1}$, der er ortogonal pÃ¥ bÃ¥de $\mathbf{v}_{3}$ og $\mathbf{v}_{2}$, altsÃ¥ kan vi bruge $\mathbf{v}_{1} = \mathbf{v}_{2} \times \mathbf{v}_{3} = (1/3) \cdot (-2, 2, -1)$, sÃ¥ledes at vi dermed endelig har
 \begin{equation}
 \mathbf{Q}= \left[
           \begin{array}{rrr}
@@ -1128,7 +1128,7 @@ I stedet for på samme måde at bestemme egenvektorrummet $E_{9}$ for den resteren
           \end{array}
         \right] \quad .
 \end{equation}
-Denne matrix er positiv ortogonal fordi $\det(\mathbf{Q}) = 1 > 0$, og dermed har vi bestemt en positiv ortogonal matrix $\mathbf{Q}$, der diagonaliserer $\mathbf{A}$ til diagonalmatricen $\bm{\Lambda}$. Det eftervises også let ved en direkte udregning:
+Denne matrix er positiv ortogonal fordi $\det(\mathbf{Q}) = 1 > 0$, og dermed har vi bestemt en positiv ortogonal matrix $\mathbf{Q}$, der diagonaliserer $\mathbf{A}$ til diagonalmatricen $\bm{\Lambda}$. Det eftervises ogsÃ¥ let ved en direkte udregning:
 \begin{equation}
 \begin{aligned}
 &\mathbf{Q}^{-1} \mathbf{A} \mathbf{Q} = \mathbf{Q}\transp \mathbf{A} \mathbf{Q}\\  &= \left[
@@ -1167,9 +1167,9 @@ Denne matrix er positiv ortogonal fordi $\det(\mathbf{Q}) = 1 > 0$, og dermed ha
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Kontrolleret konstruktion af symmetriske matricer}
-I lyset af ovenstående eksempler er det klart, at hvis vi blot kan konstruere alle ortogonale $(2 \times 2)$- og $(3 \times 3)$-matricer $\mathbf{Q}$ (eller for den sags skyld $(n \times n)$-matricer), så kan vi {\emph{konstruere}} alle symmetriske $(2 \times 2)$- og $(3 \times 3)$-matricer $\mathbf{A}$ på formen $\mathbf{A} = \mathbf{Q}\cdot \bm{\Lambda}\cdot \mathbf{Q}^{\top}$. Vi skal blot {\emph{vælge}} de ønskede egenværdier i diagonalen for $\bm{\Lambda}$.\\
+I lyset af ovenstÃ¥ende eksempler er det klart, at hvis vi blot kan konstruere alle ortogonale $(2 \times 2)$- og $(3 \times 3)$-matricer $\mathbf{Q}$ (eller for den sags skyld $(n \times n)$-matricer), sÃ¥ kan vi {\emph{konstruere}} alle symmetriske $(2 \times 2)$- og $(3 \times 3)$-matricer $\mathbf{A}$ pÃ¥ formen $\mathbf{A} = \mathbf{Q}\cdot \bm{\Lambda}\cdot \mathbf{Q}^{\top}$. Vi skal blot {\emph{vÃ¦lge}} de Ã¸nskede egenvÃ¦rdier i diagonalen for $\bm{\Lambda}$.\\
 
- Enhver positiv ortogonal  $2 \times 2$-matrix har følgende form, som viser at den er en rotation, en drejning, givet ved en rotations-vinkel $\varphi\,\,$:
+ Enhver positiv ortogonal  $2 \times 2$-matrix har fÃ¸lgende form, som viser at den er en rotation, en drejning, givet ved en rotations-vinkel $\varphi\,\,$:
 \begin{equation} \label{eqRotationsmatrix}
 \mathbf{Q} = \left[
                 \begin{array}{cc}
@@ -1178,26 +1178,26 @@ I lyset af ovenstående eksempler er det klart, at hvis vi blot kan konstruere al
                 \end{array}
               \right] \quad ,
 \end{equation}
-hvor $\varphi$ er en vinkel i intervallet $[-\pi, \pi]$. Bemærk, at søjlevektorerne er ortogonale og begge har længden $1$. Derudover er determinanten $\det(\mathbf{Q}) = 1$, så $\mathbf{Q}$ er positiv ortogonal.
+hvor $\varphi$ er en vinkel i intervallet $[-\pi, \pi]$. BemÃ¦rk, at sÃ¸jlevektorerne er ortogonale og begge har lÃ¦ngden $1$. Derudover er determinanten $\det(\mathbf{Q}) = 1$, sÃ¥ $\mathbf{Q}$ er positiv ortogonal.
 
 \begin{exercise} \label{exercOrtog2Ddrejn}
-Bevis påstanden om, at {\emph{enhver}} positiv ortogonal matrix kan fremstilles på formen (\ref{eqRotationsmatrix}) for et passende valg af drejningsvinkel $\varphi$.
+Bevis pÃ¥standen om, at {\emph{enhver}} positiv ortogonal matrix kan fremstilles pÃ¥ formen (\ref{eqRotationsmatrix}) for et passende valg af drejningsvinkel $\varphi$.
 \end{exercise}
 
-Hvis  $\varphi > 0$ så roterer eller drejer $\mathbf{Q}$ vektorer i positiv omløbsretning, altså imod uret;  hvis $\varphi < 0$ så drejer $\mathbf{Q}$ vektorer i negativ omløbsretning, altså med uret. \\
+Hvis  $\varphi > 0$ sÃ¥ roterer eller drejer $\mathbf{Q}$ vektorer i positiv omlÃ¸bsretning, altsÃ¥ imod uret;  hvis $\varphi < 0$ sÃ¥ drejer $\mathbf{Q}$ vektorer i negativ omlÃ¸bsretning, altsÃ¥ med uret. \\
 
 \begin{definition}[Drejnings-matricer] \label{defDrejmat}
-Enhver positiv ortogonal $(2 \times 2)$-matrix kaldes også en \ind{drejnings-matrix}{drejnings-matrix}.
+Enhver positiv ortogonal $(2 \times 2)$-matrix kaldes ogsÃ¥ en \ind{drejnings-matrix}{drejnings-matrix}.
 \end{definition}
 
-Da enhver positiv ortogonal  $3 \times 3$-matrix tilsvarende kan fremstilles ved et produkt af rotationer omkring de tre koordinatakser -- se nedenfor -- vil vi udvide navngivningen som følger:
+Da enhver positiv ortogonal  $3 \times 3$-matrix tilsvarende kan fremstilles ved et produkt af rotationer omkring de tre koordinatakser -- se nedenfor -- vil vi udvide navngivningen som fÃ¸lger:
 
 \begin{definition}[Rotations-matricer] \label{defRotmat}
 Enhver positiv ortogonal $(3 \times 3)$-matrix kaldes en \ind{rotations-matrix}{rotations-matrix}.
 \end{definition}
 
 
-En koordinatakse-rotation, dvs. en rotation med en given vinkel om en af koordinatakserne, er givet ved en af følgende positive ortogonale matricer:
+En koordinatakse-rotation, dvs. en rotation med en given vinkel om en af koordinatakserne, er givet ved en af fÃ¸lgende positive ortogonale matricer:
 \begin{equation} \label{eqRxRyRz}
 \begin{aligned}
 \mathbf{R}_{x}(u) &= \left[
@@ -1243,9 +1243,9 @@ Find billedvektorerne af hver af de angivne vektorer $\mathbf{a}$, $\mathbf{b}$,
 \end{equation}
 \end{exercise}
 
-Sammensætning af rotationer om koordinatakserne med givne drejningsvinkler $u$, $v$, og $w$ om henholdsvis $x-$aksen, $y-$aksen, og $z-$aksen fås ved at finde matrixproduktet af de tre tilsvarende rotationsmatricer.\\
+SammensÃ¦tning af rotationer om koordinatakserne med givne drejningsvinkler $u$, $v$, og $w$ om henholdsvis $x-$aksen, $y-$aksen, og $z-$aksen fÃ¥s ved at finde matrixproduktet af de tre tilsvarende rotationsmatricer.\\
 
-Her er det helt generelle udtryk for det matrixprodukt for alle værdier af $u$, $v$ og $w$:
+Her er det helt generelle udtryk for det matrixprodukt for alle vÃ¦rdier af $u$, $v$ og $w$:
 
 \begin{equation*} \label{eqRzRyRx}
 \begin{aligned}
@@ -1260,7 +1260,7 @@ Her er det helt generelle udtryk for det matrixprodukt for alle værdier af $u$, 
 \end{aligned}
 \end{equation*}
 
-Der gælder som antydet følgende sætning:
+Der gÃ¦lder som antydet fÃ¸lgende sÃ¦tning:
 
 \begin{theorem}[Akse-rotationsvinkler for en given rotationsmatrix] \label{thmAkseRotFactors}
 Enhver rotationsmatrix $\mathbf{R}$ (dvs. enhver positiv ortogonal matrix $\mathbf{Q}$) kan skrives som et produkt af $3$ akserotationsmatricer:
@@ -1268,28 +1268,28 @@ Enhver rotationsmatrix $\mathbf{R}$ (dvs. enhver positiv ortogonal matrix $\math
 \mathbf{R} \, = \, \mathbf{R}(u,v,w) \,= \, \mathbf{R}_{z}(w) \cdot \mathbf{R}_{y}(v) \cdot \mathbf{R}_{x}(u) \quad .
 \end{equation}
 Med andre ord: Virkningen af enhver rotationsmatrix kan
-realiseres ved tre på hinanden følgende rotationer om koordinatakserne -- med drejningsvinklerne henholdsvis $u$, $v$, og $w$ som i ovenstående matrix-produkt.
+realiseres ved tre pÃ¥ hinanden fÃ¸lgende rotationer om koordinatakserne -- med drejningsvinklerne henholdsvis $u$, $v$, og $w$ som i ovenstÃ¥ende matrix-produkt.
 \end{theorem}
 
 
 \begin{aha}
-Når en givet positiv ortogonal matrix $\mathbf{R}$ er givet (med sine matrix-elementer $r_{ij}$), er det  ikke svært at finde disse ak\-se\-ro\-ta\-tions-vinkler. Som det fremgår af matrixproduktet ovenfor er f.eks.
-$\sin(v) \, = \, r_{31}$ sådan at $v = \arcsin(r_{31})$ eller $v = \pi - \arcsin(r_{31})$, og
-$\cos(w)\cos(v) \, = \, r_{11}$ sådan at $w = \arccos(r_{11}/\cos(v))$ eller  $v = - \arccos(r_{31}/\cos(v))$, når blot $\cos(v) \neq 0$ dvs. når blot $v \neq \pm\pi/2$.\\
+NÃ¥r en givet positiv ortogonal matrix $\mathbf{R}$ er givet (med sine matrix-elementer $r_{ij}$), er det  ikke svÃ¦rt at finde disse ak\-se\-ro\-ta\-tions-vinkler. Som det fremgÃ¥r af matrixproduktet ovenfor er f.eks.
+$\sin(v) \, = \, r_{31}$ sÃ¥dan at $v = \arcsin(r_{31})$ eller $v = \pi - \arcsin(r_{31})$, og
+$\cos(w)\cos(v) \, = \, r_{11}$ sÃ¥dan at $w = \arccos(r_{11}/\cos(v))$ eller  $v = - \arccos(r_{31}/\cos(v))$, nÃ¥r blot $\cos(v) \neq 0$ dvs. nÃ¥r blot $v \neq \pm\pi/2$.\\
 \end{aha}
 
 \begin{exercise}
-Vis, at hvis $v = \pi/2$ eller $v = -\pi/2$, så er der mange værdier af $u$ og $w$ som giver den {\em{samme}} $\mathbf{R}(u,v,w)$. Det vil sige, at vinkelværdierne ikke i alle tilfælde er
+Vis, at hvis $v = \pi/2$ eller $v = -\pi/2$, sÃ¥ er der mange vÃ¦rdier af $u$ og $w$ som giver den {\em{samme}} $\mathbf{R}(u,v,w)$. Det vil sige, at vinkelvÃ¦rdierne ikke i alle tilfÃ¦lde er
 entydigt bestemte i intervallet $\,] -\pi, \pi\,]$ for enhver givet rotationsmatrix $\mathbf{R}$.\\
 \end{exercise}
 
 \begin{exercise}
-Vis, at hvis $\mathbf{R}$ er en rotationsmatrix (en positiv ortogonal matrix), så er $\mathbf{R}^{\top}$ også en rotationsmatrix, og omvendt: hvis $\mathbf{R}^{\top}$ er en rotationsmatrix, så er $\mathbf{R}$ også en rotationsmatrix.
+Vis, at hvis $\mathbf{R}$ er en rotationsmatrix (en positiv ortogonal matrix), sÃ¥ er $\mathbf{R}^{\top}$ ogsÃ¥ en rotationsmatrix, og omvendt: hvis $\mathbf{R}^{\top}$ er en rotationsmatrix, sÃ¥ er $\mathbf{R}$ ogsÃ¥ en rotationsmatrix.
 \end{exercise}
 
 
 \begin{exercise}
-Vis, at hvis $\mathbf{R}_{1}$ og $\mathbf{R}_{2}$ er rotationsmatricer, så er $\mathbf{R}_{1} \cdot \mathbf{R}_{2}$ og $\mathbf{R}_{2} \cdot \mathbf{R}_{1}$ også  rotationsmatricer. Giv eksempler på, at $\mathbf{R}_{1} \cdot \mathbf{R}_{2}$ ikke nødvendigvis er den samme rotationsmatrix som  $\mathbf{R}_{2} \cdot \mathbf{R}_{1}$.
+Vis, at hvis $\mathbf{R}_{1}$ og $\mathbf{R}_{2}$ er rotationsmatricer, sÃ¥ er $\mathbf{R}_{1} \cdot \mathbf{R}_{2}$ og $\mathbf{R}_{2} \cdot \mathbf{R}_{1}$ ogsÃ¥  rotationsmatricer. Giv eksempler pÃ¥, at $\mathbf{R}_{1} \cdot \mathbf{R}_{2}$ ikke nÃ¸dvendigvis er den samme rotationsmatrix som  $\mathbf{R}_{2} \cdot \mathbf{R}_{1}$.
 \end{exercise}
 
 
@@ -1307,12 +1307,12 @@ Vis, at hvis $\mathbf{R}_{1}$ og $\mathbf{R}_{2}$ er rotationsmatricer, så er $\
 \section{Reduktion af andengradspolynomier}
 
 En \ind{kvadratisk form}{kvadratisk form} i $(\mathbb{R}^{n}, \bm{\cdot})$ er et andengrads-polynomium
-i $n$ variable -- men uden førstegrads- og konstant-led.
+i $n$ variable -- men uden fÃ¸rstegrads- og konstant-led.
 
 \begin{definition}
-Lad $\mathbf{A}$ være en symmetrisk $(n \times n)$-matrix og lad $(x_{1}, x_{2}, \cdots, x_{n})$ betegne koordinaterne for en  vilkårlig vektor $\mathbf{x}$ i $(\mathbb{R}, \bm{\cdot})$ med hensyn til den sædvanlige basis e i $\mathbb{R}^{n}$. \\
+Lad $\mathbf{A}$ vÃ¦re en symmetrisk $(n \times n)$-matrix og lad $(x_{1}, x_{2}, \cdots, x_{n})$ betegne koordinaterne for en  vilkÃ¥rlig vektor $\mathbf{x}$ i $(\mathbb{R}, \bm{\cdot})$ med hensyn til den sÃ¦dvanlige basis e i $\mathbb{R}^{n}$. \\
 
-En \ind{kvadratisk form}{kvadratisk form} i $(\mathbb{R}, \bm{\cdot})$ er en funktion af de $n$ variable $(x_{1}, x_{2}, \cdots, x_{n})$ på følgende form:
+En \ind{kvadratisk form}{kvadratisk form} i $(\mathbb{R}, \bm{\cdot})$ er en funktion af de $n$ variable $(x_{1}, x_{2}, \cdots, x_{n})$ pÃ¥ fÃ¸lgende form:
 \begin{equation}
 \begin{aligned}
 P_{\mathbf{A}}(\mathbf{x}) = P_{\mathbf{A}}(x_{1}, x_{2}, \cdots, x_{n}) &= \left[
@@ -1337,11 +1337,11 @@ hvor $a_{ij}$ er de enkelte elementer i $\mathbf{A}$.
 
 
 \begin{example}[Kvadratisk form som del af andengradspolynomium]\label{exampKvadFormFraPol}
-Lad $f(x,y)$ betegne følgende andengradspolynomium i de to variable $x$ og $y$.
+Lad $f(x,y)$ betegne fÃ¸lgende andengradspolynomium i de to variable $x$ og $y$.
 \begin{equation}
 f(x,y) = 11\cdot x^{2} + 4\cdot y^{2} - 24\cdot x\cdot y - 20\cdot x + 40\cdot y - 60 \quad.
 \end{equation}
-Så kan vi opdele polynomiet i to dele:
+SÃ¥ kan vi opdele polynomiet i to dele:
 \begin{equation}
 f(x,y) = P_{\mathbf{A}}(x,y) + (- 20\cdot x + 40\cdot y - 60) \quad,
 \end{equation}
@@ -1349,7 +1349,7 @@ hvor $P_{\mathbf{A}}(x,y)$ er den kvadratiske form
 \begin{equation}
 P_{\mathbf{A}}(x,y) = 11\cdot x^{2} + 4\cdot y^{2} - 24\cdot x\cdot y
 \end{equation}
-som repræsenteres ved matricen
+som reprÃ¦senteres ved matricen
 \begin{equation} \label{eqReprA}
 \mathbf{A} = \left[
                \begin{array}{cc}
@@ -1360,33 +1360,33 @@ som repræsenteres ved matricen
 \end{equation}
 \end{example}
 
-Vi vil nu se, hvordan spektralsætningen kan bruges til at skrive enhver kvadratisk form på kort form ved hjælp af egenværdierne for den matrix, der repræsenterer den kvadratiske form.
+Vi vil nu se, hvordan spektralsÃ¦tningen kan bruges til at skrive enhver kvadratisk form pÃ¥ kort form ved hjÃ¦lp af egenvÃ¦rdierne for den matrix, der reprÃ¦senterer den kvadratiske form.
 
 \begin{theorem}[Reduktion af kvadratisk form] \label{KvadFormReduk}
-Lad $\mathbf{A}$ være en symmetrisk matrix og lad $P_{\mathbf{A}}(x_{1}, \cdots , x_{n})$ betegne den tilhørende kvadratiske form i $(\mathbb{R}^{n}, \bm{\cdot})$ med hensyn til de sædvanlige koordinater. Ved basisskift til nye koordinater
+Lad $\mathbf{A}$ vÃ¦re en symmetrisk matrix og lad $P_{\mathbf{A}}(x_{1}, \cdots , x_{n})$ betegne den tilhÃ¸rende kvadratiske form i $(\mathbb{R}^{n}, \bm{\cdot})$ med hensyn til de sÃ¦dvanlige koordinater. Ved basisskift til nye koordinater
 $\widetilde{x}_{1}, \cdots , \widetilde{x}_{n}$ givet ved den positive ortogonale
-basisskiftematrix $\mathbf{Q}$ som diagonaliserer $\mathbf{A}$ fås det reducerede udtryk for den kvadratiske form:
+basisskiftematrix $\mathbf{Q}$ som diagonaliserer $\mathbf{A}$ fÃ¥s det reducerede udtryk for den kvadratiske form:
 \begin{equation}
 P_{\mathbf{A}}(x_{1}, \cdots , x_{n}) = \widetilde{P}_{\bm{\Lambda}}(\widetilde{x}_{1}, \cdots , \widetilde{x}_{n})  = \lambda_{1}\cdot \widetilde{x}_{1}^{2} + \cdots + \lambda_{n}\cdot \widetilde{x}_{n}^{2} \quad,
 \end{equation}
-hvor $\lambda_{1}, \cdots , \lambda_{n}$ er de $n$ reelle egenværdier for den symmetriske matrix $\mathbf{A}$.
+hvor $\lambda_{1}, \cdots , \lambda_{n}$ er de $n$ reelle egenvÃ¦rdier for den symmetriske matrix $\mathbf{A}$.
 \end{theorem}
 
 \begin{aha}
-\emph{Reduktionen} i sætningen består i, at det nye udtryk ikke indeholder noget produktled af typen $x_{i}\cdot x_{j}$ for $i \neq j$.
+\emph{Reduktionen} i sÃ¦tningen bestÃ¥r i, at det nye udtryk ikke indeholder noget produktled af typen $x_{i}\cdot x_{j}$ for $i \neq j$.
 \end{aha}
 
 \begin{bevis}
-Da $\mathbf{A}$ er symmetrisk \emph{kan} den ifølge spektralsætningen  diagonaliseres ved en ortogonal substitutionsmatrix $\mathbf{Q}$. Samlingen af søjlevektorer $(\mathbf{v}_{1}, \cdots , \mathbf{v}_{n} )$ i $\mathbf{Q}$ udgør en ny basis v i $(\mathbb{R}^{n}, \bm{\cdot})$. \\
+Da $\mathbf{A}$ er symmetrisk \emph{kan} den ifÃ¸lge spektralsÃ¦tningen  diagonaliseres ved en ortogonal substitutionsmatrix $\mathbf{Q}$. Samlingen af sÃ¸jlevektorer $(\mathbf{v}_{1}, \cdots , \mathbf{v}_{n} )$ i $\mathbf{Q}$ udgÃ¸r en ny basis v i $(\mathbb{R}^{n}, \bm{\cdot})$. \\
 
-Lad $\mathbf{x}$ være en vilkårlig vektor i $\mathbb{R}^{n}$. Så har vi følgende koordinatsæt for $\mathbf{x}$, dels med hensyn til den sædvanlige standard e-basis og dels med hensyn til den nye basis v
+Lad $\mathbf{x}$ vÃ¦re en vilkÃ¥rlig vektor i $\mathbb{R}^{n}$. SÃ¥ har vi fÃ¸lgende koordinatsÃ¦t for $\mathbf{x}$, dels med hensyn til den sÃ¦dvanlige standard e-basis og dels med hensyn til den nye basis v
 \begin{equation}
 \begin{aligned}
 \vekind{e}{\mathbf{x}} &= (x_{1}, \cdots , x_{n}) \quad , \\
 \vekind{v}{\mathbf{x}}&= (\widetilde{x}_{1}, \cdots , \widetilde{x}_{n}) \quad.
 \end{aligned}
 \end{equation}
-Så er
+SÃ¥ er
 \begin{equation}
 \begin{aligned}
 P_{\mathbf{A}}(\mathbf{x}) &= P_{\mathbf{A}}(x_{1}, \cdots , x_{n}) \\
@@ -1470,21 +1470,21 @@ P_{\mathbf{A}}(\mathbf{x}) &= P_{\mathbf{A}}(x_{1}, \cdots , x_{n}) \\
 
 
 \begin{aha}
-Læg mærke til, at den matrix, der repræsenterer den kvadratiske form i eksempel \ref{exampKvadFormFraPol}, ligning
-(\ref{eqReprA}), ikke er meget forskellig  fra  Hesse-matricen $\mathbf{H}f(x,y)$ for $f(x,y)$, som jo også er en konstant matrix, fordi $f(x,y)$ er et anden\-grads\-polynomium.  Se \tref{NUID33-tn18}{eNote}. Faktisk observerer vi, at:
+LÃ¦g mÃ¦rke til, at den matrix, der reprÃ¦senterer den kvadratiske form i eksempel \ref{exampKvadFormFraPol}, ligning
+(\ref{eqReprA}), ikke er meget forskellig  fra  Hesse-matricen $\mathbf{H}f(x,y)$ for $f(x,y)$, som jo ogsÃ¥ er en konstant matrix, fordi $f(x,y)$ er et anden\-grads\-polynomium.  Se \tref{NUID33-tn18}{eNote}. Faktisk observerer vi, at:
 \begin{equation}
 \mathbf{A} = \frac{1}{2}\cdot \mathbf{H}f(x,y) \quad,
 \end{equation}
-og det er ikke nogen tilfældighed.
+og det er ikke nogen tilfÃ¦ldighed.
 \end{aha}
 
 
 \begin{lemma}
-Lad $f(x_{1}, x_{2}, \cdots, x_{n})$ betegne et vilkårligt andengrads-polynomium uden førstegrads- og konstant-led. Så kan $f(x_{1}, x_{2}, \cdots, x_{n})$   udtrykkes som en kvad\-ra\-tisk form på netop \'{e}n måde -- dvs. der findes netop \'{e}n symmetrisk matrix $\mathbf{A}$ sådan at:
+Lad $f(x_{1}, x_{2}, \cdots, x_{n})$ betegne et vilkÃ¥rligt andengrads-polynomium uden fÃ¸rstegrads- og konstant-led. SÃ¥ kan $f(x_{1}, x_{2}, \cdots, x_{n})$   udtrykkes som en kvad\-ra\-tisk form pÃ¥ netop \'{e}n mÃ¥de -- dvs. der findes netop \'{e}n symmetrisk matrix $\mathbf{A}$ sÃ¥dan at:
 \begin{equation}
 f(\mathbf{x}) = f(x_{1}, x_{2}, \cdots, x_{n}) = P_{\mathbf{A}}(x_{1}, x_{2}, \cdots, x_{n}) \quad.
 \end{equation}
-Den søgte matrix er:
+Den sÃ¸gte matrix er:
 \begin{equation} \label{eqHessKvad}
 \mathbf{A} = \frac{1}{2}\cdot \mathbf{H}f(\mathbf{x}) \quad,
 \end{equation}
@@ -1492,11 +1492,11 @@ hvor $\mathbf{H}f(\mathbf{x})$ er (den konstante) Hesse-matrix for funktionen $f
 
 \end{lemma}
 \begin{bevis}
-Vi nøjes her med tilfældet $n = 2$ og refererer til analysen af funktioner af to variable i  \tref{NUID33-tn18}{eNote}: Hvis $f(x,y)$ er et polynomium i to variable uden førstegrads- (og konstant-)led, altså en kvadratisk form i $(\mathbf{R}^{2}, \bm{\cdot})$, så er den søgte $\mathbf{A}$-matrix lige præcis (den konstante) Hesse-matrix for $f(x,y)$.
+Vi nÃ¸jes her med tilfÃ¦ldet $n = 2$ og refererer til analysen af funktioner af to variable i  \tref{NUID33-tn18}{eNote}: Hvis $f(x,y)$ er et polynomium i to variable uden fÃ¸rstegrads- (og konstant-)led, altsÃ¥ en kvadratisk form i $(\mathbf{R}^{2}, \bm{\cdot})$, sÃ¥ er den sÃ¸gte $\mathbf{A}$-matrix lige prÃ¦cis (den konstante) Hesse-matrix for $f(x,y)$.
 \end{bevis}
 
 
-Det gælder generelt, hvis vi udvider definitionen af Hesse-matricer til funktioner af flere variable således: Lad $f(x_{1}, x_{2}, \cdots, x_{n})$ være en vilkårlig glat funktion af $n$ variable i den oplagte  betydning for funktioner af flere variable (end to). Så er de tilsvarende Hesse-matricer følgende symmetriske $(n \times n)$-matricer som indeholder alle de partielle afledede af anden orden for funktionen $f(\mathbf{x})$ evalueret i et vilkårligt punkt $\mathbf{x} \in \mathbb{R}^{n}$:
+Det gÃ¦lder generelt, hvis vi udvider definitionen af Hesse-matricer til funktioner af flere variable sÃ¥ledes: Lad $f(x_{1}, x_{2}, \cdots, x_{n})$ vÃ¦re en vilkÃ¥rlig glat funktion af $n$ variable i den oplagte  betydning for funktioner af flere variable (end to). SÃ¥ er de tilsvarende Hesse-matricer fÃ¸lgende symmetriske $(n \times n)$-matricer som indeholder alle de partielle afledede af anden orden for funktionen $f(\mathbf{x})$ evalueret i et vilkÃ¥rligt punkt $\mathbf{x} \in \mathbb{R}^{n}$:
 
 \begin{equation}
 \mathbf{H}f(x_{1}, x_{2}, \cdots, x_{n}) = \left[
@@ -1508,7 +1508,7 @@ f''_{x_{n}\,x_{1}}(\mathbf{x}) & f''_{x_{n}\,x_{2}}(\mathbf{x}) & \ldots & f''_{
                                              \end{array}
                                            \right] \quad .
 \end{equation}
-Specielt, hvis $f(x,y,z)$ er en glat funktion af tre variable (som i nedenstående eksempel \ref{exampKvadAH}) fås i ethvert punkt $(x,y,z) \in \mathbb{R}^{3}$:
+Specielt, hvis $f(x,y,z)$ er en glat funktion af tre variable (som i nedenstÃ¥ende eksempel \ref{exampKvadAH}) fÃ¥s i ethvert punkt $(x,y,z) \in \mathbb{R}^{3}$:
 \begin{equation}
 \mathbf{H}f(x, y, z) = \left[
                                              \begin{array}{ccc}
@@ -1523,12 +1523,12 @@ hvor vi eksplicit har benyttet os af symmetrien i Hesse-matricen, f.eks. $f''_{z
 
 
 
-\begin{example}[Kvadratisk form med repræsenterende matrix] \label{exampKvadAH}
-Lad $f(x,y,z)$ betegne følgende funktion af tre variable:
+\begin{example}[Kvadratisk form med reprÃ¦senterende matrix] \label{exampKvadAH}
+Lad $f(x,y,z)$ betegne fÃ¸lgende funktion af tre variable:
 \begin{equation}
 f(x,y,z) = x^{2} + 3\cdot y^{2} + z^{2} - 8\cdot x \cdot y + 4\cdot y\cdot z \quad.
 \end{equation}
-Så er $f(x,y,z)$ en kvadratisk form $P_{\mathbf{A}}(x,y,z)$ med \begin{equation}
+SÃ¥ er $f(x,y,z)$ en kvadratisk form $P_{\mathbf{A}}(x,y,z)$ med \begin{equation}
 \mathbf{A}  = \frac{1}{2}\cdot \mathbf{H}f(x,y,z) =  \frac{1}{2}\cdot\left[
                                              \begin{array}{ccc}
                                                f''_{xx}(x,y,z) & f''_{xy}(x,y,z)  & f''_{xz}(x,y,z)  \\
@@ -1544,7 +1544,7 @@ f''_{xz}(x,y,z) & f''_{yz}(x,y,z)  &  f''_{zz}(x,y,z)
                                                       \right]
                                            \quad .
 \end{equation}
-Vi kan efterprøve  \ref{eqHessKvad} ved direkte udregning:
+Vi kan efterprÃ¸ve  \ref{eqHessKvad} ved direkte udregning:
 \begin{equation}
 \begin{aligned}
 P_{\mathbf{A}}(x,y,z) &= \left[
@@ -1583,37 +1583,37 @@ P_{\mathbf{A}}(x,y,z) &= \left[
 \end{example}
 
 
-Som vist i \tref{NUID33-secSpecStat}{afsnit} i \tref{NUID33-tn18}{eNote} spiller fortegnene på egenværdierne for Hesse-matricen en afgørende rolle når vi analyserer og inspicerer en glat funktion $f(x,y)$ i og omkring et stationært punkt. Og da det netop igen er (den samme) Hesse-matrix der optræder i nærværende sammenhæng vil vi her knytte et par definitioner til denne fortegnsdiskussion -- nu for generelle $(n \times n)$ Hesse-matricer, og dermed også for generelle kvadratiske former repræsenteret ved symmetriske matricer $\mathbf{A}$ :
+Som vist i \tref{NUID33-secSpecStat}{afsnit} i \tref{NUID33-tn18}{eNote} spiller fortegnene pÃ¥ egenvÃ¦rdierne for Hesse-matricen en afgÃ¸rende rolle nÃ¥r vi analyserer og inspicerer en glat funktion $f(x,y)$ i og omkring et stationÃ¦rt punkt. Og da det netop igen er (den samme) Hesse-matrix der optrÃ¦der i nÃ¦rvÃ¦rende sammenhÃ¦ng vil vi her knytte et par definitioner til denne fortegnsdiskussion -- nu for generelle $(n \times n)$ Hesse-matricer, og dermed ogsÃ¥ for generelle kvadratiske former reprÃ¦senteret ved symmetriske matricer $\mathbf{A}$ :
 
 \begin{definition}[Definitte og indefinitte symmetriske matricer] \label{defDefinithed}
 Vi lader $\mathbf{A}$ betegne en symmetrisk matrix.
-Lad $\mathbf{A}$ have de $n$ reelle egenværdier $\lambda_{1}, \lambda_{2}, \cdots, \lambda_{n}$. Så siger vi, at
+Lad $\mathbf{A}$ have de $n$ reelle egenvÃ¦rdier $\lambda_{1}, \lambda_{2}, \cdots, \lambda_{n}$. SÃ¥ siger vi, at
 \begin{enumerate}
-\item $\mathbf{A}$ er \ind{positiv definit}{positiv definit} hvis alle egenværdierne $\lambda_{i}$  er positive.
-\item $\mathbf{A}$ er \ind{positiv semi-definit}{positiv semi-definit} hvis alle egenværdierne  $\lambda_{i}$ er ikke-negative (hver enkelt er større end eller lig med $0$).
-\item $\mathbf{A}$ er \ind{negativ definit}{negativ definit} hvis alle egenværdierne $\lambda_{i}$ er negative.
-\item $\mathbf{A}$ er \ind{negativ semi-definit}{negativ semi-definit} hvis alle egenværdierne $\lambda_{i}$ er ikke-positive (hver enkelt er mindre end eller lig med $0$).
+\item $\mathbf{A}$ er \ind{positiv definit}{positiv definit} hvis alle egenvÃ¦rdierne $\lambda_{i}$  er positive.
+\item $\mathbf{A}$ er \ind{positiv semi-definit}{positiv semi-definit} hvis alle egenvÃ¦rdierne  $\lambda_{i}$ er ikke-negative (hver enkelt er stÃ¸rre end eller lig med $0$).
+\item $\mathbf{A}$ er \ind{negativ definit}{negativ definit} hvis alle egenvÃ¦rdierne $\lambda_{i}$ er negative.
+\item $\mathbf{A}$ er \ind{negativ semi-definit}{negativ semi-definit} hvis alle egenvÃ¦rdierne $\lambda_{i}$ er ikke-positive (hver enkelt er mindre end eller lig med $0$).
 \item $\mathbf{A}$ er \ind{indefinit}{indefinit} hvis $\mathbf{A}$ hverken er positiv semi-definit eller negativ semidefinit.
 \end{enumerate}
 \end{definition}
 
 
-Vi formulerer nu et intuitivt rimeligt resultat, der relaterer denne ''definithed'' til de {\emph{værdier}}, som andengradspolynomiet $P_{\mathbf{A}}(\mathbf{x})$ antager for forskelllige $\mathbf{x} \in \mathbb{R}^{n}$.
+Vi formulerer nu et intuitivt rimeligt resultat, der relaterer denne ''definithed'' til de {\emph{vÃ¦rdier}}, som andengradspolynomiet $P_{\mathbf{A}}(\mathbf{x})$ antager for forskelllige $\mathbf{x} \in \mathbb{R}^{n}$.
 
 
 
 \begin{theorem}[Betydningen af positiv definithed] \label{thmPosDef}
-Hvis $\mathbf{A}$ er en symmetrisk positiv definit matrix, så er den kvadratiske form $P_{\mathbf{A}}(\mathbf{x})$ positiv for alle $\mathbf{x} \in \mathbb{R}^{n} - \mathbf{0}$.
+Hvis $\mathbf{A}$ er en symmetrisk positiv definit matrix, sÃ¥ er den kvadratiske form $P_{\mathbf{A}}(\mathbf{x})$ positiv for alle $\mathbf{x} \in \mathbb{R}^{n} - \mathbf{0}$.
 \end{theorem}
 \begin{bevis}
-Vi refererer til sætning \ref{KvadFormReduk} og kan derfra benytte det reducerede udtryk for den kvadratiske form:
+Vi refererer til sÃ¦tning \ref{KvadFormReduk} og kan derfra benytte det reducerede udtryk for den kvadratiske form:
 \begin{equation}
 P_{\mathbf{A}}(x_{1}, \cdots , x_{n}) = \widetilde{P}_{\bm{\Lambda}}(\widetilde{x}_{1}, \cdots , \widetilde{x}_{n})  = \lambda_{1}\cdot \widetilde{x}_{1}^{2} + \cdots + \lambda_{n}\cdot \widetilde{x}_{n}^{2} \quad,
 \end{equation}
-hvoraf det tydeligt se, at da $\mathbf{A}$ er positiv definit får vi $\lambda_{i} >0 $ for alle $i = 1, \cdots , n$ og så er $P_{\mathbf{A}}(\mathbf{x}) > 0$ for alle $\mathbf{x} \neq \mathbf{0}$, som jo svarer til, at ingen af koordinatsættene for $\mathbf{x}$ er $(0, \cdots , 0)$.
+hvoraf det tydeligt se, at da $\mathbf{A}$ er positiv definit fÃ¥r vi $\lambda_{i} >0 $ for alle $i = 1, \cdots , n$ og sÃ¥ er $P_{\mathbf{A}}(\mathbf{x}) > 0$ for alle $\mathbf{x} \neq \mathbf{0}$, som jo svarer til, at ingen af koordinatsÃ¦ttene for $\mathbf{x}$ er $(0, \cdots , 0)$.
 \end{bevis}
 
-Tilsvarende sætninger kan formuleres for negativt definitte og indefinitte matricer, og de er oplagt nyttige ved funktionsundersøgelser, specielt ved undersøgelse af funktionsværdierne omkring stationære punkter, som behandlet i
+Tilsvarende sÃ¦tninger kan formuleres for negativt definitte og indefinitte matricer, og de er oplagt nyttige ved funktionsundersÃ¸gelser, specielt ved undersÃ¸gelse af funktionsvÃ¦rdierne omkring stationÃ¦re punkter, som behandlet i
 \tref{NUID33-tn18}{eNote}.
 
 
@@ -1624,11 +1624,11 @@ Tilsvarende sætninger kan formuleres for negativt definitte og indefinitte matri
 
 \section{Reduktion af andengrads-polynomier}
 
-Ved at reducere den kvadratiske form del af et andengrads-polynomium fås naturligvis
-et tilsvarende simplere andengradspolynomium -- nu uden produktled. Vi ser på et par eksempler.
+Ved at reducere den kvadratiske form del af et andengrads-polynomium fÃ¥s naturligvis
+et tilsvarende simplere andengradspolynomium -- nu uden produktled. Vi ser pÃ¥ et par eksempler.
 
 \begin{example}[Reduktion af andengrads-polynomium, to variable] \label{exampRedPoly1}
-Vi ser på følgende andengradspolynomium i to variable:
+Vi ser pÃ¥ fÃ¸lgende andengradspolynomium i to variable:
 \begin{equation}
 f(x,y) = 11\cdot x^{2} + 4\cdot y^{2} - 24\cdot x\cdot y - 20\cdot x + 40\cdot y - 60
 \end{equation}
@@ -1645,7 +1645,7 @@ hvor
                \end{array}
              \right] \quad .
 \end{equation}
-Netop denne matrix er diagonaliseret ved en positiv ortogonal substitution $\mathbf{Q}$ i eksempel \ref{exampLAbog8.16}: Egenværdierne for $\mathbf{A}$ er $\lambda_{1} = 20  $ og $\lambda_{2} = -5 $ og
+Netop denne matrix er diagonaliseret ved en positiv ortogonal substitution $\mathbf{Q}$ i eksempel \ref{exampLAbog8.16}: EgenvÃ¦rdierne for $\mathbf{A}$ er $\lambda_{1} = 20  $ og $\lambda_{2} = -5 $ og
 \begin{equation}
 \mathbf{Q}= \left[
               \begin{array}{cc}
@@ -1659,19 +1659,19 @@ Netop denne matrix er diagonaliseret ved en positiv ortogonal substitution $\mat
                          \end{array}
                        \right] \quad , \quad  \textrm{hvor}\quad \varphi = -\arcsin(3/5) \quad .
 \end{equation}
-Koordinatskiftet til de nye koordinater $\widetilde{x}, \widetilde{y}$ foregår altså ved en rotation af det sædvanlige koordinatsystem med en vinkel på $-\arcsin(3/5)$. \\
+Koordinatskiftet til de nye koordinater $\widetilde{x}, \widetilde{y}$ foregÃ¥r altsÃ¥ ved en rotation af det sÃ¦dvanlige koordinatsystem med en vinkel pÃ¥ $-\arcsin(3/5)$. \\
 
-Vi bruger reduktionssætningen \ref{KvadFormReduk} og får, at den kvadratiske form $P_{\mathbf{A}}(x,y)$ i de nye koordinater har følgende reducerede udtryk:
+Vi bruger reduktionssÃ¦tningen \ref{KvadFormReduk} og fÃ¥r, at den kvadratiske form $P_{\mathbf{A}}(x,y)$ i de nye koordinater har fÃ¸lgende reducerede udtryk:
 \begin{equation}
 P_{\mathbf{A}}(x,y) = \widetilde{P}_{\bm{\Lambda}}(\widetilde{x}, \widetilde{y}) = 20\cdot \widetilde{x}^{2} - 5\cdot \widetilde{y}^{2} \quad .
 \end{equation}
 
-Ved at indsætte dette reducerede udtryk for den kvadratiske form i polynomiet $f(x,y)$ får vi:
+Ved at indsÃ¦tte dette reducerede udtryk for den kvadratiske form i polynomiet $f(x,y)$ fÃ¥r vi:
 \begin{equation} \label{eqRedRaw1}
 f(x,y) = 20\cdot \widetilde{x}^{2} - 5\cdot \widetilde{y}^{2} + (- 20\cdot x + 40\cdot y - 60) \quad ,
 \end{equation}
-hvor vi klart nu blot mangler at udtrykke den sidste parentes ved hjælp af de nye koordinater. Det gøres ved hjælp af
-substitutionsmatricen $\mathbf{Q}$. Vi har jo den lineære sammenhæng mellem koordinaterne $(x, y)$ og $(\widetilde{x}, \widetilde{y})$:
+hvor vi klart nu blot mangler at udtrykke den sidste parentes ved hjÃ¦lp af de nye koordinater. Det gÃ¸res ved hjÃ¦lp af
+substitutionsmatricen $\mathbf{Q}$. Vi har jo den lineÃ¦re sammenhÃ¦ng mellem koordinaterne $(x, y)$ og $(\widetilde{x}, \widetilde{y})$:
 \begin{equation}
 \left[
   \begin{array}{c}
@@ -1695,21 +1695,21 @@ substitutionsmatricen $\mathbf{Q}$. Vi har jo den lineære sammenhæng mellem koor
                             \end{array}
                           \right]
 \end{equation}
-sådan at:
+sÃ¥dan at:
 \begin{equation}
 \begin{aligned}
 x &= \frac{1}{5}\cdot (4\cdot \widetilde{x} + 3\cdot \widetilde{y}) \\
 y &= \frac{1}{5}\cdot (-3\cdot \widetilde{x} + 4\cdot \widetilde{y})\quad .
 \end{aligned}
 \end{equation}
-Vi indsætter disse omskrivninger af $x$ og $y$ i (\ref{eqRedRaw1}) og får:
+Vi indsÃ¦tter disse omskrivninger af $x$ og $y$ i (\ref{eqRedRaw1}) og fÃ¥r:
 \begin{equation}
 \begin{aligned}
 f(x,y) &= 20\cdot \widetilde{x}^{2} - 5\cdot \widetilde{y}^{2} + (- 4\cdot(4\cdot \widetilde{x} + 3\cdot \widetilde{y})  + 8\cdot (-3\cdot \widetilde{x} + 4\cdot \widetilde{y}) - 60) \\
 &= 20\cdot \widetilde{x}^{2} - 5\cdot \widetilde{y}^{2} - 40\cdot \widetilde{x} + 20\cdot \widetilde{y} - 60 \quad.
 \end{aligned}
 \end{equation}
-Vi har dermed reduceret udtrykket for $f(x,y)$ til følgende udtryk i de nye koordinater $\widetilde{x}$ og  $\widetilde{y})$,  som er fremkommet ved en passende drejning af det sædvanlige koordinatsystem:
+Vi har dermed reduceret udtrykket for $f(x,y)$ til fÃ¸lgende udtryk i de nye koordinater $\widetilde{x}$ og  $\widetilde{y})$,  som er fremkommet ved en passende drejning af det sÃ¦dvanlige koordinatsystem:
 \begin{equation}
 \begin{aligned}
 f(x,y) &= 11\cdot x^{2} + 4\cdot y^{2} - 24\cdot x\cdot y - 20\cdot x + 40\cdot y - 60 \\
@@ -1720,17 +1720,17 @@ f(x,y) &= 11\cdot x^{2} + 4\cdot y^{2} - 24\cdot x\cdot y - 20\cdot x + 40\cdot 
 \end{example}
 
 \begin{aha}
-Bemærk igen, at {\emph{reduktionen}} i eksemplet \ref{exampRedPoly1} består i, at det reducerede andengradspolynomium $\widetilde{f}(\widetilde{x}, \widetilde{y})$ ikke indeholder noget produktled af formen $\widetilde{x} \cdot \widetilde{y}$. Den reduktionsteknik og det udbytte af det store arbejde bliver lidt tydeligere når vi ser på et andengradspolynomium i tre variable.
+BemÃ¦rk igen, at {\emph{reduktionen}} i eksemplet \ref{exampRedPoly1} bestÃ¥r i, at det reducerede andengradspolynomium $\widetilde{f}(\widetilde{x}, \widetilde{y})$ ikke indeholder noget produktled af formen $\widetilde{x} \cdot \widetilde{y}$. Den reduktionsteknik og det udbytte af det store arbejde bliver lidt tydeligere nÃ¥r vi ser pÃ¥ et andengradspolynomium i tre variable.
 \end{aha}
 
 
 \begin{example}[Reduktion af andengrads-polynomium, tre variable] \label{exampRedPoly3}
-I eksempel \ref{exampLAbog8.22} har vi diagonaliseret den matrix $\mathbf{A}$, der repræsenterer den kvadratiske form i
-følgende andengradspolynomium i tre variable:
+I eksempel \ref{exampLAbog8.22} har vi diagonaliseret den matrix $\mathbf{A}$, der reprÃ¦senterer den kvadratiske form i
+fÃ¸lgende andengradspolynomium i tre variable:
 \begin{equation}
 f(x,y, z) = 7\cdot x^{2} + 6\cdot y^{2} + 5\cdot z^{2} - 4\cdot x\cdot y - 4\cdot y\cdot z - 2\cdot x + 20\cdot y -10\cdot z -18 \quad .
 \end{equation}
-Dette polynomium reduceres til følgende andengradspolynomium  i de nye variable opnået efter samme forskrift som i eksempel \ref{exampRedPoly1}:
+Dette polynomium reduceres til fÃ¸lgende andengradspolynomium  i de nye variable opnÃ¥et efter samme forskrift som i eksempel \ref{exampRedPoly1}:
 \begin{equation}
 \begin{aligned}
 f(x,y) &= \widetilde{f}(\widetilde{x}, \widetilde{y}, \widetilde{z}) \\ &=  \quad 9\cdot \widetilde{x}^{2} + 6\cdot \widetilde{y}^{2}+ 3\cdot \widetilde{z}^{2} + 18\cdot \widetilde{x} -12\cdot \widetilde{y} +6\cdot \widetilde{z} -18
@@ -1746,7 +1746,7 @@ med den positive ortogonale substitution
           \end{array}
         \right] \quad .
 \end{equation}
-Substitutionsmatricen  $\mathbf{Q}$ kan faktoriseres til et produkt af  akserotationsmatricer således:
+Substitutionsmatricen  $\mathbf{Q}$ kan faktoriseres til et produkt af  akserotationsmatricer sÃ¥ledes:
 \begin{equation}
 \mathbf{Q} = \mathbf{R}_{z}(w)\cdot \mathbf{R}_{y}(v)\cdot \mathbf{R}_{x}(u)  \quad,
 \end{equation}
@@ -1754,7 +1754,7 @@ hvor rotationsvinklerne er henholdsvis:
 \begin{equation}
 u= \frac{\pi}{4}\quad , \quad v=-\arcsin\left( \frac{1}{3}\right) \quad ,  \quad \textrm{og} \quad w= 3\cdot\frac{\pi}{4} \quad , \quad
 \end{equation}
-Ved at rotere koordinatsystemet og benytte de nye koordinater $\widetilde{x}$, $\widetilde{y}$, og $\widetilde{z}$ opnår vi den reduktion af polynomiet $f(x,y,z)$  at der i polynomiet $\widetilde{f}(\widetilde{x}, \widetilde{y}, \widetilde{z})$ ikke optræder produktled mens der i $f(x,y,z)$ optræder to produktled,  med henholdsvis  $x\cdot y$ og $y \cdot z$
+Ved at rotere koordinatsystemet og benytte de nye koordinater $\widetilde{x}$, $\widetilde{y}$, og $\widetilde{z}$ opnÃ¥r vi den reduktion af polynomiet $f(x,y,z)$  at der i polynomiet $\widetilde{f}(\widetilde{x}, \widetilde{y}, \widetilde{z})$ ikke optrÃ¦der produktled mens der i $f(x,y,z)$ optrÃ¦der to produktled,  med henholdsvis  $x\cdot y$ og $y \cdot z$
 \end{example}
 
 
@@ -1776,35 +1776,35 @@ Ved at rotere koordinatsystemet og benytte de nye koordinater $\widetilde{x}$, $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{summary}
-Hovedresultatet i denne eNote er at symmetriske $(n \times n)$-matricer kan diagonaliseres ved en positiv ortogonal substitutionsmatrix $\mathbf{Q}$. Vi har brugt den sætning til at reducere andengrads-polynomier i $n$ variable -- dog især for $n = 2$ og $n=3$.
+Hovedresultatet i denne eNote er at symmetriske $(n \times n)$-matricer kan diagonaliseres ved en positiv ortogonal substitutionsmatrix $\mathbf{Q}$. Vi har brugt den sÃ¦tning til at reducere andengrads-polynomier i $n$ variable -- dog isÃ¦r for $n = 2$ og $n=3$.
 \begin{itemize}
-\item En symmetrisk $(n \times n)$-matrix $\mathbf{A}$  har præcis $n$ reelle egenværdier $\lambda_{1}, \cdots , \lambda_{n}$.
-\item I vektorrummet $\mathbb{R}^{n}$ indføres et skalarprodukt ved udvidelse af det sædvanlige skalarprodukt i $\mathbb{R}^{2}$ og $\mathbb{R}^{3}$, og vi refererer til dette skalarprodukt, når vi skriver $(\mathbb{R}^{n}, \bm{\cdot})$. Hvis $\mathbf{a} = (a_{1}, \cdots , a_{n})$ og $\mathbf{b} = (b_{1}, \cdots , b_{n})$ med hensyn til den sædvanlige basis e i $\mathbb{R}^{n}$, så er
+\item En symmetrisk $(n \times n)$-matrix $\mathbf{A}$  har prÃ¦cis $n$ reelle egenvÃ¦rdier $\lambda_{1}, \cdots , \lambda_{n}$.
+\item I vektorrummet $\mathbb{R}^{n}$ indfÃ¸res et skalarprodukt ved udvidelse af det sÃ¦dvanlige skalarprodukt i $\mathbb{R}^{2}$ og $\mathbb{R}^{3}$, og vi refererer til dette skalarprodukt, nÃ¥r vi skriver $(\mathbb{R}^{n}, \bm{\cdot})$. Hvis $\mathbf{a} = (a_{1}, \cdots , a_{n})$ og $\mathbf{b} = (b_{1}, \cdots , b_{n})$ med hensyn til den sÃ¦dvanlige basis e i $\mathbb{R}^{n}$, sÃ¥ er
 \begin{equation}
 \mathbf{a}\bm{\cdot}\mathbf{b} = \sum_{i}^{n}\, a_{i}\cdot b_{i} \quad.
 \end{equation}
-\item Længden, normen, af en vektor $\mathbf{a}$ er givet ved
+\item LÃ¦ngden, normen, af en vektor $\mathbf{a}$ er givet ved
 \begin{equation}
 \vert \mathbf{a} \vert = \sqrt{\mathbf{a} \bm{\cdot} \mathbf{a}} = \sqrt{\sum_{i=1}^{n}a_{i}^{2}} \quad.
 \end{equation}
-\item Cauchy-Schwarz' ulighed gælder for alle vektorer $\mathbf{a}$ og $\mathbf{b}$ i $(\mathbb{R}^{n}, \bm{\cdot})$
+\item Cauchy-Schwarz' ulighed gÃ¦lder for alle vektorer $\mathbf{a}$ og $\mathbf{b}$ i $(\mathbb{R}^{n}, \bm{\cdot})$
 \begin{equation}
 \left|\mathbf{a} \bm{\cdot} \mathbf{b}\right| \leq \left|\,\ma\,\right|\,\left|\,\mb\,\right|\, ,
 \end{equation}
-og lighedstegnet gælder hvis og kun hvis $\mathbf{a}$ og $\mathbf{b}$ er lineært afhængige.
+og lighedstegnet gÃ¦lder hvis og kun hvis $\mathbf{a}$ og $\mathbf{b}$ er lineÃ¦rt afhÃ¦ngige.
 \item Vinklen $\theta \in [0, \pi]$ mellem to egentlige vektorer $\mathbf{a}$ og $\mathbf{b}$ i $(\mathbb{R}^{n}, \bm{\cdot})$ er bestemt ved 
 \begin{equation}
 \cos(\theta) = \frac{\mathbf{a} \bm{\cdot} \mathbf{b}}{\vert \mathbf{a} \vert \cdot \vert \mathbf{b} \vert} \quad.
 \end{equation}
 \item To egentlige vektorer $\mathbf{a}$ og $\mathbf{b}$ i $(\mathbb{R}^{n}, \bm{\cdot})$ er ortogonale hvis $\mathbf{a}\bm{\cdot}\mathbf{b} =  0$.
-\item En matrix $\mathbf{Q}$ er ortogonal hvis søjlevektorerne er parvis ortogonale og hver har længden $1$ med hensyn til det indførte skalarprodukt. Det svarer præcis til at
+\item En matrix $\mathbf{Q}$ er ortogonal hvis sÃ¸jlevektorerne er parvis ortogonale og hver har lÃ¦ngden $1$ med hensyn til det indfÃ¸rte skalarprodukt. Det svarer prÃ¦cis til at
     \begin{equation} \mathbf{Q}^{\top}\cdot \mathbf{Q} = \mathbf{E}
     \end{equation}
-     eller ækvivalent:
+     eller Ã¦kvivalent:
      \begin{equation}
      \mathbf{Q}^{-1} = \mathbf{Q}^{\top} \quad.
      \end{equation}
-\item Spektralsætningen: Hvis $\mathbf{A}$ er symmetrisk, så findes en positiv ortogonal substitutionsmatrix $\mathbf{Q}$ således at
+\item SpektralsÃ¦tningen: Hvis $\mathbf{A}$ er symmetrisk, sÃ¥ findes en positiv ortogonal substitutionsmatrix $\mathbf{Q}$ sÃ¥ledes at
 \begin{equation}
 \mathbf{A} = \mathbf{Q} \cdot \bm{\Lambda} \cdot \mathbf{Q}^{\top} \quad ,
 \end{equation}
@@ -1814,15 +1814,15 @@ hvor  $\bm{\Lambda} = \diag(\lambda_{1}, \cdots , \lambda_{n})$.
 \mathbf{Q} = \mathbf{R}_{z}(w) \cdot \mathbf{R}_{y}(v) \cdot \mathbf{R}_{x}(u) \quad ,
 \end{equation}
 for passende valg af drejningsvinkler $u$, $v$, og $w$.
-\item For $n=3$: Ved rotation af koordinatsystemet, dvs. ved brug af en positiv ortogonal koordinat\-skifte\-ma\-trix $\mathbf{Q}$, kan den kvadratiske form $P_{\mathbf{A}}(x,y,z)$ (som er et andengradspolynomium uden lineære led og uden konstantled) udtrykkes ved en kvadratisk form $\widetilde{P}_{\bm{\Lambda}}(\widetilde{x}, \widetilde{y}, \widetilde{z})$ i de nye koordinater $\widetilde{x}$, $\widetilde{y}$, og $\widetilde{z}$ således at
+\item For $n=3$: Ved rotation af koordinatsystemet, dvs. ved brug af en positiv ortogonal koordinat\-skifte\-ma\-trix $\mathbf{Q}$, kan den kvadratiske form $P_{\mathbf{A}}(x,y,z)$ (som er et andengradspolynomium uden lineÃ¦re led og uden konstantled) udtrykkes ved en kvadratisk form $\widetilde{P}_{\bm{\Lambda}}(\widetilde{x}, \widetilde{y}, \widetilde{z})$ i de nye koordinater $\widetilde{x}$, $\widetilde{y}$, og $\widetilde{z}$ sÃ¥ledes at
     \begin{equation}
     P_{\mathbf{A}}(x,y,z) = \widetilde{P}_{\bm{\Lambda}}(\widetilde{x}, \widetilde{y}, \widetilde{z}) \quad \textrm{for alle $(x,y,z)$,}
     \end{equation}
-    og således at den reducerede kvadratiske form $\widetilde{P}_{\bm{\Lambda}}(\widetilde{x}, \widetilde{y}, \widetilde{z})$ ikke indeholder noget produktled af typen $\widetilde{x}\cdot \widetilde{y}$, $\widetilde{x}\cdot \widetilde{z}$, eller $\widetilde{y}\cdot \widetilde{z} \,\,$:
+    og sÃ¥ledes at den reducerede kvadratiske form $\widetilde{P}_{\bm{\Lambda}}(\widetilde{x}, \widetilde{y}, \widetilde{z})$ ikke indeholder noget produktled af typen $\widetilde{x}\cdot \widetilde{y}$, $\widetilde{x}\cdot \widetilde{z}$, eller $\widetilde{y}\cdot \widetilde{z} \,\,$:
 \begin{equation}
 \widetilde{P}_{\bm{\Lambda}}(\widetilde{x}, \widetilde{y}, \widetilde{z}) = \lambda_{1}\cdot \widetilde{x}^{2} +  \lambda_{2}\cdot \widetilde{y}^{2} +  \lambda_{3}\cdot \widetilde{z}^{2} \quad,
 \end{equation}
-hvor $\lambda_{1}$, $\lambda_{2}$, og $\lambda_{3}$ er de tre reelle egenværdier for $\mathbf{A}$.
+hvor $\lambda_{1}$, $\lambda_{2}$, og $\lambda_{3}$ er de tre reelle egenvÃ¦rdier for $\mathbf{A}$.
 
 \end{itemize}
 \end{summary}

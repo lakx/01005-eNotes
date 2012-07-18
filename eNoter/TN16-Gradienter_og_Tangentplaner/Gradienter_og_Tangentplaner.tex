@@ -1,18 +1,18 @@
 \input{../Strukturfiler/preambel}
-\setcounter{chapter}{15} %SÆT DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
+\setcounter{chapter}{15} %SÃ†T DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% HERFRA SKAL DU SKRIVE ELLER INDSÆTTE %%%%
-%%% DEN FIL DU ØNSKER %%%%%%%%%%%%%%%%%%%%%%%
+%%% HERFRA SKAL DU SKRIVE ELLER INDSÃ†TTE %%%%
+%%% DEN FIL DU Ã˜NSKER %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Gradienter og tangentplaner} \label{tn16}
 
 \begin{basis}
-I denne eNote vil vi fokusere lidt nærmere på den geometriske analyse og inspektion af funktioner af to variable. Vi vil især studere sammenhængen mellem gradientvektorerne i $(x,y)$-planen og tangentplanerne i $(x,y,z)$-rummet.  Vi vil se på parameterfremstillinger for -- og normalvektorer til -- tangentplanerne for grafen for en funktion $f(x,y)$ af to variable via det approksimerende førstegradspolynomium for $f(x,y)$. De partielle afledede er i hele eNoten de grundlæggende ingredienser. Et globalt resultat om de partielle afledede er at gradienten kan benyttes til at bestemme funktionen overalt i et sammenhængende område hvis vi blot kender funktionsværdien i et enkelt punkt.
-Kurver i  $(x,y)$-planen kan løftes til graf-fladen  for $f(x,y)$, og vi vil vise, at alle tangenterne for enhver kurve igennem et givet punkt på graf-fladen er indeholdt i tangentplanen for fladen i det punkt.
+I denne eNote vil vi fokusere lidt nÃ¦rmere pÃ¥ den geometriske analyse og inspektion af funktioner af to variable. Vi vil isÃ¦r studere sammenhÃ¦ngen mellem gradientvektorerne i $(x,y)$-planen og tangentplanerne i $(x,y,z)$-rummet.  Vi vil se pÃ¥ parameterfremstillinger for -- og normalvektorer til -- tangentplanerne for grafen for en funktion $f(x,y)$ af to variable via det approksimerende fÃ¸rstegradspolynomium for $f(x,y)$. De partielle afledede er i hele eNoten de grundlÃ¦ggende ingredienser. Et globalt resultat om de partielle afledede er at gradienten kan benyttes til at bestemme funktionen overalt i et sammenhÃ¦ngende omrÃ¥de hvis vi blot kender funktionsvÃ¦rdien i et enkelt punkt.
+Kurver i  $(x,y)$-planen kan lÃ¸ftes til graf-fladen  for $f(x,y)$, og vi vil vise, at alle tangenterne for enhver kurve igennem et givet punkt pÃ¥ graf-fladen er indeholdt i tangentplanen for fladen i det punkt.
 \end{basis}
 
 
@@ -27,31 +27,31 @@ Kurver i  $(x,y)$-planen kan løftes til graf-fladen  for $f(x,y)$, og vi vil vis
 
 
 
-For  funktioner af \'{e}n variabel ved vi, at vi kan finde og rekonstruere funktionen $f(x)$ ud fra den afledede $f'(x) = q(x)$ og ud fra værdien af $f(x)$ i blot \'{e}t punkt $x_{0}$. Vi skal 'bare' integrere og finde en stamfunktion til $q(x)$. Stamfunktionen er så den ønskede funktion $f(x)$ pånær en konstant, der til sidst kan bestemmes ud fra kendskabet til $f(x_{0})$. Det samme er tilfældet for funktioner af to variable.\\
+For  funktioner af \'{e}n variabel ved vi, at vi kan finde og rekonstruere funktionen $f(x)$ ud fra den afledede $f'(x) = q(x)$ og ud fra vÃ¦rdien af $f(x)$ i blot \'{e}t punkt $x_{0}$. Vi skal 'bare' integrere og finde en stamfunktion til $q(x)$. Stamfunktionen er sÃ¥ den Ã¸nskede funktion $f(x)$ pÃ¥nÃ¦r en konstant, der til sidst kan bestemmes ud fra kendskabet til $f(x_{0})$. Det samme er tilfÃ¦ldet for funktioner af to variable.\\
 
-Selv om vi kun kender de partielle afledede, dvs. de sædvanlige afledede af hjælpefunktionerne $f_{1}(x,y_{0})$ og $f_{2}(x_{0},y)$,  i de to \emph{koordinatakseretninger}, så er de faktisk tilstrækkelige til at rekonstruere funktionen. Men for at kunne integrere og rekonstruere funktionen ud fra gradientvektorfeltet har vi brug for, at det område vi betragter i $(x,y)$-planen er sammenhængende:
+Selv om vi kun kender de partielle afledede, dvs. de sÃ¦dvanlige afledede af hjÃ¦lpefunktionerne $f_{1}(x,y_{0})$ og $f_{2}(x_{0},y)$,  i de to \emph{koordinatakseretninger}, sÃ¥ er de faktisk tilstrÃ¦kkelige til at rekonstruere funktionen. Men for at kunne integrere og rekonstruere funktionen ud fra gradientvektorfeltet har vi brug for, at det omrÃ¥de vi betragter i $(x,y)$-planen er sammenhÃ¦ngende:
 
-\begin{definition}[Sammenhængende mængde]
-En mængde $M$ i planen siges at være \ind{kurve-sammenhængende mængde}{kurve-sammenhængende} eller blot \ind{sammenhængende mængde}{sammenhængende} hvis ethvert punkt i $M$ kan forbindes med ethvert andet punkt i $M$ via en differentiabel parametriseret  kurve $\mathbf{r}(u) = (p(u), q(u))$, hvor $u \in \, ]\alpha, \beta[$.
+\begin{definition}[SammenhÃ¦ngende mÃ¦ngde]
+En mÃ¦ngde $M$ i planen siges at vÃ¦re \ind{kurve-sammenhÃ¦ngende mÃ¦ngde}{kurve-sammenhÃ¦ngende} eller blot \ind{sammenhÃ¦ngende mÃ¦ngde}{sammenhÃ¦ngende} hvis ethvert punkt i $M$ kan forbindes med ethvert andet punkt i $M$ via en differentiabel parametriseret  kurve $\mathbf{r}(u) = (p(u), q(u))$, hvor $u \in \, ]\alpha, \beta[$.
 \end{definition}
 
-\begin{example}[Stjerneformede mængder er sammenhængende]
-Enhver stjerneformet mængde i $(x,y)$-planen er kurvesammenhængende. Vi kan forbinde to givne punkter via rette linjestykker til stjernepunktet, hvor der så imidlertid typisk vil optræde et 'knæk'. Overvej, hvorfor det ikke er et problem.
+\begin{example}[Stjerneformede mÃ¦ngder er sammenhÃ¦ngende]
+Enhver stjerneformet mÃ¦ngde i $(x,y)$-planen er kurvesammenhÃ¦ngende. Vi kan forbinde to givne punkter via rette linjestykker til stjernepunktet, hvor der sÃ¥ imidlertid typisk vil optrÃ¦de et 'knÃ¦k'. Overvej, hvorfor det ikke er et problem.
 \end{example}
 
 
-Vi har så følgende sætning, som vi vil give et konstruktivt bevis for:
+Vi har sÃ¥ fÃ¸lgende sÃ¦tning, som vi vil give et konstruktivt bevis for:
 
-\begin{theorem}[Gradientvektorfeltet giver funktionen pånær en konstant] \label{thmFreconstruct}
-Antag, at vi kender gradientvektorfeltet $\bm{\nabla}f(x,y)$ for en funktion $f(x,y)$ overalt i et åbent kurvesammenhængende område i definitionsmængden.
-Og antag, at vi kender funktionsværdien i et enkelt punkt $(x_{0}, y_{0})$. Så kan vi rekonstruere alle funktionsværdierne for $f(x,y)$ i hele området.
+\begin{theorem}[Gradientvektorfeltet giver funktionen pÃ¥nÃ¦r en konstant] \label{thmFreconstruct}
+Antag, at vi kender gradientvektorfeltet $\bm{\nabla}f(x,y)$ for en funktion $f(x,y)$ overalt i et Ã¥bent kurvesammenhÃ¦ngende omrÃ¥de i definitionsmÃ¦ngden.
+Og antag, at vi kender funktionsvÃ¦rdien i et enkelt punkt $(x_{0}, y_{0})$. SÃ¥ kan vi rekonstruere alle funktionsvÃ¦rdierne for $f(x,y)$ i hele omrÃ¥det.
 \end{theorem}
 \begin{bevis}
-Vi bruger kædereglen fra eNote 15 på den sammensatte funktion $h(u) = f(\mathbf{r}(u))$ hvor $\mathbf{r}(u)$, $u \in \, ]u_{0}, u_{1}[$,  er en vilkårlig differentiabel kurve fra $(x_{0}, y_{0}) = \mathbf{r}(u_{0})$ til $(x_{1}, y_{1}) = \mathbf{r}(u_{1})$ og får derved:
+Vi bruger kÃ¦dereglen fra eNote 15 pÃ¥ den sammensatte funktion $h(u) = f(\mathbf{r}(u))$ hvor $\mathbf{r}(u)$, $u \in \, ]u_{0}, u_{1}[$,  er en vilkÃ¥rlig differentiabel kurve fra $(x_{0}, y_{0}) = \mathbf{r}(u_{0})$ til $(x_{1}, y_{1}) = \mathbf{r}(u_{1})$ og fÃ¥r derved:
 \begin{equation}
 h'(u) = \mathbf{r}'(u) \bm{\cdot} {\bm{\nabla}}f(\mathbf{r}(u)) \quad .
 \end{equation}
-Heraf følger, at $h(u)$  er en stamfunktion til funktionen på højresiden af ovenstående ligning:
+Heraf fÃ¸lger, at $h(u)$  er en stamfunktion til funktionen pÃ¥ hÃ¸jresiden af ovenstÃ¥ende ligning:
 \begin{equation} \label{eqIntegChainregelA}
 h(u_{1}) - h(u_{0}) = \int_{u_{0}}^{u_{1}} \, \mathbf{r}'(u) \bm{\cdot} {\bm{\nabla}}f(\mathbf{r}(u))\, du  \quad .
 \end{equation}
@@ -62,33 +62,33 @@ h(u_{0}) &= f(\mathbf{r}(u_{0})) = f(x_{0}, y_{0}) \quad , \\
 h(u_{1}) &= f(\mathbf{r}(u_{1})) = f(x_{1}, y_{1}) \quad ,
 \end{aligned}
 \end{equation}
-får vi dermed
+fÃ¥r vi dermed
 \begin{equation} \label{eqIntegChainregel}
  f(x_{1}, y_{1}) = f(x_{0}, y_{0}) + \int_{u_{0}}^{u_{1}} \,  \mathbf{r}'(u) \bm{\cdot} {\bm{\nabla}}f(\mathbf{r}(u)) \, du  \quad ,
 \end{equation}
-og det var præcis det vi skulle -- rekonstruere værdien af $f(x,y)$ i punktet $(x_{1}, y_{1})$ ud fra værdien af $f(x,y)$ i punktet $(x_{0}, y_{0})$ og gradientvektorfeltet.
+og det var prÃ¦cis det vi skulle -- rekonstruere vÃ¦rdien af $f(x,y)$ i punktet $(x_{1}, y_{1})$ ud fra vÃ¦rdien af $f(x,y)$ i punktet $(x_{0}, y_{0})$ og gradientvektorfeltet.
 \end{bevis}
 
-Som en  direkte konsekvens af sætning \ref{thmFreconstruct} og beviset for den, især ligning (\ref{eqIntegChainregel}),  har vi
+Som en  direkte konsekvens af sÃ¦tning \ref{thmFreconstruct} og beviset for den, isÃ¦r ligning (\ref{eqIntegChainregel}),  har vi
 
 
 \begin{theorem}[Nul gradient giver konstant funktion] \label{thmNulGradient}
-Hvis en funktion $f(x,y)$ har gradienten $\bm{\nabla}f(x,y) =(0, 0)$ overalt i et åbent kurvesammenhængende område, så er funktionen konstant
-i hele området.
+Hvis en funktion $f(x,y)$ har gradienten $\bm{\nabla}f(x,y) =(0, 0)$ overalt i et Ã¥bent kurvesammenhÃ¦ngende omrÃ¥de, sÃ¥ er funktionen konstant
+i hele omrÃ¥det.
 \end{theorem}
 
-Bemærk, at det er ligegyldigt hvilken kurve man vælger at integrere langs for at finde funktionsværdien i endepunktet. Hvis man har mulighed for det vil man naturligvis vælge den simpleste kurve til formålet. Det gør vi i  følgende eksempel:
+BemÃ¦rk, at det er ligegyldigt hvilken kurve man vÃ¦lger at integrere langs for at finde funktionsvÃ¦rdien i endepunktet. Hvis man har mulighed for det vil man naturligvis vÃ¦lge den simpleste kurve til formÃ¥let. Det gÃ¸r vi i  fÃ¸lgende eksempel:
 
 \begin{example}[Bestemmelse af funktionen ud fra de partielle afledede]
-Vi vil bestemme funktionen $f(x,y)$ udelukkende ud fra kendskab til en given funktionsværdi $f(0,0) = 0$ samt kendskab til gradientvektorfeltet  i $(x,y)$-planen:
+Vi vil bestemme funktionen $f(x,y)$ udelukkende ud fra kendskab til en given funktionsvÃ¦rdi $f(0,0) = 0$ samt kendskab til gradientvektorfeltet  i $(x,y)$-planen:
 \begin{equation}\label{eqGradDeter}
 {\bm{\nabla}}f(x,y) = (6\,x +  10\,y^{7}\, , \,\, 21\,y^{2} + 70\,x\,y^{6} ) \quad .
 \end{equation}
-Lad $\mathbf{r}(u)$ være en parameterfremstilling for det \emph{rette linjestykke} i $(x,y)$-planen fra $(x_{0}, y_{0})= (0,0)$ til et vilkårligt andet punkt $(x_{1}, y_{1}$ i $(x,y)$-planen:
+Lad $\mathbf{r}(u)$ vÃ¦re en parameterfremstilling for det \emph{rette linjestykke} i $(x,y)$-planen fra $(x_{0}, y_{0})= (0,0)$ til et vilkÃ¥rligt andet punkt $(x_{1}, y_{1}$ i $(x,y)$-planen:
 \begin{equation}
 \mathbf{r}(u) = (0,0) + u\cdot(x_{1}, y_{1}) = (u\,x_{1}, u\,y_{1}) \quad , \quad \textrm{hvor $u \in \, ]0,1[$} \quad ,
 \end{equation}
-sådan at
+sÃ¥dan at
 \begin{equation}
 \begin{aligned}
 \mathbf{r}'(u) &= (x_{1}, y_{1}) \quad , \\ \\
@@ -96,7 +96,7 @@ sådan at
 \mathbf{r}'(u) {\bm{\cdot}} {\bm{\nabla}}f(\mathbf{r}(u)) &= 6ux_{1}^{2} + 10u^{7}x_{1}y_{1}^{7} + 21u^{2}y_{1}^{3} + 70u^{7}x_{1}y_{1}^{7}  \quad .
 \end{aligned}
 \end{equation}
-Heraf får vi så ved at benytte (\ref{eqIntegChainregel}), at
+Heraf fÃ¥r vi sÃ¥ ved at benytte (\ref{eqIntegChainregel}), at
 \begin{equation}
 \begin{aligned}
 f(x_{1}, y_{1}) &= 0 + \int_{0}^{1} \, \left( 6ux_{1}^{2} + 10u^{7}x_{1}y_{1}^{7} + 21u^{2}y_{1}^{3} + 70u^{7}x_{1}y_{1}^{7}\right) \, du \\
@@ -105,15 +105,15 @@ f(x_{1}, y_{1}) &= 0 + \int_{0}^{1} \, \left( 6ux_{1}^{2} + 10u^{7}x_{1}y_{1}^{7
 \end{aligned}
 \end{equation}
 
-Vi får derfor den rekonstruerede funktion:
+Vi fÃ¥r derfor den rekonstruerede funktion:
 \begin{equation}
 f(x,y) = 3\,x^{2} + 7\,y^{3} + 10\,x\,y^{7} \quad .
 \end{equation}
-Vi kan  for en ordens skyld gøre prøve og undersøge, om denne funktion faktisk er $0$ i $(0,0)$ (det er den) og desuden har det korrekte gradientvektorfelt, som er givet ved ligning (\ref{eqGradDeter}) (det har den).
+Vi kan  for en ordens skyld gÃ¸re prÃ¸ve og undersÃ¸ge, om denne funktion faktisk er $0$ i $(0,0)$ (det er den) og desuden har det korrekte gradientvektorfelt, som er givet ved ligning (\ref{eqGradDeter}) (det har den).
 \end{example}
 
 \begin{exercise}
-En funktion $f(x,y)$ vides at være differentiabel i hele $\mathbb{R}^{2}$ med $f(1,0) = 1$ og
+En funktion $f(x,y)$ vides at vÃ¦re differentiabel i hele $\mathbb{R}^{2}$ med $f(1,0) = 1$ og
 \begin{equation}
 {\bm{\nabla}}f(x,y) = (\cos(y), -x\,\sin(y)) \quad .
 \end{equation}
@@ -121,13 +121,13 @@ Bestem $f(x,y)$ i ethvert $(x,y)$.
 \end{exercise}
 
 \subsection{Gradientvektorfelter} \label{subsecGradVecFelt}
-Gradientvektoren for en funktion af to variable  $f(x,y)$ indeholder information om den lokale tilvækst af funktionen omkring ethvert punkt $(x_{0}, y_{0})$:
+Gradientvektoren for en funktion af to variable  $f(x,y)$ indeholder information om den lokale tilvÃ¦kst af funktionen omkring ethvert punkt $(x_{0}, y_{0})$:
 
 
-\begin{theorem}[Gradienten udpeger retningen med størst tilvækst] \label{thmGradRetning}
-Lad $f(x,y)$ betegne en funktion af to variable, der har en egentlig gradientvektor i et punkt $(x_{0}, y_{0})$, dvs. ${\bm{\nabla}}f(x_{0}, y_{0}) \neq \mathbf{0}$. Der gælder så:
+\begin{theorem}[Gradienten udpeger retningen med stÃ¸rst tilvÃ¦kst] \label{thmGradRetning}
+Lad $f(x,y)$ betegne en funktion af to variable, der har en egentlig gradientvektor i et punkt $(x_{0}, y_{0})$, dvs. ${\bm{\nabla}}f(x_{0}, y_{0}) \neq \mathbf{0}$. Der gÃ¦lder sÃ¥:
 \begin{itemize}
-\item Den retningsafledede $f'((x_{0}, y_{0}); \mathbf{e})$ af $f(x,y)$ i punktet $(x_{0}, y_{0})$ er \emph{størst} i den retning $\mathbf{e}$ som er bestemt ved gradientvektoren ${\bm{\nabla}}f(x_{0}, y_{0})$, dvs. for
+\item Den retningsafledede $f'((x_{0}, y_{0}); \mathbf{e})$ af $f(x,y)$ i punktet $(x_{0}, y_{0})$ er \emph{stÃ¸rst} i den retning $\mathbf{e}$ som er bestemt ved gradientvektoren ${\bm{\nabla}}f(x_{0}, y_{0})$, dvs. for
     \begin{equation}
     \mathbf{e} = \mathbf{e}_{\textit{max}} = \frac{{\bm{\nabla}}f(x_{0}, y_{0})}{{|\,\bm{\nabla}}f(x_{0}, y_{0})\,|}
     \end{equation}
@@ -135,7 +135,7 @@ Lad $f(x,y)$ betegne en funktion af to variable, der har en egentlig gradientvek
 \begin{equation}
     \mathbf{e} = \mathbf{e}_{\textit{min}} = -\,\frac{{\bm{\nabla}}f(x_{0}, y_{0})}{{|\,\bm{\nabla}}f(x_{0}, y_{0})\,|}
     \end{equation}
-\item Den retningsafledede er $0$ i hver af de to (niveukurve-)retninger der er vinkelrette på gradientvektoren.
+\item Den retningsafledede er $0$ i hver af de to (niveukurve-)retninger der er vinkelrette pÃ¥ gradientvektoren.
 \end{itemize}
 \end{theorem}
 \begin{bevis}
@@ -143,13 +143,13 @@ Vi lader $\mathbf{g}$ betegne den enhedsvektor, der angiver gradientens \emph{re
 \begin{equation}
 \mathbf{g} = \frac{{\bm{\nabla}}f(x_{0}, y_{0})}{|{\bm{\nabla}}f(x_{0}, y_{0})|} \quad.
 \end{equation}
-Enhver (anden) enheds-retningsvektor $\mathbf{e}$ i planen kan derefter 'opløses' efter $\mathbf{g}$ på følgende måde
+Enhver (anden) enheds-retningsvektor $\mathbf{e}$ i planen kan derefter 'oplÃ¸ses' efter $\mathbf{g}$ pÃ¥ fÃ¸lgende mÃ¥de
 \begin{equation}
 \mathbf{e} = \cos(\varphi)\cdot\mathbf{g} + \sin(\varphi)\cdot\mathbf{g}^{\bot}  \quad ,
 \end{equation}
 hvor $\varphi$ er vinklen mellem de to enhedsvektorer $\mathbf{e}$ og $\mathbf{g}$,  og hvor $\mathbf{g}^{\bot}$ betegner den ortogonale
-(tvær-)vektor til $\mathbf{g}$.
-Så er den retningsafledede af $f(x,y)$ i punktet $(x_{0}, y_{0})$:
+(tvÃ¦r-)vektor til $\mathbf{g}$.
+SÃ¥ er den retningsafledede af $f(x,y)$ i punktet $(x_{0}, y_{0})$:
 \begin{equation}
 \begin{aligned}
 f'((x_{0}, y_{0}); \mathbf{e}) &= {\bm{\nabla}}f(x_{0}, y_{0})\,{\bm{\cdot}}\,\mathbf{e} \\
@@ -160,18 +160,18 @@ f'((x_{0}, y_{0}); \mathbf{e}) &= {\bm{\nabla}}f(x_{0}, y_{0})\,{\bm{\cdot}}\,\m
 &= |{\bm{\nabla}}f(x_{0}, y_{0})|\cdot \cos(\varphi) \quad .
 \end{aligned}
 \end{equation}
-Da $\cos(\varphi)$ er størst (med værdien $1$) når $\varphi = 0$ (dvs. når $\mathbf{e}$ og $\mathbf{g}$ peger i \emph{samme} retning) og da
-$\cos(\varphi)$ er mindst (med værdien $-1$) når $\varphi = \pi$ (dvs. når $\mathbf{e}$ og $\mathbf{g}$ peger i \emph{modsatte} retninger), og da
-$\cos(\varphi)$ er $0$ når $\varphi = \pi/2$ (dvs. når $\mathbf{e}$ og $\mathbf{g}$ er ortogonale retninger), så følger de tre påstande i sætningen.
-Den sidste påstand i sætningen kender vi allerede fra eNote 15 hvor vi så, at den retningsafledede er $0$ i de retninger som står vinkelret på gradientvektoren.
+Da $\cos(\varphi)$ er stÃ¸rst (med vÃ¦rdien $1$) nÃ¥r $\varphi = 0$ (dvs. nÃ¥r $\mathbf{e}$ og $\mathbf{g}$ peger i \emph{samme} retning) og da
+$\cos(\varphi)$ er mindst (med vÃ¦rdien $-1$) nÃ¥r $\varphi = \pi$ (dvs. nÃ¥r $\mathbf{e}$ og $\mathbf{g}$ peger i \emph{modsatte} retninger), og da
+$\cos(\varphi)$ er $0$ nÃ¥r $\varphi = \pi/2$ (dvs. nÃ¥r $\mathbf{e}$ og $\mathbf{g}$ er ortogonale retninger), sÃ¥ fÃ¸lger de tre pÃ¥stande i sÃ¦tningen.
+Den sidste pÃ¥stand i sÃ¦tningen kender vi allerede fra eNote 15 hvor vi sÃ¥, at den retningsafledede er $0$ i de retninger som stÃ¥r vinkelret pÃ¥ gradientvektoren.
 \end{bevis}
 
 \begin{aha}
-Hvis vi står i  punktet $(x_{0}, y_{0})$ i $(x,y)$-planen og ønsker at flytte til nabo-punkter med \emph{højere funktionsværdier} $f(x,y)$, så er det  mest effektivt at gå i den retning, som gradienten af $f(x,y)$ udpeger i punktet, altså i retningen med enheds-retningsvektor ${\bm{\nabla}}f(x_{0}, y_{0})/|{\bm{\nabla}}f(x_{0}, y_{0})|$. \\
+Hvis vi stÃ¥r i  punktet $(x_{0}, y_{0})$ i $(x,y)$-planen og Ã¸nsker at flytte til nabo-punkter med \emph{hÃ¸jere funktionsvÃ¦rdier} $f(x,y)$, sÃ¥ er det  mest effektivt at gÃ¥ i den retning, som gradienten af $f(x,y)$ udpeger i punktet, altsÃ¥ i retningen med enheds-retningsvektor ${\bm{\nabla}}f(x_{0}, y_{0})/|{\bm{\nabla}}f(x_{0}, y_{0})|$. \\
 
-Hvis vi ønsker at flytte til nabo-punkter med \emph{lavere funktionsværdier}, så er det mest effektivt at gå i den modsatte retning af gradienten i $(x_{0}, y_{0})$. \\
+Hvis vi Ã¸nsker at flytte til nabo-punkter med \emph{lavere funktionsvÃ¦rdier}, sÃ¥ er det mest effektivt at gÃ¥ i den modsatte retning af gradienten i $(x_{0}, y_{0})$. \\
 
-Hvis vi ønsker at bevæge os til nabopunkter med \emph{samme funktionsværdi} $f(x_{0}, y_{0})$ så skal vi blot gå langs den niveaukurve $\mathcal{K}_{f(x_{0}, y_{0})}$ for $f(x,y)$ som går igennem $(x_{0}, y_{0})$ (!) -- det svarer (lokalt) til at gå i en af de to (niveaukurve-) retninger, der er bestemt ved en vektor, som er \emph{vinkelret} på gradientvektoren i punktet.
+Hvis vi Ã¸nsker at bevÃ¦ge os til nabopunkter med \emph{samme funktionsvÃ¦rdi} $f(x_{0}, y_{0})$ sÃ¥ skal vi blot gÃ¥ langs den niveaukurve $\mathcal{K}_{f(x_{0}, y_{0})}$ for $f(x,y)$ som gÃ¥r igennem $(x_{0}, y_{0})$ (!) -- det svarer (lokalt) til at gÃ¥ i en af de to (niveaukurve-) retninger, der er bestemt ved en vektor, som er \emph{vinkelret} pÃ¥ gradientvektoren i punktet.
 \end{aha}
 
 \begin{example}[Geometrisk analyse af en funktion af to variable] \label{exampMainF}
@@ -179,7 +179,7 @@ En funktion er givet ved
 \begin{equation} \label{eqMainF}
 f(x,y) = 3 +  2\,\e^{-x^{2} - 2y^{2}} \quad .
 \end{equation}
-De partielle afledede af $f(x,y)$ i $(x,y)$ er så
+De partielle afledede af $f(x,y)$ i $(x,y)$ er sÃ¥
 \begin{equation}
 \begin{aligned}
 f'_{x}(x,y) &=  -4x\e^{-x^{2} - 2y^{2}}\\
@@ -194,9 +194,9 @@ Dette vektorfelt er skitseret i figur \ref{figMainFNivGrad} sammen med niveaukur
 \begin{equation}
 \mathbf{r}(u) = \left(\frac{1}{2} + \cos(u) \, , \,\, \frac{1}{2} + \sin(u) \right) \quad , \quad \textrm{hvor} \quad u \in\, ]-\pi, \pi[ \quad.
 \end{equation}
-Bemærk, at gradientvektorfeltet overalt er vinkelret på niveaukurverne, og at de alle peger ind mod midten, hvor funktionsværdierne er størst -- se grafen for funktionen i figur \ref{figMainF}.\\
+BemÃ¦rk, at gradientvektorfeltet overalt er vinkelret pÃ¥ niveaukurverne, og at de alle peger ind mod midten, hvor funktionsvÃ¦rdierne er stÃ¸rst -- se grafen for funktionen i figur \ref{figMainF}.\\
 
-Bemærk også, at der på cirklen er præcis to punkter, hvor gradienten står vinkelret på cirklen. I de punkter har  den sammensatte højde-funktion $h(u) = f(\mathbf{r}(u))$ derfor den afledede $h'(u) = 0$. Cirklen har i de punkter samme tangent som de respektive niveaukurver igennem de to punkter. Vi kan bestemme de to punkter på cirklen ved  at bestemme de to værdier af $u$ som løser ligningen $h'(u) = {\bm{\nabla}}f(\mathbf{r}(u)) \,{\bm{\cdot}}\, \mathbf{r}'(u) = 0 $.
+BemÃ¦rk ogsÃ¥, at der pÃ¥ cirklen er prÃ¦cis to punkter, hvor gradienten stÃ¥r vinkelret pÃ¥ cirklen. I de punkter har  den sammensatte hÃ¸jde-funktion $h(u) = f(\mathbf{r}(u))$ derfor den afledede $h'(u) = 0$. Cirklen har i de punkter samme tangent som de respektive niveaukurver igennem de to punkter. Vi kan bestemme de to punkter pÃ¥ cirklen ved  at bestemme de to vÃ¦rdier af $u$ som lÃ¸ser ligningen $h'(u) = {\bm{\nabla}}f(\mathbf{r}(u)) \,{\bm{\cdot}}\, \mathbf{r}'(u) = 0 $.
 
 \end{example}
 
@@ -216,7 +216,7 @@ Bemærk også, at der på cirklen er præcis to punkter, hvor gradienten står vinkel
 
 
 \begin{exercise}
-Bestem gradientvektorfelterne for følgende funktioner og skitser vektorfelterne ved at tegne et passende antal
+Bestem gradientvektorfelterne for fÃ¸lgende funktioner og skitser vektorfelterne ved at tegne et passende antal
 af gradientvektorerne ${\bm{\nabla}}f(x_{0}, y_{0})$ med forskellige fodpunkter $(x_{0}, y_{0})$ i $(x,y)$-planen:
 \begin{equation}
 \begin{aligned}
@@ -228,33 +228,33 @@ af gradientvektorerne ${\bm{\nabla}}f(x_{0}, y_{0})$ med forskellige fodpunkter 
 \end{exercise}
 
 \begin{think}
-Hvis vi bevæger os på cirklen i $(x,y)$-planen i figur \ref{figMainFNivGrad} (for eksempel i positiv omløbsretning) og samtidig holder øje med hvilke niveau-kurver der krydses undervejs vil vi kunne afgøre, om vi bevæger os mod stigende eller faldende funktionsværdier -- dels ved at holde øje med farveskiftet og dels ved at se, om projektionen af gradientvektoren ind på bevægelsesretningen (den retningsafledede) er positiv eller negativ; hvis projektionen er positiv er vi på vej mod større funktionsværdier, hvis projektionen er negativ er vi på vej mod mindre funktionsværdier. Det samme kan naturligvis ses på grafen for funktionen, hvor det på ethvert sted på den løftede kurve er klart om vi er på vej opad eller nedad på graf-fladen.
+Hvis vi bevÃ¦ger os pÃ¥ cirklen i $(x,y)$-planen i figur \ref{figMainFNivGrad} (for eksempel i positiv omlÃ¸bsretning) og samtidig holder Ã¸je med hvilke niveau-kurver der krydses undervejs vil vi kunne afgÃ¸re, om vi bevÃ¦ger os mod stigende eller faldende funktionsvÃ¦rdier -- dels ved at holde Ã¸je med farveskiftet og dels ved at se, om projektionen af gradientvektoren ind pÃ¥ bevÃ¦gelsesretningen (den retningsafledede) er positiv eller negativ; hvis projektionen er positiv er vi pÃ¥ vej mod stÃ¸rre funktionsvÃ¦rdier, hvis projektionen er negativ er vi pÃ¥ vej mod mindre funktionsvÃ¦rdier. Det samme kan naturligvis ses pÃ¥ grafen for funktionen, hvor det pÃ¥ ethvert sted pÃ¥ den lÃ¸ftede kurve er klart om vi er pÃ¥ vej opad eller nedad pÃ¥ graf-fladen.
 \end{think}
 
-\section{Løftede kurver på graf-flader}
-Motiveret af graf-fladen med den løftede cirkel i figur \ref{figMainF} og motiveret af analysen i eksempel \ref{exampMainF} vil vi nu helt generelt definere og undersøge
-løftede kurver:
+\section{LÃ¸ftede kurver pÃ¥ graf-flader}
+Motiveret af graf-fladen med den lÃ¸ftede cirkel i figur \ref{figMainF} og motiveret af analysen i eksempel \ref{exampMainF} vil vi nu helt generelt definere og undersÃ¸ge
+lÃ¸ftede kurver:
 
-\begin{definition}[Løftede kurver]
+\begin{definition}[LÃ¸ftede kurver]
 Vi lader $f(x,y)$ betegne en funktion af to variable og lader $\mathbf{r}(u)$ betegne en differentiabel parametriseret kurve  i $(x,y)$-planen:
 \begin{equation}
 \mathbf{r}(u) = (p(u), q(u)) \quad , \quad \textrm{hvor $u \in \, ]\alpha, \beta[ \quad ,$}
 \end{equation}
 og hvor $p(u)$ og $q(u)$ betegner to differentiable funktioner af \'{e}n variabel $u$.\\
 
-Den \ind{løftede kurve}{løftede kurve} som hører til den plane kurve $\mathbf{r}(u)$ defineres til at være følgende kurve i $(x, y, z)$-rummet:
+Den \ind{lÃ¸ftede kurve}{lÃ¸ftede kurve} som hÃ¸rer til den plane kurve $\mathbf{r}(u)$ defineres til at vÃ¦re fÃ¸lgende kurve i $(x, y, z)$-rummet:
 \begin{equation}
 \widetilde{\mathcal{C}}_{\mathbf{r}}(f) \quad : \quad \widetilde{\mathbf{r}}(u) = (p(u), q(u), f(p(u), q(u))) \quad , \quad \textrm{hvor $u \in \, ]\alpha, \beta[ $} \quad .
 \end{equation}
-Den løftede kurve $\widetilde{\mathbf{r}}(u)$ er en rumlig kurve, som ligger på graf-fladen $\mathcal{G}(f)$ for funktionen $f(x,y)$.\\
+Den lÃ¸ftede kurve $\widetilde{\mathbf{r}}(u)$ er en rumlig kurve, som ligger pÃ¥ graf-fladen $\mathcal{G}(f)$ for funktionen $f(x,y)$.\\
 
-Projektionen (lodret, langs $z$-aksen) af $\widetilde{\mathbf{r}}(u)$ på $(x,y)$-planen er naturligvis den plane kurve $\mathbf{r}(u)$.
+Projektionen (lodret, langs $z$-aksen) af $\widetilde{\mathbf{r}}(u)$ pÃ¥ $(x,y)$-planen er naturligvis den plane kurve $\mathbf{r}(u)$.
 \end{definition}
 
-De løftede kurver $\widetilde{\mathbf{r}}(u)$ har tangentvektorer og tangentlinjer i rummet --  og de må jo afhænge dels af kurven  ${\mathbf{r}}(u)$ i $(x,y)$-planen og dels af funktionen $f(x,y)$. Følgende udtryk fås direkte ud fra kædereglen for funktionen $f(x,y)$ langs kurven $\mathbf{r}(u)$ -- dvs. kædereglen for den sammensatte funktion $h(u) = f(\mathbf{r}(u)) = f(p(u), q(u))$:
+De lÃ¸ftede kurver $\widetilde{\mathbf{r}}(u)$ har tangentvektorer og tangentlinjer i rummet --  og de mÃ¥ jo afhÃ¦nge dels af kurven  ${\mathbf{r}}(u)$ i $(x,y)$-planen og dels af funktionen $f(x,y)$. FÃ¸lgende udtryk fÃ¥s direkte ud fra kÃ¦dereglen for funktionen $f(x,y)$ langs kurven $\mathbf{r}(u)$ -- dvs. kÃ¦dereglen for den sammensatte funktion $h(u) = f(\mathbf{r}(u)) = f(p(u), q(u))$:
 
-\begin{theorem}[Tangenter for løftede kurver]
-Den $u$-afledede af den løftede kurve $\widetilde{\mathbf{r}}(u)$ er givet ved de $u$-afledede af de tre koordinatfunktioner:
+\begin{theorem}[Tangenter for lÃ¸ftede kurver]
+Den $u$-afledede af den lÃ¸ftede kurve $\widetilde{\mathbf{r}}(u)$ er givet ved de $u$-afledede af de tre koordinatfunktioner:
 \begin{equation}
 \begin{aligned}
 \widetilde{\mathbf{r}}\,'(u) &=  \left(p'(u), q'(u), \frac{d}{du}f(p(u), q(u)) \right) \\
@@ -262,7 +262,7 @@ Den $u$-afledede af den løftede kurve $\widetilde{\mathbf{r}}(u)$ er givet ved d
 &= \left(p'(u), q'(u), {\bm{\nabla}}f(p(u), q(u))\bm{\cdot} (p'(u), q'(u)) \right) \quad.
 \end{aligned}
 \end{equation}
-\emph{Tangenten} til den løftede kurve på graf-fladen for $f(x,y)$ er derfor bestemt ved følgende udtryk i et givet kurvepunkt $\widetilde{\mathbf{r}}(u_{0}) = (p(u_{0}), q(u_{0}), f(p(u_{0}), q(u_{0})) = (x_{0}, y_{0}, f(x_{0}, y_{0}))$:
+\emph{Tangenten} til den lÃ¸ftede kurve pÃ¥ graf-fladen for $f(x,y)$ er derfor bestemt ved fÃ¸lgende udtryk i et givet kurvepunkt $\widetilde{\mathbf{r}}(u_{0}) = (p(u_{0}), q(u_{0}), f(p(u_{0}), q(u_{0})) = (x_{0}, y_{0}, f(x_{0}, y_{0}))$:
 \begin{equation} \label{eqTangLift}
 \begin{aligned}
 \widetilde{L}_{u_{0}} \, \,  : \, \,  \widetilde{\mathbf{T}}(t) &=\widetilde{\mathbf{r}}(u_{0}) + t\cdot \widetilde{\mathbf{r}}\,'(u_{0}) \\
@@ -270,26 +270,26 @@ Den $u$-afledede af den løftede kurve $\widetilde{\mathbf{r}}(u)$ er givet ved d
 & \qquad t\cdot \left(p'(u_{0}), q'(u_{0}), {\bm{\nabla}}f(x_{0}, y_{0})\bm{\cdot} (p'(u_{0}), q'(u_{0})) \right) \, \, ,
 \end{aligned}
 \end{equation}
-hvor parameteren $t$ gennemløber hele $\mathbb{R}$.
+hvor parameteren $t$ gennemlÃ¸ber hele $\mathbb{R}$.
 \end{theorem}
 
 
-\subsection{Løftede koordinat-kurver} \label{subsecLift}
-Koordinatkurverne i $(x,y)$-planen er de   særligt simple kurver (rette linjer), som er parallelle med koordinatakserne. Igennem punktet $(x_{0}, y_{0})$ har vi følgende to:
+\subsection{LÃ¸ftede koordinat-kurver} \label{subsecLift}
+Koordinatkurverne i $(x,y)$-planen er de   sÃ¦rligt simple kurver (rette linjer), som er parallelle med koordinatakserne. Igennem punktet $(x_{0}, y_{0})$ har vi fÃ¸lgende to:
 \begin{equation}
 \begin{aligned}
 \mathbf{r}_{1}(u) &= (u, y_{0}) \quad \textrm{hvor $u \in \mathbb{R}$}\quad , \\
 \mathbf{r}_{2}(u) &= (x_{0}, u) \quad \textrm{hvor $u \in \mathbb{R}$} \quad .
 \end{aligned}
 \end{equation}
-De har derfor også særligt simple løft til graf-fladen for en given funktion $f(x,y)$:
+De har derfor ogsÃ¥ sÃ¦rligt simple lÃ¸ft til graf-fladen for en given funktion $f(x,y)$:
 \begin{equation}
 \begin{aligned}
 \widetilde{\mathbf{r}}_{1}(u) &= (u, y_{0}, f(u, y_{0})) \quad, \quad \textrm{$u \in \mathbb{R}$}\quad , \\
 \widetilde{\mathbf{r}}_{2}(u) &= (x_{0}, u, f(x_{0}, u))\quad, \quad  \textrm{$u \in \mathbb{R}$} \quad ,
 \end{aligned}
 \end{equation}
-med særligt simple $u$-afledede for ethvert $u$:
+med sÃ¦rligt simple $u$-afledede for ethvert $u$:
 \begin{equation}
 \begin{aligned}
 \widetilde{\mathbf{r}}\,'_{1}(u) &= (1, 0, f'_{x}(u, y_{0}))\quad, \quad  \textrm{$u \in \mathbb{R}$}\quad , \\
@@ -297,7 +297,7 @@ med særligt simple $u$-afledede for ethvert $u$:
 \end{aligned}
 \end{equation}
 
-Tangenterne i punktet $(x_{0}, y_{0}, f(x_{0}, y_{0}))$ til de løftede koordinatkurver er derfor også rimeligt simple:
+Tangenterne i punktet $(x_{0}, y_{0}, f(x_{0}, y_{0}))$ til de lÃ¸ftede koordinatkurver er derfor ogsÃ¥ rimeligt simple:
 \begin{equation}
 \begin{aligned}
 \widetilde{L}_{1} \quad : \quad (x_{0}, y_{0}, f(x_{0}, y_{0})) + t\cdot(1, 0, f'_{x}(x_{0}, y_{0})) \quad , \quad \textrm{$t \in \mathbb{R}$} \\
@@ -307,7 +307,7 @@ Tangenterne i punktet $(x_{0}, y_{0}, f(x_{0}, y_{0}))$ til de løftede koordinat
 
 
 \begin{exercise}
-Bestem (for ethvert punkt $(x_{0},y_{0})$ i $(x,y)$-planen) tangenterne til de løftede koordinatkurver igennem graf-fladepunktet $(x_{0}, y_{0}, f(x_{0}, y_{0}))$ for funktionerne:
+Bestem (for ethvert punkt $(x_{0},y_{0})$ i $(x,y)$-planen) tangenterne til de lÃ¸ftede koordinatkurver igennem graf-fladepunktet $(x_{0}, y_{0}, f(x_{0}, y_{0}))$ for funktionerne:
 \begin{equation}
 \begin{aligned}
   f(x,y) &= 3x + y \quad ,\\
@@ -319,15 +319,15 @@ Bestem (for ethvert punkt $(x_{0},y_{0})$ i $(x,y)$-planen) tangenterne til de l
 
 
 
-I figurerne \ref{figMainFDiverse} ses den løftede cirkel og graf-fladen for funktionen $f(x,y)$ fra eksempel \ref{exampMainF}. Den løftede kurves tangenter er indtegnet i et par udvalgte punkter.
-Bemærk, at de rumlige tangenter til den løftede kurve projicerer ned på de tilsvarende tangenter til cirklen i $(x,y)$-planen -- som det også følger af ligning (\ref{eqTangLift}).
+I figurerne \ref{figMainFDiverse} ses den lÃ¸ftede cirkel og graf-fladen for funktionen $f(x,y)$ fra eksempel \ref{exampMainF}. Den lÃ¸ftede kurves tangenter er indtegnet i et par udvalgte punkter.
+BemÃ¦rk, at de rumlige tangenter til den lÃ¸ftede kurve projicerer ned pÃ¥ de tilsvarende tangenter til cirklen i $(x,y)$-planen -- som det ogsÃ¥ fÃ¸lger af ligning (\ref{eqTangLift}).
 
 
 
 \begin{figure}[ht]
 \centerline{ \includegraphics[height=75mm]{plotTang02negB.pdf} \includegraphics[height=75mm]{plotTang02B.pdf} \includegraphics[height=75mm]{plotTang04B.pdf}}
 \begin{center}
-\caption{Grafen for $f(x,y) = 3 +  2\,\e^{-x^{2} - 2y^{2}}$ med udvalgte tangenter til en løftet cirkel.} \label{figMainFDiverse}
+\caption{Grafen for $f(x,y) = 3 +  2\,\e^{-x^{2} - 2y^{2}}$ med udvalgte tangenter til en lÃ¸ftet cirkel.} \label{figMainFDiverse}
 \end{center}
 \end{figure}
 
@@ -335,22 +335,22 @@ Bemærk, at de rumlige tangenter til den løftede kurve projicerer ned på de tilsv
 
 
 \begin{aha}
-Graf-fladens tangentplan i et givet punkt $(x_{0}, y_{0}, f(x_{0}, y_{0}))$ er jo selv graf-fladen for det approksimerende første-gradspolynomium for $f(x,y)$ med udviklingspunktet $(x_{0},y_{0})$ og er derfor uafhængig af hvilken kurve vi måtte finde på at løfte op på graf-fladen igennem punktet $(x_{0}, y_{0}, f(x_{0}, y_{0}))$! Ikke desto mindre ser det i figurerne ud til, at \emph{kurvens tangenter} ligger helt indeholdt i de respektive tangentplaner. \\
+Graf-fladens tangentplan i et givet punkt $(x_{0}, y_{0}, f(x_{0}, y_{0}))$ er jo selv graf-fladen for det approksimerende fÃ¸rste-gradspolynomium for $f(x,y)$ med udviklingspunktet $(x_{0},y_{0})$ og er derfor uafhÃ¦ngig af hvilken kurve vi mÃ¥tte finde pÃ¥ at lÃ¸fte op pÃ¥ graf-fladen igennem punktet $(x_{0}, y_{0}, f(x_{0}, y_{0}))$! Ikke desto mindre ser det i figurerne ud til, at \emph{kurvens tangenter} ligger helt indeholdt i de respektive tangentplaner. \\
 
-Den inspektion giver derfor anledning til følgende formodning, som vi vil vise rigtigheden af i sætning \ref{thmTangentTangent} nedenfor: Enhver tangent til enhver løftet kurve igennem et givet punkt $(x_{0}, y_{0}, f(x_{0}, y_{0}))$ ligger i tangentfladen for $f(x, y)$ i punktet. Og omvendt: Enhver ret linje i tangentplanen som går igennem punktet  $(x_{0}, y_{0}, f(x_{0}, y_{0}))$ er tangent til en eller anden løftet kurve som går igennem punktet.
+Den inspektion giver derfor anledning til fÃ¸lgende formodning, som vi vil vise rigtigheden af i sÃ¦tning \ref{thmTangentTangent} nedenfor: Enhver tangent til enhver lÃ¸ftet kurve igennem et givet punkt $(x_{0}, y_{0}, f(x_{0}, y_{0}))$ ligger i tangentfladen for $f(x, y)$ i punktet. Og omvendt: Enhver ret linje i tangentplanen som gÃ¥r igennem punktet  $(x_{0}, y_{0}, f(x_{0}, y_{0}))$ er tangent til en eller anden lÃ¸ftet kurve som gÃ¥r igennem punktet.
 \end{aha}
 
 \begin{figure}[ht]
 \centerline{ \includegraphics[height=105mm]{plotTangFull02Bneg.pdf}}
 \begin{center}
-\caption{Grafen for $f(x,y) = 3 +  2\,\e^{-x^{2} - 2y^{2}}$ og tangentplanen igennem et udvalgt punkt på den løftede cirkel, se figur \ref{figMainF}.} \label{figMainFTplanerA}
+\caption{Grafen for $f(x,y) = 3 +  2\,\e^{-x^{2} - 2y^{2}}$ og tangentplanen igennem et udvalgt punkt pÃ¥ den lÃ¸ftede cirkel, se figur \ref{figMainF}.} \label{figMainFTplanerA}
 \end{center}
 \end{figure}
 
 \begin{figure}[ht]
 \centerline{\includegraphics[height=105mm]{plotTangFull02B.pdf} }
 \begin{center}
-\caption{Grafen for $f(x,y) = 3 +  2\,\e^{-x^{2} - 2y^{2}}$  og tangentplanen igennem et andet udvalgt punkt på den løftede cirkel, se figur \ref{figMainF}.} \label{figMainFTplanerB}
+\caption{Grafen for $f(x,y) = 3 +  2\,\e^{-x^{2} - 2y^{2}}$  og tangentplanen igennem et andet udvalgt punkt pÃ¥ den lÃ¸ftede cirkel, se figur \ref{figMainF}.} \label{figMainFTplanerB}
 \end{center}
 \end{figure}
 
@@ -358,7 +358,7 @@ Den inspektion giver derfor anledning til følgende formodning, som vi vil vise r
 \begin{figure}[ht]
 \centerline{\includegraphics[height=105mm]{plotTangFull04B.pdf}}
 \begin{center}
-\caption{Grafen for $f(x,y) = 3 +  2\,\e^{-x^{2} - 2y^{2}}$  og tangentplanen igennem et tredje udvalgt punkt på den løftede cirkel, se figur \ref{figMainF}.} \label{figMainFTplanerC}
+\caption{Grafen for $f(x,y) = 3 +  2\,\e^{-x^{2} - 2y^{2}}$  og tangentplanen igennem et tredje udvalgt punkt pÃ¥ den lÃ¸ftede cirkel, se figur \ref{figMainF}.} \label{figMainFTplanerC}
 \end{center}
 \end{figure}
 
@@ -367,16 +367,16 @@ Den inspektion giver derfor anledning til følgende formodning, som vi vil vise r
 
 
 \begin{theorem}[Tangenterne ligger i tangentplanen] \label{thmTangentTangent}
-Lad $f(x,y)$ være en differentiabel funktion af to variable og lad $\widetilde{\mathbf{r}}(u)$ betegne en løftet kurve igennem punktet $\widetilde{\mathbf{r}}(u_{0}) = (x_{0}, y_{0}, f(x_{0}, y_{0}))$ på graf-fladen $\mathcal{G}(f)$. Så er tangenten til den løftede kurve indeholdt i tangentplanen til $\mathcal{G}(f)$ for $f(x,y)$. \\
+Lad $f(x,y)$ vÃ¦re en differentiabel funktion af to variable og lad $\widetilde{\mathbf{r}}(u)$ betegne en lÃ¸ftet kurve igennem punktet $\widetilde{\mathbf{r}}(u_{0}) = (x_{0}, y_{0}, f(x_{0}, y_{0}))$ pÃ¥ graf-fladen $\mathcal{G}(f)$. SÃ¥ er tangenten til den lÃ¸ftede kurve indeholdt i tangentplanen til $\mathcal{G}(f)$ for $f(x,y)$. \\
 
-Med andre ord: Ethvert punkt $(x,y,z)$ som ligger på tangenten $\widetilde{L}_{u_{0}}$ tilfredsstiller også tangentpla\-nens lig\-ning:
+Med andre ord: Ethvert punkt $(x,y,z)$ som ligger pÃ¥ tangenten $\widetilde{L}_{u_{0}}$ tilfredsstiller ogsÃ¥ tangentpla\-nens lig\-ning:
 \begin{equation}
 z = P_{1, (x_{0}, y_{0})}(x,y) = f(x_{0}, y_{0}) + f'_{x}(x_{0}, y_{0})\cdot (x - x_{0}) + f'_{y}(x_{0}, y_{0})\cdot (y - y_{0}) \quad.
 \end{equation}
 \end{theorem}
 
 \begin{bevis}
-Vi skal blot indse, at tangentvektoren $\widetilde{\mathbf{r}}\,'(u_{0})$ er vinkelret på en normalvektor til tangentplanen. En sådan normalvektor konstrueres i næste afsnit (se nedenfor):
+Vi skal blot indse, at tangentvektoren $\widetilde{\mathbf{r}}\,'(u_{0})$ er vinkelret pÃ¥ en normalvektor til tangentplanen. En sÃ¥dan normalvektor konstrueres i nÃ¦ste afsnit (se nedenfor):
 \begin{equation}
 \mathbf{N}_{(x_{0}, y_{0})}(f) = (- f'_{x}(x_{0}, y_{0}), -f'_{y}(x_{0}, y_{0}), 1 ) \quad ,
 \end{equation}
@@ -388,7 +388,7 @@ og da
 \quad ,
 \end{aligned}
 \end{equation}
-får vi ortogonaliteten ved at beregne skalarproduktet:
+fÃ¥r vi ortogonaliteten ved at beregne skalarproduktet:
 \begin{equation}
 \begin{aligned}
 \widetilde{\mathbf{r}}\,'(u_{0}) \, {\bm{\cdot}} \, \mathbf{N}_{(x_{0}, y_{0})}(f) & = - f'_{x}(x_{0}, y_{0})\cdot p'(u_{0})  -f'_{y}(x_{0}, y_{0})\cdot q'(u_{0}) \\ & \qquad + 1\cdot \left(f'_{x}(x_{0}, y_{0}), f'_{y}(x_{0}, y_{0})\right) \bm{\cdot} (p'(u_{0}), q'(u_{0})) \\
@@ -405,12 +405,12 @@ En plan i rummet med ligningen
 \begin{equation}
 a\cdot x + b\cdot y + c \cdot z + d = 0
 \end{equation}
-har en  normalvektor $\mathbf{N} = (a,b,c)$ som altså fås direkte fra koefficienterne  til $x$, $y$, og $z$ i ligningen. Vi kan nu skrive ligningen  for tangentplanen for graf-fladen for $f(x,y)$ i punktet $(x_{0}, y_{0}, f(x_{0}, y_{0})$ på netop den form således:
+har en  normalvektor $\mathbf{N} = (a,b,c)$ som altsÃ¥ fÃ¥s direkte fra koefficienterne  til $x$, $y$, og $z$ i ligningen. Vi kan nu skrive ligningen  for tangentplanen for graf-fladen for $f(x,y)$ i punktet $(x_{0}, y_{0}, f(x_{0}, y_{0})$ pÃ¥ netop den form sÃ¥ledes:
 \begin{equation}\label{eqTangPlan}
 \begin{aligned}
 & z = P_{1, (x_{0}, y_{0})}(x,y) \quad , \\
 & z = f(x_{0}, y_{0}) + f'_{x}(x_{0}, y_{0})\cdot (x-x_{0}) + f'_{y}(x_{0}, y_{0})\cdot (y-y_{0}) \quad , \\
-& \textrm{som er ækvivalent med:} \\
+& \textrm{som er Ã¦kvivalent med:} \\
 & - f'_{x}(x_{0}, y_{0})\cdot (x - x_{0}) - f'_{y}(x_{0}, y_{0})\cdot (y - y_{0}) + z - f(x_{0}, y_{0}) = 0 \quad ,\\
 & \textrm{og dermed:}\\
 & - f'_{x}(x_{0}, y_{0})\cdot x - f'_{y}(x_{0}, y_{0})\cdot y + z + d = 0 \quad ,
@@ -418,18 +418,18 @@ har en  normalvektor $\mathbf{N} = (a,b,c)$ som altså fås direkte fra koefficien
 \end{equation}
 hvor $ d = x_{0}\cdot f'_{x}(x_{0}, y_{0}) + y_{0} \cdot f'_{y}(x_{0}, y_{0}) - f(x_{0}, y_{0})$.\\
 
-Normalvektoren til tangentplanen aflæses direkte af den sidste ligning i (\ref{eqTangPlan}):
+Normalvektoren til tangentplanen aflÃ¦ses direkte af den sidste ligning i (\ref{eqTangPlan}):
 \begin{equation}
 \mathbf{N}_{(x_{0}, y_{0})}(f) = (- f'_{x}(x_{0}, y_{0}), -f'_{y}(x_{0}, y_{0}), 1 ) \quad .
 \end{equation}
 
 \begin{aha}
-En normalvektor til tangentplanen for graf-fladen for $f(x,y)$ kan  altså 'bygges' af de samme ingredienser som gradienten til $f(x,y)$ --  de partielle afledede. Læg dog mærke til minusserne og $1$-tallet. Og bemærk, at gradienten er en vektor i planen, normalvektoren er  en vektor i rummet.\\
+En normalvektor til tangentplanen for graf-fladen for $f(x,y)$ kan  altsÃ¥ 'bygges' af de samme ingredienser som gradienten til $f(x,y)$ --  de partielle afledede. LÃ¦g dog mÃ¦rke til minusserne og $1$-tallet. Og bemÃ¦rk, at gradienten er en vektor i planen, normalvektoren er  en vektor i rummet.\\
 \end{aha}
 
-En alternativ udledning af normalvektorens koordinater fås på følgende måde: Hvis vi kan finde to lineært uafhængige vektorer i tangentplanen, så er deres krydsprodukt en normalvektor til planen.\\
+En alternativ udledning af normalvektorens koordinater fÃ¥s pÃ¥ fÃ¸lgende mÃ¥de: Hvis vi kan finde to lineÃ¦rt uafhÃ¦ngige vektorer i tangentplanen, sÃ¥ er deres krydsprodukt en normalvektor til planen.\\
 
-Vi kender altid to \emph{lineært uafhængige vektorer i tangentplanen} igennem $(x_{0}, y_{0}, f(x_{0}, y_{0}))$, nemlig tangentvektorerne  til de løftede koordinatkurver igennem punktet, dvs.
+Vi kender altid to \emph{lineÃ¦rt uafhÃ¦ngige vektorer i tangentplanen} igennem $(x_{0}, y_{0}, f(x_{0}, y_{0}))$, nemlig tangentvektorerne  til de lÃ¸ftede koordinatkurver igennem punktet, dvs.
 \begin{equation}
 \begin{aligned}
 \widetilde{\mathbf{r}}\,'_{1}(x_{0}) &= (1, 0, f'_{x}(x_{0}, y_{0})) \quad , \\
@@ -443,13 +443,13 @@ En normalvektor til tangentplanen er derfor
 &= (- f'_{x}(x_{0}, y_{0})\, , \, \, -f'_{y}(x_{0}, y_{0}), 1 )
 \end{aligned}
 \end{equation}
-- altså præcis den samme normalvektor som fundet ovenfor. \\
+- altsÃ¥ prÃ¦cis den samme normalvektor som fundet ovenfor. \\
 
 
 De to tangentvektorer $\widetilde{\mathbf{r}}\,'_{1}(x_{0})$ og  $\widetilde{\mathbf{r}}\,'_{2}(y_{0})$ giver os ligeledes en  \ind{parameterfremstilling for tangentplanen}{parameterfremstilling for tangentplanen}:
 
 \begin{theorem}[Parameterfremstilling for tangentplaner]
-Tangentplanen igennem punktet $(x_{0}, y_{0}, f(x_{0}, y_{0}))$ på graf-fladen $\mathcal{G}(f)$ for funktionen $f(x,y)$ har parameterfremstillingen
+Tangentplanen igennem punktet $(x_{0}, y_{0}, f(x_{0}, y_{0}))$ pÃ¥ graf-fladen $\mathcal{G}(f)$ for funktionen $f(x,y)$ har parameterfremstillingen
 \begin{equation}
 \begin{aligned}
 \mathcal{T}_{(x_{0}, y_{0})}(f) \, \,&: \, \, \mathbf{T}(t_{1}, t_{2}) = (x_{0}, y_{0}, f(x_{0}, y_{0})) + t_{1}\cdot \widetilde{\mathbf{r}}'_{1}(x_{0}) + t_{2}\cdot \widetilde{\mathbf{r}}'_{2}(y_{0}) \\
@@ -459,16 +459,16 @@ Tangentplanen igennem punktet $(x_{0}, y_{0}, f(x_{0}, y_{0}))$ på graf-fladen $
 hvor $t_{1} \in \mathbb{R}$ og $t_{2} \in \mathbb{R}$.
 \end{theorem}
 
-\begin{example}[Løftede koordinatkurver]
-Enhedsnormalvektoren i retningen $\mathbf{N}$  til de tangentplaner, der er vist i figurerne \ref{figMainFTplanerA}, \ref{figMainFTplanerB}, \ref{figMainFTplanerC} er også indtegnet på de figurer.
-Desuden ses koordinatkurverne i $(x,y)$-planen samt de løftede koordinatkurver på graf-fladerne, dels for funktionen $f(x,y)$ og dels for de respektive
-approksimerende førstegradspolynomier (tangentplanerne).
+\begin{example}[LÃ¸ftede koordinatkurver]
+Enhedsnormalvektoren i retningen $\mathbf{N}$  til de tangentplaner, der er vist i figurerne \ref{figMainFTplanerA}, \ref{figMainFTplanerB}, \ref{figMainFTplanerC} er ogsÃ¥ indtegnet pÃ¥ de figurer.
+Desuden ses koordinatkurverne i $(x,y)$-planen samt de lÃ¸ftede koordinatkurver pÃ¥ graf-fladerne, dels for funktionen $f(x,y)$ og dels for de respektive
+approksimerende fÃ¸rstegradspolynomier (tangentplanerne).
 \end{example}
 
 \begin{example}[Funktioner af \'{e}n variabel]
-Enhver funktion af \'{e}n variabel kan betragtes som en funktion af to variable. Vi må forvente, at niveau-kurverne, gradientvektorfelterne, tangentplanerne, etc. er forholdsvis simple for sådanne funktioner. Vi ser på nogle eksempler, der viser det:
+Enhver funktion af \'{e}n variabel kan betragtes som en funktion af to variable. Vi mÃ¥ forvente, at niveau-kurverne, gradientvektorfelterne, tangentplanerne, etc. er forholdsvis simple for sÃ¥danne funktioner. Vi ser pÃ¥ nogle eksempler, der viser det:
 \begin{enumerate}
-\item Funktionen $f(x,y) = x^{2}$ har følgende gradientfelt, tangentplaner, og normalvektorer:
+\item Funktionen $f(x,y) = x^{2}$ har fÃ¸lgende gradientfelt, tangentplaner, og normalvektorer:
 \begin{equation}
 \begin{aligned}
 {\bm{\nabla}}f(x,y) &= (2x, 0) \quad ,\\
@@ -497,7 +497,7 @@ Enhver funktion af \'{e}n variabel kan betragtes som en funktion af to variable.
 \mathbf{N}_{(x_{0}, y_{0})}(f) &= (3\sin(3x_{0}), 0, 1) \quad .\\
 \end{aligned}
 \end{equation}
- Se figur \ref{figCos3x}. Sammenlign med figur \ref{figCosPlusSin}. Inspektion af grafen og af niveaukurverne for funktionen i \ref{figCosPlusSin} leder til den ide, at man måske ved at dreje koordinatsystemet -- og dermed skifte koordinater i planen -- også  kan beskrive den funktion som en funktion af \'{e}n variabel. Det er da også tilfældet, idet
+ Se figur \ref{figCos3x}. Sammenlign med figur \ref{figCosPlusSin}. Inspektion af grafen og af niveaukurverne for funktionen i \ref{figCosPlusSin} leder til den ide, at man mÃ¥ske ved at dreje koordinatsystemet -- og dermed skifte koordinater i planen -- ogsÃ¥  kan beskrive den funktion som en funktion af \'{e}n variabel. Det er da ogsÃ¥ tilfÃ¦ldet, idet
 den viste funktion er $f(x,y) = \cos(3x + 3y)$.
 \end{enumerate}
 \end{example}
@@ -505,7 +505,7 @@ den viste funktion er $f(x,y) = \cos(3x + 3y)$.
 \begin{figure}[ht]
 \centerline{\includegraphics[height=80mm]{plotXianden.pdf} \quad \includegraphics[height=35mm]{plotGradXianden.pdf}}
 \begin{center}
-\caption{Grafen  for $f(x,y) = x^{2}$ samt tilhørende niveaukurver og gradientvektorfelt i $(x,y)$-planen.} \label{figXianden}
+\caption{Grafen  for $f(x,y) = x^{2}$ samt tilhÃ¸rende niveaukurver og gradientvektorfelt i $(x,y)$-planen.} \label{figXianden}
 \end{center}
 \end{figure}
 
@@ -535,7 +535,7 @@ den viste funktion er $f(x,y) = \cos(3x + 3y)$.
 
 
 \begin{exercise}
-Bestem enheds-normalvektoren til tangentplanerne igennnem punktet $(x_{0}, y_{0}, f(x_{0}, y_{0})$ på graf-fladerne for enhver af følgende funktioner for ethvert punkt $(x_{0}, y_{0})$ i $(x,y)$-planen.
+Bestem enheds-normalvektoren til tangentplanerne igennnem punktet $(x_{0}, y_{0}, f(x_{0}, y_{0})$ pÃ¥ graf-fladerne for enhver af fÃ¸lgende funktioner for ethvert punkt $(x_{0}, y_{0})$ i $(x,y)$-planen.
 \begin{equation}
 \begin{aligned}
   f(x,y) &= 3x + y\\
@@ -551,19 +551,19 @@ Bestem enheds-normalvektoren til tangentplanerne igennnem punktet $(x_{0}, y_{0}
 
 \begin{summary}
 De partielle afledede af en funktion af to variable har forskellige
-geometriske iklædninger, som er særdeles nyttige at bruge ved beskrivelse
+geometriske iklÃ¦dninger, som er sÃ¦rdeles nyttige at bruge ved beskrivelse
 og analyse af funktionerne. Gradientvektorfeltet -- der jo har de partielle afledede som koordinatfunktioner -- indeholder
-(næsten) al information om funktionen. I denne eNote har vi arbejdet med følgende:
+(nÃ¦sten) al information om funktionen. I denne eNote har vi arbejdet med fÃ¸lgende:
 \begin{itemize}
 \item Gradienten udpeger i ethvert punkt den retning hvori funktionen lokalt vokser mest og den (modsatte) retning hvori funktionen aftager mest.
-\item Længden af gradienten for $f(x,y)$ i punktet $(x_{0}, y_{0}))$ er værdien af den største retningsafledede af $f(x,y)$ i punktet, og den tilsvarende negative værdi er værdien af den mindste retningsafledede i punktet.
-\item Gradientvektorfeltet for $f(x,y)$ er overalt ortogonal på niveaukurverne for $f(x,y)$.
-\item De løftede kurver på graf-fladen for en funktion har tangenter, der er helt indeholdt i tangentplanen til graf-fladen.
+\item LÃ¦ngden af gradienten for $f(x,y)$ i punktet $(x_{0}, y_{0}))$ er vÃ¦rdien af den stÃ¸rste retningsafledede af $f(x,y)$ i punktet, og den tilsvarende negative vÃ¦rdi er vÃ¦rdien af den mindste retningsafledede i punktet.
+\item Gradientvektorfeltet for $f(x,y)$ er overalt ortogonal pÃ¥ niveaukurverne for $f(x,y)$.
+\item De lÃ¸ftede kurver pÃ¥ graf-fladen for en funktion har tangenter, der er helt indeholdt i tangentplanen til graf-fladen.
 \item Tangentplanen til graf-fladen for funktionen $f(x, y)$ i et givet punkt $(x_{0}, y_{0}, f(x_{0}, y_{0}))$ har en normalvektor, der er 'bygget' op af de partielle afledede:
     \begin{equation*}
     \mathbf{N}_{(x_{0}, y_{0})}(f) = (- f'_{x}(x_{0}, y_{0})\, , \, \, -f'_{y}(x_{0}, y_{0}), 1 ) \quad .
     \end{equation*}
-\item Tangentplanen til graf-fladen for funktionen $f(x, y)$ i et givet punkt $(x_{0}, y_{0}, f(x_{0}, y_{0}))$ er repræsenteret dels ved ligningen
+\item Tangentplanen til graf-fladen for funktionen $f(x, y)$ i et givet punkt $(x_{0}, y_{0}, f(x_{0}, y_{0}))$ er reprÃ¦senteret dels ved ligningen
 \begin{equation*}
 z = P_{1, (x_{0}, y_{0})}(x,y) = f(x_{0}, y_{0}) + f'_{x}(x_{0}, y_{0})\cdot (x - x_{0}) + f'_{y}(x_{0}, y_{0})\cdot (y - y_{0})
 \end{equation*}

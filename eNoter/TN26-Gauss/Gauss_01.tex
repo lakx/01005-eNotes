@@ -1,17 +1,17 @@
 
 \input{../Strukturfiler/preambel}
-\setcounter{chapter}{25} %SÆT DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
+\setcounter{chapter}{25} %SÃ†T DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
 
 %%%%%%%%%%%%55%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% HERFRA SKAL DU SKRIVE ELLER INDSÆTTE %%%%
-%%% DEN FIL DU ØNSKER %%%%%%%%%%%%%%%%%%%%%%%
+%%% HERFRA SKAL DU SKRIVE ELLER INDSÃ†TTE %%%%
+%%% DEN FIL DU Ã˜NSKER %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % REF: TransferNote \ref{TN4-tn4} \nameref{TN4-tn4}
 %
-% \tref{NUID14-thm.koma}{sætning} \tref{NUID28-tn15}{eNote}
+% \tref{NUID14-thm.koma}{sÃ¦tning} \tref{NUID28-tn15}{eNote}
 %
 %\tref{NUID34-tn19}{eNote} Symmetriske matricer
 %\tref{NUID33-tn18}{eNote} Taylor i 2 variable
@@ -36,18 +36,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Gauss' divergenssætning} \label{tn26}
+\chapter{Gauss' divergenssÃ¦tning} \label{tn26}
 
 
 \begin{basis}
-I denne eNote vil vi bruge flowkurver for vektorfelter til at undersøge hvordan
-overfladen af et rumligt område deformeres ved flowet og dermed afspejler en tilsvarende ændring i rumfanget af det område, der begrænses af overfladen.
-Vi får derfor brug for at kende til analysen af vektorfelter fra \tref{NUID40-tn24}{eNote} samt flade- og rum-integraler fra \tref{NUID39-tn23}{eNote}.
-Vi skal se, at divergensen af vektorfeltet er den lokale 'motor' for volumenændring. Hvis vi derfor integrerer divergensen over hele det rumlige område så får vi den totale øjeblikkelige volumen-ekspansion (med fortegn).
-Hvis vektorfeltet er overalt eksploderende (med positiv divergens) så vokser rumfanget af ethvert rumligt område, hvis vektorfeltet er imploderende alle steder (med negativ divergens)  så aftager rumfanget af ethvert rumligt  område, der flyder med flowkurverne for vektorfeltet. \\
+I denne eNote vil vi bruge flowkurver for vektorfelter til at undersÃ¸ge hvordan
+overfladen af et rumligt omrÃ¥de deformeres ved flowet og dermed afspejler en tilsvarende Ã¦ndring i rumfanget af det omrÃ¥de, der begrÃ¦nses af overfladen.
+Vi fÃ¥r derfor brug for at kende til analysen af vektorfelter fra \tref{NUID40-tn24}{eNote} samt flade- og rum-integraler fra \tref{NUID39-tn23}{eNote}.
+Vi skal se, at divergensen af vektorfeltet er den lokale 'motor' for volumenÃ¦ndring. Hvis vi derfor integrerer divergensen over hele det rumlige omrÃ¥de sÃ¥ fÃ¥r vi den totale Ã¸jeblikkelige volumen-ekspansion (med fortegn).
+Hvis vektorfeltet er overalt eksploderende (med positiv divergens) sÃ¥ vokser rumfanget af ethvert rumligt omrÃ¥de, hvis vektorfeltet er imploderende alle steder (med negativ divergens)  sÃ¥ aftager rumfanget af ethvert rumligt  omrÃ¥de, der flyder med flowkurverne for vektorfeltet. \\
 
-Alternativt kan man i stedet holde øje med om overfladen af et rumligt område er lokalt ekspanderende udad eller lokalt sammentrækkende indad i forhold til det rumlige område. Det gør vi  præcis med det ortogonale fladeintegral af vektorfeltet over overfladen -- et integral som også kaldes fluxen. \\
-Dermed har vi to muligheder for at beregne ekspansion eller sammentrækning af et givet rumligt område når det flyder langs flowkurverne for vektorfeltet. Og de giver præcis det samme resultat -- det er indholdet af Gauss' divergenssætning.
+Alternativt kan man i stedet holde Ã¸je med om overfladen af et rumligt omrÃ¥de er lokalt ekspanderende udad eller lokalt sammentrÃ¦kkende indad i forhold til det rumlige omrÃ¥de. Det gÃ¸r vi  prÃ¦cis med det ortogonale fladeintegral af vektorfeltet over overfladen -- et integral som ogsÃ¥ kaldes fluxen. \\
+Dermed har vi to muligheder for at beregne ekspansion eller sammentrÃ¦kning af et givet rumligt omrÃ¥de nÃ¥r det flyder langs flowkurverne for vektorfeltet. Og de giver prÃ¦cis det samme resultat -- det er indholdet af Gauss' divergenssÃ¦tning.
 \end{basis}
 
 
@@ -61,19 +61,19 @@ Dermed har vi to muligheder for at beregne ekspansion eller sammentrækning af et
 
 \section{Det ortogonale fladeintegral, fluxen} \label{secFlux}
 
-Lad ${\bf V}(x,y,z)$ være et glat vektorfelt i rummet, se \tref{NUID40-tn24}{eNote} og lad $F_{\bf r}$ betegne en glat parametriseret flade:
+Lad ${\bf V}(x,y,z)$ vÃ¦re et glat vektorfelt i rummet, se \tref{NUID40-tn24}{eNote} og lad $F_{\bf r}$ betegne en glat parametriseret flade:
 \begin{equation}
 F_{\bf r}\quad : \quad \mathbf{r}(u,v) = (x(u,v), y(u,v), z(u,v))\quad , \quad (u,v) \in [a,b] \times [c,d] \quad .
 \end{equation}
-Ligesom ved konstruktionen af kurveintegralerne i \tref{NUID41-tn25}{eNote} har vi så i ethvert punkt på fladen \emph{to} veldefinerede vektorer, dels vektorfeltets værdi i punktet, $\mathbf{V}(\mathbf{r}(u,v))$, og dels normalvektoren ${\bf
-r}'_{u}(u,v)\times{\bf r}'_{v}(u,v)$ til fladen i punktet. Det er ved hjælp af disse to vektorer vi vil konstruere fluxen af vektorfeltet igennem fladen.\\
+Ligesom ved konstruktionen af kurveintegralerne i \tref{NUID41-tn25}{eNote} har vi sÃ¥ i ethvert punkt pÃ¥ fladen \emph{to} veldefinerede vektorer, dels vektorfeltets vÃ¦rdi i punktet, $\mathbf{V}(\mathbf{r}(u,v))$, og dels normalvektoren ${\bf
+r}'_{u}(u,v)\times{\bf r}'_{v}(u,v)$ til fladen i punktet. Det er ved hjÃ¦lp af disse to vektorer vi vil konstruere fluxen af vektorfeltet igennem fladen.\\
 
 
 Det {\em{orto\-gonale fladeintegral}} af ${\bf
-V}(x,y,z)$ langs en given parametriseret flade $F_{\bf r}$ -- også kaldet  \emph{fluxen} af ${\bf
+V}(x,y,z)$ langs en given parametriseret flade $F_{\bf r}$ -- ogsÃ¥ kaldet  \emph{fluxen} af ${\bf
 V}(x,y,z)$ igennem $F_{\bf r}$ --  er
 fladeintegralet af projektionen (med fortegn) af ${\bf V}({\bf
-r}(u,v))$ på fladens normal repræsenteret ved den standard enhedsvektor ${\mathbf{n}}_{F}$
+r}(u,v))$ pÃ¥ fladens normal reprÃ¦senteret ved den standard enhedsvektor ${\mathbf{n}}_{F}$
 der er proportional med og i samme retning som krydsproduktet
 $\mathbf{N}_{F}(u,v) = {\bf r}'_{u}(u,v)\times {\bf r}'_{v}(u,v)$.
 
@@ -88,7 +88,7 @@ er defineret ved
 \end{definition}
 
 Integranden  i det
-fladeintegral, der giver fluxen,  er altså givet ved skalarproduktet
+fladeintegral, der giver fluxen,  er altsÃ¥ givet ved skalarproduktet
 \begin{equation}
 f({\bf r}(u,v)) \, = \, {\bf V}({\bf r}(u,v)) \bm{\cdot} {\mathbf{n}}_{F}(u,v)
 \quad ,
@@ -107,9 +107,9 @@ r}'_{v}(u,v)\, = \, {\bf 0}
 \end{equation}
 Fluxen af ${\bf V}(x,y,z)$ gennem $F_{\bf r}$ i
 retningen $\,{\mathbf{n}}_{F}\,$ er derfor relativt
-simpel at udregne - vi behøver ikke først at
-finde længden af ${\bf r}'_{u}(u,v)\times{\bf
-r}'_{v}(u,v)$ (jævnfør omformningen af det
+simpel at udregne - vi behÃ¸ver ikke fÃ¸rst at
+finde lÃ¦ngden af ${\bf r}'_{u}(u,v)\times{\bf
+r}'_{v}(u,v)$ (jÃ¦vnfÃ¸r omformningen af det
 tangentielle kurveintegral):
 \begin{equation} \label{eqOrt}
 \begin{aligned}
@@ -129,17 +129,17 @@ r}'_{u}(u,v)\times{\bf r}'_{v}(u,v))\,du \, dv  \\
 \end{equation}
 
 \begin{think}
-Bemærk, at den sidste integrand i (\ref{eqOrt}) er kontinuert
-og dermed integrabel, selv om det ikke umiddelbart fremgår af
+BemÃ¦rk, at den sidste integrand i (\ref{eqOrt}) er kontinuert
+og dermed integrabel, selv om det ikke umiddelbart fremgÃ¥r af
 definitionen,  idet vektorfeltet ${\mathbf{n}}_{F}(u, v)$ ikke
-nødvendigvis er kontinuert - medmindre ${\bf r}(u, v)$ er en regulær
+nÃ¸dvendigvis er kontinuert - medmindre ${\bf r}(u, v)$ er en regulÃ¦r
 parameterfremstilling.
 \end{think}
 
 Vi har dermed et simpelt direkte udtryk for flux-beregninger:
 
 \begin{theorem}[Fluxen, det ortogonale fladeintegral] \label{thmFluxBeregn}
-Det ortogonale fladeintegral af $\mathbf{V}(x,y,z)$ over fladen $F_{\mathbf{r}}$, altså fluxen af $\mathbf{V}(x,y,z)$ igennem $F_{\mathbf{r}}$, beregnes således:
+Det ortogonale fladeintegral af $\mathbf{V}(x,y,z)$ over fladen $F_{\mathbf{r}}$, altsÃ¥ fluxen af $\mathbf{V}(x,y,z)$ igennem $F_{\mathbf{r}}$, beregnes sÃ¥ledes:
 \begin{equation}
 \begin{aligned}
 \Flux({\bf V}, F_{\bf r})\,&= \, \int_{c}^{d}\int_{a}^{b}{\bf V}({\bf r}(u,v)) \bm{\cdot} ({\bf
@@ -150,17 +150,17 @@ r}'_{u}(u,v)\times{\bf r}'_{v}(u,v))\,du \, dv  \\
 \end{theorem}
 
 \begin{aha}
-Læg mærke til, at hvis en flade $F_{\bf r}$  parametriseres med en anden parametrisering $\widehat{F}_{\,\widehat{\mathbf{r}}}$ som
-giver den modsat rettede standard enhedsnormalvektor $\mathbf{n}_{\widehat{F}}$ i ethvert punkt på fladen:
+LÃ¦g mÃ¦rke til, at hvis en flade $F_{\bf r}$  parametriseres med en anden parametrisering $\widehat{F}_{\,\widehat{\mathbf{r}}}$ som
+giver den modsat rettede standard enhedsnormalvektor $\mathbf{n}_{\widehat{F}}$ i ethvert punkt pÃ¥ fladen:
 $\mathbf{n}_{\widehat{F}}(\widehat{u}, \widehat{v}) = -\mathbf{n}_{F}(u,v)$, hvor $\mathbf{r}(u,v) = \widehat{\mathbf{r}}(\widehat{u}, \widehat{v})$,
-så skifter fluxen fortegn:
+sÃ¥ skifter fluxen fortegn:
 \begin{equation}
 \Flux(\mathbf{V}, \widehat{F}_{\,\widehat{\mathbf{r}}}) = - \Flux(\mathbf{V}, F_{\mathbf{r}}) \quad.
 \end{equation}
 \end{aha}
 
 \begin{think}
-Det ortogonale kurveintegral er kort indført som et dualt begreb i forhold til det mere naturlige tangentielle kurveintegral i \tref{NUID41-tn25}{eNote}. Det duale begreb i forhold til det ovenfor indførte naturlige ortogonale fladeintegral er det \emph{tangentielle fladeintegral} af et givet vektorfelt over en given flade.
+Det ortogonale kurveintegral er kort indfÃ¸rt som et dualt begreb i forhold til det mere naturlige tangentielle kurveintegral i \tref{NUID41-tn25}{eNote}. Det duale begreb i forhold til det ovenfor indfÃ¸rte naturlige ortogonale fladeintegral er det \emph{tangentielle fladeintegral} af et givet vektorfelt over en given flade.
 \end{think}
 
 \begin{definition}[Det tangentielle fladeintegral] \label{defTangFladeInt}
@@ -168,10 +168,10 @@ I analogi med det ortogonale fladeintegral, fluxen,  definerer vi det {\em
 tangentielle} fladeintegral, som vi vil kalde  $\Tan({\bf V},
 F_{\bf r})$ af ${\bf V}$ over fladen $F_{\bf r}$,
 ved at projicere ${\bf V}({\bf r}(u,v))$
-vinkelret ind på tangentplanen til $F_{\bf r}$
-(udspændt af ${\bf r}'_{u}(u,v)$ og ${\bf
+vinkelret ind pÃ¥ tangentplanen til $F_{\bf r}$
+(udspÃ¦ndt af ${\bf r}'_{u}(u,v)$ og ${\bf
 r}'_{v}(u,v)$ i punktet ${\bf r}(u,v)$) og
-dernæst finde fladeintegralet af længden af denne
+dernÃ¦st finde fladeintegralet af lÃ¦ngden af denne
 projektion (som funktion af $(u, v)$).
 \end{definition}
 
@@ -190,7 +190,7 @@ ${\bf V}(x,y,z) \, = \, (0, 1,0)$.}} \label{figKalot12}
 \end{figure}
 
 \begin{exercise}
-Vedrørende figurerne \ref{figKalot12} og \ref{figKalotA12}:
+VedrÃ¸rende figurerne \ref{figKalot12} og \ref{figKalotA12}:
 \begin{enumerate}
 \item Bestem det tangentielle
 fladeintegral for hver af vektorfelteterne ${\bf V}(x,y,z)\,
@@ -222,65 +222,65 @@ ${\bf V}(x,y,z) \, = \, (1, 0, -2)/\sqrt{5})$.}} \label{figKalotA12}
 
 \begin{exercise}[En solfanger-opgave] \label{exercCyl1}
 Et {solfangertag} har form som en del af en cylinder
-med ligningen $x^{2} + \left(z-\frac{1}{2}\right)^{2} \, = \, 1\, $, nemlig den del, som ligger over $(x,y)-$planen og er afgrænset af $-1 \leq y \leq 1$ (vi antager som sædvanligt, at $(x,y)-$planen er vandret og at 'over' betyder $z \geq 0$), se
+med ligningen $x^{2} + \left(z-\frac{1}{2}\right)^{2} \, = \, 1\, $, nemlig den del, som ligger over $(x,y)-$planen og er afgrÃ¦nset af $-1 \leq y \leq 1$ (vi antager som sÃ¦dvanligt, at $(x,y)-$planen er vandret og at 'over' betyder $z \geq 0$), se
 Figur \ref{figCylLift}.
 \begin{itemize}
-\item Lad os -- lidt simplificerende -- antage, at Solen stråler fra en skyfri himmel ind
-på solfangertaget til et givet 'tidspunkt'
+\item Lad os -- lidt simplificerende -- antage, at Solen strÃ¥ler fra en skyfri himmel ind
+pÃ¥ solfangertaget til et givet 'tidspunkt'
 $\,t\,$ langs det enhedsvektorfelt i rummet, som
 til tiden $t$ er pa\-ral\-lelt med vektoren
 ${\mathbf{V}}\, = \, {\mathbf{V}}(t)\, = \, (0,\,
 -\cos(t),\, -\sin(t))\, $ hvor $\, t \in [0,
 \pi]\, $.
 
-\item Solen står altså op til tiden $\,t=0\,$ og sender lige på det
-tidspunkt vandrette stråler parallelt med $\,y$-aksen i retningen
-$\, (0, -1, 0)\, $. Midt på dagen, til tiden $\, t= \frac{\pi}{2}\,$
-er strålerne lodrette og parallelle med $\,z$-aksen i retningen $\,
-(0, 0, -1)\, $. Til tiden $\, t=\pi\,$ går solen ned, men lige før
-det sker, sender den (næsten) vandrette stråler parallelt med
+\item Solen stÃ¥r altsÃ¥ op til tiden $\,t=0\,$ og sender lige pÃ¥ det
+tidspunkt vandrette strÃ¥ler parallelt med $\,y$-aksen i retningen
+$\, (0, -1, 0)\, $. Midt pÃ¥ dagen, til tiden $\, t= \frac{\pi}{2}\,$
+er strÃ¥lerne lodrette og parallelle med $\,z$-aksen i retningen $\,
+(0, 0, -1)\, $. Til tiden $\, t=\pi\,$ gÃ¥r solen ned, men lige fÃ¸r
+det sker, sender den (nÃ¦sten) vandrette strÃ¥ler parallelt med
 $\,y$-aksen i retningen $\, (0, 1, 0)\, $.
 
 \item Den energi solfangeren optager pr. arealenhed og pr. tidsenhed
-på et givet sted antages at være lig med
+pÃ¥ et givet sted antages at vÃ¦re lig med
 skalarproduktet ${\mathbf{V}}\cdot {\mathbf{n}}$ mellem
-Solstråle-vektorfeltet ${\mathbf{V}}$ og tagfladens
+SolstrÃ¥le-vektorfeltet ${\mathbf{V}}$ og tagfladens
 {\em{indadrettede}} enhedsnormalvektor
-$\,{\mathbf{n}}\,$ på stedet. Bemærk, at det
+$\,{\mathbf{n}}\,$ pÃ¥ stedet. BemÃ¦rk, at det
 indadrettede normalfelt  $\,{\mathbf{n}}\,$ ikke
-nødvendigvis er lig med $\,{\mathbf{n}}_{F}\,$, som
-jo afhænger af den valgte parametrisering af
+nÃ¸dvendigvis er lig med $\,{\mathbf{n}}_{F}\,$, som
+jo afhÃ¦nger af den valgte parametrisering af
 taget.
 \end{itemize}
 
 \begin{itemize}
-\item Spørgsmål A:
+\item SpÃ¸rgsmÃ¥l A:
 \begin{enumerate}
 \item Begrund antagelsen om, at energioptaget er
 lig med skalarproduktet ${\mathbf{V}}\cdot {\mathbf{n}}$,
-og bemærk, at energioptag selvsagt kun kan finde
+og bemÃ¦rk, at energioptag selvsagt kun kan finde
 sted hvor omtalte skalarprodukt er positiv.
 
-\item Hvad er solfangerens energioptag pr. tidsenhed på et givet tidspunkt, $t\,$, på dagen?
+\item Hvad er solfangerens energioptag pr. tidsenhed pÃ¥ et givet tidspunkt, $t\,$, pÃ¥ dagen?
 
-\item Hvad er solfangerens totale energioptag på 'en dag'?
+\item Hvad er solfangerens totale energioptag pÃ¥ 'en dag'?
 \end{enumerate}
 
 
-\item Spørgsmål B: Antag at vi drejer det cylindriske tag $\pi/2$ mod uret (eller med) omkring $z-$aksen.
+\item SpÃ¸rgsmÃ¥l B: Antag at vi drejer det cylindriske tag $\pi/2$ mod uret (eller med) omkring $z-$aksen.
 \begin{enumerate}
-\item Hvad er denne drejede solfangers energioptag pr. tidsenhed på et givet tidspunkt, $t\,$, på dagen?
-\item Hvad er den drejede solfangers totale energioptag på 'en dag'?
+\item Hvad er denne drejede solfangers energioptag pr. tidsenhed pÃ¥ et givet tidspunkt, $t\,$, pÃ¥ dagen?
+\item Hvad er den drejede solfangers totale energioptag pÃ¥ 'en dag'?
 \end{enumerate}
 
 
 
-\item Spørgsmål C:
-Antag at vi drejer det oprindelige cylindriske tag fra spørgsmål A vinklen $\theta$ mod uret (eller med) omkring $z-$aksen, hvor $\theta \in [\,0, \pi/2]$.
+\item SpÃ¸rgsmÃ¥l C:
+Antag at vi drejer det oprindelige cylindriske tag fra spÃ¸rgsmÃ¥l A vinklen $\theta$ mod uret (eller med) omkring $z-$aksen, hvor $\theta \in [\,0, \pi/2]$.
 
 \begin{enumerate}
 
-\item Hvilke(t) af disse solfangertage giver det største totale energioptag pr. dag?
+\item Hvilke(t) af disse solfangertage giver det stÃ¸rste totale energioptag pr. dag?
 \end{enumerate}
 
 
@@ -307,21 +307,21 @@ Antag at vi drejer det oprindelige cylindriske tag fra spørgsmål A vinklen $\the
 \section{Motivering af fluxen via flow-ekspansion}
 Integralkurverne, flowkurverne,  for et givet vektorfelt $\mathbf{V}(x,y,z)$ kan benyttes til at
 'skub\-be' en given flade $F_{\mathbf{r}}$ i retning af vektorfeltet og med en lokal
-fart, der er givet ved længden af vektorfeltet i ethvert punkt. Med andre ord: ethvert punkt på fladen flyder en given tid langs vektorfeltets flowkurver.
+fart, der er givet ved lÃ¦ngden af vektorfeltet i ethvert punkt. Med andre ord: ethvert punkt pÃ¥ fladen flyder en given tid langs vektorfeltets flowkurver.
 
-Derved gennemløber fladen -- fladen 'fejer' igennem -- et rumligt område $\Omega_{\mathbf{r}}(t)$ som til ethvert tidspunkt
+Derved gennemlÃ¸ber fladen -- fladen 'fejer' igennem -- et rumligt omrÃ¥de $\Omega_{\mathbf{r}}(t)$ som til ethvert tidspunkt
 $t$ (den tid vi lader fladen flyde langs vektorfeltet) har et rumfang $\Vol_{\pm}(\Omega_{\mathbf{r}}(t)) = \Vol_{\pm}(t)$.
-Det rumfang er klart $0$ for $t=0$ og derefter er det lille, hvis vektorfeltet er næsten
-tangentielt til fladen og stort hvis vektorfeltet er vinkelret på fladen i samme retning som standard-normalvektorfeltet på fladen.
+Det rumfang er klart $0$ for $t=0$ og derefter er det lille, hvis vektorfeltet er nÃ¦sten
+tangentielt til fladen og stort hvis vektorfeltet er vinkelret pÃ¥ fladen i samme retning som standard-normalvektorfeltet pÃ¥ fladen.
 Hvis vektorfeltet peger i modsat retning af standard-normalvektorfeltet vil vi regne de tilsvarende lokale bidrag til rumfanget negativt -- derfor betegnelsen $\Vol_{\pm}(\Omega_{\mathbf{r}}(t))$. \\
 
 Se figurerne \ref{figSkiveFlowA}, \ref{figSkiveFlowB}, og \ref{figParabFlow} samt eksemplerne \ref{exampFlowSkive1} og \ref{exampSkiveFlowRot} hvor det illustreres hvordan Jacobifunktionen (uden numerisk tegn) kan benyttes til beregning af de lokale bidrag til rumfanget (med fortegn).\\
 
-Der gælder følgende fundamentale sammenhæng mellem fluxen og den afledede af volumen-funktionen til tiden $t=0$:
+Der gÃ¦lder fÃ¸lgende fundamentale sammenhÃ¦ng mellem fluxen og den afledede af volumen-funktionen til tiden $t=0$:
 
 \begin{theorem}[Fluxen som volumen-differentialkvotient ved flade-flow] \label{thmFluxVolEkspand}
-Lad $\Omega_{\mathbf{r}}(t)$ betegne det rumlige område, der fejes igennem når fladestykket $F_{\bf r}$ flyder tiden $t$ med flowkurverne gennem fladens punkter. Så gælder følgende sammenhæng, hvor $\Vol_{\pm}(\Omega_{\mathbf{r}}(t))$ betegner det med fortegn beregnede
-volumen af området, dvs. i forhold til den valgte standard normalvektor $\mathbf{n}_{F}(u,v)$ for $F_{\bf r}$.
+Lad $\Omega_{\mathbf{r}}(t)$ betegne det rumlige omrÃ¥de, der fejes igennem nÃ¥r fladestykket $F_{\bf r}$ flyder tiden $t$ med flowkurverne gennem fladens punkter. SÃ¥ gÃ¦lder fÃ¸lgende sammenhÃ¦ng, hvor $\Vol_{\pm}(\Omega_{\mathbf{r}}(t))$ betegner det med fortegn beregnede
+volumen af omrÃ¥det, dvs. i forhold til den valgte standard normalvektor $\mathbf{n}_{F}(u,v)$ for $F_{\bf r}$.
 \begin{equation}
 \Flux({\bf V}, F_{\bf r}) = \frac{d}{dt}_{|_{t=0}}\Vol_{\pm}(\Omega_{\mathbf{r}}(t)) = \Vol'_{\pm}(0) \quad.
 \end{equation}
@@ -330,7 +330,7 @@ volumen af området, dvs. i forhold til den valgte standard normalvektor $\mathbf
 
 
 \begin{aha}
-Det er den egenskab (i sætning \ref{thmFluxVolEkspand}), der motiverer \emph{betegnelsen} flux: Lokalt er fluxen et mål for den (med fortegn regnede) volumen-vækst-rate, der øjeblikkeligt genereres ved flowet af fladen langs vektorfeltets integralkurver igennem fladens punkter. Fortegnet er positivt hvor vektorfeltet danner en spids vinkel med standard normalvektorfeltet $\mathbf{n}_{F}(u,v)$, og negativt hvor vinklen er stump. Se figurerne \ref{figParabFlow} og \ref{figSkiveFlowA}.
+Det er den egenskab (i sÃ¦tning \ref{thmFluxVolEkspand}), der motiverer \emph{betegnelsen} flux: Lokalt er fluxen et mÃ¥l for den (med fortegn regnede) volumen-vÃ¦kst-rate, der Ã¸jeblikkeligt genereres ved flowet af fladen langs vektorfeltets integralkurver igennem fladens punkter. Fortegnet er positivt hvor vektorfeltet danner en spids vinkel med standard normalvektorfeltet $\mathbf{n}_{F}(u,v)$, og negativt hvor vinklen er stump. Se figurerne \ref{figParabFlow} og \ref{figSkiveFlowA}.
 \end{aha}
 
 
@@ -339,11 +339,11 @@ Vi antager som vanligt, at fladen $F_{\mathbf{r}}$ er givet ved en glat paramete
 \begin{equation}
 F_{\bf r}\quad : \quad \mathbf{r}(u,v) = (x(u,v), y(u,v), z(u,v))\quad , \quad (u,v) \in [a,b] \times [c,d] \quad .
 \end{equation}
-Flowkurven for $\mathbf{V}(x,y,z)$ igennem flade-punktet $\mathbf{r}(u,v)$ vil vi kalde $\tilde{\mathbf{r}}(u,v,t)$. Det område $\Omega_{F_{\mathbf{r}}}(t)$ i rummet, som fejes ud af fladen ved at den flyder med flowkurverne indtil tiden $t$ er derfor givet ved parameterfremstillingen:
+Flowkurven for $\mathbf{V}(x,y,z)$ igennem flade-punktet $\mathbf{r}(u,v)$ vil vi kalde $\tilde{\mathbf{r}}(u,v,t)$. Det omrÃ¥de $\Omega_{F_{\mathbf{r}}}(t)$ i rummet, som fejes ud af fladen ved at den flyder med flowkurverne indtil tiden $t$ er derfor givet ved parameterfremstillingen:
 \begin{equation}
 \Omega_{F_{\mathbf{r}}}(t) \quad : \quad \tilde{\mathbf{r}}(u,v,w)\quad , \quad w \in [0, t] \,\, ,  \, \, u \in [a,b] \,\, ,  \, \, v \in [c, d] \quad .
 \end{equation}
-Til bestemmelse af rumfanget (med fortegn) af dette område benytter vi Taylor's grænseformel til første orden med udviklingspunkt $w=0$ for hver af de glatte vektorfunktioner $\tilde{\mathbf{r}}'_{u}(u,v,w)$, $\tilde{\mathbf{r}}'_{v}(u,v,w)$, og $\tilde{\mathbf{r}}'_{w}(u,v,w)$ betragtet som funktioner af $w$ for ethvert fastholdt $(u,v)$:
+Til bestemmelse af rumfanget (med fortegn) af dette omrÃ¥de benytter vi Taylor's grÃ¦nseformel til fÃ¸rste orden med udviklingspunkt $w=0$ for hver af de glatte vektorfunktioner $\tilde{\mathbf{r}}'_{u}(u,v,w)$, $\tilde{\mathbf{r}}'_{v}(u,v,w)$, og $\tilde{\mathbf{r}}'_{w}(u,v,w)$ betragtet som funktioner af $w$ for ethvert fastholdt $(u,v)$:
 \begin{equation}
 \begin{aligned}
 \tilde{\mathbf{r}}'_{u}(u,v,w) &= \tilde{\mathbf{r}}'_{u}(u,v,0) + \bm{\varepsilon}_{(u,v)}(w)
@@ -354,7 +354,7 @@ Til bestemmelse af rumfanget (med fortegn) af dette område benytter vi Taylor's 
 = \mathbf{V}(\mathbf{r}(u,v)) + \bm{\varepsilon}_{(u,v)}(w) \quad ,
 \end{aligned}
 \end{equation}
-sådan at Jacobifunktionen for volumen-beregningen --  med fortegn -- ser således ud:
+sÃ¥dan at Jacobifunktionen for volumen-beregningen --  med fortegn -- ser sÃ¥ledes ud:
 \begin{equation}
 \begin{aligned}
 \Jac_{\tilde{\mathbf{r}}}(u,v,w) &= \left(\tilde{\mathbf{r}}'_{u}(u,v,w) \times \tilde{\mathbf{r}}'_{v}(u,v,w) \right) \bm{\cdot} \tilde{\mathbf{r}}'_{w}(u,v,w) \\
@@ -362,9 +362,9 @@ sådan at Jacobifunktionen for volumen-beregningen --  med fortegn -- ser således
 &= \mathbf{N}_{F}(u,v) \bm{\cdot} \mathbf{V}(\mathbf{r}(u,v)) + \varepsilon_{(u,v)}(w) \quad .
 \end{aligned}
 \end{equation}
-Vi ser her, at når $w$ går imod $0$ opnår vi præcis det ønskede fortegn på Jacobifunktionen, som jo er det lokale bidrag (integranden) til rumfangsberegningen : Jacobifunktionen er positiv \emph{tæt ved fladen} når vektorfeltet $\mathbf{V}(\mathbf{r}(u,v))$ \emph{på fladen} peger i samme retning som standard normalvektoren $\mathbf{N}_{F}(u,v)$, og Jacobifunktionen er negativ \emph{tæt ved fladen} når vektorfeltet $\mathbf{V}(\mathbf{r}(u,v))$ \emph{på fladen} peger i modsatte retning som standard normalvektoren $\mathbf{N}_{F}(u,v)$.\\
+Vi ser her, at nÃ¥r $w$ gÃ¥r imod $0$ opnÃ¥r vi prÃ¦cis det Ã¸nskede fortegn pÃ¥ Jacobifunktionen, som jo er det lokale bidrag (integranden) til rumfangsberegningen : Jacobifunktionen er positiv \emph{tÃ¦t ved fladen} nÃ¥r vektorfeltet $\mathbf{V}(\mathbf{r}(u,v))$ \emph{pÃ¥ fladen} peger i samme retning som standard normalvektoren $\mathbf{N}_{F}(u,v)$, og Jacobifunktionen er negativ \emph{tÃ¦t ved fladen} nÃ¥r vektorfeltet $\mathbf{V}(\mathbf{r}(u,v))$ \emph{pÃ¥ fladen} peger i modsatte retning som standard normalvektoren $\mathbf{N}_{F}(u,v)$.\\
 
-Det med fortegn regnede rumfang $\Vol_{\pm}(\Omega_{\mathbf{r}}(t))$ er nu for tilstrækkeligt små flow-tider $t$  givet ved:
+Det med fortegn regnede rumfang $\Vol_{\pm}(\Omega_{\mathbf{r}}(t))$ er nu for tilstrÃ¦kkeligt smÃ¥ flow-tider $t$  givet ved:
 \begin{equation}
 \begin{aligned}
 \Vol_{\pm}(\Omega_{\mathbf{r}}(t)) &= \int_{0}^{t} \int_{c}^{d} \int_{a}^{b} \Jac_{\tilde{\mathbf{r}}}(u,v,w) \,\, du\,dv\,dw\\
@@ -373,7 +373,7 @@ Det med fortegn regnede rumfang $\Vol_{\pm}(\Omega_{\mathbf{r}}(t))$ er nu for t
 &= \int_{0}^{t} \Flux(\mathbf{V}, F_{\mathbf{r}})\,\,dw + \int_{0}^{t} \varepsilon_{(u,v)}(w)  \,\,dw \quad,
 \end{aligned}
 \end{equation}
-hvoraf vi aflæser:
+hvoraf vi aflÃ¦ser:
 \begin{equation}
 \frac{d}{dt}\Vol_{\pm}(\Omega_{\mathbf{r}}(t)) = \Flux(\mathbf{V}, F_{\mathbf{r}}) + \varepsilon(t)
 \end{equation}
@@ -392,7 +392,7 @@ og dermed
 
 
 \begin{example}[Flow af cirkelskive ved parallelforskydning] \label{exampFlowSkive1}
-Vi ser på en cirkelskive $F_{\bf r}$ i $(x,y)$-planen. Skiven har  radius $1$ og centrum i $(0,0,0)$:
+Vi ser pÃ¥ en cirkelskive $F_{\bf r}$ i $(x,y)$-planen. Skiven har  radius $1$ og centrum i $(0,0,0)$:
 \begin{equation}
 F_{\bf r} \quad : \quad {\bf r}(u,v) = (u\cdot \cos(v), u\cdot \sin(v), 0) \quad , \quad  (u,v) \in [0,1]\times [-\pi, \pi] \quad .
 \end{equation}
@@ -413,7 +413,7 @@ Lad nu $\mathbf{V}(x,y,z)$ betegne vektorfeltet:
 \mathbf{V}(x,y,z) = (\alpha, \beta, \gamma) \quad ,
 \end{equation}
 hvor $\alpha$, $\beta$, og $\gamma$ er konstanter.
-Så er i dette tilfælde:
+SÃ¥ er i dette tilfÃ¦lde:
 \begin{equation}
 \begin{aligned}
 \Flux(\mathbf{V}, F_{\bf r}) &= \int_{-\pi}^{\pi} \int_{0}^{1} \mathbf{V}(\mathbf{r}(u,v)) \bm{\cdot} \mathbf{N}_{F}(u,v) \, \, du \, dv \\
@@ -422,10 +422,10 @@ Så er i dette tilfælde:
 &= \gamma \cdot \pi \quad ,
 \end{aligned}
 \end{equation}
-Bemærk, at fluxen er negativ for $\gamma <0$ og positiv for $\gamma>0$, altså i afhængighed af, om vektorfeltet peger i cirkelskivens standard normalvektor-retning eller i den modsatte retning.\\
+BemÃ¦rk, at fluxen er negativ for $\gamma <0$ og positiv for $\gamma>0$, altsÃ¥ i afhÃ¦ngighed af, om vektorfeltet peger i cirkelskivens standard normalvektor-retning eller i den modsatte retning.\\
 
-Vi vil nu tilsvarende bestemme rumfanget af det rumlige område, som flowet af cirkelskiven 'fejer igennem' ved at følge integralkurverne, og dermed illustrere indholdet i -- og beviset for --
-sætning \ref{thmFluxVolEkspand}: \\
+Vi vil nu tilsvarende bestemme rumfanget af det rumlige omrÃ¥de, som flowet af cirkelskiven 'fejer igennem' ved at fÃ¸lge integralkurverne, og dermed illustrere indholdet i -- og beviset for --
+sÃ¦tning \ref{thmFluxVolEkspand}: \\
 
 Flowkurven $\overline{\mathbf{r}}(u,v,t)$ for $\mathbf{V}(x,y,z)$ igennem punktet $\mathbf{r}(u,v)$ er en ret linje igennem punktet, nemlig den der har den konstante tangentvektor $(\alpha, \beta, \gamma)$:
 \begin{equation}
@@ -439,13 +439,13 @@ Det ses, at
 \begin{equation}
 \overline{\mathbf{r}}'_{t}(u,v,t) =  (\alpha, \beta, \gamma) = \mathbf{V}(\overline{\mathbf{r}}(u,v,t)) \quad ,
 \end{equation}
-sådan at integralkurve-betingelsen netop er opfyldt.\\
+sÃ¥dan at integralkurve-betingelsen netop er opfyldt.\\
 
-Det rumlige område $\Omega_{F_{\mathbf{r}}}(t)$, som cirkelskiven danner ved at flyde med flowkurverne for $\mathbf{V}(x,y,z)$ indtil tiden $t$, er dermed givet ved en parameterfremstilling, som direkte aflæses af flow-kurve parameterfremstillingen igennem punkterne på fladen:
+Det rumlige omrÃ¥de $\Omega_{F_{\mathbf{r}}}(t)$, som cirkelskiven danner ved at flyde med flowkurverne for $\mathbf{V}(x,y,z)$ indtil tiden $t$, er dermed givet ved en parameterfremstilling, som direkte aflÃ¦ses af flow-kurve parameterfremstillingen igennem punkterne pÃ¥ fladen:
 \begin{equation}
 \Omega_{F_{\mathbf{r}}}(t)\quad : \quad \overline{\mathbf{r}} =  \overline{\mathbf{r}}(u,v,w) \quad , \quad w \in [0, t] \quad , \quad (u,v) \in  [0,1]\times [-\pi, \pi] \quad .
 \end{equation}
-Rumfanget af dette område kan findes ved hjælp af standardmetoden via Jacobifunktionen, som vi her benytter \emph{med fortegn} for at bestemme rumfanget {\emph{med  fortegn}} i forhold til normalvektoren:
+Rumfanget af dette omrÃ¥de kan findes ved hjÃ¦lp af standardmetoden via Jacobifunktionen, som vi her benytter \emph{med fortegn} for at bestemme rumfanget {\emph{med  fortegn}} i forhold til normalvektoren:
 \begin{equation}
 \begin{aligned}
 \Jac_{\overline{\mathbf{r}}}(u,v,w) &= (\overline{\mathbf{r}}_{u}(u,v,w) \times \overline{\mathbf{r}}_{v}(u,v,w)) \bm{\cdot} \overline{\mathbf{r}}_{w}(u,v,w)  \\
@@ -455,19 +455,19 @@ Rumfanget af dette område kan findes ved hjælp af standardmetoden via Jacobifunk
 &= u \cdot \gamma    \quad ,
 \end{aligned}
 \end{equation}
-hvor vi har benyttet, at der i dette simple konkrete tilfælde, hvor vektorfeltet paralleltransporterer cirkelskiven i vektorfeltets retning gælder: $(\overline{\mathbf{r}}_{u}(u,v,w) \times \overline{\mathbf{r}}_{v}(u,v,w))= \mathbf{N}_{F}(u,v)$ som er uafhængig af $w$.
+hvor vi har benyttet, at der i dette simple konkrete tilfÃ¦lde, hvor vektorfeltet paralleltransporterer cirkelskiven i vektorfeltets retning gÃ¦lder: $(\overline{\mathbf{r}}_{u}(u,v,w) \times \overline{\mathbf{r}}_{v}(u,v,w))= \mathbf{N}_{F}(u,v)$ som er uafhÃ¦ngig af $w$.
 Rumfanget {\emph{med fortegn}} af $\Omega_{F_{\mathbf{r}}}(t)$ i forhold til cirkelskivens normalvektorfelt $(0,0,1)$ er derfor
 \begin{equation}
 \Vol_{\pm}(t) = \int_{0}^{t}\int_{-\pi}^{\pi}\int_{0}^{1} u \cdot \gamma \, du\, dv\, dw  =   t \cdot \gamma \cdot \pi \quad.
 \end{equation}
-Heraf får vi
+Heraf fÃ¥r vi
 \begin{equation}
 \Vol_{\pm}'(0) = \gamma \cdot \pi \quad ,
 \end{equation}
-altså  den samme værdi som den ovenfor fundne $\Flux(\mathbf{V}, F_{\bf r})$. Vi har dermed verificeret sætningen \ref{thmFluxVolEkspand}.\\
+altsÃ¥  den samme vÃ¦rdi som den ovenfor fundne $\Flux(\mathbf{V}, F_{\bf r})$. Vi har dermed verificeret sÃ¦tningen \ref{thmFluxVolEkspand}.\\
 
-Hvis vektorfeltet $(\alpha, \beta, \gamma)$ er i samme retning som standard normalen  til fladen (dvs. hvis  $\gamma >0$), så er både
-fluxen, rumfanget  $\Vol_{\pm}(t)$, og volumen-differentialkvotienten $\Vol_{\pm}'(0)$ positiv; hvis vektorfeltet $(\alpha, \beta, \gamma)$ er i modsatte retning i forhold til standard normalen (dvs. hvis  $\gamma <0$), så er både
+Hvis vektorfeltet $(\alpha, \beta, \gamma)$ er i samme retning som standard normalen  til fladen (dvs. hvis  $\gamma >0$), sÃ¥ er bÃ¥de
+fluxen, rumfanget  $\Vol_{\pm}(t)$, og volumen-differentialkvotienten $\Vol_{\pm}'(0)$ positiv; hvis vektorfeltet $(\alpha, \beta, \gamma)$ er i modsatte retning i forhold til standard normalen (dvs. hvis  $\gamma <0$), sÃ¥ er bÃ¥de
 fluxen, rumfanget (med fortegn) $\Vol_{\pm}(t)$, og  volumen-differentialkvotienten $\Vol_{\pm}'(0)$ negativ.
 \end{example}
 
@@ -475,7 +475,7 @@ fluxen, rumfanget (med fortegn) $\Vol_{\pm}(t)$, og  volumen-differentialkvotien
 \begin{figure}[ht]
 \centerline{\includegraphics[width=70mm]{FIGS/plotSkiveFlowA1}\includegraphics[width=70mm]{FIGS/plotSkiveFlowA3}\includegraphics[width=70mm]{FIGS/plotSkiveFlowA2}}
 \begin{center}
-\caption{\small{Et simpelt, konstant vektorfelt, og tilsvarende kort-tids flow af en cirkelskive. I forhold til cirkelskivenormalen $(0,0,1)$ er fluxen og volumen-tilvæksten positiv. }} \label{figSkiveFlowA}
+\caption{\small{Et simpelt, konstant vektorfelt, og tilsvarende kort-tids flow af en cirkelskive. I forhold til cirkelskivenormalen $(0,0,1)$ er fluxen og volumen-tilvÃ¦ksten positiv. }} \label{figSkiveFlowA}
 \end{center}
 \end{figure}
 
@@ -483,7 +483,7 @@ fluxen, rumfanget (med fortegn) $\Vol_{\pm}(t)$, og  volumen-differentialkvotien
 \begin{figure}[ht]
 \centerline{\includegraphics[width=70mm]{FIGS/plotSkiveFlowB1}\includegraphics[width=70mm]{FIGS/plotSkiveFlowB3}\includegraphics[width=70mm]{FIGS/plotSkiveFlowB2}}
 \begin{center}
-\caption{\small{Et simpelt, konstant vektorfelt, og tilsvarende kort-tids flow af en cirkelskive. Fluxen og volumen-tilvæksten er $0$. }} \label{figSkiveFlowB}
+\caption{\small{Et simpelt, konstant vektorfelt, og tilsvarende kort-tids flow af en cirkelskive. Fluxen og volumen-tilvÃ¦ksten er $0$. }} \label{figSkiveFlowB}
 \end{center}
 \end{figure}
 
@@ -491,15 +491,15 @@ fluxen, rumfanget (med fortegn) $\Vol_{\pm}(t)$, og  volumen-differentialkvotien
 
 
 \begin{example}[Flow af cirkelskive ved rotation] \label{exampSkiveFlowRot}
-Vi ser som i eksempel \ref{exampFlowSkive1} på cirkelskiven $F_{\bf r}$ i $(x,y)$-planen. Skiven har  radius $1$ og centrum i $(0,0,0)$:
+Vi ser som i eksempel \ref{exampFlowSkive1} pÃ¥ cirkelskiven $F_{\bf r}$ i $(x,y)$-planen. Skiven har  radius $1$ og centrum i $(0,0,0)$:
 \begin{equation}
 F_{\bf r} \quad : \quad {\bf r}(u,v) = (u\cdot \cos(v), u\cdot \sin(v), 0) \quad , \quad  (u,v) \in [0,1]\times [-\pi, \pi] \quad .
 \end{equation}
-Vi vil her lade cirkelskiven flyde med flowkurverne for følgende  roterende vektorfelt:
+Vi vil her lade cirkelskiven flyde med flowkurverne for fÃ¸lgende  roterende vektorfelt:
 \begin{equation}
 \mathbf{V}(x,y,z) = (-z,0, x) \quad .
 \end{equation}
-Flowkurven $\widetilde{\mathbf{r}}(u,v,t) = (x(t), y(t), z(t))$ for dette vektorfelt igennem et cirkelskive-punkt $(x_{0}, y_{0}, z_{0}) = \mathbf{r}(u,v)$ er givet som løsning til første-ordens differentialligningssystemet:
+Flowkurven $\widetilde{\mathbf{r}}(u,v,t) = (x(t), y(t), z(t))$ for dette vektorfelt igennem et cirkelskive-punkt $(x_{0}, y_{0}, z_{0}) = \mathbf{r}(u,v)$ er givet som lÃ¸sning til fÃ¸rste-ordens differentialligningssystemet:
 \begin{equation}
 \left[
   \begin{array}{c}
@@ -516,7 +516,7 @@ Flowkurven $\widetilde{\mathbf{r}}(u,v,t) = (x(t), y(t), z(t))$ for dette vektor
                                                   \right]
 \end{equation}
 med begyndelsesbetingelsen $(x(0), y(0), z(0) = (x_{0}, y_{0}, z_{0}) = \mathbf{r}(u,v)$.
-Det koblede differentialligningssystem har de generelle løsninger, se løsningsmetoderne i \tref{NUID13-tn12}{eNote}:
+Det koblede differentialligningssystem har de generelle lÃ¸sninger, se lÃ¸sningsmetoderne i \tref{NUID13-tn12}{eNote}:
 \begin{equation}
 \left[
   \begin{array}{c}
@@ -533,8 +533,8 @@ Det koblede differentialligningssystem har de generelle løsninger, se løsningsme
   \end{array}
 \right]
 \end{equation}
-hvor $c_{1}$, $c_{2}$, og $c_{3}$ er arbitrære konstanter.
-De specielle løsninger, flowkurverne  $ \widetilde{\mathbf{r}}(u,v,t)$ igennem cirkelskivepunkterne $(x_{0}, y_{0}, z_{0}) = \mathbf{r}(u,v) = (u\cdot \cos(v), u\cdot \sin(v), 0)$ er så givet ved følgende parametriserede cirkler i rummet:
+hvor $c_{1}$, $c_{2}$, og $c_{3}$ er arbitrÃ¦re konstanter.
+De specielle lÃ¸sninger, flowkurverne  $ \widetilde{\mathbf{r}}(u,v,t)$ igennem cirkelskivepunkterne $(x_{0}, y_{0}, z_{0}) = \mathbf{r}(u,v) = (u\cdot \cos(v), u\cdot \sin(v), 0)$ er sÃ¥ givet ved fÃ¸lgende parametriserede cirkler i rummet:
 \begin{equation}
 (\widetilde{\mathbf{r}}(u,v,t))^{\top} = \left[
                                            \begin{array}{c}
@@ -550,7 +550,7 @@ De specielle løsninger, flowkurverne  $ \widetilde{\mathbf{r}}(u,v,t)$ igennem c
                                            \end{array}
                                          \right] \quad .
 \end{equation}
- Det udfejede rumlige område  $\Omega_{F_{\mathbf{r}}}(t)$ er dermed allerede parametriseret:
+ Det udfejede rumlige omrÃ¥de  $\Omega_{F_{\mathbf{r}}}(t)$ er dermed allerede parametriseret:
  \begin{equation}
  \Omega_{F_{\mathbf{r}}}(t) \quad : \quad \widetilde{\mathbf{r}}(u,v,w) =
  (u\cdot \cos(v)\cdot \cos(w), \, u\cdot \sin(v), \,  u\cdot \cos(v)\cdot \sin(w) ) \quad ,
@@ -558,7 +558,7 @@ De specielle løsninger, flowkurverne  $ \widetilde{\mathbf{r}}(u,v,t)$ igennem c
 hvor $w \in [0, t]$, $u \in [0, 1]$, og $v \in [-\pi, \pi]$. Se figur \ref{figSkiveFlowRot}. \\
 
 
-Fluxen af vektorfeltet igennem cirkelskiven forventes at være $0$ fordi det område, som cirkelskiven fejer igennem ved rotationen har \emph{rumfang} $0$ når rumfanget regnes med fortegn: Den ene halvdel af området ses jo at ligge \emph{over cirkelskiven} (i retning af $(0,0,1)$) og den anden halvdel ligger \emph{under cirkelskiven} (i retning af $(0,0,-1)$); de to halvdele af det udfejede område har rumfang med  modsatte fortegn og de ophæver derfor hinanden. Vi beregner fluxen af vektorfeltet igennem cirkelskiven:
+Fluxen af vektorfeltet igennem cirkelskiven forventes at vÃ¦re $0$ fordi det omrÃ¥de, som cirkelskiven fejer igennem ved rotationen har \emph{rumfang} $0$ nÃ¥r rumfanget regnes med fortegn: Den ene halvdel af omrÃ¥det ses jo at ligge \emph{over cirkelskiven} (i retning af $(0,0,1)$) og den anden halvdel ligger \emph{under cirkelskiven} (i retning af $(0,0,-1)$); de to halvdele af det udfejede omrÃ¥de har rumfang med  modsatte fortegn og de ophÃ¦ver derfor hinanden. Vi beregner fluxen af vektorfeltet igennem cirkelskiven:
 \begin{equation}
 \begin{aligned}
 \Flux(\mathbf{V}, F_{\mathbf{r}}) &= \int_{-\pi}^{\pi} \int_{0}^{1} \mathbf{V}(\mathbf{r}(u,v)) \bm{\cdot} \mathbf{N}_{F}(u,v) \, \, du \, dv \\
@@ -571,11 +571,11 @@ Fluxen af vektorfeltet igennem cirkelskiven forventes at være $0$ fordi det områ
 \end{aligned}
 \end{equation}
 
-Med henblik på igen at illustrere den generelle rumfangsberegning (med fortegn) og igen verificere sætning \ref{thmFluxVolEkspand} med konkrete udregninger, vil vi vise, at det med fortegn beregnede rumfang af området $\Omega_{F_{\mathbf{r}}}(t)$  som fejes ud af cirkelskiven ved flowet virkelig er $0$. Den med fortegn beregnede Jacobifunktion er bestemt ved:
+Med henblik pÃ¥ igen at illustrere den generelle rumfangsberegning (med fortegn) og igen verificere sÃ¦tning \ref{thmFluxVolEkspand} med konkrete udregninger, vil vi vise, at det med fortegn beregnede rumfang af omrÃ¥det $\Omega_{F_{\mathbf{r}}}(t)$  som fejes ud af cirkelskiven ved flowet virkelig er $0$. Den med fortegn beregnede Jacobifunktion er bestemt ved:
 \begin{equation}
 \Jac_{\widetilde{\mathbf{r}}}(u,v,w) = u^{2}\cdot \cos(v) \quad .
 \end{equation}
-sådan at det fortegns-vægtede volumen af $\Omega_{F_{\mathbf{r}}}(t)$ er:
+sÃ¥dan at det fortegns-vÃ¦gtede volumen af $\Omega_{F_{\mathbf{r}}}(t)$ er:
 \begin{equation}
 \begin{aligned}
 \Vol_{\pm}(\Omega_{F_{\mathbf{r}}}(t)) &= \int_{0}^{t} \int_{-\pi}^{\pi} \int_{0}^{1} u^{2}\cdot \cos(v) \, \, du \, dv \, dw \\
@@ -584,7 +584,7 @@ sådan at det fortegns-vægtede volumen af $\Omega_{F_{\mathbf{r}}}(t)$ er:
 &= 0 \quad .
 \end{aligned}
 \end{equation}
-Bemærk, at det ordinære rumfang $\Vol(\Omega_{F_{\mathbf{r}}}(t))$   af $\Omega_{F_{\mathbf{r}}}(t)$ selvfølgelig ikke er $0$, men derimod:
+BemÃ¦rk, at det ordinÃ¦re rumfang $\Vol(\Omega_{F_{\mathbf{r}}}(t))$   af $\Omega_{F_{\mathbf{r}}}(t)$ selvfÃ¸lgelig ikke er $0$, men derimod:
 \begin{equation}
 \begin{aligned}
 \Vol(\Omega_{F_{\mathbf{r}}}(t)) &= \int_{0}^{t} \int_{-\pi}^{\pi} \int_{0}^{1} u^{2}\cdot |\cos(v)| \, \, du \, dv \, dw \\
@@ -598,7 +598,7 @@ Bemærk, at det ordinære rumfang $\Vol(\Omega_{F_{\mathbf{r}}}(t))$   af $\Omega_
 \begin{figure}[ht]
 \centerline{\includegraphics[width=70mm]{FIGS/plotSkiveFlowRot1}\includegraphics[width=70mm]{FIGS/plotSkiveFlowRot3}\includegraphics[width=70mm]{FIGS/plotSkiveFlowRot2}}
 \begin{center}
-\caption{\small{Et roterende vektorfelt og tilsvarende kort-tids flow af en cirkelskive. Fluxen og volumen-tilvæksten er $0$. }} \label{figSkiveFlowRot}
+\caption{\small{Et roterende vektorfelt og tilsvarende kort-tids flow af en cirkelskive. Fluxen og volumen-tilvÃ¦ksten er $0$. }} \label{figSkiveFlowRot}
 \end{center}
 \end{figure}
 
@@ -625,7 +625,7 @@ Til bestemmelse af fluxen $\Flux(\mathbf{V}, F_{\mathbf{r}})$ af $\mathbf{V}(x,y
 \begin{equation}
 \mathbf{V}(\mathbf{r}(u,v)) = (-2\cdot u \cdot \sin(v), 2\cdot u \cdot \cos(v), 1) \quad .
 \end{equation}
-sådan at:
+sÃ¥dan at:
 \begin{equation}
 \begin{aligned}
 \Flux(\mathbf{V}, F_{\bf r}) &= \int_{-\pi}^{\pi} \int_{0}^{1/2} \mathbf{V}(\mathbf{r}(u,v)) \bm{\cdot} ( {\bf r}_{u}(u,v) \times {\bf r}_{v}(u,v)) \, \, du \, dv \\
@@ -639,48 +639,48 @@ sådan at:
 \begin{figure}[ht]
 \centerline{\includegraphics[width=70mm]{FIGS/plotParabFlowA1}\includegraphics[width=70mm]{FIGS/plotParabFlowA3}\includegraphics[width=70mm]{FIGS/plotParabFlowA2}}
 \begin{center}
-\caption{\small{Et roterende vektorfelt, og tilsvarende kort-tids flow af en elliptisk paraboloide. I forhold til cirkelskivenormalen er fluxen og volumen-tilvæksten positiv. Se eksempel \ref{exampParabFlux}.}} \label{figParabFlow}
+\caption{\small{Et roterende vektorfelt, og tilsvarende kort-tids flow af en elliptisk paraboloide. I forhold til cirkelskivenormalen er fluxen og volumen-tilvÃ¦ksten positiv. Se eksempel \ref{exampParabFlux}.}} \label{figParabFlow}
 \end{center}
 \end{figure}
 
 
-Som vi skal se i næste afsnit er den totale flux af et givet vektorfelt gennem \emph{overfladen} af et givet rumligt område $\Omega_{\mathbf{r}}$ særlig interessant. Overfladen kan gerne være sammensat af endeligt mange glatte fladestykker, som f.eks. overfladen af et polyeder. Den eneste konvention vi skal holde os for øje er, at det altid er den \emph{udadrettede normal} (i forhold til det rumlige område) vi skal benytte overalt på overfladen, når vi beregner fluxen.
+Som vi skal se i nÃ¦ste afsnit er den totale flux af et givet vektorfelt gennem \emph{overfladen} af et givet rumligt omrÃ¥de $\Omega_{\mathbf{r}}$ sÃ¦rlig interessant. Overfladen kan gerne vÃ¦re sammensat af endeligt mange glatte fladestykker, som f.eks. overfladen af et polyeder. Den eneste konvention vi skal holde os for Ã¸je er, at det altid er den \emph{udadrettede normal} (i forhold til det rumlige omrÃ¥de) vi skal benytte overalt pÃ¥ overfladen, nÃ¥r vi beregner fluxen.
 
 
 \begin{example}[Flux gennem overfladen af en massiv cylinder] \label{exampCylFlow}
-Vi vil illustrere fluxberegningen gennem en total-overflade af et rumligt område ved at beregne fluxen af det simple vektorfelt
+Vi vil illustrere fluxberegningen gennem en total-overflade af et rumligt omrÃ¥de ved at beregne fluxen af det simple vektorfelt
 \begin{equation}
 \mathbf{V}(x,y,z)= (f(x), 0,0) \quad , \quad (x,y,z) \in \mathbb{R}^{3} \quad,
 \end{equation}
 hvor $f(x)$ er en glat funktion af $x$.
-Vi vælger også et meget simpelt område $\Omega$ i rummet, nemlig den massive cylinder med radius $1/2$ og $x$-aksen som symmetriakse samt tilhørende $x$-interval $x \in [0, 1]$. Se figur \ref{figCylFlow}. \\
+Vi vÃ¦lger ogsÃ¥ et meget simpelt omrÃ¥de $\Omega$ i rummet, nemlig den massive cylinder med radius $1/2$ og $x$-aksen som symmetriakse samt tilhÃ¸rende $x$-interval $x \in [0, 1]$. Se figur \ref{figCylFlow}. \\
 
- Overfladen, randen, af cylinderen, som vi vil betegne med $F = \partial \Omega$, består af $3$ dele: Dels den cylindriske krumme overflade og dels
-de to ende-cirkelskiver. Da vektorfeltet er parallelt med den cylindriske krumme del af overfladen vil der ikke være noget fluxbidrag derfra (!). Det vil sige, de eneste bidrag til fluxen gennem total-overfladen af den massive cylinder stammer fra de to endecirkelskiver.\\
+ Overfladen, randen, af cylinderen, som vi vil betegne med $F = \partial \Omega$, bestÃ¥r af $3$ dele: Dels den cylindriske krumme overflade og dels
+de to ende-cirkelskiver. Da vektorfeltet er parallelt med den cylindriske krumme del af overfladen vil der ikke vÃ¦re noget fluxbidrag derfra (!). Det vil sige, de eneste bidrag til fluxen gennem total-overfladen af den massive cylinder stammer fra de to endecirkelskiver.\\
 
-Da vektorfeltet er vinkelret på begge disse skiver er fluxen gennem cirkel-endeskiven ved $x=0$ givet ved: $-f(0)\cdot \frac{\pi}{4}$, idet den udadrettede enhedsnormal for den cirkelskive er $(-1,0,0)$ og fluxen gennem cirkel-endeskiven ved $x=1$ er tilsvarende givet ved: $f(1)\cdot \frac{\pi}{4}$, idet enhedsnormalen der er $(1,0,0)$. \\
+Da vektorfeltet er vinkelret pÃ¥ begge disse skiver er fluxen gennem cirkel-endeskiven ved $x=0$ givet ved: $-f(0)\cdot \frac{\pi}{4}$, idet den udadrettede enhedsnormal for den cirkelskive er $(-1,0,0)$ og fluxen gennem cirkel-endeskiven ved $x=1$ er tilsvarende givet ved: $f(1)\cdot \frac{\pi}{4}$, idet enhedsnormalen der er $(1,0,0)$. \\
 
 Den totale flux af $\mathbf{V}(x,y,z)$ ud gennem overfladen $\partial \Omega$ af den massive cylinder er derfor:
 \begin{equation}
 \Flux(\mathbf{V}, \partial \Omega) = (f(1) - f(0)) \cdot \frac{\pi}{4} \quad .
 \end{equation}
-Det vil sige: Hvis $f(x)$ (og dermed vektorfeltet) er større ved $x=0$  en ved $x=1$, så er den totale flux \emph{ud} gennem cylinderoverfladen negativ.
+Det vil sige: Hvis $f(x)$ (og dermed vektorfeltet) er stÃ¸rre ved $x=0$  en ved $x=1$, sÃ¥ er den totale flux \emph{ud} gennem cylinderoverfladen negativ.
 \end{example}
 
 \begin{figure}[ht]
 \centerline{\includegraphics[width=70mm]{FIGS/plotCylFlow1}\includegraphics[width=70mm]{FIGS/plotCylFlow2}\includegraphics[width=70mm]{FIGS/plotCylFlow3}}
 \begin{center}
-\caption{\small{Et vektorfelt som er parallelt med $x$-aksen og et billede efter lidt længere tids flow. Efter meget lang tid bliver hele cylinderen mast sammen til en cirkelskive ved $x=2$.
+\caption{\small{Et vektorfelt som er parallelt med $x$-aksen og et billede efter lidt lÃ¦ngere tids flow. Efter meget lang tid bliver hele cylinderen mast sammen til en cirkelskive ved $x=2$.
 Se eksempel \ref{exampCylFlow}.}} \label{figCylFlow}
 \end{center}
 \end{figure}
 
 \begin{aha}
-Fluxen gennem de to endeskiver på cylinderen i figur \ref{figCylFlow} afhænger af vektorfeltets værdi i disse endpunkter -- se eksempel \ref{exampCylFlow}. Da rumfanget af cylinderen antydes at blive mindre ved flowet giver den inspektion en formodning om, at den totale flux {\emph{ud}} gennem de to endeskiver er negativ. Det er i fuld overensstemmelse med, at vektorfeltet i det viste tilfælde er $\mathbf{V}(x,y,z) = (f(x), 0,0) = (2-x, 0,0)$, som i henhold til beregningen i eksempel \ref{exampCylFlow} giver den totale flux:
+Fluxen gennem de to endeskiver pÃ¥ cylinderen i figur \ref{figCylFlow} afhÃ¦nger af vektorfeltets vÃ¦rdi i disse endpunkter -- se eksempel \ref{exampCylFlow}. Da rumfanget af cylinderen antydes at blive mindre ved flowet giver den inspektion en formodning om, at den totale flux {\emph{ud}} gennem de to endeskiver er negativ. Det er i fuld overensstemmelse med, at vektorfeltet i det viste tilfÃ¦lde er $\mathbf{V}(x,y,z) = (f(x), 0,0) = (2-x, 0,0)$, som i henhold til beregningen i eksempel \ref{exampCylFlow} giver den totale flux:
 \begin{equation}
 \Flux(\mathbf{V}, \partial \Omega) = (1 - 2) \cdot \frac{\pi}{4} = - \frac{\pi}{4} \quad .
 \end{equation}
-Det vil sige at der er større rumfang-deformation \emph{ind i cylinderen} ved $x=0$ end der er rumfang-deformation \emph{ud af} cylinderen ved $x=1$. Den tidsafledede af rumfanget ved flowet er negativ, således at cylinderen netop bliver mindre når alle punkter følger med deres respektive flowkurver. Det gælder faktisk i dette tilfælde ikke bare for små $t$-værdier men for alle $t > 0$, således at cylinderen bliver  helt kollapset og trykket totalt sammen til en flad cirkelskive ved $x=2$ til tiden $t=\infty$ .
+Det vil sige at der er stÃ¸rre rumfang-deformation \emph{ind i cylinderen} ved $x=0$ end der er rumfang-deformation \emph{ud af} cylinderen ved $x=1$. Den tidsafledede af rumfanget ved flowet er negativ, sÃ¥ledes at cylinderen netop bliver mindre nÃ¥r alle punkter fÃ¸lger med deres respektive flowkurver. Det gÃ¦lder faktisk i dette tilfÃ¦lde ikke bare for smÃ¥ $t$-vÃ¦rdier men for alle $t > 0$, sÃ¥ledes at cylinderen bliver  helt kollapset og trykket totalt sammen til en flad cirkelskive ved $x=2$ til tiden $t=\infty$ .
 \end{aha}
 
 
@@ -705,11 +705,11 @@ K_{\rho} \quad : \quad \mathbf{r}(u,v,w) = (u\cdot\sin(v)\cdot \cos(w), u\cdot \
 hvor  $(u,v,w) \in [0, \rho]\times [0, \pi] \times [-\pi, \pi]$.
 
 
-Ifølge flow-løsningerne til dette eksplosionsvektorfelt
+IfÃ¸lge flow-lÃ¸sningerne til dette eksplosionsvektorfelt
 vokser radius af kuglen
-med faktoren $e^{T}$, hvor $T$ er flow-tiden. Det ser vi på følgende måde:\\
+med faktoren $e^{T}$, hvor $T$ er flow-tiden. Det ser vi pÃ¥ fÃ¸lgende mÃ¥de:\\
 
-De generelle flow-kurver for vektorfeltet findes jo ved at løse differentialligningssystemet:
+De generelle flow-kurver for vektorfeltet findes jo ved at lÃ¸se differentialligningssystemet:
 \begin{equation}
 \left[
   \begin{array}{c}
@@ -725,7 +725,7 @@ De generelle flow-kurver for vektorfeltet findes jo ved at løse differentiallign
                                                     \end{array}
                                                   \right] \quad .
 \end{equation}
-Den generelle løsning er her:
+Den generelle lÃ¸sning er her:
 \begin{equation}
 \left[
   \begin{array}{c}
@@ -742,9 +742,9 @@ Den generelle løsning er her:
   \end{array}
 \right]
 \end{equation}
-hvor $c_{1}$, $c_{2}$, og $c_{3}$ er arbitrære konstanter.\\
+hvor $c_{1}$, $c_{2}$, og $c_{3}$ er arbitrÃ¦re konstanter.\\
 
-De specielle løsninger, flowkurverne  $ \widetilde{\mathbf{r}}(u,v,w,t)$ igennem kuglepunkterne $(x_{0}, y_{0}, z_{0}) = \mathbf{r}(u,v,w) = (u\cdot\sin(v)\cdot \cos(w), u\cdot \sin(v)\cdot \sin(w), u\cdot \cos(v))$ er så givet ved følgende parametriserede linjer i rummet:
+De specielle lÃ¸sninger, flowkurverne  $ \widetilde{\mathbf{r}}(u,v,w,t)$ igennem kuglepunkterne $(x_{0}, y_{0}, z_{0}) = \mathbf{r}(u,v,w) = (u\cdot\sin(v)\cdot \cos(w), u\cdot \sin(v)\cdot \sin(w), u\cdot \cos(v))$ er sÃ¥ givet ved fÃ¸lgende parametriserede linjer i rummet:
 \begin{equation}
 \left(\widetilde{\mathbf{r}}(u,v,w,t)\right)^{\top} = \left[
                                            \begin{array}{c}
@@ -763,16 +763,16 @@ De specielle løsninger, flowkurverne  $ \widetilde{\mathbf{r}}(u,v,w,t)$ igennem
 Disse linjer og deres parametriseringer giver flow-kurven igennem \emph{ethvert} punkt i den massive kugle.\\
 
 
-Det rumlige område  $\Omega_{F_{\mathbf{r}}}(t)$ som efter tiden $t$ er \emph{tilføjet} den massive kugle, er dermed allerede parametriseret: Vi skal blot sætte $u = \rho$ i ovenstående flowlinje-para\-me\-tri\-se\-rin\-ger. Det vil sige, vi finder igen ud af, hvordan flowet af kuglens overflade bidrager til volumenforøgelsen (regnet med fortegn):
+Det rumlige omrÃ¥de  $\Omega_{F_{\mathbf{r}}}(t)$ som efter tiden $t$ er \emph{tilfÃ¸jet} den massive kugle, er dermed allerede parametriseret: Vi skal blot sÃ¦tte $u = \rho$ i ovenstÃ¥ende flowlinje-para\-me\-tri\-se\-rin\-ger. Det vil sige, vi finder igen ud af, hvordan flowet af kuglens overflade bidrager til volumenforÃ¸gelsen (regnet med fortegn):
  \begin{equation}
  \Omega_{F_{\mathbf{r}}}(T) \quad : \quad \widetilde{\mathbf{r}}(\rho,v,w, t) =
  \e^{t}  \cdot \rho \cdot (\cos(v)\cdot \cos(w), \, \sin(v), \, \cos(v)\cdot \sin(w) ) \quad ,
  \end{equation}
 hvor $t \in [0, T]$, $v \in [0, \pi]$, og $w \in [-\pi, \pi]$. Det ses, at $\widetilde{\mathbf{r}}(\rho,v,w, T)$ er en parameterfremstilling for den eksploderende kugles overflade efter tiden $T$, og at det er en kugleflade med radius $\e^{T}\cdot \rho$.
-Ved at flyde med flowkurverne for eksplosionsvektorfeltet udvider den oprindelige kugle (med radius $\rho$ til tiden $t=0$) sig til en kugle, der har radius $\e^{T}\cdot \rho$ som påstået.
+Ved at flyde med flowkurverne for eksplosionsvektorfeltet udvider den oprindelige kugle (med radius $\rho$ til tiden $t=0$) sig til en kugle, der har radius $\e^{T}\cdot \rho$ som pÃ¥stÃ¥et.
 
 \begin{aha}
-Rumfanget af den eksploderende kugle til tiden $T$ er \emph{summen} af de to rumfang $\Vol_{\pm}(\Omega_{F_{\mathbf{r}}}(T))$ og $\Vol(K_{\rho})$. Det førstnævnte rumfang er det med fortegn regnede volumen af det område, som kuglens \emph{overflade} fejer igennem i løbet af tiden $T$.
+Rumfanget af den eksploderende kugle til tiden $T$ er \emph{summen} af de to rumfang $\Vol_{\pm}(\Omega_{F_{\mathbf{r}}}(T))$ og $\Vol(K_{\rho})$. Det fÃ¸rstnÃ¦vnte rumfang er det med fortegn regnede volumen af det omrÃ¥de, som kuglens \emph{overflade} fejer igennem i lÃ¸bet af tiden $T$.
 \end{aha}
 
 Volumenet af kuglen som funktion af
@@ -785,47 +785,47 @@ differentialkvotienten
 4\,\pi\,\rho^{3} \quad .
 \end{equation}
 
-Denne vækst i volumen har vi essentielt fundet ved at holde øje med
+Denne vÃ¦kst i volumen har vi essentielt fundet ved at holde Ã¸je med
 udvidelsen af den massive kugles {\em{overflade}}
-$\partial K_{\rho}$ når alle kuglens punkter
-flyder langs med vektorfeltets flowkurver -- præcis som vi har dyrket i første halvdel af denne eNote.\\
+$\partial K_{\rho}$ nÃ¥r alle kuglens punkter
+flyder langs med vektorfeltets flowkurver -- prÃ¦cis som vi har dyrket i fÃ¸rste halvdel af denne eNote.\\
 
 Intuitivt har vi derfra, at hvis skalarproduktet imellem
 vektorfeltet ${\bf{V}}$ og den \emph{udadrettede}
-enhedsnormalvektor ${\bf{n}}$ et sted på
-overfladen er stor, så vil det lokale bidrag til
-volumenforøgelse derfra tilsvarende være stor, fordi
-overfladen på det sted skubbes hurtigt udad når den flyder med flowkurverne for vektorfeltet.\\
+enhedsnormalvektor ${\bf{n}}$ et sted pÃ¥
+overfladen er stor, sÃ¥ vil det lokale bidrag til
+volumenforÃ¸gelse derfra tilsvarende vÃ¦re stor, fordi
+overfladen pÃ¥ det sted skubbes hurtigt udad nÃ¥r den flyder med flowkurverne for vektorfeltet.\\
 
-Dette kan selvfølgelig modsvares af at
-skalarproduktet andre steder på overfladen er
-negativt, således at fladen skubbes ind\-ad på
+Dette kan selvfÃ¸lgelig modsvares af at
+skalarproduktet andre steder pÃ¥ overfladen er
+negativt, sÃ¥ledes at fladen skubbes ind\-ad pÃ¥
 de steder. \\
 
 Kort sagt ser vi igen, at den totale
 udadrettede flux af vektorfeltet igennem
-overfladen af det rumlige område giver (den med fortegn regnede) volumenforøgelse.\\
+overfladen af det rumlige omrÃ¥de giver (den med fortegn regnede) volumenforÃ¸gelse.\\
 
-Den tilsvarende udvidelse af sætning \ref{thmFluxVolEkspand} er derfor:
+Den tilsvarende udvidelse af sÃ¦tning \ref{thmFluxVolEkspand} er derfor:
 
 
-\begin{theorem}[Total flux ud gennem overflade af rumligt område] \label{thmGaussFlux}
-Lad $\Omega_{\bf{r}}$ betegne et vilkårligt parametriseret område i
+\begin{theorem}[Total flux ud gennem overflade af rumligt omrÃ¥de] \label{thmGaussFlux}
+Lad $\Omega_{\bf{r}}$ betegne et vilkÃ¥rligt parametriseret omrÃ¥de i
 rummet med {\em{udadrettet}} enhedsnormalvektorfelt $\,
 {\bf{n}}_{\partial \Omega}\, $ langs overfladen $\,\partial
 \Omega_{\bf{r}}\,$.\\
 
-Overfladen kan gerne være sammensat af glatte parametriserede fladestykker som f.eks. overfladen på et polyeder.\\
+Overfladen kan gerne vÃ¦re sammensat af glatte parametriserede fladestykker som f.eks. overfladen pÃ¥ et polyeder.\\
 
- Lad $\,{\bf{V}}(x,y,z)\,$ betegne et vilkårligt glat
+ Lad $\,{\bf{V}}(x,y,z)\,$ betegne et vilkÃ¥rligt glat
 vektorfelt i rummet. \\
 
 Vi lader alle punkterne i $\,\Omega_{\bf{r}}\,$
 flyde tiden $\,t\,$ langs flowkurverne for vektorfeltet
 $\,{\bf{V}}(x,y,z)\,$. \\
 
-Det med fortegn (i forhold til ${\bf{n}}_{\partial \Omega}$) regnede volumen $\,\Vol_{\pm}(t)\,$ af området efter
-denne deformation har da følgende differentialkvotient til tiden
+Det med fortegn (i forhold til ${\bf{n}}_{\partial \Omega}$) regnede volumen $\,\Vol_{\pm}(t)\,$ af omrÃ¥det efter
+denne deformation har da fÃ¸lgende differentialkvotient til tiden
 $\,t = 0\,$:
 \begin{equation} \label{eqnGaussFlux}
 \frac{d}{dt}\Vol_{\pm}(t)_{|_{t=0}} \, = \, \int_{\partial
@@ -836,42 +836,42 @@ $\,t = 0\,$:
 \end{theorem}
 
 \begin{example}[Eksplosion af massiv kugle] \label{exampExplodeKugle}
-Vi checker sætningen i det konkrete tilfælde med
+Vi checker sÃ¦tningen i det konkrete tilfÃ¦lde med
 den eksploderende kugle: Fluxen af
 eksplosionsvektorfeltet ud igennem kuglens
 overflade er simpelthen overfladens areal
 $4\,\pi\,\rho^{2}$ gange skalarproduktet ${\bf
 V}\cdot {\bf n}$, fordi dette skalarprodukt i dette
-specielle tilfælde er konstant: ${\bf V}\cdot
+specielle tilfÃ¦lde er konstant: ${\bf V}\cdot
 {\bf n} = \Vert{\bf{V}}\Vert = \sqrt{x^2 + y^2 +
 z^2} = \rho\,\,$. Derfor er den totale flux
-$4\,\pi\,\rho^{3}$, altså præcis
+$4\,\pi\,\rho^{3}$, altsÃ¥ prÃ¦cis
 differentialkvotienten (til tiden $t=0$) af
 volumenet som funktion af flowtiden
-$\,t\,$. Vi har således verificeret sætningen i
+$\,t\,$. Vi har sÃ¥ledes verificeret sÃ¦tningen i
 dette specielle eksempel.
 \end{example}
 
 \begin{think}
-De parametriserede rumlige områder, vi betragter,
-har jo sædvanligvis en rand, der består af $6$
+De parametriserede rumlige omrÃ¥der, vi betragter,
+har jo sÃ¦dvanligvis en rand, der bestÃ¥r af $6$
 sideflader. Det betyder, at beregningen af
-volumenvæksten af området ved deformationen langs
-flowkurverne kræver beregning af $6$ udadrettede
+volumenvÃ¦ksten af omrÃ¥det ved deformationen langs
+flowkurverne krÃ¦ver beregning af $6$ udadrettede
 flux-bidrag -- eet bidrag for hver sideflade.\\
 
-Hvis to af de $6$ sideflader ved en standardparametrisering af et rumligt område
+Hvis to af de $6$ sideflader ved en standardparametrisering af et rumligt omrÃ¥de
 er sammenfaldende eller delvis sammenfaldende,
-så vil standard enheds-normalerne for den ene sideflade være præcis modsatrettet
-standard enheds-normalerne for den anden sideflade der hvor sidefladerne er sammenfaldende, således at
-de tilsvarende fluxbidrag der vil \emph{ophæve hinanden}!
+sÃ¥ vil standard enheds-normalerne for den ene sideflade vÃ¦re prÃ¦cis modsatrettet
+standard enheds-normalerne for den anden sideflade der hvor sidefladerne er sammenfaldende, sÃ¥ledes at
+de tilsvarende fluxbidrag der vil \emph{ophÃ¦ve hinanden}!
 \end{think}
 
 
 
 
-For et vilkårligt glat vektorfelt i rummet kan vi
-undersøge volumenforøgelsen (ved flow langs
+For et vilkÃ¥rligt glat vektorfelt i rummet kan vi
+undersÃ¸ge volumenforÃ¸gelsen (ved flow langs
 vektorfeltets flowkurver) for en lille massiv
 kugle $K_{\rho}$, der har centrum i et givet
 punkt, f.eks. $p = (x_{0}, y_{0}, z_{0})$ og
@@ -882,22 +882,22 @@ z_{0})$ og finder den udadrettede flux af
 vektorfeltet igennem den lille kug\-les overflade
 $\partial K_{\rho}$. Denne flux divideret med
 volumenet $(4\,\pi/3)\,\rho^{3}$ af den massive
-kugle $K_{\rho}$ har en grænseværdi når radius
-$\rho$ går imod $0$. Se skitsen til den beregning
+kugle $K_{\rho}$ har en grÃ¦nsevÃ¦rdi nÃ¥r radius
+$\rho$ gÃ¥r imod $0$. Se skitsen til den beregning
 nedenfor.\\
 
-Det viser sig (se nedenfor) at denne grænseværdi
+Det viser sig (se nedenfor) at denne grÃ¦nsevÃ¦rdi
 netop er \emph{divergensen af vektorfeltet} i det
-betragtede punkt! I lyset af sætning
+betragtede punkt! I lyset af sÃ¦tning
 \ref{thmGaussFlux} og ligning
 (\ref{eqnGaussFlux}) har vi derfor motivereret
-følgende tolkning af divergensen:
+fÃ¸lgende tolkning af divergensen:
 
 \begin{theorem} \label{thmDivGeom}
 Divergensen af et vektorfelt udtrykker {\em{den
 {volumen-relative lokale flux} ud gennem
-overfladen}} for vektorfeltet og dermed også
-{\em{den relative lokale volumen-vækst}} ved
+overfladen}} for vektorfeltet og dermed ogsÃ¥
+{\em{den relative lokale volumen-vÃ¦kst}} ved
 deformation langs flowkurverne for vektorfeltet:
 \begin{equation}
 \begin{aligned}
@@ -915,20 +915,20 @@ deformation langs flowkurverne for vektorfeltet:
 
 \begin{bevis}
 Vi vil kun skitsere, hvordan divergensen fremkommer ved den
-antydede fremgangsmåde. Vi simplificerer
-fremstillingen på to måder: Dels vil vi vælge et
-koordinatsystem så $p = (0,0,0)$, og dels vil vi
+antydede fremgangsmÃ¥de. Vi simplificerer
+fremstillingen pÃ¥ to mÃ¥der: Dels vil vi vÃ¦lge et
+koordinatsystem sÃ¥ $p = (0,0,0)$, og dels vil vi
 kun medtage lineariseringen af ${\bf{V}}(x,y,z)$
 omkring $(0,0,0)$ ($\varepsilon$-leddene fra
-Taylors grænseformler for de 3 koordinatfunktioner
-tages altså ikke med). (Til gengæld er
+Taylors grÃ¦nseformler for de 3 koordinatfunktioner
+tages altsÃ¥ ikke med). (Til gengÃ¦ld er
 beregningerne helt eksakte for vektorfelter af
-højest første grad.)\\
+hÃ¸jest fÃ¸rste grad.)\\
 
-Opgaven er altså at genfinde $\,\Div({\bf{V}})$ i
-punktet $(0,0,0)$ ved hjælp af en fluxberegning.
-Vi be\-gyn\-der med at bruge Taylors grænseformel på
-$\,{\bf{V}}(x,y,z)\,$. Det underforstås, at
+Opgaven er altsÃ¥ at genfinde $\,\Div({\bf{V}})$ i
+punktet $(0,0,0)$ ved hjÃ¦lp af en fluxberegning.
+Vi be\-gyn\-der med at bruge Taylors grÃ¦nseformel pÃ¥
+$\,{\bf{V}}(x,y,z)\,$. Det underforstÃ¥s, at
 $V_{i}$ og de partielle afledede af $V_{i}$
 evalueres i udviklingspunktet $(0,0,0)$ medmindre
 andet antydes.
@@ -948,11 +948,11 @@ andet antydes.
 \end{aligned}
 \end{equation}
 
-Idet enhedsnormalvektorfeltet på overfladen af
+Idet enhedsnormalvektorfeltet pÃ¥ overfladen af
 den lille massive $\rho$-kugle $K_{\rho}$ med
 centrum $(0,0,0)$ er givet ved $\,{\bf{n}} =
-(x/\rho,\, y/\rho,\, z/\rho)\,$ følger det, at
-integranden i fluxberegningen er følgende:
+(x/\rho,\, y/\rho,\, z/\rho)\,$ fÃ¸lger det, at
+integranden i fluxberegningen er fÃ¸lgende:
 
 \begin{equation} \label{eqVolFlux}
 \begin{aligned}
@@ -970,10 +970,10 @@ x\,V_{1} + x^{2}\,\frac{\partial V_{1}}{\partial x}
 \end{equation}
 
 Tilbage er nu kun at integrere dette udtryk over
-kuglens overflade $\partial K_{\rho}$ og dernæst
+kuglens overflade $\partial K_{\rho}$ og dernÃ¦st
 dividere med kuglens volumen $\Vol(K_{\rho})$.
-Selv om det nok kan se kompliceret ud, så er det
-faktisk rimelig simpelt i betragtning af følgende
+Selv om det nok kan se kompliceret ud, sÃ¥ er det
+faktisk rimelig simpelt i betragtning af fÃ¸lgende
 identiteter:
 
 \begin{equation} \label{eqKugleintegraler}
@@ -993,12 +993,12 @@ identiteter:
 
 
 
-Fra ligning (\ref{eqKugleintegraler}) følger nu
-f.eks. følgende bidrag til integralet over
+Fra ligning (\ref{eqKugleintegraler}) fÃ¸lger nu
+f.eks. fÃ¸lgende bidrag til integralet over
 kuglefladen $\partial K_{\rho}$ af
-høj\-re\-si\-den i ligning (\ref{eqVolFlux}).
-(Bemærk, at $\frac{\partial V_{1}}{\partial
-x}(0,0,0)$ er en konstant, der kan sættes udenfor
+hÃ¸j\-re\-si\-den i ligning (\ref{eqVolFlux}).
+(BemÃ¦rk, at $\frac{\partial V_{1}}{\partial
+x}(0,0,0)$ er en konstant, der kan sÃ¦ttes udenfor
 integraltegnet.):
 \begin{equation}
 \int_{\partial
@@ -1008,13 +1008,13 @@ V_{1}}{\partial x}(0,0,0)\,\, d\mu \, = \,
 x}(0,0,0) \quad .
 \end{equation}
 
-Ialt fås naturligvis 3 sådanne bidrag til
+Ialt fÃ¥s naturligvis 3 sÃ¥danne bidrag til
 integralet over kuglefladen $\partial K_{\rho}$
-af høj\-re\-si\-den i ligning (\ref{eqVolFlux}),
+af hÃ¸j\-re\-si\-den i ligning (\ref{eqVolFlux}),
 og da integralet over $\partial K_{\rho}$
  af venstresiden i ligning (\ref{eqVolFlux}) netop er fluxen $\Flux({\bf{V}},
- \partial K_{\rho})$ har vi derfor følgende
- identitet i dette simplificerede tilfælde:
+ \partial K_{\rho})$ har vi derfor fÃ¸lgende
+ identitet i dette simplificerede tilfÃ¦lde:
 \begin{equation} \label{eqLimitDiv}
 \begin{aligned}
 \frac{1}{\Vol(K_{\rho})}\Flux({\bf{V}}, \partial K_{\rho})
@@ -1029,33 +1029,33 @@ og da integralet over $\partial K_{\rho}$
 \end{equation}
 
 
-For generelle vektorfelter gælder den tilsvarende
-identitet kun i den grænse, hvor $\rho$ er meget
-lille (altså for $\rho \to 0$), således at
-ovenstående brug af Taylor's grænseformel for $\mathbf{V}(x,y,z)$ til
-første orden netop bliver den dominerende
-repræsentant for vektorfeltet indenfor kuglen
-$K_{\rho}$. For vektorfelter af højest første
-grad gælder identiteten (\ref{eqLimitDiv}) dog
-som nævnt for alle værdier af $\rho$. Det skyldes
+For generelle vektorfelter gÃ¦lder den tilsvarende
+identitet kun i den grÃ¦nse, hvor $\rho$ er meget
+lille (altsÃ¥ for $\rho \to 0$), sÃ¥ledes at
+ovenstÃ¥ende brug af Taylor's grÃ¦nseformel for $\mathbf{V}(x,y,z)$ til
+fÃ¸rste orden netop bliver den dominerende
+reprÃ¦sentant for vektorfeltet indenfor kuglen
+$K_{\rho}$. For vektorfelter af hÃ¸jest fÃ¸rste
+grad gÃ¦lder identiteten (\ref{eqLimitDiv}) dog
+som nÃ¦vnt for alle vÃ¦rdier af $\rho$. Det skyldes
 naturligvis, at uanset radius $\rho$ er
-vektorfeltet jo i det specielle tilfælde eksakt
-repræsenteret i hele $K_{\rho}$ ved sin
-Taylors grænseformel til første orden med
+vektorfeltet jo i det specielle tilfÃ¦lde eksakt
+reprÃ¦senteret i hele $K_{\rho}$ ved sin
+Taylors grÃ¦nseformel til fÃ¸rste orden med
 udviklingspunkt i centrum.\\
 
 Hermed har vi afsluttet skitseringen af beviset
 for den lokale bestemmelse af divergensen af et
 vektorfelt og vist den geometriske tolkning i
-sætning \ref{thmDivGeom}.
+sÃ¦tning \ref{thmDivGeom}.
 \end{bevis}
 
 
 
 
 \begin{exercise}
-Vis de ovenstående identiteter i ligning
-(\ref{eqKugleintegraler}). I de tilfælde hvor
+Vis de ovenstÃ¥ende identiteter i ligning
+(\ref{eqKugleintegraler}). I de tilfÃ¦lde hvor
 integralet er $0$ kan dette vises ved en
 fortegns- og symmetribetragtning.
 \end{exercise}
@@ -1063,23 +1063,23 @@ fortegns- og symmetribetragtning.
 
 
 
-Denne fremstilling af divergensen åbner nu op for
-en naturlig ide, som går i den modsatte retning:\\
+Denne fremstilling af divergensen Ã¥bner nu op for
+en naturlig ide, som gÃ¥r i den modsatte retning:\\
 
-Da den lokale punktvise volumen-vækst ved
-deformation af et rumligt område langs
+Da den lokale punktvise volumen-vÃ¦kst ved
+deformation af et rumligt omrÃ¥de langs
 flowkurverne for et givet vektorfelt er bestemt
-af divergensen af vektorfeltet, så er følgende en
+af divergensen af vektorfeltet, sÃ¥ er fÃ¸lgende en
 rimelig formodning: Hvis vi integrerer
-divergensen over et område i rummet, så skulle
-resultatet gerne være sammenlignelig med den
-totale volumenvækst af hele området. Altså groft
-sagt skulle summen af de lokale volumentilvækster
-gerne være den totale volumentilvækst. \\
+divergensen over et omrÃ¥de i rummet, sÃ¥ skulle
+resultatet gerne vÃ¦re sammenlignelig med den
+totale volumenvÃ¦kst af hele omrÃ¥det. AltsÃ¥ groft
+sagt skulle summen af de lokale volumentilvÃ¦kster
+gerne vÃ¦re den totale volumentilvÃ¦kst. \\
 
  Dette er
-præcis indholdet af Gauss' sætning, som vi nu
-formulerer i kombination med Sætning
+prÃ¦cis indholdet af Gauss' sÃ¦tning, som vi nu
+formulerer i kombination med SÃ¦tning
 \ref{thmGaussFlux}:
 
 
@@ -1088,7 +1088,7 @@ formulerer i kombination med Sætning
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Gauss' divergens-sætning} \label{secGauss}
+\section{Gauss' divergens-sÃ¦tning} \label{secGauss}
 
 
 
@@ -1102,12 +1102,12 @@ Se \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Gauss.html}{Biografi
 
 
 
-\begin{theorem}[{Gauss' divergens-sætning}] \label{thmGauss}
-Lad $\,\Omega_{\bf{r}}\,$ betegne et rumligt område med
+\begin{theorem}[{Gauss' divergens-sÃ¦tning}] \label{thmGauss}
+Lad $\,\Omega_{\bf{r}}\,$ betegne et rumligt omrÃ¥de med
 randoverflade $\,\partial \Omega_{\bf{r}}\,$ og \emph{udadrettet}
-en\-heds\-nor\-mal\-vektorfelt $\,{\bf{n}}_{\partial \Omega}\,$ på
+en\-heds\-nor\-mal\-vektorfelt $\,{\bf{n}}_{\partial \Omega}\,$ pÃ¥
 rand\-over\-fladen. For ethvert glat vektorfelt $\, {\bf{V}}$ i rummet
-gælder så følgende:
+gÃ¦lder sÃ¥ fÃ¸lgende:
 \begin{equation} \label{eqGauss}
 \frac{d}{dt}\Vol_{\pm}(t)_{|_{t=0}}\, = \,
 \int_{\Omega_{\bf{r}}} \, \Div({\bf{V}}) \,\,
@@ -1116,28 +1116,28 @@ V} \bm{\cdot} {\bf{n}}_{\partial \Omega}\,\,d\mu \, =
 \, \Flux({\bf{V}},
 \partial \Omega_{\bf{r}}) \quad ,
 \end{equation}
-hvor fluxen altså skal beregnes med hensyn til det \emph{udadrettede}
-enhedsnormalvektorfelt på rand\-over\-fla\-den af det givne rumlige
-område.
+hvor fluxen altsÃ¥ skal beregnes med hensyn til det \emph{udadrettede}
+enhedsnormalvektorfelt pÃ¥ rand\-over\-fla\-den af det givne rumlige
+omrÃ¥de.
 \end{theorem}
 
 Begge
-sider af følgende lig\-ning, der er essensen af
-Gauss' sætning, kan jo beregnes i konkrete tilfælde og dermed
-verificere Gauss' sætning:
+sider af fÃ¸lgende lig\-ning, der er essensen af
+Gauss' sÃ¦tning, kan jo beregnes i konkrete tilfÃ¦lde og dermed
+verificere Gauss' sÃ¦tning:
 \begin{equation} \label{eqGaussPure}
 \int_{\Omega_{\bf{r}}} \, \Div({\bf{V}}) \,\,
 d\mu \, = \, \Flux({\bf{V}},
 \partial \Omega_{\bf{r}}) \quad .
 \end{equation}
 
-Vi vil her gennemgå nogle eksempler på sådanne dobbelt-beregninger.
+Vi vil her gennemgÃ¥ nogle eksempler pÃ¥ sÃ¥danne dobbelt-beregninger.
 
 \begin{think}
-I visse tilfælde er det meget simplere at udregne divergens-integralet over et givet rumligt område
-end at udregne fluxen  af vektorfeltet gennem områdets totale overflade.
-Hvis man skal udregne sidstnævnte vil man selvfølgelig i stedet bare udregne førstnævnte integral og henvise til
-Gauss' divergenssætning. Omvendt er der tilfælde hvor fluxintegralet er simplest at beregne -- så benyttes selvfølgelig tilsvarende duale  strategi.
+I visse tilfÃ¦lde er det meget simplere at udregne divergens-integralet over et givet rumligt omrÃ¥de
+end at udregne fluxen  af vektorfeltet gennem omrÃ¥dets totale overflade.
+Hvis man skal udregne sidstnÃ¦vnte vil man selvfÃ¸lgelig i stedet bare udregne fÃ¸rstnÃ¦vnte integral og henvise til
+Gauss' divergenssÃ¦tning. Omvendt er der tilfÃ¦lde hvor fluxintegralet er simplest at beregne -- sÃ¥ benyttes selvfÃ¸lgelig tilsvarende duale  strategi.
 \end{think}
 
 
@@ -1146,29 +1146,29 @@ Gauss' divergenssætning. Omvendt er der tilfælde hvor fluxintegralet er simplest
 
 \begin{example}
 Hvis vektorfeltet ${\bf{V}}$ har divergensen $0$
-i alle punkter i rummet, så vil ethvert rumligt
-område, der flyder med vektorfeltet, bevare sit
-volumen. Formen kan naturligvis ændres meget som
-tiden går, men volumenet er konstant. Desuden er
+i alle punkter i rummet, sÃ¥ vil ethvert rumligt
+omrÃ¥de, der flyder med vektorfeltet, bevare sit
+volumen. Formen kan naturligvis Ã¦ndres meget som
+tiden gÃ¥r, men volumenet er konstant. Desuden er
 fluxen {\em{ud}} igennem overfladen af ethvert
-{\em{fastholdt}} rumligt område tilsvarende $0$.
+{\em{fastholdt}} rumligt omrÃ¥de tilsvarende $0$.
 \end{example}
 
 
 
 \begin{example} \label{exDivFluxExplosion}
 For eksplosionsvektorfeltet ${\bf{V}}(x,y,z) = (x,y,z)$, der har
-den konstante divergens $\Div({\bf{V}}) \, = \, 3\,$, gælder altså
-følgende for et vilkårligt rumligt område: $ \, 3\,\Vol(\Omega) \, =
+den konstante divergens $\Div({\bf{V}}) \, = \, 3\,$, gÃ¦lder altsÃ¥
+fÃ¸lgende for et vilkÃ¥rligt rumligt omrÃ¥de: $ \, 3\,\Vol(\Omega) \, =
 \, \Flux({\bf{V}}, \, \partial \Omega)\, $.
 \end{example}
 
 
 
 \begin{exercise}
-Vis (ved direkte udregninger) påstanden om
-${\bf{V}}(x,y,z) = (x,y,z)$ i ovenstående eksempel
-\ref{exDivFluxExplosion} for det rumlige område, der består af den
+Vis (ved direkte udregninger) pÃ¥standen om
+${\bf{V}}(x,y,z) = (x,y,z)$ i ovenstÃ¥ende eksempel
+\ref{exDivFluxExplosion} for det rumlige omrÃ¥de, der bestÃ¥r af den
 massive cylinder i figur \ref{figCylFlow}.
 \end{exercise}
 
@@ -1187,7 +1187,7 @@ massive cylinder i figur \ref{figCylFlow}.
 
 
 \begin{example}[Divergensen og fluxen i cylinder-eksemplet]\label{exampCylGauss}
-Vi vil illustrere Gauss' sætning for vektorfeltet
+Vi vil illustrere Gauss' sÃ¦tning for vektorfeltet
 \begin{equation}
 \mathbf{V}(x,y,z)= (f(x), 0,0) \quad , \quad (x,y,z) \in \mathbb{R}^{3} \quad,
 \end{equation}
@@ -1195,8 +1195,8 @@ hvor $f(x)$ er en glat funktion af $x$, idet vi vil beregne integralet af diverg
 \begin{equation}
 \Flux(\mathbf{V}, \partial \Omega) = (f(1) - f(0)) \cdot \frac{\pi}{4} \quad .
 \end{equation}
-Den totale divergens af vektorfeltet i den massive cylinder er lige så let at beregne:
-Den lokale divergens af $\mathbf{V}(x,y,z) = (f(x), 0, 0)$ er i et vilkårligt punkt $(x,y,z)$:
+Den totale divergens af vektorfeltet i den massive cylinder er lige sÃ¥ let at beregne:
+Den lokale divergens af $\mathbf{V}(x,y,z) = (f(x), 0, 0)$ er i et vilkÃ¥rligt punkt $(x,y,z)$:
 \begin{equation}
 \Div(\mathbf{V})(x,y,z) = f'(x) \quad .
 \end{equation}
@@ -1205,11 +1205,11 @@ Den massive cylinder har en parameterfremstilling:
 \Omega_{\mathbf{r}} \quad : \quad \mathbf{r}(u,v,w) = (w, u\cdot \cos(v), u\cdot \sin(v)) \quad ,
 \end{equation}
 hvor $(u,v,w) \in [0,1/2]\times [-\pi, \pi] \times [0, 1]$.
-Jacobifunktionen for parametriseringen er så
+Jacobifunktionen for parametriseringen er sÃ¥
 \begin{equation}
 \Jac_{\mathbf{r}}(u,v,w) = u \quad ,
 \end{equation}
-således at den totale divergens af vektorfeltet er
+sÃ¥ledes at den totale divergens af vektorfeltet er
 \begin{equation}
 \begin{aligned}
 \int_{\Omega_{\bf{r}}} \, \Div({\bf{V}}) \,\,
@@ -1221,36 +1221,36 @@ d\mu \, &= \, \int_{0}^{1} \int_{-\pi}^{\pi} \int_{0}^{1/2} f'(w) \cdot u \,\, d
 &= (f(1) - f(0)) \cdot \frac{\pi}{4} \quad ,
 \end{aligned}
 \end{equation}
-altså præcis samme resultat som ved flux-beregningen.
+altsÃ¥ prÃ¦cis samme resultat som ved flux-beregningen.
 \end{example}
 
 
 \begin{example}[Vektorfelt igennem en kantet torus]\label{exampTorusGauss}
-Vi betragter en delmængde af en massive kugle med radius $1/2$, se figur \ref{figTorusGauss}.
-En parameterfremstilling for det massive område er givet ved:
+Vi betragter en delmÃ¦ngde af en massive kugle med radius $1/2$, se figur \ref{figTorusGauss}.
+En parameterfremstilling for det massive omrÃ¥de er givet ved:
 
 \begin{equation}
 \Omega_{\mathbf{r}} \quad : \quad \mathbf{r}(u,v,w) = (u\cdot \sin(v)\cdot \cos(w), \, u\cdot \sin(v)\cdot \sin(w), \, u \cdot \cos(v) ) \quad ,
 \end{equation}
-hvor parametrene gennemløber følgende  restringerede intervaller:
+hvor parametrene gennemlÃ¸ber fÃ¸lgende  restringerede intervaller:
 \begin{equation}
 u \in \left[\frac{1}{2}, 1 \right]\quad , \quad v \in \left[ \frac{\pi}{3}, \frac{2\pi}{3} \right]\quad , \quad w \in \left[-\pi, \pi \right]\quad .
 \end{equation}
-Et vektorfelt i rummet er givet således:
+Et vektorfelt i rummet er givet sÃ¥ledes:
 \begin{equation}
 \mathbf{V}(x,y,z) = (-z, y, x\cdot z) \quad .
 \end{equation}
 Opgaven er at bestemme den totale flux af vektorfeltet ud igennem overfladen af $\Omega_{\mathbf{r}}$.
-Det kan godt være kompliceret -- overfladen har $4$ fladestykker, der alle bidrager til flux-beregningen. I stedet vil vi udregne integralet af divergensen af vektorfeltet over det rumlige område og til sidst henvise til Gauss' divergenssætning.\\
+Det kan godt vÃ¦re kompliceret -- overfladen har $4$ fladestykker, der alle bidrager til flux-beregningen. I stedet vil vi udregne integralet af divergensen af vektorfeltet over det rumlige omrÃ¥de og til sidst henvise til Gauss' divergenssÃ¦tning.\\
 
-Jacobifunktionen for den angivne parametrisering af det massive kugleområde er:
+Jacobifunktionen for den angivne parametrisering af det massive kugleomrÃ¥de er:
 \begin{equation}
 \Jac_{\mathbf{r}}(u,v,w) = u^{2}\cdot \sin(v) \quad,
 \end{equation}
 og divergensen af vektorfeltet er
 \begin{equation}
 \begin{aligned}
-\Div(\mathbf{V})(x,y,z) &=  1 + x  \quad , \quad  \textrm{sådan at}\\ \\
+\Div(\mathbf{V})(x,y,z) &=  1 + x  \quad , \quad  \textrm{sÃ¥dan at}\\ \\
 \Div(\mathbf{V})(\mathbf{r}(u,v,w)) &=  1 +  u\cdot \sin(v)\cdot \cos(w) \quad.
 \end{aligned}
 \end{equation}
@@ -1263,7 +1263,7 @@ d\mu \, &= \, \int_{-\pi}^{\pi} \int_{\pi/3}^{2\pi/3} \int_{1/2}^{1}(1+ u\cdot \
 & = \frac{7\pi}{12} \quad ,
 \end{aligned}
 \end{equation}
-som derfor -- i henhold til Gauss' sætning -- også er den søgte totale flux ud igennem overfladen:
+som derfor -- i henhold til Gauss' sÃ¦tning -- ogsÃ¥ er den sÃ¸gte totale flux ud igennem overfladen:
 \begin{equation}
 \Flux(\mathbf{V}, \partial \Omega_{\bf{r}}) = \frac{7\pi}{12} \quad.
 \end{equation}
@@ -1279,15 +1279,15 @@ som derfor -- i henhold til Gauss' sætning -- også er den søgte totale flux ud i
 
 
 \section{En konsekvens for rotationsfelter} \label{secKonsekvens}
-Vi nævner her en observation, som følger direkte af Gauss' divergenssætning i kombination med følgende  lokale information om rotationsvektorfelter:
+Vi nÃ¦vner her en observation, som fÃ¸lger direkte af Gauss' divergenssÃ¦tning i kombination med fÃ¸lgende  lokale information om rotationsvektorfelter:
 
 \begin{theorem}[Divergensen af et rotationsvektorfelt er 0] \label{thmDivRot}
 Lad $\mathbf{V}(x,y,z)$ betegne et glat vektorfelt, som selv er rotationen af et vektorfelt $\mathbf{W}(x,y,z)$ i rummet.
-Så er
+SÃ¥ er
 \begin{equation}
 \Div(\mathbf{V})(x,y,z) = 0 \quad.
 \end{equation}
-Rotationsvektorfelter er altså divergensfrie:
+Rotationsvektorfelter er altsÃ¥ divergensfrie:
 \begin{equation}
 \Div(\Rot(\mathbf{W}))(x,y,z) = 0 \quad.
 \end{equation}
@@ -1297,7 +1297,7 @@ Vi ved pr. antagelse at
 \begin{equation}
 \mathbf{V}(x,y,z) = (\frac{\partial W_{3}}{\partial y} - \frac{\partial W_{2}}{\partial z}, \, \frac{\partial W_{1}}{\partial z} - \frac{\partial W_{3}}{\partial x}, \, \frac{\partial W_{2}}{\partial x} - \frac{\partial W_{1}}{\partial y}) \quad,
 \end{equation}
-sådan at
+sÃ¥dan at
 \begin{equation}
 \Div(\mathbf{V})(x,y,z) = \left(\frac{\partial^{2} W_{3}}{\partial y \partial x } - \frac{\partial^{2} W_{2}}{\partial z \partial x }\right) + \left(\frac{\partial^{2} W_{1}}{\partial z \partial y} -\frac{\partial^{2} W_{3}}{\partial x \partial y}\right) + \left(\frac{\partial^{2} W_{2} }{\partial x \partial z } - \frac{\partial^{2} W_{1}}{\partial y \partial z}\right) = 0 \, \, ,
 \end{equation}
@@ -1307,16 +1307,16 @@ hvor vi har benyttet, at differentiationsordenen kan ombyttes, e.g.:
 \end{equation}
 \end{bevis}
 
-Hvis vi bruger sætning  \ref{thmDivRot} i kombination med Gauss' sætning får vi
+Hvis vi bruger sÃ¦tning  \ref{thmDivRot} i kombination med Gauss' sÃ¦tning fÃ¥r vi
 
 \begin{corollary}[Totale flux af et rotationsvektorfelt er 0] \label{corTotFlux0}
-Lad $\mathbf{W}(x,y,z)$ betegne et glat vektorfelt i rummet og lad $\Omega$ være et område i rummet med stykkevis glat overflade $\partial \Omega$ med udadrettet enhedsnormalvektorfelt $\mathbf{n}_{\partial \Omega}$. \\
+Lad $\mathbf{W}(x,y,z)$ betegne et glat vektorfelt i rummet og lad $\Omega$ vÃ¦re et omrÃ¥de i rummet med stykkevis glat overflade $\partial \Omega$ med udadrettet enhedsnormalvektorfelt $\mathbf{n}_{\partial \Omega}$. \\
 
-Så er den \emph{totale flux} af $\Rot(\mathbf{W})(x,y,z)$ ud gennem overfladen $\partial \Omega$ af $\Omega$ lig med $0$:
+SÃ¥ er den \emph{totale flux} af $\Rot(\mathbf{W})(x,y,z)$ ud gennem overfladen $\partial \Omega$ af $\Omega$ lig med $0$:
 \begin{equation}
 \Flux(\Rot(\mathbf{W}), \partial \Omega) = \int_{\partial \Omega}\Rot(\mathbf{W})\bm{\cdot} \mathbf{n}_{\partial \Omega} \, d\mu \, = \, 0 \quad .
 \end{equation}
-Hvis det rumlige område flyder med flowkurverne for $\Rot(\mathbf{W}(x,y,z)$ så er rumfanget konstant under hele flowdeformationen:
+Hvis det rumlige omrÃ¥de flyder med flowkurverne for $\Rot(\mathbf{W}(x,y,z)$ sÃ¥ er rumfanget konstant under hele flowdeformationen:
 \begin{equation}
 \frac{d}{dt}\Vol_{\pm}(t) = 0 \quad \textrm{for \emph{alle}} \quad  t  \quad.
 \end{equation}
@@ -1334,7 +1334,7 @@ Hvis det rumlige område flyder med flowkurverne for $\Rot(\mathbf{W}(x,y,z)$ så 
 \begin{example}[Et rotationsvektorfelt igennem en kugle] \label{exampRotFeltFlux}
 Vi lader $\mathbf{W}(x,y,z) = (z^{2}\cdot x, x^{2}\cdot y, y^{2}\cdot z)$. \\
 
- Så er
+ SÃ¥ er
 \begin{equation}
 \Rot(\mathbf{W})(x,y,z) = (2\cdot y \cdot z, \, 2\cdot z \cdot x, \, 2\cdot x \cdot y ) \quad,
 \end{equation}
@@ -1350,11 +1350,11 @@ hvor $u \in [0, \pi]$ og $v \in [-\pi, \pi]$. Som bekendt er Jacobifunktionen fo
 \begin{equation}
 \Jac_{\mathbf{r}}(u,v) = \sin(u) \quad ,
 \end{equation}
-og enhedsnormalvektoren til kuglefladen er i dette specielle tilfælde:
+og enhedsnormalvektoren til kuglefladen er i dette specielle tilfÃ¦lde:
 \begin{equation}
 \mathbf{n}_{F}(u,v) = (x(u,v), y(u,v), z(u,v)) \quad ,
 \end{equation}
-sådan at
+sÃ¥dan at
 \begin{equation}
 \begin{aligned}
 \Rot(\mathbf{W})(x,y,z)\bm{\cdot} \mathbf{n}_{F}(u,v) &= 2\cdot(y\cdot z, \, y\cdot z, \, y\cdot z ) \bm{\cdot} (x, y, z) \\
@@ -1371,19 +1371,19 @@ Det totale flux-integral af $\Rot(\mathbf{W})(x,y,z)$ ud igennem kuglefladen er 
 &= \int_{-\pi}^{\pi}\int_{0}^{\pi} 6 \cdot \sin^{3}(u) \cdot \cos(v) \cdot \sin(v) \cdot \cos(u) \,\, du \, dv \\
 \end{aligned}
 \end{equation}
-og da en stamfunktion til $\sin^{3}(u)\cdot \cos(u)$ er $\frac{1}{4}\cdot \sin^{4}(u)$ som er $0$ både for $u=0$ og for $u=\pi$,
-så er
+og da en stamfunktion til $\sin^{3}(u)\cdot \cos(u)$ er $\frac{1}{4}\cdot \sin^{4}(u)$ som er $0$ bÃ¥de for $u=0$ og for $u=\pi$,
+sÃ¥ er
 \begin{equation}
 \Flux(\Rot(\mathbf{W}), F_{\mathbf{r}}) = 0
 \end{equation}
-i overensstemmelse med følgesætning \ref{corTotFlux0}.
+i overensstemmelse med fÃ¸lgesÃ¦tning \ref{corTotFlux0}.
 \end{example}
 
 \begin{think}
-Læg mærke til, at hvis integrationsintervallerne for $u$ og $v$  i ligning (\ref{eqIntegrat}) i eksempel \ref{exampRotFeltFlux}  havde været
-mindre, dvs. hvis vi havde betragtet fluxen af rotationsvektorfeltet ud igennem \emph{en del af} kugleoverfladen, så ville resultatet ikke nødvendigvis blive $0$, hvilket også fremgår tydeligt af figur \ref{figKugleFluxRot}. \\
+LÃ¦g mÃ¦rke til, at hvis integrationsintervallerne for $u$ og $v$  i ligning (\ref{eqIntegrat}) i eksempel \ref{exampRotFeltFlux}  havde vÃ¦ret
+mindre, dvs. hvis vi havde betragtet fluxen af rotationsvektorfeltet ud igennem \emph{en del af} kugleoverfladen, sÃ¥ ville resultatet ikke nÃ¸dvendigvis blive $0$, hvilket ogsÃ¥ fremgÃ¥r tydeligt af figur \ref{figKugleFluxRot}. \\
 
-Fluxen af $\Rot(\mathbf{W}(x,y,z)$ igennem et fladestykke kan alternativ beregnes som cirkulationen  af $\mathbf{W}(x,y,z)$ langs med fladestykkets rand -- det er indholdet af Stokes' sætning, som er emnet for eNote 27.
+Fluxen af $\Rot(\mathbf{W}(x,y,z)$ igennem et fladestykke kan alternativ beregnes som cirkulationen  af $\mathbf{W}(x,y,z)$ langs med fladestykkets rand -- det er indholdet af Stokes' sÃ¦tning, som er emnet for eNote 27.
 \end{think}
 
 
@@ -1399,22 +1399,22 @@ Fluxen af $\Rot(\mathbf{W}(x,y,z)$ igennem et fladestykke kan alternativ beregne
 \begin{figure}[ht]
 \centerline{\includegraphics[width=85mm]{FIGS/plotSphFlowRot4}\includegraphics[width=85mm]{FIGS/plotSphPartFlowRot}}
 \begin{center}
-\caption{\small{Det divergensfrie vektorfelt $\mathbf{V}(x,y,z) = (-z, (y-x)/2, x-(z/2))$ deformerer en massiv kugle til en massiv ellipsoide ved at alle kuglens punkter flyder med  flowkurverne for vektorfeltet. Rumfanget er bevaret. Til højre er vist, hvordan et udsnit af kugleoverfladen flyder og danner en del af ellipsoide-overfladen.}} \label{figSphFlowRotB}
+\caption{\small{Det divergensfrie vektorfelt $\mathbf{V}(x,y,z) = (-z, (y-x)/2, x-(z/2))$ deformerer en massiv kugle til en massiv ellipsoide ved at alle kuglens punkter flyder med  flowkurverne for vektorfeltet. Rumfanget er bevaret. Til hÃ¸jre er vist, hvordan et udsnit af kugleoverfladen flyder og danner en del af ellipsoide-overfladen.}} \label{figSphFlowRotB}
 \end{center}
 \end{figure}
 
-\begin{example}[Divergensfrit førstegrads-vektorfelt]\label{exampFirstDiv0}
-Første-grads vektorfeltet
+\begin{example}[Divergensfrit fÃ¸rstegrads-vektorfelt]\label{exampFirstDiv0}
+FÃ¸rste-grads vektorfeltet
 \begin{equation}
 \mathbf{V}(x,y,z) =  (-z, (y-x)/2, x-(z/2))
 \end{equation}
-har divergensen $\Div(\mathbf{V})(x,y,z) = 0$. Den totale flux af vektorfeltet ud igennem overfladen af ethvert rumligt område er derfor $0$ og rumfanget af det rumlige område er bevaret ved flow med vektorfeltets flowkurver. \\
+har divergensen $\Div(\mathbf{V})(x,y,z) = 0$. Den totale flux af vektorfeltet ud igennem overfladen af ethvert rumligt omrÃ¥de er derfor $0$ og rumfanget af det rumlige omrÃ¥de er bevaret ved flow med vektorfeltets flowkurver. \\
 
-For første-gradsvektorfelter gælder, at enhver massiv kugle deformeres igennem massive \emph{ellipsoider} ved at flyde med vektorfeltet, se figur \ref{figSphFlowRotA}, figur \ref{figSphFlowRotB} og opgave \ref{exercDiffSys}.
+For fÃ¸rste-gradsvektorfelter gÃ¦lder, at enhver massiv kugle deformeres igennem massive \emph{ellipsoider} ved at flyde med vektorfeltet, se figur \ref{figSphFlowRotA}, figur \ref{figSphFlowRotB} og opgave \ref{exercDiffSys}.
 \end{example}
 
 \begin{exercise}[(Advanced)]\label{exercDiffSys}
-Lad $\mathbf{V}(x,y,z)$ betegne et vilkårligt førstegrads-vektorfelt (se \tref{NUID40-tn24}{eNote}) og lad $F_{0}$ betegne en vilkårlig niveauflade for et givet andengradspolynomium $f_{0}(x,y,z)$ i $x$, $y$, og $z$ (se \tref{NUID35-tn20}{eNote}). Vi lader så  $F_{0}$ flyde tiden $t$ med flowkurverne for $\mathbf{V}(x,y,z)$ og får derved en flade $F_{t}$. Vis, at $F_{t}$ også er en niveauflade for et andengradspolynomium $f_{t}(x,y,z)$ i $x$, $y$, og $z$. Vink: Se \tref{NUID13-tn12}{eNote}.
+Lad $\mathbf{V}(x,y,z)$ betegne et vilkÃ¥rligt fÃ¸rstegrads-vektorfelt (se \tref{NUID40-tn24}{eNote}) og lad $F_{0}$ betegne en vilkÃ¥rlig niveauflade for et givet andengradspolynomium $f_{0}(x,y,z)$ i $x$, $y$, og $z$ (se \tref{NUID35-tn20}{eNote}). Vi lader sÃ¥  $F_{0}$ flyde tiden $t$ med flowkurverne for $\mathbf{V}(x,y,z)$ og fÃ¥r derved en flade $F_{t}$. Vis, at $F_{t}$ ogsÃ¥ er en niveauflade for et andengradspolynomium $f_{t}(x,y,z)$ i $x$, $y$, og $z$. Vink: Se \tref{NUID13-tn12}{eNote}.
 \end{exercise}
 
 
@@ -1430,7 +1430,7 @@ Lad $\mathbf{V}(x,y,z)$ betegne et vilkårligt førstegrads-vektorfelt (se \tref{N
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{summary}
-Vi har indført det fundamentale begreb \emph{flux af et vektorfelt igennem en flade} og relateret fluxen dels til den lokale volumen-ekspansions-rate ved selve fladen når denne flyder med flowkurverne for vektorfeltet, og dels til divergensen af vektorfeltet inde i et rumligt område der er afgrænset af en given overflade.
+Vi har indfÃ¸rt det fundamentale begreb \emph{flux af et vektorfelt igennem en flade} og relateret fluxen dels til den lokale volumen-ekspansions-rate ved selve fladen nÃ¥r denne flyder med flowkurverne for vektorfeltet, og dels til divergensen af vektorfeltet inde i et rumligt omrÃ¥de der er afgrÃ¦nset af en given overflade.
 \begin{itemize}
 \item For en glat parametriseret flade $F_{\mathbf{r}}$ og et glat vektorfelt $\mathbf{V}(x,y,z)$ er fluxen af vektorfeltet igennem fladen:
 \begin{equation}
@@ -1440,13 +1440,13 @@ r}'_{u}(u,v)\times{\bf r}'_{v}(u,v))\,du \, dv  \\
 &= \, \int_{c}^{d}\int_{a}^{b}{\bf V}({\bf r}(u,v)) \bm{\cdot} \mathbf{N}_{F}(u,v)\,\,du \, dv  \quad .
 \end{aligned}
 \end{equation}
-\item Ved at lade fladen flyde en tid $t$ med flowkurverne for $\mathbf{V}(x,y,z)$ fejer fladen igennem et tids-afhængigt rumligt område $\Omega_{\mathbf{r}}(t)$, som lokalt enten ligger i retning af fladens standardnormal eller i modsatte retning. Det med fortegn vægtede rumfang beregnes ved hjælp af Jacobifunktionen for parameterfremstillingen -- \emph{uden numerisk tegn}. Dette rumfang kalder vi $\Vol_{\pm}(t)$. Så er fluxen relateret til dette volumen på følgende måde:
+\item Ved at lade fladen flyde en tid $t$ med flowkurverne for $\mathbf{V}(x,y,z)$ fejer fladen igennem et tids-afhÃ¦ngigt rumligt omrÃ¥de $\Omega_{\mathbf{r}}(t)$, som lokalt enten ligger i retning af fladens standardnormal eller i modsatte retning. Det med fortegn vÃ¦gtede rumfang beregnes ved hjÃ¦lp af Jacobifunktionen for parameterfremstillingen -- \emph{uden numerisk tegn}. Dette rumfang kalder vi $\Vol_{\pm}(t)$. SÃ¥ er fluxen relateret til dette volumen pÃ¥ fÃ¸lgende mÃ¥de:
 \begin{equation}
 \Flux({\bf V}, F_{\bf r}) = \frac{d}{dt}_{|_{t=0}}\Vol_{\pm}(\Omega_{\mathbf{r}}(t)) = \Vol'_{\pm}(0) \quad.
 \end{equation}
-\item Divergensen af vektorfeltet er også et mål for lokal volumen-ekspansion (hvor $\Div(\mathbf{V})(x,y,z) > 0$) henholdsvis volumen-kontraktion (hvor $\Div(\mathbf{V})(x,y,z) < 0$) ved flow langs flowkurverne for vektorfeltet. Integralet af divergensen over et rumligt område $\Omega_{\mathbf{r}}$ er derfor et mål for hele områdets totale volumen-ekspansion (eller kontraktion) og giver derfor ligeledes værdien $\Vol'_{\pm}(0)$, hvor $\Vol_{\pm}(t)$ her beregnes for \emph{hele} overfladens volumen-bidrag (med fortegn) ved flow langs flow\-kur\-ver\-ne i forhold til den \emph{udadrettede} normalvektor $\mathbf{n}_{\partial \Omega}$ på overfladen. \\
+\item Divergensen af vektorfeltet er ogsÃ¥ et mÃ¥l for lokal volumen-ekspansion (hvor $\Div(\mathbf{V})(x,y,z) > 0$) henholdsvis volumen-kontraktion (hvor $\Div(\mathbf{V})(x,y,z) < 0$) ved flow langs flowkurverne for vektorfeltet. Integralet af divergensen over et rumligt omrÃ¥de $\Omega_{\mathbf{r}}$ er derfor et mÃ¥l for hele omrÃ¥dets totale volumen-ekspansion (eller kontraktion) og giver derfor ligeledes vÃ¦rdien $\Vol'_{\pm}(0)$, hvor $\Vol_{\pm}(t)$ her beregnes for \emph{hele} overfladens volumen-bidrag (med fortegn) ved flow langs flow\-kur\-ver\-ne i forhold til den \emph{udadrettede} normalvektor $\mathbf{n}_{\partial \Omega}$ pÃ¥ overfladen. \\
 
-     Det er indholdet af Gauss' divergenssætning:
+     Det er indholdet af Gauss' divergenssÃ¦tning:
 \begin{equation}
 \frac{d}{dt}\Vol_{\pm}(t)_{|_{t=0}}\, = \,
 \int_{\Omega_{\bf{r}}} \, \Div({\bf{V}}) \,\,
@@ -1455,7 +1455,7 @@ V}\cdot {\bf{n}}_{\partial \Omega}\,\,d\mu \, =
 \, \Flux({\bf{V}},
 \partial \Omega_{\bf{r}}) \quad .
 \end{equation}
-\item En konsekvens af Gauss' divergenssætning er følgende: Hvis et vilkårligt rumligt område flyder langs flowkurverne for et divergensfrit vektorfelt, så er områdets rumfang konstant i tid -- selv om formen af området i tiden selvfølgelig kan ændre sig meget. Ethvert rotationsvektorfelt $\Rot(\mathbf{W})(x,y,z)$  er divergensfrit. Et rumligt område, der 'roterer' i den meget generelle forstand, at det flyder langs flowkurverne for  $\Rot(\mathbf{W})(x,y,z)$ bevarer derfor sit rumfang.
+\item En konsekvens af Gauss' divergenssÃ¦tning er fÃ¸lgende: Hvis et vilkÃ¥rligt rumligt omrÃ¥de flyder langs flowkurverne for et divergensfrit vektorfelt, sÃ¥ er omrÃ¥dets rumfang konstant i tid -- selv om formen af omrÃ¥det i tiden selvfÃ¸lgelig kan Ã¦ndre sig meget. Ethvert rotationsvektorfelt $\Rot(\mathbf{W})(x,y,z)$  er divergensfrit. Et rumligt omrÃ¥de, der 'roterer' i den meget generelle forstand, at det flyder langs flowkurverne for  $\Rot(\mathbf{W})(x,y,z)$ bevarer derfor sit rumfang.
 \end{itemize}
 \end{summary}
 

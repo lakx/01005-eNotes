@@ -1,10 +1,10 @@
 \input{../Strukturfiler/preambel}
-\setcounter{chapter}{13} %SÆT DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
+\setcounter{chapter}{13} %SÃ†T DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% HERFRA SKAL DU SKRIVE ELLER INDSÆTTE %%%%
-%%% DEN FIL DU ØNSKER %%%%%%%%%%%%%%%%%%%%%%%
+%%% HERFRA SKAL DU SKRIVE ELLER INDSÃ†TTE %%%%
+%%% DEN FIL DU Ã˜NSKER %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -12,12 +12,12 @@
 % REF: TransferNote \ref{TN4-tn4} \nameref{TN4-tn4}
 
 
-\chapter{Elementære funktioner} \label{tn14}
+\chapter{ElementÃ¦re funktioner} \label{tn14}
 
 
 \begin{basis}
 I denne eNote vil vi dels repetere nogle af de basale egenskaber for et udvalg af de (fra gymnasiet) velkendte funktioner $f(x)$ af \'{e}n reel variabel $x$,  og dels introducere enkelte nye funktioner,
-som typisk optræder i mangfoldige sammenhænge. De grundlæggende spørgsmål vedrørende enhver funktion drejer sig typisk om følgende: Hvordan og for hvilke $x$ er funktionen \emph{defineret}? Hvilke værdier af $f(x)$ får vi når vi bruger funktionen på elementerne $x$ i definitionsmængden? Er funktionen \emph{kontinuert}? Hvad er \emph{differentialkvotienten} $f'(x)$ af funktionen -- hvis den eksisterer? Som noget nyt vil vi indføre en meget stor \emph{klasse} af funktioner, \ind{epsilon-funktioner}{epsilon-funktionerne}, som betegnes med fællesbetegnelsen $\varepsilon(x)$ og som vi gennemgående vil benytte til at beskrive kontinuitet og differentiabilitet -- også af funktioner af flere variable, som vil blive indført og analyseret i de efterfølgende eNoter.
+som typisk optrÃ¦der i mangfoldige sammenhÃ¦nge. De grundlÃ¦ggende spÃ¸rgsmÃ¥l vedrÃ¸rende enhver funktion drejer sig typisk om fÃ¸lgende: Hvordan og for hvilke $x$ er funktionen \emph{defineret}? Hvilke vÃ¦rdier af $f(x)$ fÃ¥r vi nÃ¥r vi bruger funktionen pÃ¥ elementerne $x$ i definitionsmÃ¦ngden? Er funktionen \emph{kontinuert}? Hvad er \emph{differentialkvotienten} $f'(x)$ af funktionen -- hvis den eksisterer? Som noget nyt vil vi indfÃ¸re en meget stor \emph{klasse} af funktioner, \ind{epsilon-funktioner}{epsilon-funktionerne}, som betegnes med fÃ¦llesbetegnelsen $\varepsilon(x)$ og som vi gennemgÃ¥ende vil benytte til at beskrive kontinuitet og differentiabilitet -- ogsÃ¥ af funktioner af flere variable, som vil blive indfÃ¸rt og analyseret i de efterfÃ¸lgende eNoter.
 \end{basis}
 
 
@@ -27,12 +27,12 @@ som typisk optræder i mangfoldige sammenhænge. De grundlæggende spørgsmål vedrør
 
 
 
-\section{Definitionsmængde og værdimængde} \label{tn14.secDefVal}
-Ved beskrivelsen af en reel funktion $f(x)$ anføres dels de reelle tal $x$, hvor funktionen er defineret, og dels de
-værdier, som kan fås ved at benytte funktionen på defintionsmængden. \ind{definitionsmængde}{Definitionsmængden} kalder vi $\mathcal{D}m(f)$ og \ind{værdimængde}{værdimængden} kalder vi $\mathcal{V}m(f)$.
+\section{DefinitionsmÃ¦ngde og vÃ¦rdimÃ¦ngde} \label{tn14.secDefVal}
+Ved beskrivelsen af en reel funktion $f(x)$ anfÃ¸res dels de reelle tal $x$, hvor funktionen er defineret, og dels de
+vÃ¦rdier, som kan fÃ¥s ved at benytte funktionen pÃ¥ defintionsmÃ¦ngden. \ind{definitionsmÃ¦ngde}{DefinitionsmÃ¦ngden} kalder vi $\mathcal{D}m(f)$ og \ind{vÃ¦rdimÃ¦ngde}{vÃ¦rdimÃ¦ngden} kalder vi $\mathcal{V}m(f)$.
 
-\begin{example}[Nogle definitionsmængder og værdimængder] \label{tn14.exampElemDV}
-Her er  definitonsmængder og tilhørende værdimængder for nogle velkendte funktioner.
+\begin{example}[Nogle definitionsmÃ¦ngder og vÃ¦rdimÃ¦ngder] \label{tn14.exampElemDV}
+Her er  definitonsmÃ¦ngder og tilhÃ¸rende vÃ¦rdimÃ¦ngder for nogle velkendte funktioner.
 \begin{equation}
 \begin{array}{lllll}
   f_{1}(x) = \exp(x) & , & \mathcal{D}m(f_{1}) = \mathbb{R} = \, ]- \infty, \infty[  & , & \mathcal{V}m(f_{1}) = \,]0, \infty[ \\
@@ -51,14 +51,14 @@ Her er  definitonsmængder og tilhørende værdimængder for nogle velkendte funktio
 \begin{figure}[h]
 \centerline{\includegraphics[width=75mm]{FIGS/plotexp02.pdf} \includegraphics[width=75mm]{FIGS/plotln.pdf}}
 \begin{center}
-\caption{Den velkendte eksponentialfunktion $e^{x} = \exp(x)$ og den naturlige logaritmefunktion $\ln(x)$. De røde cirkler på den negative $x$-akse og i $0$ indikerer, at logaritmefunktionen ikke er defineret i $]-\infty, 0]$. } \label{tn14.figExpLn}
+\caption{Den velkendte eksponentialfunktion $e^{x} = \exp(x)$ og den naturlige logaritmefunktion $\ln(x)$. De rÃ¸de cirkler pÃ¥ den negative $x$-akse og i $0$ indikerer, at logaritmefunktionen ikke er defineret i $]-\infty, 0]$. } \label{tn14.figExpLn}
 \end{center}
 \end{figure}
 
 
 
 \begin{think}
-Funktionen $f_{8}(x)$ i eksempel \ref{tn14.exampElemDV} er defineret ud fra $|x|$, som betegner den numeriske værdi af $x$, dvs.
+Funktionen $f_{8}(x)$ i eksempel \ref{tn14.exampElemDV} er defineret ud fra $|x|$, som betegner den numeriske vÃ¦rdi af $x$, dvs.
 \begin{equation}
 |x| = \left\{
         \begin{array}{ll}
@@ -68,7 +68,7 @@ Funktionen $f_{8}(x)$ i eksempel \ref{tn14.exampElemDV} er defineret ud fra $|x|
         \end{array}
       \right.
 \end{equation}
-Heraf følger definitionsmængde og værdimængde for $f_{8}(x)$ direkte.
+Heraf fÃ¸lger definitionsmÃ¦ngde og vÃ¦rdimÃ¦ngde for $f_{8}(x)$ direkte.
 \end{think}
 
 \begin{example}[Tangens]
@@ -76,11 +76,11 @@ Funktionen
 \begin{equation}
 f(x) = \tan(x) = \frac{\sin(x)}{\cos(x)}
 \end{equation}
-har definitionsmængden $\mathcal{D}m(f) = \mathbb{R} \setminus A$, hvor $A$ betegner de reelle tal $x$, hvor nævneren $\cos(x)$ er $0$, dvs.
+har definitionsmÃ¦ngden $\mathcal{D}m(f) = \mathbb{R} \setminus A$, hvor $A$ betegner de reelle tal $x$, hvor nÃ¦vneren $\cos(x)$ er $0$, dvs.
 \begin{equation}
 \mathcal{D}m(f) =  \mathbb{R} \setminus \{ x\,| \, \cos(x) = 0 \} = \mathbb{R} \setminus \{(\pi/2) + p \cdot \pi \, , \, \textrm{hvor $p$ er et helt tal} \}\quad.
 \end{equation}
-Værdimængden $\mathcal{V}m(f)$ er alle de reelle tal, se figur \ref{tn14.figplottancot}.
+VÃ¦rdimÃ¦ngden $\mathcal{V}m(f)$ er alle de reelle tal, se figur \ref{tn14.figplottancot}.
 \end{example}
 
 \begin{figure}[h]
@@ -98,19 +98,19 @@ Lad $g(x)$ betegne den reciprokke funktion til funktionen $\tan(x)$:
 \begin{equation}
 g(x) = \cot(x) = \frac{\cos(x)}{\sin(x)}
 \end{equation}
-Bestem definitionsmængden for $g(x)$ og skriv den på samme måde som for $\tan(x)$ ovenfor, se figur \ref{tn14.figplottancot}.
+Bestem definitionsmÃ¦ngden for $g(x)$ og skriv den pÃ¥ samme mÃ¥de som for $\tan(x)$ ovenfor, se figur \ref{tn14.figplottancot}.
 \end{exercise}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection{Udvidelser af definitionsmængden til hele $\mathbb{R}$}
+\subsection{Udvidelser af definitionsmÃ¦ngden til hele $\mathbb{R}$}
 
-En funktion $f(x)$, som ikke er defineret i alle reelle tal, kan kan let \emph{udvides} til en funktion $\widehat{f}(x)$ som  har $\mathcal{D}m(\widehat{f}) = \mathbb{R}$. Det kan for eksempel gøres ved hjælp af en \ind{tuborgparentes}{tuborgparentes} på følgende måde:
+En funktion $f(x)$, som ikke er defineret i alle reelle tal, kan kan let \emph{udvides} til en funktion $\widehat{f}(x)$ som  har $\mathcal{D}m(\widehat{f}) = \mathbb{R}$. Det kan for eksempel gÃ¸res ved hjÃ¦lp af en \ind{tuborgparentes}{tuborgparentes} pÃ¥ fÃ¸lgende mÃ¥de:
 
 \begin{definition}
-Givet en funktion $f(x)$ med $\mathcal{D}m(f) \neq \mathbb{R}$, så definerer vi \ind{nul-udvidelse af en funktion}{$0$-udvidelsen} af $f(x)$ ved:
+Givet en funktion $f(x)$ med $\mathcal{D}m(f) \neq \mathbb{R}$, sÃ¥ definerer vi \ind{nul-udvidelse af en funktion}{$0$-udvidelsen} af $f(x)$ ved:
 \begin{equation}
 \widehat{f}(x) = \left\{
                       \begin{array}{ll}
@@ -122,15 +122,15 @@ Givet en funktion $f(x)$ med $\mathcal{D}m(f) \neq \mathbb{R}$, så definerer vi 
 \end{definition}
 
 \begin{think}
-Det er klart, at afhængig af anvendelsen kan man plombere og udvide definitionsmængden for $f(x)$ på mange andre måder end ved at vælge konstanten $0$ som værdi for den udvidede funktion i de punkter hvor den oprindelige funktion ikke er defineret.
+Det er klart, at afhÃ¦ngig af anvendelsen kan man plombere og udvide definitionsmÃ¦ngden for $f(x)$ pÃ¥ mange andre mÃ¥der end ved at vÃ¦lge konstanten $0$ som vÃ¦rdi for den udvidede funktion i de punkter hvor den oprindelige funktion ikke er defineret.
 \end{think}
 
 \begin{aha}
-\emph{Værdimængden} $\mathcal{V}m(\widehat{f})$ for den $0$-udvidede funktion er naturligvis den oprindelige værdimængde for $f(x)$ forenet med værdien $0$, dvs. $\mathcal{V}m(\widehat{f}) = \mathcal{V}m(f) \cup \{0\}$ .
+\emph{VÃ¦rdimÃ¦ngden} $\mathcal{V}m(\widehat{f})$ for den $0$-udvidede funktion er naturligvis den oprindelige vÃ¦rdimÃ¦ngde for $f(x)$ forenet med vÃ¦rdien $0$, dvs. $\mathcal{V}m(\widehat{f}) = \mathcal{V}m(f) \cup \{0\}$ .
 \end{aha}
 
 
-Vi vil herefter typisk -- medmindre andet nævnes helt tydeligt -- antage, at de funktioner vi betragter er definerede i hele $\mathbb{R}$ (eventuelt ved hjælp af en udvidelseskonstruktion) som ovenfor.
+Vi vil herefter typisk -- medmindre andet nÃ¦vnes helt tydeligt -- antage, at de funktioner vi betragter er definerede i hele $\mathbb{R}$ (eventuelt ved hjÃ¦lp af en udvidelseskonstruktion) som ovenfor.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -140,24 +140,24 @@ Vi vil herefter typisk -- medmindre andet nævnes helt tydeligt -- antage, at de 
 
 \section{Epsilon-funktioner} \label{tn14.secOmvendtFunk}
 
-Vi indfører en særlig klasse af funktioner, som vi vil benytte til at definere
+Vi indfÃ¸rer en sÃ¦rlig klasse af funktioner, som vi vil benytte til at definere
 det vigtige begreb kontinuitet for funktioner.
 
 \begin{definition}[Epsilon-funktioner] \label{tn14.defEpsilonFunk}
- Enhver funktion $\varepsilon(x)$ som er defineret i et åbent interval der indeholder $0$,
- og som antager værdien $\varepsilon(0) = 0$ i $x=0$ og
- derudover går imod $0$ når $x$ går imod $0$ kaldes en \ind{epsilon-funktion}{epsilon-funktion} af $x$. Epsilon-funktioner er altså karakteriserede ved egenskaberne:
+ Enhver funktion $\varepsilon(x)$ som er defineret i et Ã¥bent interval der indeholder $0$,
+ og som antager vÃ¦rdien $\varepsilon(0) = 0$ i $x=0$ og
+ derudover gÃ¥r imod $0$ nÃ¥r $x$ gÃ¥r imod $0$ kaldes en \ind{epsilon-funktion}{epsilon-funktion} af $x$. Epsilon-funktioner er altsÃ¥ karakteriserede ved egenskaberne:
  \begin{equation}
  \varepsilon(0) = 0 \quad \textrm{og} \quad  \varepsilon(x) \to 0 \quad \textrm{for} \quad x \to 0 \quad .
  \end{equation}
-Den sidste betingelse er ækvivalent med, at den numeriske værdi af $\varepsilon(x)$ kan gøres så lille som ønsket ved blot at vælge den numeriske værdi af $x$ tilstrækkelig lille. Helt præcis betyder betingelsen:
-For ethvert helt tal $k >0$ findes der et helt tal $K > 0$ sådan at $|\varepsilon(x)| < 1/k$ for alle $x$ med  $|x| < 1/K$.\\
+Den sidste betingelse er Ã¦kvivalent med, at den numeriske vÃ¦rdi af $\varepsilon(x)$ kan gÃ¸res sÃ¥ lille som Ã¸nsket ved blot at vÃ¦lge den numeriske vÃ¦rdi af $x$ tilstrÃ¦kkelig lille. Helt prÃ¦cis betyder betingelsen:
+For ethvert helt tal $k >0$ findes der et helt tal $K > 0$ sÃ¥dan at $|\varepsilon(x)| < 1/k$ for alle $x$ med  $|x| < 1/K$.\\
 \end{definition}
 
-Mængden af epsilon-funktioner er meget stor:
+MÃ¦ngden af epsilon-funktioner er meget stor:
 
 \begin{example}[Epsilon-funktioner]
-Her er nogle simple eksempler på epsilon-funktioner:
+Her er nogle simple eksempler pÃ¥ epsilon-funktioner:
 \begin{equation}
 \begin{aligned}
 \varepsilon_{1}(x) &=  x\\
@@ -169,24 +169,24 @@ Her er nogle simple eksempler på epsilon-funktioner:
 \end{example}
 
 \begin{aha}
-Egenskaben 'at være en epsilon-funktion' er ret stabil:
-Produktet af en epsilon-funktion med en vilkårlig anden funktion, der blot er begrænset, er også en epsilon-funktion.
-Summen og produktet af to epsilon-funktioner er  igen epsilon-funktioner. Den numeriske værdi
+Egenskaben 'at vÃ¦re en epsilon-funktion' er ret stabil:
+Produktet af en epsilon-funktion med en vilkÃ¥rlig anden funktion, der blot er begrÃ¦nset, er ogsÃ¥ en epsilon-funktion.
+Summen og produktet af to epsilon-funktioner er  igen epsilon-funktioner. Den numeriske vÃ¦rdi
 af en epsilon-funktion er en epsilon-funktion.
 \end{aha}
 
-Funktioner der er $0$ andre steder end i $x=0$ kan også give anledning til epsilon-funktioner:
+Funktioner der er $0$ andre steder end i $x=0$ kan ogsÃ¥ give anledning til epsilon-funktioner:
 
 \begin{think}
-Hvis en funktion $g(x)$ har egenskaberne $g(x_{0}) = 0$ og  $g(x) \to 0$ for $x \to x_{0}$, så er $g(x)$ en epsilon-funktion af $x-x_{0}$, dvs. vi kan skrive $g(x) = \varepsilon_{g}(x-x_{0})$.
+Hvis en funktion $g(x)$ har egenskaberne $g(x_{0}) = 0$ og  $g(x) \to 0$ for $x \to x_{0}$, sÃ¥ er $g(x)$ en epsilon-funktion af $x-x_{0}$, dvs. vi kan skrive $g(x) = \varepsilon_{g}(x-x_{0})$.
 \end{think}
 
 \begin{exercise} \label{tn14.exercNumDiv}
-Vis, at $0$-udvidelsen $\widehat{f}_{8}(x)$ af funktionen $f_{8}(x) = |x|/x$ \emph{ikke} er en epsilon-funktion. Vink: Hvis vi vælger $k = 10$ så findes der helt klart \emph{ikke} nogen værdi af $K$ sådan at
+Vis, at $0$-udvidelsen $\widehat{f}_{8}(x)$ af funktionen $f_{8}(x) = |x|/x$ \emph{ikke} er en epsilon-funktion. Vink: Hvis vi vÃ¦lger $k = 10$ sÃ¥ findes der helt klart \emph{ikke} nogen vÃ¦rdi af $K$ sÃ¥dan at
 \begin{equation}
 |f_{8}(x)| = |\,|x|/x \,| = 1 < \frac{1}{10}\quad , \quad \textrm{for alle $x$ med} \quad  |x| < \frac{1}{K}\quad .
 \end{equation}
-Tegn grafen for $\widehat{f}_{8}(x)$. Den kan ikke tegnes uden at 'løfte blyanten fra papiret'!
+Tegn grafen for $\widehat{f}_{8}(x)$. Den kan ikke tegnes uden at 'lÃ¸fte blyanten fra papiret'!
 \end{exercise}
 
 
@@ -202,29 +202,29 @@ Vis, at $0$-udvidelsen af funktionen $f(x) = \sin(1/x)$ \emph{ikke} er en epsilo
 
 \section{Kontinuerte funktioner} \label{tn14.secDifferentiation}
 
-Vi kan nu formulere \ind{kontinuitetsbegrebet}{kontinuitetsbegrebet} ved hjælp af epsilon-funktioner:
+Vi kan nu formulere \ind{kontinuitetsbegrebet}{kontinuitetsbegrebet} ved hjÃ¦lp af epsilon-funktioner:
 
 \begin{definition}[Kontinuitet] \label{tn14.defKont}
 En funktion $f(x)$ er kontinuert i $x_{0}$ hvis der eksisterer en
-epsilon-funktion $\varepsilon_{f}(x - x_{0})$ således at følgende gælder i et åbent interval der indeholder $x_{0}$:
+epsilon-funktion $\varepsilon_{f}(x - x_{0})$ sÃ¥ledes at fÃ¸lgende gÃ¦lder i et Ã¥bent interval der indeholder $x_{0}$:
 \begin{equation}
 f(x) = f(x_{0}) + \varepsilon_{f}(x - x_{0}) \quad .
 \end{equation}
-Hvis $f(x)$ er kontinuert i alle $x_{0}$ i et givet åbent interval i $\mathcal{D}m(f)$, så siger vi at $f(x)$ er kontinuert i intervallet.
+Hvis $f(x)$ er kontinuert i alle $x_{0}$ i et givet Ã¥bent interval i $\mathcal{D}m(f)$, sÃ¥ siger vi at $f(x)$ er kontinuert i intervallet.
 \end{definition}
 
 \begin{aha}
-Læg mærke til, at selv om det klart, hvad epsilon-funktionen helt præcist er i definitionen \ref{tn14.defKont}, nemlig $f(x) - f(x_{0})$, så er den eneste egenskab vi er interesserede i følgende:
-$\varepsilon_{f}(x - x_{0}) \to 0$ for $ x \to x_{0}$, sådan at $f(x) \to f(x_{0})$ for $x \to x_{0}$,
-altså præcis som vi kender kontinuitets-begrebet fra gymnasiet!
+LÃ¦g mÃ¦rke til, at selv om det klart, hvad epsilon-funktionen helt prÃ¦cist er i definitionen \ref{tn14.defKont}, nemlig $f(x) - f(x_{0})$, sÃ¥ er den eneste egenskab vi er interesserede i fÃ¸lgende:
+$\varepsilon_{f}(x - x_{0}) \to 0$ for $ x \to x_{0}$, sÃ¥dan at $f(x) \to f(x_{0})$ for $x \to x_{0}$,
+altsÃ¥ prÃ¦cis som vi kender kontinuitets-begrebet fra gymnasiet!
 \end{aha}
 
 \begin{exercise} \label{tn14.exercNonKontEps}
-Alle epsilon-funktioner er herefter per definition kontinuerte i $x_{0} = 0$ (med værdien $0$ i $x_{0}=0$). Konstru\'{e}r en epsilon-funktion, som \emph{ikke} er kontinuert i nogen som helst af punkterne $x_{0} = 1/n$ hvor $n = 1, 2, 3, 4, \cdots$.
+Alle epsilon-funktioner er herefter per definition kontinuerte i $x_{0} = 0$ (med vÃ¦rdien $0$ i $x_{0}=0$). Konstru\'{e}r en epsilon-funktion, som \emph{ikke} er kontinuert i nogen som helst af punkterne $x_{0} = 1/n$ hvor $n = 1, 2, 3, 4, \cdots$.
 \end{exercise}
 
 \begin{aha}
-Selvom epsilon-funktions-begrebet er helt fundamentalt for definitionen af kontinuitet (og, som vi skal se nedenfor, for definitionen af differentiabilitet), så behøver epsilonfunktionerne altså ikke selv at være kontinuerte andre steder end netop i $x_{0}=0$.
+Selvom epsilon-funktions-begrebet er helt fundamentalt for definitionen af kontinuitet (og, som vi skal se nedenfor, for definitionen af differentiabilitet), sÃ¥ behÃ¸ver epsilonfunktionerne altsÃ¥ ikke selv at vÃ¦re kontinuerte andre steder end netop i $x_{0}=0$.
 \end{aha}
 
 \begin{exercise} \label{tn14.exercNumDiv}
@@ -238,52 +238,52 @@ Vis, at $0$-udvidelsen $\widehat{f}(x)$ af funktionen $f(x) = |x-7|/(x-7)$ \emph
 
 \section{Differentiable funktioner} \label{tn14.secDifferentiation}
 \begin{definition}[Differentiabilitet]
-En funktion $f(x)$ er differentiabel i $x_{0} \in \mathcal{D}m(f)$ hvis der findes en konstant $a$ og en epsilon-funktion $\varepsilon_{f}(x-x_{0})$ sådan at
+En funktion $f(x)$ er differentiabel i $x_{0} \in \mathcal{D}m(f)$ hvis der findes en konstant $a$ og en epsilon-funktion $\varepsilon_{f}(x-x_{0})$ sÃ¥dan at
 \begin{equation} \label{tn14.eqDifferentiabilitet}
 f(x) = f(x_{0}) + a\cdot(x-x_{0}) + (x-x_{0})\cdot \varepsilon_{f}(x-x_{0}) \quad.
 \end{equation}
-Det er det tal $a$, vi kalder $f'(x_{0})$ og det er veldefineret i den forstand, at hvis $f(x)$ i det hele taget \emph{kan} fremstilles på ovenstående form
-(altså hvis $f(x)$ er differentiabel i $x_{0}$), så er der \'{e}n og kun \'{e}n værdi for $a$, som gør formlen rigtig. Med denne definition af \ind{differentialkvotient}{differentialkvotienten} $f'(x_{0})$ af $f(x)$ i $x_{0}$ har vi altså:
+Det er det tal $a$, vi kalder $f'(x_{0})$ og det er veldefineret i den forstand, at hvis $f(x)$ i det hele taget \emph{kan} fremstilles pÃ¥ ovenstÃ¥ende form
+(altsÃ¥ hvis $f(x)$ er differentiabel i $x_{0}$), sÃ¥ er der \'{e}n og kun \'{e}n vÃ¦rdi for $a$, som gÃ¸r formlen rigtig. Med denne definition af \ind{differentialkvotient}{differentialkvotienten} $f'(x_{0})$ af $f(x)$ i $x_{0}$ har vi altsÃ¥:
 \begin{equation} \label{tn14.eqDifferentiabilitetB}
 f(x) = f(x_{0}) + f'(x_{0})\cdot(x-x_{0}) + (x-x_{0})\cdot \varepsilon_{f}(x-x_{0}) \quad.
 \end{equation}
-Hvis $f(x)$ er differentiabel i alle $x_{0}$ i et givet åbent interval i $\mathcal{D}m(f)$, så siger vi naturligvis, at $f(x)$ er differentiabel i intervallet.
-Vi skriver ofte differentialkvotienten af $f(x)$ i $x$ på følgende alternative måde:
+Hvis $f(x)$ er differentiabel i alle $x_{0}$ i et givet Ã¥bent interval i $\mathcal{D}m(f)$, sÃ¥ siger vi naturligvis, at $f(x)$ er differentiabel i intervallet.
+Vi skriver ofte differentialkvotienten af $f(x)$ i $x$ pÃ¥ fÃ¸lgende alternative mÃ¥de:
 \begin{equation}
 f'(x) = \frac{d}{dx}f(x) \quad .
 \end{equation}
 \end{definition}
 
 \begin{explain}[Differentialkvotienten er entydig]
-Vi vil vise, at der kun findes \'{e}n værdi af $a$, som kan opfylde ligningen (\ref{tn14.eqDifferentiabilitet}). Antag nemlig, at der var to forskellige værdier, $a_{1}$ og $a_{2}$ som opfylder ligning (\ref{tn14.eqDifferentiabilitet}) med muligvis to forskellige epsilon-funktioner:
+Vi vil vise, at der kun findes \'{e}n vÃ¦rdi af $a$, som kan opfylde ligningen (\ref{tn14.eqDifferentiabilitet}). Antag nemlig, at der var to forskellige vÃ¦rdier, $a_{1}$ og $a_{2}$ som opfylder ligning (\ref{tn14.eqDifferentiabilitet}) med muligvis to forskellige epsilon-funktioner:
 \begin{equation} \label{tn14.eqDichotomy}
 \begin{aligned}
 f(x) &= f(x_{0}) + a_{1}\cdot(x-x_{0}) + (x-x_{0})\cdot \varepsilon_{1}(x-x_{0}) \\
 f(x) &= f(x_{0}) + a_{2}\cdot(x-x_{0}) + (x-x_{0})\cdot \varepsilon_{2}(x-x_{0}) \quad.
 \end{aligned}
 \end{equation}
-Ved at trække nederste ligning i (\ref{tn14.eqDichotomy}) fra den øverste ligning får vi så:
+Ved at trÃ¦kke nederste ligning i (\ref{tn14.eqDichotomy}) fra den Ã¸verste ligning fÃ¥r vi sÃ¥:
 \begin{equation}
 0 = 0 + (a_{1} - a_{2})\cdot(x-x_{0}) + (x-x_{0})\cdot \left(\varepsilon_{1}(x-x_{0}) -  \varepsilon_{2}(x-x_{0})\right) \quad ,
 \end{equation}
-således at
+sÃ¥ledes at
 \begin{equation}
 a_{1} - a_{2} = \varepsilon_{1}(x-x_{0}) -  \varepsilon_{2}(x-x_{0})
 \end{equation}
-for alle $x \neq x_{0}$ -- og det kan klart ikke være rigtigt; højresiden går jo imod $0$ når $x$ går imod $x_{0}$! Antagelsen ovenfor, altså at $a_{1} \neq a_{2}$,  er derfor forkert. De to konstanter $a_{1}$ og $a_{2}$ må være ens, og det var det vi skulle indse.
+for alle $x \neq x_{0}$ -- og det kan klart ikke vÃ¦re rigtigt; hÃ¸jresiden gÃ¥r jo imod $0$ nÃ¥r $x$ gÃ¥r imod $x_{0}$! Antagelsen ovenfor, altsÃ¥ at $a_{1} \neq a_{2}$,  er derfor forkert. De to konstanter $a_{1}$ og $a_{2}$ mÃ¥ vÃ¦re ens, og det var det vi skulle indse.
 \end{explain}
 
 \begin{aha}
-Ovenstående definition er helt ækvivalent med den vi kender fra gymnasiet. Hvis vi nemlig først trækker $f(x_{0})$ fra begge sider af lighedstegnet i ligning (\ref{tn14.eqDifferentiabilitetB}) og dernæst dividerer med $(x - x_{0})$   får vi
+OvenstÃ¥ende definition er helt Ã¦kvivalent med den vi kender fra gymnasiet. Hvis vi nemlig fÃ¸rst trÃ¦kker $f(x_{0})$ fra begge sider af lighedstegnet i ligning (\ref{tn14.eqDifferentiabilitetB}) og dernÃ¦st dividerer med $(x - x_{0})$   fÃ¥r vi
 \begin{equation}
 \frac{f(x) - f(x_{0})}{x - x_{0}} = f'(x_{0}) + \varepsilon_{f}(x-x_{0}) \to f'(x_{0}) \quad \textrm{for} \quad x \to x_{0} \quad ,
 \end{equation}
-altså den velkendte grænseværdi for \emph{kvotienten} mellem funktionstilvæksten $f(x) - f(x_{0})$ og $x$-tilvæksten $x - x_{0}$. Grunden til, at vi ikke bruger denne
-kendte de\-fi\-ni\-tion af $f'(x_{0})$ er den simple, at for funktioner af flere variable giver kvotient-brøken ikke mening -- men mere om det i en senere eNote.
+altsÃ¥ den velkendte grÃ¦nsevÃ¦rdi for \emph{kvotienten} mellem funktionstilvÃ¦ksten $f(x) - f(x_{0})$ og $x$-tilvÃ¦ksten $x - x_{0}$. Grunden til, at vi ikke bruger denne
+kendte de\-fi\-ni\-tion af $f'(x_{0})$ er den simple, at for funktioner af flere variable giver kvotient-brÃ¸ken ikke mening -- men mere om det i en senere eNote.
 \end{aha}
 
-\begin{theorem}[Differentiabel medfører kontinuert]
-Hvis en funktion $f(x)$ er differentiabel i $x_{0}$, så er $f(x)$ også kontinuert i $x_{0}$.
+\begin{theorem}[Differentiabel medfÃ¸rer kontinuert]
+Hvis en funktion $f(x)$ er differentiabel i $x_{0}$, sÃ¥ er $f(x)$ ogsÃ¥ kontinuert i $x_{0}$.
 \end{theorem}
 \begin{bevis}
 Vi har at
@@ -293,17 +293,17 @@ f(x)&= f(x_{0}) + f'(x_{0})\cdot(x-x_{0}) + (x-x_{0})\varepsilon_{f}(x-x_{0})\\
  &= f(x_{0}) + \left[ f'(x_{0})\cdot(x-x_{0}) + (x-x_{0})\varepsilon_{f}(x-x_{0})\right],
 \end{aligned}
 \end{equation}
-og da den kantede parentes på højre side er en epsilon-funktion af $(x - x_{0})$ så er $f(x)$ kontinuert i $x_{0}$.
+og da den kantede parentes pÃ¥ hÃ¸jre side er en epsilon-funktion af $(x - x_{0})$ sÃ¥ er $f(x)$ kontinuert i $x_{0}$.
 \end{bevis}
 
-Men det omvendte gælder ikke -- her er et eksempel, der viser det:
+Men det omvendte gÃ¦lder ikke -- her er et eksempel, der viser det:
 \begin{example}[Kontinuert men ikke differentiabel]
 Funktionen $f(x) = |x|$ er kontinuert men ikke differentabel i $x_{0} = 0$. Funktionen er selv en epsilon-funktion og $f(x)$ er derfor
-kontinuert i $0$. Men antag nu, at der findes en konstant $a$ og en epsilon-funktion $\varepsilon_{f}(x-x_{0})$ sådan at
+kontinuert i $0$. Men antag nu, at der findes en konstant $a$ og en epsilon-funktion $\varepsilon_{f}(x-x_{0})$ sÃ¥dan at
 \begin{equation}
 f(x) = f(x_{0}) + a\cdot(x-x_{0}) + (x-x_{0})\varepsilon_{f}(x-x_{0}) \quad .
 \end{equation}
-Det vil sige, at så skulle der gælde:
+Det vil sige, at sÃ¥ skulle der gÃ¦lde:
 \begin{equation}
 |x|  = 0 + a\cdot x + x \cdot \varepsilon_{f}(x)
 \end{equation}
@@ -311,13 +311,13 @@ og dermed for alle $x \neq 0$:
 \begin{equation}
 \frac{|x|}{x}  = a + \varepsilon_{f}(x) \quad .
 \end{equation}
-Det kan ikke lade sig gøre, for så skulle $a$ være både $-1$ og $1$ og det er umuligt! Derfor er ovenstående antagelse om, at der skulle findes
-en sådan konstant $a$ altså forkert; $f(x)$ er derfor ikke differentiabel.
+Det kan ikke lade sig gÃ¸re, for sÃ¥ skulle $a$ vÃ¦re bÃ¥de $-1$ og $1$ og det er umuligt! Derfor er ovenstÃ¥ende antagelse om, at der skulle findes
+en sÃ¥dan konstant $a$ altsÃ¥ forkert; $f(x)$ er derfor ikke differentiabel.
 \end{example}
 
 
 \begin{definition}
-Det approksimerende første-grads-polynomium for $f(x)$ med udviklingspunkt $x_{0}$ defineres ved:
+Det approksimerende fÃ¸rste-grads-polynomium for $f(x)$ med udviklingspunkt $x_{0}$ defineres ved:
 \begin{equation}
 P_{1, x_{0}}(x) = f(x_{0}) + f'(x_{0})\cdot(x - x_{0}) \quad .
 \end{equation}
@@ -325,15 +325,15 @@ P_{1, x_{0}}(x) = f(x_{0}) + f'(x_{0})\cdot(x - x_{0}) \quad .
 \end{definition}
 
 \begin{aha}
-Bemærk, at $P_{1, x_{0}}(x)$ virkelig \emph{er} et første-gradspolynomium i $x$.
-Grafen for funktionen $P_{1, x_{0}}(x)$ er \ind{tangenten til grafen}{tangenten til grafen} for $f(x)$ igennem punktet $(x_{0}, f(x_{0}))$, se figur \ref{tn14.figP1}. Ligningen for tangenten er $y = P_{1, x_{0}}(x)$, altså $y = f(x_{0}) + f'(x_{0})\cdot(x-x_{0})$. Hældningskoefficienten for tangenten er klart
-$\alpha = f'(x_{0})$ og tangenten skærer $y$-aksen i punktet $(0, f(x_{0})-x_{0}\cdot f'(x_{0}))$. Vi skal senere finde ud af, hvordan vi kan approksimere med polynomier af højere grad $n$, altså polynomier der så betegnes $P_{n, x_{0}}(x)$.
+BemÃ¦rk, at $P_{1, x_{0}}(x)$ virkelig \emph{er} et fÃ¸rste-gradspolynomium i $x$.
+Grafen for funktionen $P_{1, x_{0}}(x)$ er \ind{tangenten til grafen}{tangenten til grafen} for $f(x)$ igennem punktet $(x_{0}, f(x_{0}))$, se figur \ref{tn14.figP1}. Ligningen for tangenten er $y = P_{1, x_{0}}(x)$, altsÃ¥ $y = f(x_{0}) + f'(x_{0})\cdot(x-x_{0})$. HÃ¦ldningskoefficienten for tangenten er klart
+$\alpha = f'(x_{0})$ og tangenten skÃ¦rer $y$-aksen i punktet $(0, f(x_{0})-x_{0}\cdot f'(x_{0}))$. Vi skal senere finde ud af, hvordan vi kan approksimere med polynomier af hÃ¸jere grad $n$, altsÃ¥ polynomier der sÃ¥ betegnes $P_{n, x_{0}}(x)$.
 \end{aha}
 
 \begin{figure}[h]
 \centerline{\includegraphics[height=70mm]{FIGS/plotEpsilon1.pdf}\qquad \includegraphics[height=70mm]{FIGS/plotEpsilon1Pur.pdf}}
 \begin{center}
-\caption{Konstruktion af tangenten $y = P_{1, x_{0}}(x) = f(x_{0}) +  \alpha\cdot(x-x_{0})$ med hældningskoefficienten $\alpha = f'(x_{0})$ for funktionen $f(x)$. Til højre ses forskellen mellem funktionsværdien $f(x)$ og 'tangentværdien' $P_{1, x_{0}}(x)$.} \label{tn14.figP1}
+\caption{Konstruktion af tangenten $y = P_{1, x_{0}}(x) = f(x_{0}) +  \alpha\cdot(x-x_{0})$ med hÃ¦ldningskoefficienten $\alpha = f'(x_{0})$ for funktionen $f(x)$. Til hÃ¸jre ses forskellen mellem funktionsvÃ¦rdien $f(x)$ og 'tangentvÃ¦rdien' $P_{1, x_{0}}(x)$.} \label{tn14.figP1}
 \end{center}
 \end{figure}
 
@@ -344,7 +344,7 @@ $\alpha = f'(x_{0})$ og tangenten skærer $y$-aksen i punktet $(0, f(x_{0})-x_{0}
 
 \subsection{Differentiation af et produkt}
 \begin{theorem}[Differentiation af $f(x)\cdot g(x)$]
-Et produkt $h(x) = f(x) \cdot g(x)$ af  to differentiable funktioner $f(x)$ og $g(x)$ er differentiabel og differentieres på følgende velkendte måde:
+Et produkt $h(x) = f(x) \cdot g(x)$ af  to differentiable funktioner $f(x)$ og $g(x)$ er differentiabel og differentieres pÃ¥ fÃ¸lgende velkendte mÃ¥de:
 \begin{equation}
 \frac{d}{dx}\left(f(x)\cdot g(x)\right) = f'(x)\cdot g(x) + f(x)\cdot g'(x) \quad .
 \end{equation}
@@ -352,23 +352,23 @@ Et produkt $h(x) = f(x) \cdot g(x)$ af  to differentiable funktioner $f(x)$ og $
 
 Selv om denne formel formentlig er ganske velkendt fra gymnasiet, vil vi kort skitsere et bevis for den igen -- for at illustrere brugen af epsilon-funktioner.
 \begin{bevis}
-Vi har altså, da $f(x)$ og $g(x)$ er differentiable i $x_{0}$:
+Vi har altsÃ¥, da $f(x)$ og $g(x)$ er differentiable i $x_{0}$:
 \begin{equation}
 \begin{aligned}
 f(x) &= f(x_{0}) + f'(x_{0})\cdot (x - x_{0}) + (x - x_{0})\varepsilon_{f}(x-x_{0}) \\
 g(x) &= g(x_{0}) + g'(x_{0})\cdot (x - x_{0}) + (x - x_{0})\varepsilon_{g}(x-x_{0}) \quad,
 \end{aligned}
 \end{equation}
-sådan at produktet af de to højresider bliver:
+sÃ¥dan at produktet af de to hÃ¸jresider bliver:
 \begin{equation} \label{tn14.eqProdDiff}
 \begin{aligned}
 &h(x) = f(x)\cdot g(x) \\
 &= f(x_{0})\cdot g(x_{0}) + (f'(x_{0})\cdot g(x_{0}) + f(x_{0})\cdot g'(x_{0})) \cdot(x - x_{0}) + (x - x_{0})\varepsilon_{h}(x- x_{0}) \, ,
 \end{aligned}
 \end{equation}
-hvor vi har benyttet $(x-x_{0})\varepsilon_{h}(x- x_{0})$ som kort skrivemåde for den resterende del af produktsummen. Enhver af addenderne i denne resterende
-del indholder faktoren $(x - x_{0})^{2}$ eller et produkt af $(x-x_{0})$ med en epsilon-funktion og \emph{kan} derfor netop skrives på den angivne form.
-Men så følger produktformlen ved direkte at aflæse faktoren foran $(x - x_{0})$ i ligning (\ref{tn14.eqProdDiff}):
+hvor vi har benyttet $(x-x_{0})\varepsilon_{h}(x- x_{0})$ som kort skrivemÃ¥de for den resterende del af produktsummen. Enhver af addenderne i denne resterende
+del indholder faktoren $(x - x_{0})^{2}$ eller et produkt af $(x-x_{0})$ med en epsilon-funktion og \emph{kan} derfor netop skrives pÃ¥ den angivne form.
+Men sÃ¥ fÃ¸lger produktformlen ved direkte at aflÃ¦se faktoren foran $(x - x_{0})$ i ligning (\ref{tn14.eqProdDiff}):
 \begin{equation}
 h'(x_{0}) = f'(x_{0})\cdot g(x_{0}) + f(x_{0})\cdot g'(x_{0}) \quad.
 \end{equation}
@@ -376,18 +376,18 @@ h'(x_{0}) = f'(x_{0})\cdot g(x_{0}) + f(x_{0})\cdot g'(x_{0}) \quad.
 
 
 
-\subsection{Differentiation af en brøk}
-Følgende differentiationsregel er ligeledes velkendt fra gymnasiet:
+\subsection{Differentiation af en brÃ¸k}
+FÃ¸lgende differentiationsregel er ligeledes velkendt fra gymnasiet:
 
 \begin{theorem}[Differentiation af $f(x)/g(x)$] \label{tn14.thmFracDif}
-En brøk $h(x) = f(x) / g(x)$ mellem  to differentiable funktioner $f(x)$ og $g(x)$,  er differentiabel overalt hvor $g(x) \neq 0$, og differentieres på følgende velkendte måde:
+En brÃ¸k $h(x) = f(x) / g(x)$ mellem  to differentiable funktioner $f(x)$ og $g(x)$,  er differentiabel overalt hvor $g(x) \neq 0$, og differentieres pÃ¥ fÃ¸lgende velkendte mÃ¥de:
 \begin{equation}
 \frac{d}{dx}\left( \frac{f(x)}{g(x)}\right) = \frac{f'(x)}{g(x)} - \frac{f(x) \cdot g'(x)}{g^{2}(x)}= \frac{f'(x)\cdot g(x) - f(x)\cdot g'(x)}{g^{2}(x)} \quad .
 \end{equation}
 \end{theorem}
 
 \begin{exercise}
-Benyt et epsilon-funktion-argument på samme måde som i differentiationsreglen for et produkt til at vise sætning \ref{tn14.thmFracDif}.
+Benyt et epsilon-funktion-argument pÃ¥ samme mÃ¥de som i differentiationsreglen for et produkt til at vise sÃ¦tning \ref{tn14.thmFracDif}.
 \end{exercise}
 
 
@@ -398,7 +398,7 @@ Benyt et epsilon-funktion-argument på samme måde som i differentiationsreglen fo
 
 \subsection{Differentiation af sammensatte funktioner}
 
-\begin{theorem}[Kædereglen for sammensatte funktioner]
+\begin{theorem}[KÃ¦dereglen for sammensatte funktioner]
 En funktion $h(x) = f(g(x))$ der er sammensat af de to differentiable funktioner $f(x)$ og $g(x)$ er
 selv differentiabel i ethvert $x_{0}$  med differerentialkvotienten
 \begin{equation} \label{tn14.eqChain}
@@ -415,7 +415,7 @@ og funktionen $f(u)$ er differentiabel i $u_{0} = g(x_{0})$:
 \begin{equation}
 f(u) = f(u_{0}) + f'(u_{0})(u - u_{0}) + (u - u_{0})\cdot\varepsilon_{f}(u - u_{0}) \quad.
 \end{equation}
-Heraf fås så, når vi sætter $u = g(x)$ og $u_{0} = g(x_{0})$:
+Heraf fÃ¥s sÃ¥, nÃ¥r vi sÃ¦tter $u = g(x)$ og $u_{0} = g(x_{0})$:
 \begin{equation}\label{tn14.eqKaederegel}
 \begin{aligned}
 h(x) &= f(g(x)) \\
@@ -425,11 +425,11 @@ h(x) &= f(g(x)) \\
 &= h(x_{0}) + f'(g(x_{0}))g'(x_{0})\cdot(x - x_{0}) + (x- x_{0}) \cdot \varepsilon_{h}(x - x_{0}) \quad,
 \end{aligned}
 \end{equation}
-hvoraf det direkte aflæses, at $h'(x_{0}) = f'(g(x_{0}))g'(x_{0})$ -- fordi dette netop er den entydige koefficient på $(x - x_{0})$ i ovenstående udtryk.
+hvoraf det direkte aflÃ¦ses, at $h'(x_{0}) = f'(g(x_{0}))g'(x_{0})$ -- fordi dette netop er den entydige koefficient pÃ¥ $(x - x_{0})$ i ovenstÃ¥ende udtryk.
 \end{bevis}
 
 \begin{exercise}
-Vi har i ovenstående -- til sidst i ligning (\ref{tn14.eqKaederegel}) -- benyttet, at
+Vi har i ovenstÃ¥ende -- til sidst i ligning (\ref{tn14.eqKaederegel}) -- benyttet, at
 \begin{equation}
 f'(g(x_{0}))\cdot \varepsilon_{g}(x - x_{0}) + (g'(x_{0}) + \cdot \varepsilon_{g}(x - x_{0}))\cdot \varepsilon_{f}(g(x) - g(x_{0}))
 \end{equation}
@@ -438,7 +438,7 @@ Overvej, hvorfor dette er helt OK.
 \end{exercise}
 
 \begin{exercise}
-Find differentialkvotienterne af følgende funktioner for enhver $x$-værdi i de respektive definitionsmængder:
+Find differentialkvotienterne af fÃ¸lgende funktioner for enhver $x$-vÃ¦rdi i de respektive definitionsmÃ¦ngder:
 \begin{equation}
 \begin{aligned}
 f_{1}(x) &= (x^{2} + 1)\cdot\sin(x) \\
@@ -456,7 +456,7 @@ f_{3}(x) &= \sin(x^2 +1) \quad .
 
 \section{Omvendte funktioner} \label{tn14.secOmvendtFunk}
 
-Exponentialfunktionen $\exp(x)$ og logaritmefunktionen $\ln(x)$ er hinandens \ind{omvendt funktion}{omvendte funktioner} -- der gælder som bekendt:
+Exponentialfunktionen $\exp(x)$ og logaritmefunktionen $\ln(x)$ er hinandens \ind{omvendt funktion}{omvendte funktioner} -- der gÃ¦lder som bekendt:
 
 \begin{equation}
 \begin{aligned}
@@ -466,23 +466,23 @@ Exponentialfunktionen $\exp(x)$ og logaritmefunktionen $\ln(x)$ er hinandens \in
 \end{equation}
 
 \begin{think}
-Læg mærke til, at selv om $\exp(x)$ er defineret for alle $x$, så er den omvendte funktion $\ln(x)$ kun defineret for $x > 0$ -- og omvendt (!)
+LÃ¦g mÃ¦rke til, at selv om $\exp(x)$ er defineret for alle $x$, sÃ¥ er den omvendte funktion $\ln(x)$ kun defineret for $x > 0$ -- og omvendt (!)
 \end{think}
 
 Funktionen $f(x) = x^{2}$ har en omvendt funktion i sine respektive monotoni-intervaller, dvs. der hvor $f(x)$ er voksende henholdsvis aftagende:
 Den omvendte funktion i det interval, $[0, \infty[$,  hvor $f(x)$ er voksende er den velkendte funktion $g(x) = \sqrt{x}$. Funktionen $f(x)$ afbilder
-altså intervallet $ A = [0, \infty[$ en-entydigt på intervallet $B = [0, \infty[$, og den omvendte funktion $g(x)$ afbilder intervallet $B$ en-entydigt på intervallet $A$
-således at:
+altsÃ¥ intervallet $ A = [0, \infty[$ en-entydigt pÃ¥ intervallet $B = [0, \infty[$, og den omvendte funktion $g(x)$ afbilder intervallet $B$ en-entydigt pÃ¥ intervallet $A$
+sÃ¥ledes at:
 \begin{equation}
 \begin{aligned}
 f(g(x))= (\sqrt{x})^{2} &= x \quad \textrm{for} \quad x \in \, B = [0, \infty[ \\
 g(f(x)) = \sqrt{x^{2}} & = x \quad \textrm{for} \quad x \in \, A = [0, \infty[\,  \quad .\\
 \end{aligned}
 \end{equation}
-Den omvendte funktion til $f(x)$ i det interval, $]-\infty, 0]$,  hvor $f(x)$ er aftagende er funktionen $h(x) = -\sqrt{x}$, som ikke er defineret på det {\emph{samme}} interval som $f(x)$.
+Den omvendte funktion til $f(x)$ i det interval, $]-\infty, 0]$,  hvor $f(x)$ er aftagende er funktionen $h(x) = -\sqrt{x}$, som ikke er defineret pÃ¥ det {\emph{samme}} interval som $f(x)$.
 Funktionen $f(x)$ afbilder
-intervallet $ C = ]-\infty, 0]$ en-entydigt på intervallet $D = [0, \infty[$, og den omvendte funktion $h(x)$ afbilder intervallet $D$ en-entydigt på intervallet $C$
-således at:
+intervallet $ C = ]-\infty, 0]$ en-entydigt pÃ¥ intervallet $D = [0, \infty[$, og den omvendte funktion $h(x)$ afbilder intervallet $D$ en-entydigt pÃ¥ intervallet $C$
+sÃ¥ledes at:
 \begin{equation}
 \begin{aligned}
 f(h(x))= (-\sqrt{x})^{2} &= x \quad \textrm{for} \quad x \in \,D = [0, \infty[  \\
@@ -494,14 +494,14 @@ h(f(x)) = -\sqrt{x^{2}} & = x \quad \textrm{for} \quad x \in \, C = \,  ]-\infty
 
 
 \begin{think}
-Hvis $f(x)$ ikke er monoton på et interval, så betyder det essentielt, at vi kan opnå \emph{samme funktions-værdi} $f(x)$ for flere forskellige $x$-værdier -- på samme måde som $x^{2}= 1$ både for $x=1$ og for $x=-1$, og så er funktionen ikke en-entydig på intervallet.
-Funktionerne $\cos(x)$ og $\sin(x)$ er kun monotone på bestemte del-intervaller på $x$-aksen, se figur \ref{tn14.figplotcossin}.
-Hvis vi ønsker at definere en omvendt funktion til de funktioner må vi altså vælge et sådant interval med omhu, se afsnit \ref{tn14.secArcus} og figur \ref{tn14.figplotArccosSet}.
+Hvis $f(x)$ ikke er monoton pÃ¥ et interval, sÃ¥ betyder det essentielt, at vi kan opnÃ¥ \emph{samme funktions-vÃ¦rdi} $f(x)$ for flere forskellige $x$-vÃ¦rdier -- pÃ¥ samme mÃ¥de som $x^{2}= 1$ bÃ¥de for $x=1$ og for $x=-1$, og sÃ¥ er funktionen ikke en-entydig pÃ¥ intervallet.
+Funktionerne $\cos(x)$ og $\sin(x)$ er kun monotone pÃ¥ bestemte del-intervaller pÃ¥ $x$-aksen, se figur \ref{tn14.figplotcossin}.
+Hvis vi Ã¸nsker at definere en omvendt funktion til de funktioner mÃ¥ vi altsÃ¥ vÃ¦lge et sÃ¥dant interval med omhu, se afsnit \ref{tn14.secArcus} og figur \ref{tn14.figplotArccosSet}.
 \end{think}
 
 
 \begin{definition}[Notation for omvendte funktioner]
-Den omvendte funktion til en given funktion $f(x)$ vil vi betegne med  $f^{\circ -1}(x)$. Den omvendte funktion er generelt defineret ved følgende egenskaber på passende valg\-te intervaller $A$ og $B$ som er indeholdt i henholdsvis $\mathcal{D}m(f)$ og $\mathcal{D}m(f^{\circ -1})$
+Den omvendte funktion til en given funktion $f(x)$ vil vi betegne med  $f^{\circ -1}(x)$. Den omvendte funktion er generelt defineret ved fÃ¸lgende egenskaber pÃ¥ passende valg\-te intervaller $A$ og $B$ som er indeholdt i henholdsvis $\mathcal{D}m(f)$ og $\mathcal{D}m(f^{\circ -1})$
 \begin{equation}
 \begin{aligned}
 f^{\circ -1}(f(x)) &= x \quad \textrm{for} \quad x \in A \subset \mathcal{D}m(f)\\
@@ -512,12 +512,12 @@ f(f^{\circ -1}(x)) &= x \quad \textrm{for} \quad x \in B \subset \mathcal{D}m(f^
 
 \begin{obs}
 Vi bruger betegnelsen  $f^{\circ -1}(x)$ for ikke at forveksle med $(f(x))^{-1} = 1/f(x)$.
-Grafen for den omvendte funktion $g(x) = f^{\circ -1}(x)$  til en  funktion $f(x)$ kan fås ved at \ind{spejle grafen}{spejle grafen} for $f(x)$ i diagonal-linjen i $(x,y)$-koordinatsystemet -- dvs. linjen med ligningen $y = x$ --  se figur \ref{tn14.figOmvendt}.
+Grafen for den omvendte funktion $g(x) = f^{\circ -1}(x)$  til en  funktion $f(x)$ kan fÃ¥s ved at \ind{spejle grafen}{spejle grafen} for $f(x)$ i diagonal-linjen i $(x,y)$-koordinatsystemet -- dvs. linjen med ligningen $y = x$ --  se figur \ref{tn14.figOmvendt}.
 \end{obs}
 \begin{figure}[h]
 \centerline{\includegraphics[height=120mm]{FIGS/plotOmvendt.pdf}}
 \begin{center}
-\caption{Grafen for en funktion $f(x)$ og grafen for dens omvendte funktion $g(x)$. Der gælder $g(x) = f^{\circ-1}(x)$ og $f(x) = g^{\circ-1}(x)$, men de har hver deres egne definitionsintervaller.} \label{tn14.figOmvendt}
+\caption{Grafen for en funktion $f(x)$ og grafen for dens omvendte funktion $g(x)$. Der gÃ¦lder $g(x) = f^{\circ-1}(x)$ og $f(x) = g^{\circ-1}(x)$, men de har hver deres egne definitionsintervaller.} \label{tn14.figOmvendt}
 \end{center}
 \end{figure}
 
@@ -529,21 +529,21 @@ Grafen for den omvendte funktion $g(x) = f^{\circ -1}(x)$  til en  funktion $f(x
 \subsection{Differentiation af omvendte funktioner}
 
 \begin{theorem}[Differentiation af omvendt funktion]
-Hvis en differentiabel funktion $f(x)$ har den omvendte funktion $f^{\circ-1}(x)$ og hvis $f'(f^{\circ-1}(x_{0})) \neq 0$, så er den omvendte funktion $f^{\circ-1}(x)$ selv differentiabel i $x_{0}$:
+Hvis en differentiabel funktion $f(x)$ har den omvendte funktion $f^{\circ-1}(x)$ og hvis $f'(f^{\circ-1}(x_{0})) \neq 0$, sÃ¥ er den omvendte funktion $f^{\circ-1}(x)$ selv differentiabel i $x_{0}$:
 \begin{equation}
 (f^{\circ-1})'(x_{0}) = \frac{1}{f'(f^{\circ-1}(x_{0}))}
 \end{equation}
 \end{theorem}
 \begin{bevis}
-Pr. definition af omvendt funktion gælder, at
+Pr. definition af omvendt funktion gÃ¦lder, at
 \begin{equation}
 h(x) = f(f^{\circ-1}(x)) = x \quad,
 \end{equation}
-så $h'(x_{0}) = 1$, men vi har så også fra kædereglen i (\ref{tn14.eqChain}):
+sÃ¥ $h'(x_{0}) = 1$, men vi har sÃ¥ ogsÃ¥ fra kÃ¦dereglen i (\ref{tn14.eqChain}):
 \begin{equation}
 h'(x_{0}) = f'(f^{\circ-1}(x_{0}))\cdot (f^{\circ-1})'(x_{0}) = 1 \quad ,
 \end{equation}
-hvoraf vi får resultatet ved at dividere med $f'(f^{\circ-1}(x_{0}))$.
+hvoraf vi fÃ¥r resultatet ved at dividere med $f'(f^{\circ-1}(x_{0}))$.
 \end{bevis}
 
 
@@ -556,8 +556,8 @@ hvoraf vi får resultatet ved at dividere med $f'(f^{\circ-1}(x_{0}))$.
 \section{Hyperbolske funktioner}
 
 \begin{definition}[Hyperbolsk cosinus og hyperbolsk sinus] \label{tn14.defCoshSinh}
-Vi vil definere to nye funktioner $\cosh(x)$ og $\sinh(x)$ som de entydigt bestemte løsninger til følgende
-differentialligningssystem med begyndelsesbetingelser. De to funktioner benævnes henholdsvis \ind{hyperbolsk cosinus}{hyperbolsk cosinus} og \ind{hyperbolsk sinus}{hyperbolsk sinus}:
+Vi vil definere to nye funktioner $\cosh(x)$ og $\sinh(x)$ som de entydigt bestemte lÃ¸sninger til fÃ¸lgende
+differentialligningssystem med begyndelsesbetingelser. De to funktioner benÃ¦vnes henholdsvis \ind{hyperbolsk cosinus}{hyperbolsk cosinus} og \ind{hyperbolsk sinus}{hyperbolsk sinus}:
 \begin{equation} \label{tn14.eqCoshSinhDES}
 \begin{aligned}
 \cosh'(x) &= \sinh(x) \quad , \quad \cosh(0) = 1 \\
@@ -569,8 +569,8 @@ differentialligningssystem med begyndelsesbetingelser. De to funktioner benævnes
 \emph{Betegnelserne} $\cosh(x)$ og $\sinh(x)$ ligner $\cos(x)$ og $\sin(x)$,
 men funktionerne er meget forskellige, som vi skal se nedenfor.\\
 
-Der er dog også fundamentale strukturelle ligheder mellem de to par af funktioner og det er dem der motiverer betegnelserne.
-I differentialligningssystemet for $\cos(x)$ og $\sin(x)$ optræder kun et enkelt
+Der er dog ogsÃ¥ fundamentale strukturelle ligheder mellem de to par af funktioner og det er dem der motiverer betegnelserne.
+I differentialligningssystemet for $\cos(x)$ og $\sin(x)$ optrÃ¦der kun et enkelt
 minus-tegn som eneste forskel i forhold til (\ref{tn14.eqCoshSinhDES}):
 
 \begin{equation}
@@ -580,7 +580,7 @@ minus-tegn som eneste forskel i forhold til (\ref{tn14.eqCoshSinhDES}):
 \end{aligned}
 \end{equation}
 
-Desuden gælder (igen med et helt afgørende minustegn som eneste forskel) følgende  simple
+Desuden gÃ¦lder (igen med et helt afgÃ¸rende minustegn som eneste forskel) fÃ¸lgende  simple
 analogi til den velkendte og ofte brugte relation $\cos^{2}(x) + \sin^{2}(x) = 1$:
 
 \begin{theorem}[Fundamentale relation for $\cosh(x)$ og $\sinh(x)$]
@@ -589,7 +589,7 @@ analogi til den velkendte og ofte brugte relation $\cos^{2}(x) + \sin^{2}(x) = 1
 \end{equation}
 \end{theorem}
 \begin{bevis}
-Differentier med hensyn til $x$ på begge sider af ligningen (\ref{tn14.eqFundamCoshSinh}) og konklud\'{e}r, at $\cosh^{2}(x) - \sinh^{2}(x)$ er en konstant. Brug
+Differentier med hensyn til $x$ pÃ¥ begge sider af ligningen (\ref{tn14.eqFundamCoshSinh}) og konklud\'{e}r, at $\cosh^{2}(x) - \sinh^{2}(x)$ er en konstant. Brug
 til sidst begyndelsesbetingelserne.
 \end{bevis}
 
@@ -602,7 +602,7 @@ til sidst begyndelsesbetingelserne.
 
 
 \begin{exercise} \label{tn14.exercExplicCoshSinh}
-Vis direkte ud fra differentialligningssystemet (\ref{tn14.eqCoshSinhDES}) at de to ''nye'' funktioner faktisk ikke er så nye endda:
+Vis direkte ud fra differentialligningssystemet (\ref{tn14.eqCoshSinhDES}) at de to ''nye'' funktioner faktisk ikke er sÃ¥ nye endda:
 \begin{equation}
 \begin{aligned}
 \cosh(x) &= \frac{e^x + e^{-x}}{2}\quad , \quad \mathcal{D}m(\cosh) = \mathbb{R}\quad , \quad \quad \mathcal{V}m(\cosh) = \,  [1, \infty[ \\
@@ -620,12 +620,12 @@ Vis \emph{direkte} ud fra de fundne udtryk i opgave \ref{tn14.exercExplicCoshSin
 
 
 \begin{exercise}
-Grafen for funktionen $f(x) = \cosh(x)$ ligner meget en parabel, nemlig grafen for funktionen $g(x)= 1+ (x^{2}/2)$ når vi plotter begge funktionerne
-i et passende lille interval omkring $x_{0}= 0$. Prøv det! Hvis vi derimod plotter begge graferne over et meget stort $x$-interval, vil vi opdage, at de to funktioner har meget forskellige grafiske opførsler. Prøv det, dvs. prøv at plotte begge funktioner over intervallet $[-50, 50]$.  Komment\'{e}r og forklar de kvalitative forskelle. Prøv tilsvarende at sammenligne de to funktioner $\sinh(x)$ og $x + (x^{3}/6)$ på samme måde.
+Grafen for funktionen $f(x) = \cosh(x)$ ligner meget en parabel, nemlig grafen for funktionen $g(x)= 1+ (x^{2}/2)$ nÃ¥r vi plotter begge funktionerne
+i et passende lille interval omkring $x_{0}= 0$. PrÃ¸v det! Hvis vi derimod plotter begge graferne over et meget stort $x$-interval, vil vi opdage, at de to funktioner har meget forskellige grafiske opfÃ¸rsler. PrÃ¸v det, dvs. prÃ¸v at plotte begge funktioner over intervallet $[-50, 50]$.  Komment\'{e}r og forklar de kvalitative forskelle. PrÃ¸v tilsvarende at sammenligne de to funktioner $\sinh(x)$ og $x + (x^{3}/6)$ pÃ¥ samme mÃ¥de.
 \end{exercise}
 
 
-Det er naturligt og nyttigt at definere de hyperbolske analogier til $\tan(x)$ og $\cot(x)$. Det gør vi således:
+Det er naturligt og nyttigt at definere de hyperbolske analogier til $\tan(x)$ og $\cot(x)$. Det gÃ¸r vi sÃ¥ledes:
 
 \begin{definition}[Hyperbolsk tangens og hyperbolsk cotangens]
 \begin{equation}
@@ -661,7 +661,7 @@ system i (\ref{tn14.eqCoshSinhDES}).
 \end{equation}
 
 \begin{exercise}
-Vis de to sidste udtryk for differentialkvotienterne for $\tanh(x)$ og $\coth(x)$ i (\ref{tn14.eqHypDif}) ved at benytte differentiationsreglen i sætning \ref{tn14.thmFracDif}.
+Vis de to sidste udtryk for differentialkvotienterne for $\tanh(x)$ og $\coth(x)$ i (\ref{tn14.eqHypDif}) ved at benytte differentiationsreglen i sÃ¦tning \ref{tn14.thmFracDif}.
 \end{exercise}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -707,7 +707,7 @@ Da funktionerne $\cosh(x)$, $\sinh(x)$, $\tanh(x)$, og $\coth(x)$ alle kan udtry
 \end{figure}
 
 
-De omvendte funktioner som hører til de trigonometriske funktioner er lidt mere komplicerede. Som nævnt bliver vi her nødt til for hver trigonometrisk funktion at vælge et interval, hvor den pågældende funktion er monoton. Til gengæld, når vi \emph{har} valgt et sådant interval, så er det klart, hvordan den omvendte funktion skal defineres og derefter hvordan den skal differentieres. De omvendte funktioner til $\cos(x)$, $\sin(x)$, $\tan(x)$, $\cot(x)$ betegnes henholdsvis $\arccos(x)$, $\arcsin(x)$, $\arctan(x)$, og $\textrm{arccot}(x)$; de benævnes arcus-cosinus, arcus-sinus, arcus-tangens, og arcuscotangens. Ligesom ovenfor samler vi resultaterne her:
+De omvendte funktioner som hÃ¸rer til de trigonometriske funktioner er lidt mere komplicerede. Som nÃ¦vnt bliver vi her nÃ¸dt til for hver trigonometrisk funktion at vÃ¦lge et interval, hvor den pÃ¥gÃ¦ldende funktion er monoton. Til gengÃ¦ld, nÃ¥r vi \emph{har} valgt et sÃ¥dant interval, sÃ¥ er det klart, hvordan den omvendte funktion skal defineres og derefter hvordan den skal differentieres. De omvendte funktioner til $\cos(x)$, $\sin(x)$, $\tan(x)$, $\cot(x)$ betegnes henholdsvis $\arccos(x)$, $\arcsin(x)$, $\arctan(x)$, og $\textrm{arccot}(x)$; de benÃ¦vnes arcus-cosinus, arcus-sinus, arcus-tangens, og arcuscotangens. Ligesom ovenfor samler vi resultaterne her:
 
 \begin{equation}
 \begin{aligned}
@@ -738,20 +738,20 @@ De omvendte funktioner som hører til de trigonometriske funktioner er lidt mere 
 \begin{figure}[h]
 \centerline{\includegraphics[width=65mm]{FIGS/plotArccos.pdf} \quad \quad  \includegraphics[width=65mm]{FIGS/plotArcsin.pdf}}
 \begin{center}
-\caption{Arcus-cosinus og arcus-sinus. De røde cirkler indikerer igen, at arcus-funktionerne ikke er defineret udenfor intervallet $[-1, 1]$. De grønne cirkelskiver indikerer tilsvarende, at arcus-funktionerne \emph{er} defineret i endepunkterne $x=1$ og $x=-1$.} \label{tn14.figplotArccossin}
+\caption{Arcus-cosinus og arcus-sinus. De rÃ¸de cirkler indikerer igen, at arcus-funktionerne ikke er defineret udenfor intervallet $[-1, 1]$. De grÃ¸nne cirkelskiver indikerer tilsvarende, at arcus-funktionerne \emph{er} defineret i endepunkterne $x=1$ og $x=-1$.} \label{tn14.figplotArccossin}
 \end{center}
 \end{figure}
 
 
 
 \begin{aha}
-Læg mærke til, at differerentialkvotienterne for $\arccos(x)$ og $\arcsin(x)$ ikke er defineret i $x_{0}=1$ og i $x_{0}=-1$. Det skyldes dels, at hvis den funktion vi betragter kun er defineret i et begrænset interval, så kan vi ikke sige at funktionen er differentiabel i endepunkterne af intervallet. Desuden viser formlerne for  $\arccos'(x)$ og $\arcsin'(x)$ at de ikke er definerede i  $x_{0}= 1$ eller $x_{0}= -1$; de værdier giver jo $0$ i nævnerne.
+LÃ¦g mÃ¦rke til, at differerentialkvotienterne for $\arccos(x)$ og $\arcsin(x)$ ikke er defineret i $x_{0}=1$ og i $x_{0}=-1$. Det skyldes dels, at hvis den funktion vi betragter kun er defineret i et begrÃ¦nset interval, sÃ¥ kan vi ikke sige at funktionen er differentiabel i endepunkterne af intervallet. Desuden viser formlerne for  $\arccos'(x)$ og $\arcsin'(x)$ at de ikke er definerede i  $x_{0}= 1$ eller $x_{0}= -1$; de vÃ¦rdier giver jo $0$ i nÃ¦vnerne.
 \end{aha}
 
 
 \begin{exercise}
-Benyt en passende modifikation af $\arctan(x)$ til at konstruere en ny differentiabel (og derfor kontinuert) funktion $f(x)$, som ligner $0$-udvidelsen af $|x|/x$ (der hverken er kontinuert eller differentiabel), dvs. vi ønsker en funktion $f(x)$ med følgende egenskaber: $1> f(x) > 0.999$ for $x > 0.001$ og $-0.999 > f(x) > -1$ for $x < -0.001$. Se figur \ref{tn14.figplotArctan}.
-Vink: Prøv at plotte $\arctan(1000x)$.
+Benyt en passende modifikation af $\arctan(x)$ til at konstruere en ny differentiabel (og derfor kontinuert) funktion $f(x)$, som ligner $0$-udvidelsen af $|x|/x$ (der hverken er kontinuert eller differentiabel), dvs. vi Ã¸nsker en funktion $f(x)$ med fÃ¸lgende egenskaber: $1> f(x) > 0.999$ for $x > 0.001$ og $-0.999 > f(x) > -1$ for $x < -0.001$. Se figur \ref{tn14.figplotArctan}.
+Vink: PrÃ¸v at plotte $\arctan(1000x)$.
 \end{exercise}
 
 
@@ -771,9 +771,9 @@ Vink: Prøv at plotte $\arctan(1000x)$.
 
 
 \begin{summary}
-Vi har behandlet nogle af de fundamentale egenskaber ved nogle kendte og knap så kendte
+Vi har behandlet nogle af de fundamentale egenskaber ved nogle kendte og knap sÃ¥ kendte
 funktioner. Hvordan er de defineret, hvad er deres definitions-intervaller, er de kontinuerte, er de differentiable, hvad
-er i så fald deres differentialkvotienter?
+er i sÃ¥ fald deres differentialkvotienter?
 
 \begin{itemize}
 \item En funktion  $f(x)$ er kontinuert i $x_{0}$ hvis $f(x) - f(x_{0})$ er en epsilon-funktion af $(x - x_{0})$, dvs.
@@ -784,12 +784,12 @@ f(x) = f(x_{0}) + \varepsilon_{f}(x - x_{0}) \quad.
 \begin{equation*}
 f(x) = f(x_{0}) + f'(x_{0})(x-x_{0}) + (x-x_{0})\varepsilon_{f}(x-x_{0})\quad .
 \end{equation*}
-\item Hvis en funktion er differentiabel i $x_{0}$, så er den også kontinuert i $x_{0}$. Det omvendte gælder \emph{ikke}.
+\item Hvis en funktion er differentiabel i $x_{0}$, sÃ¥ er den ogsÃ¥ kontinuert i $x_{0}$. Det omvendte gÃ¦lder \emph{ikke}.
 \item Differentialkvotienten af et produkt af to funktioner er
 \begin{equation}
 \frac{d}{dx}\left(f(x)\cdot g(x)\right) = f'(x)\cdot g(x) + f(x)\cdot g'(x) \quad .
 \end{equation}
-\item Differentialkvotienten af en brøk mellem to funktioner er
+\item Differentialkvotienten af en brÃ¸k mellem to funktioner er
 \begin{equation}
 \frac{d}{dx}\left( \frac{f(x)}{g(x)}\right) = \frac{f'(x)}{g(x)} - \frac{f(x) \cdot g'(x)}{g^{2}(x)}= \frac{f'(x)\cdot g(x) - f(x)\cdot g'(x)}{g^{2}(x)} \quad .
 \end{equation}

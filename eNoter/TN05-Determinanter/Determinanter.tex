@@ -1,10 +1,10 @@
 \input{../Strukturfiler/preambel}
-\setcounter{chapter}{4} %SÆT DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
+\setcounter{chapter}{4} %SÃ†T DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% HERFRA SKAL DU SKRIVE ELLER INDSÆTTE %%%%
-%%% DEN FIL DU ØNSKER %%%%%%%%%%%%%%%%%%%%%%%
+%%% HERFRA SKAL DU SKRIVE ELLER INDSÃ†TTE %%%%
+%%% DEN FIL DU Ã˜NSKER %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -12,39 +12,39 @@
 
 
 \begin{basis}
-I denne eNote ser vi på \ind{kvadratiske matricer}{kvadratiske matricer}; deres type er altså $n \times n$ for $n \geq 2$, se \tref{NUID3-tn4}{eNote}. Det er en fordel, men ikke absolut nødvendigt, at kende determinantbegrebet for $(2 \times 2)$-matricer på forhånd. Matrix-algebraen fra \tref{NUID2-tn3}{eNote} forudsættes bekendt (sum, produkt, transponering, invers, af matricer), samt den generelle løsningsmetode for lineære ligningssystemer fra \tref{NUID1-tn2}{eNote}.
+I denne eNote ser vi pÃ¥ \ind{kvadratiske matricer}{kvadratiske matricer}; deres type er altsÃ¥ $n \times n$ for $n \geq 2$, se \tref{NUID3-tn4}{eNote}. Det er en fordel, men ikke absolut nÃ¸dvendigt, at kende determinantbegrebet for $(2 \times 2)$-matricer pÃ¥ forhÃ¥nd. Matrix-algebraen fra \tref{NUID2-tn3}{eNote} forudsÃ¦ttes bekendt (sum, produkt, transponering, invers, af matricer), samt den generelle lÃ¸sningsmetode for lineÃ¦re ligningssystemer fra \tref{NUID1-tn2}{eNote}.
 \end{basis}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ind{Determinant}{Determinanten} af en reel {\textit{kvadratisk}} $(n \times n)$-matrix $\mathbf{A}$ er et reelt tal, som vi betegner med \ind{$\det(\mathbf{A})$}{$\det(\mathbf{A})$} eller nogen gange kort med $|\mathbf{A}|$. Determinanten af en matrix kan betragtes som et mål for, hvor meget matricen 'vejer' - med fortegn; det vil vi illustrere visuelt og geometrisk for $(2 \times 2)$-matricer og for $(3 \times 3)$-matricer i \tref{NUID12-tn6}{eNote}. \\
+\ind{Determinant}{Determinanten} af en reel {\textit{kvadratisk}} $(n \times n)$-matrix $\mathbf{A}$ er et reelt tal, som vi betegner med \ind{$\det(\mathbf{A})$}{$\det(\mathbf{A})$} eller nogen gange kort med $|\mathbf{A}|$. Determinanten af en matrix kan betragtes som et mÃ¥l for, hvor meget matricen 'vejer' - med fortegn; det vil vi illustrere visuelt og geometrisk for $(2 \times 2)$-matricer og for $(3 \times 3)$-matricer i \tref{NUID12-tn6}{eNote}. \\
 
-Determinanten er en ganske bestemt {\textit{funktion}} af de i alt $n^{2}$ tal, der står som elementer i en $(n \times n)$-matrix.\\
+Determinanten er en ganske bestemt {\textit{funktion}} af de i alt $n^{2}$ tal, der stÃ¥r som elementer i en $(n \times n)$-matrix.\\
 
-For at definere -- og derefter beregne -- determinant-værdien af $(n \times n)$-matricer direkte ud fra de $n^{2}$ elementer i hver af matricerne har vi brug for to ting: Dels den velkendte determinant-formel for $(2 \times 2)$-matricer (se definition \ref{tn5.defDeterm22} nedenfor) og dels en  metode til at snitte en vilkårlig $(n \times n)$-matrix op i $(2 \times 2)$-matricer og derved definere og beregne vilkårlige determinanter ud fra determinanterne af disse $(2 \times 2)$-matricer.
+For at definere -- og derefter beregne -- determinant-vÃ¦rdien af $(n \times n)$-matricer direkte ud fra de $n^{2}$ elementer i hver af matricerne har vi brug for to ting: Dels den velkendte determinant-formel for $(2 \times 2)$-matricer (se definition \ref{tn5.defDeterm22} nedenfor) og dels en  metode til at snitte en vilkÃ¥rlig $(n \times n)$-matrix op i $(2 \times 2)$-matricer og derved definere og beregne vilkÃ¥rlige determinanter ud fra determinanterne af disse $(2 \times 2)$-matricer.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Determinanter af $(2 \times 2)-$matricer} \label{tn5.subsec22Matricer}
 
 \begin{definition}[Determinanter af $(2 \times 2)-$matricer] \label{tn5.defDeterm22}
-Lad $\mathbf{A}$ være den vilkårlige $(2 \times 2)-$matrix
+Lad $\mathbf{A}$ vÃ¦re den vilkÃ¥rlige $(2 \times 2)-$matrix
 \begin{equation} \label{tn5.22Matrix}
 \mathbf{A} = \begin{matr}{cc}
              a_{11} & a_{12} \\
              a_{21} & a_{22} \\
 \end{matr} \,  .
 \end{equation}
-Så er determinanten af $\mathbf{A}$ defineret ved:
+SÃ¥ er determinanten af $\mathbf{A}$ defineret ved:
 \begin{equation} \label{tn5.eqDetFormel22}
 \det(\mathbf{A}) = a_{11}\cdot a_{22} - a_{21}\cdot a_{12} \; .
 \end{equation}
 \end{definition}
 
 \begin{exercise}[Invers $(2 \times 2)-$matrix]
-Husk, at den inverse matrix $\mathbf{A}^{-1}$ til en regulær matrix $\mathbf{A}$ har den karakteristiske egenskab at $\mathbf{A}^{-1}\cdot \mathbf{A} = \mathbf{A}\cdot \mathbf{A}^{-1} = \mathbf{E}$.
-Vis direkte ud fra (\ref{tn5.22Matrix}) og (\ref{tn5.eqDetFormel22}), at den inverse matrix $\mathbf{A}^{-1}$ til en $(2 \times 2)-$matrix $\mathbf{A}$ kan udtrykkes på følgende måde (når altså $\det(\mathbf{A}) \neq 0$) :
+Husk, at den inverse matrix $\mathbf{A}^{-1}$ til en regulÃ¦r matrix $\mathbf{A}$ har den karakteristiske egenskab at $\mathbf{A}^{-1}\cdot \mathbf{A} = \mathbf{A}\cdot \mathbf{A}^{-1} = \mathbf{E}$.
+Vis direkte ud fra (\ref{tn5.22Matrix}) og (\ref{tn5.eqDetFormel22}), at den inverse matrix $\mathbf{A}^{-1}$ til en $(2 \times 2)-$matrix $\mathbf{A}$ kan udtrykkes pÃ¥ fÃ¸lgende mÃ¥de (nÃ¥r altsÃ¥ $\det(\mathbf{A}) \neq 0$) :
 \begin{equation}
 \mathbf{A}^{-1} = \frac{1}{\det(\mathbf{A})}\begin{matr}{rr}
                                         a_{22} & -a_{12} \\
@@ -54,14 +54,14 @@ Vis direkte ud fra (\ref{tn5.22Matrix}) og (\ref{tn5.eqDetFormel22}), at den inv
 \end{exercise}
 
 \begin{exercise}[Regneregler for $(2 \times 2)-$matricer]
-For generelle kvadratiske matricer gælde en række fundamentale determinant-regneregler, som vil blive præsenteret i sætning \ref{tn5.thmDetEgenskaber} nedenfor.
-Tjek allerede nu de tre første ligninger i  sætning \ref{tn5.thmDetEgenskaber} for $(2 \times 2)$-matricer $\mathbf{A}$ og $\mathbf{B}$. Brug direkte udregning af begge sider af ligningerne ved hjælp af (\ref{tn5.eqDetFormel22}).
+For generelle kvadratiske matricer gÃ¦lde en rÃ¦kke fundamentale determinant-regneregler, som vil blive prÃ¦senteret i sÃ¦tning \ref{tn5.thmDetEgenskaber} nedenfor.
+Tjek allerede nu de tre fÃ¸rste ligninger i  sÃ¦tning \ref{tn5.thmDetEgenskaber} for $(2 \times 2)$-matricer $\mathbf{A}$ og $\mathbf{B}$. Brug direkte udregning af begge sider af ligningerne ved hjÃ¦lp af (\ref{tn5.eqDetFormel22}).
 \end{exercise}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Snit-matricer}
 
 \begin{definition}[Snitmatricer] \label{tn5.defSnitMat}
-For en $(n \times n)$-matrix $\mathbf{A}$ defineres $(i,j)-$snitmatricen $\widehat{\mathbf{A}}_{ij}$ som den $((n-1) \times (n-1))$-undermatrix af $\mathbf{A}$, der fremkommer ved at slette hele række $i$ og hele søjle $j$ fra matricen $\mathbf{A}$.
+For en $(n \times n)$-matrix $\mathbf{A}$ defineres $(i,j)-$snitmatricen $\widehat{\mathbf{A}}_{ij}$ som den $((n-1) \times (n-1))$-undermatrix af $\mathbf{A}$, der fremkommer ved at slette hele rÃ¦kke $i$ og hele sÃ¸jle $j$ fra matricen $\mathbf{A}$.
 \end{definition}
 
 \begin{think}
@@ -77,7 +77,7 @@ En $(3 \times 3)$-matrix $\mathbf{A}$ har i alt $9$ stk. $(2 \times 2)$-snitmatr
              0 & 5 & 1 \\
            \end{matr} \;,
 \end{equation}
-så er de $9$ snitmatricer hørende til $\mathbf{A}$ givet ved:
+sÃ¥ er de $9$ snitmatricer hÃ¸rende til $\mathbf{A}$ givet ved:
 \begin{equation}
 \begin{aligned}
 \widehat{\mathbf{A}}_{11} &= \begin{matr}{rr}
@@ -139,19 +139,19 @@ Deres respektive determinanter er determinanter af $(2 \times 2)-$matricer, og k
 
 \section{Induktiv definition af determinanter} \label{afsnit.inddefdet}
 
-Determinanten af en $3 \times 3$ matrix kan nu defineres ud fra determinanterne af $3$ af sine $9$ snitmatricer, og generelt: Determinanten af en $n \times n$ matrix defineres ved hjælp af determinanterne af de $n$ snitmatricer der hører til en (frit valgt men fast) række $r$
-på følgende måde, som naturligt nok kaldes \ind{opløsning efter $r$-te række}{opløsning efter $r$-te række}:
+Determinanten af en $3 \times 3$ matrix kan nu defineres ud fra determinanterne af $3$ af sine $9$ snitmatricer, og generelt: Determinanten af en $n \times n$ matrix defineres ved hjÃ¦lp af determinanterne af de $n$ snitmatricer der hÃ¸rer til en (frit valgt men fast) rÃ¦kke $r$
+pÃ¥ fÃ¸lgende mÃ¥de, som naturligt nok kaldes \ind{oplÃ¸sning efter $r$-te rÃ¦kke}{oplÃ¸sning efter $r$-te rÃ¦kke}:
 
-\begin{definition}[Determinanter defineres ved opløsning]\label{tn5.defDeterminantRaekke}
-For en vilkårlig værdi af rækkeindeks $r$ defineres determinanten af
-en given $(n \times n)$-matrix $\mathbf{A}$ induktivt på følgende måde:
+\begin{definition}[Determinanter defineres ved oplÃ¸sning]\label{tn5.defDeterminantRaekke}
+For en vilkÃ¥rlig vÃ¦rdi af rÃ¦kkeindeks $r$ defineres determinanten af
+en given $(n \times n)$-matrix $\mathbf{A}$ induktivt pÃ¥ fÃ¸lgende mÃ¥de:
 \begin{equation} \label{tn5.eqDeterminant}
 \det(\mathbf{A}) = \sum_{j=1}^{n}(-1)^{r+j}a_{rj}\det(\widehat{\mathbf{A}}_{rj})\quad .
 \end{equation}
 \end{definition}
 
 \begin{info}
-Vi benytter her og senere følgende korte skrivemåder og notationer for summer og produkter
+Vi benytter her og senere fÃ¸lgende korte skrivemÃ¥der og notationer for summer og produkter
 af mange led, f.eks. $n$ givne reelle tal $c_{1}, c_{2}, \ldots, c_{n-1}, c_{n}$:
 \begin{equation}
 \begin{aligned}
@@ -161,8 +161,8 @@ c_{1} \cdot c_{2} \cdot \cdots \cdot c_{n-1} \cdot c_{n} &= \prod_{i=1}^{n} c_{i
 \end{equation}
 \end{info}
 
-\begin{example} [Opløsning af en determinant efter 1. række]\label{tn5.detAf3x3matrix}
-Vi vil benytte definition \ref{tn5.defDeterminantRaekke} direkte til at beregne determinanten af den matrix $\mathbf{A}$ som er givet i eksempel \ref{tn5.exampAmatrix33}. Vi vælger $r=1$ og har så brug for de tre snitmatrix-determinanter, $\det(\widehat{\mathbf{A}}_{11}) = -7$, $\det(\widehat{\mathbf{A}}_{12}) = 1$, og $\det(\widehat{\mathbf{A}}_{13})= 5$, som vi allerede har udregnet ovenfor i eksempel \ref{tn5.exampAmatrix33}:
+\begin{example} [OplÃ¸sning af en determinant efter 1. rÃ¦kke]\label{tn5.detAf3x3matrix}
+Vi vil benytte definition \ref{tn5.defDeterminantRaekke} direkte til at beregne determinanten af den matrix $\mathbf{A}$ som er givet i eksempel \ref{tn5.exampAmatrix33}. Vi vÃ¦lger $r=1$ og har sÃ¥ brug for de tre snitmatrix-determinanter, $\det(\widehat{\mathbf{A}}_{11}) = -7$, $\det(\widehat{\mathbf{A}}_{12}) = 1$, og $\det(\widehat{\mathbf{A}}_{13})= 5$, som vi allerede har udregnet ovenfor i eksempel \ref{tn5.exampAmatrix33}:
 \begin{equation}
 \begin{aligned}
 \det(\mathbf{A}) &=  \sum_{j=1}^{n}(-1)^{1+j}a_{1j}\det(\widehat{\mathbf{A}}_{1j}) \\
@@ -174,39 +174,39 @@ Vi vil benytte definition \ref{tn5.defDeterminantRaekke} direkte til at beregne 
 \end{example}
 
 \begin{obs}
-Læg mærke til, at snitmatricernes determinanter skal ganges med det element i $\mathbf{A}$ som står på plads $(r,j)$ og med fortegns-faktoren $(-1)^{r+j}$ før de lægges sammen. Og læg mærke til, at snitmatricernes determinanter jo selv kan 'trævles op' til en bestemmelse af determinanter af endnu mindre matricer, således at vi til sidst ender med 'kun' at skulle bestemme vægtede summer af determinanter af $(2 \times 2)-$matricer!
+LÃ¦g mÃ¦rke til, at snitmatricernes determinanter skal ganges med det element i $\mathbf{A}$ som stÃ¥r pÃ¥ plads $(r,j)$ og med fortegns-faktoren $(-1)^{r+j}$ fÃ¸r de lÃ¦gges sammen. Og lÃ¦g mÃ¦rke til, at snitmatricernes determinanter jo selv kan 'trÃ¦vles op' til en bestemmelse af determinanter af endnu mindre matricer, sÃ¥ledes at vi til sidst ender med 'kun' at skulle bestemme vÃ¦gtede summer af determinanter af $(2 \times 2)-$matricer!
 \end{obs}
 
 
-\begin{exercise} [Valg af 'opløsningsrække' er ligegyldig]\label{tn5.exercAlterOpl}
-Vis direkte ved beregning, at vi får samme værdi for determinanten ved at bruge en af de andre to rækker til opløsningen af determinanten i eksempel \ref{tn5.exampAmatrix33}.
+\begin{exercise} [Valg af 'oplÃ¸sningsrÃ¦kke' er ligegyldig]\label{tn5.exercAlterOpl}
+Vis direkte ved beregning, at vi fÃ¥r samme vÃ¦rdi for determinanten ved at bruge en af de andre to rÃ¦kker til oplÃ¸sningen af determinanten i eksempel \ref{tn5.exampAmatrix33}.
 \end{exercise}
 
-\begin{definition}[Alternativ: Opløsning efter søjle] \label{tn5.defDeterminantSoejle}
+\begin{definition}[Alternativ: OplÃ¸sning efter sÃ¸jle] \label{tn5.defDeterminantSoejle}
 Determinanten af en given $(n \times n)-$matrix $\mathbf{A}$ kan alternativt defineres induktivt ved
-opløsning efter en vilkårlig valgt \textit{søjle} :
+oplÃ¸sning efter en vilkÃ¥rlig valgt \textit{sÃ¸jle} :
 \begin{equation} \label{tn5.eqDeterminantSoejle}
 \det(\mathbf{A}) = \sum_{i=1}^{n}(-1)^{i+s}a_{i\,s}\det(\widehat{\mathbf{A}}_{i\,s}) \quad .
 \end{equation}
-Her er opløsningen udtrykt ved opløsning efter søjle $s$.
+Her er oplÃ¸sningen udtrykt ved oplÃ¸sning efter sÃ¸jle $s$.
 \end{definition}
 
-Som det er antydet allerede med definitionerne og som vist i det konkrete tilfælde med matricen i eksempel \ref{tn5.exampAmatrix33}, er det ligegyldigt, hvilken række (eller søjle) man opløser efter:
+Som det er antydet allerede med definitionerne og som vist i det konkrete tilfÃ¦lde med matricen i eksempel \ref{tn5.exampAmatrix33}, er det ligegyldigt, hvilken rÃ¦kke (eller sÃ¸jle) man oplÃ¸ser efter:
 
-\begin{theorem}[Valg af opløsnings-række eller -søjle er ligegyldig]
-De to definitioner, \ref{tn5.defDeterminantRaekke} og \ref{tn5.defDeterminantSoejle}, af determinanten af en kvadratisk matrix giver samme værdi og er uafhængige af valg af række hhv. søjle til de respektive opløsninger.
+\begin{theorem}[Valg af oplÃ¸snings-rÃ¦kke eller -sÃ¸jle er ligegyldig]
+De to definitioner, \ref{tn5.defDeterminantRaekke} og \ref{tn5.defDeterminantSoejle}, af determinanten af en kvadratisk matrix giver samme vÃ¦rdi og er uafhÃ¦ngige af valg af rÃ¦kke hhv. sÃ¸jle til de respektive oplÃ¸sninger.
 \end{theorem}
 
-\begin{exercise}[Valg af 'opløsningssøjle' er ligegyldig]
-Vis direkte ved beregning, at vi får samme værdi for determinanten i \ref{tn5.exampAmatrix33} ved at bruge søjle-opløsning efter en vilkårlig af de tre søjler i $\mathbf{A}$.
+\begin{exercise}[Valg af 'oplÃ¸sningssÃ¸jle' er ligegyldig]
+Vis direkte ved beregning, at vi fÃ¥r samme vÃ¦rdi for determinanten i \ref{tn5.exampAmatrix33} ved at bruge sÃ¸jle-oplÃ¸sning efter en vilkÃ¥rlig af de tre sÃ¸jler i $\mathbf{A}$.
 \end{exercise}
 
 \begin{think}
-Det er selvsagt smartest at opløse efter en række, eller en søjle, som indeholder en masse $0$'er.
+Det er selvsagt smartest at oplÃ¸se efter en rÃ¦kke, eller en sÃ¸jle, som indeholder en masse $0$'er.
 \end{think}
 
-\begin{exercise}[Determinanter af nogle større matricer]
-Benyt de ovenfor givne anvisninger og resultater til at finde determinanten af hver af følgende matricer:
+\begin{exercise}[Determinanter af nogle stÃ¸rre matricer]
+Benyt de ovenfor givne anvisninger og resultater til at finde determinanten af hver af fÃ¸lgende matricer:
 \begin{equation}
 \begin{matr}{cccc}
     0 & 2 & 7 & 1 \\
@@ -231,8 +231,8 @@ Benyt de ovenfor givne anvisninger og resultater til at finde determinanten af h
 \end{exercise}
 
 \begin{aha}
-Hvis der er mange $0$'er i en matrix, så er det meget lettere at beregne dens determinant! Specielt hvis alle elementer i en række (henholdsvis søjle) er $0$ pånær \'{e}t element, så er det klart smartest at opløse efter den række (henholdsvis søjle).
-Og det er tilladt at 'skaffe' sig en masse $0$'er ved de velkendte rækkeoperationer, hvis man blot holder øje med, hvilke konstanter der divideres med og hvor mange gange der byttes om på rækkerne. Se sætning \ref{tn5.thmEgenskaberDeterm} og eksempel \ref{tn5.exampTrappeDet} nedenfor.
+Hvis der er mange $0$'er i en matrix, sÃ¥ er det meget lettere at beregne dens determinant! Specielt hvis alle elementer i en rÃ¦kke (henholdsvis sÃ¸jle) er $0$ pÃ¥nÃ¦r \'{e}t element, sÃ¥ er det klart smartest at oplÃ¸se efter den rÃ¦kke (henholdsvis sÃ¸jle).
+Og det er tilladt at 'skaffe' sig en masse $0$'er ved de velkendte rÃ¦kkeoperationer, hvis man blot holder Ã¸je med, hvilke konstanter der divideres med og hvor mange gange der byttes om pÃ¥ rÃ¦kkerne. Se sÃ¦tning \ref{tn5.thmEgenskaberDeterm} og eksempel \ref{tn5.exampTrappeDet} nedenfor.
 \end{aha}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -244,10 +244,10 @@ Og det er tilladt at 'skaffe' sig en masse $0$'er ved de velkendte rækkeoperatio
 
 Vi samler her nogle af de vigtigste redskaber, som ofte benyttes til beregning og inspektion af determinanter af matricer.\\
 
-Det er ikke svært at vise følgende sætning, f.eks. direkte ved først at opløse efter første søjle eller efter første række, hvorefter mønsteret viser sig:
+Det er ikke svÃ¦rt at vise fÃ¸lgende sÃ¦tning, f.eks. direkte ved fÃ¸rst at oplÃ¸se efter fÃ¸rste sÃ¸jle eller efter fÃ¸rste rÃ¦kke, hvorefter mÃ¸nsteret viser sig:
 
 \begin{theorem}[Matricer med $0$ over eller under diagonalen] \label{tn5.thmTriangMatrixDet}
-Hvis en $(n \times n)-$matrix har lutter $0$'er over eller under diagonalen, så er determinanten givet ved produktet af diagonalelementerne.
+Hvis en $(n \times n)-$matrix har lutter $0$'er over eller under diagonalen, sÃ¥ er determinanten givet ved produktet af diagonalelementerne.
 \end{theorem}
 
 Specielt har vi derfor:
@@ -263,14 +263,14 @@ Lad $\mL$ betegne en $(n \times n)$-\ind{diagonalmatrix}{diagonalmatrix} med dia
 0 & 0 & \ldots & \lambda_{n}
 \end{bmatrix} \; .
 \end{equation}
-Så er determinanten
+SÃ¥ er determinanten
 \begin{equation}
 \det(\mL) = \lambda_{1}\,\lambda_{2} \cdot \cdot \cdot \lambda_{n}  = \prod_{i=1}^{n} \lambda_{i}
 \end{equation}
 \end{theorem}
 
 \begin{exercise}[Determinanten af en bi-diagonalmatrix]
-Bestem determinanten af $(n \times n)-$ \ind{bi-diagonal-matrix}{bi-diagonal-matricen} med vilkårligt givne værdier $\mu_{1}$, . . . , $\mu_{n}$ i bidiagonalen og $0$'er udenfor:
+Bestem determinanten af $(n \times n)-$ \ind{bi-diagonal-matrix}{bi-diagonal-matricen} med vilkÃ¥rligt givne vÃ¦rdier $\mu_{1}$, . . . , $\mu_{n}$ i bidiagonalen og $0$'er udenfor:
 \begin{equation}
 \mathbf{M} = \bidiag(\mu_{1}, \mu_{2}, \cdots, \mu_{n}) =
 \begin{matr}{cccc}
@@ -282,24 +282,24 @@ Bestem determinanten af $(n \times n)-$ \ind{bi-diagonal-matrix}{bi-diagonal-mat
 \end{equation}
 \end{exercise}
 
-For generelle matricer og derfor også for kvadratiske matricer gælder som bekendt fra \tref{NUID1-tn2}{eNote}, at de kan omformes til trappeform ved brug af rækkeoperationer.
-Hvis man holder godt øje med, hvad der sker ved hvert skridt i den omformning,
-så kan determinanten af matricen direkte aflæses ud fra processen. Determinanten af en matrix opfører sig nemlig 'pænt' selvom der udføres rækkeoperationer på matricen:
+For generelle matricer og derfor ogsÃ¥ for kvadratiske matricer gÃ¦lder som bekendt fra \tref{NUID1-tn2}{eNote}, at de kan omformes til trappeform ved brug af rÃ¦kkeoperationer.
+Hvis man holder godt Ã¸je med, hvad der sker ved hvert skridt i den omformning,
+sÃ¥ kan determinanten af matricen direkte aflÃ¦ses ud fra processen. Determinanten af en matrix opfÃ¸rer sig nemlig 'pÃ¦nt' selvom der udfÃ¸res rÃ¦kkeoperationer pÃ¥ matricen:
 
 
-\begin{theorem} [Rækkeoperationers indflydelse på determinanten]\label{tn5.thmEgenskaberDeterm}
-Determinanten har følgende egenskaber:
+\begin{theorem} [RÃ¦kkeoperationers indflydelse pÃ¥ determinanten]\label{tn5.thmEgenskaberDeterm}
+Determinanten har fÃ¸lgende egenskaber:
 \begin{enumerate}
-\item Hvis alle elementer i en række i $\mathbf{A}$ er $0$, så er determinanten $0$, $\det(\mathbf{A}) = 0$.
-\item Hvis to rækker ombyttes i $\mathbf{A}$, $R_{i} \leftrightarrow R_{j}$,  så skifter determinanten fortegn.
-\item Hvis alle elementerne i en række i $\mathbf{A}$ ganges med en konstant $k$, $k \cdot R_{i}$,  så bliver determinanten ganget med $k$.
-\item Hvis to rækker i en matrix $\mathbf{A}$ er ens, så er $\det(\mathbf{A}) = 0$.
-\item En rækkeoperation af typen $R_{j} + k \cdot R_{i}$ hvor $i \neq j$ ændrer ikke determinanten.
+\item Hvis alle elementer i en rÃ¦kke i $\mathbf{A}$ er $0$, sÃ¥ er determinanten $0$, $\det(\mathbf{A}) = 0$.
+\item Hvis to rÃ¦kker ombyttes i $\mathbf{A}$, $R_{i} \leftrightarrow R_{j}$,  sÃ¥ skifter determinanten fortegn.
+\item Hvis alle elementerne i en rÃ¦kke i $\mathbf{A}$ ganges med en konstant $k$, $k \cdot R_{i}$,  sÃ¥ bliver determinanten ganget med $k$.
+\item Hvis to rÃ¦kker i en matrix $\mathbf{A}$ er ens, sÃ¥ er $\det(\mathbf{A}) = 0$.
+\item En rÃ¦kkeoperation af typen $R_{j} + k \cdot R_{i}$ hvor $i \neq j$ Ã¦ndrer ikke determinanten.
 \end{enumerate}
 \end{theorem}
 
 
-Som antydet ovenfor følger det af disse egenskaber ved determinantfunktionen, at den velkendte reduktion af en given matrix $\mathbf{A}$ til trappeform, $\trap{\mathbf{A}}$, via rækkeoperationer som beskrevet i \tref{NUID1-tn2}{eNote}, faktisk {\textit{indeholder}} en helt eksplicit beregning af determinanten af $\mathbf{A}$. Vi illustrerer med et simpelt eksempel:
+Som antydet ovenfor fÃ¸lger det af disse egenskaber ved determinantfunktionen, at den velkendte reduktion af en given matrix $\mathbf{A}$ til trappeform, $\trap{\mathbf{A}}$, via rÃ¦kkeoperationer som beskrevet i \tref{NUID1-tn2}{eNote}, faktisk {\textit{indeholder}} en helt eksplicit beregning af determinanten af $\mathbf{A}$. Vi illustrerer med et simpelt eksempel:
 
 \begin{example}[Inspektion af determinant ved reduktion til trappeform] \label{tn5.exampTrappeDet}
 Vi betragter $(3 \times 3)-$matricen $\mathbf{A}_{1} = \mathbf{A}$ fra eksempel \ref{tn5.exampAmatrix33}:
@@ -310,10 +310,10 @@ Vi betragter $(3 \times 3)-$matricen $\mathbf{A}_{1} = \mathbf{A}$ fra eksempel 
              0 & 5 & 1 \\
            \end{matr}
 \end{equation}
-Vi reducererden  til trappeform på sædvanlig måde med Gauss--Jordan rækkeoperationer og holder hele tiden øje med, hvad der sker med determinanten
+Vi reducererden  til trappeform pÃ¥ sÃ¦dvanlig mÃ¥de med Gauss--Jordan rÃ¦kkeoperationer og holder hele tiden Ã¸je med, hvad der sker med determinanten
 ved at bruge reglerne fra \ref{tn5.thmEgenskaberDeterm} (og ved eventuelt derudover at checke dem med direkte udregninger):
 
-Operation: Ombyt række $1$ og række $2$, $R_{1} \leftrightarrow R_{2}$ : Determinanten skifter fortegn :
+Operation: Ombyt rÃ¦kke $1$ og rÃ¦kke $2$, $R_{1} \leftrightarrow R_{2}$ : Determinanten skifter fortegn :
 \begin{equation}
 \det(\mathbf{A}_{2}) = -\det(\mathbf{A}_{1}) \;:
 \end{equation}
@@ -324,7 +324,7 @@ Operation: Ombyt række $1$ og række $2$, $R_{1} \leftrightarrow R_{2}$ : Determi
              0 & 5 & 1 \\
            \end{matr}
 \end{equation}
-Operation: $\tiny{\frac{1}{2}}R_{2}$, række 2 ganges med $\tiny{\frac{1}{2}}$  : Determinanten ganges med $\tiny{\frac{1}{2}}$ :
+Operation: $\tiny{\frac{1}{2}}R_{2}$, rÃ¦kke 2 ganges med $\tiny{\frac{1}{2}}$  : Determinanten ganges med $\tiny{\frac{1}{2}}$ :
 \begin{equation}
 \det(\mathbf{A}_{3}) = \frac{1}{2}\det(\mathbf{A}_{2}) = -\frac{1}{2}\det(\mathbf{A}_{1}) \;:
 \end{equation}
@@ -335,7 +335,7 @@ Operation: $\tiny{\frac{1}{2}}R_{2}$, række 2 ganges med $\tiny{\frac{1}{2}}$  :
              0 & 5 & 1 \\
            \end{matr}
 \end{equation}
-Operation: $R_{1}- 3R_{2}$: Determinanten uændret:
+Operation: $R_{1}- 3R_{2}$: Determinanten uÃ¦ndret:
 \begin{equation}
 \det(\mathbf{A}_{4}) =   \det(\mathbf{A}_{3}) = \frac{1}{2}\det(\mathbf{A}_{2}) = -\frac{1}{2}\det(\mathbf{A}_{1}) \; :
 \end{equation}
@@ -346,7 +346,7 @@ Operation: $R_{1}- 3R_{2}$: Determinanten uændret:
              0 & 5 & 1 \\
            \end{matr}
 \end{equation}
-Operation: $R_{3}- 5R_{2}$: Determinanten uændret:
+Operation: $R_{3}- 5R_{2}$: Determinanten uÃ¦ndret:
     \begin{equation}
     \det(\mathbf{A}_{5}) =  \det(\mathbf{A}_{4}) =   \det(\mathbf{A}_{3}) = \frac{1}{2}\det(\mathbf{A}_{2}) = -\frac{1}{2}\det(\mathbf{A}_{1}) \;:
     \end{equation}
@@ -357,30 +357,30 @@ Operation: $R_{3}- 5R_{2}$: Determinanten uændret:
              0 & 0 & -3/2 \\
            \end{matr}
 \end{equation}
-Determinanten er nu diagonal-produktet fordi alle elementerne under diagonalen er $0$, se sætning \ref{tn5.thmTriangMatrixDet}. Ialt har vi derfor:
+Determinanten er nu diagonal-produktet fordi alle elementerne under diagonalen er $0$, se sÃ¦tning \ref{tn5.thmTriangMatrixDet}. Ialt har vi derfor:
 \begin{equation}
 -\frac{3}{2} =    \det(\mathbf{A}_{5}) =  \det(\mathbf{A}_{4}) =   \det(\mathbf{A}_{3}) = \frac{1}{2}\det(\mathbf{A}_{2}) = -\frac{1}{2}\det(\mathbf{A}_{1}) \;:
 \end{equation}
-Heraf direkte -- ved at læse 'baglæns':
+Heraf direkte -- ved at lÃ¦se 'baglÃ¦ns':
 \begin{equation}
 -\frac{1}{2}\det(\mathbf{A}_{1}) = -\frac{3}{2} \;,
 \end{equation}
-således at
+sÃ¥ledes at
 \begin{equation}
 \det(\mathbf{A}_{1}) = 3 \;.
 \end{equation}
 \end{example}
 
-Derudover har vi følgende sammenhæng mellem rang og determinant; determinanten afslører simpelthen, om matricen er singulær eller regulær:
+Derudover har vi fÃ¸lgende sammenhÃ¦ng mellem rang og determinant; determinanten afslÃ¸rer simpelthen, om matricen er singulÃ¦r eller regulÃ¦r:
 
 \begin{theorem}[Rang versus determinant]
-Rangen af en kvadratformet $(n \times n)$-matrix $\mathbf{A}$ er skarpt mindre end $n$ hvis og kun hvis determinanten af $\mathbf{A}$ er $0$. Med andre ord, $\mathbf{A}$ er singulær hvis og kun hvis $\det(\mathbf{A}) = 0$.
+Rangen af en kvadratformet $(n \times n)$-matrix $\mathbf{A}$ er skarpt mindre end $n$ hvis og kun hvis determinanten af $\mathbf{A}$ er $0$. Med andre ord, $\mathbf{A}$ er singulÃ¦r hvis og kun hvis $\det(\mathbf{A}) = 0$.
 \end{theorem}
 
-Hvis en matrix indeholder en variabel, en parameter, så er determinanten af matricen en funktion af denne
-parameter; i anvendelserne af matrix-algebra er det ofte ret afgørende at kunne finde nulpunkterne for den
-funktion -- netop fordi den tilhørende matrix er singulær for de værdier af parameteren, så der måske ikke findes en (entydig) løsning til
-det tilsvarende lineære ligningssystem der har matricen som koefficientmatrix.
+Hvis en matrix indeholder en variabel, en parameter, sÃ¥ er determinanten af matricen en funktion af denne
+parameter; i anvendelserne af matrix-algebra er det ofte ret afgÃ¸rende at kunne finde nulpunkterne for den
+funktion -- netop fordi den tilhÃ¸rende matrix er singulÃ¦r for de vÃ¦rdier af parameteren, sÃ¥ der mÃ¥ske ikke findes en (entydig) lÃ¸sning til
+det tilsvarende lineÃ¦re ligningssystem der har matricen som koefficientmatrix.
 
 \begin{exercise}[Determinant af matrix med variabel] \label{tn5.exercReduktionDet}
 Givet matricen
@@ -394,32 +394,32 @@ Givet matricen
 \end{equation}
 \begin{enumerate}
 \item Bestem determinanten af ${\bf{A}}$ som et polynomium i $a$.
-\item Bestem rødderne i dette polynomium.
+\item Bestem rÃ¸dderne i dette polynomium.
 \item Find rangen af ${\mathbf{A}}$ for $a \, \in \,
 \{-4, -3, -2, -1, 0, 1, 2, 3, 4\}$ . Hvad har rangen med de fundne
-rødder i determinanten at gøre?
+rÃ¸dder i determinanten at gÃ¸re?
 \item Find rangen af ${\mathbf{A}}$ for alle $a$.
 \end{enumerate}
 \end{exercise}
 
 \begin{theorem}[Regneregler for determinanter] \label{tn5.thmDetEgenskaber}
-Lad $\mathbf{A}$ og $\mathbf{B}$ betegne to $(n \times n)-$matricer. Så gælder:
+Lad $\mathbf{A}$ og $\mathbf{B}$ betegne to $(n \times n)-$matricer. SÃ¥ gÃ¦lder:
 \begin{enumerate}
 \item $ \det(\mathbf{A}) = \det(\mathbf{A}\transp) $
 \item $ \det(\mathbf{A}\mathbf{B}) = \det(\mathbf{A})\det(\mathbf{B}) $
-\item $ \det(\mathbf{A}^{-1}) = \left(\det(\mathbf{A})\right)^{-1} $, når blot $\mathbf{A}$ er regulær, altså $\det(\mathbf{A}) \neq 0$
+\item $ \det(\mathbf{A}^{-1}) = \left(\det(\mathbf{A})\right)^{-1} $, nÃ¥r blot $\mathbf{A}$ er regulÃ¦r, altsÃ¥ $\det(\mathbf{A}) \neq 0$
 \item $ \det(\mathbf{A}^{k}) = (\det(\mathbf{A}))^{k} $, for alle $k \geq 1$.
-\item $ \det(\mathbf{B}^{-1}\mathbf{A}\mathbf{B}) = \det(\mathbf{A}) $, når blot $\mathbf{B}$ er regulær, det vil sige $\det(\mathbf{B}) \neq 0$.
+\item $ \det(\mathbf{B}^{-1}\mathbf{A}\mathbf{B}) = \det(\mathbf{A}) $, nÃ¥r blot $\mathbf{B}$ er regulÃ¦r, det vil sige $\det(\mathbf{B}) \neq 0$.
 \end{enumerate}
 \end{theorem}
 
 \begin{exercise}
-Bevis de $3$ sidste ligninger i sætning \ref{tn5.thmDetEgenskaber} ved at bruge ligningen $\det(\mathbf{A}\mathbf{B}) = \det(\mathbf{A})\det(\mathbf{B})$.
+Bevis de $3$ sidste ligninger i sÃ¦tning \ref{tn5.thmDetEgenskaber} ved at bruge ligningen $\det(\mathbf{A}\mathbf{B}) = \det(\mathbf{A})\det(\mathbf{B})$.
 \end{exercise}
 
 \begin{exercise}[Determinanten af en sum er ikke determinantsummen]
-Vis med et simplest muligt eksempel, at determinant-funktionen $\det( )$ {\textit{ikke}} er additiv, altså find to $(n \times n)-$matricer $\mathbf{A}$ og $\mathbf{B}$
-således at
+Vis med et simplest muligt eksempel, at determinant-funktionen $\det( )$ {\textit{ikke}} er additiv, altsÃ¥ find to $(n \times n)-$matricer $\mathbf{A}$ og $\mathbf{B}$
+sÃ¥ledes at
 \begin{equation}
 \det(\mathbf{A} + \mathbf{B}) \neq \det(\mathbf{A}) + \det(\mathbf{B}) \;.
 \end{equation}
@@ -427,7 +427,7 @@ således at
 
 
 \begin{exercise} [Brug af regnereglerne for determinanter] \label{tn5.exercLA39}
-Lad $a$ betegne et reelt tal. Der er  givet følgende matricer:
+Lad $a$ betegne et reelt tal. Der er  givet fÃ¸lgende matricer:
 \begin{equation}
 \mathbf{A} = \begin{matr}{rrr}
              3 & 4 & 4 \\
@@ -442,7 +442,7 @@ Lad $a$ betegne et reelt tal. Der er  givet følgende matricer:
 \begin{enumerate}
 \item Find $\det(\mathbf{A})$ og $\det(\mathbf{B})$.
 \item Find $\det(\mathbf{A\,B})$ og $\det\left(\left(\mathbf{A}\transp \mathbf{B}\right)^{4}\right)$.
-\item Angiv de værdier af $a$, for hvilke $\mathbf{A}$ er regulær og find for disse værdier af $a$ udtrykket for
+\item Angiv de vÃ¦rdier af $a$, for hvilke $\mathbf{A}$ er regulÃ¦r og find for disse vÃ¦rdier af $a$ udtrykket for
 $\det(\mathbf{A}^{-1})$.
 \end{enumerate}
 \end{exercise}
@@ -453,14 +453,14 @@ $\det(\mathbf{A}^{-1})$.
 
 \section{Advanced: Det karakteristiske polynomium} \label{tn5.secKarakterPol}
 
-Materialet i dette afsnit hører beregningsteknisk naturligt hjemme i denne eNote om determinanter, men det er først senere -- ved
-løsning af de såkaldte egenværdiproblemer, at vi virkelig får brug for de karakteristiske polynomier.\\
+Materialet i dette afsnit hÃ¸rer beregningsteknisk naturligt hjemme i denne eNote om determinanter, men det er fÃ¸rst senere -- ved
+lÃ¸sning af de sÃ¥kaldte egenvÃ¦rdiproblemer, at vi virkelig fÃ¥r brug for de karakteristiske polynomier.\\
 
-For en given kvadratformet matrix $\mathbf{A}$ defineres den tilhørende \ind{karakteristisk matrix}{karakteristiske matrix}
-og det tilhørende \ind{karakteristiske polynomium}{karakteristisk polynomium} på følgende måde:
+For en given kvadratformet matrix $\mathbf{A}$ defineres den tilhÃ¸rende \ind{karakteristisk matrix}{karakteristiske matrix}
+og det tilhÃ¸rende \ind{karakteristiske polynomium}{karakteristisk polynomium} pÃ¥ fÃ¸lgende mÃ¥de:
 
 \begin{definition}[Den karakteristiske matrix]
-Lad $\mathbf{A}$ være en $(n \times n)-$matrix. Den tilhørende {\textit{karakteristiske matrix}} er følgende matrix-funktion af den reelle variable $\lambda$:
+Lad $\mathbf{A}$ vÃ¦re en $(n \times n)-$matrix. Den tilhÃ¸rende {\textit{karakteristiske matrix}} er fÃ¸lgende matrix-funktion af den reelle variable $\lambda$:
 \begin{equation}
 \mathbf{K}_{\mathbf{A}}(\lambda) = \mathbf{A} - \lambda\,\mathbf{E} \;, \;\textrm{hvor} \;\lambda \in \mathbb{R} \;,
 \end{equation}
@@ -477,7 +477,7 @@ Givet en $(3 \times 3)-$matrix $\mathbf{A}$ ved
              1 & -1 & 2 \\
            \end{matr} \;.
 \end{equation}
-Så er
+SÃ¥ er
 \begin{equation}
 \mathbf{K}_{\mathbf{A}}(\lambda) = \mathbf{A} - \lambda\,\mathbf{E} = \begin{matr}{ccc}
             3 -\lambda & -2 & 0 \\
@@ -488,10 +488,10 @@ Så er
 \end{example}
 
 
-Det tilhørende \ind{karakteristiske polynomium}{karakteristiske polynomium} for matricen $\mathbf{A}$ er dernæst følgende reelle polynomium af variablen $\lambda$:
+Det tilhÃ¸rende \ind{karakteristiske polynomium}{karakteristiske polynomium} for matricen $\mathbf{A}$ er dernÃ¦st fÃ¸lgende reelle polynomium af variablen $\lambda$:
 
 \begin{definition}[Det karakteristiske polynomium] \label{tn5.defKarakPol}
-Givet den kvadratiske matrix $\mathbf{A}$, så defineres det karakteristiske polynomium for $\mathbf{A}$ således:
+Givet den kvadratiske matrix $\mathbf{A}$, sÃ¥ defineres det karakteristiske polynomium for $\mathbf{A}$ sÃ¥ledes:
 \begin{equation}
 \mathcal{K}_{\mathbf{A}}(\lambda) = \det(\mathbf{K}_{\mathbf{A}}(\lambda)) = \det(\mathbf{A} - \lambda\,\mathbf{E}) \;, \;\textrm{hvor} \;\lambda \in \mathbb{R} \;.
 \end{equation}
@@ -502,7 +502,7 @@ Givet den kvadratiske matrix $\mathbf{A}$, så defineres det karakteristiske poly
 
 
 \begin{example}[Et karakteristisk polynomium]
-Med  $\mathbf{A}$ som i eksempel \ref{exampKarakMat} får vi følgende karakteristiske polynomium for $\mathbf{A}$ ved at opløse den karakteristiske matrix efter sidste søjle:
+Med  $\mathbf{A}$ som i eksempel \ref{exampKarakMat} fÃ¥r vi fÃ¸lgende karakteristiske polynomium for $\mathbf{A}$ ved at oplÃ¸se den karakteristiske matrix efter sidste sÃ¸jle:
 \begin{equation}
 \begin{aligned}
 \mathcal{K}_{\mathbf{A}}(\lambda) &= \det\left(\begin{matr}{ccc}
@@ -518,20 +518,20 @@ Med  $\mathbf{A}$ som i eksempel \ref{exampKarakMat} får vi følgende karakterist
 &= (2-\lambda)(3 - \lambda)(1-\lambda) \;.
 \end{aligned}
 \end{equation}
-Det karakteristiske polynomium for  $\mathbf{A}$ har altså rødderne $1$, $2$, og $3$.
+Det karakteristiske polynomium for  $\mathbf{A}$ har altsÃ¥ rÃ¸dderne $1$, $2$, og $3$.
 \end{example}
 
 \begin{info}
-%Det karakteristiske polynomium $\mathcal{K}_{\mathbf{A}}(\lambda)$ -- og især de $\lambda$-værdier for hvilke  $\mathcal{K}_{\mathbf{A}}(\lambda) = 0$, altså rødderne i polynomiet -- spiller en afgørende rolle for forståelsen af og anvendelsen af $\mathbf{A}$-matricens operative egenskaber, som vil blive beskrevet udførligt i eNote REFERENCE \ref{TN}. Rødderne i det karakteristiske polynomium for en matrix kaldes matricens egen-værdier. Det forekommer ofte, at nogle af (måske endda alle) rødderne er komplekse. Hvis matricen er symmetrisk (dvs. $\mathbf{A} = \mathbf{A}\transp$)\, , så  er alle egenværdierne dog reelle, se eNote REFERENCE \ref{TN}.
-Det karakteristiske polynomium $\mathcal{K}_{\mathbf{A}}(\lambda)$ -- og især de $\lambda$-værdier for hvilke $\mathcal{K}_{\mathbf{A}}(\lambda) = 0$, altså rødderne i polynomiet -- spiller en afgørende rolle for forståelsen af og anvendelsen af $\mathbf{A}$-matricens operative egenskaber, som vil blive beskrevet i eNoten om egenværdier og egenvektorer. Rødderne i det karakteristiske polynomium for en matrix kaldes matricens egenværdier.
+%Det karakteristiske polynomium $\mathcal{K}_{\mathbf{A}}(\lambda)$ -- og isÃ¦r de $\lambda$-vÃ¦rdier for hvilke  $\mathcal{K}_{\mathbf{A}}(\lambda) = 0$, altsÃ¥ rÃ¸dderne i polynomiet -- spiller en afgÃ¸rende rolle for forstÃ¥elsen af og anvendelsen af $\mathbf{A}$-matricens operative egenskaber, som vil blive beskrevet udfÃ¸rligt i eNote REFERENCE \ref{TN}. RÃ¸dderne i det karakteristiske polynomium for en matrix kaldes matricens egen-vÃ¦rdier. Det forekommer ofte, at nogle af (mÃ¥ske endda alle) rÃ¸dderne er komplekse. Hvis matricen er symmetrisk (dvs. $\mathbf{A} = \mathbf{A}\transp$)\, , sÃ¥  er alle egenvÃ¦rdierne dog reelle, se eNote REFERENCE \ref{TN}.
+Det karakteristiske polynomium $\mathcal{K}_{\mathbf{A}}(\lambda)$ -- og isÃ¦r de $\lambda$-vÃ¦rdier for hvilke $\mathcal{K}_{\mathbf{A}}(\lambda) = 0$, altsÃ¥ rÃ¸dderne i polynomiet -- spiller en afgÃ¸rende rolle for forstÃ¥elsen af og anvendelsen af $\mathbf{A}$-matricens operative egenskaber, som vil blive beskrevet i eNoten om egenvÃ¦rdier og egenvektorer. RÃ¸dderne i det karakteristiske polynomium for en matrix kaldes matricens egenvÃ¦rdier.
 \end{info}
 
 \begin{exercise}[Graden af det karakteristiske polynomium]
 Argument\'{e}r for, at det karakteristiske polynomium $\mathcal{K}_{\mathbf{A}}(\lambda)$ for en $(n \times n)-$matrix $\mathbf{A}$ er et polynomium i $\lambda$ af graden $n$.
 \end{exercise}
 
-\begin{exercise}[Nogle karakteristiske polynomier og deres rødder]
-Bestem de karakteristiske polynomier for følgende matricer og find alle reelle rødder i hvert af polynomierne:
+\begin{exercise}[Nogle karakteristiske polynomier og deres rÃ¸dder]
+Bestem de karakteristiske polynomier for fÃ¸lgende matricer og find alle reelle rÃ¸dder i hvert af polynomierne:
 \begin{equation}
 \mathbf{A}_{1} = \begin{matr}{cc}
                  1 & 2 \\
@@ -541,7 +541,7 @@ Bestem de karakteristiske polynomier for følgende matricer og find alle reelle r
 \end{exercise}
 
 \begin{exercise}[Find matricer med givne karakter-egenskaber]
-Konstruér to $(4 \times 4)$-matricer $\mathbf{A}$ og $\mathbf{B}$  sådan, at den ene har lutter reelle rødder i sit karakteristiske polynomium, og sådan at den anden ikke har nogen som helst reelle rødder i sit karakteristiske polynomium.
+KonstruÃ©r to $(4 \times 4)$-matricer $\mathbf{A}$ og $\mathbf{B}$  sÃ¥dan, at den ene har lutter reelle rÃ¸dder i sit karakteristiske polynomium, og sÃ¥dan at den anden ikke har nogen som helst reelle rÃ¸dder i sit karakteristiske polynomium.
 \end{exercise}
 
 
@@ -551,26 +551,26 @@ Konstruér to $(4 \times 4)$-matricer $\mathbf{A}$ og $\mathbf{B}$  sådan, at den
 
 
 
-\section{Advanced: Cramer's løsningsmetode} \label{tn5.secCramer}
+\section{Advanced: Cramer's lÃ¸sningsmetode} \label{tn5.secCramer}
 
-Hvis $\mathbf{A}$ er en regulær $n \times n$ matrix og $\mathbf{b} = (b_{1}, . . . , b_{n})$ er en vilkårlig vektor i $\mathbb{R}^{n}$, så findes der (som det også er bekendt fra \tref{NUID1-tn2}{eNote} (regulær koefficientmatrix)) præcis én løsning $\mathbf{x} = (x_{1}, . . . , x_{n}) $ til det lineære ligningssystem $\mathbf{A}\mathbf{x} = \mathbf{b}$ og vi har i den eNote fundet metoder til at finde løsningen.
+Hvis $\mathbf{A}$ er en regulÃ¦r $n \times n$ matrix og $\mathbf{b} = (b_{1}, . . . , b_{n})$ er en vilkÃ¥rlig vektor i $\mathbb{R}^{n}$, sÃ¥ findes der (som det ogsÃ¥ er bekendt fra \tref{NUID1-tn2}{eNote} (regulÃ¦r koefficientmatrix)) prÃ¦cis Ã©n lÃ¸sning $\mathbf{x} = (x_{1}, . . . , x_{n}) $ til det lineÃ¦re ligningssystem $\mathbf{A}\mathbf{x} = \mathbf{b}$ og vi har i den eNote fundet metoder til at finde lÃ¸sningen.
 
-Cramer's metode til løsning af sådanne ligningssystemer er en \textit{direkte} metode. Den består essentielt i at udregne passende determinanter af matricer, der konstrueres ud fra $\mathbf{A}$ og $\mathbf{b}$ og så skrive løsningen ned direkte ud fra de beregnede determinanter.
+Cramer's metode til lÃ¸sning af sÃ¥danne ligningssystemer er en \textit{direkte} metode. Den bestÃ¥r essentielt i at udregne passende determinanter af matricer, der konstrueres ud fra $\mathbf{A}$ og $\mathbf{b}$ og sÃ¥ skrive lÃ¸sningen ned direkte ud fra de beregnede determinanter.
 
-\begin{theorem} [Cramer's løsningsformel]\label{tn5.thmCramer}
-Lad $\mathbf{A}$ være en regulær $n \times n$ matrix og lad $\mathbf{b} = (b_{1}, . . . , b_{n})$ betegne en vilkårlig vektor i $\mathbb{R}^{n}$. Så findes der (som det også er bekendt fra \tref{NUID1-tn2}{eNote} (regulær koefficientmatrix)) præcis én løsning $\mathbf{x} = (x_{1}, . . . , x_{n}) $ til det lineære ligningssystem
+\begin{theorem} [Cramer's lÃ¸sningsformel]\label{tn5.thmCramer}
+Lad $\mathbf{A}$ vÃ¦re en regulÃ¦r $n \times n$ matrix og lad $\mathbf{b} = (b_{1}, . . . , b_{n})$ betegne en vilkÃ¥rlig vektor i $\mathbb{R}^{n}$. SÃ¥ findes der (som det ogsÃ¥ er bekendt fra \tref{NUID1-tn2}{eNote} (regulÃ¦r koefficientmatrix)) prÃ¦cis Ã©n lÃ¸sning $\mathbf{x} = (x_{1}, . . . , x_{n}) $ til det lineÃ¦re ligningssystem
 \begin{equation} \label{tn5.eqCramerSys}
 \mathbf{A}\mathbf{x} = \mathbf{b} \;,
 \end{equation}
-og elementerne i den løsning er givet ved:
+og elementerne i den lÃ¸sning er givet ved:
 \begin{equation} \label{tn5.eqCramerSol}
 x_{j} = \frac{1}{\det(\mathbf{A})}\det(\mathbf{A}\dag_{\small{j}}^{\mathbf{b}}) \;,
 \end{equation}
-hvor $\mathbf{A}\dag_{\small{j}}^{\mathbf{b}}$ betegner den $(n \times n)-$matrix, der fremkommer ved at erstatte søjle $j$ i $\mathbf{A}$ med $\mathbf{b}$.
+hvor $\mathbf{A}\dag_{\small{j}}^{\mathbf{b}}$ betegner den $(n \times n)-$matrix, der fremkommer ved at erstatte sÃ¸jle $j$ i $\mathbf{A}$ med $\mathbf{b}$.
 \end{theorem}
 
 \begin{explain}[Hvad $\dag$ betyder]
-Hvis $\mathbf{A}$ er følgende matrix (fra eksempel \ref{tn5.exampAmatrix33})
+Hvis $\mathbf{A}$ er fÃ¸lgende matrix (fra eksempel \ref{tn5.exampAmatrix33})
 \begin{equation}
 \mathbf{A} = \begin{matr}{rrr}
              0 & 2 & 1 \\
@@ -578,7 +578,7 @@ Hvis $\mathbf{A}$ er følgende matrix (fra eksempel \ref{tn5.exampAmatrix33})
              0 & 5 & 1 \\
            \end{matr} \;,
 \end{equation}
-og hvis vi lader $\mathbf{b} = (b_{1}, b_{2}, b_{3})$, så er
+og hvis vi lader $\mathbf{b} = (b_{1}, b_{2}, b_{3})$, sÃ¥ er
 \begin{equation} \label{tn5.eqDagger}
 \mathbf{A}\dag_{\small{1}}^{\mathbf{b}} = \begin{matr}{rrr}
                                      b_{1} & 2 & 1 \\
@@ -598,8 +598,8 @@ og hvis vi lader $\mathbf{b} = (b_{1}, b_{2}, b_{3})$, så er
 \end{equation}
 \end{explain}
 
-\begin{exercise}[Brug af Cramer's løsningsformel]
-Hvis vi specielt lader $\mathbf{A}$ være den samme matrix som ovenfor og nu helt konkret lader $\mathbf{b} = (1,3,2)$, så får vi ved at indsætte $\mathbf{b}$ i (\ref{tn5.eqDagger}) og dernæst udregne de relevante determinanter:
+\begin{exercise}[Brug af Cramer's lÃ¸sningsformel]
+Hvis vi specielt lader $\mathbf{A}$ vÃ¦re den samme matrix som ovenfor og nu helt konkret lader $\mathbf{b} = (1,3,2)$, sÃ¥ fÃ¥r vi ved at indsÃ¦tte $\mathbf{b}$ i (\ref{tn5.eqDagger}) og dernÃ¦st udregne de relevante determinanter:
 \begin{equation}
 \begin{aligned}
 \det(\mathbf{A}\dag_{\small{1}}^{\mathbf{b}}) &= \det\left(\begin{matr}{rrr}
@@ -619,21 +619,21 @@ Hvis vi specielt lader $\mathbf{A}$ være den samme matrix som ovenfor og nu helt
                                                              \end{matr} \right) = 1\;.
 \end{aligned}
 \end{equation}
-Da vi også kender $\det(\mathbf{A}) = 3$ har vi nu konstrueret løsningen til ligningssystemet $\mathbf{A}\mathbf{x} = \mathbf{b}$, via (\ref{tn5.eqCramerSol}):
+Da vi ogsÃ¥ kender $\det(\mathbf{A}) = 3$ har vi nu konstrueret lÃ¸sningen til ligningssystemet $\mathbf{A}\mathbf{x} = \mathbf{b}$, via (\ref{tn5.eqCramerSol}):
 \begin{equation}
 \mathbf{x}= (x_{1}, x_{2}, x_{3}) = \left(\frac{1}{3}\cdot4, \frac{1}{3}\cdot1,\frac{1}{3}\cdot1 \right) = \left(\frac{4}{3}, \frac{1}{3},\frac{1}{3}\right) \;.
 \end{equation}
 \begin{enumerate}
-\item Tjek ved direkte indsættelse, at $\mathbf{x}$ er en løsning til $\mathbf{A}\mathbf{x} = \mathbf{b}$.
-\item Bestem $\mathbf{A}^{-1}$ og brug den direkte til løsning af ligningssystemet.
-\item Løs ligningssystemet ved reduktion af totalmatricen til trappeform som øvet i \tref{NUID1-tn2}{eNote} og efterfølgende aflæsning af løsningen.
+\item Tjek ved direkte indsÃ¦ttelse, at $\mathbf{x}$ er en lÃ¸sning til $\mathbf{A}\mathbf{x} = \mathbf{b}$.
+\item Bestem $\mathbf{A}^{-1}$ og brug den direkte til lÃ¸sning af ligningssystemet.
+\item LÃ¸s ligningssystemet ved reduktion af totalmatricen til trappeform som Ã¸vet i \tref{NUID1-tn2}{eNote} og efterfÃ¸lgende aflÃ¦sning af lÃ¸sningen.
 \end{enumerate}
 \end{exercise}
 
 
 
 
-For at vise hvad der faktisk foregår i Cramer's løsningsformel definerer vi først den \ind{adjungerede matrix}{adjungerede matrix} for en
+For at vise hvad der faktisk foregÃ¥r i Cramer's lÃ¸sningsformel definerer vi fÃ¸rst den \ind{adjungerede matrix}{adjungerede matrix} for en
 matrix $\mathbf{A}$:
 
 \begin{definition}[Den adjungerede matrix]
@@ -649,12 +649,12 @@ Den adjungerede matrix $\adj(\mathbf{A})$ defineres ved de elementer, som benytt
      \end{matr}}^{\top}
 \end{aligned}
 \end{equation}
-Med andre ord: elementet på plads $(j,i)$ i den adjungerede matrix $\adj(\mathbf{A})$ er den fortegns-modificerede determinant af $(i,j)-$snitmatricen, altså: $(-1)^{i+j}\det(\widehat{\mathbf{A}}_{ij})$. Bemærk transponeringen i (\ref{tn5.eqAdjung}).
+Med andre ord: elementet pÃ¥ plads $(j,i)$ i den adjungerede matrix $\adj(\mathbf{A})$ er den fortegns-modificerede determinant af $(i,j)-$snitmatricen, altsÃ¥: $(-1)^{i+j}\det(\widehat{\mathbf{A}}_{ij})$. BemÃ¦rk transponeringen i (\ref{tn5.eqAdjung}).
 \end{definition}
 
 
 \begin{example}[En adjungeret matrix]
-I eksempel \ref{tn5.exampAmatrix33} betragtede vi følgende matrix  
+I eksempel \ref{tn5.exampAmatrix33} betragtede vi fÃ¸lgende matrix  
 \begin{equation}
 \mathbf{A} = \begin{matr}{rrr}
              0 & 2 & 1 \\
@@ -662,7 +662,7 @@ I eksempel \ref{tn5.exampAmatrix33} betragtede vi følgende matrix
              0 & 5 & 1 \\
            \end{matr} \; .
 \end{equation}
-Matricen $\mathbf{A}$ har følgende adjungerede matrix:
+Matricen $\mathbf{A}$ har fÃ¸lgende adjungerede matrix:
 \begin{equation}
 \adj(\mathbf{A}) = \begin{matr}{rrr}
                    -7 & 3 & 1 \\
@@ -670,8 +670,8 @@ Matricen $\mathbf{A}$ har følgende adjungerede matrix:
                    5 & 0 & -2 \\
                  \end{matr} \; , 
 \end{equation}
-som fås direkte ud fra tidligere beregning af snitmatrix-determinanterne, idet vi husker, dels at de enkelte elementer
-skal have et fortegn, der afhænger af 'pladsen', og dels at udtrykket (\ref{tn5.eqAdjung}) involverer en transponering.
+som fÃ¥s direkte ud fra tidligere beregning af snitmatrix-determinanterne, idet vi husker, dels at de enkelte elementer
+skal have et fortegn, der afhÃ¦nger af 'pladsen', og dels at udtrykket (\ref{tn5.eqAdjung}) involverer en transponering.
 \begin{eqnalign}{rclrclrcl}
 \det(\widehat{\mathbf{A}}_{11}) & = &-7  \;, \; &
 \det(\widehat{\mathbf{A}}_{12}) & = & 1  \;, \; &
@@ -686,21 +686,21 @@ skal have et fortegn, der afhænger af 'pladsen', og dels at udtrykket (\ref{tn5.
 \end{example}
 
 \begin{exercise}[Adjungeret versus invers matrix]
-Vis, at alle kvadratiske matricer $\mathbf{A}$ opfylder følgende
+Vis, at alle kvadratiske matricer $\mathbf{A}$ opfylder fÃ¸lgende
 \begin{equation} \label{tn5.eqAdjIdentity}
 \mathbf{A}\adj(\mathbf{A}) = \det(\mathbf{A})\mathbf{E}
 \end{equation}
-sådan, at den inverse matrix til $\mathbf{A}$ (som jo findes netop hvis $\det(\mathbf{A}) \neq 0$ kan findes på følgende måde:
+sÃ¥dan, at den inverse matrix til $\mathbf{A}$ (som jo findes netop hvis $\det(\mathbf{A}) \neq 0$ kan findes pÃ¥ fÃ¸lgende mÃ¥de:
 \begin{equation}
 \mathbf{A}^{-1} = \frac{1}{\det(\mathbf{A})}\adj(\mathbf{A}) \quad.
 \end{equation}
-Vink: Opgaven er ikke helt nem. Det anbefales, at man først øver sig på en $(2 \times 2)$-matrix. Nullerne i enhedsmatricen i ligning (\ref{tn5.eqAdjIdentity}) fås ved at bruge den egenskab, at determinanten af en matrix med to ens søjler er $0$.
+Vink: Opgaven er ikke helt nem. Det anbefales, at man fÃ¸rst Ã¸ver sig pÃ¥ en $(2 \times 2)$-matrix. Nullerne i enhedsmatricen i ligning (\ref{tn5.eqAdjIdentity}) fÃ¥s ved at bruge den egenskab, at determinanten af en matrix med to ens sÃ¸jler er $0$.
 \end{exercise}
 
-Beviset for sætning \ref{tn5.thmCramer} er nu ganske kort:
+Beviset for sÃ¦tning \ref{tn5.thmCramer} er nu ganske kort:
 
 \begin{bevis}
-Ved at gange på begge sider af ligningen (\ref{tn5.eqCramerSys}) med $\mathbf{A}^{-1}$ fås:
+Ved at gange pÃ¥ begge sider af ligningen (\ref{tn5.eqCramerSys}) med $\mathbf{A}^{-1}$ fÃ¥s:
 \begin{equation}
 \mathbf{x} = \mathbf{A}^{-1}\mathbf{b} = \frac{1}{\det(\mathbf{A})}\adj(\mathbf{A})\mathbf{b} \quad ,
 \end{equation}
@@ -720,7 +720,7 @@ og dermed -- hvis vi betegner elementerne i $\adj(\mathbf{A})$ med $\alpha_{ij}$
                                         b_{n} \\
                                       \end{matr} \quad .
 \end{equation}
-Heraf aflæses direkte
+Heraf aflÃ¦ses direkte
 \begin{equation}
 \begin{aligned}
 x_{j} &= \frac{1}{\det(\mathbf{A})}\sum_{i = 1}^{n}\alpha_{ji}b_{i} \\
@@ -732,7 +732,7 @@ hvor vi til etablering af det sidste lighedstegn har benyttet, at
 \begin{equation}
 \sum_{i = 1}^{n}(-1)^{i+j}b_{i}\det(\widehat{\mathbf{A}}_{ij})
 \end{equation}
-lige præcis er opløsningen af $\det(\mathbf{A}\dag_{\small{j}}^{\mathbf{b}})$ efter {\textit{søjle}} nummer $j$, altså opløsningen efter $\mathbf{b}$-søjlen i $\det(\mathbf{A}\dag_{\small{j}}^{\mathbf{b}})$, se definitionen i ligning  (\ref{tn5.eqDeterminantSoejle}).\\
+lige prÃ¦cis er oplÃ¸sningen af $\det(\mathbf{A}\dag_{\small{j}}^{\mathbf{b}})$ efter {\textit{sÃ¸jle}} nummer $j$, altsÃ¥ oplÃ¸sningen efter $\mathbf{b}$-sÃ¸jlen i $\det(\mathbf{A}\dag_{\small{j}}^{\mathbf{b}})$, se definitionen i ligning  (\ref{tn5.eqDeterminantSoejle}).\\
 \end{bevis}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -742,25 +742,25 @@ lige præcis er opløsningen af $\det(\mathbf{A}\dag_{\small{j}}^{\mathbf{b}})$ ef
 
 \begin{summary}
 \begin{itemize}
-\item Determinanten af en  \emph{kvadratisk matrix med reelle elementer} er et reelt tal, som beregnes ud fra de $n^{2}$ elementer i matricen, enten ved række- eller søjle-opløsning eller via inspektion af Gauss-Jordan processen til trappeform. Ved opløsning er ideen at bruge en række eller en søjle i matricen med mange $0$-elementer. Opløsningen efter f.eks. række nummer $r$ foregår induktivt efter følgende formel, som udtrykker determinanten som en sum af 'mindre' determinanter (med passende fortegn), se definition \ref{tn5.defDeterminantRaekke}:
+\item Determinanten af en  \emph{kvadratisk matrix med reelle elementer} er et reelt tal, som beregnes ud fra de $n^{2}$ elementer i matricen, enten ved rÃ¦kke- eller sÃ¸jle-oplÃ¸sning eller via inspektion af Gauss-Jordan processen til trappeform. Ved oplÃ¸sning er ideen at bruge en rÃ¦kke eller en sÃ¸jle i matricen med mange $0$-elementer. OplÃ¸sningen efter f.eks. rÃ¦kke nummer $r$ foregÃ¥r induktivt efter fÃ¸lgende formel, som udtrykker determinanten som en sum af 'mindre' determinanter (med passende fortegn), se definition \ref{tn5.defDeterminantRaekke}:
     \begin{equation}
     \det(\mathbf{A}) = \sum_{j=1}^{n}(-1)^{r+j}a_{rj}\det(\widehat{\mathbf{A}}_{rj})\quad ,
     \end{equation}
-    hvor $\widehat{\mathbf{A}}_{rj}$ er den undermatrix, dvs. den snitmatrix, der fremkommer ved at fjerne række $r$ og søjle $j$ fra matricen $\mathbf{A}$, se definition \ref{tn5.defSnitMat}.
+    hvor $\widehat{\mathbf{A}}_{rj}$ er den undermatrix, dvs. den snitmatrix, der fremkommer ved at fjerne rÃ¦kke $r$ og sÃ¸jle $j$ fra matricen $\mathbf{A}$, se definition \ref{tn5.defSnitMat}.
 
-\item Der findes bekvemme regneregler for beregning af determinanter af produkter af matricer, determinanten af den inverse matrix, og determinanten af den trans\-po\-ne\-re\-de matrix. Se sætning \ref{tn5.thmDetEgenskaber}. De vigtigste regneregler er produkt-formlen $$\det(\mathbf{A}\cdot\mathbf{B}) = \det(\mathbf{A})\cdot\det(\mathbf{B})$$ og transponerings-formlen $$\det(\mathbf{A}) = \det(\mathbf{A}\transp) \quad .$$
+\item Der findes bekvemme regneregler for beregning af determinanter af produkter af matricer, determinanten af den inverse matrix, og determinanten af den trans\-po\-ne\-re\-de matrix. Se sÃ¦tning \ref{tn5.thmDetEgenskaber}. De vigtigste regneregler er produkt-formlen $$\det(\mathbf{A}\cdot\mathbf{B}) = \det(\mathbf{A})\cdot\det(\mathbf{B})$$ og transponerings-formlen $$\det(\mathbf{A}) = \det(\mathbf{A}\transp) \quad .$$
 
-\item Determinanten af en kvadratisk matrix, der indeholder en variabel, er en funktion af den variable. Det karakteristiske polynomium er en sådan meget vigtig funktion: $\mathcal{K}_{\mathbf{A}}(\lambda) = \det(\mathbf{A} - \lambda \mathbf{E})$ er et $n$'te grads polynomium i den variable $\lambda$, se definition \ref{tn5.defKarakPol}.
+\item Determinanten af en kvadratisk matrix, der indeholder en variabel, er en funktion af den variable. Det karakteristiske polynomium er en sÃ¥dan meget vigtig funktion: $\mathcal{K}_{\mathbf{A}}(\lambda) = \det(\mathbf{A} - \lambda \mathbf{E})$ er et $n$'te grads polynomium i den variable $\lambda$, se definition \ref{tn5.defKarakPol}.
 
-\item Cramer's løsningsformel giver den direkte vej (via beregning af determinanter) til løsningen af et inhomogent lineært ligningssystem med regulær koefficientmatrix, se sætning \ref{tn5.thmCramer}. Hvis ligningssystemet er
+\item Cramer's lÃ¸sningsformel giver den direkte vej (via beregning af determinanter) til lÃ¸sningen af et inhomogent lineÃ¦rt ligningssystem med regulÃ¦r koefficientmatrix, se sÃ¦tning \ref{tn5.thmCramer}. Hvis ligningssystemet er
     \begin{equation}
 \mathbf{A}\mathbf{x} = \mathbf{b} \;,
 \end{equation}
-så er løsningen givet ved:
+sÃ¥ er lÃ¸sningen givet ved:
 \begin{equation}
 x_{j} = \frac{1}{\det(\mathbf{A})}\det(\mathbf{A}\dag_{\small{j}}^{\mathbf{b}}) \quad ,
 \end{equation}
-hvor $\mathbf{A}\dag_{\small{j}}^{\mathbf{b}}$ betegner den matrix der fremkommer ved at erstatte søjle $j$ i matricen $\mathbf{A}$ med $\mathbf{b}$.
+hvor $\mathbf{A}\dag_{\small{j}}^{\mathbf{b}}$ betegner den matrix der fremkommer ved at erstatte sÃ¸jle $j$ i matricen $\mathbf{A}$ med $\mathbf{b}$.
 
 \end{itemize}
 

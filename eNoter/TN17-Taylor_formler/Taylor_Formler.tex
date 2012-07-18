@@ -1,17 +1,17 @@
 \input{../Strukturfiler/preambel}
-\setcounter{chapter}{16} %SÆT DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
+\setcounter{chapter}{16} %SÃ†T DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% HERFRA SKAL DU SKRIVE ELLER INDSÆTTE %%%%
-%%% DEN FIL DU ØNSKER %%%%%%%%%%%%%%%%%%%%%%%
+%%% HERFRA SKAL DU SKRIVE ELLER INDSÃ†TTE %%%%
+%%% DEN FIL DU Ã˜NSKER %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Taylor's approksimationsformler for funktioner af én variabel} \label{tn17}
+\chapter{Taylor's approksimationsformler for funktioner af Ã©n variabel} \label{tn17}
 
 \begin{basis}
- I \tref{NUID27-tn14}{eNote} og \tref{NUID29-tn16}{eNote} er det vist  hvordan funktioner af \'{e}n og to variable kan approksimeres med førstegradspolynomier i ethvert (udviklings-)punkt og at graferne for de approksimerende førstegradspolynomier netop er henholdsvis tangenter og tangentplaner til de tilhørende grafer for funktionerne. I denne eNote vil vi vise, hvordan funktionerne kan approksimeres endnu bedre med polynomier af højere grad. Sådanne approksimationer har enormt mange anvendelser -- det er meget nemmere at regne med polynomier end med andre funktioner, så hvis approksimationen til en funktion er tilstrækkelig god, så kan man bruge og regne videre med det approksimerende polynomium i stedet for funktionen selv og så iøvrigt håbe på, at den fejl man derved begår er tilstrækkelig lille. Men hvad betyder {\emph{tilstrækkelig god}} og {\emph{tilstrækkelig lille}}? Og hvordan afhænger det af graden på det approksimerende polynomium? Det finder du svarene på i denne eNote.
+ I \tref{NUID27-tn14}{eNote} og \tref{NUID29-tn16}{eNote} er det vist  hvordan funktioner af \'{e}n og to variable kan approksimeres med fÃ¸rstegradspolynomier i ethvert (udviklings-)punkt og at graferne for de approksimerende fÃ¸rstegradspolynomier netop er henholdsvis tangenter og tangentplaner til de tilhÃ¸rende grafer for funktionerne. I denne eNote vil vi vise, hvordan funktionerne kan approksimeres endnu bedre med polynomier af hÃ¸jere grad. SÃ¥danne approksimationer har enormt mange anvendelser -- det er meget nemmere at regne med polynomier end med andre funktioner, sÃ¥ hvis approksimationen til en funktion er tilstrÃ¦kkelig god, sÃ¥ kan man bruge og regne videre med det approksimerende polynomium i stedet for funktionen selv og sÃ¥ iÃ¸vrigt hÃ¥be pÃ¥, at den fejl man derved begÃ¥r er tilstrÃ¦kkelig lille. Men hvad betyder {\emph{tilstrÃ¦kkelig god}} og {\emph{tilstrÃ¦kkelig lille}}? Og hvordan afhÃ¦nger det af graden pÃ¥ det approksimerende polynomium? Det finder du svarene pÃ¥ i denne eNote.
 \end{basis}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -20,15 +20,15 @@
 
 
 
-\section{Højere-ordens afledede} \label{secTaylor1}
-Vi vil først se på funktioner $f(x)$ af \'{e}n variabel $x$ i et åbent interval i de reelle tal. Vi vil også antage, at funktionen kan differentieres vilkårligt mange gange, altså at alle de afledede funktioner eksisterer for ethvert $x$ i intervallet: $f'(x_{0})$, $f''(x_{0})$, $f'''(x_{0})$, $f^{(4)}(x_{0})$, $f^{(5)}(x_{0})$, osv. hvor $f^{(4)}(x_{0})$ betyder den $4.$ afledede af $f(x)$ i $x_{0}$. Disse højere afledede skal vi bruge til at konstruere (koefficienterne i) de approksimerende polynomier.
+\section{HÃ¸jere-ordens afledede} \label{secTaylor1}
+Vi vil fÃ¸rst se pÃ¥ funktioner $f(x)$ af \'{e}n variabel $x$ i et Ã¥bent interval i de reelle tal. Vi vil ogsÃ¥ antage, at funktionen kan differentieres vilkÃ¥rligt mange gange, altsÃ¥ at alle de afledede funktioner eksisterer for ethvert $x$ i intervallet: $f'(x_{0})$, $f''(x_{0})$, $f'''(x_{0})$, $f^{(4)}(x_{0})$, $f^{(5)}(x_{0})$, osv. hvor $f^{(4)}(x_{0})$ betyder den $4.$ afledede af $f(x)$ i $x_{0}$. Disse hÃ¸jere afledede skal vi bruge til at konstruere (koefficienterne i) de approksimerende polynomier.
 
 \begin{definition}
-Hvis en funktion $f(x)$  kan differentieres vilkårligt mange gange i ethvert punkt $x$ i et givet åbent interval $I$ så siger vi, at funktionen er \ind{glat funktion}{glat} i intervallet $I$.
+Hvis en funktion $f(x)$  kan differentieres vilkÃ¥rligt mange gange i ethvert punkt $x$ i et givet Ã¥bent interval $I$ sÃ¥ siger vi, at funktionen er \ind{glat funktion}{glat} i intervallet $I$.
 \end{definition}
 
-\begin{example}[Højere-ordens afledede af nogle elementære funktioner] \label{exampDiffn}
-Her er nogle højere-ordens afledede af nogle kendte glatte funktioner:
+\begin{example}[HÃ¸jere-ordens afledede af nogle elementÃ¦re funktioner] \label{exampDiffn}
+Her er nogle hÃ¸jere-ordens afledede af nogle kendte glatte funktioner:
 \begin{equation}
 \begin{array}{|c|c|c|c|c|c|}
   \hline
@@ -50,52 +50,52 @@ Her er nogle højere-ordens afledede af nogle kendte glatte funktioner:
 \end{example}
 
 \begin{aha}
-Læg mærke til, at
+LÃ¦g mÃ¦rke til, at
 \begin{enumerate}
 \item Den $n$'te afledede $f^{(n)}(x)$ af funktionen $f(x) = (x-x_{0})^{n}$ er
 \begin{equation}
 f^{(n)}(x) = n\cdot(n-1)\cdot(n-2) \cdots 2\cdot 1 = n!\, \quad ,
 \end{equation}
-hvor $n!$ ($n$ fakultet) er den korte skrivemåde for produktet af heltallene fra og med $1$ til og med $n$, jævnfør tabel \ref{exampDiffn}, hvor $n!$ optræder med $2! =2$, $3! =6$, $4! =24$, $5! =120$.
-\item Ved gentagen differentiation af $\cos(x)$ fås det  samme ''sæt'' af funktioner periodisk med perioden $4$: Hvis $f(x) = \cos(x)$, så er
+hvor $n!$ ($n$ fakultet) er den korte skrivemÃ¥de for produktet af heltallene fra og med $1$ til og med $n$, jÃ¦vnfÃ¸r tabel \ref{exampDiffn}, hvor $n!$ optrÃ¦der med $2! =2$, $3! =6$, $4! =24$, $5! =120$.
+\item Ved gentagen differentiation af $\cos(x)$ fÃ¥s det  samme ''sÃ¦t'' af funktioner periodisk med perioden $4$: Hvis $f(x) = \cos(x)$, sÃ¥ er
 \begin{equation}
 f^{(p)}(x) = f^{(p+4)}(x) \quad \textrm{for alle $p \geq 1$} \quad .
 \end{equation}
-Det samme gælder for $f(x) = \sin(x)$.
-\item Ved gentagen differentiation af den hyperbolske cosinusfunktion $\cosh(x)$ fås igen det samme ''sæt'' af funktioner periodisk med perioden $2$: Hvis $f(x) = \cosh(x)$ fås
+Det samme gÃ¦lder for $f(x) = \sin(x)$.
+\item Ved gentagen differentiation af den hyperbolske cosinusfunktion $\cosh(x)$ fÃ¥s igen det samme ''sÃ¦t'' af funktioner periodisk med perioden $2$: Hvis $f(x) = \cosh(x)$ fÃ¥s
 \begin{equation}
 f^{(p)}(x) = f^{(p+2)}(x) \quad \textrm{for alle $p \geq 1$} \quad .
 \end{equation}
-Det samme gælder for den hyperbolske sinusfunktion $f(x) = \sinh(x)$.
+Det samme gÃ¦lder for den hyperbolske sinusfunktion $f(x) = \sinh(x)$.
 \end{enumerate}
 \end{aha}
 
-\begin{example}[De afledede af en knap så elementær funktion] \label{exampElemInt}
-En funktion $f(x)$ kan eksempelvis være givet ved et integral (som i dette tilfælde ikke kan udtrykkes ved de sædvanlige elementære funktioner):
+\begin{example}[De afledede af en knap sÃ¥ elementÃ¦r funktion] \label{exampElemInt}
+En funktion $f(x)$ kan eksempelvis vÃ¦re givet ved et integral (som i dette tilfÃ¦lde ikke kan udtrykkes ved de sÃ¦dvanlige elementÃ¦re funktioner):
 \begin{equation}
 f(x) = \int_{0}^{x}\, \e^{-t^{2}}\, dt \quad .
 \end{equation}
-Men vi kan sagtens differentiere og finde de højere afledede af funktionen for ethvert $x$:
+Men vi kan sagtens differentiere og finde de hÃ¸jere afledede af funktionen for ethvert $x$:
 \begin{equation}
 f'(x) = \e^{-x^{2}}\quad , \quad f''(x)= -2\cdot x \cdot \e^{-x^{2}}\quad , \quad f'''(x) =  -2 \cdot \e^{-x^{2}} + 4\cdot x^{2}\cdot\e^{-x^{2}}  \quad  \textrm{osv.}
 \end{equation}
 \end{example}
 
 \begin{example}[De afledede af en ukendt funktion] \label{exampElemDiff}
-Vi antager at en funktion $f(x)$ er givet som løsning til en differentialligning med begyndelsesbetingelser i $x_{0}$:
+Vi antager at en funktion $f(x)$ er givet som lÃ¸sning til en differentialligning med begyndelsesbetingelser i $x_{0}$:
 \begin{equation} \label{eqDifflign}
 f''(x) + 3f'(x) + 7f(x) = q(x) \quad , \quad \textrm{hvor} \quad f(x_{0}) = 1 \quad , \quad \textrm{og} \quad f'(x_{0}) = -3
 \end{equation}
 hvor $q(x)$ er en given glat funktion af $x$.
-Vi kan igen rimelig let finde de højere afledede af funktionen i $x_{0}$ ved at benytte begyndelsesbetingelserne direkte og ved at {\emph{differentiere differentialligningen}}. Følgende fås fra begyndelsesbetingelserne og fra differentialligningen selv:
+Vi kan igen rimelig let finde de hÃ¸jere afledede af funktionen i $x_{0}$ ved at benytte begyndelsesbetingelserne direkte og ved at {\emph{differentiere differentialligningen}}. FÃ¸lgende fÃ¥s fra begyndelsesbetingelserne og fra differentialligningen selv:
 \begin{equation}
 f'(x_{0}) = -3\quad , \quad f''(x_{0})= q(x_{0}) - 3f'(x_{0}) - 7f(x_{0}) = q(x_{0}) + 2 \quad .
 \end{equation}
-Den tredje (og de højere) afledede af $f(x)$ fås derefter ved at differentiere begge sider af differentialligningen. F.eks. får vi ved at differentiere \'{e}n gang:
+Den tredje (og de hÃ¸jere) afledede af $f(x)$ fÃ¥s derefter ved at differentiere begge sider af differentialligningen. F.eks. fÃ¥r vi ved at differentiere \'{e}n gang:
 \begin{equation}
 f'''(x) + 3f''(x) + 7f'(x) = q'(x)\quad ,
 \end{equation}
-hvoraf vi får:
+hvoraf vi fÃ¥r:
 \begin{equation}
 \begin{aligned}
 f'''(x_{0}) &= q'(x_{0}) - 3f''(x_{0}) - 7f'(x_{0}) \\
@@ -107,48 +107,48 @@ f'''(x_{0}) &= q'(x_{0}) - 3f''(x_{0}) - 7f'(x_{0}) \\
 
 \section{Approksimation med polynomier}
 
-Ideen med det følgende går nu ud på at finde det polynomium, f.eks. det andengrads-polynomium, som bedst approksimerer en given glat funktion $f(x)$ i og omkring et givet $x_{0}$ i funktionens definitionsmængde $\mathcal{D}m(f)$. \\
+Ideen med det fÃ¸lgende gÃ¥r nu ud pÃ¥ at finde det polynomium, f.eks. det andengrads-polynomium, som bedst approksimerer en given glat funktion $f(x)$ i og omkring et givet $x_{0}$ i funktionens definitionsmÃ¦ngde $\mathcal{D}m(f)$. \\
 
-Vi prøver derfor at skrive $f(x)$  på følgende måde:
+Vi prÃ¸ver derfor at skrive $f(x)$  pÃ¥ fÃ¸lgende mÃ¥de:
 \begin{equation}
 f(x) = a_{0} + a_{1}\cdot(x-x_{0}) + a_{2}\cdot(x-x_{0})^{2} + R_{2, x_{0}}(x) \quad ,
 \end{equation}
-hvor $a_{0}$, $a_{1}$, og $a_{2}$ er passende konstanter der skal vælges således at \ind{restfunktionen}{restfunktionen}
-$R_{2, x_{0}}(x)$ er så lille som muligt i og omkring $x_{0}$. Restfunktionen kan vi udtrykke ved $f(x)$ og det polynomium, som vi afprøver:
+hvor $a_{0}$, $a_{1}$, og $a_{2}$ er passende konstanter der skal vÃ¦lges sÃ¥ledes at \ind{restfunktionen}{restfunktionen}
+$R_{2, x_{0}}(x)$ er sÃ¥ lille som muligt i og omkring $x_{0}$. Restfunktionen kan vi udtrykke ved $f(x)$ og det polynomium, som vi afprÃ¸ver:
 \begin{equation}
 R_{2, x_{0}}(x) = f(x) - a_{0} - a_{1}\cdot(x-x_{0}) - a_{2}\cdot(x-x_{0})^{2} \quad,
 \end{equation}
-og det er denne funktion, der skal være så tæt på at være $0$ som muligt når $x$ er tæt på $x_{0}$ sådan at forskellen mellem funktionen $f(x)$ og andengradspolynomiet bliver så lille som muligt -- i det mindste tæt på $x_{0}$.\\
+og det er denne funktion, der skal vÃ¦re sÃ¥ tÃ¦t pÃ¥ at vÃ¦re $0$ som muligt nÃ¥r $x$ er tÃ¦t pÃ¥ $x_{0}$ sÃ¥dan at forskellen mellem funktionen $f(x)$ og andengradspolynomiet bliver sÃ¥ lille som muligt -- i det mindste tÃ¦t pÃ¥ $x_{0}$.\\
 
-Det første naturlige krav er derfor at:
+Det fÃ¸rste naturlige krav er derfor at:
 \begin{equation}
 R_{2, x_{0}}(x_{0}) = 0 \quad \textrm{svarende til at} \quad f(x_{0}) = a_{0} \quad ,
 \end{equation}
 hvorved $a_{0}$ nu er bestemt. \\
 
-Det næste naturlige krav, er at grafen for restfunktionen har vandret tangent i $x_{0}$ således at tangenten til restfunktionen derefter er identisk med $x$ aksen:
+Det nÃ¦ste naturlige krav, er at grafen for restfunktionen har vandret tangent i $x_{0}$ sÃ¥ledes at tangenten til restfunktionen derefter er identisk med $x$ aksen:
 \begin{equation}
-R_{2, x_{0}}'(x_{0}) = 0 \quad \textrm{sådan at} \quad f'(x_{0}) = a_{1} \quad ,
+R_{2, x_{0}}'(x_{0}) = 0 \quad \textrm{sÃ¥dan at} \quad f'(x_{0}) = a_{1} \quad ,
 \end{equation}
 hvorved $a_{1}$ er bestemt. \\
 
 
-Det næste krav til restfunktionen er derefter:
+Det nÃ¦ste krav til restfunktionen er derefter:
 \begin{equation}
 R_{2, x_{0}}''(x_{0}) = 0 \quad \textrm{svarende til at} \quad f''(x_{0}) = 2\cdot a_{2} \quad ,
 \end{equation}
-hvorved også $a_{2} = \frac{1}{2}f''(x_{0})$ dermed er bestemt og fastlagt.\\
+hvorved ogsÃ¥ $a_{2} = \frac{1}{2}f''(x_{0})$ dermed er bestemt og fastlagt.\\
 
 Vi har dermed fundet
 \begin{equation}
 f(x) = f(x_{0}) + \frac{f'(x_{0})}{1!}\cdot(x-x_{0}) + \frac{f''(x_{0})}{2!}\cdot(x-x_{0})^{2} + R_{2, x_{0}}(x)
 \end{equation}
-hvor restfunktionen $R_{2, x_{0}}(x)$ tilfredsstiller følgende krav som gør den meget lille omkring $x_{0}$:
+hvor restfunktionen $R_{2, x_{0}}(x)$ tilfredsstiller fÃ¸lgende krav som gÃ¸r den meget lille omkring $x_{0}$:
 \begin{equation}
 R_{2, x_{0}}(x_{0}) = R_{2, x_{0}}'(x_{0}) = R_{2, x_{0}}''(x_{0}) = 0 \quad.
 \end{equation}
 
-Hvis vi på tilsvarende måde havde ønsket at finde et approksimerende $n$'te grads polynomium for den samme funktion $f(x)$ havde vi fundet:
+Hvis vi pÃ¥ tilsvarende mÃ¥de havde Ã¸nsket at finde et approksimerende $n$'te grads polynomium for den samme funktion $f(x)$ havde vi fundet:
 \begin{equation}
 f(x) = f(x_{0}) + \frac{f'(x_{0})}{1!}\cdot(x-x_{0}) + \cdots +
 \frac{f^{(n)}(x_{0})}{n!}\cdot(x-x_{0})^{n} + R_{n, x_{0}}(x) \quad,
@@ -158,40 +158,40 @@ hvor restfunktionen $R_{n, x_{0}}(x)$ er en glat funktion der tilfredsstiller al
 R_{n, x_{0}}(x_{0}) = R_{n, x_{0}}'(x_{0}) = \cdots = R_{n, x_{0}}^{(n)}(x_{0})= 0 \quad.
 \end{equation}
 
-Det er herefter rimeligt at forvente, dels at disse krav til restfunktionen kan opfyldes og dels at de tilsammen betyder, at restfunktionen selv må 'ligne' og være lige så lille som en potens
-af $(x-x_{0})$ tæt ved $x_{0}$. \\
+Det er herefter rimeligt at forvente, dels at disse krav til restfunktionen kan opfyldes og dels at de tilsammen betyder, at restfunktionen selv mÃ¥ 'ligne' og vÃ¦re lige sÃ¥ lille som en potens
+af $(x-x_{0})$ tÃ¦t ved $x_{0}$. \\
 
-Det er præcis indholdet af følgende hjælpesætning:
+Det er prÃ¦cis indholdet af fÃ¸lgende hjÃ¦lpesÃ¦tning:
 
 \begin{lemma}[Restfunktioner]
-Restfunktionen $R_{n, x_{0}}(x)$  kan udtrykkes ud fra $f(x)$  på to ret forskellige måder, og vi skal benytte dem begge i det følgende:
+Restfunktionen $R_{n, x_{0}}(x)$  kan udtrykkes ud fra $f(x)$  pÃ¥ to ret forskellige mÃ¥der, og vi skal benytte dem begge i det fÃ¸lgende:
 \begin{equation} \label{eqTaylorRestXi}
 R_{n, x_{0}}(x) =  \frac{f^{(n+1)}(\xi(x))}{(n+1)!}\cdot(x-x_{0})^{n+1} \quad,
 \end{equation}
 hvor $\xi(x)$ ligger imellem $x$ og $x_{0}$ i intervallet $I$.\\
 
-  Den anden fremstilling er følgende som indeholder en epsilonfunktion:
+  Den anden fremstilling er fÃ¸lgende som indeholder en epsilonfunktion:
 \begin{equation} \label{eqTaylorRestEps}
 R_{n, x_{0}}(x) =  (x-x_{0})^{n}\cdot \varepsilon_{f}(x-x_{0}) \quad,
 \end{equation}
 hvor $\varepsilon_{f}(x-x_{0})$ er en epsilonfunktion af $(x-x_{0})$.
 \end{lemma}
 \begin{bevis}
-Vi vil nøjes med at indse den første påstand (\ref{eqTaylorRestXi}) i det allersimpleste tilfælde, nemlig for $n=0$, dvs. følgende: I intervallet mellem (et fastholdt) $x$ og $x_{0}$ findes altid en værdi $\xi$ således at følgende gælder:
+Vi vil nÃ¸jes med at indse den fÃ¸rste pÃ¥stand (\ref{eqTaylorRestXi}) i det allersimpleste tilfÃ¦lde, nemlig for $n=0$, dvs. fÃ¸lgende: I intervallet mellem (et fastholdt) $x$ og $x_{0}$ findes altid en vÃ¦rdi $\xi$ sÃ¥ledes at fÃ¸lgende gÃ¦lder:
 \begin{equation}
 R_{0, x_{0}}(x) =  f(x) - f(x_{0}) = \frac{f'(\xi)}{(1)!}\cdot(x-x_{0}) \quad.
 \end{equation}
-Men dette er blot en iklædning af \ind{middelværdisætningen}{middelværdisætningen}: Hvis en glat funktion har værdierne henholdsvis $f(a)$  og $f(b)$ i endepunkterne af et interval $[a, b]$, så har grafen for $f(x)$ et sted en tangent som er parallel med det linjestykke der forbinder de to punkter  $(a, f(a))$ og  $(b, f(b))$, se figur \ref{figMeanVal}.\\
+Men dette er blot en iklÃ¦dning af \ind{middelvÃ¦rdisÃ¦tningen}{middelvÃ¦rdisÃ¦tningen}: Hvis en glat funktion har vÃ¦rdierne henholdsvis $f(a)$  og $f(b)$ i endepunkterne af et interval $[a, b]$, sÃ¥ har grafen for $f(x)$ et sted en tangent som er parallel med det linjestykke der forbinder de to punkter  $(a, f(a))$ og  $(b, f(b))$, se figur \ref{figMeanVal}.\\
 
-Den anden fremstilling (\ref{eqTaylorRestEps}) følger af den første (\ref{eqTaylorRestXi}) ved  at observere, at
-$\frac{f^{(n+1)}(\xi)}{(n+1)!}\cdot(x-x_{0})^{n+1}$ er en epsilonfunktion af $(x-x_{0})$, da $\frac{f^{(n+1)}(\xi)}{(n+1)!}$ er begrænset og da $(x-x_{0})^{n+1}$ selv er en epsilonfunktion.
+Den anden fremstilling (\ref{eqTaylorRestEps}) fÃ¸lger af den fÃ¸rste (\ref{eqTaylorRestXi}) ved  at observere, at
+$\frac{f^{(n+1)}(\xi)}{(n+1)!}\cdot(x-x_{0})^{n+1}$ er en epsilonfunktion af $(x-x_{0})$, da $\frac{f^{(n+1)}(\xi)}{(n+1)!}$ er begrÃ¦nset og da $(x-x_{0})^{n+1}$ selv er en epsilonfunktion.
 \end{bevis}
 
 \begin{figure}[ht]
 \centerline{ \includegraphics[height=65mm]{plotMeanVal.pdf}}
 \begin{center}
-\caption{To punkter på den blå graf-kurve for en funktion forbindes med et linjestykke (rød). Middelværdisætningen siger så,
-at der findes mindst \'{e}t sted (i det viste tilfælde præcis to steder, markeret med grønt) på kurven mellem de givne punkter hvor hældningskoefficienten $f'(x)$ for tangenten (sort) til kurven er præcis den samme som hældningskoefficienten for det rette linjestykke.} \label{figMeanVal}
+\caption{To punkter pÃ¥ den blÃ¥ graf-kurve for en funktion forbindes med et linjestykke (rÃ¸d). MiddelvÃ¦rdisÃ¦tningen siger sÃ¥,
+at der findes mindst \'{e}t sted (i det viste tilfÃ¦lde prÃ¦cis to steder, markeret med grÃ¸nt) pÃ¥ kurven mellem de givne punkter hvor hÃ¦ldningskoefficienten $f'(x)$ for tangenten (sort) til kurven er prÃ¦cis den samme som hÃ¦ldningskoefficienten for det rette linjestykke.} \label{figMeanVal}
 \end{center}
 \end{figure}
 
@@ -208,11 +208,11 @@ kaldes det \ind{approksimerende polynomium}{approksimerende polynomium} af $n$'t
 Opsamlende har vi derfor:
 
 \begin{theorem}[Taylor's formler]
-Enhver glat funktion $f(x)$ kan  for ethvert $n$ opdeles i et approksimerende polynomium af grad $n$ og en restfunktion således:
+Enhver glat funktion $f(x)$ kan  for ethvert $n$ opdeles i et approksimerende polynomium af grad $n$ og en restfunktion sÃ¥ledes:
 \begin{equation}
 f(x) = P_{n, x_{0}}(x) + R_{n, x_{0}}(x) \quad ,
 \end{equation}
-hvor restfunktionen kan udtrykkes på følgende måder:
+hvor restfunktionen kan udtrykkes pÃ¥ fÃ¸lgende mÃ¥der:
 \begin{equation} \label{eqRestfunk}
 \begin{aligned}
 R_{n, x_{0}}(x) &=  \frac{f^{(n+1)}(\xi(x))}{(n+1)!}\cdot(x-x_{0})^{n+1} \quad \textrm{for et $\xi(x)$ mellem $x$ og $x_{0}$} \\
@@ -226,11 +226,11 @@ R_{n, x_{0}}(x) &=  (x-x_{0})^{n}\cdot \varepsilon_{f}(x-x_{0}) \quad .
 
 
 
-Det er især Taylor's grænseformel (hvor restfunktionen udtrykkes med en epsilonfunktion) vi vil gøre brug af i det følgende. Vi nævner den version eksplicit:
+Det er isÃ¦r Taylor's grÃ¦nseformel (hvor restfunktionen udtrykkes med en epsilonfunktion) vi vil gÃ¸re brug af i det fÃ¸lgende. Vi nÃ¦vner den version eksplicit:
 
-\begin{theorem}[Taylor's grænseformel]
-Lad $f(x)$ betegne en glat funktion i et åbent interval $I$ som indeholder et givet $x_{0}$.
-Så gælder der for alle $x$ i intervallet og for ethvert helt tal $n \geq 0$ følgende
+\begin{theorem}[Taylor's grÃ¦nseformel]
+Lad $f(x)$ betegne en glat funktion i et Ã¥bent interval $I$ som indeholder et givet $x_{0}$.
+SÃ¥ gÃ¦lder der for alle $x$ i intervallet og for ethvert helt tal $n \geq 0$ fÃ¸lgende
 \begin{equation*}
 f(x) = f(x_{0}) + \frac{f'(x_{0})}{1!}\cdot(x-x_{0}) + \cdots +
 \frac{f^{(n)}(x_{0})}{n!}\cdot(x-x_{0})^{n} + (x-x_{0})^{n}\cdot\varepsilon_{f}(x-x_{0}) \quad ,
@@ -239,12 +239,12 @@ hvor $\varepsilon_{f}(x-x_{0})$ betegner en epsilonfunktion af $(x-x_{0})$, dvs.
 \end{theorem}
 
 \begin{example}[Et polynomiums approksimerende polynomier] \label{exampPolyApproks}
-Man kunne forledes til at tro, at ethvert polynomium er sit eget approksimerende polynomium fordi ethvert polynomium må da være den bedste approksimation til sig selv.
-Her er et eksempel der viser, at det ikke er {\emph{så}} simpelt. Vi ser på tredjegradspolynomiet
+Man kunne forledes til at tro, at ethvert polynomium er sit eget approksimerende polynomium fordi ethvert polynomium mÃ¥ da vÃ¦re den bedste approksimation til sig selv.
+Her er et eksempel der viser, at det ikke er {\emph{sÃ¥}} simpelt. Vi ser pÃ¥ tredjegradspolynomiet
 \begin{equation}
 f(x) = 1 + x + x^{2} + x^{3} \quad .
 \end{equation}
-Polynomiet $f(x)$ har følgende ret forskellige approksimerende polynomier - i afhængighed af valg af {\emph{udviklingspunkt}} $x_{0}$ og {\emph{udviklingsgrad}} $n$:
+Polynomiet $f(x)$ har fÃ¸lgende ret forskellige approksimerende polynomier - i afhÃ¦ngighed af valg af {\emph{udviklingspunkt}} $x_{0}$ og {\emph{udviklingsgrad}} $n$:
 \begin{equation}
 \begin{aligned}
 P_{7, x_{0}=0}(x) &= 1 + x + x^{2} + x^{3} \\
@@ -268,21 +268,21 @@ P_{0, x_{0}=7}(x) &= 400 \quad .
 
 
 \begin{exercise}[Rest-funktioner for polynomier]
-For funktionen $f(x) =  1 + x + x^{2} + x^{3}$ betragtes følgende to opdelinger i approksimerende polynomier og tilhørende restfunktioner:
+For funktionen $f(x) =  1 + x + x^{2} + x^{3}$ betragtes fÃ¸lgende to opdelinger i approksimerende polynomier og tilhÃ¸rende restfunktioner:
 \begin{equation}
 \begin{aligned}
 f(x) &= P_{2, x_{0}=1}(x) + R_{2, x_{0}=1}(x) \quad \textrm{og} \\ \\
 f(x) &= P_{1, x_{0}=7}(x) + R_{1, x_{0}=7}(x) \quad,
 \end{aligned}
 \end{equation}
-hvor de to approksimerende polynomier  $P_{2, x_{0}=1}(x)$ og $P_{1, x_{0}=7}(x)$ allerede er angivet i eksempel \ref{exampPolyApproks}. Bestem de to restfunktioner $R_{2, x_{0}=1}(x)$ og $R_{1, x_{0}=7}(x)$ udtrykt på begge de to måder som er vist i  \ref{eqRestfunk}: For hver af de to  restfunktioner angives de respektive udtryk for $\xi(x)$ og for $\varepsilon(x-x_{0})$.
+hvor de to approksimerende polynomier  $P_{2, x_{0}=1}(x)$ og $P_{1, x_{0}=7}(x)$ allerede er angivet i eksempel \ref{exampPolyApproks}. Bestem de to restfunktioner $R_{2, x_{0}=1}(x)$ og $R_{1, x_{0}=7}(x)$ udtrykt pÃ¥ begge de to mÃ¥der som er vist i  \ref{eqRestfunk}: For hver af de to  restfunktioner angives de respektive udtryk for $\xi(x)$ og for $\varepsilon(x-x_{0})$.
 \end{exercise}
 
 
 
 
-\begin{example}[Taylor's grænseformel med udviklingspunkt $x_{0}=0$]\label{exampTaylorGraens}
-Her er nogle ofte benyttede funktioner med deres respektive approksimerende polynomier (og tilhørende restfunktioner udtrykt med epsilonfunktioner) med det fælles udviklingspunkt $x_{0}=0$ og vilkårlig høj grad:
+\begin{example}[Taylor's grÃ¦nseformel med udviklingspunkt $x_{0}=0$]\label{exampTaylorGraens}
+Her er nogle ofte benyttede funktioner med deres respektive approksimerende polynomier (og tilhÃ¸rende restfunktioner udtrykt med epsilonfunktioner) med det fÃ¦lles udviklingspunkt $x_{0}=0$ og vilkÃ¥rlig hÃ¸j grad:
 \begin{equation}
 \begin{aligned}
 \e^{x} &= 1 + x + \frac{x^{2}}{2!} + \cdots + \frac{x^{n}}{n!} + x^{n}\cdot\varepsilon(x) \\
@@ -299,12 +299,12 @@ Her er nogle ofte benyttede funktioner med deres respektive approksimerende poly
 
 
 \begin{aha}
-Bemærk, at der i Taylor's grænseformel altid afsluttes med en epsilon-funktion og med en potens af $x$ der er præcis den samme som den sidste potens der benyttes i det foranstående approksimerende polynomium.
+BemÃ¦rk, at der i Taylor's grÃ¦nseformel altid afsluttes med en epsilon-funktion og med en potens af $x$ der er prÃ¦cis den samme som den sidste potens der benyttes i det foranstÃ¥ende approksimerende polynomium.
 \end{aha}
 
 
 \section{Kontinuerte udvidelser} \label{secKontUdvid}
-Funktionen $f(x) = \sin(x)/x$ er ikke defineret i $x=0$. Vi vil undersøge, om vi kan udvide funktionen til at have en værdi i $0$, således at den udvidede funktion er kontinuert i $0$. Dvs. vi vil finde en værdi $a$, således at $a$-udvidelsen
+Funktionen $f(x) = \sin(x)/x$ er ikke defineret i $x=0$. Vi vil undersÃ¸ge, om vi kan udvide funktionen til at have en vÃ¦rdi i $0$, sÃ¥ledes at den udvidede funktion er kontinuert i $0$. Dvs. vi vil finde en vÃ¦rdi $a$, sÃ¥ledes at $a$-udvidelsen
 \begin{equation}
 \widetilde{f} = \left\{
         \begin{array}{ll}
@@ -313,16 +313,16 @@ Funktionen $f(x) = \sin(x)/x$ er ikke defineret i $x=0$. Vi vil undersøge, om vi
         \end{array}
       \right.
 \end{equation}
-er kontinuert i $x=0$, dvs. således at
+er kontinuert i $x=0$, dvs. sÃ¥ledes at
 \begin{equation}
  \frac{\sin(x)}{x} \to a \quad \textrm{for} \quad  x \to 0 \quad.
 \end{equation}
 
 
-En direkte anvendelse af Taylor's grænseformel optræder ved bestemmelse af grænseværdier for sådanne brøker $f(x)/g(x)$ hvor begge funktionerne,
-altså tælleren $f(x)$ og nævneren $g(x)$, går imod $0$ for $x$ gående imod $0$. Hvad sker der med brøken når $x$ går imod $0$? Vi illustrerer  med en række eksempler. Bemærk, at selv om tæller-funktionen og nævner-funktionen begge er kontinuerte i $0$, så behøver brøken ikke selv at være det.
+En direkte anvendelse af Taylor's grÃ¦nseformel optrÃ¦der ved bestemmelse af grÃ¦nsevÃ¦rdier for sÃ¥danne brÃ¸ker $f(x)/g(x)$ hvor begge funktionerne,
+altsÃ¥ tÃ¦lleren $f(x)$ og nÃ¦vneren $g(x)$, gÃ¥r imod $0$ for $x$ gÃ¥ende imod $0$. Hvad sker der med brÃ¸ken nÃ¥r $x$ gÃ¥r imod $0$? Vi illustrerer  med en rÃ¦kke eksempler. BemÃ¦rk, at selv om tÃ¦ller-funktionen og nÃ¦vner-funktionen begge er kontinuerte i $0$, sÃ¥ behÃ¸ver brÃ¸ken ikke selv at vÃ¦re det.
 
-\begin{example}[Grænseværdier for funktionsbrøker] \label{exampFunkFrac}
+\begin{example}[GrÃ¦nsevÃ¦rdier for funktionsbrÃ¸ker] \label{exampFunkFrac}
 \begin{equation}
 \frac{\sin(x)}{x} = \frac{x + x^{1}\cdot\varepsilon(x)}{x} = 1 + \varepsilon(x) \to 1 \quad \textrm{for} \quad x \to 0 \quad .
 \end{equation}
@@ -330,7 +330,7 @@ altså tælleren $f(x)$ og nævneren $g(x)$, går imod $0$ for $x$ gående imod $0$. 
 \begin{equation}
 \frac{\sin(x)}{x^{2}} = \frac{x - \frac{1}{3!}x^{3} + x^{3}\cdot\varepsilon(x)}{x^{2}} = \frac{1}{x} - \frac{x}{3!} + x\cdot \varepsilon(x) \quad,
 \end{equation}
-som ikke har nogen grænseværdi for $x \to 0$. Derfor findes der ikke nogen kontinuert udvidelse i dette tilfælde.
+som ikke har nogen grÃ¦nsevÃ¦rdi for $x \to 0$. Derfor findes der ikke nogen kontinuert udvidelse i dette tilfÃ¦lde.
 
 \begin{equation}
 \frac{\sin(x^2)}{x^{2}} \to 1 \quad \textrm{for} \quad x \to 0 \quad \textrm{fordi} \quad \frac{\sin(u)}{u} \to 1 \quad \textrm{for} \quad u \to 0 \quad.
@@ -347,7 +347,7 @@ som ikke har nogen grænseværdi for $x \to 0$. Derfor findes der ikke nogen konti
 
 
 \begin{aha}
-Ved bestemmelse af sådanne grænseværdier udvikles de approksimerende polynomier i tæller og nævner til så høje grader at grænseværdien ''fremkommer'' ved division i tæller og nævner med en potens af $x$.
+Ved bestemmelse af sÃ¥danne grÃ¦nsevÃ¦rdier udvikles de approksimerende polynomier i tÃ¦ller og nÃ¦vner til sÃ¥ hÃ¸je grader at grÃ¦nsevÃ¦rdien ''fremkommer'' ved division i tÃ¦ller og nÃ¦vner med en potens af $x$.
 \end{aha}
 
  Her er et lidt mere kompliceret eksempel:
@@ -356,12 +356,12 @@ Ved bestemmelse af sådanne grænseværdier udvikles de approksimerende polynomier 
 \begin{figure}[ht]
 \centerline{ \includegraphics[height=75mm]{plotsinxdivx.pdf}}
 \begin{center}
-\caption{Funktionen $f(x)=\sin(x)/x$ (blå) sammen med tællerfunktionen $\sin(x)$ (rød) og nævnerfunktionen $x$ (også rød). Funktionen $f(x)$ er kontinuert i $x=0$ netop når den tildeles værdien $1$ der.} \label{figsinxdivx}
+\caption{Funktionen $f(x)=\sin(x)/x$ (blÃ¥) sammen med tÃ¦llerfunktionen $\sin(x)$ (rÃ¸d) og nÃ¦vnerfunktionen $x$ (ogsÃ¥ rÃ¸d). Funktionen $f(x)$ er kontinuert i $x=0$ netop nÃ¥r den tildeles vÃ¦rdien $1$ der.} \label{figsinxdivx}
 \end{center}
 \end{figure}
 
 
-\begin{example}[Grænseværdi for funktionsbrøk]
+\begin{example}[GrÃ¦nsevÃ¦rdi for funktionsbrÃ¸k]
 \begin{equation}
 \begin{aligned}
 \frac{2\cos(x) - 2 + x^{2}}{x\cdot\sin(x) - x^{2}} &= \frac{2\cdot(1 - \frac{1}{2!}\cdot x^{2} + \frac{1}{4!}\cdot x^{4} + x^{4}\cdot\varepsilon_{1}(x)) - 2 + x^{2}}{x\cdot(x-\frac{1}{3!}\cdot x^{3} + \frac{1}{5!}\cdot x^{5} + x^{5}\cdot \varepsilon_{2}(x) ) - x^{2}} \\
@@ -371,49 +371,49 @@ Ved bestemmelse af sådanne grænseværdier udvikles de approksimerende polynomier 
 & \to -\frac{1}{2} \quad \textrm{for} \quad x \to 0 \quad ,
 \end{aligned}
 \end{equation}
-idet tælleren går imod $\frac{1}{12}$ for $ x \to 0 $ og nævneren går imod $-\frac{1}{6}$ for $ x \to 0 $.
+idet tÃ¦lleren gÃ¥r imod $\frac{1}{12}$ for $ x \to 0 $ og nÃ¦vneren gÃ¥r imod $-\frac{1}{6}$ for $ x \to 0 $.
 \end{example}
 
 \section{Vurdering af restfunktionerne} \label{secVurderingRest}
 
-Hvor stor er den fejl man begår ved at benytte det approksimerende polynomium (som er let at regne med) i stedet for funktionen selv (som kan være kompliceret at beregne) i et givet (typisk lille) interval omkring udviklingspunktet? Det kan restfunktionen selvfølgelig give et svar på. Vi giver her et par eksempler der viser, hvordan restfunktions\-udtrykket kan benyttes til sådanne fejl-vurderinger for givne funktioner.
+Hvor stor er den fejl man begÃ¥r ved at benytte det approksimerende polynomium (som er let at regne med) i stedet for funktionen selv (som kan vÃ¦re kompliceret at beregne) i et givet (typisk lille) interval omkring udviklingspunktet? Det kan restfunktionen selvfÃ¸lgelig give et svar pÃ¥. Vi giver her et par eksempler der viser, hvordan restfunktions\-udtrykket kan benyttes til sÃ¥danne fejl-vurderinger for givne funktioner.
 
 
 \begin{figure}[ht]
 \centerline{ \includegraphics[height=55mm]{plotLn.pdf} \includegraphics[height=55mm]{plotLnZoom.pdf}}
 \begin{center}
-\caption{Funktionen $f(x) = \ln(x)$ fra eksempel \ref{exampRestVurdering0} (blå), det approksimerende første-gradspolynomium (sort) med udviklingspunkt $x_{0}=1$ og den tilhørende restfunktion (rød) illustreret som forskellen mellem $f(x)$ og det approksimerende polynomium i intervallet $\left[\frac{3}{4}, \frac{5}{4}\right]$. Til højre er zoomet ind på figuren omkring punktet $(1,0)$.} \label{figLn}
+\caption{Funktionen $f(x) = \ln(x)$ fra eksempel \ref{exampRestVurdering0} (blÃ¥), det approksimerende fÃ¸rste-gradspolynomium (sort) med udviklingspunkt $x_{0}=1$ og den tilhÃ¸rende restfunktion (rÃ¸d) illustreret som forskellen mellem $f(x)$ og det approksimerende polynomium i intervallet $\left[\frac{3}{4}, \frac{5}{4}\right]$. Til hÃ¸jre er zoomet ind pÃ¥ figuren omkring punktet $(1,0)$.} \label{figLn}
 \end{center}
 \end{figure}
 
-\begin{example}[Approksimation af elementær funktion] \label{exampRestVurdering0}
-Logaritmefunktionen $\ln(x)$ er defineret for positive værdier af $x$. Vi approksimerer med det approksimerende førstegrads-polynomium med udviklingspunkt i $x_{0}=1$ og vil vurdere restleddet i et passende lille interval omkring $x_{0}=1$, dvs. udgangspunktet er følgende:
+\begin{example}[Approksimation af elementÃ¦r funktion] \label{exampRestVurdering0}
+Logaritmefunktionen $\ln(x)$ er defineret for positive vÃ¦rdier af $x$. Vi approksimerer med det approksimerende fÃ¸rstegrads-polynomium med udviklingspunkt i $x_{0}=1$ og vil vurdere restleddet i et passende lille interval omkring $x_{0}=1$, dvs. udgangspunktet er fÃ¸lgende:
 \begin{equation}
 f(x) = \ln(x) \quad , \quad x_{0}=1 \quad ,\quad  n = 1 \quad , \quad x \in \left[\frac{3}{4}, \frac{5}{4} \right] \quad .
 \end{equation}
-Ifølge Taylor's formel med restfunktion har vi - idet vi udvikler i udviklingspunktet $x_{0}=1$ hvor $f(1) = 0$ og $f'(1) = 1$ og bruger
-$f''(x) = -1/x^{2}$ for alle $x$ i definitionsmængden:
+IfÃ¸lge Taylor's formel med restfunktion har vi - idet vi udvikler i udviklingspunktet $x_{0}=1$ hvor $f(1) = 0$ og $f'(1) = 1$ og bruger
+$f''(x) = -1/x^{2}$ for alle $x$ i definitionsmÃ¦ngden:
 \begin{equation}
 f(x) = \ln(x) = \ln(1) + \frac{f'(1)}{1!}(x-1) + \frac{f''(\xi)}{2!}\cdot(x-1)^{2} = x-1 - \frac{1}{2\cdot \xi^{2}}\cdot (x-1)^{2}
 \end{equation}
-for en værdi af $\xi$ imellem $x$ og $1$.
-Vi har altså hermed fundet:
+for en vÃ¦rdi af $\xi$ imellem $x$ og $1$.
+Vi har altsÃ¥ hermed fundet:
 \begin{equation}
 P_{1,x_{0}=1}(x) = x-1 \quad , \quad \textrm{og} \quad R_{1, x_{0}=1}(x) = - \frac{1}{2\cdot \xi^{2}}\cdot (x-1)^{2} \quad.
 \end{equation}
-Den {\emph{numeriske værdi af restfunktionen}} i det givne interval kan nu vurderes for alle $x$ i det givne interval - også selvom vi ikke ved ret meget om hvor $\xi$ ligger i intervallet udover at $\xi$ ligger imellem $x$ og $1$:\\
+Den {\emph{numeriske vÃ¦rdi af restfunktionen}} i det givne interval kan nu vurderes for alle $x$ i det givne interval - ogsÃ¥ selvom vi ikke ved ret meget om hvor $\xi$ ligger i intervallet udover at $\xi$ ligger imellem $x$ og $1$:\\
 
 Vi har
 \begin{equation}
 |R_{1, x_{0}=1}(x)| = |- \frac{1}{2\cdot \xi^{2}}\cdot (x-1)^{2}| \leq |\frac{1}{2\cdot \xi^{2}}\cdot \left(\frac{1}{4}\right)^{2}| \quad ,
 \end{equation}
-idet minus-tegnet kan fjernes fordi vi kun ser på den numeriske værdi og idet $(x-1)^{2}$ jo klart er størst (med værdien $(1/4)^{2}$) for $x=3/4$ og for $x=5/4$ i intervallet.
-Derudover er $\xi$ {\emph{mindst}} og dermed $(1/\xi)^{2}$ {\emph{størst}} i intervallet for $\xi = 3/4$. (Bemærk at vi ikke bruger her, at $\xi$ ligger imellem $x$ og $1$ - vi bruger kun, at $\xi$ ligger i intervallet!)
+idet minus-tegnet kan fjernes fordi vi kun ser pÃ¥ den numeriske vÃ¦rdi og idet $(x-1)^{2}$ jo klart er stÃ¸rst (med vÃ¦rdien $(1/4)^{2}$) for $x=3/4$ og for $x=5/4$ i intervallet.
+Derudover er $\xi$ {\emph{mindst}} og dermed $(1/\xi)^{2}$ {\emph{stÃ¸rst}} i intervallet for $\xi = 3/4$. (BemÃ¦rk at vi ikke bruger her, at $\xi$ ligger imellem $x$ og $1$ - vi bruger kun, at $\xi$ ligger i intervallet!)
 Det vil sige, at
 \begin{equation}
 |R_{1, x_{0}=1}(x)| \leq |\frac{1}{32\cdot\xi^{2}}| \leq |\frac{1}{32\cdot\left(\frac{3}{4}\right)^{2}}| = \frac{1}{18} \quad,
 \end{equation}
-således at vi dermed har vist, at
+sÃ¥ledes at vi dermed har vist, at
 \begin{equation}
 |\ln(x) - (x-1)| \leq \frac{1}{18} \quad \textrm{for alle} \quad x \in \left[\frac{3}{4}, \frac{5}{4} \right] \quad .
 \end{equation}
@@ -421,24 +421,24 @@ således at vi dermed har vist, at
 
 
 \begin{think}
-Man kan med nogen ret spekulere over, hvorfor restfunktions-vurderingen  af en så simpel funktion som $f(x) = \ln(x)$ i eksempel \ref{exampRestVurdering0} skal være så bøvlet, når det er tydeligt for enhver (!), at den røde restfunktion i det tilfælde antager sin største numeriske (absolut-)værdi i et af endepunkterne i det aktuelle interval, se figur \ref{figLn} -- en påstand som vi endda kan vise med en helt almindelig funktionsundersøgelse. \\
+Man kan med nogen ret spekulere over, hvorfor restfunktions-vurderingen  af en sÃ¥ simpel funktion som $f(x) = \ln(x)$ i eksempel \ref{exampRestVurdering0} skal vÃ¦re sÃ¥ bÃ¸vlet, nÃ¥r det er tydeligt for enhver (!), at den rÃ¸de restfunktion i det tilfÃ¦lde antager sin stÃ¸rste numeriske (absolut-)vÃ¦rdi i et af endepunkterne i det aktuelle interval, se figur \ref{figLn} -- en pÃ¥stand som vi endda kan vise med en helt almindelig funktionsundersÃ¸gelse. \\
 
-Ved at differentiere restfunktionen får vi jo:
+Ved at differentiere restfunktionen fÃ¥r vi jo:
 \begin{equation}
 R'_{1, x_{0}=1}(x) = \frac{d}{dx}\left(\ln(x) - (x-1) \right) = \frac{1}{x} - 1 \quad,
 \end{equation}
-som netop er mindre end $0$ for $x >1$ (sådan at $R_{1, x_{0}=1}(x) $ til højre for $x=1$ er negativ og aftagende fra værdien $0$ i $x=1$) og større end $0$ for $x <1$
- (sådan at $R_{1, x_{0}=1}(x) $ til venstre for $x=1$ er negativ og voksende op mod værdien $0$ i $x=1$). Men problemet er, at vi {\emph{i princippet ikke ved}}  hvad værdien af  $\ln(x)$ faktisk er -- hverken i $x=3/4$ eller i $x=5/4$ medmindre vi bruger Maple eller et andet værktøj til hjælp. Restfunktions-vurderingen benytter {\emph{kun}} de definerende egen\-ska\-ber ved $f(x) = \ln(x)$, dvs. $f'(x) = 1/x$ og $f(1)=0$, og vurderingen giver værdierne (også i endepunkterne af intervallet) med en (numerisk) fejl på højst $1/18$ i dette tilfælde. \\
+som netop er mindre end $0$ for $x >1$ (sÃ¥dan at $R_{1, x_{0}=1}(x) $ til hÃ¸jre for $x=1$ er negativ og aftagende fra vÃ¦rdien $0$ i $x=1$) og stÃ¸rre end $0$ for $x <1$
+ (sÃ¥dan at $R_{1, x_{0}=1}(x) $ til venstre for $x=1$ er negativ og voksende op mod vÃ¦rdien $0$ i $x=1$). Men problemet er, at vi {\emph{i princippet ikke ved}}  hvad vÃ¦rdien af  $\ln(x)$ faktisk er -- hverken i $x=3/4$ eller i $x=5/4$ medmindre vi bruger Maple eller et andet vÃ¦rktÃ¸j til hjÃ¦lp. Restfunktions-vurderingen benytter {\emph{kun}} de definerende egen\-ska\-ber ved $f(x) = \ln(x)$, dvs. $f'(x) = 1/x$ og $f(1)=0$, og vurderingen giver vÃ¦rdierne (ogsÃ¥ i endepunkterne af intervallet) med en (numerisk) fejl pÃ¥ hÃ¸jst $1/18$ i dette tilfÃ¦lde. \\
 
- {\emph{Hvis}} vi faktisk får serveret  den oplysning, at
- $\ln(3/4) = -0.2877$ og  $\ln(5/4) = 0.2223$ så har vi selvfølgelig dermed også en direkte vurdering af den største værdi af $|R_{1, x_{0}=1}(x)|$ i intervallet $\left[\frac{3}{4}, \frac{5}{4} \right]$:
+ {\emph{Hvis}} vi faktisk fÃ¥r serveret  den oplysning, at
+ $\ln(3/4) = -0.2877$ og  $\ln(5/4) = 0.2223$ sÃ¥ har vi selvfÃ¸lgelig dermed ogsÃ¥ en direkte vurdering af den stÃ¸rste vÃ¦rdi af $|R_{1, x_{0}=1}(x)|$ i intervallet $\left[\frac{3}{4}, \frac{5}{4} \right]$:
  \begin{equation}
  \begin{aligned}
  |R_{1, x_{0}=1}(x)| &\leq \max\{|-0.2877 + 0.25| \, , \, |0.2223 - 0.25| \} \\
   &= 0.0377 < 1/18 = 0.0556 \quad.
  \end{aligned}
  \end{equation}
- Med den almindelige funktionsanalyse får vi altså en noget bedre vurdering af restfunktionen -- men kun fordi vi i forvejen kan vurdere værdien af funktionen  i endepunkterne.
+ Med den almindelige funktionsanalyse fÃ¥r vi altsÃ¥ en noget bedre vurdering af restfunktionen -- men kun fordi vi i forvejen kan vurdere vÃ¦rdien af funktionen  i endepunkterne.
 
 
 \end{think}
@@ -446,7 +446,7 @@ som netop er mindre end $0$ for $x >1$ (sådan at $R_{1, x_{0}=1}(x) $ til højre 
 \begin{figure}[ht]
 \centerline{ \includegraphics[height=55mm]{plotErf2.pdf} \includegraphics[height=55mm]{plotErf.pdf}}
 \begin{center}
-\caption{Funktionen $f(x)$ fra eksempel \ref{exampRestVurdering1} (blå), de approksimerende første- og tredjegrads-polynomier (sorte) med udviklingspunkt $x_{0}=0$ og de tilhørende restfunktioner (røde) i intervallet $[-1, 1]$.} \label{figErf}
+\caption{Funktionen $f(x)$ fra eksempel \ref{exampRestVurdering1} (blÃ¥), de approksimerende fÃ¸rste- og tredjegrads-polynomier (sorte) med udviklingspunkt $x_{0}=0$ og de tilhÃ¸rende restfunktioner (rÃ¸de) i intervallet $[-1, 1]$.} \label{figErf}
 \end{center}
 \end{figure}
 
@@ -459,32 +459,32 @@ som netop er mindre end $0$ for $x >1$ (sådan at $R_{1, x_{0}=1}(x) $ til højre 
 
 
 
-\begin{exercise}[Approksimation af en ikke-elementær funktion] \label{exampRestVurdering1}
+\begin{exercise}[Approksimation af en ikke-elementÃ¦r funktion] \label{exampRestVurdering1}
 Givet funktionen fra eksempel \ref{exampElemInt}:
 \begin{equation}
 f(x) = \int_{0}^{x}\,\e^{-t^{2}}\,dt
 \end{equation}
-Der ønskes en vurdering af størrelsen af forskellen mellem $f(x)$ og funktionens approksimerende førstegradspolynomium $P_{1, x_{0}=0}(x)$ med udviklingspunkt i $x_{0}=0$. Opgaven går altså ud på at bestemme den største absolut-værdi som restfunktionen $|R_{1, x_{0}=0}(x)|$ antager i intervallet $[-1, 1]$.\\
-Vink: Benyt de tidligere fundne højere afledede af $f(x)$ evalueret i $x_{0}=0$, jvf. eksempel \ref{exampElemInt}: $f(0)=0$, $f'(0) = 1$, $f''(x)= -2\cdot x \cdot \e^{-x^{2}}$. Se figur \ref{figErf}.
+Der Ã¸nskes en vurdering af stÃ¸rrelsen af forskellen mellem $f(x)$ og funktionens approksimerende fÃ¸rstegradspolynomium $P_{1, x_{0}=0}(x)$ med udviklingspunkt i $x_{0}=0$. Opgaven gÃ¥r altsÃ¥ ud pÃ¥ at bestemme den stÃ¸rste absolut-vÃ¦rdi som restfunktionen $|R_{1, x_{0}=0}(x)|$ antager i intervallet $[-1, 1]$.\\
+Vink: Benyt de tidligere fundne hÃ¸jere afledede af $f(x)$ evalueret i $x_{0}=0$, jvf. eksempel \ref{exampElemInt}: $f(0)=0$, $f'(0) = 1$, $f''(x)= -2\cdot x \cdot \e^{-x^{2}}$. Se figur \ref{figErf}.
 \end{exercise}
 
 
 \begin{figure}[ht]
 \centerline{\includegraphics[height=55mm]{plotAp1.pdf} \includegraphics[height=55mm]{plotAp2.pdf} \includegraphics[height=55mm]{plotAp3.pdf}   }
 \begin{center}
-\caption{Funktionen $f(x)$ fra eksempel \ref{exampRestVurdering2} (blå) og de approksimerende første-, anden-, og tredjegrads-polynomier (sorte) med udviklingspunkt $x_{0}=0$. De tilhørende respektive restfunktioner (røde) er illustreret som forskellene mellem $f(x)$ og de approksimerende polynomier.} \label{figAp3}
+\caption{Funktionen $f(x)$ fra eksempel \ref{exampRestVurdering2} (blÃ¥) og de approksimerende fÃ¸rste-, anden-, og tredjegrads-polynomier (sorte) med udviklingspunkt $x_{0}=0$. De tilhÃ¸rende respektive restfunktioner (rÃ¸de) er illustreret som forskellene mellem $f(x)$ og de approksimerende polynomier.} \label{figAp3}
 \end{center}
 \end{figure}
 
 
 
 
-\begin{example}[Approksimation af ukendt (men elementær) funktion] \label{exampRestVurdering2}
-Givet funktionen fra eksempel \ref{exampElemDiff}, dvs. funktionen tilfredsstiller følgende differentialligning med begyndelsesbetingelser:
+\begin{example}[Approksimation af ukendt (men elementÃ¦r) funktion] \label{exampRestVurdering2}
+Givet funktionen fra eksempel \ref{exampElemDiff}, dvs. funktionen tilfredsstiller fÃ¸lgende differentialligning med begyndelsesbetingelser:
 \begin{equation} \label{eqDiffLignBeg}
 f''(x) + 3f'(x) + 7f(x) = x^{2} \quad , \quad \textrm{hvor} \quad f(0) = 1 \quad , \quad \textrm{og} \quad f'(0) = -3 \quad,
 \end{equation}
-hvor vi har antaget, at højresiden i ligningen er $q(x)=x^{2}$ og at udviklingspunktet er $x_{0}=0$. Derved får vi nu:
+hvor vi har antaget, at hÃ¸jresiden i ligningen er $q(x)=x^{2}$ og at udviklingspunktet er $x_{0}=0$. Derved fÃ¥r vi nu:
 \begin{equation}
 f'(0) = -3 \quad , \quad  f''(0)= 2 \quad , \quad  f'''(0)= 15 \quad .
 \end{equation}
@@ -495,48 +495,48 @@ f(x) &= f(0) + f'(0)\cdot x + \frac{f''(0)}{2}\cdot x^2 +  \frac{f'''(0)}{6}\cdo
 =& 1 - 3\cdot x + x^{2} +  \frac{5}{2}\cdot x^{3} + x^{3}\cdot \varepsilon(x) \quad,
 \end{aligned}
 \end{equation}
-således at det approksimerende tredjegrads-polynomium for $f(x)$ med udviklingspunkt $x_{0}=0$ er
+sÃ¥ledes at det approksimerende tredjegrads-polynomium for $f(x)$ med udviklingspunkt $x_{0}=0$ er
 \begin{equation}
 P_{3, x_{0}=0}(x) = 1 - 3\cdot x + x^{2} +  \frac{5}{2}\cdot x^{3} \quad.
 \end{equation}
-Bemærk, at $P_{3, x_{0}=0}(x)$ tilfredsstiller begyndelsesbetingelserne i (\ref{eqDiffLignBeg}) men polynomiet $P_{3, x_{0}=0}(x)$ er ikke en løsning til selve differentialligningen!
+BemÃ¦rk, at $P_{3, x_{0}=0}(x)$ tilfredsstiller begyndelsesbetingelserne i (\ref{eqDiffLignBeg}) men polynomiet $P_{3, x_{0}=0}(x)$ er ikke en lÃ¸sning til selve differentialligningen!
 \end{example}
 
 
 
 
-\section{Funktionsundersøgelser} \label{secFunkUnders}
+\section{FunktionsundersÃ¸gelser} \label{secFunkUnders}
 
-En meget vigtig egenskab ved kontinuerte funktioner er følgende, som betyder at der er styr på hvor store og små værdier en kontinuert funktion kan antage på et interval, når blot
-intervallet er tilstrækkelig pæn:
+En meget vigtig egenskab ved kontinuerte funktioner er fÃ¸lgende, som betyder at der er styr pÃ¥ hvor store og smÃ¥ vÃ¦rdier en kontinuert funktion kan antage pÃ¥ et interval, nÃ¥r blot
+intervallet er tilstrÃ¦kkelig pÃ¦n:
 
-\begin{theorem}[Hovedsætning for kontinuerte funktioner af \'{e}n variabel] \label{thmHovedsaetnKontEn}
-Lad $f(x)$ betegne en funktion som er kontinuert i hele sin definitionsmængde $\mathcal{D}m(f) \subset \mathbb{R}$.
-Lad $I = [\, a \, , \, b \, ]$ være et begrænset, afsluttet, og sammenhængende interval i $\mathcal{D}m(f)$. \\
+\begin{theorem}[HovedsÃ¦tning for kontinuerte funktioner af \'{e}n variabel] \label{thmHovedsaetnKontEn}
+Lad $f(x)$ betegne en funktion som er kontinuert i hele sin definitionsmÃ¦ngde $\mathcal{D}m(f) \subset \mathbb{R}$.
+Lad $I = [\, a \, , \, b \, ]$ vÃ¦re et begrÃ¦nset, afsluttet, og sammenhÃ¦ngende interval i $\mathcal{D}m(f)$. \\
 
-Så er værdimængden for funktionen $f(x)$ i intervallet $I$ også et
-begrænset, afsluttet, og sammenhængende interval $[\, A \, , \, B \, ] \subset \mathbb{R}$. Vi kan skrive således:
+SÃ¥ er vÃ¦rdimÃ¦ngden for funktionen $f(x)$ i intervallet $I$ ogsÃ¥ et
+begrÃ¦nset, afsluttet, og sammenhÃ¦ngende interval $[\, A \, , \, B \, ] \subset \mathbb{R}$. Vi kan skrive sÃ¥ledes:
 \begin{equation}
 \mathcal{V}m(f_{|_{I}}) = f(I) = \{ f(x)\, | \, x\in I \} =  [\, A \, , \, B \, ] \quad ,
 \end{equation}
-hvor der tillades den mulighed at $A = B$ og det sker jo præcis når $f(x)$ er konstant i hele intervallet $I$.
+hvor der tillades den mulighed at $A = B$ og det sker jo prÃ¦cis nÃ¥r $f(x)$ er konstant i hele intervallet $I$.
 \end{theorem}
 
 \begin{definition} [Globalt minimum og globalt maksimum]
-Når en funktion $f(x)$ har værdimængden $\mathcal{V}m(f_{|_{I}}) = f(I) = [\, A \, , \, B \, ]$ på et interval $I = [a, b]$ siger vi, at
+NÃ¥r en funktion $f(x)$ har vÃ¦rdimÃ¦ngden $\mathcal{V}m(f_{|_{I}}) = f(I) = [\, A \, , \, B \, ]$ pÃ¥ et interval $I = [a, b]$ siger vi, at
 \begin{enumerate}
-\item $A$ er den \ind{globale minimumværdi}{globale minimumværdi} for $f(x)$ i $I$, og hvis $f(x_{0})= A$ for $x_{0} \in I$ så er $x_{0}$ et \ind{globalt minimumpunkt}{globalt minimumpunkt} for $f(x)$ i $I$.
-\item $B$ er den \ind{globale maksimumværdi}{globale maksimumværdi} for $f(x)$ i $I$, og hvis $f(x_{0})= B$ for $x_{0} \in I$ så er $x_{0}$ et \ind{globalt maksimumpunkt}{globalt maksimumpunkt} for $f(x)$ i $I$.
+\item $A$ er den \ind{globale minimumvÃ¦rdi}{globale minimumvÃ¦rdi} for $f(x)$ i $I$, og hvis $f(x_{0})= A$ for $x_{0} \in I$ sÃ¥ er $x_{0}$ et \ind{globalt minimumpunkt}{globalt minimumpunkt} for $f(x)$ i $I$.
+\item $B$ er den \ind{globale maksimumvÃ¦rdi}{globale maksimumvÃ¦rdi} for $f(x)$ i $I$, og hvis $f(x_{0})= B$ for $x_{0} \in I$ sÃ¥ er $x_{0}$ et \ind{globalt maksimumpunkt}{globalt maksimumpunkt} for $f(x)$ i $I$.
 \end{enumerate}
 \end{definition}
 
-En velkendt og vigtig opgave går ud på at finde de globale maksimum- og minimum-værdier for givne funktioner $f(x)$ i givne intervaller og at bestemme de $x$-værdier for hvilke
-disse maksimum- og minimum-værdier {\emph{antages}} altså minimum- og maksimum-punkterne. For at løse den opgave er følgende en uvurderlig hjælp -- se figur \ref{figVm}:
+En velkendt og vigtig opgave gÃ¥r ud pÃ¥ at finde de globale maksimum- og minimum-vÃ¦rdier for givne funktioner $f(x)$ i givne intervaller og at bestemme de $x$-vÃ¦rdier for hvilke
+disse maksimum- og minimum-vÃ¦rdier {\emph{antages}} altsÃ¥ minimum- og maksimum-punkterne. For at lÃ¸se den opgave er fÃ¸lgende en uvurderlig hjÃ¦lp -- se figur \ref{figVm}:
 
-\begin{lemma}[Maksima og minima i stationære punkter]
-Lad $x_{0}$ være en global maksimum- eller minimum-værdi for $f(x)$ i $I$. Antag, at  $x_{0}$ ikke er et endepunkt for intervallet $I$ og at $f(x)$ er differentiabel i $x_{0}$.\\
- Så er
-$x_{0}$ et \ind{stationært punkt}{stationært punkt} for $f(x)$ i betydningen: $f'(x_{0}) = 0$.
+\begin{lemma}[Maksima og minima i stationÃ¦re punkter]
+Lad $x_{0}$ vÃ¦re en global maksimum- eller minimum-vÃ¦rdi for $f(x)$ i $I$. Antag, at  $x_{0}$ ikke er et endepunkt for intervallet $I$ og at $f(x)$ er differentiabel i $x_{0}$.\\
+ SÃ¥ er
+$x_{0}$ et \ind{stationÃ¦rt punkt}{stationÃ¦rt punkt} for $f(x)$ i betydningen: $f'(x_{0}) = 0$.
 \end{lemma}
 \begin{bevis}
 Vi antyder argumentet. Da $f(x)$ er antaget differentiabel, har vi:
@@ -546,31 +546,31 @@ f(x) &= f(x_{0}) + f'(x_{0})\cdot(x-x_{0}) + (x-x_{0}) \cdot \varepsilon_{f}(x-x
 &= f(x_{0}) + (x- x_{0})\cdot(f'(x_{0}) + \varepsilon_{f}(x-x_{0})) \quad.
 \end{aligned}
 \end{equation}
-Hvis vi nu antager, at $f'(x_{0})$ er positiv, så er parentesen $(f'(x_{0}) + \varepsilon_{f}(x-x_{0}))$ også positiv for $x$ tilstrækkelig tæt på $x_{0}$ (idet  $\varepsilon_{f}(x-x_{0}) \to 0$ for $x \to x_{0}$), men så er $(x- x_{0})\cdot(f'(x_{0}) + \varepsilon_{f}(x-x_{0}))$ også positiv for $x$ tilstrækkeligt tæt på $x_{0}$ og dermed er
-$f(x) > f(x_{0})$ for sådanne $x > x_{0}$, og $f(x) < f(x_{0})$ for sådanne $x < x_{0}$. Derfor kan $f(x_{0})$ ikke være hverken maksimum-værdi eller minimumværdi for $f(x)$. Tilsvarende konklusion fås med antagelsen $f'(x_{0}) < 0 $. Hvis $x_{0}$ er en global maksimum- eller minimum-værdi for $f(x)$ i $I$ må den antagelse derfor medføre, at $f'(x_{0}) = 0$.
+Hvis vi nu antager, at $f'(x_{0})$ er positiv, sÃ¥ er parentesen $(f'(x_{0}) + \varepsilon_{f}(x-x_{0}))$ ogsÃ¥ positiv for $x$ tilstrÃ¦kkelig tÃ¦t pÃ¥ $x_{0}$ (idet  $\varepsilon_{f}(x-x_{0}) \to 0$ for $x \to x_{0}$), men sÃ¥ er $(x- x_{0})\cdot(f'(x_{0}) + \varepsilon_{f}(x-x_{0}))$ ogsÃ¥ positiv for $x$ tilstrÃ¦kkeligt tÃ¦t pÃ¥ $x_{0}$ og dermed er
+$f(x) > f(x_{0})$ for sÃ¥danne $x > x_{0}$, og $f(x) < f(x_{0})$ for sÃ¥danne $x < x_{0}$. Derfor kan $f(x_{0})$ ikke vÃ¦re hverken maksimum-vÃ¦rdi eller minimumvÃ¦rdi for $f(x)$. Tilsvarende konklusion fÃ¥s med antagelsen $f'(x_{0}) < 0 $. Hvis $x_{0}$ er en global maksimum- eller minimum-vÃ¦rdi for $f(x)$ i $I$ mÃ¥ den antagelse derfor medfÃ¸re, at $f'(x_{0}) = 0$.
 \end{bevis}
 
-Hermed har vi følgende undersøgelsesmetode til rådighed:
+Hermed har vi fÃ¸lgende undersÃ¸gelsesmetode til rÃ¥dighed:
 
-\begin{method}[Undersøgelsesmetode]\label{metodeVm}
-Lad $f(x)$ være en kontinuert funktion og $I = [a, b]$ et interval i definitionsmængden $\mathcal{D}m(f)$.\\
+\begin{method}[UndersÃ¸gelsesmetode]\label{metodeVm}
+Lad $f(x)$ vÃ¦re en kontinuert funktion og $I = [a, b]$ et interval i definitionsmÃ¦ngden $\mathcal{D}m(f)$.\\
 
-Maksimum- og minimum-værdierne for funktionen $f(x)$, $x \in I$, altså $A$ og $B$ i værdimængden $[A, B]$ for $f(x)$ i $I$  findes ved at finde og sammenligne funktionsværdierne i følgende punkter:
+Maksimum- og minimum-vÃ¦rdierne for funktionen $f(x)$, $x \in I$, altsÃ¥ $A$ og $B$ i vÃ¦rdimÃ¦ngden $[A, B]$ for $f(x)$ i $I$  findes ved at finde og sammenligne funktionsvÃ¦rdierne i fÃ¸lgende punkter:
 \begin{enumerate}
 \item Interval-endepunkterne (randpunkterne $a$ og $b$ for intervallet $I$).
-\item Undtagelsespunkter, dvs. de punkter i det åbne interval $]a, b[$ hvor funktionen {\emph{ikke}} er differentiabel.
-\item De stationære punkter, dvs. samtlige de punkter $x_{0}$ i det åbne interval $]a, b[$  hvor $f'(x_{0}) = 0$.
+\item Undtagelsespunkter, dvs. de punkter i det Ã¥bne interval $]a, b[$ hvor funktionen {\emph{ikke}} er differentiabel.
+\item De stationÃ¦re punkter, dvs. samtlige de punkter $x_{0}$ i det Ã¥bne interval $]a, b[$  hvor $f'(x_{0}) = 0$.
 \end{enumerate}
 \end{method}
 
 \begin{think}
-Ved denne undersøgelsesmetode findes naturligvis ikke blot de globale maksimum- og minimum-værdier men også de $x$-værdier i $I$ for hvilke
-det globale maksimum og det globale minimum antages, altså maksimum- og minimum-punkterne i det aktuelle interval.
+Ved denne undersÃ¸gelsesmetode findes naturligvis ikke blot de globale maksimum- og minimum-vÃ¦rdier men ogsÃ¥ de $x$-vÃ¦rdier i $I$ for hvilke
+det globale maksimum og det globale minimum antages, altsÃ¥ maksimum- og minimum-punkterne i det aktuelle interval.
 \end{think}
 
 
-\begin{example}[En kontinuert funktion undersøges] \label{exampKontFunk}
-En kontinuert funktion $f(x)$ er defineret for alle $x$ på følgende måde:
+\begin{example}[En kontinuert funktion undersÃ¸ges] \label{exampKontFunk}
+En kontinuert funktion $f(x)$ er defineret for alle $x$ pÃ¥ fÃ¸lgende mÃ¥de:
 \begin{equation}
 f(x) = \left\{
         \begin{array}{ll}
@@ -584,10 +584,10 @@ f(x) = \left\{
 \end{equation}
 Se figur \ref{figVm}, hvor vi kun betragter funktionen i intervallet $I = [-1.5, 2.0]$.
 Der er to undtagelspunkter, hvor funktionen ikke er differentiabel: $x_{0}=0$ og $x_{0}=1$.
-Der er \'{e}t stationært punkt i $]-1.5, 2.0[$ hvor $f'(x_{0}) = 0$ nemlig $x_{0}= -1$.
-Og endelig er der de to randpunkter, intervalendepunkterne $x_{0}=-1.5$ og $x_{0}=2$ som skal undersøges.\\
+Der er \'{e}t stationÃ¦rt punkt i $]-1.5, 2.0[$ hvor $f'(x_{0}) = 0$ nemlig $x_{0}= -1$.
+Og endelig er der de to randpunkter, intervalendepunkterne $x_{0}=-1.5$ og $x_{0}=2$ som skal undersÃ¸ges.\\
 
-Vi har derfor følgende kandidater til globale maksimum- og minimumværdier for $f(x)$ i $I$:
+Vi har derfor fÃ¸lgende kandidater til globale maksimum- og minimumvÃ¦rdier for $f(x)$ i $I$:
 \begin{equation}
 \begin{array}{|r|c|c|c|c|c|}
   \hline
@@ -597,7 +597,7 @@ Vi har derfor følgende kandidater til globale maksimum- og minimumværdier for $f
   \hline
 \end{array}
 \end{equation}
-Vi aflæser konkluderende heraf, at maksimumværdien for $f(x)$ er $B = 1.5$ som antages i maksimumpunktet $x_{0} =0$. Minimumværdien er $A = 0$ som antages i minimumpunktet $x_{0}= 1$. Der er ikke andre maksimum- og minimum-punkter for $f(x)$ i $I$.
+Vi aflÃ¦ser konkluderende heraf, at maksimumvÃ¦rdien for $f(x)$ er $B = 1.5$ som antages i maksimumpunktet $x_{0} =0$. MinimumvÃ¦rdien er $A = 0$ som antages i minimumpunktet $x_{0}= 1$. Der er ikke andre maksimum- og minimum-punkter for $f(x)$ i $I$.
 \end{example}
 
 
@@ -605,32 +605,32 @@ Vi aflæser konkluderende heraf, at maksimumværdien for $f(x)$ er $B = 1.5$ som a
 \begin{figure}[ht]
 \centerline{ \includegraphics[height=45mm]{plotVm.pdf}}
 \begin{center}
-\caption{Den kontinuerte funktion $f(x)$ fra eksempel \ref{exampKontFunk} (blå). På grafen er markeret (med rødt) de $5$ punkter som skal undersøges specielt med henblik på at bestemme værdimængden for $f(x)$ i intervallet $[-1.5, 2]$, jvf. metode \ref{metodeVm}. } \label{figVm}
+\caption{Den kontinuerte funktion $f(x)$ fra eksempel \ref{exampKontFunk} (blÃ¥). PÃ¥ grafen er markeret (med rÃ¸dt) de $5$ punkter som skal undersÃ¸ges specielt med henblik pÃ¥ at bestemme vÃ¦rdimÃ¦ngden for $f(x)$ i intervallet $[-1.5, 2]$, jvf. metode \ref{metodeVm}. } \label{figVm}
 \end{center}
 \end{figure}
 
 \begin{definition}[Lokale minima og lokale maksima]
-Lad $f(x)$ betegne en funktion på et interval $I = [a, b]$ som indeholder et givet $x_{0} \in ]a, b[$.
+Lad $f(x)$ betegne en funktion pÃ¥ et interval $I = [a, b]$ som indeholder et givet $x_{0} \in ]a, b[$.
 \begin{enumerate}
-\item  Hvis $f(x) \geq f(x_{0})$ for alle $x$ i en (gerne lille) omegn om $x_{0}$, så kaldes $f(x_{0})$ en  \ind{lokal minimumværdi}{lokal minimumværdi} for $f(x)$ i $I$, og $x_{0}$ er et \ind{lokalt minimumpunkt}{lokalt minimumpunkt} for $f(x)$ i $I$. Hvis der faktisk gælder $f(x) > f(x_{0})$ for alle $x$ i omegnen fraregnet $x_{0}$ selv, så kaldes $f(x_{0})$ en \ind{egentlig lokal minimumværdi}{egentlig lokal minimumværdi}.
-\item Hvis $f(x) \leq f(x_{0})$ for alle $x$ i en (gerne lille) omegn om $x_{0}$, så kaldes $f(x_{0})$ en  \ind{lokal maksimumværdi}{lokal maksimumværdi} for $f(x)$ i $I$, og $x_{0}$ er et \ind{lokalt maksimumpunkt}{lokalt maksimumpunkt} for $f(x)$ i $I$. Hvis der faktisk gælder $f(x) < f(x_{0})$ for alle $x$ i omegnen (fraregnet $x_{0}$ selv), så kaldes $f(x_{0})$ en \ind{egentlig lokal maksimumværdi}{egentlig lokal maksimumværdi}.
+\item  Hvis $f(x) \geq f(x_{0})$ for alle $x$ i en (gerne lille) omegn om $x_{0}$, sÃ¥ kaldes $f(x_{0})$ en  \ind{lokal minimumvÃ¦rdi}{lokal minimumvÃ¦rdi} for $f(x)$ i $I$, og $x_{0}$ er et \ind{lokalt minimumpunkt}{lokalt minimumpunkt} for $f(x)$ i $I$. Hvis der faktisk gÃ¦lder $f(x) > f(x_{0})$ for alle $x$ i omegnen fraregnet $x_{0}$ selv, sÃ¥ kaldes $f(x_{0})$ en \ind{egentlig lokal minimumvÃ¦rdi}{egentlig lokal minimumvÃ¦rdi}.
+\item Hvis $f(x) \leq f(x_{0})$ for alle $x$ i en (gerne lille) omegn om $x_{0}$, sÃ¥ kaldes $f(x_{0})$ en  \ind{lokal maksimumvÃ¦rdi}{lokal maksimumvÃ¦rdi} for $f(x)$ i $I$, og $x_{0}$ er et \ind{lokalt maksimumpunkt}{lokalt maksimumpunkt} for $f(x)$ i $I$. Hvis der faktisk gÃ¦lder $f(x) < f(x_{0})$ for alle $x$ i omegnen (fraregnet $x_{0}$ selv), sÃ¥ kaldes $f(x_{0})$ en \ind{egentlig lokal maksimumvÃ¦rdi}{egentlig lokal maksimumvÃ¦rdi}.
 \end{enumerate}
 \end{definition}
 
-Hvis den funktion vi vil undersøge er glat i sine stationære punkter, så kan vi kvalificere metoden \ref{metodeVm} endnu bedre, idet det approksimerende polynomium af grad $2$ med udviklingspunkt i det stationære punkt kan hjælpe med at afgøre, om værdien af $f(x)$ i det stationære punkt er en kandidat til at være en maksimumværdi eller minimumværdi.
+Hvis den funktion vi vil undersÃ¸ge er glat i sine stationÃ¦re punkter, sÃ¥ kan vi kvalificere metoden \ref{metodeVm} endnu bedre, idet det approksimerende polynomium af grad $2$ med udviklingspunkt i det stationÃ¦re punkt kan hjÃ¦lpe med at afgÃ¸re, om vÃ¦rdien af $f(x)$ i det stationÃ¦re punkt er en kandidat til at vÃ¦re en maksimumvÃ¦rdi eller minimumvÃ¦rdi.
 
-\begin{lemma}[Lokal analyse i et stationært punkt] \label{lemmaEkstrema}
-Lad $f(x)$ være en glat funktion og antag, at $x_{0}$ er et stationært punkt for $f(x)$ i et interval $I = ]a, b[$.
-Så gælder følgende:
+\begin{lemma}[Lokal analyse i et stationÃ¦rt punkt] \label{lemmaEkstrema}
+Lad $f(x)$ vÃ¦re en glat funktion og antag, at $x_{0}$ er et stationÃ¦rt punkt for $f(x)$ i et interval $I = ]a, b[$.
+SÃ¥ gÃ¦lder fÃ¸lgende:
 \begin{enumerate}
-\item Hvis $f''(x_{0}) > 0$ så er  $f(x_{0})$ en egentlig lokal minimumværdi for $f(x)$.
-\item Hvis $f''(x_{0}) < 0$ så er $f(x_{0})$ en egentlig lokal maksimumværdi for $f(x)$.
-\item Hvis $f''(x_{0}) = 0$ så er dette ikke tilstrækkelig information til at sikre, at $f(x_{0})$ er lokal minimumværdi eller lokal maksimumværdi.
+\item Hvis $f''(x_{0}) > 0$ sÃ¥ er  $f(x_{0})$ en egentlig lokal minimumvÃ¦rdi for $f(x)$.
+\item Hvis $f''(x_{0}) < 0$ sÃ¥ er $f(x_{0})$ en egentlig lokal maksimumvÃ¦rdi for $f(x)$.
+\item Hvis $f''(x_{0}) = 0$ sÃ¥ er dette ikke tilstrÃ¦kkelig information til at sikre, at $f(x_{0})$ er lokal minimumvÃ¦rdi eller lokal maksimumvÃ¦rdi.
 \end{enumerate}
 \end{lemma}
 
 \begin{exercise}
-Bevis hjælpesætningen \ref{lemmaEkstrema} ved at bruge Taylors grænseformel med det approksimerende andengrads-polynomium fro $f(x)$  og udviklingspunkt $x_{0}$. Husk, at $x_{0}$ er et stationært punkt, således at $f'(x_{0}) = 0$.
+Bevis hjÃ¦lpesÃ¦tningen \ref{lemmaEkstrema} ved at bruge Taylors grÃ¦nseformel med det approksimerende andengrads-polynomium fro $f(x)$  og udviklingspunkt $x_{0}$. Husk, at $x_{0}$ er et stationÃ¦rt punkt, sÃ¥ledes at $f'(x_{0}) = 0$.
 \end{exercise}
 
 
@@ -647,9 +647,9 @@ f(x) = \left\{
         \end{array}
       \right.
 \end{equation}
-er vist i figur \ref{figVm}. I intervallet $I = [-1.5, 2.0]$ har funktionen de egentlige lokale minimumværdier $0.5$ og $0$
-i de respektive egentlige lokale minimumpunkter $x_{0}= -1$ og $x_{0}= 1$ og funktionen har en egentlig lokal maksimumværdi $1.5$ i det egentlige lokale maksimumpunkt $x_{0}=0$. Hvis vi udvider intervallet til $J = [-7, 7]$ og bemærker at funktionsværdierne per definition er konstante udenfor intervallet $I$ fås de nye lokale maksimum-værdier $0.75$ og $1$ for $f(x)$ i $J$ -- ingen af dem er {\emph{egentlige}} lokale maksimumværdier.  Alle $x_{0} \in ]-7, -1.5]$ og alle $x_{0} \in [2, 7[$ er
-lokale maksimumpunkter for $f(x)$ i $J$ men ingen af dem er {\emph{egentlige}} lokale maksimumpunkter. Alle $x_{0}$ i det {\emph{åbne interval}} $x_{0} \in ]-7, -1.5[$ og alle $x_{0}$ i det {\emph{åbne interval}} $x_{0} \in ]2, 7[$ er iøvrigt også
+er vist i figur \ref{figVm}. I intervallet $I = [-1.5, 2.0]$ har funktionen de egentlige lokale minimumvÃ¦rdier $0.5$ og $0$
+i de respektive egentlige lokale minimumpunkter $x_{0}= -1$ og $x_{0}= 1$ og funktionen har en egentlig lokal maksimumvÃ¦rdi $1.5$ i det egentlige lokale maksimumpunkt $x_{0}=0$. Hvis vi udvider intervallet til $J = [-7, 7]$ og bemÃ¦rker at funktionsvÃ¦rdierne per definition er konstante udenfor intervallet $I$ fÃ¥s de nye lokale maksimum-vÃ¦rdier $0.75$ og $1$ for $f(x)$ i $J$ -- ingen af dem er {\emph{egentlige}} lokale maksimumvÃ¦rdier.  Alle $x_{0} \in ]-7, -1.5]$ og alle $x_{0} \in [2, 7[$ er
+lokale maksimumpunkter for $f(x)$ i $J$ men ingen af dem er {\emph{egentlige}} lokale maksimumpunkter. Alle $x_{0}$ i det {\emph{Ã¥bne interval}} $x_{0} \in ]-7, -1.5[$ og alle $x_{0}$ i det {\emph{Ã¥bne interval}} $x_{0} \in ]2, 7[$ er iÃ¸vrigt ogsÃ¥
 lokale minimumpunkter for $f(x)$ i $J$ men ingen af dem er {\emph{egentlige}} lokale minimumpunkter.
 \end{example}
 
@@ -657,46 +657,46 @@ lokale minimumpunkter for $f(x)$ i $J$ men ingen af dem er {\emph{egentlige}} lo
 \begin{figure}[ht]
 \centerline{ \includegraphics[height=45mm]{plotFresnelC.pdf}}
 \begin{center}
-\caption{Egentlige lokale maksima og egentlige lokale minima for funktionen fra eksempel \ref{exampFresnelC} er her antydet  på grafen for funktionen. For en ordens skyld bemærkes: De lokale maksimum- og minimum-punkter for funktionen er de markerede røde graf-punkters $x$-koordinater og de lokale maksimum- og minimum-værdier for funktionen er de markerede røde graf-punkters $y$-koordinater.} \label{figFresnelC}
+\caption{Egentlige lokale maksima og egentlige lokale minima for funktionen fra eksempel \ref{exampFresnelC} er her antydet  pÃ¥ grafen for funktionen. For en ordens skyld bemÃ¦rkes: De lokale maksimum- og minimum-punkter for funktionen er de markerede rÃ¸de graf-punkters $x$-koordinater og de lokale maksimum- og minimum-vÃ¦rdier for funktionen er de markerede rÃ¸de graf-punkters $y$-koordinater.} \label{figFresnelC}
 \end{center}
 \end{figure}
 
 \begin{figure}[ht]
 \centerline{ \includegraphics[height=45mm]{plotFresnelCPar.pdf}}
 \begin{center}
-\caption{Grafen for funktionen i eksempel \ref{exampFresnelC} og to approksimerende parabler med udviklingspunkter i to stationære punkter, som er henholdsvis et egentligt lokalt minimumpunkt og et egentligt lokalt maksimumpunkt for $f(x)$.} \label{figFresnelCPar}
+\caption{Grafen for funktionen i eksempel \ref{exampFresnelC} og to approksimerende parabler med udviklingspunkter i to stationÃ¦re punkter, som er henholdsvis et egentligt lokalt minimumpunkt og et egentligt lokalt maksimumpunkt for $f(x)$.} \label{figFresnelCPar}
 \end{center}
 \end{figure}
 
-\begin{example}[En ikke-elementær funktion] \label{exampFresnelC}
+\begin{example}[En ikke-elementÃ¦r funktion] \label{exampFresnelC}
 Funktionen $f(x)$
 \begin{equation}
 f(x) = \int_{0}^{x}\, \cos(t^{2}) \, dt
 \end{equation}
-har stationære punkter i de værdier af $x_{0}$ som tilfredsstiller:
+har stationÃ¦re punkter i de vÃ¦rdier af $x_{0}$ som tilfredsstiller:
 \begin{equation}
 f'(x_{0}) = \cos(x_{0}^{2}) = 0 \quad , \quad \textrm{dvs.} \quad x_{0}^{2} = \frac{\pi}{2} + p\cdot \pi \quad \textrm{hvor $p$ er et helt tal} \quad.
 \end{equation}
-Da vi også har, at
+Da vi ogsÃ¥ har, at
 \begin{equation}
 f''(x) = -2\cdot x \cdot \sin(x^{2}) \quad ,
 \end{equation}
-sådan at der i de angivne stationære punkter gælder
+sÃ¥dan at der i de angivne stationÃ¦re punkter gÃ¦lder
 \begin{equation}
 f''(x_{0}) = -2 \cdot x_{0} \cdot (-1)^{p} \quad .
 \end{equation}
-Heraf følger -- via lemma \ref{lemmaEkstrema} -- at hvert andet stationært punkt $x_{0}$ langs $x$-aksen er et egentligt lokalt maksimumpunkt for $f(x)$ og de øvrige stationære
-punkter er egentlige lokale minimumpunkter. Se figur \ref{figFresnelC}. I figur \ref{figFresnelCPar} er vist graferne (parabler) for et par af de approksimerende andengradspolynomier for $f(x)$ med udviklingspunkter i udvalgte stationære punkter.
+Heraf fÃ¸lger -- via lemma \ref{lemmaEkstrema} -- at hvert andet stationÃ¦rt punkt $x_{0}$ langs $x$-aksen er et egentligt lokalt maksimumpunkt for $f(x)$ og de Ã¸vrige stationÃ¦re
+punkter er egentlige lokale minimumpunkter. Se figur \ref{figFresnelC}. I figur \ref{figFresnelCPar} er vist graferne (parabler) for et par af de approksimerende andengradspolynomier for $f(x)$ med udviklingspunkter i udvalgte stationÃ¦re punkter.
 \end{example}
 
-\begin{example}[Når approksimation til grad $2$ ikke er nok] \label{exampStatPotens}
-Som angivet i hjælpesætning \ref{lemmaEkstrema} kan man ikke ud fra $f'(x_{0}) = f''(x_{0}) = 0$ slutte, at funktionen har lokalt maksimum eller minimum i $x_{0}$. Det viser de tre simple funktioner i figur \ref{figStatPotens} med al ønskelig tydelighed: $f_{1}(x) = x^{4}$, $f_{2}(x) = - x^{4}$ og $f_{3}(x) = x^{3}$. Alle tre funktioner har stationært punkt i $x_{0}=0$ og alle har $f''(x_{0})=0$, men $f_{1}(x)$ har et egentligt lokalt minimumpunkt i $0$,  $f_{2}(x)$ har et egentligt lokalt maksimumpunkt i $0$, og $f_{3}(x)$ har hverken et lokalt minimimumpunkt eller et lokalt maksimumpunkt i $0$.
+\begin{example}[NÃ¥r approksimation til grad $2$ ikke er nok] \label{exampStatPotens}
+Som angivet i hjÃ¦lpesÃ¦tning \ref{lemmaEkstrema} kan man ikke ud fra $f'(x_{0}) = f''(x_{0}) = 0$ slutte, at funktionen har lokalt maksimum eller minimum i $x_{0}$. Det viser de tre simple funktioner i figur \ref{figStatPotens} med al Ã¸nskelig tydelighed: $f_{1}(x) = x^{4}$, $f_{2}(x) = - x^{4}$ og $f_{3}(x) = x^{3}$. Alle tre funktioner har stationÃ¦rt punkt i $x_{0}=0$ og alle har $f''(x_{0})=0$, men $f_{1}(x)$ har et egentligt lokalt minimumpunkt i $0$,  $f_{2}(x)$ har et egentligt lokalt maksimumpunkt i $0$, og $f_{3}(x)$ har hverken et lokalt minimimumpunkt eller et lokalt maksimumpunkt i $0$.
 \end{example}
 
 \begin{figure}[ht]
 \centerline{ \includegraphics[height=55mm]{plotStatPotens.pdf}}
 \begin{center}
-\caption{Tre elementære funktioner med approksimerende andengrads-polynomium $P_{2, x_{0}=0}(x)=0$ for alle $x$. Funktionerne er henholdsvis: $f_{1}(x) = x^{4}$ (rød),  $f_{1}(x) = -x^{4}$ (sort), og $f_{3}(x) = x^{3}$ (blå).} \label{figStatPotens}
+\caption{Tre elementÃ¦re funktioner med approksimerende andengrads-polynomium $P_{2, x_{0}=0}(x)=0$ for alle $x$. Funktionerne er henholdsvis: $f_{1}(x) = x^{4}$ (rÃ¸d),  $f_{1}(x) = -x^{4}$ (sort), og $f_{3}(x) = x^{3}$ (blÃ¥).} \label{figStatPotens}
 \end{center}
 \end{figure}
 
@@ -712,29 +712,29 @@ Som angivet i hjælpesætning \ref{lemmaEkstrema} kan man ikke ud fra $f'(x_{0}) =
 \begin{summary}
 I denne eNote har vi studeret hvordan man kan approksimere glatte funktioner med polynomier.
 \begin{itemize}
-\item Enhver glat funktion $f(x)$ på et interval $I$ kan opdeles i et approximerende $n$'te-grads-polynomium $P_{n, x_{0}}(x)$ med udviklingspunkt $x_{0}$ og en tilhørende restfunktion $R_{n, x_{0}}(x)$ således:
+\item Enhver glat funktion $f(x)$ pÃ¥ et interval $I$ kan opdeles i et approximerende $n$'te-grads-polynomium $P_{n, x_{0}}(x)$ med udviklingspunkt $x_{0}$ og en tilhÃ¸rende restfunktion $R_{n, x_{0}}(x)$ sÃ¥ledes:
     \begin{equation}
   f(x) = P_{n, x_{0}}(x) + R_{n, x_{0}}(x) \quad ,
     \end{equation}
-hvor polynomiet og restfunktionen i Taylor's grænseformel skrives således:
+hvor polynomiet og restfunktionen i Taylor's grÃ¦nseformel skrives sÃ¥ledes:
 \begin{equation*}
 f(x) = f(x_{0}) + \frac{f'(x_{0})}{1!}\cdot(x-x_{0}) + \cdots +
 \frac{f^{(n)}(x_{0})}{n!}\cdot(x-x_{0})^{n} + (x-x_{0})^{n}\cdot\varepsilon_{f}(x-x_{0}) \quad ,
 \end{equation*}
 hvor $\varepsilon_{f}(x-x_{0})$ betegner en epsilonfunktion af $(x-x_{0})$, dvs. $\varepsilon_{f}(x-x_{0}) \to 0 $ for $x \to x_{0}$.
-\item Taylor's grænseformel kan benyttes til at finde kontinuerte udvidelser af brøk\-funk\-tioner ved at finde (om muligt) deres grænseværdier for $x \to x_{0}$ hvor $x_{0}$ er de værdier hvor nævner-funktionen er $0$ således at brøkfunktionen i udgangspunktet ikke er defineret i $x_{0}$:
+\item Taylor's grÃ¦nseformel kan benyttes til at finde kontinuerte udvidelser af brÃ¸k\-funk\-tioner ved at finde (om muligt) deres grÃ¦nsevÃ¦rdier for $x \to x_{0}$ hvor $x_{0}$ er de vÃ¦rdier hvor nÃ¦vner-funktionen er $0$ sÃ¥ledes at brÃ¸kfunktionen i udgangspunktet ikke er defineret i $x_{0}$:
 \begin{equation}
 \frac{\sin(x)}{x} = \frac{x + x^{1}\cdot\varepsilon(x)}{x} = 1 + \varepsilon(x) \to 1 \quad \textrm{for} \quad x \to 0 \quad .
 \end{equation}
 
-\item Vurdering af restfunktionen giver en øvre grænse for den største numeriske forskel mellem en given funktion og det approksimerende polynomium af en  passende grad
-og med et passende udviklingspunkt i et givet undersøgelsesinterval. En sådan vurdering  kan også foretages for funktioner, som måske kun ''kendes'' via en differentialligning eller som et ikke-elementært integral:
+\item Vurdering af restfunktionen giver en Ã¸vre grÃ¦nse for den stÃ¸rste numeriske forskel mellem en given funktion og det approksimerende polynomium af en  passende grad
+og med et passende udviklingspunkt i et givet undersÃ¸gelsesinterval. En sÃ¥dan vurdering  kan ogsÃ¥ foretages for funktioner, som mÃ¥ske kun ''kendes'' via en differentialligning eller som et ikke-elementÃ¦rt integral:
 \begin{equation}
 |\ln(x) - (x-1)| \leq \frac{1}{18} \quad \textrm{for alle} \quad x \in \left[\frac{3}{4}, \frac{5}{4} \right] \quad .
 \end{equation}
 
-\item Taylor's grænseformel med approksimerende anden-grads-polynomium
-benyt\-tes til effektiv funktionsundersøgelse, herunder bestemmelse af værdimængde, globale og lokale maksima og minima for givne funktioner.
+\item Taylor's grÃ¦nseformel med approksimerende anden-grads-polynomium
+benyt\-tes til effektiv funktionsundersÃ¸gelse, herunder bestemmelse af vÃ¦rdimÃ¦ngde, globale og lokale maksima og minima for givne funktioner.
 \end{itemize}
 \end{summary}
 

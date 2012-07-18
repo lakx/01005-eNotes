@@ -1,18 +1,18 @@
 
 \input{../Strukturfiler/preambel}
-\setcounter{chapter}{21} %SÆT DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
+\setcounter{chapter}{21} %SÃ†T DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% HERFRA SKAL DU SKRIVE ELLER INDSÆTTE %%%%
-%%% DEN FIL DU ØNSKER %%%%%%%%%%%%%%%%%%%%%%%
+%%% HERFRA SKAL DU SKRIVE ELLER INDSÃ†TTE %%%%
+%%% DEN FIL DU Ã˜NSKER %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 % REF: TransferNote \ref{TN4-tn4} \nameref{TN4-tn4}
 %
-% \tref{NUID14-thm.koma}{sætning} \tref{NUID28-tn15}{eNote}
+% \tref{NUID14-thm.koma}{sÃ¦tning} \tref{NUID28-tn15}{eNote}
 %
 %\tref{NUID34-tn19}{eNote} Symmetriske matricer
 %\tref{NUID33-tn18}{eNote} Taylor i 2 variable
@@ -41,7 +41,7 @@
 
 
 \begin{basis}
-Vi vil her med udgangspunkt i de metoder og resultater der er opstillet i \tref{NUID36-tn21}{eNote} vise, hvordan Riemann-integralerne derfra kan benyttes til blandt andet at finde længder af kurver og  arealer af plane områder, for så vidt de er beskrevet på en passende parameterform.
+Vi vil her med udgangspunkt i de metoder og resultater der er opstillet i \tref{NUID36-tn21}{eNote} vise, hvordan Riemann-integralerne derfra kan benyttes til blandt andet at finde lÃ¦ngder af kurver og  arealer af plane omrÃ¥der, for sÃ¥ vidt de er beskrevet pÃ¥ en passende parameterform.
 \end{basis}
 
 
@@ -57,12 +57,12 @@ Vi vil her med udgangspunkt i de metoder og resultater der er opstillet i \tref{
 
 \section{Kurveintegraler} \label{secKurveInt}
 
-Vi vil i udgangspunktet betragte kurver som er parametriserede på følgende måde ved
+Vi vil i udgangspunktet betragte kurver som er parametriserede pÃ¥ fÃ¸lgende mÃ¥de ved
 en parameterfremstilling. \\
 
 
 En parametriseret kurve $K_{\bf r}$ i rummet er givet ved en
-parameterfremstilling således:
+parameterfremstilling sÃ¥ledes:
 \begin{equation}
 \label{eqKr}
 K_{\bf r}: \quad {\bf r}(u) \, = \, \left(x(u), y(u), z(u)\right)
@@ -70,7 +70,7 @@ K_{\bf r}: \quad {\bf r}(u) \, = \, \left(x(u), y(u), z(u)\right)
 \end{equation}
 
 \begin{aha}
-En given kurve kan sædvanligvis parametriseres på uendelig mange måder.
+En given kurve kan sÃ¦dvanligvis parametriseres pÃ¥ uendelig mange mÃ¥der.
 Figur \ref{FigIntLine123} viser tre forskellige
 parametriseringer af det rette linjestykke fra
 $\, (0, -2, \frac{1}{2})\, $ til $\, (0, 2,
@@ -86,7 +86,7 @@ forskellige parametriseringer af en skruelinje.
 \begin{center}
 \caption{\small{Linjestykket fra $\, (0, -2,
 \frac{1}{2})\, $ til $(0, \, 2, \, \frac{1}{2})$
-er her parametriseret på 3 forskellige måder:
+er her parametriseret pÃ¥ 3 forskellige mÃ¥der:
 ${\bf r}_{1}(u) \, = \, \left(0, 2u,
 \,\frac{1}{2}\right), \, \, u \, \in [-1, \,1]\,
 $; ${\bf r}_{2}(u) \, = \, \left(0, \,
@@ -94,11 +94,11 @@ $; ${\bf r}_{2}(u) \, = \, \left(0, \,
 [-1, 1]\, $, og ${\bf r}_{3}(u) \, = \, \left(0,
 \, 2\sin(\frac{\pi}{2}u),\, \frac{1}{2}\right),
 \, \, u \, \in [-1,\, 1]\, $.
-Mar\-ke\-rin\-ger\-ne på de enkelte linjestykker
-stammer fra den inddeling af det   {\em fælles
-parameterinterval $\, [-1,\, 1]\,$} som består af
-$20$ lige store delintervaller. Bemærk, at
-længden af de tre 'kurver' klart er den samme,
+Mar\-ke\-rin\-ger\-ne pÃ¥ de enkelte linjestykker
+stammer fra den inddeling af det   {\em fÃ¦lles
+parameterinterval $\, [-1,\, 1]\,$} som bestÃ¥r af
+$20$ lige store delintervaller. BemÃ¦rk, at
+lÃ¦ngden af de tre 'kurver' klart er den samme,
 selv om parametriseringerne er ret forskellige. Se Opgave \ref{exercLaengde}.}}
 \label{FigIntLine123}
 \end{center}
@@ -106,14 +106,14 @@ selv om parametriseringerne er ret forskellige. Se Opgave \ref{exercLaengde}.}}
 
 
 
-Vi antager her og i det følgende, at de tre
+Vi antager her og i det fÃ¸lgende, at de tre
 koordinatfunktioner $x(u)$, $y(u)$ og $z(u)$ i
-{parameterfremstilling}erne er pæne funktioner af
-$u$. Vi antager simpelthen, at de alle tre er glatte funktioner af $u$ således at de kan
-differentieres vilkårligt mange gange. Specielt er de afledede funktioner $x'(u)$,
+{parameterfremstilling}erne er pÃ¦ne funktioner af
+$u$. Vi antager simpelthen, at de alle tre er glatte funktioner af $u$ sÃ¥ledes at de kan
+differentieres vilkÃ¥rligt mange gange. Specielt er de afledede funktioner $x'(u)$,
 $y'(u)$ og $z'(u)$
-derfor kontinuerte i intervallet $[a,b]$. Så har
-vi også, at
+derfor kontinuerte i intervallet $[a,b]$. SÃ¥ har
+vi ogsÃ¥, at
 \begin{equation}  | {\bf r}'(u) |  \, =
 \, \sqrt{x'(u)^{2} + y'(u)^{2} + z'(u)^{2}}
 \end{equation}
@@ -122,10 +122,10 @@ kan denne funktion derfor {\em integreres} over intervallet, jvf. \tref{NUID36-t
 det har vi om lidt  brug for i definition \ref{defKurveInt}
 nedenfor.
 
-\begin{definition}[Regulær parameterfremstilling] \label{defRegKurve}
+\begin{definition}[RegulÃ¦r parameterfremstilling] \label{defRegKurve}
 En parameterfremstilling ${\bf r}(u)$ for en kurve $K_{\bf r}$ -
-som i (\ref{eqKr}) - siges at være en {\em{{regulær parameterfremstilling}}} hvis
-følgende betingelse er opfyldt:
+som i (\ref{eqKr}) - siges at vÃ¦re en {\em{{regulÃ¦r parameterfremstilling}}} hvis
+fÃ¸lgende betingelse er opfyldt:
 \begin{equation}
 {\bf r}'(u) \neq {\bf 0} \quad \text{for alle} \quad  u \in [a, b] \quad .
 \end{equation}
@@ -133,39 +133,39 @@ følgende betingelse er opfyldt:
 
 \begin{exercise}
 Hvilke af parameterfremstillingerne i figurerne \ref{FigIntLine123},
-\ref{figc12}, \ref{figv12}, og \ref{figKnude} er regulære?
+\ref{figc12}, \ref{figv12}, og \ref{figKnude} er regulÃ¦re?
 \end{exercise}
 
 
 \begin{think}
-En parametriseret kurve er andet og mere end blot billedmængden
-(punktmængden) ${\bf r}([a, b ])$, idet selve parametriseringen
-eksempelvis kan foreskrive at dele af punktmængden skal gennemløbes
+En parametriseret kurve er andet og mere end blot billedmÃ¦ngden
+(punktmÃ¦ngden) ${\bf r}([a, b ])$, idet selve parametriseringen
+eksempelvis kan foreskrive at dele af punktmÃ¦ngden skal gennemlÃ¸bes
 flere gange, se eksempel \ref{exKurveLang} nedenfor.\\
 
-Man kan gerne tænke på intervallet $[a, b ]$ som en retlinet elastik
+Man kan gerne tÃ¦nke pÃ¥ intervallet $[a, b ]$ som en retlinet elastik
 i hvile. Vektor-afbildningen ${\bf r}$ deformerer elastikken (ind i
-rummet) ved at bøje, strække eller komprimere elastikken. En lokal
-strækning gør selvfølgelig elastikken lokalt længere, mens en lokal
-komprimering gør elastikken lokalt kortere. Et første naturligt
-spørgsmål er derfor hvor lang hele elastikken er efter brug af
-afbildningen ${\bf r}$. Kurveintegralet indføres blandt andet med
-henblik på at finde den totale længde af den deformerede kurve i
+rummet) ved at bÃ¸je, strÃ¦kke eller komprimere elastikken. En lokal
+strÃ¦kning gÃ¸r selvfÃ¸lgelig elastikken lokalt lÃ¦ngere, mens en lokal
+komprimering gÃ¸r elastikken lokalt kortere. Et fÃ¸rste naturligt
+spÃ¸rgsmÃ¥l er derfor hvor lang hele elastikken er efter brug af
+afbildningen ${\bf r}$. Kurveintegralet indfÃ¸res blandt andet med
+henblik pÃ¥ at finde den totale lÃ¦ngde af den deformerede kurve i
 rummet. \\
 
 Vi kan ligeledes forestille os, at den parametriserede kurve selv er
-masseløs, men at den til gengæld efter deformationen med ${\bf r}$
-farves med en maling på en sådan måde at massetætheden af malingen
+masselÃ¸s, men at den til gengÃ¦ld efter deformationen med ${\bf r}$
+farves med en maling pÃ¥ en sÃ¥dan mÃ¥de at massetÃ¦theden af malingen
 langs med kurven (i gram pr. centimeter, f.eks.) er givet som en
-funktion $f$ af stedet $(x, y, z)$ i rummet -- altså sådan at
-massetætheden af malingen på stedet ${\bf r}(u)$ er $f({\bf r}(u))$.
+funktion $f$ af stedet $(x, y, z)$ i rummet -- altsÃ¥ sÃ¥dan at
+massetÃ¦theden af malingen pÃ¥ stedet ${\bf r}(u)$ er $f({\bf r}(u))$.
 Opgaven er da at finde den totale masse af den deformerede og
-farvelagte parametriserede kurve. Bemærk, at med lidt fantasi kan vi
-endda gerne tillade, at 'massetætheden'  $f$ antager negative
-værdier. \\
+farvelagte parametriserede kurve. BemÃ¦rk, at med lidt fantasi kan vi
+endda gerne tillade, at 'massetÃ¦theden'  $f$ antager negative
+vÃ¦rdier. \\
 
-Disse forestillinger skal naturligvis kun hjælpe os til at få en passende
-intuitiv forståelse af de indførte begreber; vi skal i de relaterede eNoter
+Disse forestillinger skal naturligvis kun hjÃ¦lpe os til at fÃ¥ en passende
+intuitiv forstÃ¥else af de indfÃ¸rte begreber; vi skal i de relaterede eNoter
 se adskillige andre tolkninger og brug af kurveintegralet.
 
 \end{think}
@@ -177,7 +177,7 @@ se adskillige andre tolkninger og brug af kurveintegralet.
 \centerline{\includegraphics[height=80mm]{FIGS/plotC1}\, \, \, \quad  \includegraphics[height=80mm]{FIGS/plotC2}}
 \begin{center}
 \caption{\small{En cirkel i $(x, y)$-planen er
-her parametriseret på 2 forskellige måder: ${\bf
+her parametriseret pÃ¥ 2 forskellige mÃ¥der: ${\bf
 r}_{1}(u) \, = \, \left(\cos(\pi\, u), \,
 \sin(\pi \,u),\, 0\right), \, \, u \, \in [-1,\,
 1]\, $, og ${\bf r}_{2}(u) \, = \,
@@ -185,8 +185,8 @@ r}_{1}(u) \, = \, \left(\cos(\pi\, u), \,
 0\right), \, \, u \, \in [-1, \,1]\, $.
 Mar\-ke\-ringerne stammer fra den inddeling af
 {\em parameterintervallet $\, [-1, 1]\,$} som
-består af $100$ lige store delintervaller. Længden
-af cirklen er $2\pi$ - uafhængig af
+bestÃ¥r af $100$ lige store delintervaller. LÃ¦ngden
+af cirklen er $2\pi$ - uafhÃ¦ngig af
 parametriseringen.}} \label{figc12}
 \end{center}
 \end{figure}
@@ -195,7 +195,7 @@ parametriseringen.}} \label{figc12}
 
 
 \begin{example}[Skruelinje] \label{exSkruelinje}
-{Skruelinjen} i figur \ref{figv12} er præsenteret med 2
+{Skruelinjen} i figur \ref{figv12} er prÃ¦senteret med 2
 \emph{forskellige parametriseringer}: \begin{center} ${\bf r}_{1}(u) \, =
 \, \left(\cos(2\pi u), \,\sin(2\pi u),\, \frac{\pi}{5}u\right), \,
 \, u \, \in [-1,\, 1]\, \, $, og \end{center}
@@ -203,7 +203,7 @@ parametriseringen.}} \label{figc12}
 \,\sin(2\pi\, u^{3}),\, \frac{\pi}{5}u^{3} \right), \, \, u \, \in
 [-1,\, 1]\, $.
 \end{center} Markeringerne stammer fra den inddeling af {\em
-parameterintervallet $\, [-1, 1]\,$} som består af $200$ lige store
+parameterintervallet $\, [-1, 1]\,$} som bestÃ¥r af $200$ lige store
 delintervaller. Kurverne er igen klart lige lange (se opgave
 \ref{exercLaengde}).
 \end{example}
@@ -248,11 +248,11 @@ eksempel \ref{exSkruelinje}. }} \label{figv12}
 \end{figure}
 
 
-Vi definerer kurveintegration på følgende måde, og motiverer definitionen i afsnit \ref{subsecMotivKurve} nedenfor:
+Vi definerer kurveintegration pÃ¥ fÃ¸lgende mÃ¥de, og motiverer definitionen i afsnit \ref{subsecMotivKurve} nedenfor:
 
 
 \begin{definition}[Kurveintegral] \label{defKurveInt}
-Lad $f(x,y,z)$ betegne en kontinuert funktion på $\mathbb{R}^{3}$.
+Lad $f(x,y,z)$ betegne en kontinuert funktion pÃ¥ $\mathbb{R}^{3}$.
 {Kurveintegralet} af funk\-tio\-nen $f$ over en {parametriseret kurve}
 $K_{\bf r}$ defineres ved
 \begin{equation} \label{eqKurveintegral1d}
@@ -263,21 +263,21 @@ hvor {Jacobi-funktionen $\Jac_{\bf r}(u)$} er givet ved:
 \begin{equation}
 \Jac_{\bf r}(u) \, = \,  | {\bf r}'(u) | \quad .
 \end{equation}
-Jacobi-funktionen $\Jac_{\bf r}(u)$ betegner altså længden af tangentvektoren ${\bf r}'(u)$ til kurven på stedet
+Jacobi-funktionen $\Jac_{\bf r}(u)$ betegner altsÃ¥ lÃ¦ngden af tangentvektoren ${\bf r}'(u)$ til kurven pÃ¥ stedet
 ${\bf r}(u)$.
 \end{definition}
 
 \begin{aha}
-Læg mærke til, at det symbol, der står på venstre side af
+LÃ¦g mÃ¦rke til, at det symbol, der stÃ¥r pÃ¥ venstre side af
 lighedstegnet i (\ref{eqKurveintegral1d}), {\em kun} er et {\em
-symbol} for kurveintegralet. Det integral vi skal regne ud står på
-højre side. Og det kan lade sig gøre at integrere, fordi både $f$,
+symbol} for kurveintegralet. Det integral vi skal regne ud stÃ¥r pÃ¥
+hÃ¸jre side. Og det kan lade sig gÃ¸re at integrere, fordi bÃ¥de $f$,
 ${\bf r}$ og $ | {\bf r}' | $ er
- kontinuerte, således at integranden er kontinuert.
+ kontinuerte, sÃ¥ledes at integranden er kontinuert.
 \end{aha}
 
-Hvis vi indsætter ${\bf r}(u) \, = \, \left(x(u), y(u), z(u)\right)$ i udtrykket for
-kurveintegralet får vi:
+Hvis vi indsÃ¦tter ${\bf r}(u) \, = \, \left(x(u), y(u), z(u)\right)$ i udtrykket for
+kurveintegralet fÃ¥r vi:
 \begin{equation}
 \int_{K_{\bf r}} f \, d\mu \, = \, \int_{a}^{b} f(x(u), y(u), z(u)
 )\,\sqrt{x'(u)^{2} + y'(u)^{2} + z'(u)^{2}}\,\,du \quad.
@@ -287,7 +287,7 @@ kurveintegralet får vi:
 
 \begin{remark}
 Parameterfremstillingen (\ref{eqKr}) for kurven
-er \emph{regulær} hvis parameterfremstillingens
+er \emph{regulÃ¦r} hvis parameterfremstillingens
 Jacobi-funktion er positiv: $\Jac_{\bf r}(u) \, = \, | {\bf r}'(u) |
 > \, 0 $ for alle $u$ i det givne interval $\,[a,
 b]\,$.
@@ -295,7 +295,7 @@ b]\,$.
 
 
 
-\begin{example}[En vægtet cirkel]\label{exKurve1}
+\begin{example}[En vÃ¦gtet cirkel]\label{exKurve1}
 Givet funktionen $\,f(x, y, z)\, = \, 7x\,$ og et parametriseret
 cirkelstykke
 $$C_{\bf r}: \,\, {\bf r}(u) \, = \, \left(x(u), y(u), z(u)\right) \, = \,
@@ -321,15 +321,15 @@ y(u), z(u) )\,\sqrt{x'(u)^{2} + y'(u)^{2} + z'(u)^{2}}\,\,du \\
 
 
 
-Som nævnt, og som vi vil godtgøre nedenfor - i afsnit \ref{subsecMotivKurve} om {\em
+Som nÃ¦vnt, og som vi vil godtgÃ¸re nedenfor - i afsnit \ref{subsecMotivKurve} om {\em
 Motivering af kurveintegralet} - kan kurveintegraler benyttes til
-at finde længder af parametriserede kurver og til at finde den
-totale masse af parametriserede kurver med givne massetætheder.
-Hvis massetætheden er konstant $1$ fås længden (man kan finde
-længden af en sådan kurve ved at veje den):
+at finde lÃ¦ngder af parametriserede kurver og til at finde den
+totale masse af parametriserede kurver med givne massetÃ¦theder.
+Hvis massetÃ¦theden er konstant $1$ fÃ¥s lÃ¦ngden (man kan finde
+lÃ¦ngden af en sÃ¥dan kurve ved at veje den):
 
-\begin{definition}[Længden af en kurve] \label{defLaengde}
-{Længden} af den parametriserede kurve
+\begin{definition}[LÃ¦ngden af en kurve] \label{defLaengde}
+{LÃ¦ngden} af den parametriserede kurve
 \begin{equation*}
 K_{\bf r}: \quad {\bf r}(u) \, = \, \left(x(u), y(u), z(u)\right)
 \quad , \, \, \,  u \in [a,b]
@@ -342,12 +342,12 @@ defineres som kurveintegralet
 \end{definition}
 
 
-\begin{example}[Længde af cirkelstykke]\label{exKurve2}
+\begin{example}[LÃ¦ngde af cirkelstykke]\label{exKurve2}
 Det parametriserede {cirkelstykke}
 \begin{equation*}
 C_{\bf r}: \,\, {\bf r}(u) \, =
 \, \left(\cos(u), \,\sin(u),\, 0\right), \, \, \, u \in
-[-\frac{\pi}{2}, \pi] \quad \end{equation*} har længden
+[-\frac{\pi}{2}, \pi] \quad \end{equation*} har lÃ¦ngden
 \begin{equation*}
 \begin{aligned}
 \Le(C_{\bf r}) \, = \, \int_{C_{\bf r}} 1 \, d\mu \, = \,
@@ -365,22 +365,22 @@ C_{\bf r}: \,\, {\bf r}(u) \, =
 Den parametriserede plane kurve $$\widetilde{C}_{\bf
 r}: \,\, {\bf r}(u) \, = \, \left(\cos(u),
 \,\sin(u),\, 0\right), \, \, \, u \in
-[-\frac{\pi}{2}, 7\pi] \quad $$ har længden
+[-\frac{\pi}{2}, 7\pi] \quad $$ har lÃ¦ngden
 $\Le(\widetilde{C}_{\bf r}) \, = \,
 \frac{15\,\pi}{2} \, $ svarende til at
-parametriseringen 'lægger' det lange interval
-flere gange rundt på enhedscirklen!
+parametriseringen 'lÃ¦gger' det lange interval
+flere gange rundt pÃ¥ enhedscirklen!
 \end{example}
 
 
-\begin{example}[Længden af en plan spiral] \label{exSpiral}
+\begin{example}[LÃ¦ngden af en plan spiral] \label{exSpiral}
 Den parametriserede plane spiral (se figur \ref{figSpiral})
 $$
 K_{\bf r}: \,\, {\bf
 r}(u) \, = \, \left(\, u\cos(u), \,u\sin(u), \, 0 \, \right) \, , \, \, u \in
 [0, \pi/2]
 $$
-har længden
+har lÃ¦ngden
 \begin{equation}
 \begin{aligned}
 \Le(K_{\bf r}) \, = \, \int_{K_{\bf r}} 1 \, d\mu \, = \,
@@ -407,14 +407,14 @@ eksempel \ref{exSpiral}. }} \label{figSpiral}
 
 
 
-\begin{example}[Ellipsens længde] \label{exEllipse}
-{Længden af en ellipse}. Den parametriserede ellipse (se Figur \ref{figEllipse})
+\begin{example}[Ellipsens lÃ¦ngde] \label{exEllipse}
+{LÃ¦ngden af en ellipse}. Den parametriserede ellipse (se Figur \ref{figEllipse})
 $$
 K_{\bf r}: \,\, {\bf
 r}(u) \, = \, \left(\, a\cos(u), \,b\sin(u), \, 0 \, \right) \, , \, \, u \in
 [-\pi, \pi]
 $$
-har længden
+har lÃ¦ngden
 $$
 \begin{aligned}
 \Le(K_{\bf r}) \, = \, \int_{K_{\bf r}} 1 \, d\mu \, = \,
@@ -424,8 +424,8 @@ b^2\cos^2(u)}\,\,\,du \\
   \, = \, & 4aE\left(\sqrt{1- \left(\frac{b}{a}\right)^2}\right)\quad,
 \end{aligned}
 $$
-hvor $E$ betegner det såkaldte fuldstændige elliptiske integral af 2. orden.
-Om funktionen $E(u)$ nævner vi her kun, at funktionsværdien i $u=0$ er $E(0) \, = \, \pi/2$, således at ovenstående resultat betyder, at når ellipsen specielt er en cirkel, dvs. når $a \, = \, b$, så får vi den korrekte
+hvor $E$ betegner det sÃ¥kaldte fuldstÃ¦ndige elliptiske integral af 2. orden.
+Om funktionen $E(u)$ nÃ¦vner vi her kun, at funktionsvÃ¦rdien i $u=0$ er $E(0) \, = \, \pi/2$, sÃ¥ledes at ovenstÃ¥ende resultat betyder, at nÃ¥r ellipsen specielt er en cirkel, dvs. nÃ¥r $a \, = \, b$, sÃ¥ fÃ¥r vi den korrekte
 omkreds af cirklen med radius $a$: $L\, = \, 2\pi a \,$.
 \end{example}
 
@@ -444,12 +444,12 @@ eksempel \ref{exEllipse}. }} \label{figEllipse}
 
 
 
-\begin{example}[Skruelinjens længde]\label{exKurve3}
+\begin{example}[Skruelinjens lÃ¦ngde]\label{exKurve3}
 Den parametriserede skruelinje
 $$K_{\bf r}: \,\, {\bf
 r}(u) \, = \, \left(\cos(u), \,\sin(u),\, u\right), \, \, \, u \in
 [-2\pi, 2\pi]
-$$ har længden
+$$ har lÃ¦ngden
 $$
 \begin{aligned}
 \Le(K_{\bf r}) \, = \, \int_{K_{\bf r}} 1 \, d\mu \, = \,
@@ -467,10 +467,10 @@ $$
 
 \begin{definition}[En-entydig parameterfremstilling] \label{defEnEntydigKurve}
 Parameterfremstillingen i (\ref{eqKr}) for kurven $K_{\bf r}$ siges
-at være {\em{{en-entydig}}} hvis der for alle $u_{1} \in [a, b]$ og
-for alle $u_{2} \in [a, b]$ gælder følgende:
+at vÃ¦re {\em{{en-entydig}}} hvis der for alle $u_{1} \in [a, b]$ og
+for alle $u_{2} \in [a, b]$ gÃ¦lder fÃ¸lgende:
 \begin{equation}
-u_{1} \, \neq \, u_{2} \quad \text{medfører at} \quad {\bf r}(u_{1}) \, \neq \, {\bf r}(u_{2}) \quad .
+u_{1} \, \neq \, u_{2} \quad \text{medfÃ¸rer at} \quad {\bf r}(u_{1}) \, \neq \, {\bf r}(u_{2}) \quad .
 \end{equation}
 \end{definition}
 
@@ -484,23 +484,23 @@ en-entydige?
 
 \begin{exercise}
 \label{exercLaengde} Vis, at Definition \ref{defLaengde} giver samme
-længde for de tre parametriseringer af linje\-styk\-ket i figur
-\ref{FigIntLine123}, samme længde af de to cirkelstykker i figur
-\ref{figc12} og samme længde af de to skruelinjer i figur
+lÃ¦ngde for de tre parametriseringer af linje\-styk\-ket i figur
+\ref{FigIntLine123}, samme lÃ¦ngde af de to cirkelstykker i figur
+\ref{figc12} og samme lÃ¦ngde af de to skruelinjer i figur
 \ref{figv12}.
 \end{exercise}
 
 \begin{exercise}
-Find længden (med 3 decimaler) af knuden i figur \ref{figKnude}.
+Find lÃ¦ngden (med 3 decimaler) af knuden i figur \ref{figKnude}.
 \end{exercise}
 
 
 
 \begin{exercise}
-Find regulære, en-entydige parameterfremstillinger af linjestykket
+Find regulÃ¦re, en-entydige parameterfremstillinger af linjestykket
 (figur \ref{FigIntLine123}), cirklen (figur \ref{figc12}), og
-skruelinjen (figur \ref{figv12}), således at alle parameterfremstillingerne har
-det fælles parameterinterval $\,[0, \pi\,] $ .
+skruelinjen (figur \ref{figv12}), sÃ¥ledes at alle parameterfremstillingerne har
+det fÃ¦lles parameterinterval $\,[0, \pi\,] $ .
 \end{exercise}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -509,7 +509,7 @@ det fælles parameterinterval $\,[0, \pi\,] $ .
 
 \subsection{Motivering af kurveintegralet} \label{subsecMotivKurve}
 Hvis vi deler intervallet $[a, b]$ i $n$
-lige store dele, så har hvert delinterval længden $\delta_{u} \, =
+lige store dele, sÃ¥ har hvert delinterval lÃ¦ngden $\delta_{u} \, =
 \, (b-a)/n$ og delepunkternes koordinater i $[a, b]$ bliver:
 \begin{equation}
 \begin{aligned}
@@ -525,10 +525,10 @@ u_{n} + \delta_{u} \, = \, a + n\delta_{u} \quad .
 \end{aligned}
 \end{equation}
 
-Med hver af disse fast valgte værdier af $u_{i}$ som udviklingspunkt
-kan vi nu bruge Taylor's grænseformel for hver af de $3$ koordinat-funktioner $x(u)$, $y(u)$, og $z(u)$ for ${\bf
-r}(u) \, = \, \left(x(u), y(u), z(u)\right)$ til første orden og med de
-tilhørende epsilon-funktioner som følger, se \tref{NUID32-tn17}{eNote}:
+Med hver af disse fast valgte vÃ¦rdier af $u_{i}$ som udviklingspunkt
+kan vi nu bruge Taylor's grÃ¦nseformel for hver af de $3$ koordinat-funktioner $x(u)$, $y(u)$, og $z(u)$ for ${\bf
+r}(u) \, = \, \left(x(u), y(u), z(u)\right)$ til fÃ¸rste orden og med de
+tilhÃ¸rende epsilon-funktioner som fÃ¸lger, se \tref{NUID32-tn17}{eNote}:
 \begin{equation}
 \begin{aligned}
 x(u) \, &= \, x(u_{i}) + x'(u_{i})\,(u - u_{i}) +
@@ -545,24 +545,24 @@ z(u) \, &= \, z(u_{i}) + z'(u_{i})\,(u - u_{i}) +
 
 
 Disse $3$ formler  kan vi samle og udtrykke med
-vektor-notation således:
+vektor-notation sÃ¥ledes:
 \begin{equation} \label{eqTaylor1}
 {\bf r}(u) \, = \, {\bf r}(u_{i}) + \, {\bf r}'(u_{i})\cdot(u-u_{i})
 + \, {\bm{\varepsilon}}_{i}(u-u_{i})\cdot\rho_{i} \quad ,
 \end{equation}
-hvor  vi bruger den korte skrivemåde $\, \rho_{i} =  | u - u_{i} |
+hvor  vi bruger den korte skrivemÃ¥de $\, \rho_{i} =  | u - u_{i} |
 \, =\, \sqrt{(u - u_{i})^{2}}\, $ for  afstanden  mellem den
-variable værdi $\,u\,$ og den faste værdi $\,u_{i}\,$ i
-parameterintervallet. Desuden gælder at vektoren $\,{\bm{\varepsilon}}_{i}(u -
+variable vÃ¦rdi $\,u\,$ og den faste vÃ¦rdi $\,u_{i}\,$ i
+parameterintervallet. Desuden gÃ¦lder at vektoren $\,{\bm{\varepsilon}}_{i}(u -
 u_{i}) \, = \, (\,\varepsilon_{x}(u-u_{i}),\,
 \varepsilon_{y}(u-u_{i}), \, \varepsilon_{z}(u-u_{i})\,)\,  \to \,
 (0, 0, 0) \, = \, {\bf{0}}$ for $u \to u_{i}\,$ . \\
 
-Hvert del-interval $[u_{i}, u_{i}+\delta_{u}]$ fra $u$-aksen  afbildes på
+Hvert del-interval $[u_{i}, u_{i}+\delta_{u}]$ fra $u$-aksen  afbildes pÃ¥
 kurve-{\em stykket} $\, {\bf r}(u)$, $u \in[u_{i},
 u_{i}+\delta_{u}]\, $, og dette kurve-stykke kan vi approksimere med
-den lineære del af udtrykket i (\ref{eqTaylor1}), som fås ved at
-fjerne ${\bm{\varepsilon}}_{i}$-bidraget fra højre side i
+den lineÃ¦re del af udtrykket i (\ref{eqTaylor1}), som fÃ¥s ved at
+fjerne ${\bm{\varepsilon}}_{i}$-bidraget fra hÃ¸jre side i
 (\ref{eqTaylor1}):
 \begin{equation}\label{eqApp}
 {\bf r}_{\app_{\,i}}(u)\, = \, {\bf r}(u_{i}) + \, {\bf
@@ -571,40 +571,40 @@ u_{i}+\delta_{u}]\quad .
 \end{equation}
 Se figurerne \ref{figCircApprox123} og \ref{figcircAppB123} hvor de
 approksimerende linjestykker er vist for en parametriseret cirkel,
-for to forskellige parametriseringer og for forskellige værdier af
+for to forskellige parametriseringer og for forskellige vÃ¦rdier af
 $n$. Det $i$'te linjestykke har pr. definition kontakt med kurven i
 sit ene endepunkt. Det kalder vi kontaktpunktet for linjestykket.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Længden af en kurve}\label{subsecLengthCurve}
+\subsubsection{LÃ¦ngden af en kurve}\label{subsecLengthCurve}
 Hvert enkelt af de i alt $n$ approksimerende
-linjestykker har en længde, se Figur
-\ref{figCircApprox123}. Længden af det $i$'te
-linjestykke er ifølge (\ref{eqApp})
+linjestykker har en lÃ¦ngde, se Figur
+\ref{figCircApprox123}. LÃ¦ngden af det $i$'te
+linjestykke er ifÃ¸lge (\ref{eqApp})
 \begin{equation}
 \Delta \Le_{i} \, = \,  | {\bf r}_{\app_{\,i}}(u_{i}+\delta_{u})
 - {\bf r}_{\app_{\,i}}(u_{i}) |  \, = \,  | {\bf r}'(u_{i})
 | \cdot\delta_{u} \quad .
 \end{equation}
 
-Summen af disse $n$ længder er (for store værdier af $n$) klart en god approksimation til
-længden af kurven, således at vi kan skrive
+Summen af disse $n$ lÃ¦ngder er (for store vÃ¦rdier af $n$) klart en god approksimation til
+lÃ¦ngden af kurven, sÃ¥ledes at vi kan skrive
 \begin{equation}
 \Le_{\app}(n)\, = \,   \sum_{i=1}^{n} \Delta \Le_{i} \, = \,
 \sum_{i=1}^{n} | {\bf r}'(u_{i}) | \cdot\delta_{u} \quad,
 \end{equation}
-Da ovenstående sum er en  integralsum (se \tref{NUID36-tn21}{eNote})
+Da ovenstÃ¥ende sum er en  integralsum (se \tref{NUID36-tn21}{eNote})
 for den kontinuerte funktion $\, | {\bf r}'(u) | \, $ over
-intervallet $\, [a, b]\, $, opnås i grænsen, hvor $n$ går imod
+intervallet $\, [a, b]\, $, opnÃ¥s i grÃ¦nsen, hvor $n$ gÃ¥r imod
 uendelig:
 \begin{equation}
 \Le_{\app}(n)\,  \to \, \Le\, = \, \int_{a}^{b} | {\bf r}'(u) | \,du
 \quad \text{for} \quad n \to \infty \quad.
 \end{equation}
 
-Vi har dermed motiveret definitionen af længden af en kurve som
+Vi har dermed motiveret definitionen af lÃ¦ngden af en kurve som
 angivet ovenfor, nemlig som kurveintegralet af den konstante
 funktion $1$ over den parametriserede kurve.
 
@@ -618,9 +618,9 @@ funktion $1$ over den parametriserede kurve.
 \left(\cos(2\pi u), \,\sin(2\pi u),\, 0\right),
 \, \, u \, \in [-1, 1]\, ,$ med henholdsvis 10, 20, og
 30 approksimerende linjestykker. Det er
-rimeligt at definere længden af kurven som den
-totale længde af de approksimerende linjestykker
-i den grænse hvor antallet af linjestykker går
+rimeligt at definere lÃ¦ngden af kurven som den
+totale lÃ¦ngde af de approksimerende linjestykker
+i den grÃ¦nse hvor antallet af linjestykker gÃ¥r
 mod uendelig.}} \label{figCircApprox123}
 \end{center}
 \end{figure}
@@ -636,9 +636,9 @@ mod uendelig.}} \label{figCircApprox123}
 0\right), \, \, u \, \in [-1, 1]\, ,$ med
 henholdsvis 30, 60 og 100 approksimerende
 linjestykker. Det er stadig rimeligt at definere
-længden af kurven som den totale længde af de
-approksimerende linjestykker i den grænse hvor
-antallet af approksimerende linjestykker går mod
+lÃ¦ngden af kurven som den totale lÃ¦ngde af de
+approksimerende linjestykker i den grÃ¦nse hvor
+antallet af approksimerende linjestykker gÃ¥r mod
 uendelig.}} \label{figcircAppB123}
 \end{center}
 \end{figure}
@@ -651,11 +651,11 @@ uendelig.}} \label{figcircAppB123}
 
 
 
-\subsubsection{Masse, vægten af en kurve med massetæthed}\label{subsecMasseKurve}
+\subsubsection{Masse, vÃ¦gten af en kurve med massetÃ¦thed}\label{subsecMasseKurve}
 Hvis vi antager, at
 hvert enkelt linjestykke i (\ref{eqApp}) tildeles en konstant
-massetæthed givet ved værdien af funktionen $f(x,y,z)$ i
-linjestykkets kontaktpunkt med kurven, så får vi massen af det $i$'te
+massetÃ¦thed givet ved vÃ¦rdien af funktionen $f(x,y,z)$ i
+linjestykkets kontaktpunkt med kurven, sÃ¥ fÃ¥r vi massen af det $i$'te
 linjestykke:
 $$
 \Delta \M_{i} \, = \, f(x(u_{i}), y(u_{i}), z(u_{i}))\, | {\bf
@@ -663,8 +663,8 @@ r}'(u_{i}) | \cdot\delta_{u} \, = \, f({\bf{r}}(u_{i}))\, | {\bf
 r}'(u_{i}) | \cdot\delta_{u}\quad .
 $$
 Den totale masse af hele systemet af linjestykker er derfor
-følgende, som er en god approksimation til massen af hele kurven,
-når kurven tildeles massetætheden $f({\bf r}(u))$ på stedet ${\bf
+fÃ¸lgende, som er en god approksimation til massen af hele kurven,
+nÃ¥r kurven tildeles massetÃ¦theden $f({\bf r}(u))$ pÃ¥ stedet ${\bf
 r}(u)$ :
 \begin{equation}
 \M_{\app}(n) \, = \,   \sum_{i=1}^{n} \Delta \M_{i} \, = \,
@@ -674,14 +674,14 @@ r}(u)$ :
 
 Dette er igen en integralsum, men nu for den kontinuerte funktion
 $f({\bf r}(u))\, | {\bf r}'(u) | $ over intervallet $\,[a,
-b]\,$. Vi får altså i grænsen, hvor $n$ går mod uendelig:
+b]\,$. Vi fÃ¥r altsÃ¥ i grÃ¦nsen, hvor $n$ gÃ¥r mod uendelig:
 \begin{equation}
 \M_{\app}(n)\, \to \, \M \, = \, \int_{a}^{b}f({\bf r}(u)) | {\bf
 r}'(u) | \,du \quad \text{for} \quad n \to \infty \quad.
 \end{equation}
 
 Dermed har vi motiveret definitionen af massen af en kurve med
-massetætheden $f({\bf r}(u))$ (for så vidt denne funktion er
+massetÃ¦theden $f({\bf r}(u))$ (for sÃ¥ vidt denne funktion er
 positiv i $\,[a,b]\,$) og dermed den generelle definition af
 kurveintegralet, Definition \ref{defKurveInt}.
 
@@ -698,17 +698,17 @@ kurveintegralet, Definition \ref{defKurveInt}.
 \begin{figure}[ht]
 \centerline{\includegraphics[height=40mm]{FIGS/plotPolarApp1}\,\,\,\,\qquad\includegraphics[height=40mm]{FIGS/plotPolarApp2}\,\,\,\,\qquad\includegraphics[height=40mm]{FIGS/plotPolarApp3}}
 \begin{center}
-\caption{\small{Dette område i planen  er givet
-ved følgende parameterfremstilling, der
-repræsenterer {\em{{polære koordinater}}} i planen:
+\caption{\small{Dette omrÃ¥de i planen  er givet
+ved fÃ¸lgende parameterfremstilling, der
+reprÃ¦senterer {\em{{polÃ¦re koordinater}}} i planen:
 ${\bf r}(u, v) \, = \, (u\cos(v), \, u\sin(v) )
 \,\,, \,\, u \in [0, 1 ]\,\, , \, \, v \in [-\pi,
 \pi]\,$.
 Parameterrektanglet ses til venstre. Den
-deformeres og afbildes (ved brug af {\bf{r}}) på
-det plane område i midten. Til højre er antydet
-placeringen og størrelsen (pånær en faktor $4$)
-af de til det givne net hørende approksimerende
+deformeres og afbildes (ved brug af {\bf{r}}) pÃ¥
+det plane omrÃ¥de i midten. Til hÃ¸jre er antydet
+placeringen og stÃ¸rrelsen (pÃ¥nÃ¦r en faktor $4$)
+af de til det givne net hÃ¸rende approksimerende
 parallelogrammer (her er der tale om rektangler).}}
 \label{figPolar123}
 \end{center}
@@ -716,7 +716,7 @@ parallelogrammer (her er der tale om rektangler).}}
 
 
 
-Et parametriseret {område i planen} er givet ved en
+Et parametriseret {omrÃ¥de i planen} er givet ved en
 parameterfremstilling
 \begin{equation}
 \label{eqPr}
@@ -729,8 +729,8 @@ Planintegraler opstilles, betegnes, og beregnes helt analogt til kurveintegraler
 
 
 \begin{definition}[Planintegral] \label{defPlanInt}
-Lad $f(x,y)$ betegne en kontinuert funktion på $\mathbb{R}^{2}$.
-Planintegralet af funktionen $f$ over det parametriserede område
+Lad $f(x,y)$ betegne en kontinuert funktion pÃ¥ $\mathbb{R}^{2}$.
+Planintegralet af funktionen $f$ over det parametriserede omrÃ¥de
 $P_{\bf r}$ defineres ved
 \begin{equation} \label{eqPlanIntegral}
 \int_{P_{\bf r}} f \, d\mu \, = \, \int_{c}^{d} \int_{a}^{b}
@@ -742,8 +742,8 @@ hvor Jacobi-funktionen $\Jac_{\bf r}(u,v)$,
  | {\bf r}'_{u}(u,v) | \cdot | {\bf
 r}'_{v}(u,v) | \cdot \sin(\theta(u,v)) \quad,
 \end{equation}
-er arealet af det parallelogram {\em{i planen}}, der på
-stedet ${\bf r}(u,v)$ udspændes af de to
+er arealet af det parallelogram {\em{i planen}}, der pÃ¥
+stedet ${\bf r}(u,v)$ udspÃ¦ndes af de to
 tangentvektorer ${\bf r}'_{u}(u,v)$ og ${\bf
  r}'_{v}(u,v)$ til de respektive koordinatkurver igennem punktet
 ${\bf r}(u,v)$ i planen (funktionen $\theta(u, v)\in [0, \pi]$
@@ -756,19 +756,19 @@ betegner vinklen mellem disse tangentvektorer).
 \begin{figure}[ht]
 \centerline{\includegraphics[height=30mm]{FIGS/plot2dParab1} \qquad \includegraphics[height=60mm]{FIGS/plot2dParab2} \qquad \includegraphics[height=60mm]{FIGS/plot2dParab3} }
 \begin{center}
-\caption{\small{Plant område med parabelkoordinater. Dette område
+\caption{\small{Plant omrÃ¥de med parabelkoordinater. Dette omrÃ¥de
 i planen  er givet ved para\-me\-ter\-frem\-stillingen
 ${\bf r}(u, v) \, = \, (u\,v, \frac{1}{2}(u^{2} -
 v^{2}) ) \,\,, \,\, u \in [-2, 2 ]\,\, , \, \, v
-\in [0,2]\,$. Figuren til højre antyder igen et
-system af areal-approksimerende parallelogrammer pånær faktor $4$.}}
+\in [0,2]\,$. Figuren til hÃ¸jre antyder igen et
+system af areal-approksimerende parallelogrammer pÃ¥nÃ¦r faktor $4$.}}
 \label{fig2dParab12}
 \end{center}
 \end{figure}
 
-\begin{definition}[Regulær parameterfremstilling for et område i planen] \label{defRegParamPlan}
-Parameterfremstillingen (\ref{eqPr}) siges at være en {\em{{regulær parameterfremstilling}}}
-for det plane område hvis der gælder følgende:
+\begin{definition}[RegulÃ¦r parameterfremstilling for et omrÃ¥de i planen] \label{defRegParamPlan}
+Parameterfremstillingen (\ref{eqPr}) siges at vÃ¦re en {\em{{regulÃ¦r parameterfremstilling}}}
+for det plane omrÃ¥de hvis der gÃ¦lder fÃ¸lgende:
 \begin{equation} \label{eqJacPlanpos}
 \Jac_{\bf r}(u,v)\, > 0 \quad \text{for alle} \quad  u \in [a,b] \, \,
 , \, \,  v \in [c,d] \quad.
@@ -778,27 +778,27 @@ for det plane område hvis der gælder følgende:
 
 \begin{definition}[En-entydig parameterfremstilling] \label{defEnEnParamPlan}
 Som for parametriserede kurver siges parameterfremstillingen i
-(\ref{eqPr}) at være {en-entydig} hvis forskellige punkter i
-definitionsmængden afbildes i forskellige punkter i billedmængden i
+(\ref{eqPr}) at vÃ¦re {en-entydig} hvis forskellige punkter i
+definitionsmÃ¦ngden afbildes i forskellige punkter i billedmÃ¦ngden i
 planen.
 \end{definition}
 
 
 
 \begin{exercise} \label{exercJacDet2}
-Vis, at $\Jac_{\bf r}(u,v)$ (i (\ref{eqJacPlan})) også kan findes som den numeriske
-værdi af determinanten af den $(2 \times 2)$-matrix, der som søjler har
+Vis, at $\Jac_{\bf r}(u,v)$ (i (\ref{eqJacPlan})) ogsÃ¥ kan findes som den numeriske
+vÃ¦rdi af determinanten af den $(2 \times 2)$-matrix, der som sÃ¸jler har
 koordinaterne for de to vektorer $\mathbf{r}'_{u}(u,v)$ og  $\mathbf{r}'_{v}(u,v)$.
 \end{exercise}
 
-\begin{example}[Standard graf-afgrænset område] \label{exampStandGraf}
-Laf $f(x)$ betegne en positiv funktion på et $x$-interval $[a, b]$. Så kan vi parametrisere området imellem
-$x$-aksen og grafen for funktionen $f(x)$ på følgende simple måde:
+\begin{example}[Standard graf-afgrÃ¦nset omrÃ¥de] \label{exampStandGraf}
+Laf $f(x)$ betegne en positiv funktion pÃ¥ et $x$-interval $[a, b]$. SÃ¥ kan vi parametrisere omrÃ¥det imellem
+$x$-aksen og grafen for funktionen $f(x)$ pÃ¥ fÃ¸lgende simple mÃ¥de:
 \begin{equation}
 P_{\mathbf{r}} \quad : \quad \mathbf{r}(u,v) = (u, v \cdot f(u)) \quad , \quad  u\in [a, b] \quad , \quad v \in [0, 1] \quad.
 \end{equation}
 Se figur \ref{figStandGraf} (hvor funktionen $f(x) = 1 + x + x^{2}$ er benyttet til illustration).
-Til bestemmelse af arealet af området imellem grafen for $f(x)$ og $x$-aksen har vi nu helt generelt:
+Til bestemmelse af arealet af omrÃ¥det imellem grafen for $f(x)$ og $x$-aksen har vi nu helt generelt:
 \begin{equation}
 \Jac_{\mathbf{r}}(u,v) = f(u) \quad ,
 \end{equation}
@@ -809,7 +809,7 @@ fordi
 \mathbf{r}'_{v}(u,v) &= (0, f(u)) \quad ,
 \end{aligned}
 \end{equation}
-sådan at determinanten af den matrix, der har søjlerne $\mathbf{r}'_{u}(u,v)$ og $\mathbf{r}'_{v}(u,v)$, netop i dette tilfælde er funktionen $f(u)$ selv og dermed er også Jacobifunktionen givet ved $f(u)$ ifølge opgave \ref{exercJacDet2}. Heraf fås det ønskede areal rekonstrueret  som:
+sÃ¥dan at determinanten af den matrix, der har sÃ¸jlerne $\mathbf{r}'_{u}(u,v)$ og $\mathbf{r}'_{v}(u,v)$, netop i dette tilfÃ¦lde er funktionen $f(u)$ selv og dermed er ogsÃ¥ Jacobifunktionen givet ved $f(u)$ ifÃ¸lge opgave \ref{exercJacDet2}. Heraf fÃ¥s det Ã¸nskede areal rekonstrueret  som:
 
 \begin{equation}\label{eqIntegratKurve}
 \begin{aligned}
@@ -817,7 +817,7 @@ sådan at determinanten af den matrix, der har søjlerne $\mathbf{r}'_{u}(u,v)$ og
 &= \int_{a}^{b}\,f(u) \, du \quad.
 \end{aligned}
 \end{equation}
-Overvej, hvad der sker med integralet i (\ref{eqIntegratKurve}), hvis $f(x)$ tillades at være negativ på givne delintervaller af $[a, b]$.
+Overvej, hvad der sker med integralet i (\ref{eqIntegratKurve}), hvis $f(x)$ tillades at vÃ¦re negativ pÃ¥ givne delintervaller af $[a, b]$.
 \end{example}
 
 
@@ -826,7 +826,7 @@ Overvej, hvad der sker med integralet i (\ref{eqIntegratKurve}), hvis $f(x)$ til
 \begin{figure}[ht]
 \centerline{\includegraphics[height=55mm]{FIGS/plotStandGraf1}\includegraphics[height=55mm]{FIGS/plotStandGraf2}\includegraphics[height=55mm]{FIGS/plotStandGraf3} }
 \begin{center}
-\caption{\small{Parametrisering af området imellem $x$-aksen og grafen for funktionen $f(x) = 1 + x + x^{2}$. Se
+\caption{\small{Parametrisering af omrÃ¥det imellem $x$-aksen og grafen for funktionen $f(x) = 1 + x + x^{2}$. Se
 eksempel \ref{exampStandGraf}.}} \label{figStandGraf}
 \end{center}
 \end{figure}
@@ -837,8 +837,8 @@ eksempel \ref{exampStandGraf}.}} \label{figStandGraf}
 
 
 
-\begin{example}[Elliptisk område] \label{exEllipseDisk}
-Det parametriserede elliptiske område i planen (se figur \ref{figEllipseDisk})
+\begin{example}[Elliptisk omrÃ¥de] \label{exEllipseDisk}
+Det parametriserede elliptiske omrÃ¥de i planen (se figur \ref{figEllipseDisk})
 $$
 P_{\bf r}: \,\, {\bf
 r}(u, v) \, = \, \left(\, av\cos(u), \,bv\sin(u) \, \right) \, , \, \, u \in
@@ -850,7 +850,7 @@ $$
 \int_{0}^{1} \int_{-\pi}^{\pi} \,\, abv \,\,du  \,\, dv \\
   \, = \,   ab \pi \quad,
 $$
-idet $\Jac_{\bf r}(u,v)\,= \, abv\,$. Sammenlign med beregningen af {\em{længden af ellipsen}} i
+idet $\Jac_{\bf r}(u,v)\,= \, abv\,$. Sammenlign med beregningen af {\em{lÃ¦ngden af ellipsen}} i
 eksempel \ref{exEllipse}.
 \end{example}
 
@@ -859,24 +859,24 @@ eksempel \ref{exEllipse}.
 \begin{figure}[ht]
 \centerline{\includegraphics[height=60mm]{FIGS/plotEllipseDisk}}
 \begin{center}
-\caption{\small{Et elliptisk område i planen med halvakser $a=1$ og $b=2$. Se
+\caption{\small{Et elliptisk omrÃ¥de i planen med halvakser $a=1$ og $b=2$. Se
 eksempel \ref{exEllipseDisk}.
-Bemærk, at de approksimerende parallelogrammer (her vist skalerede) ikke er rektangler.}} \label{figEllipseDisk}
+BemÃ¦rk, at de approksimerende parallelogrammer (her vist skalerede) ikke er rektangler.}} \label{figEllipseDisk}
 \end{center}
 \end{figure}
 
-\begin{exercise}[Niveau-afgrænset elliptisk område] \label{exercEllipseLevel}
-Et elliptisk område i planen er afgrænset af niveaukurven $\mathcal{K}_{0}(f)$ for andengradspolynomiet
+\begin{exercise}[Niveau-afgrÃ¦nset elliptisk omrÃ¥de] \label{exercEllipseLevel}
+Et elliptisk omrÃ¥de i planen er afgrÃ¦nset af niveaukurven $\mathcal{K}_{0}(f)$ for andengradspolynomiet
 \begin{equation}
 f(x,y) = 2\cdot x^{2} + 2\cdot y^{2} + 2\cdot x\cdot y -8\cdot x -10 \cdot y + 13 \quad.
 \end{equation}
-Bestem længden af niveukurven og bestem arealet af det afgrænsede elliptiske område i $(x,y)$-planen. Se figur \ref{figEllipseLevel}. Vink: \tref{NUID35-exampEllip01}{eksempel} i \tref{NUID35-tn20}{eNote}.
+Bestem lÃ¦ngden af niveukurven og bestem arealet af det afgrÃ¦nsede elliptiske omrÃ¥de i $(x,y)$-planen. Se figur \ref{figEllipseLevel}. Vink: \tref{NUID35-exampEllip01}{eksempel} i \tref{NUID35-tn20}{eNote}.
 \end{exercise}
 
 \begin{figure}[ht]
 \centerline{\includegraphics[height=60mm]{FIGS/plot2DGradEllip01}\includegraphics[height=60mm]{FIGS/plot2DNivEllipLift01} }
 \begin{center}
-\caption{\small{Et elliptisk område i planen er afgrænset af en ellipse som er niveaukurven $\mathcal{K}_{0}(f)$ for andengradspolynomiet $f(x,y) = 2\cdot x^{2} + 2\cdot y^{2} + 2\cdot x\cdot y -8\cdot x -10 \cdot y + 13$. Se opgave \ref{exercEllipseLevel}  og  \tref{NUID35-exampEllip01}{eksempel} i \tref{NUID35-tn20}{eNote}.}} \label{figEllipseLevel}
+\caption{\small{Et elliptisk omrÃ¥de i planen er afgrÃ¦nset af en ellipse som er niveaukurven $\mathcal{K}_{0}(f)$ for andengradspolynomiet $f(x,y) = 2\cdot x^{2} + 2\cdot y^{2} + 2\cdot x\cdot y -8\cdot x -10 \cdot y + 13$. Se opgave \ref{exercEllipseLevel}  og  \tref{NUID35-exampEllip01}{eksempel} i \tref{NUID35-tn20}{eNote}.}} \label{figEllipseLevel}
 \end{center}
 \end{figure}
 
@@ -886,8 +886,8 @@ Bestem længden af niveukurven og bestem arealet af det afgrænsede elliptiske omr
 
 
 
-\begin{example}[Spiral-område] \label{exSpiralFill}
-Det parametriserede spiral-afgrænsede område i planen (se Figur \ref{figSpiralFill})
+\begin{example}[Spiral-omrÃ¥de] \label{exSpiralFill}
+Det parametriserede spiral-afgrÃ¦nsede omrÃ¥de i planen (se Figur \ref{figSpiralFill})
 $$
 P_{\bf r}: \,\, {\bf
 r}(u, v) \, = \, \left(\, vu\cos(u), \,vu\sin(u) \, \right) \, , \, \, u \in
@@ -899,7 +899,7 @@ $$
 \int_{0}^{1} \int_{0}^{\pi/2} \,\, v^{2}u \,\,du  \,\, dv \\
   \, = \,  \pi^{3}/48\quad,
 $$
-idet $\Jac_{\bf r}(u,v)\,= \, v^{2}u\,$. Sammenlign med beregningen af {\em{længden af spiralen}} i
+idet $\Jac_{\bf r}(u,v)\,= \, v^{2}u\,$. Sammenlign med beregningen af {\em{lÃ¦ngden af spiralen}} i
 eksempel \ref{exSpiral}.
 
 \end{example}
@@ -907,7 +907,7 @@ eksempel \ref{exSpiral}.
 \begin{figure}[ht]
 \centerline{\includegraphics[height=70mm]{FIGS/plotSpiralFill}\,\,\, \includegraphics[height=70mm]{FIGS/plotSpiralFillApproks}}
 \begin{center}
-\caption{\small{Et spiral-afgrænset område i planen. Se
+\caption{\small{Et spiral-afgrÃ¦nset omrÃ¥de i planen. Se
 eksempel \ref{exSpiralFill}. }} \label{figSpiralFill}
 \end{center}
 \end{figure}
@@ -923,10 +923,10 @@ eksempel \ref{exSpiralFill}. }} \label{figSpiralFill}
 Hvis vi i analogi med opstillingen af kurveintegralet deler {\em begge}
 parameter-intervallerne $[a, b]$ og
  $[c, d]$ i henholdsvis $n$ og $m$
-lige store dele, så har hvert $u$-delinterval længden $\delta_{u} \,
-= \, (b-a)/n$ og hvert $v$-delinterval har længden $\delta_{v} \, =
+lige store dele, sÃ¥ har hvert $u$-delinterval lÃ¦ngden $\delta_{u} \,
+= \, (b-a)/n$ og hvert $v$-delinterval har lÃ¦ngden $\delta_{v} \, =
 \, (d-c)/m$. Tilsvarende bliver delepunkternes koordinater i $(u,
-v)$-parameterområdet (som jo er rektanglet $[a,b]\times[c,d]$ i
+v)$-parameteromrÃ¥det (som jo er rektanglet $[a,b]\times[c,d]$ i
 $\mathbb{R}^{2}\,$) - jvf. \tref{NUID35-tn20}{eNote}:
 
 \begin{equation}
@@ -941,8 +941,8 @@ $\mathbb{R}^{2}\,$) - jvf. \tref{NUID35-tn20}{eNote}:
 \end{equation}
 
 Med hvert af disse faste punkter $(u_{i}, v_{j})$ som udviklingspunkt kan vi igen
-benytte Taylor's grænseformel, nu for hver af de $2$  koordinat-funktioner $x(u,v)$ og $y(u,v)$  for $\,{\bf r}(u,
-v) \, = \, \left(x(u,v), y(u,v)\right)\, $ til første orden med tilhørende epsilon-funktioner:
+benytte Taylor's grÃ¦nseformel, nu for hver af de $2$  koordinat-funktioner $x(u,v)$ og $y(u,v)$  for $\,{\bf r}(u,
+v) \, = \, \left(x(u,v), y(u,v)\right)\, $ til fÃ¸rste orden med tilhÃ¸rende epsilon-funktioner:
 \begin{equation} \label{eqTaylor2}
 \begin{aligned}
 {\bf r}(u, v) \, = \, {\bf r}(& u_{i}, v_{j}) \\
@@ -957,35 +957,35 @@ hvor  $\, u\, \, \in\, \left[\, u_{i}\, , \,  u_{i} +
 v_{j} + \delta_{v}\,\right] .$ Her betegner  $\, \rho_{ij} =
 \sqrt{(u - u_{i})^{2} + (v - v_{j})^{2}}\, $ afstanden mellem det
 variable punkt $\,(u\,, v)\,$ og det faste udviklingspunkt
-$\,(u_{i}\,,v_{j})\,$ i parameterområdet. Der gælder her, at vektorfunktionen
+$\,(u_{i}\,,v_{j})\,$ i parameteromrÃ¥det. Der gÃ¦lder her, at vektorfunktionen
 $\,{\bm{\varepsilon}}_{ij}(u-u_{i}, v-v_{j}) \to (0, 0)\, = \
 {\bf{0}}\,$ for $\,(u-u_{i}, v-v_{j}) \to (0, 0)\,$ . \\
 
 
 Hvert del-rektangel $[u_{i}, u_{i}+\delta_{u}]\times[v_{j},
-v_{j}+\delta_{v}]$ afbildes på det plane del-område, som vi kan angive med ${\bf r}(u,v)$ evalueret i parameter-del-rektanglet
+v_{j}+\delta_{v}]$ afbildes pÃ¥ det plane del-omrÃ¥de, som vi kan angive med ${\bf r}(u,v)$ evalueret i parameter-del-rektanglet
 $u \in[u_{i}, u_{i}+\delta_{u}], v \in[v_{j}, v_{j}+\delta_{v}]$ og
-dette delområde af det plane område kan vi approksimere med den lineære del af
-udtrykket i (\ref{eqTaylor2}), som igen netop fås ved at fjerne
-${\bm{\varepsilon}}_{ij}$-bidraget fra højre side i
+dette delomrÃ¥de af det plane omrÃ¥de kan vi approksimere med den lineÃ¦re del af
+udtrykket i (\ref{eqTaylor2}), som igen netop fÃ¥s ved at fjerne
+${\bm{\varepsilon}}_{ij}$-bidraget fra hÃ¸jre side i
 (\ref{eqTaylor2}):
 \begin{equation}\label{eqApp2}
 {\bf r}_{\app_{\,ij}}(u, v) \, = \, {\bf r}(u_{i}, v_{j}) + \, {\bf
 r}'_{u}(u_{i}, v_{j})\cdot (u - u_{i}) + \, {\bf r}'_{v}(u_{i},
 v_{j})\cdot (v - v_{j}) \quad ,
 \end{equation}
-hvor $u$ og $v$ stadig gennemløber del-intervallerne $\, u\, \,
+hvor $u$ og $v$ stadig gennemlÃ¸ber del-intervallerne $\, u\, \,
 \in\, \left[\, u_{i}\, , \,  u_{i} + \delta_{u}\,\right]\, , \,\,
 v\, \, \in\, \left[\, v_{j}\, , \, v_{j} + \delta_{v}\,\right] .$
 
 
- Disse lineære approksimationer er parallelogrammer,
-som udspændes af de to tangentvektorer ${\bf
+ Disse lineÃ¦re approksimationer er parallelogrammer,
+som udspÃ¦ndes af de to tangentvektorer ${\bf
 r}'_{u}(u_{i}, v_{j})\cdot\delta_{u}$ og ${\bf
 r}'_{v}(u_{i}, v_{j})\cdot \delta_{v}$.
 
 
-\subsubsection{Areal af plant område} \label{subsecArealPlan}
+\subsubsection{Areal af plant omrÃ¥de} \label{subsecArealPlan}
 Hvert enkelt af de ialt $n\cdot m$ approksimerende
 parallelogrammer har et areal. Arealet af det
 $(i, j)$'te parallelogram er givet ved
@@ -1001,22 +1001,22 @@ r}'_{v}(u_{i},v_{j}) | \, \sin(\theta(u_{i},v_{j}))\cdot  \delta_{u}\cdot \delta
 
 
 \begin{exercise}
-Bevis denne påstand: Arealet af et parallelogram
-er produktet af længderne af de to udspændende vektorer og sinus til den mellemliggende vinkel.
+Bevis denne pÃ¥stand: Arealet af et parallelogram
+er produktet af lÃ¦ngderne af de to udspÃ¦ndende vektorer og sinus til den mellemliggende vinkel.
 Se \tref{NUID12-tn6}{eNote}
 \end{exercise}
 
 
 Summen af disse ialt $n\,m$ arealer er klart en god approksimation
-til arealet af hele fladestykket, således at vi har
+til arealet af hele fladestykket, sÃ¥ledes at vi har
 \begin{equation}
 \Ar_{\app}(n,m)\, = \,   \sum_{j=1}^{m}\sum_{i=1}^{n} \Delta \Ar_{ij}
 \, = \,  \sum_{j=1}^{m}\sum_{i=1}^{n} \Jac_{\bf r}(u_{i},
 v_{j})\cdot \delta_{u} \delta_{v}  \quad.
 \end{equation}
-Da ovenstående sum er en dobbelt integralsum for den kontinuerte
+Da ovenstÃ¥ende sum er en dobbelt integralsum for den kontinuerte
 funktion $\, \Jac_{\bf r}(u, v)\, $ over parameter-rektanglet $\,
-[a, b]\times[c, d]\, $ får vi i grænsen, hvor $n$ og $m$ begge går
+[a, b]\times[c, d]\, $ fÃ¥r vi i grÃ¦nsen, hvor $n$ og $m$ begge gÃ¥r
 mod uendelig (se \tref{NUID36-tn21}{eNote} ):
 \begin{equation}
 \Ar_{\app}(n,m)\,  \to \, \Ar\, = \, \int_{c}^{d} \int_{a}^{b}
@@ -1025,7 +1025,7 @@ mod uendelig (se \tref{NUID36-tn21}{eNote} ):
 \end{equation}
 
 Dette er begrundelsen for definitionen af arealet af et
-parametriseret område i planen som angivet ovenfor, nemlig som
+parametriseret omrÃ¥de i planen som angivet ovenfor, nemlig som
 fladeintegralet af den konstante funktion $1$.
 
 
@@ -1033,13 +1033,13 @@ fladeintegralet af den konstante funktion $1$.
 
 
 
-\subsubsection{Massen, vægten af et plant område} \label{subsecMassPlant}
+\subsubsection{Massen, vÃ¦gten af et plant omrÃ¥de} \label{subsecMassPlant}
 
 Hvis vi nu antager, at
 hvert enkelt parallelogram i (\ref{eqApp2})
-tildeles en konstant massetæthed givet ved
-værdien af funktionen $f(x,y)$ i
-parallelogrammets kontaktpunkt med fladen, så får
+tildeles en konstant massetÃ¦thed givet ved
+vÃ¦rdien af funktionen $f(x,y)$ i
+parallelogrammets kontaktpunkt med fladen, sÃ¥ fÃ¥r
 vi massen af det $(i, j)$'te parallelogram :
 \begin{equation}
 \begin{aligned}
@@ -1049,9 +1049,9 @@ vi massen af det $(i, j)$'te parallelogram :
 \end{aligned}
 \end{equation}
 Den totale masse af hele systemet af
-parallelogrammer er derfor følgende, som er en
-god ap\-proksimation til massen af hele det plane område
-når dette gives massetætheden $f({\bf r}(u,v))$ i
+parallelogrammer er derfor fÃ¸lgende, som er en
+god ap\-proksimation til massen af hele det plane omrÃ¥de
+nÃ¥r dette gives massetÃ¦theden $f({\bf r}(u,v))$ i
 punktet ${\bf r}(u,v)$.
 \begin{equation}
 \M_{\app}(n,m) \, = \,  \sum_{j=1}^{m} \sum_{i=1}^{n} \Delta \M_{ij} \,
@@ -1062,7 +1062,7 @@ v_{j}))\,\Jac_{\bf r}(u_{i}, v_{j}) \cdot \delta_{u} \delta_{v}
 
 Dette er en dobbelt integralsum for den kontinuerte funktion $f({\bf
 r}(u,v))\,\Jac_{\bf r}(u, v)$ over parameter-rektanglet $\,[a,
-b]\times[c, d]\,$. Vi får altså i grænsen, hvor $n$ og $m$ går mod
+b]\times[c, d]\,$. Vi fÃ¥r altsÃ¥ i grÃ¦nsen, hvor $n$ og $m$ gÃ¥r mod
 uendelig:
 \begin{equation}
 \M_{\app}(n,m)\, \to \, \M \, = \, \int_{c}^{d}\int_{a}^{b}f({\bf r}(u,
@@ -1071,8 +1071,8 @@ v ))\Jac_{\bf r}(u, v)\,du \,dv \quad \text{for} \quad n\, , \, m \to
 \end{equation}
 
 Dermed har vi motiveret definitionen af massen af et
-parametriseret område i planen  med massetætheden $f({\bf r}(u, v))$ og
-dermed også den generelle definition af planintegralet,
+parametriseret omrÃ¥de i planen  med massetÃ¦theden $f({\bf r}(u, v))$ og
+dermed ogsÃ¥ den generelle definition af planintegralet,
 definition \ref{defPlanInt}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1084,12 +1084,12 @@ definition \ref{defPlanInt}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{example}[Total vægt af ring-område] \label{exampAnnulMass}
-Lad $f(x,y) = 1+x$ være vægtfunktion på det plane område i $(x,y)$-planen der er afgrænset af $x$-aksen og de to øvre halvcirkelbuer af cirklerne med radius henholdsvis $1$ og $1/2$, begge med centrum i $(0,0)$, se figur \ref{figAnnulMass}. En parametrisering af området er for eksempel:
+\begin{example}[Total vÃ¦gt af ring-omrÃ¥de] \label{exampAnnulMass}
+Lad $f(x,y) = 1+x$ vÃ¦re vÃ¦gtfunktion pÃ¥ det plane omrÃ¥de i $(x,y)$-planen der er afgrÃ¦nset af $x$-aksen og de to Ã¸vre halvcirkelbuer af cirklerne med radius henholdsvis $1$ og $1/2$, begge med centrum i $(0,0)$, se figur \ref{figAnnulMass}. En parametrisering af omrÃ¥det er for eksempel:
 \begin{equation}
 P_{\mathbf{r}} \quad : \quad \mathbf{r}(u,v) = (u\cdot \cos(v), u\cdot \sin(v)) \quad , \quad \textrm{hvor} \quad u \in [1/2, 1] \quad , \quad v \in [0, \pi] \quad.
 \end{equation}
-Når området er vægtet med vægtfunktionen $f(x,y)$ bliver den totale vægt af området:
+NÃ¥r omrÃ¥det er vÃ¦gtet med vÃ¦gtfunktionen $f(x,y)$ bliver den totale vÃ¦gt af omrÃ¥det:
 \begin{equation}
 M(P_{\mathbf{r}}) = \int_{P_{\mathbf{r}}}\, f\, d\mu = \int_{0}^{\pi}\int_{1/2}^{1} \, f(\mathbf{r}(u,v))\cdot \Jac_{\mathbf{r}}(u,v) \, du \, dv \quad ,
 \end{equation}
@@ -1100,7 +1100,7 @@ f(\mathbf{r}(u,v)) &= 1 + x(u,v) = 1 + u\cdot \cos(v) \quad \textrm{og} \\
 \Jac_{\mathbf{r}}(u,v) &= u \quad ,
 \end{aligned}
 \end{equation}
-sådan at
+sÃ¥dan at
 \begin{equation}
 \begin{aligned}
 M(P_{\mathbf{r}}) &= \int_{0}^{\pi}\int_{1/2}^{1} \,(1 + u\cdot \cos(v))\cdot u \, du \, dv \\
@@ -1110,13 +1110,13 @@ M(P_{\mathbf{r}}) &= \int_{0}^{\pi}\int_{1/2}^{1} \,(1 + u\cdot \cos(v))\cdot u 
 &= \frac{3}{8}\cdot\pi \quad .
 \end{aligned}
 \end{equation}
-Den totale masse af området med den givne vægtfordeling er altså $M(P_{\mathbf{r}}) = 3\pi/8$. Til sammenligning er arealet af området jo også $\Ar(P_{\mathbf{r}}) = 3\pi/8$ -- men det er et tilfælde.
+Den totale masse af omrÃ¥det med den givne vÃ¦gtfordeling er altsÃ¥ $M(P_{\mathbf{r}}) = 3\pi/8$. Til sammenligning er arealet af omrÃ¥det jo ogsÃ¥ $\Ar(P_{\mathbf{r}}) = 3\pi/8$ -- men det er et tilfÃ¦lde.
 \end{example}
 
 \begin{figure}[ht]
 \centerline{\includegraphics[height=60mm]{FIGS/plotAnnulusM1} \includegraphics[height=60mm]{FIGS/plotAnnulusM2} \includegraphics[height=60mm]{FIGS/plotAnnulusM3}}
 \begin{center}
-\caption{\small{Et (halvt) ring-område i planen med antydet vægtfordeling. Se
+\caption{\small{Et (halvt) ring-omrÃ¥de i planen med antydet vÃ¦gtfordeling. Se
 eksempel \ref{exampAnnulMass}. }} \label{figAnnulMass}
 \end{center}
 \end{figure}
@@ -1141,27 +1141,27 @@ eksempel \ref{exampAnnulMass}. }} \label{figAnnulMass}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{summary}
-Vi har i denne eNote opstillet de begreber og metoder, der giver os præcise
-udtryk for længder af kurver, arealer af plane områder og mere generelt kurve- og plan-integraler af
-(vægt-)funktioner på kurver og plane områder, der er parametriserede ud fra henholdsvis et interval
-eller et rektangulært parameter-område. Kurve- og plan-integralerne er opstillet ved hjælp af de respektive Jacobi-funktioner, som angiver hvor meget para\-me\-ter\-inter\-val\-let eller parameter-området lokalt deformeres når det afbildes over i den ønskede kurve eller over i det ønskede plane område ved de valgte vektor-afbildninger $\mathbf{r}(u)$ og $\mathbf{r}(u, v)$.
+Vi har i denne eNote opstillet de begreber og metoder, der giver os prÃ¦cise
+udtryk for lÃ¦ngder af kurver, arealer af plane omrÃ¥der og mere generelt kurve- og plan-integraler af
+(vÃ¦gt-)funktioner pÃ¥ kurver og plane omrÃ¥der, der er parametriserede ud fra henholdsvis et interval
+eller et rektangulÃ¦rt parameter-omrÃ¥de. Kurve- og plan-integralerne er opstillet ved hjÃ¦lp af de respektive Jacobi-funktioner, som angiver hvor meget para\-me\-ter\-inter\-val\-let eller parameter-omrÃ¥det lokalt deformeres nÃ¥r det afbildes over i den Ã¸nskede kurve eller over i det Ã¸nskede plane omrÃ¥de ved de valgte vektor-afbildninger $\mathbf{r}(u)$ og $\mathbf{r}(u, v)$.
 \begin{itemize}
-\item For en rum-kurve $K_{\bf r}$ med parameterfremstillingen $\mathbf{r}(u)= (x(u), y(u), z(u))$ har vi følgende motiverede kurveintegral af funktionen $f(x,y,z)$ over rumkurven:
+\item For en rum-kurve $K_{\bf r}$ med parameterfremstillingen $\mathbf{r}(u)= (x(u), y(u), z(u))$ har vi fÃ¸lgende motiverede kurveintegral af funktionen $f(x,y,z)$ over rumkurven:
 \begin{equation}
 \int_{K_{\bf r}} f \, d\mu \, = \, \int_{a}^{b} f({\bf
 r}(u))\,\Jac_{\bf r}(u)\,du \quad ,
 \end{equation}
-hvor {Jacobi-funktionen $\Jac_{\bf r}(u)$} er givet ved længden af parametriseringens tangentvektor:
+hvor {Jacobi-funktionen $\Jac_{\bf r}(u)$} er givet ved lÃ¦ngden af parametriseringens tangentvektor:
 \begin{equation}
 \Jac_{\bf r}(u) \, = \,  | {\bf r}'(u) | \quad .
 \end{equation}
 
-\item For et plant område $P_{\bf r}$  med parameterfremstillingen $\mathbf{r}(u,v)= (x(u,v), y(u,v))$ har vi ligeledes motiveret følgende definition af planintegralet af funktionen $f(x,y)$ over området:
+\item For et plant omrÃ¥de $P_{\bf r}$  med parameterfremstillingen $\mathbf{r}(u,v)= (x(u,v), y(u,v))$ har vi ligeledes motiveret fÃ¸lgende definition af planintegralet af funktionen $f(x,y)$ over omrÃ¥det:
 \begin{equation} \label{eqPlanIntegral}
 \int_{P_{\bf r}} f \, d\mu \, = \, \int_{c}^{d} \int_{a}^{b}
 f({\bf r}(u,v))\, \Jac_{\bf r}(u,v)\,du \, dv \quad,
 \end{equation}
-hvor Jacobi-funktionen $\Jac_{\bf r}(u,v)$ nu er givet ved parallelogram-arealet udspændt af koordinatkurvernes tangentvektorer:
+hvor Jacobi-funktionen $\Jac_{\bf r}(u,v)$ nu er givet ved parallelogram-arealet udspÃ¦ndt af koordinatkurvernes tangentvektorer:
 \begin{equation} \label{eqJacPlan}
  \Jac_{\bf r}(u,v)\, = \,
  | {\bf r}'_{u}(u,v) | \cdot | {\bf

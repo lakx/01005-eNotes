@@ -1,10 +1,10 @@
 \input{../Strukturfiler/preambel}
-\setcounter{chapter}{2} %SÆT DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
+\setcounter{chapter}{2} %SÃ†T DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% HERFRA SKAL DU SKRIVE ELLER INDSÆTTE %%%%
-%%% DEN FIL DU ØNSKER %%%%%%%%%%%%%%%%%%%%%%%
+%%% HERFRA SKAL DU SKRIVE ELLER INDSÃ†TTE %%%%
+%%% DEN FIL DU Ã˜NSKER %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -17,14 +17,14 @@ Givet er den kvadratiske ligning
 \begin{equation}
 29x_1^2+36x_2^2+24x_1x_2-152x_1-336x_2 = -620 \,.
 \end{equation}
-Vi vil prøve at finde ud af, hvilket keglesnit, denne ligning repræsentere og desuden bestemme dens egenskaber. I første omgang omskrives ligningen, og en symmetrisk matrix introduceres.
+Vi vil prÃ¸ve at finde ud af, hvilket keglesnit, denne ligning reprÃ¦sentere og desuden bestemme dens egenskaber. I fÃ¸rste omgang omskrives ligningen, og en symmetrisk matrix introduceres.
 \begin{equation} \label{ellipslig}
 \begin{aligned}
 \begin{matr}{cc} x_1 & x_2 \end{matr} \begin{matr}{rr} 29 & 12 \\ 12 & 36 \end{matr} \begin{matr}{c} x_1 \\ x_2 \end{matr} + \begin{matr}{rr} -152 & -336 \end{matr} \begin{matr}{c} x_1 \\ x_2 \end{matr} &= -620 \; \Leftrightarrow \\
 \mx\transp \mA \mx + \begin{matr}{rr} -152 & -336 \end{matr} \mx &= -620
 \end{aligned}
 \end{equation}
-Matricen $ \mA $ er, som det ses, netop symmetrisk og det er derfor muligt at diagonalisere den og derved skifte til en ortonormal basis. $ \mA $ har egenværdierne $ \lambda_1 = 20 $ og $ \lambda_2 = 45 $ med de respektive egenvektorer $ \mv_1 = (-4,3) $ og $ \mv_2 = (3,4) $. Det ses at $ \mv_1 \perp \mv_2 $ og vi skal derfor kun normalisere vektorerne for at danne en ortogonal matrix. De har begge længden 5 og vi får da
+Matricen $ \mA $ er, som det ses, netop symmetrisk og det er derfor muligt at diagonalisere den og derved skifte til en ortonormal basis. $ \mA $ har egenvÃ¦rdierne $ \lambda_1 = 20 $ og $ \lambda_2 = 45 $ med de respektive egenvektorer $ \mv_1 = (-4,3) $ og $ \mv_2 = (3,4) $. Det ses at $ \mv_1 \perp \mv_2 $ og vi skal derfor kun normalisere vektorerne for at danne en ortogonal matrix. De har begge lÃ¦ngden 5 og vi fÃ¥r da
 \begin{equation}
 \mQ = \frac{1}{5} \begin{matr}{cc} \mv_1 & \mv_2 \end{matr} = \begin{matr}{rr} -4/5 & 3/5 \\ 3/5 & 4/5 \end{matr} \,.
 \end{equation}
@@ -36,14 +36,14 @@ Ved at danne $ \mx = \mQ \my $, hvor $ \my = (y_1,y_2) $, er det muligt at omskr
 \my\transp \mL \my + \begin{matr}{rr} -152 & -336 \end{matr} \mQ \my &= -620 \;,
 \end{aligned}
 \end{equation}
-hvor $ \mL = \diag(\lambda_1,\lambda_2) = \diag(20,45) $. Udskrives ligningen nu, vil der ikke være et koblingsled mellem første- og andenkoordinaten i $ \my $, fordi $ \mL $ er en diagonalmatrix. Det burde derfor nu være muligt at omskrive den kvadratiske ligning til dens standardform.
+hvor $ \mL = \diag(\lambda_1,\lambda_2) = \diag(20,45) $. Udskrives ligningen nu, vil der ikke vÃ¦re et koblingsled mellem fÃ¸rste- og andenkoordinaten i $ \my $, fordi $ \mL $ er en diagonalmatrix. Det burde derfor nu vÃ¦re muligt at omskrive den kvadratiske ligning til dens standardform.
 \begin{equation}
 \begin{aligned}
 \begin{matr}{cc} y_1 & y_2 \end{matr} \begin{matr}{rr} 20 & 0 \\ 0 & 45 \end{matr} \begin{matr}{c} y_1 \\ y_2 \end{matr} + \begin{matr}{rr} -152 & -336 \end{matr} \begin{matr}{rr} -4/5 & 3/5 \\ 3/5 & 4/5 \end{matr} \begin{matr}{c} y_1 \\ y_2 \end{matr} &= -620 \; \Leftrightarrow \\
 20y_1^2+45y_2^2-80y_1-360y_2&=-620
 \end{aligned}
 \end{equation}
-Ved hjælp af kvadratsætningerne kan dette omskrives:
+Ved hjÃ¦lp af kvadratsÃ¦tningerne kan dette omskrives:
 \begin{equation}
 \begin{aligned}
 20(y_1-2)^2 - 20 \cdot 2^2 + 45(y_2-4)^2 - 45 \cdot 4^2 &=-620 \; \Leftrightarrow \\

@@ -1,17 +1,17 @@
 
 \input{../Strukturfiler/preambel}
-\setcounter{chapter}{26} %SÆT DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
+\setcounter{chapter}{26} %SÃ†T DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% HERFRA SKAL DU SKRIVE ELLER INDSÆTTE %%%%
-%%% DEN FIL DU ØNSKER %%%%%%%%%%%%%%%%%%%%%%%
+%%% HERFRA SKAL DU SKRIVE ELLER INDSÃ†TTE %%%%
+%%% DEN FIL DU Ã˜NSKER %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % REF: TransferNote \ref{TN4-tn4} \nameref{TN4-tn4}
 %
-% \tref{NUID14-thm.koma}{sætning} \tref{NUID28-tn15}{eNote}
+% \tref{NUID14-thm.koma}{sÃ¦tning} \tref{NUID28-tn15}{eNote}
 %
 %\tref{NUID34-tn19}{eNote} Symmetriske matricer
 %\tref{NUID33-tn18}{eNote} Taylor i 2 variable
@@ -36,11 +36,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Stokes' rotationssætning} \label{tn27}
+\chapter{Stokes' rotationssÃ¦tning} \label{tn27}
 
 
 \begin{basis}
-I denne eNote vil vi benytte Gauss' divergenssætning fra \tref{NUID42-tn26}{eNote} til  at motivere, bevise, og illustrere Stokes' sætning, som udtrykker en præcis sammenhæng mellem \emph{rotation} og \emph{cirkulation} af et givet vektorfelt: For enhver glat parametriseret flade $F_{\mathbf{r}}$ er fluxen af rotationen af et glat vektorfelt $\mathbf{V}(x,y,z)$ igennem $F_{\mathbf{r}}$ lig med cirkulationen af vektorfeltet langs randkurven $\partial F$. Som hermed antydet får vi brug for både rum-, flade-, og kurve-integraler samt viden om vektorfelter og deres restriktioner til flader og kurver. Det vil sige, at basismaterialet for nærværende eNote skal findes i en række eNoter: \tref{NUID37-tn22}{eNote} (om plan- og kurve-integraler), \tref{NUID39-tn23}{eNote} (om fladeintegraler), \tref{NUID40-tn24}{eNote} (om vektorfelter), \tref{NUID41-tn25}{eNote} (om tangentielle kurveintegraler ogcirkulationer), og \tref{NUID42-tn26}{eNote} (om flux-beregninger og Gauss' sætning).
+I denne eNote vil vi benytte Gauss' divergenssÃ¦tning fra \tref{NUID42-tn26}{eNote} til  at motivere, bevise, og illustrere Stokes' sÃ¦tning, som udtrykker en prÃ¦cis sammenhÃ¦ng mellem \emph{rotation} og \emph{cirkulation} af et givet vektorfelt: For enhver glat parametriseret flade $F_{\mathbf{r}}$ er fluxen af rotationen af et glat vektorfelt $\mathbf{V}(x,y,z)$ igennem $F_{\mathbf{r}}$ lig med cirkulationen af vektorfeltet langs randkurven $\partial F$. Som hermed antydet fÃ¥r vi brug for bÃ¥de rum-, flade-, og kurve-integraler samt viden om vektorfelter og deres restriktioner til flader og kurver. Det vil sige, at basismaterialet for nÃ¦rvÃ¦rende eNote skal findes i en rÃ¦kke eNoter: \tref{NUID37-tn22}{eNote} (om plan- og kurve-integraler), \tref{NUID39-tn23}{eNote} (om fladeintegraler), \tref{NUID40-tn24}{eNote} (om vektorfelter), \tref{NUID41-tn25}{eNote} (om tangentielle kurveintegraler ogcirkulationer), og \tref{NUID42-tn26}{eNote} (om flux-beregninger og Gauss' sÃ¦tning).
 \end{basis}
 
 
@@ -57,7 +57,7 @@ I denne eNote vil vi benytte Gauss' divergenssætning fra \tref{NUID42-tn26}{eNot
 
 
 
-\section{Stokes' sætning}  \label{secIntro}
+\section{Stokes' sÃ¦tning}  \label{secIntro}
 
 
 \begin{figure}[h]
@@ -69,14 +69,14 @@ I denne eNote vil vi benytte Gauss' divergenssætning fra \tref{NUID42-tn26}{eNot
 
 
 
-{Stokes' sætning} er en af de mest elegante og mest
+{Stokes' sÃ¦tning} er en af de mest elegante og mest
 benyttede resultater fra analysen af vektorfelter
-i rummet. Sætningen har ligesom Gauss'
-divergenssætning mangfoldige anvendelser - f.eks.
+i rummet. SÃ¦tningen har ligesom Gauss'
+divergenssÃ¦tning mangfoldige anvendelser - f.eks.
 i fluid mekanik og i elektromagnetisme. \\
 
 Her er et
-citat som fortæller lidt om
+citat som fortÃ¦ller lidt om
 historien bag resultatet:\\
 
 \begin{quote}
@@ -116,54 +116,54 @@ Andr\`{e}-Marie Amp\'{e}re  \href{http://www-history.mcs.st-and.ac.uk/Mathematic
 
 
 Som antydet er Stokes' resultat af
-samme kaliber som Gauss' divergens-sætning. De er
+samme kaliber som Gauss' divergens-sÃ¦tning. De er
 begge to medlemmer af en 'familie' af resultater,
 hvor hovedideen er at omskrive et integral over
-et område til en andet integral over områdets
-rand - altså så at sige 'skubbe integrationen ud
-på randen'. Det ældste medlem af den familie er
-Integralregningens fundamental-sætning, jvf. \tref{NUID36-thmAnalyseFundamental}{sætning} \tref{NUID36-tn21}{eNote}
-som vi gentager her med følgende formulering:
+et omrÃ¥de til en andet integral over omrÃ¥dets
+rand - altsÃ¥ sÃ¥ at sige 'skubbe integrationen ud
+pÃ¥ randen'. Det Ã¦ldste medlem af den familie er
+Integralregningens fundamental-sÃ¦tning, jvf. \tref{NUID36-thmAnalyseFundamental}{sÃ¦tning} \tref{NUID36-tn21}{eNote}
+som vi gentager her med fÃ¸lgende formulering:
 
-\begin{theorem}[Integralregningens fundamentalsætning]  \label{thmFundamCalc}
-Lad $f(u)$ betegne en kontinuert funktion på
-$\mathbb{R}$. Så er følgende funktion
+\begin{theorem}[Integralregningens fundamentalsÃ¦tning]  \label{thmFundamCalc}
+Lad $f(u)$ betegne en kontinuert funktion pÃ¥
+$\mathbb{R}$. SÃ¥ er fÃ¸lgende funktion
 differentiabel
 \begin{equation} \label{eqAP}
 A(x) \, = \,  \int_{0}^{x}\,f(u)\, du \qquad
 \textrm{med}\qquad A'(x) \, = \, f(x) \quad .
 \end{equation}
 Hvis $F(x)$ er en (anden) funktion, som  opfylder
-$F'(x) \, = \, f(x)$, så er
+$F'(x) \, = \, f(x)$, sÃ¥ er
 \begin{equation} \label{eqIntFundam}
 \int_{a}^{b}\,f(u)\,du \, = \, F(b) - F(a) \quad
 .
 \end{equation}
 \end{theorem}
 
-Her er nu formuleringen af {Stokes' sætning}:
+Her er nu formuleringen af {Stokes' sÃ¦tning}:
 
-\begin{theorem}[Stokes' sætning] \label{thmStokes}
+\begin{theorem}[Stokes' sÃ¦tning] \label{thmStokes}
 Lad $F_{\bf{r}}$ betegne en glat parametriseret flade
 med randkurven $\partial F_{\bf{r}}$ og
 en\-heds\--nor\-mal\-vek\-tor\-felt
-$\,{\bf{n}}_{F}$ og lad ${\bf{V}}$ være et glat
-vektorfelt i $\mathbb{R}^{3}$. Så gælder
+$\,{\bf{n}}_{F}$ og lad ${\bf{V}}$ vÃ¦re et glat
+vektorfelt i $\mathbb{R}^{3}$. SÃ¥ gÃ¦lder
 \begin{equation} \label{eqStokes}
 \int_{F}\, \Rot({\bf{V}})\bm{\cdot} {\bf{n}}_{F} \,
 \,d\mu \, = \, \int_{\partial F} \, {\bf{V}}
 \bm{\cdot} {\bf{e}}_{\partial F} \, d\mu \quad .
 \end{equation}
-Ved beregning af højresiden skal orienteringen
-(givet ved retningen af enheds-tangent-vektorfeltet $\, {\bf{e}}_{\partial F}\,$) af randen vælges
-således at krydsproduktet  ${\bf{e}}_{\partial F}
-\times {\bf{n}}_{F}$ peger væk fra fladen langs
+Ved beregning af hÃ¸jresiden skal orienteringen
+(givet ved retningen af enheds-tangent-vektorfeltet $\, {\bf{e}}_{\partial F}\,$) af randen vÃ¦lges
+sÃ¥ledes at krydsproduktet  ${\bf{e}}_{\partial F}
+\times {\bf{n}}_{F}$ peger vÃ¦k fra fladen langs
 med randen.
 \end{theorem}
 
 \begin{think}
-Stokes' sætning udtrykker altså -- ligesom (\ref{eqIntFundam}) -- at et indre integral (her på et fladestykke) kan udtrykkes som et rand-integral (langs fladestykkets rand). \\
-Stokes' sætning kan også formuleres som følger, idet vi henviser til
+Stokes' sÃ¦tning udtrykker altsÃ¥ -- ligesom (\ref{eqIntFundam}) -- at et indre integral (her pÃ¥ et fladestykke) kan udtrykkes som et rand-integral (langs fladestykkets rand). \\
+Stokes' sÃ¦tning kan ogsÃ¥ formuleres som fÃ¸lger, idet vi henviser til
 definitionerne af flux og cirkulation i henholdsvis \tref{NUID42-tn26}{eNote} og \tref{NUID41-tn25}{eNote}:
 \begin{equation}
 \Flux(\Rot(\mathbf{V}), F_{\mathbf{r}}) = \operatorname{Cirk}(\mathbf{V}, \partial F) \quad .
@@ -173,23 +173,23 @@ langs fladestykkets lukkede randkurve  $\partial F$.
 \end{think}
 
 \begin{aha}
-Læg mærke til, at hvis $F_{\mathbf{r}}$ er \emph{hele} overfladen af et rumligt område, så er $\partial F = \emptyset$, og derfor følger det af Stokes' sætning at
+LÃ¦g mÃ¦rke til, at hvis $F_{\mathbf{r}}$ er \emph{hele} overfladen af et rumligt omrÃ¥de, sÃ¥ er $\partial F = \emptyset$, og derfor fÃ¸lger det af Stokes' sÃ¦tning at
 \begin{equation}
 \Flux(\Rot(\mathbf{V}), F_{\mathbf{r}}) = 0
 \end{equation}
-i overensstemmelse med den følgesætning fra Gauss' divergenssætning som er nævnt i \tref{NUID42-CorTotFlux0}{sætning} i \tref{NUID42-tn26}{eNote}.
+i overensstemmelse med den fÃ¸lgesÃ¦tning fra Gauss' divergenssÃ¦tning som er nÃ¦vnt i \tref{NUID42-CorTotFlux0}{sÃ¦tning} i \tref{NUID42-tn26}{eNote}.
 \end{aha}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Motivering af -- og et bevis for --  Stokes' sætning } \label{secBridge}
+\section{Motivering af -- og et bevis for --  Stokes' sÃ¦tning } \label{secBridge}
 
-Vi får brug for følgende resultat, som også er nævnt i \tref{NUID40-secBridge}{afsnit} i \tref{NUID40-tn24}{eNote}:
+Vi fÃ¥r brug for fÃ¸lgende resultat, som ogsÃ¥ er nÃ¦vnt i \tref{NUID40-secBridge}{afsnit} i \tref{NUID40-tn24}{eNote}:
 
 \begin{theorem}\label{exerGaussVgrad}
 Lad $\,{\bf{V}}(x,y,z)\,$ og
 $\,{\bf{W}}(x,y,z)\,$ betegne to vektorfelter i
-$\mathbb{R}^{3}$. Så gælder følgende identitet
+$\mathbb{R}^{3}$. SÃ¥ gÃ¦lder fÃ¸lgende identitet
 \begin{equation}
 \Div({\bf{V}}\times {\bf{W}}) \, = \,
 \Rot({\bf{V}})\bm{\cdot} {\bf{W}} - {\bf{V}}\bm{\cdot}
@@ -198,7 +198,7 @@ $\mathbb{R}^{3}$. Så gælder følgende identitet
 Specielt har vi derfor: Hvis  $\,{\bf{W}}$ er et
 gradient-vektorfelt for en funktion $\psi(x,y,z)$
 i $\mathbb{R}^{3}$, dvs.  $\,{\bf{W}} \, = \,
-\bm{\nabla}(\psi)\,$, så får vi fra $\,\Rot (
+\bm{\nabla}(\psi)\,$, sÃ¥ fÃ¥r vi fra $\,\Rot (
 \bm{\nabla}(\psi) ) \, = \, {\bf{0}}\,$:
 \begin{equation}\label{eqRotDivGrad}
 \Div({\bf{V}}\times \bm{\nabla}(\psi)) =
@@ -206,18 +206,18 @@ i $\mathbb{R}^{3}$, dvs.  $\,{\bf{W}} \, = \,
 \end{equation}
 \end{theorem}
 
-Ved at bruge Gauss' divergens-sætning (\tref{NUID42-thmGauss}{sætning} \tref{NUID42-tn26}{eNote}) i forbindelse med (\ref{eqRotDivGrad}) får vi direkte et interessant resultat om
-integraler over rumlige områder således:
+Ved at bruge Gauss' divergens-sÃ¦tning (\tref{NUID42-thmGauss}{sÃ¦tning} \tref{NUID42-tn26}{eNote}) i forbindelse med (\ref{eqRotDivGrad}) fÃ¥r vi direkte et interessant resultat om
+integraler over rumlige omrÃ¥der sÃ¥ledes:
 
-\begin{theorem}[En konsekvens af Gauss' divergenssætning] \label{thmGaussStokes}
+\begin{theorem}[En konsekvens af Gauss' divergenssÃ¦tning] \label{thmGaussStokes}
 Lad $\,\psi(x,y,z)\,$ betegne en glat funktion og
 ${\bf{V}}(x,y,z)\,$ et glat vektorfelt i
-$\mathbb{R}^{3}$. Lad $\Omega$ være et rumligt
-område med randen $\partial \Omega$ og udadrettet
+$\mathbb{R}^{3}$. Lad $\Omega$ vÃ¦re et rumligt
+omrÃ¥de med randen $\partial \Omega$ og udadrettet
 enheds-normalvektorfelt $\,{\bf{n}}_{\partial
-\Omega}\,$ på $\partial \Omega$. \\
+\Omega}\,$ pÃ¥ $\partial \Omega$. \\
 
-Så har vi direkte fra Gauss' \tref{NUID42-thmGauss}{sætning}:
+SÃ¥ har vi direkte fra Gauss' \tref{NUID42-thmGauss}{sÃ¦tning}:
 \begin{equation} \label{eqIntDivRotA}
 \int_{\Omega}\, \Div({\bf{V}}\times
 \bm{\nabla}(\psi))\, d\mu \,  = \, \int_{\partial
@@ -226,7 +226,7 @@ Så har vi direkte fra Gauss' \tref{NUID42-thmGauss}{sætning}:
 \Omega} \,\, d\mu \quad .
 \end{equation}
 Ved brug af  (\ref{eqRotDivGrad}) har vi derfor
-også
+ogsÃ¥
 \begin{equation} \label{eqIntDivRotB}
 \int_{\Omega}\, \Rot({\bf{V}})\bm{\cdot}\bm{\nabla}(\psi)\,
 d\mu \,  = \, \int_{\partial \Omega}\,
@@ -237,13 +237,13 @@ d\mu \,  = \, \int_{\partial \Omega}\,
 \end{theorem}
 
 \begin{think}
-På højresiden i ligning (\ref{eqIntDivRotB}) har vi
+PÃ¥ hÃ¸jresiden i ligning (\ref{eqIntDivRotB}) har vi
 benyttet, at rumproduktet $\,[{\bf{a}} {\bf{b}}
 {\bf{c}}\,]\, = \, ({\bf{a}} \times {\bf{b}})
 \bm{\cdot} {\bf{c}}\, $  af tre vektorer ${\bf{a}}$,
 ${\bf{b}}$, og ${\bf{c}}$ tilfredsstiller
-følgende identiteter (hvoraf vi har brugt den
-første):
+fÃ¸lgende identiteter (hvoraf vi har brugt den
+fÃ¸rste):
 \begin{equation}
 [{\bf{a}} {\bf{b}} {\bf{c}}\,]\, = \, [{\bf{c}}
 {\bf{a}} {\bf{b}}\,] \, = \, [{\bf{b}} {\bf{c}}
@@ -255,14 +255,14 @@ første):
 \end{think}
 
 
-Specielt får vi den totale rotationsvektor af
-vektorfeltet ${\bf{V}}$ i $\Omega\,$ således:
+Specielt fÃ¥r vi den totale rotationsvektor af
+vektorfeltet ${\bf{V}}$ i $\Omega\,$ sÃ¥ledes:
 
-\begin{corollary}[Totale rotation i et rumligt område]\label{lemmaTotalRot}
-Lad $\Omega$ være et rumligt
-område med randen $\partial \Omega$ og udadrettet
+\begin{corollary}[Totale rotation i et rumligt omrÃ¥de]\label{lemmaTotalRot}
+Lad $\Omega$ vÃ¦re et rumligt
+omrÃ¥de med randen $\partial \Omega$ og udadrettet
 enheds-normalvektorfelt $\,{\bf{n}}_{\partial
-\Omega}\,$ på $\partial \Omega$. Så gælder for ethvert glat vektorfelt $\mathbf{V}(x,y,z)$:
+\Omega}\,$ pÃ¥ $\partial \Omega$. SÃ¥ gÃ¦lder for ethvert glat vektorfelt $\mathbf{V}(x,y,z)$:
 \begin{equation} \label{eqVridning}
 \int_{\Omega}\, \Rot({\bf{V}})\, d\mu \,  = \,
 \int_{\partial \Omega}\, {\bf{n}}_{\partial
@@ -272,23 +272,23 @@ enheds-normalvektorfelt $\,{\bf{n}}_{\partial
 \end{corollary}
 
 \begin{bevis}
-Dette følger direkte af  (\ref{eqIntDivRotB}) ved
-at vælge, skiftevis, $\psi(x,y,z) \, = \, x\,$,
+Dette fÃ¸lger direkte af  (\ref{eqIntDivRotB}) ved
+at vÃ¦lge, skiftevis, $\psi(x,y,z) \, = \, x\,$,
 $\psi(x,y,z) \, = \, y\,$, og $\psi(x,y,z) \, =
-\, z\,$, således at $\bm{\nabla}(\psi)$ er henholdsvis
+\, z\,$, sÃ¥ledes at $\bm{\nabla}(\psi)$ er henholdsvis
 $(1,0,0)$, $(0,1,0)$, og $(0,0,1)$.
 \end{bevis}
 
-Højresiden af ligningen (\ref{eqVridning}) vil vi
+HÃ¸jresiden af ligningen (\ref{eqVridning}) vil vi
 tillade os at kalde {\em{den totale {vridning}}} af
 fladen $\partial \Omega$ med vektorfeltet
 $\bf{V}$ med hensyn til normalvektorfeltet
-${\bf{n}}_{\partial \Omega}$ og iøvrigt betegne
+${\bf{n}}_{\partial \Omega}$ og iÃ¸vrigt betegne
 denne vektor med ${\operatorname{\bf{Vrid}}}({\bf{V}},
-\partial \Omega)$ således:
+\partial \Omega)$ sÃ¥ledes:
 
 \begin{definition}[Vridning]\label{defVridning}
-Lad $F_{\mathbf{r}}$ betegne en glat flade i rummet med standard enheds-normalvetorfelt $\mathbf{n}_{F}$, og lad $\mathbf{V}(x,y,z)$ være et glat vektorfelt. Så definerer vi vridningen af $F_{\mathbf{r}}$ med vektorfeltet $\mathbf{V}(x,y,z)$ på følgende måde:
+Lad $F_{\mathbf{r}}$ betegne en glat flade i rummet med standard enheds-normalvetorfelt $\mathbf{n}_{F}$, og lad $\mathbf{V}(x,y,z)$ vÃ¦re et glat vektorfelt. SÃ¥ definerer vi vridningen af $F_{\mathbf{r}}$ med vektorfeltet $\mathbf{V}(x,y,z)$ pÃ¥ fÃ¸lgende mÃ¥de:
 \begin{equation}
 {\operatorname{\bf{Vrid}}}({\bf{V}},
 F_{\mathbf{r}}) \, = \, \int_{F_{\mathbf{r}}}\, {\bf{n}}_{F}\, \times {\bf{V}}
@@ -296,24 +296,24 @@ F_{\mathbf{r}}) \, = \, \int_{F_{\mathbf{r}}}\, {\bf{n}}_{F}\, \times {\bf{V}}
 \end{equation}
 \end{definition}
 
-Generelt er den totale rotation af et givet vektorfelt i et rumligt område (også kaldet
-'total vorticity' i fluid mekanik) altså --  via \ref{lemmaTotalRot} -- lig
-med vridningen af områdets overflade med vektorfeltet. Dette minder meget om  Gauss' tilsvarende
-identitet for den totale divergens af et glat vektorfelt, \tref{NUID42-thmGauss}{sætning}: Den totale divergens af vektorfeltet i et
-område er lig med fluxen af vektorfeltet ud igennem overfladen
-af området. \\
+Generelt er den totale rotation af et givet vektorfelt i et rumligt omrÃ¥de (ogsÃ¥ kaldet
+'total vorticity' i fluid mekanik) altsÃ¥ --  via \ref{lemmaTotalRot} -- lig
+med vridningen af omrÃ¥dets overflade med vektorfeltet. Dette minder meget om  Gauss' tilsvarende
+identitet for den totale divergens af et glat vektorfelt, \tref{NUID42-thmGauss}{sÃ¦tning}: Den totale divergens af vektorfeltet i et
+omrÃ¥de er lig med fluxen af vektorfeltet ud igennem overfladen
+af omrÃ¥det. \\
 
-I lighed med \tref{NUID42-thmDivGeom}{sætning}
-har vi da også følgende tolkning og konstruktion
+I lighed med \tref{NUID42-thmDivGeom}{sÃ¦tning}
+har vi da ogsÃ¥ fÃ¸lgende tolkning og konstruktion
 af rotationsvektoren i et givet punkt:
 
 \begin{theorem} \label{thmRotGeom}
 Rotationen af et vektorfelt udtrykker {\em{den
 {volumen-relative lokale vridning} af overfladen}}
-for vektorfeltet i følgende forstand: Lad
+for vektorfeltet i fÃ¸lgende forstand: Lad
 $K_{\rho}$ betegne en massiv kugle med radius
 $\rho$ og centrum i punktet $(x_{0}, y_{0},
-z_{0})$. Så gælder:
+z_{0})$. SÃ¥ gÃ¦lder:
 \begin{equation} \label{eqVridRot}
 \lim_{\rho \to 0}\left(
 \frac{1}{\Vol(K_{\rho})}\,{\operatorname{\bf{Vrid}}}({\bf{V}},
@@ -323,11 +323,11 @@ z_{0})$. Så gælder:
 \end{theorem}
 
 \begin{think}
-Sætning \ref{thmRotGeom} indses på samme måde som for den
+SÃ¦tning \ref{thmRotGeom} indses pÃ¥ samme mÃ¥de som for den
 analoge identitet for divergensen.
-Vektorfeltet udvikles til første orden med
-udviklingspunkt $p$ og indsættes i
-vridningsudtrykket, hvorefter følgende identiteter benyttes:
+Vektorfeltet udvikles til fÃ¸rste orden med
+udviklingspunkt $p$ og indsÃ¦ttes i
+vridningsudtrykket, hvorefter fÃ¸lgende identiteter benyttes:
 
 \begin{equation} \label{eqKugleintegraler}
 \begin{aligned}
@@ -346,24 +346,24 @@ vridningsudtrykket, hvorefter følgende identiteter benyttes:
 
 De eneste
 partielle afledede af vektorfeltets
-koordinatfunktioner, der ikke integreres væk, er
-præcis dem, der optræder i rotationsvektoren
-$\,\Rot({\bf{V}})\,$ når denne evalueres i $p$.
-Prøv det!
+koordinatfunktioner, der ikke integreres vÃ¦k, er
+prÃ¦cis dem, der optrÃ¦der i rotationsvektoren
+$\,\Rot({\bf{V}})\,$ nÃ¥r denne evalueres i $p$.
+PrÃ¸v det!
 \end{think}
 
 \begin{example}[Lokal vridning af kugleflade giver rotationsvektoren]
-Vi ser på et roterende vektorfelt
+Vi ser pÃ¥ et roterende vektorfelt
 ${\bf{V}}(x,y,z)\, = \, (-y, x, 1)$. Dette felt har den konstante
 rotation $\,\Rot({\bf{V}})\, = \, (0, 0, 2)\,$. Vi vil vise, hvordan
 $\operatorname{\bf{Vrid}}({\bf{V}},
 \partial K_{\rho})$ netop giver denne rotation i
-punktet $(0,0,0)$. Lad altså $\,K_{\rho}\,$
+punktet $(0,0,0)$. Lad altsÃ¥ $\,K_{\rho}\,$
 betegne den kugleflade, der har radius
 $\,\rho\,$, centrum i $(0,0,0)$, og overflade
 $\partial K_{\rho}$ med udadrettet
 normalvektorfelt ${\bf{n}}\, = \,
-\frac{1}{\rho}(x,y,z)$. Så er
+\frac{1}{\rho}(x,y,z)$. SÃ¥ er
 $$
 \begin{aligned}
 \operatorname{\bf{Vrid}}({\bf{V}}, \partial K_{\rho}) \, = \,
@@ -377,16 +377,16 @@ y^{2}\,) \, \, d\mu \, \\ = \, &\qquad (0, \,
 \Vol(K_{\rho})\,\Rot({\bf{V}})(0,0,0) \quad ,
 \end{aligned}
 $$
-i overensstemmelse med sætning \ref{thmRotGeom}.
+i overensstemmelse med sÃ¦tning \ref{thmRotGeom}.
 \end{example}
 
 \begin{aha}
-I mere komplicerede tilfælde kan den totale
+I mere komplicerede tilfÃ¦lde kan den totale
 vridning af en flade med et givet vektorfelt
 beregnes med Maple. Hvis den aktuelle
 flade er randoverfladen af et givet rumligt
-område kan vridningen også beregnes som integralet af det tilhørende  rotationsvektorfelt over det rumlige område. Derved muliggøres
-naturligvis også konkrete eftervisninger af
+omrÃ¥de kan vridningen ogsÃ¥ beregnes som integralet af det tilhÃ¸rende  rotationsvektorfelt over det rumlige omrÃ¥de. Derved muliggÃ¸res
+naturligvis ogsÃ¥ konkrete eftervisninger af
 ligning (\ref{eqVridning}).
 \end{aha}
 
@@ -398,8 +398,8 @@ ligning (\ref{eqVridning}).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Fladen, randen, og normal-vektorfeltet} \label{secSurf}
-De flader, der betragtes i Stokes' sætning er
-parametriserede på sædvanlig vis:
+De flader, der betragtes i Stokes' sÃ¦tning er
+parametriserede pÃ¥ sÃ¦dvanlig vis:
 \begin{equation}
 F_{\bf{r}}: \qquad  {\bf{r}}(u,v) \, = \,
 (x(u,v), y(u,v), z(u,v)) \in \mathbb{R}^{3} \quad ,
@@ -412,10 +412,10 @@ hvor
 
 Randen $\partial F_{\bf{r}}$ af $F_{\bf{r}}$
 fremkommer ved at bruge vektorfunktionen $\bf{r}$
-på de 4 rette linjestykker, der udgør randen
-$\partial D$ af det rektangulære parameterområde
+pÃ¥ de 4 rette linjestykker, der udgÃ¸r randen
+$\partial D$ af det rektangulÃ¦re parameteromrÃ¥de
 $D\, = \, [a, b]\times[c, d]$. Vi parametriserer
-hele $\partial D$ på \'{e}n gang ved hjælp af en
+hele $\partial D$ pÃ¥ \'{e}n gang ved hjÃ¦lp af en
 parameter $\theta$ og en vektor-funktion
 $\bf{d}$:
 $$
@@ -424,11 +424,11 @@ $$
 $$
 hvor $u(\theta)$ og $v(\theta)$ kun er stykkevis
 differentiable funktioner af $\theta$. De kan
-f.eks. vælges som lineære funktioner af $\theta$
-for hvert enkelt  af de 4 linjestykker der udgør
+f.eks. vÃ¦lges som lineÃ¦re funktioner af $\theta$
+for hvert enkelt  af de 4 linjestykker der udgÃ¸r
 $\partial D$.
 
-Randen af $F_{\bf{r}}$ er så
+Randen af $F_{\bf{r}}$ er sÃ¥
 $$
 \partial F_{\bf{r}}: \qquad  {\bf{b}}(\theta)\,
 = \,{\bf{r}}({\bf{d}}(\theta)) \, = \,
@@ -463,10 +463,10 @@ tilsvarende ${\bf{n}}_{F}\, = \, {\bf{n}}(u,v)$:
 \end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Tubulære skaller og en afstandsfunktion} \label{secShell}
+\subsection{TubulÃ¦re skaller og en afstandsfunktion} \label{secShell}
 
-Vi definerer {\em{den {tubulære skal} med tykkelse
-$t$ ud fra $F_{\bf{r}}$}} som følgende område i
+Vi definerer {\em{den {tubulÃ¦re skal} med tykkelse
+$t$ ud fra $F_{\bf{r}}$}} som fÃ¸lgende omrÃ¥de i
 $\mathbb{R}^{3}$:
 \begin{equation} \label{eqOmegaT}
  \Omega_{t}: \quad
@@ -475,17 +475,17 @@ w\,{\bf{n}}(u,v)  \,\, , \,\, (u,v) \in D \,\, ,
 \,\, w \in [0, t] \,\, .
 \end{equation}
 Specielt er  {\em{fladen}} $F_{\bf{r}}$ netop
-basis-fladen for skallen og fås ved at bruge
-afbildningen ${\bf{R}}$ på $D$ (hvor $w\, = \,
+basis-fladen for skallen og fÃ¥s ved at bruge
+afbildningen ${\bf{R}}$ pÃ¥ $D$ (hvor $w\, = \,
 0$):
 \begin{equation}
 F_{0}\, = \, F_{\bf{R}}(0) \, = \, F_{\bf{r}} \quad :
 \quad {\bf{r}}(u,v) \, = \, {\bf{R}}(u,v,0)\,\,
 , \,\, (u,v) \in D \quad.
 \end{equation}
-Tilsvarende får vi, for $w\,=\,t$, top-fladen
+Tilsvarende fÃ¥r vi, for $w\,=\,t$, top-fladen
 af skallen.
-Den er parametriseret således:
+Den er parametriseret sÃ¥ledes:
 \begin{equation}
 F_{t}\, = \, F_{\bf{R}}(t) \, = \, F_{\bf{\widehat{r}}} \quad :
 \quad {\bf{\widehat{r}}}(u,v) \, = \, {\bf{R}}(u,v,t)\,\,
@@ -505,7 +505,7 @@ F_{t}\, = \, F_{\bf{R}}(t) \, = \, F_{\bf{\widehat{r}}} \quad :
 \begin{figure}[h]
 \centerline{\includegraphics[height=70mm]{FIGS/plotNormalKvadratFlow} \includegraphics[height=70mm]{FIGS/plotNormalKvadratFlowSolid}}
 \begin{center}
-\caption{En tubulær skal der er defineret ved flow langs  \emph{enheds-normalvektorfeltet} $\mathbf{n}_{F}$
+\caption{En tubulÃ¦r skal der er defineret ved flow langs  \emph{enheds-normalvektorfeltet} $\mathbf{n}_{F}$
 fra et
 kvadrat.} \label{figShell12A}
 \end{center}
@@ -515,7 +515,7 @@ kvadrat.} \label{figShell12A}
 \begin{figure}[h]
 \centerline{\includegraphics[height=70mm]{FIGS/plotNormalSphFlow} \includegraphics[height=70mm]{FIGS/plotNormalSphFlowSolid}}
 \begin{center}
-\caption{En tubulær skal der er defineret ved flow langs  \emph{enheds-normalvektorfeltet} $\mathbf{n}_{F}$
+\caption{En tubulÃ¦r skal der er defineret ved flow langs  \emph{enheds-normalvektorfeltet} $\mathbf{n}_{F}$
 fra et
 fladestykke af en kugleflade.} \label{figShell12B}
 \end{center}
@@ -538,7 +538,7 @@ w\,{\bf{n}}'_{u} ) \times ({\bf{r}}'_{v}+ w\,
 \end{equation}
 Da ${\bf{n}}_{F}$ er et enhedsvektorfelt som er
 parallelt med ${\bf{r}}'_{u} \times
-{\bf{r}}'_{v}$ langs $F_{\bf{r}}$, får vi
+{\bf{r}}'_{v}$ langs $F_{\bf{r}}$, fÃ¥r vi
 specielt (for $w\, = \, 0$):
 \begin{equation} \label{eqFatJac0}
 \begin{aligned}
@@ -552,56 +552,56 @@ specielt (for $w\, = \, 0$):
 \end{equation}
 
 
-Afbildningen  ${\bf{R}}$ er regulær og bijektiv
-på $D \times [0, t]$ - hvis blot $t$ er
-tilstrækkelig lille. Det følger dels af
+Afbildningen  ${\bf{R}}$ er regulÃ¦r og bijektiv
+pÃ¥ $D \times [0, t]$ - hvis blot $t$ er
+tilstrÃ¦kkelig lille. Det fÃ¸lger dels af
 $\Jac_{{\bf{R}}}(u,v,0) \,
 > \, 0$ og dels af kontinuiteten af
 $\Jac_{{\bf{R}}}(u,v,w)$.\\
 
-Værdien af $w$ betragtet som en funktion på
+VÃ¦rdien af $w$ betragtet som en funktion pÃ¥
 $\Omega_{t} \subset \mathbb{R}^{3}$ er en
 differentiabel funktion af de tre rum-variable
-$(x,y,z)$. Selv om dette kan forekomme at være
-helt tydeligt, rent intuitivt, så er det faktisk
+$(x,y,z)$. Selv om dette kan forekomme at vÃ¦re
+helt tydeligt, rent intuitivt, sÃ¥ er det faktisk
 et resultat, der finder sin bedste formulering og
-begrundelse i den såkaldte {\em{{invers
-funktions-sætning}}}, som dyrkes i kurset
+begrundelse i den sÃ¥kaldte {\em{{invers
+funktions-sÃ¦tning}}}, som dyrkes i kurset
 \href{http://www.mat.dtu.dk/Uddannelse/Civil.aspx?coursecode=01330}{Matematik 3}:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{theorem} [Invers funktionssætning] \label{thmInvFunct}
-Lad $Q$ betegne en åben mængde i $\mathbb{R}^{3}$
+\begin{theorem} [Invers funktionssÃ¦tning] \label{thmInvFunct}
+Lad $Q$ betegne en Ã¥ben mÃ¦ngde i $\mathbb{R}^{3}$
 og lad $\,{\bf{f}}\, : Q \to \mathbb{R}^{3}$
 betegne en differentiabel bijektiv afbildning med
 $\Jac_{\bf{f}}({\bf{x}}) \,
 > \, 0\,$ for alle ${\bf{x}} \in Q$. \\
 
- Så er den omvendte afbildning ${\bf{f}}^{\circ -1}\, :
-{\bf{f}}(Q) \to Q$ også differentiabel med
+ SÃ¥ er den omvendte afbildning ${\bf{f}}^{\circ -1}\, :
+{\bf{f}}(Q) \to Q$ ogsÃ¥ differentiabel med
 $\Jac_{\bf{f}^{\circ -1}}({\bf{y}}) \,
 > \, 0\,$ for alle ${\bf{y}} \in {\bf{f}}(Q)$.
 \end{theorem}
 
 
-Intuitionen er altså i dette tilfælde præcis og korrekt. Når
-$t$ er tilstrækkelig lille, så er $w$ en
+Intuitionen er altsÃ¥ i dette tilfÃ¦lde prÃ¦cis og korrekt. NÃ¥r
+$t$ er tilstrÃ¦kkelig lille, sÃ¥ er $w$ en
 differentiabel funktion af de tre rum-variable,
 $(x,y,z)$; lad os kalde den funktion $h(x,y,z)$,
-$(x,y,z) \in \Omega_{t}$. Den funktion har så en
+$(x,y,z) \in \Omega_{t}$. Den funktion har sÃ¥ en
 egentlig gradient $\bm{\nabla}(h)(x,y,z)$, som er
-vinkelret på niveaufladerne for $h$. Specielt er
-$\bm{\nabla}(h)$ vinkelret på top-fladen
+vinkelret pÃ¥ niveaufladerne for $h$. Specielt er
+$\bm{\nabla}(h)$ vinkelret pÃ¥ top-fladen
 $F_{t}\,=\,F_{\bf{R}}(t)$ af skallen
 $\Omega_{t}$, hvor $h\, = \, t$ og den er
-tilsvarende vinkelret på basis-fladen
+tilsvarende vinkelret pÃ¥ basis-fladen
 $F_{0}\,=\,F_{\bf{R}}(0)\,
 = \, F_{\bf{r}}$, hvor $h\, = \, 0$. \\
 
-Gradienten  $\bm{\nabla}(h)$ er faktisk præcis lig med
-${\bf{n}}_{F}$ på basis-fladen. For at indse
-dette behøver vi kun at vise, at længden af
+Gradienten  $\bm{\nabla}(h)$ er faktisk prÃ¦cis lig med
+${\bf{n}}_{F}$ pÃ¥ basis-fladen. For at indse
+dette behÃ¸ver vi kun at vise, at lÃ¦ngden af
 gradienten der er 1. Retningen er jo den samme.
 Lad derfor $(u_{0},v_{0})$ betegne et punkt i $D$
 og betragt restriktionen af $h$ til den rette
@@ -609,7 +609,7 @@ linje ${\bf{r}}(u_{0},v_{0}) +
 w\,{\bf{n}}(u_{0},v_{0})$, hvor $w \in [0, t]$.
 Lad os benytte notationen ${\bf{r}}_{0}\, = \,
 {\bf{r}}(u_{0},v_{0})$ og ${\bf{n}}_{0}\, = \,
-{\bf{n}}(u_{0},v_{0})$. Så giver kædereglen
+{\bf{n}}(u_{0},v_{0})$. SÃ¥ giver kÃ¦dereglen
 \begin{equation}
 \begin{aligned}
 1 \, &= \, |\,\frac{d}{dw}h({\bf{r}}_{0} +
@@ -620,7 +620,7 @@ w\,{\bf{n}}_{0})\,| \\ &= \Vert
 \quad ,
 \end{aligned}
 \end{equation}
-således at vi på fladen $F_{\bf{r}}$, hvor $w =
+sÃ¥ledes at vi pÃ¥ fladen $F_{\bf{r}}$, hvor $w =
 0$, har $\,\Vert \bm{\nabla}(h)({\bf{r}}_{0}) \Vert \,
 = \, 1\,$. Det var det, vi skulle vise. Vi har derfor:
 \begin{equation}
@@ -630,10 +630,10 @@ således at vi på fladen $F_{\bf{r}}$, hvor $w =
 \begin{think}
 Funktionen $h(x,y,z)$ er den {\em{Euklidiske
 afstand}} fra punktet $(x,y,z)$
-til fladen $F_{\bf{r}}$. Lokalt, dvs. tilstrækkeligt tæt på (og i normalretningen af) fladen $F_{\bf{r}}$ er
+til fladen $F_{\bf{r}}$. Lokalt, dvs. tilstrÃ¦kkeligt tÃ¦t pÃ¥ (og i normalretningen af) fladen $F_{\bf{r}}$ er
 $\bm{\nabla}h(x,y,z)$ en \emph{udvidelse} af enhedsnormalvektorfeltet $\mathbf{n}_{F}$ til fladen.
 Vektorfeltet $\bm{\nabla}h(x,y,z)$ er selv et enhedsvektorfelt.
-Ved at lade $F_{\bf{r}}$ flyde tiden $t$ langs flowkurverne for $\bm{\nabla}h(x,y,z)$ dannes (udfejes) det rumlige område, den massive skal, $\Omega_{t}$, se figurerne \ref{figShell12A}, \ref{figShell12B}.
+Ved at lade $F_{\bf{r}}$ flyde tiden $t$ langs flowkurverne for $\bm{\nabla}h(x,y,z)$ dannes (udfejes) det rumlige omrÃ¥de, den massive skal, $\Omega_{t}$, se figurerne \ref{figShell12A}, \ref{figShell12B}.
 \end{think}
 
 
@@ -641,8 +641,8 @@ Ved at lade $F_{\bf{r}}$ flyde tiden $t$ langs flowkurverne for $\bm{\nabla}h(x,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Integration i skallen} \label{secShellInt}
 For en funktion $f(x,y,z)$ som er defineret i
-$\Omega_{t}$ fås integralet af $f$ over området
-således:
+$\Omega_{t}$ fÃ¥s integralet af $f$ over omrÃ¥det
+sÃ¥ledes:
 \begin{equation}
 \begin{aligned}
 &\phantom{= \,\,\,}\int_{\Omega_{t}}\, f\,d\mu \,
@@ -662,7 +662,7 @@ f\,d\mu \, \, = \,
 \end{equation}
 \end{lemma}
 \begin{bevis}
-Det følger direkte af fundamentalsætningen
+Det fÃ¸lger direkte af fundamentalsÃ¦tningen
 \ref{thmFundamCalc}:
 \begin{equation}
 \begin{aligned}
@@ -687,15 +687,15 @@ f({\bf{R}}(u,v,w))
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The Wall - Væggen} \label{secWall}
+\subsection{The Wall - VÃ¦ggen} \label{secWall}
 
 Skallen $\Omega_{t}$ har en rand $\partial
-\Omega_{t}$ som består af top-fladen $F_{t}$,
+\Omega_{t}$ som bestÃ¥r af top-fladen $F_{t}$,
 basis-fladen $F_{0} \,=\, F_{\bf{r}} \, = \,
-F_{\bf{R}}(0)$ og en 'væg'  $W_{t}$ med højden
-$t$. Se figurerne \ref{figShell12A} og \ref{figShell12B}. Væg-komponenten
-fås ved restriktion af afbildningen ${\bf{R}}$
-til $\partial D \times [0, t]$ således:
+F_{\bf{R}}(0)$ og en 'vÃ¦g'  $W_{t}$ med hÃ¸jden
+$t$. Se figurerne \ref{figShell12A} og \ref{figShell12B}. VÃ¦g-komponenten
+fÃ¥s ved restriktion af afbildningen ${\bf{R}}$
+til $\partial D \times [0, t]$ sÃ¥ledes:
 \begin{equation}
 \begin{aligned}
 W_{t}: \qquad  {\bf{B}}(\theta, w) \, &=
@@ -718,9 +718,9 @@ Jacobi-funktionen for denne afbildning er derfor
 \Vert \quad .
 \end{aligned}
 \end{equation}
-Da ${\bf{n}}_{F}$ står vinkelret på  fladen
-$F_{\bf{r}}$ og derfor også på randen $\partial
-F_{\bf{r}}$ (parametriseret via ${\bf{b}}$), får
+Da ${\bf{n}}_{F}$ stÃ¥r vinkelret pÃ¥  fladen
+$F_{\bf{r}}$ og derfor ogsÃ¥ pÃ¥ randen $\partial
+F_{\bf{r}}$ (parametriseret via ${\bf{b}}$), fÃ¥r
 vi:
 \begin{equation}
 \begin{aligned}
@@ -733,9 +733,9 @@ vi:
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Integration langs væggen} \label{secWallInt}
-For en given funktion $g(x,y,z)$ defineret på
-$W_{t}$ fås integralet af $g$ over den flade:
+\subsection{Integration langs vÃ¦ggen} \label{secWallInt}
+For en given funktion $g(x,y,z)$ defineret pÃ¥
+$W_{t}$ fÃ¥s integralet af $g$ over den flade:
 \begin{equation}
 \int_{W_{t}}\, g\, d\mu \, = \,
 \int_{0}^{t}\left(\int_{I}\,g({\bf{B}}(\theta,
@@ -755,7 +755,7 @@ g\,d\mu \, = \,
 \end{lemma}
 
 \begin{bevis}
-Det følger igen af fundamentalsætningen, Sætning
+Det fÃ¸lger igen af fundamentalsÃ¦tningen, SÃ¦tning
 \ref{thmFundamCalc}:
 \begin{equation}
 \begin{aligned}
@@ -771,17 +771,17 @@ Det følger igen af fundamentalsætningen, Sætning
 \end{bevis}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Bevis for Stokes' sætning} \label{secStokesSurf}
+\subsection{Bevis for Stokes' sÃ¦tning} \label{secStokesSurf}
 
-Vi er nu parate til at bevise Sætning
+Vi er nu parate til at bevise SÃ¦tning
 \ref{thmStokes}.
 \begin{bevis}
-Funktionen  $h(x,y,z)$ fra det foregående afsnit
-\ref{secShell} indsættes i stedet for
-$\psi(x,y,z)$ i Sætning \ref{thmGaussStokes},
+Funktionen  $h(x,y,z)$ fra det foregÃ¥ende afsnit
+\ref{secShell} indsÃ¦ttes i stedet for
+$\psi(x,y,z)$ i SÃ¦tning \ref{thmGaussStokes},
 ligning (\ref{eqIntDivRotB}). Med
-integrations-området $\Omega \, = \, \Omega_{t}$
-får vi så:
+integrations-omrÃ¥det $\Omega \, = \, \Omega_{t}$
+fÃ¥r vi sÃ¥:
 \begin{equation} \label{eqReduce}
 \begin{aligned}
 \int_{\Omega_{t}}\,
@@ -813,11 +813,11 @@ Men i ligning (\ref{eqReduce}) har vi
  \, \,d\mu \, &= \, 0 \quad,
 \end{aligned}
 \end{equation}
-idet $\bm{\nabla}(h)$ er vinkelret på  begge fladerne
-$F_{t}$ og $F_{0}$ således at  $\bm{\nabla}(h)$ er
+idet $\bm{\nabla}(h)$ er vinkelret pÃ¥  begge fladerne
+$F_{t}$ og $F_{0}$ sÃ¥ledes at  $\bm{\nabla}(h)$ er
 proportional med henholdsvis ${\bf{n}}_{F_{t}}$
 og
-${\bf{n}}_{F_{0}}$ på de respektive flader.\\
+${\bf{n}}_{F_{0}}$ pÃ¥ de respektive flader.\\
 
 
 
@@ -828,9 +828,9 @@ ${\bf{n}}_{W_{t}}\, = \, {\bf{e}}_{\partial F}
 \times {\bf{n}}_{F}$ og derfor
 ${\bf{e}}_{\partial F}\, = \, {\bf{n}}_{F}\,
 \times {\bf{n}}_{W_{t}}$ - i overensstemmelse med
-orienterings-reglen i Sætning \ref{thmStokes}.
+orienterings-reglen i SÃ¦tning \ref{thmStokes}.
 Hvis vi $t$-afleder begge sider af den reducerede
-ligning  (\ref{eqReduce}) får vi:
+ligning  (\ref{eqReduce}) fÃ¥r vi:
 \begin{equation}
 \begin{aligned}
 &\phantom{=
@@ -843,7 +843,7 @@ ligning  (\ref{eqReduce}) får vi:
 \quad ,
 \end{aligned}
 \end{equation}
-således at vi endelig har - i kraft af
+sÃ¥ledes at vi endelig har - i kraft af
 ligningerne (\ref{eqShellDeriv}) og
 (\ref{eqFatWallTderiv}):
 \begin{equation}
@@ -864,7 +864,7 @@ ligningerne (\ref{eqShellDeriv}) og
 \quad .
 \end{aligned}
 \end{equation}
-Stokes' sætning er dermed bevist.
+Stokes' sÃ¦tning er dermed bevist.
 \end{bevis}
 
 
@@ -873,13 +873,13 @@ Stokes' sætning er dermed bevist.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Verificering af Stokes' sætning i konkrete eksempler} \label{secVerif}
+\section{Verificering af Stokes' sÃ¦tning i konkrete eksempler} \label{secVerif}
 
 
-I lighed med Gauss' divergens-sætning kan Stokes'
-sætning verificeres ved i konkrete givne tilfælde
+I lighed med Gauss' divergens-sÃ¦tning kan Stokes'
+sÃ¦tning verificeres ved i konkrete givne tilfÃ¦lde
 at beregne \emph{begge sider} af identiteten
-(\ref{eqStokes}) i Stokes' sætning.
+(\ref{eqStokes}) i Stokes' sÃ¦tning.
 
 
 
@@ -891,8 +891,8 @@ at beregne \emph{begge sider} af identiteten
 
 
 
-\begin{example}[Stokes' sætning med en cirkelskive] \label{exampDiskStokes}
-En standard cirkelskive i $(x,y)$-planen er givet ved sin sædvanlige parameterfremstilling:
+\begin{example}[Stokes' sÃ¦tning med en cirkelskive] \label{exampDiskStokes}
+En standard cirkelskive i $(x,y)$-planen er givet ved sin sÃ¦dvanlige parameterfremstilling:
 \begin{equation}
 F_{\mathbf{r}}\quad : \quad \mathbf{r}(u,v) = (u\cdot \cos(v), u \cdot \sin(v), 0) \quad , \quad (u,v) \in [0, 1] \times [-\pi, \pi]
 \end{equation}
@@ -904,22 +904,22 @@ standard enhedsnormalvektorfelt til fladen
 \begin{equation}
 \mathbf{n}_{F} = (0,0,1) \quad ,
 \end{equation}
-og standard enheds-tangentvektorfelt langs den \emph{cirkulære} rand $\partial F$:
+og standard enheds-tangentvektorfelt langs den \emph{cirkulÃ¦re} rand $\partial F$:
 \begin{equation}
 \mathbf{e}_{\partial F} = \mathbf{r}'_{v}(1, v) = (-\sin(v)\, , \, \cos(v)\, , \, 0 ) \quad .
 \end{equation}
 \begin{aha}
-Bemærk, at det er $\mathbf{r}(1, v)$, $v \in [-\pi, \pi]$,  der giver \emph{hele randen}, at $\mathbf{r}'_{v}(1, v)$ er en enhedsvektor for alle $v$, og at $\mathbf{r}'_{v}(1, v)\times \mathbf{n}_{F}$ peger væk fra cirkelskiven langs hele randkurven.\\
+BemÃ¦rk, at det er $\mathbf{r}(1, v)$, $v \in [-\pi, \pi]$,  der giver \emph{hele randen}, at $\mathbf{r}'_{v}(1, v)$ er en enhedsvektor for alle $v$, og at $\mathbf{r}'_{v}(1, v)\times \mathbf{n}_{F}$ peger vÃ¦k fra cirkelskiven langs hele randkurven.\\
 \end{aha}
-Et glat vektorfelt i rummet er givet ved sine koordinatfunktioner således:
+Et glat vektorfelt i rummet er givet ved sine koordinatfunktioner sÃ¥ledes:
 \begin{equation}
 \mathbf{V}(x,y,z) = (x\cdot y \, , \, x \, , \, x^{2}) \quad ,
 \end{equation}
-og har det tilhørende rotationsvektorfelt
+og har det tilhÃ¸rende rotationsvektorfelt
 \begin{equation}
 \Rot(\mathbf{V})(x,y,z) = (0\, , \, -2\cdot x \, , \,  1-x) \quad .
 \end{equation}
-Vi vil verificere Stokes' sætning ved at beregne ''begge sider'' af ligning (\ref{eqStokes}) i dette konkrete tilfælde.\\
+Vi vil verificere Stokes' sÃ¦tning ved at beregne ''begge sider'' af ligning (\ref{eqStokes}) i dette konkrete tilfÃ¦lde.\\
 
 Den totale flux af vektorfeltet $\Rot(\mathbf{V})(x,y,z)$ igennem $F_{\mathbf{r}}$ i retning af standard-enhedsnormalen $\mathbf{n}_{F} = (0,0,1)$ er
 \begin{equation}
@@ -944,7 +944,7 @@ Cirkulationen af vektorfeltet $\mathbf{V}(x,y,z)$ langs $\partial F_{\mathbf{r}}
 &= \pi \quad .
 \end{aligned}
 \end{equation}
-Begge sider i ligningen (\ref{eqStokes}) giver altså $\pi$ i dette eksempel -- og vi har derfor verificeret Stokes' sætning.
+Begge sider i ligningen (\ref{eqStokes}) giver altsÃ¥ $\pi$ i dette eksempel -- og vi har derfor verificeret Stokes' sÃ¦tning.
 \end{example}
 
 
@@ -981,8 +981,8 @@ Begge sider i ligningen (\ref{eqStokes}) giver altså $\pi$ i dette eksempel -- o
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\begin{example}[Stokes' sætning med en  paraboloide] \label{exampDiskStokes}
-Et udsnit af en paraboloide er givet ved en parameterfremstilling således:
+\begin{example}[Stokes' sÃ¦tning med en  paraboloide] \label{exampDiskStokes}
+Et udsnit af en paraboloide er givet ved en parameterfremstilling sÃ¥ledes:
 \begin{equation}
 F_{\mathbf{r}}\quad : \quad \mathbf{r}(u,v) = (2\cdot u \cdot \cos(v), 2\cdot u \cdot \sin(v), u^{2} ) \quad ,
 \end{equation}
@@ -994,19 +994,19 @@ Parameterfremstillingen har  Jacobifunktionen
 \begin{equation}
 \Jac_{\mathbf{r}}(u,v) = 4\cdot u \cot \sqrt{1 + u^{2}} \quad ,
 \end{equation}
-og standard-normalvektorfeltet (ikke nødvendigvis enheds-vektorer)  til fladen er givet ved
+og standard-normalvektorfeltet (ikke nÃ¸dvendigvis enheds-vektorer)  til fladen er givet ved
 \begin{equation}
 \mathbf{N}_{F}(u,v) = \mathbf{r}'_{u}(u,v) \times \mathbf{r}'_{v}(u,v) = (-4\cdot u^{2}\cdot \cos(v), \, -4\cdot u^{2}\cdot \sin(v), \,4\cdot u) \quad .
 \end{equation}
-Et glat vektorfelt i rummet er givet ved sine koordinatfunktioner således:
+Et glat vektorfelt i rummet er givet ved sine koordinatfunktioner sÃ¥ledes:
 \begin{equation}
 \mathbf{V}(x,y,z) = (z, y, -x) \quad ,
 \end{equation}
-med det tilhørende rotationsvektorfelt
+med det tilhÃ¸rende rotationsvektorfelt
 \begin{equation}
 \Rot(\mathbf{V})(x,y,z) = (0\, , \, 2 \, , \, 0) \quad .
 \end{equation}
-Vi vil verificere Stokes' sætning ved at beregne ''begge sider'' af ligning (\ref{eqStokes}) i dette konkrete tilfælde.\\
+Vi vil verificere Stokes' sÃ¦tning ved at beregne ''begge sider'' af ligning (\ref{eqStokes}) i dette konkrete tilfÃ¦lde.\\
 
 Den totale flux af vektorfeltet $\Rot(\mathbf{V})(x,y,z)$ igennem $F_{\mathbf{r}}$ i retning af standard-enhedsnormalen er, idet vi benytter
 normalvektorfeltet $\mathbf{N}_{F}(u,v)$ direkte:
@@ -1019,8 +1019,8 @@ normalvektorfeltet $\mathbf{N}_{F}(u,v)$ direkte:
 &= \frac{-14}{3}\quad .
 \end{aligned}
 \end{equation}
-Cirkulationen af vektorfeltet $\mathbf{V}(x,y,z)$ langs $\partial F_{\mathbf{r}}$ i retning af den korrekt orienterede randkurve består af fire
-komponenter. De fås fra fladens parameterfremstilling $\mathbf{r}(u,v)$ dels ved at fastholde $v$ til at være henholdsvis $0$ og $\pi$, og dels ved at fastholde $u$ til at være henholdsvis $1/2$ og $1$,  idet det i hvert tilfælde samtidigt sikres, at den frie parameter løber den 'rigtige vej', dvs. således at alle fire randkomponenter får den rette orientering i forhold til fladens normalvektorfelt:
+Cirkulationen af vektorfeltet $\mathbf{V}(x,y,z)$ langs $\partial F_{\mathbf{r}}$ i retning af den korrekt orienterede randkurve bestÃ¥r af fire
+komponenter. De fÃ¥s fra fladens parameterfremstilling $\mathbf{r}(u,v)$ dels ved at fastholde $v$ til at vÃ¦re henholdsvis $0$ og $\pi$, og dels ved at fastholde $u$ til at vÃ¦re henholdsvis $1/2$ og $1$,  idet det i hvert tilfÃ¦lde samtidigt sikres, at den frie parameter lÃ¸ber den 'rigtige vej', dvs. sÃ¥ledes at alle fire randkomponenter fÃ¥r den rette orientering i forhold til fladens normalvektorfelt:
 \begin{equation}
 \begin{aligned}
 \partial_{1} F \quad : \quad \mathbf{r}_{1}(u) &= \mathbf{r}(u, 0) = (2\cdot u , \, 0 , \, u^{2}) \quad , \quad  u \in [1/2, \, 1] \\
@@ -1056,7 +1056,7 @@ komponenter. De fås fra fladens parameterfremstilling $\mathbf{r}(u,v)$ dels ved
 \end{aligned}
 \end{equation}
 
-Vi har dermed følgende totale cirkulation af $\mathbf{V}(x,y,z)$ langs randen:
+Vi har dermed fÃ¸lgende totale cirkulation af $\mathbf{V}(x,y,z)$ langs randen:
 \begin{equation}
 \begin{aligned}
 \operatorname{Cirk}(\mathbf{V}, \partial F) &= \sum_{i=1}^{4} \operatorname{Cirk}(\mathbf{V}, \partial_{i} F) \\
@@ -1068,7 +1068,7 @@ Vi har dermed følgende totale cirkulation af $\mathbf{V}(x,y,z)$ langs randen:
 &= - \frac{7}{12} -  \frac{7}{12} - 4 + \frac{1}{2} = - \frac{14}{3} \quad .
 \end{aligned}
 \end{equation}
-Begge sider i ligningen (\ref{eqStokes}) giver altså $-14/3$ i dette eksempel, og vi har således igen verificeret Stokes' sætning.
+Begge sider i ligningen (\ref{eqStokes}) giver altsÃ¥ $-14/3$ i dette eksempel, og vi har sÃ¥ledes igen verificeret Stokes' sÃ¦tning.
 \end{example}
 
 
@@ -1104,8 +1104,8 @@ Begge sider i ligningen (\ref{eqStokes}) giver altså $-14/3$ i dette eksempel, o
 
 \begin{exercise}
 Lad $F_{\bf{r}}$ betegne den flade, der har
-følgende parameterfremstilling og
-parameter-område:
+fÃ¸lgende parameterfremstilling og
+parameter-omrÃ¥de:
 \begin{equation}
 F_{\bf{r}}\, : \, {\bf{r}}(u,v)\, = \,
 ((1+u^2)\cos(v),\, (1+u^2)\sin(v),
@@ -1118,7 +1118,7 @@ hvor
 \,\frac{\pi}{2}]\times[-\pi,\, \frac{\pi}{2}]
 \quad .
 \end{equation}
-Verific\'{e}r at Stokes' sætning er opfyldt for
+Verific\'{e}r at Stokes' sÃ¦tning er opfyldt for
 vektorfeltet ${\bf{V}}\, = \, (yx\,, \,yz\,,
 \,xz)$ over fladen $F_{\bf{r}}$ med den givne
 rand $\partial F_{\bf{r}}$.
@@ -1137,9 +1137,9 @@ rand $\partial F_{\bf{r}}$.
 
 
 \begin{exercise} \label{exercMob1}
-Lad $F_{\bf{r}}$ betegne den flade  -- et såkaldt M\"{o}bius-bånd -- der har
-følgende parameterfremstilling og
-parameter-område:
+Lad $F_{\bf{r}}$ betegne den flade  -- et sÃ¥kaldt M\"{o}bius-bÃ¥nd -- der har
+fÃ¸lgende parameterfremstilling og
+parameter-omrÃ¥de:
 \begin{equation}
 \begin{aligned}
 F_{\bf{r}}\, : \, &{\bf{r}}(u,v)\, \\
@@ -1148,11 +1148,11 @@ F_{\bf{r}}\, : \, &{\bf{r}}(u,v)\, \\
 \end{aligned}
 \end{equation}
 hvor $(u, v) \in [-\pi, \pi] \times [-1, 1]$.
-Verific\'{e}r at Stokes' sætning er opfyldt for
+Verific\'{e}r at Stokes' sÃ¦tning er opfyldt for
 vektorfeltet ${\bf{V}}\, = \, (-y\,, \,x\,,
 \,1)$ over fladen $F_{\bf{r}}$ med den givne
 rand $\partial F_{\bf{r}}$, se Figur \ref{figMob1}: Vis eksplicit, at der
-gælder:
+gÃ¦lder:
 \begin{equation} \label{eqMob1}
 \int_{F}\, \Rot({\bf{V}})\bm{\cdot} {\bf{n}}_{F} \,
 \,d\mu \, = \, \int_{\partial F} \, {\bf{V}}
@@ -1163,14 +1163,14 @@ gælder:
 \begin{figure}[h]
 \centerline{\includegraphics[height=70mm]{FIGS/plotMobius1}\includegraphics[height=70mm]{FIGS/plotMobius2}\includegraphics[height=70mm]{FIGS/plotMobius3}}
 \begin{center}
-\caption{\small{Et M\"{o}bius bånd i et vektorfelt $\mathbf{V}(x,y,z) = (-y, x, 1)$ (i midten) og  vektorfeltets rotationsvektorfelt  $\Rot(\mathbf{V})(x,y,z)= (0,0,2)$.}}
+\caption{\small{Et M\"{o}bius bÃ¥nd i et vektorfelt $\mathbf{V}(x,y,z) = (-y, x, 1)$ (i midten) og  vektorfeltets rotationsvektorfelt  $\Rot(\mathbf{V})(x,y,z)= (0,0,2)$.}}
 \label{figMob1}
 \end{center}
 \end{figure}
 
 
 \begin{exercise} \label{exercMob2}
-Lad nu $G_{\bf{r}}$ betegne det samme Møbius-bånd som  i opgave \ref{exercMob1}:
+Lad nu $G_{\bf{r}}$ betegne det samme MÃ¸bius-bÃ¥nd som  i opgave \ref{exercMob1}:
 \begin{equation}
 \begin{aligned}
 G_{\bf{r}}\, : \, &{\bf{r}}(u,v)\, \\
@@ -1178,15 +1178,15 @@ G_{\bf{r}}\, : \, &{\bf{r}}(u,v)\, \\
 (2\cos(u)+v\cos(u/2)\cos(u)\, , \,  2\sin(u)+v\cos(u/2)\sin(u)\, , \, v\sin(u/2)) \quad ,
 \end{aligned}
 \end{equation}
-men nu med et lidt modificeret parameterområde:
+men nu med et lidt modificeret parameteromrÃ¥de:
 \begin{equation}
 (u, v) \in [0, 2\pi] \times [-1, 1] \quad .
 \end{equation}
-Verific\'{e}r at Stokes' sætning er opfyldt for
+Verific\'{e}r at Stokes' sÃ¦tning er opfyldt for
 vektorfeltet ${\bf{V}}\, = \, (-y\,, \,x\,,
 \,1)$ over fladen $G_{\bf{r}}$ med den givne
 rand $\partial G_{\bf{r}}$: Vis eksplicit, at der
-gælder:
+gÃ¦lder:
 \begin{equation} \label{eqMob2}
 \int_{G_{\mathbf{r}}}\, \Rot({\bf{V}})\bm{\cdot} {\bf{n}}_{G} \,
 \,d\mu \, = \, \int_{\partial G_{\mathbf{r}}} \, {\bf{V}}
@@ -1197,11 +1197,11 @@ gælder:
 
 
 \begin{exercise} \label{exercMob3}
-Forklar forskellen mellem de to (værdi-)resultater (henholdsvis $-32$ og $0$), der opnås i henholdsvis
-(\ref{eqMob1}) og (\ref{eqMob2}). Vink: Hold øje med normalvektorfeltet $\mathbf{n}_{F}$. \\
+Forklar forskellen mellem de to (vÃ¦rdi-)resultater (henholdsvis $-32$ og $0$), der opnÃ¥s i henholdsvis
+(\ref{eqMob1}) og (\ref{eqMob2}). Vink: Hold Ã¸je med normalvektorfeltet $\mathbf{n}_{F}$. \\
 
-Hvilke \emph{værdier} for rotationsflux og cirkulation opnås ved at
-skifte intervaller i parametriseringen, dvs. ved blot at benytte følgende parameterintervaller for forskellige $\alpha \in \mathbb{R}$:
+Hvilke \emph{vÃ¦rdier} for rotationsflux og cirkulation opnÃ¥s ved at
+skifte intervaller i parametriseringen, dvs. ved blot at benytte fÃ¸lgende parameterintervaller for forskellige $\alpha \in \mathbb{R}$:
 \begin{equation}
 (u, v) \in [-\pi + \alpha, \pi + \alpha] \times [-1, 1] \quad ?
 \end{equation}
@@ -1210,7 +1210,7 @@ skifte intervaller i parametriseringen, dvs. ved blot at benytte følgende parame
 \begin{figure}[h]
 \centerline{\includegraphics[height=70mm]{FIGS/plotMobius4}\includegraphics[height=70mm]{FIGS/plotMobius5}\includegraphics[height=70mm]{FIGS/plotMobius6}}
 \begin{center}
-\caption{\small{Restriktionen af  rotationsvektorfeltet $\Rot(\mathbf{V})(x,y,z)= (0, \, 0, \, 2)$ til et stykke af et M\"{o}bius bånd, båndets rand, og vektorfeltet $\mathbf{V}(x,y,z) = (-y, x, 1)$ restringeret til randen.}}
+\caption{\small{Restriktionen af  rotationsvektorfeltet $\Rot(\mathbf{V})(x,y,z)= (0, \, 0, \, 2)$ til et stykke af et M\"{o}bius bÃ¥nd, bÃ¥ndets rand, og vektorfeltet $\mathbf{V}(x,y,z) = (-y, x, 1)$ restringeret til randen.}}
 \label{figMob2}
 \end{center}
 \end{figure}
@@ -1222,9 +1222,9 @@ skifte intervaller i parametriseringen, dvs. ved blot at benytte følgende parame
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Stokes' sætning i planen} \label{secStokesInPlane}
+\section{Stokes' sÃ¦tning i planen} \label{secStokesInPlane}
 
-Plane områder, for eksempel områder i $(x, y)-$planen, kan parametriseres således:
+Plane omrÃ¥der, for eksempel omrÃ¥der i $(x, y)-$planen, kan parametriseres sÃ¥ledes:
 \begin{equation}
 F_{\bf{r}}: \qquad  {\bf{r}}(u,v) \, = \,
 (x(u,v), y(u,v), 0) \in \mathbb{R}^{3} \,\,
@@ -1232,18 +1232,18 @@ F_{\bf{r}}: \qquad  {\bf{r}}(u,v) \, = \,
 \subset \mathbb{R}^{2} \quad.
 \end{equation}
 
-Et plant område har et særligt simpelt enhedsnormal-vektorfelt i rummet, dvs. når vi betragter
-det plane område som en flade i rummet, der tilfældigvis ligger helt i $(x,y)-$planen:
+Et plant omrÃ¥de har et sÃ¦rligt simpelt enhedsnormal-vektorfelt i rummet, dvs. nÃ¥r vi betragter
+det plane omrÃ¥de som en flade i rummet, der tilfÃ¦ldigvis ligger helt i $(x,y)-$planen:
 $\mathbf{n}_{F} \, = \, (0, 0, 1)$. \\
 
-Med hensyn til randen af det plane område repeterer vi notationen fra
+Med hensyn til randen af det plane omrÃ¥de repeterer vi notationen fra
 afsnit \ref{secSurf}:
 Randen $\partial F_{\bf{r}}$ af $F_{\bf{r}}$
 fremkommer ved at bruge vektorfunktionen $\bf{r}$
-på de 4 rette linjestykker, der udgør randen
-$\partial D$ af det rektangulære parameterområde
+pÃ¥ de 4 rette linjestykker, der udgÃ¸r randen
+$\partial D$ af det rektangulÃ¦re parameteromrÃ¥de
 $D\, = \, [a, b]\times[c, d]$. Vi parametriserer
-hele $\partial D$ på \'{e}n gang ved hjælp af en
+hele $\partial D$ pÃ¥ \'{e}n gang ved hjÃ¦lp af en
 parameter $\theta$ og en vektor-funktion
 $\bf{d}$:
 $$
@@ -1252,11 +1252,11 @@ $$
 $$
 hvor $u(\theta)$ og $v(\theta)$ kun er stykkevis
 differentiable funktioner af $\theta$. De kan
-f.eks. vælges som lineære funktioner af $\theta$
-for hvert enkelt  af de 4 linjestykker der udgør
+f.eks. vÃ¦lges som lineÃ¦re funktioner af $\theta$
+for hvert enkelt  af de 4 linjestykker der udgÃ¸r
 $\partial D$.
 
-Randen af $F_{\bf{r}}$ er så
+Randen af $F_{\bf{r}}$ er sÃ¥
 \begin{equation}
 \partial F_{\bf{r}}: \qquad  {\bf{b}}(\theta)\,
 = \,{\bf{r}}({\bf{d}}(\theta)) \, = \,
@@ -1266,10 +1266,10 @@ Randen af $F_{\bf{r}}$ er så
 \end{equation}
 
 
-Lad nu $\,\mathbf{V}(x,y,z) \, = \, (V_{1}(x,y,z), V_{2}(x,y,z), V_{3}(x,y,z))\,$ betegne et vilkårligt vektorfelt i rummet, så har vi følgende konsekvens af Stokes' sætning:
+Lad nu $\,\mathbf{V}(x,y,z) \, = \, (V_{1}(x,y,z), V_{2}(x,y,z), V_{3}(x,y,z))\,$ betegne et vilkÃ¥rligt vektorfelt i rummet, sÃ¥ har vi fÃ¸lgende konsekvens af Stokes' sÃ¦tning:
 
-\begin{theorem}[Stokes' sætning i planen] \label{thmStokesPlan}
-Med ovenstående notation gælder:
+\begin{theorem}[Stokes' sÃ¦tning i planen] \label{thmStokesPlan}
+Med ovenstÃ¥ende notation gÃ¦lder:
 \begin{equation}
 \begin{aligned}
 \int_{F_{\mathbf{r}}}\, \Rot({\bf{V}})\bm{\cdot} {\bf{n}}_{F} \,
@@ -1293,14 +1293,14 @@ og dermed
 \end{theorem}
 
 \begin{remark}
-Det ses, at vektorfeltets tredie koordinat-funktion $V_{3}(x,y,z)$ ikke spiller nogen rolle i sætningen. Sætningen er derfor et resultat om vektorfunktioner i {\em{planen}}: $\,\mathbf{V}(x,y) \, = \, \left(V_{1}(x,y), V_{2}(x,y)\right)\,$. Vi illustrerer med et detaljeret - men simpelt - eksempel nedenfor.
+Det ses, at vektorfeltets tredie koordinat-funktion $V_{3}(x,y,z)$ ikke spiller nogen rolle i sÃ¦tningen. SÃ¦tningen er derfor et resultat om vektorfunktioner i {\em{planen}}: $\,\mathbf{V}(x,y) \, = \, \left(V_{1}(x,y), V_{2}(x,y)\right)\,$. Vi illustrerer med et detaljeret - men simpelt - eksempel nedenfor.
 \end{remark}
 
 
 
-\begin{example}[Stokes' sætning i planen] \label{exampStokesPlane}
-Lad $\,\mathbf{V}(x,y) \, = \, \left( -y, x \right) \,$ og  $\mathbf{r}(u,v) \, = \, (3u, 4v)$, $u \in [a,b]$, $v \in [c,d]$,  så får vi:
-$\Jac_{\mathbf{r}}(u,v)\, = \, 12$ og $\frac{\partial V_{2}}{\partial x} -  \frac{\partial V_{1}}{\partial y} \, = \, 2$ sådan at venstre side i ligning (\ref{eqStokesPlan}) giver:
+\begin{example}[Stokes' sÃ¦tning i planen] \label{exampStokesPlane}
+Lad $\,\mathbf{V}(x,y) \, = \, \left( -y, x \right) \,$ og  $\mathbf{r}(u,v) \, = \, (3u, 4v)$, $u \in [a,b]$, $v \in [c,d]$,  sÃ¥ fÃ¥r vi:
+$\Jac_{\mathbf{r}}(u,v)\, = \, 12$ og $\frac{\partial V_{2}}{\partial x} -  \frac{\partial V_{1}}{\partial y} \, = \, 2$ sÃ¥dan at venstre side i ligning (\ref{eqStokesPlan}) giver:
 \begin{equation} \label{eqStokesPlanEx}
 \begin{aligned}
 &\int_{c}^{d}\int_{a}^{b}\, \left( \frac{\partial V_{2}}{\partial x} -  \frac{\partial V_{1}}{\partial y}\right) \, \Jac_{\mathbf{r}}(u,v)\,
@@ -1310,11 +1310,11 @@ $\Jac_{\mathbf{r}}(u,v)\, = \, 12$ og $\frac{\partial V_{2}}{\partial x} -  \fra
 &= \, 24(b-a)(d-c) \quad .
 \end{aligned}
 \end{equation}
-Højre side i ligning (\ref{eqStokesPlan}) skal give samme værdi.\\
+HÃ¸jre side i ligning (\ref{eqStokesPlan}) skal give samme vÃ¦rdi.\\
 
-Vi bestemmer  højre sides værdi ved at opdele randen af $F_{\bf{r}}$ i 4 retlinede komponenter og ved at beregne det tangentielle kurveintegral af $\mathbf{V}$ langs hver komponent, idet vi i hvert tilfælde sørger for at orientere (parametrisere) komponenten korrekt efter den forskrift, som er præciseret i Stokes' sætning. \\
+Vi bestemmer  hÃ¸jre sides vÃ¦rdi ved at opdele randen af $F_{\bf{r}}$ i 4 retlinede komponenter og ved at beregne det tangentielle kurveintegral af $\mathbf{V}$ langs hver komponent, idet vi i hvert tilfÃ¦lde sÃ¸rger for at orientere (parametrisere) komponenten korrekt efter den forskrift, som er prÃ¦ciseret i Stokes' sÃ¦tning. \\
 
-Vi begynder med at sætte $T \, = \, 2(b-a) + 2(d-c)$, dvs. $T$ er den totale omkreds af parameterområdet $D$. Randen af $D$ kan vi så parametrisere på følgende måde:
+Vi begynder med at sÃ¦tte $T \, = \, 2(b-a) + 2(d-c)$, dvs. $T$ er den totale omkreds af parameteromrÃ¥det $D$. Randen af $D$ kan vi sÃ¥ parametrisere pÃ¥ fÃ¸lgende mÃ¥de:
 \begin{equation}
 \begin{aligned}
 \mathbf{d}(\theta) \, &= \, (a + \theta \, , \,\, 0)\, \quad \textrm{for} \quad \theta \in [0\, , \,\, b-a] \\
@@ -1323,7 +1323,7 @@ Vi begynder med at sætte $T \, = \, 2(b-a) + 2(d-c)$, dvs. $T$ er den totale omk
 \mathbf{d}(\theta) \, &= \, (a\, , \,\, d - \theta)\, \quad \textrm{for} \quad \theta \in [2(b-a) + d-c\, , \,\, 2(b-a) + 2(d-c)] \quad .
 \end{aligned}
 \end{equation}
-Randen af $F_{\mathbf{r}}$ har vi dernæst på følgende form:
+Randen af $F_{\mathbf{r}}$ har vi dernÃ¦st pÃ¥ fÃ¸lgende form:
 \begin{equation}
 \begin{aligned}
 \mathbf{b}(\theta) \, &= \, (3(a + \theta) \, , \,\, 0)\, \quad \textrm{for} \quad \theta \in [0\, , \,\, b-a] \\
@@ -1344,7 +1344,7 @@ og dermed:
 
 
 
-Vi kan nu beregne højresiden i ligning (\ref{eqStokesPlan}) som summen af de 4 led, der stammer fra hver sin komponent af randkurven. For eksempel, for det første linjestykke i randkurven, som er parallel med $x-$aksen og med konstant $y=4c$ har vi:  $\theta \in [0, b-a]$ har vi $b_{1}'(\theta) = 3$,  $b_{2}'(\theta) = 0$, $V_{1}(x,y) = y = b_{2}(u,v) = 4v = 4c$ og ligeledes for de andre 3 bidrag (se figurerne \ref{figFlatStokesA} og \ref{figFlatStokesB}):
+Vi kan nu beregne hÃ¸jresiden i ligning (\ref{eqStokesPlan}) som summen af de 4 led, der stammer fra hver sin komponent af randkurven. For eksempel, for det fÃ¸rste linjestykke i randkurven, som er parallel med $x-$aksen og med konstant $y=4c$ har vi:  $\theta \in [0, b-a]$ har vi $b_{1}'(\theta) = 3$,  $b_{2}'(\theta) = 0$, $V_{1}(x,y) = y = b_{2}(u,v) = 4v = 4c$ og ligeledes for de andre 3 bidrag (se figurerne \ref{figFlatStokesA} og \ref{figFlatStokesB}):
 \begin{equation}
 \begin{aligned}
 \int_{0}^{T} \, V_{1}b_{1}'(\theta) &+  V_{2}b_{2}'(\theta) \,\,d\theta \, = \\ \,
@@ -1359,7 +1359,7 @@ Vi kan nu beregne højresiden i ligning (\ref{eqStokesPlan}) som summen af de 4 l
 & \phantom{+}\, 24(b-a)(d-c) \quad,
 \end{aligned}
 \end{equation}
-i overensstemmelse med resultatet i ligning (\ref{eqStokesPlanEx}), sådan at den generelle ligning (\ref{eqStokesPlan}) dermed er verificeret i dette tilfælde.
+i overensstemmelse med resultatet i ligning (\ref{eqStokesPlanEx}), sÃ¥dan at den generelle ligning (\ref{eqStokesPlan}) dermed er verificeret i dette tilfÃ¦lde.
 
 \end{example}
 
@@ -1376,7 +1376,7 @@ i overensstemmelse med resultatet i ligning (\ref{eqStokesPlanEx}), sådan at den
 \begin{figure}[h]
 \centerline{\includegraphics[height=70mm]{FIGS/plotFlat4}\includegraphics[height=70mm]{FIGS/plotFlat5}\includegraphics[height=70mm]{FIGS/plotFlat6}}
 \begin{center}
-\caption{\small{Opstilling af fluxen af rotationsvektorfeltet $\Rot(\mathbf{V}(x,y,z) = (0,0,2)$ igennem kvadrat i $(x,y)$-planen og tilhørende cirkulation af vektorfeltet $\mathbf{V}(x,y,z) = (-y, x, 0)$ langs den firkantede randkurve.}}
+\caption{\small{Opstilling af fluxen af rotationsvektorfeltet $\Rot(\mathbf{V}(x,y,z) = (0,0,2)$ igennem kvadrat i $(x,y)$-planen og tilhÃ¸rende cirkulation af vektorfeltet $\mathbf{V}(x,y,z) = (-y, x, 0)$ langs den firkantede randkurve.}}
 \label{figFlatStokesB}
 \end{center}
 \end{figure}
@@ -1393,27 +1393,27 @@ Vi har set her, at fluxen af et rotationsvektorfelt $\Rot(\mathbf{V})(x,y,z)$ ig
 \item Lad $F_{\bf{r}}$ betegne en glat parametriseret flade
 med randkurven $\partial F_{\bf{r}}$ og
 en\-heds\--nor\-mal\-vek\-tor\-felt
-$\,{\bf{n}}_{F}$ og lad ${\bf{V}}$ være et glat
-vektorfelt i $\mathbb{R}^{3}$. Så udtrykker Stokes' sætning følgende identitet
+$\,{\bf{n}}_{F}$ og lad ${\bf{V}}$ vÃ¦re et glat
+vektorfelt i $\mathbb{R}^{3}$. SÃ¥ udtrykker Stokes' sÃ¦tning fÃ¸lgende identitet
 \begin{equation}
 \int_{F}\, \Rot({\bf{V}})\bm{\cdot} {\bf{n}}_{F} \,
 \,d\mu \, = \, \int_{\partial F} \, {\bf{V}}
 \bm{\cdot} {\bf{e}}_{\partial F} \, d\mu \quad .
 \end{equation}
-Ved beregning af højresiden er det vigtigt (for at få det korrekte fortegn) at orienteringen
-af randen vælges
-sådan at krydsproduktet  ${\bf{e}}_{\partial F}
-\times {\bf{n}}_{F}$ peger væk fra fladen langs
+Ved beregning af hÃ¸jresiden er det vigtigt (for at fÃ¥ det korrekte fortegn) at orienteringen
+af randen vÃ¦lges
+sÃ¥dan at krydsproduktet  ${\bf{e}}_{\partial F}
+\times {\bf{n}}_{F}$ peger vÃ¦k fra fladen langs
 med randen.
-\item Alternativt kan Stokes' sætning udtrykkes således: Fluxen af \emph{rotationen af} vektorfeltet $\mathbf{V}$ igennem fladen $F_{\mathbf{r}}$ er lig med \emph{cirkulationen} af vektorfeltet
+\item Alternativt kan Stokes' sÃ¦tning udtrykkes sÃ¥ledes: Fluxen af \emph{rotationen af} vektorfeltet $\mathbf{V}$ igennem fladen $F_{\mathbf{r}}$ er lig med \emph{cirkulationen} af vektorfeltet
 langs fladestykkets lukkede randkurve  $\partial F$:
 \begin{equation}
 \Flux(\Rot(\mathbf{V}), F_{\mathbf{r}}) = \operatorname{Cirk}(\mathbf{V}, \partial F) \quad .
 \end{equation}
-\item Den Totale rotation af et vektorfelt i et rumligt område kan tilsvarende beregnes ved fladeintegral over den totale overflade af området:  Lad $\Omega$ være et rumligt
-område med randen $\partial \Omega$ og udadrettet
+\item Den Totale rotation af et vektorfelt i et rumligt omrÃ¥de kan tilsvarende beregnes ved fladeintegral over den totale overflade af omrÃ¥det:  Lad $\Omega$ vÃ¦re et rumligt
+omrÃ¥de med randen $\partial \Omega$ og udadrettet
 enheds-normalvektorfelt $\,{\bf{n}}_{\partial
-\Omega}\,$ på $\partial \Omega$. Så gælder for ethvert glat vektorfelt $\mathbf{V}(x,y,z)$:
+\Omega}\,$ pÃ¥ $\partial \Omega$. SÃ¥ gÃ¦lder for ethvert glat vektorfelt $\mathbf{V}(x,y,z)$:
 \begin{equation}
 \int_{\Omega}\, \Rot({\bf{V}})\, d\mu \,  = \,
 \int_{\partial \Omega}\, {\bf{n}}_{\partial

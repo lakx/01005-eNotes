@@ -1,17 +1,17 @@
 \input{../Strukturfiler/preambel}
-\setcounter{chapter}{14} %SÆT DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
+\setcounter{chapter}{14} %SÃ†T DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% HERFRA SKAL DU SKRIVE ELLER INDSÆTTE %%%%
-%%% DEN FIL DU ØNSKER %%%%%%%%%%%%%%%%%%%%%%%
+%%% HERFRA SKAL DU SKRIVE ELLER INDSÃ†TTE %%%%
+%%% DEN FIL DU Ã˜NSKER %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 % REF: TransferNote \ref{TN4-tn4} \nameref{TN4-tn4}
 %
-% \tref{NUID14-thm.koma}{sætning}
+% \tref{NUID14-thm.koma}{sÃ¦tning}
 %
 % \tref{NUID14-tn13}{eNote}
 
@@ -20,7 +20,7 @@
 
 
 \begin{basis}
-I denne og i de efterfølgende eNoter vil vi udvide funktionsbegrebet til at omfatte reelle funktioner af flere variable;  vi starter udvidelsen med $2$ variable, så vi vil i denne eNote definere værdimængder, kontinuitet, og differentiabilitet af funktioner $f(x,y)$ af to variable, her $x$ og $y$. Ligesom for funktioner af \'{e}n variabel vil vi bruge epsilon-funktions-begrebet (nu ligeledes af to variable) til formålet.
+I denne og i de efterfÃ¸lgende eNoter vil vi udvide funktionsbegrebet til at omfatte reelle funktioner af flere variable;  vi starter udvidelsen med $2$ variable, sÃ¥ vi vil i denne eNote definere vÃ¦rdimÃ¦ngder, kontinuitet, og differentiabilitet af funktioner $f(x,y)$ af to variable, her $x$ og $y$. Ligesom for funktioner af \'{e}n variabel vil vi bruge epsilon-funktions-begrebet (nu ligeledes af to variable) til formÃ¥let.
 \end{basis}
 
 
@@ -30,67 +30,67 @@ I denne og i de efterfølgende eNoter vil vi udvide funktionsbegrebet til at omfa
 
 
 
-\section{Definitionsmængder} \label{secDefVal}
-Ved beskrivelsen af en reel funktion $f(x,y)$ af to variable anføres dels de punkter $(x, y)$, i $(x,y)$-planen hvor funktionen er defineret, og dels de
-værdier, som kan fås ved at benytte funktionen på defintionsmængden. \ind{definitionsmængde}{Definitionsmængden} kalder vi $\mathcal{D}m(f)$ og \ind{værdimængde}{værdi\-mængden} kalder vi $\mathcal{V}m(f)$. Det er især definitionsmængderne vi vil fokusere på her. \\
+\section{DefinitionsmÃ¦ngder} \label{secDefVal}
+Ved beskrivelsen af en reel funktion $f(x,y)$ af to variable anfÃ¸res dels de punkter $(x, y)$, i $(x,y)$-planen hvor funktionen er defineret, og dels de
+vÃ¦rdier, som kan fÃ¥s ved at benytte funktionen pÃ¥ defintionsmÃ¦ngden. \ind{definitionsmÃ¦ngde}{DefinitionsmÃ¦ngden} kalder vi $\mathcal{D}m(f)$ og \ind{vÃ¦rdimÃ¦ngde}{vÃ¦rdi\-mÃ¦ngden} kalder vi $\mathcal{V}m(f)$. Det er isÃ¦r definitionsmÃ¦ngderne vi vil fokusere pÃ¥ her. \\
 
-Som noget nyt i forhold til funktioner af \'{e}n variabel er definitionsmængderne i planen generelt ikke så simple som intervallerne på den reelle talakse.
+Som noget nyt i forhold til funktioner af \'{e}n variabel er definitionsmÃ¦ngderne i planen generelt ikke sÃ¥ simple som intervallerne pÃ¥ den reelle talakse.
 
-\begin{example}[Definitionsmængde for en funktion af to variable]
-Lad os se på en funktion $f(x,y)$ af to variable:
+\begin{example}[DefinitionsmÃ¦ngde for en funktion af to variable]
+Lad os se pÃ¥ en funktion $f(x,y)$ af to variable:
 \begin{equation}
 f(x,y) = \ln(\sqrt{5 - x^{2} - y^{2}}) \quad .
 \end{equation}
 For hvilke punkter $(x,y)$ i $\mathbb{R}^{2}$ er denne funktion defineret? Vi
-har f.eks. at $f(0,0) = \ln(\sqrt{5})$, $f(2,0) = f(0,2) = 0$, $f(1,0) = f(0,1) = \ln(2)$, og faktisk er $f(\cos(t), \sin(t)) = \ln(2)$ for alle $t$, men $f(3, 7)$ er ikke defineret for denne funktion. Ved inspektion af funktionen ses det, at definitionsmængden for $f(x,y)$ består præcis af de punkter, der ligger helt inde i den cirkelskive, der har centrum i $(0,0)$ og radius $\sqrt{5}$:
+har f.eks. at $f(0,0) = \ln(\sqrt{5})$, $f(2,0) = f(0,2) = 0$, $f(1,0) = f(0,1) = \ln(2)$, og faktisk er $f(\cos(t), \sin(t)) = \ln(2)$ for alle $t$, men $f(3, 7)$ er ikke defineret for denne funktion. Ved inspektion af funktionen ses det, at definitionsmÃ¦ngden for $f(x,y)$ bestÃ¥r prÃ¦cis af de punkter, der ligger helt inde i den cirkelskive, der har centrum i $(0,0)$ og radius $\sqrt{5}$:
 \begin{equation}
 \mathcal{D}m(f) = \maengde{(x,y) \in \mathbb{R}^{2}}{x^{2} + y^{2} < 5} \quad.
 \end{equation}
-Læg mærke til, at cirkel-randen af cirkelskiven ikke er med i definitionsmængden.
+LÃ¦g mÃ¦rke til, at cirkel-randen af cirkelskiven ikke er med i definitionsmÃ¦ngden.
 \end{example}
 
-Vi vil nu  indføre nogle vigtige begreber til beskrivelse af definitionsmængder og iøvrigt generelt til beskrivelse af vilkårlige delmængder af $(x,y)$-planen som kan være gode at benytte sig af, når man f.eks. skal tegne eller skitsere mængderne:
+Vi vil nu  indfÃ¸re nogle vigtige begreber til beskrivelse af definitionsmÃ¦ngder og iÃ¸vrigt generelt til beskrivelse af vilkÃ¥rlige delmÃ¦ngder af $(x,y)$-planen som kan vÃ¦re gode at benytte sig af, nÃ¥r man f.eks. skal tegne eller skitsere mÃ¦ngderne:
 
-\subsection{Åbne og afsluttede mængder i planen}
+\subsection{Ã…bne og afsluttede mÃ¦ngder i planen}
 
-\begin{definition}[Åbne mængder i planen] \label{defAAbenMgd}
-En delmængde eller et område $M$  i planen kaldes \ind{åben mængde}{en åben mængde} hvis
-ethvert punkt $(x_{0}, y_{0})$ i mængden er centrum for en eller anden (gerne meget lille) cirkelskive, som
+\begin{definition}[Ã…bne mÃ¦ngder i planen] \label{defAAbenMgd}
+En delmÃ¦ngde eller et omrÃ¥de $M$  i planen kaldes \ind{Ã¥ben mÃ¦ngde}{en Ã¥ben mÃ¦ngde} hvis
+ethvert punkt $(x_{0}, y_{0})$ i mÃ¦ngden er centrum for en eller anden (gerne meget lille) cirkelskive, som
 selv er helt indeholdt i $M$.
 \end{definition}
 
 \begin{example}[En cirkelskive]
-Mængden $\mathcal{D}m = \maengde{(x,y) \in \mathbb{R}^{2}}{x^{2} + y^{2} < 5}$ er en åben mængde. Men mængden
- $\maengde{(x,y) \in \mathbb{R}^{2}}{x^{2} + y^{2} \leq 5}$ er \emph{ikke} en åben mængde.
+MÃ¦ngden $\mathcal{D}m = \maengde{(x,y) \in \mathbb{R}^{2}}{x^{2} + y^{2} < 5}$ er en Ã¥ben mÃ¦ngde. Men mÃ¦ngden
+ $\maengde{(x,y) \in \mathbb{R}^{2}}{x^{2} + y^{2} \leq 5}$ er \emph{ikke} en Ã¥ben mÃ¦ngde.
 \end{example}
 
-\begin{definition}[Randen af en mængde i planen, indre og ydre] \label{defAAbenMgd}
-\ind{randen af et område}{Randen af et område} $M$  i planen består af de punkter $(x_{0}, y_{0})$ \emph{i planen} som har følgende egenskab:
-Enhver cirkelskive med centrum i $(x_{0}, y_{0})$ indeholder både punkter som tilhører $M$ og punkter som ikke tilhører $M$.
-Bemærk, randpunkterne for $M$ ikke selv behøver at være med i mængden $M$. Mængden af randpunkter for $M$ betegnes med $\partial M$.\\
+\begin{definition}[Randen af en mÃ¦ngde i planen, indre og ydre] \label{defAAbenMgd}
+\ind{randen af et omrÃ¥de}{Randen af et omrÃ¥de} $M$  i planen bestÃ¥r af de punkter $(x_{0}, y_{0})$ \emph{i planen} som har fÃ¸lgende egenskab:
+Enhver cirkelskive med centrum i $(x_{0}, y_{0})$ indeholder bÃ¥de punkter som tilhÃ¸rer $M$ og punkter som ikke tilhÃ¸rer $M$.
+BemÃ¦rk, randpunkterne for $M$ ikke selv behÃ¸ver at vÃ¦re med i mÃ¦ngden $M$. MÃ¦ngden af randpunkter for $M$ betegnes med $\partial M$.\\
 
-\ind{indre af et område}{Det indre af et område} $M$ er alle de punkter i $M$, som ikke ligger på randen af $M$. Det indre af $M$ betegnes med $\mathring{M}$.\\
+\ind{indre af et omrÃ¥de}{Det indre af et omrÃ¥de} $M$ er alle de punkter i $M$, som ikke ligger pÃ¥ randen af $M$. Det indre af $M$ betegnes med $\mathring{M}$.\\
 
-\ind{ydre af et område}{Det ydre af et område} $M$ i planen er alle de punkter i planen som ikke tilhører hverken $M$ eller  $\partial M$.
+\ind{ydre af et omrÃ¥de}{Det ydre af et omrÃ¥de} $M$ i planen er alle de punkter i planen som ikke tilhÃ¸rer hverken $M$ eller  $\partial M$.
 \end{definition}
 
-\begin{example}[Randen af en åben cirkelskive]
-Mængden $\mathcal{D}m = \maengde{(x,y) \in \mathbb{R}^{2} }{x^{2} + y^{2} < 5}$ har randen:
+\begin{example}[Randen af en Ã¥ben cirkelskive]
+MÃ¦ngden $\mathcal{D}m = \maengde{(x,y) \in \mathbb{R}^{2} }{x^{2} + y^{2} < 5}$ har randen:
 \begin{equation}
 \partial \mathcal{D}m = \maengde{(x,y) \in \mathbb{R}^{2} }{x^{2} + y^{2} =  5} \quad .
 \end{equation}
 \end{example}
 
-\begin{definition}[Afslutningen af en mængde i planen]
-Hvis en mængde $M$ tilføjes sine randpunkter $\partial M$ fås  \ind{afslutningen af en mængde}{afslutningen} af mængden som  betegnes med:
+\begin{definition}[Afslutningen af en mÃ¦ngde i planen]
+Hvis en mÃ¦ngde $M$ tilfÃ¸jes sine randpunkter $\partial M$ fÃ¥s  \ind{afslutningen af en mÃ¦ngde}{afslutningen} af mÃ¦ngden som  betegnes med:
 \begin{equation}
 \bar{M} = M \, \cup \, \partial M \quad.
 \end{equation}
-Hvis randpunkterne allerede er med i mængden $M$ fås ikke derved nogen udvidelse af $M$. Mængden $M$ kaldes \ind{afsluttet mængde}{afsluttet} hvis $\bar{M} = M$.
+Hvis randpunkterne allerede er med i mÃ¦ngden $M$ fÃ¥s ikke derved nogen udvidelse af $M$. MÃ¦ngden $M$ kaldes \ind{afsluttet mÃ¦ngde}{afsluttet} hvis $\bar{M} = M$.
 \end{definition}
 
-\begin{example}[Figurativt om åbne og afsluttede mængder]
-Mængden $A$ i figur \ref{figDefMgd} er hverken åben eller afsluttet (der er nogle punkter på randen, som selv er med i mængden og der er andre punkter på randen som ikke er med i mængden. Tegne-forskriften er følgende: Punkter, der er med i mængden er grønne eller ligger på en fuldt optrukket stykke af randen; punkter, der ikke er med i mængden er ikke farvede eller (hvis de er en del af randen) markerede med røde cirkler. Mængden $B$ i figur  \ref{figDefMgd} er en åben mængde. Mængden $C$ i figur  \ref{figDefMgd} er en afsluttet mængde.
+\begin{example}[Figurativt om Ã¥bne og afsluttede mÃ¦ngder]
+MÃ¦ngden $A$ i figur \ref{figDefMgd} er hverken Ã¥ben eller afsluttet (der er nogle punkter pÃ¥ randen, som selv er med i mÃ¦ngden og der er andre punkter pÃ¥ randen som ikke er med i mÃ¦ngden. Tegne-forskriften er fÃ¸lgende: Punkter, der er med i mÃ¦ngden er grÃ¸nne eller ligger pÃ¥ en fuldt optrukket stykke af randen; punkter, der ikke er med i mÃ¦ngden er ikke farvede eller (hvis de er en del af randen) markerede med rÃ¸de cirkler. MÃ¦ngden $B$ i figur  \ref{figDefMgd} er en Ã¥ben mÃ¦ngde. MÃ¦ngden $C$ i figur  \ref{figDefMgd} er en afsluttet mÃ¦ngde.
 \end{example}
 
 
@@ -98,7 +98,7 @@ Mængden $A$ i figur \ref{figDefMgd} er hverken åben eller afsluttet (der er nogl
 \begin{figure}[h]
 \centerline{\includegraphics[height=55mm]{plotDefmgd1.pdf}\quad \includegraphics[height=55mm]{plotDefmgd2.pdf}\quad \includegraphics[height=55mm]{plotDefmgd3.pdf}}
 \begin{center}
-\caption{Områder i planen. Mængden $A$ er hverken åben eller afsluttet, $B$ er en åben mængde, og $C$ er en afsluttet mængde.} \label{figDefMgd}
+\caption{OmrÃ¥der i planen. MÃ¦ngden $A$ er hverken Ã¥ben eller afsluttet, $B$ er en Ã¥ben mÃ¦ngde, og $C$ er en afsluttet mÃ¦ngde.} \label{figDefMgd}
 \end{center}
 \end{figure}
 
@@ -106,46 +106,46 @@ Mængden $A$ i figur \ref{figDefMgd} er hverken åben eller afsluttet (der er nogl
 \begin{figure}[h]
 \centerline{\includegraphics[height=55mm]{plotAfs1.pdf}\quad \includegraphics[height=55mm]{plotAfs2.pdf}\quad \includegraphics[height=55mm]{plotAfs3.pdf}}
 \begin{center}
-\caption{Afslutningerne  $\bar{A}$, $\bar{B}$, og $\bar{C}$ af områderne $A$, $B$, og $C$ fra figur \ref{figDefMgd}.} \label{figDefMgdAfs}
+\caption{Afslutningerne  $\bar{A}$, $\bar{B}$, og $\bar{C}$ af omrÃ¥derne $A$, $B$, og $C$ fra figur \ref{figDefMgd}.} \label{figDefMgdAfs}
 \end{center}
 \end{figure}
 
 
 
-\subsection{Stjerneformede mængder i planen}
+\subsection{Stjerneformede mÃ¦ngder i planen}
 
-\begin{definition}[Stjerneformede områder]
-Hvis ethvert punkt $(x, y)$ i en mængde $M$ i planen kan 'ses' fra et punkt $(x_{0}, y_{0})$ i mængden sådan at hele syns-linjestykket fra og med $(x_{0}, y_{0})$ til og med $(x,y)$ er indeholdt i mængden, så siges $M$ at være \ind{stjerneformet mængde}{stjerneformet} ud fra \ind{stjernepunkt}{stjernepunktet} $(x_{0}, y_{0})$.  Med andre ord: Ethvert punkt $(x,y)$ i mængden kan forbindes med stjernepunktet med et linjestykke, der helt er indeholdt i mængden. Se figur \ref{figStjerner}.
+\begin{definition}[Stjerneformede omrÃ¥der]
+Hvis ethvert punkt $(x, y)$ i en mÃ¦ngde $M$ i planen kan 'ses' fra et punkt $(x_{0}, y_{0})$ i mÃ¦ngden sÃ¥dan at hele syns-linjestykket fra og med $(x_{0}, y_{0})$ til og med $(x,y)$ er indeholdt i mÃ¦ngden, sÃ¥ siges $M$ at vÃ¦re \ind{stjerneformet mÃ¦ngde}{stjerneformet} ud fra \ind{stjernepunkt}{stjernepunktet} $(x_{0}, y_{0})$.  Med andre ord: Ethvert punkt $(x,y)$ i mÃ¦ngden kan forbindes med stjernepunktet med et linjestykke, der helt er indeholdt i mÃ¦ngden. Se figur \ref{figStjerner}.
 \end{definition}
 
 \begin{exercise}[Stjerneform og dobbelt-stjerneform]
-Hvilke punkter i den mængde der er vist til venstre figur \ref{figStjerner} kan bruges som stjernepunkter for mængden? Er mængden af samtlige mulige stjernepunkter afsluttet eller åben? I hvilken forstand ville man kunne sige, at figuren til højre i  \ref{figStjerner} er \emph{dobbelt}-stjerneformet?
+Hvilke punkter i den mÃ¦ngde der er vist til venstre figur \ref{figStjerner} kan bruges som stjernepunkter for mÃ¦ngden? Er mÃ¦ngden af samtlige mulige stjernepunkter afsluttet eller Ã¥ben? I hvilken forstand ville man kunne sige, at figuren til hÃ¸jre i  \ref{figStjerner} er \emph{dobbelt}-stjerneformet?
 \end{exercise}
 
 
 \begin{figure}[h]
 \centerline{\includegraphics[height=55mm]{plotStjerne.pdf} \quad \includegraphics[height=55mm]{plotStjerneNon.pdf}}
 \begin{center}
-\caption{Mængden til venstre er stjerneformet. Mængden til højre er \emph{ikke} stjerneformet.} \label{figStjerner}
+\caption{MÃ¦ngden til venstre er stjerneformet. MÃ¦ngden til hÃ¸jre er \emph{ikke} stjerneformet.} \label{figStjerner}
 \end{center}
 \end{figure}
 
-\subsection{Begrænsede mængder i planen}
-\begin{definition}[Begrænsede mængder]
-En mængde $M$ i planen siges at være \ind{begrænset mængde}{begrænset} hvis den er helt indeholdt i en (gerne meget stor) cirkelskive med centrum i $(0,0)$.
+\subsection{BegrÃ¦nsede mÃ¦ngder i planen}
+\begin{definition}[BegrÃ¦nsede mÃ¦ngder]
+En mÃ¦ngde $M$ i planen siges at vÃ¦re \ind{begrÃ¦nset mÃ¦ngde}{begrÃ¦nset} hvis den er helt indeholdt i en (gerne meget stor) cirkelskive med centrum i $(0,0)$.
 \end{definition}
 
 \begin{example}
-De tre mængder $A$, $B$, og $C$ i figur \ref{figDefMgd} er tydeligvis begrænsede -- de er helt indeholdt i den cirkelskive som har centrum i $(0,0)$ og radius $100$. Den mængde af punkter, der udgøres af punkterne på $x$-aksen er ikke begrænset.
+De tre mÃ¦ngder $A$, $B$, og $C$ i figur \ref{figDefMgd} er tydeligvis begrÃ¦nsede -- de er helt indeholdt i den cirkelskive som har centrum i $(0,0)$ og radius $100$. Den mÃ¦ngde af punkter, der udgÃ¸res af punkterne pÃ¥ $x$-aksen er ikke begrÃ¦nset.
 \end{example}
 
 
-\subsection[Udvidelser af definitionsmængden til hele planen]{Udvidelser af definitionsmængden til hele $\mathbb{R}^{2}$}
-Ligesom vi kan udvide definitionsmængder for funktioner af \'{e}n variabel, kan vi gøre præcis det samme for funktioner $f(x,y)$ af to variable:
+\subsection[Udvidelser af definitionsmÃ¦ngden til hele planen]{Udvidelser af definitionsmÃ¦ngden til hele $\mathbb{R}^{2}$}
+Ligesom vi kan udvide definitionsmÃ¦ngder for funktioner af \'{e}n variabel, kan vi gÃ¸re prÃ¦cis det samme for funktioner $f(x,y)$ af to variable:
 
-\begin{definition}[Udvidelse af definitionsmængden]
-Givet funktionen $f(x,y)$ med definitionsmængde  $\mathcal{D}m(f)$, så definerer vi
-$0$-udvidelsen $\widehat{f}(x,y)$ af  $f(x,y)$ på følgende måde:
+\begin{definition}[Udvidelse af definitionsmÃ¦ngden]
+Givet funktionen $f(x,y)$ med definitionsmÃ¦ngde  $\mathcal{D}m(f)$, sÃ¥ definerer vi
+$0$-udvidelsen $\widehat{f}(x,y)$ af  $f(x,y)$ pÃ¥ fÃ¸lgende mÃ¥de:
 \begin{equation}
 \widehat{f}(x,y) = \left\{
                       \begin{array}{ll}
@@ -157,39 +157,39 @@ $0$-udvidelsen $\widehat{f}(x,y)$ af  $f(x,y)$ på følgende måde:
 \end{definition}
 
 \section{Grafer for funktioner af to variable}
-Med henblik på at illustrere funktioner af to variable tegner vi dem  i rummet -- vi plotter den punktmængde, der fremkommer ved at konstruere graferne  i $\{\,\mathcal{O}, x, y, z\,\}$-koordinatsystemet:
+Med henblik pÃ¥ at illustrere funktioner af to variable tegner vi dem  i rummet -- vi plotter den punktmÃ¦ngde, der fremkommer ved at konstruere graferne  i $\{\,\mathcal{O}, x, y, z\,\}$-koordinatsystemet:
 
 \begin{definition}[Grafer for funktioner af to variable]
-Lad $f(x,y)$ være en funktion af to variable med definitionsmængden $\mathcal{D}m(f)$. Så er \ind{grafen for funktionen}{grafen for en funktion af to variable} givet ved:
+Lad $f(x,y)$ vÃ¦re en funktion af to variable med definitionsmÃ¦ngden $\mathcal{D}m(f)$. SÃ¥ er \ind{grafen for funktionen}{grafen for en funktion af to variable} givet ved:
 \begin{equation}
 z = f(x,y) \quad , \quad \textrm{hvor} \quad (x,y) \in \mathcal{D}m(f) \quad .
 \end{equation}
-Grafen består altså af den punktmængde i rummet som vi også kan beskrive på følgende måde:
+Grafen bestÃ¥r altsÃ¥ af den punktmÃ¦ngde i rummet som vi ogsÃ¥ kan beskrive pÃ¥ fÃ¸lgende mÃ¥de:
 \begin{equation}
 \mathcal{G}(f) = \maengde{(x,y,f(x,y))}{(x,y) \in \mathcal{D}m(f)} \quad .
 \end{equation}
-Hvert enkelt punkt på grafen fremkommer på følgende måde:  Fra punktet $(x,y,0)$ i $(x, y)$-planen
-går vi højden (med fortegn) $f(x,y)$ lodret op (eller ned) fra den (vandrette) $(x, y)$-plan og markere graf-punktet $(x, y, f(x,y)$ i den højde som funktionsværdien $f(x,y)$ foreskriver -- lige over (eller under) punktet $(x,y,0)$.
+Hvert enkelt punkt pÃ¥ grafen fremkommer pÃ¥ fÃ¸lgende mÃ¥de:  Fra punktet $(x,y,0)$ i $(x, y)$-planen
+gÃ¥r vi hÃ¸jden (med fortegn) $f(x,y)$ lodret op (eller ned) fra den (vandrette) $(x, y)$-plan og markere graf-punktet $(x, y, f(x,y)$ i den hÃ¸jde som funktionsvÃ¦rdien $f(x,y)$ foreskriver -- lige over (eller under) punktet $(x,y,0)$.
 \end{definition}
 
 
 
-\section{Niveau-mængder og højdesnit}
-I $(x,y)$-planen hvor funktionen $f(x,y)$ er defineret kan vi gøre noget helt andet for at vise, hvordan funktionsværdierne varierer fra punkt til punkt.
+\section{Niveau-mÃ¦ngder og hÃ¸jdesnit}
+I $(x,y)$-planen hvor funktionen $f(x,y)$ er defineret kan vi gÃ¸re noget helt andet for at vise, hvordan funktionsvÃ¦rdierne varierer fra punkt til punkt.
 
-\begin{definition}[Niveau-mængder]
-For en funktion $f(x,y)$ af to variable definerer vi for ethvert reelt tal $c$ den tilhørende \ind{niveau-mængde}{niveau-mængde} på følgende måde:
+\begin{definition}[Niveau-mÃ¦ngder]
+For en funktion $f(x,y)$ af to variable definerer vi for ethvert reelt tal $c$ den tilhÃ¸rende \ind{niveau-mÃ¦ngde}{niveau-mÃ¦ngde} pÃ¥ fÃ¸lgende mÃ¥de:
 \begin{equation}
 \mathcal{K}_{c}(f) = \maengde{(x,y) \in \mathcal{D}m(f)}{f(x,y) = c} \quad .
 \end{equation}
 \end{definition}
 
 
-Mængden $\mathcal{K}_{c}$ kan være tom, hele planen, en kurve,  eller hvilken som helst punktmængde i planen.
+MÃ¦ngden $\mathcal{K}_{c}$ kan vÃ¦re tom, hele planen, en kurve,  eller hvilken som helst punktmÃ¦ngde i planen.
 
 
-\begin{example}[Niveaumængder]
-Vi lader $A$ betegne en vilkårlig mængde i planen og  konstruerer en funktion $f(x,y)$ i hele planen på følgende måde:
+\begin{example}[NiveaumÃ¦ngder]
+Vi lader $A$ betegne en vilkÃ¥rlig mÃ¦ngde i planen og  konstruerer en funktion $f(x,y)$ i hele planen pÃ¥ fÃ¸lgende mÃ¥de:
 \begin{equation}
 f(x,y) = \left\{
            \begin{array}{ll}
@@ -198,7 +198,7 @@ f(x,y) = \left\{
            \end{array}
          \right.
 \end{equation}
-dvs. $f$ er $0$-udvidelsen af den funktion, som er konstant $1$ på $A$. Så er
+dvs. $f$ er $0$-udvidelsen af den funktion, som er konstant $1$ pÃ¥ $A$. SÃ¥ er
 \begin{equation}
 \mathcal{K}_{c}(f) = \left\{
   \begin{array}{ll}
@@ -210,20 +210,20 @@ dvs. $f$ er $0$-udvidelsen af den funktion, som er konstant $1$ på $A$. Så er
 \end{equation}
 \end{example}
 
-Ofte er niveau-mængden $\mathcal{K}_{c}$ dog meget mere velstruktureret og består typisk af en eller flere kurver.
-De kurver kan med fuld ret kaldes niveau-kurver eller højdekurver, for de angiver jo præcis de punkter $(x,y)$ i definitionsmængden hvor funktionen antager værdien $c$ og hvor grafen for $f$ derfor lige præcis har højden (med fortegn) $c$ over $(x,y)$-planen. Med andre ord, hvis vi skærer
-grafen for $f$ med den vandrette plan $z = c$ i højden $c$ over $(x,y)$-planen, så fås en snitkurve, hvis projektion ned i (eller op i)
+Ofte er niveau-mÃ¦ngden $\mathcal{K}_{c}$ dog meget mere velstruktureret og bestÃ¥r typisk af en eller flere kurver.
+De kurver kan med fuld ret kaldes niveau-kurver eller hÃ¸jdekurver, for de angiver jo prÃ¦cis de punkter $(x,y)$ i definitionsmÃ¦ngden hvor funktionen antager vÃ¦rdien $c$ og hvor grafen for $f$ derfor lige prÃ¦cis har hÃ¸jden (med fortegn) $c$ over $(x,y)$-planen. Med andre ord, hvis vi skÃ¦rer
+grafen for $f$ med den vandrette plan $z = c$ i hÃ¸jden $c$ over $(x,y)$-planen, sÃ¥ fÃ¥s en snitkurve, hvis projektion ned i (eller op i)
 $(x,y)$-planen netop er $\mathcal{K}_{c}$, se figurerne \ref{figLin} \ref{figCosSin}, \ref{figParab}.
 
 
 
 
 \begin{think}
-Nedenfor i afsnit \ref{subsecGradientVec}  vil vi i ethvert punkt i definitionsmængden for $f(x,y)$ definere en vektor, gradientvektoren for $f(x,y)$, som har den særlige egenskab, at hvis den ikke er $\mathbf{0}$ i et åbent område omkring et givet punkt $(x_{0}, y_{0})$,  så er den niveau-mængde der indeholder $(x_{0}, y_{0})$ en kurve igennem punktet. Gradientvektorer er dog kun veldefinerede for differentiable funktioner, så den egenskab må vi derfor først have indført forfunktioner af to variable.
+Nedenfor i afsnit \ref{subsecGradientVec}  vil vi i ethvert punkt i definitionsmÃ¦ngden for $f(x,y)$ definere en vektor, gradientvektoren for $f(x,y)$, som har den sÃ¦rlige egenskab, at hvis den ikke er $\mathbf{0}$ i et Ã¥bent omrÃ¥de omkring et givet punkt $(x_{0}, y_{0})$,  sÃ¥ er den niveau-mÃ¦ngde der indeholder $(x_{0}, y_{0})$ en kurve igennem punktet. Gradientvektorer er dog kun veldefinerede for differentiable funktioner, sÃ¥ den egenskab mÃ¥ vi derfor fÃ¸rst have indfÃ¸rt forfunktioner af to variable.
 \end{think}
 
 \begin{example}[Grafer og niveau-kurver]
-Følgende funktioner er alle definerede i hele $(x,y)$-planen.
+FÃ¸lgende funktioner er alle definerede i hele $(x,y)$-planen.
 \begin{equation}
 \begin{aligned}
 f(x,y) &= -x + y + 2 \\
@@ -231,13 +231,13 @@ f(x,y) &= 1- \frac{1}{2}\left(x^{2} + y^{2} \right) \\
 f(x,y) &= \cos(3x)\cdot\sin(3y) \quad .
 \end{aligned}
 \end{equation}
-Funktionernes grafer er vist i figurerne \ref{figLin}, \ref{figParab}, og \ref{figCosSin} dels sammen med deres respektive niveau-kurver i $(x,y)$-planen og dels sammen med en figur, der antyder, hvordan niveaukurverne i $(x,y)$-planen kan opfattes som projektionerne af de højde-snit-kurver der fremkommer ved at skære graffladerne for funktionerne i forskellige højder, altså med planerne $z = c$, hvor $c$ er den konstante værdi som den aktuelle funktion $f(x, y)$ antager på niveau-kurven $\mathcal{K}_{c}$. Bemærk, at niveaumængderne $\mathcal{K}_{c}$ virkelig \emph{er} kurver (eller punkter) i disse tilfælde.
+Funktionernes grafer er vist i figurerne \ref{figLin}, \ref{figParab}, og \ref{figCosSin} dels sammen med deres respektive niveau-kurver i $(x,y)$-planen og dels sammen med en figur, der antyder, hvordan niveaukurverne i $(x,y)$-planen kan opfattes som projektionerne af de hÃ¸jde-snit-kurver der fremkommer ved at skÃ¦re graffladerne for funktionerne i forskellige hÃ¸jder, altsÃ¥ med planerne $z = c$, hvor $c$ er den konstante vÃ¦rdi som den aktuelle funktion $f(x, y)$ antager pÃ¥ niveau-kurven $\mathcal{K}_{c}$. BemÃ¦rk, at niveaumÃ¦ngderne $\mathcal{K}_{c}$ virkelig \emph{er} kurver (eller punkter) i disse tilfÃ¦lde.
 \end{example}
 
 \begin{figure}[h]
 \centerline{\includegraphics[height=80mm]{plotLin.pdf}\quad \includegraphics[height=25mm]{plotLinNiveau.pdf} \quad \includegraphics[height=80mm]{plotLinNiveauUP.pdf}}
 \begin{center}
-\caption{Grafen i $(x,y,z)$-rummet, niveaukurverne i $(x,y)$-planen, og højdesnitkurverne for funktionen $f(x,y) = -x + y + 2$. Læg mærke til, at det naturligvis ikke er \emph{hele} grafen for funktionen vi kan plotte. Her er kun vist det udsnit der hører til $-1 \leq x \leq 1$ og $-1 \leq y \leq 1$.} \label{figLin}
+\caption{Grafen i $(x,y,z)$-rummet, niveaukurverne i $(x,y)$-planen, og hÃ¸jdesnitkurverne for funktionen $f(x,y) = -x + y + 2$. LÃ¦g mÃ¦rke til, at det naturligvis ikke er \emph{hele} grafen for funktionen vi kan plotte. Her er kun vist det udsnit der hÃ¸rer til $-1 \leq x \leq 1$ og $-1 \leq y \leq 1$.} \label{figLin}
 \end{center}
 \end{figure}
 
@@ -245,7 +245,7 @@ Funktionernes grafer er vist i figurerne \ref{figLin}, \ref{figParab}, og \ref{f
 \begin{figure}[h]
 \centerline{\includegraphics[height=80mm]{plotParab.pdf}\quad \includegraphics[height=25mm]{plotParabNiveau.pdf} \quad \includegraphics[height=80mm]{plotParabNiveauUP.pdf}}
 \begin{center}
-\caption{Grafen i $(x,y,z)$-rummet, niveaukurverne i $(x,y)$-planen, og højdesnitkurverne for funktionen $f(x,y) = 1- \frac{1}{2}\left(x^{2} + y^{2} \right)$.} \label{figParab}
+\caption{Grafen i $(x,y,z)$-rummet, niveaukurverne i $(x,y)$-planen, og hÃ¸jdesnitkurverne for funktionen $f(x,y) = 1- \frac{1}{2}\left(x^{2} + y^{2} \right)$.} \label{figParab}
 \end{center}
 \end{figure}
 
@@ -253,7 +253,7 @@ Funktionernes grafer er vist i figurerne \ref{figLin}, \ref{figParab}, og \ref{f
 \begin{figure}[h]
 \centerline{\includegraphics[height=80mm]{plotCosSin.pdf}\quad \includegraphics[height=25mm]{plotCosSinNiveau.pdf} \quad \includegraphics[height=80mm]{plotCosSinNiveauUP.pdf}}
 \begin{center}
-\caption{Grafen i $(x,y,z)$-rummet, niveaukurverne i $(x,y)$-planen, og højdesnitkurverne for funktionen $f(x,y) = \cos(3x)\cdot\sin(3y)$.} \label{figCosSin}
+\caption{Grafen i $(x,y,z)$-rummet, niveaukurverne i $(x,y)$-planen, og hÃ¸jdesnitkurverne for funktionen $f(x,y) = \cos(3x)\cdot\sin(3y)$.} \label{figCosSin}
 \end{center}
 \end{figure}
 
@@ -265,7 +265,7 @@ Funktionernes grafer er vist i figurerne \ref{figLin}, \ref{figParab}, og \ref{f
 
 \section{Epsilon-funktioner af to variable} \label{Epsilon}
 
-En meget vigtig klasse af  funktioner af to variable er afstandsfunktionerne. For ethvert punkt $(x_{0}, y_{0})$ i planen definerer vi afstanden til $(x_{0}, y_{0})$ på velkendt måde:
+En meget vigtig klasse af  funktioner af to variable er afstandsfunktionerne. For ethvert punkt $(x_{0}, y_{0})$ i planen definerer vi afstanden til $(x_{0}, y_{0})$ pÃ¥ velkendt mÃ¥de:
 
 \begin{definition}[Afstandsfunktioner]
 Afstanden fra et punkt $(x,y)$ til et punkt $(x_{0}, y_{0})$ i $(x,y)$-planen
@@ -273,21 +273,21 @@ betegnes med
 \begin{equation}
 \rho_{(x_{0}, y_{0})}(x,y) = \sqrt{(x-x_{0})^{2} + (y-y_{0})^{2}} \quad.
 \end{equation}
-Dette er den sædvanlige afstand mellem de to punkter $(x,y)$ og $(x_{0}, y_{0})$ i planen --
-bestemt med Pythagoras' sætning.
+Dette er den sÃ¦dvanlige afstand mellem de to punkter $(x,y)$ og $(x_{0}, y_{0})$ i planen --
+bestemt med Pythagoras' sÃ¦tning.
 \end{definition}
 
 \begin{aha}
-Det er denne funktion vi vil bruge på samme måde som vi benyttede funktionen  $(x-x_{0})$ til definitionerne af
+Det er denne funktion vi vil bruge pÃ¥ samme mÃ¥de som vi benyttede funktionen  $(x-x_{0})$ til definitionerne af
 epsilon-funktioner af \'{e}n variabel og til definition af kontinuitet og differerentiabilitet af funktioner af \'{e}n variabel.
-Læg mærke til, at $\rho_{(x_{0}, y_{0})}(x,y)$ altid er positiv eller $0$; og læg mærke til at værdien $0$ dog kun optræder for $(x, y) = (x_{0}, y_{0})$.
-Funktionen $\rho_{(0,0)}(x,y)$, altså afstanden fra $(x,y)$ til $(x_{0}, y_{0}) = (0,0)$, er vist i figur \ref{figDist}. Læg mærke til, at niveaukurverne er ækvidistante, og at grafen er 'konisk spids' i kontaktpunktet til $(x,y)$-planen!
+LÃ¦g mÃ¦rke til, at $\rho_{(x_{0}, y_{0})}(x,y)$ altid er positiv eller $0$; og lÃ¦g mÃ¦rke til at vÃ¦rdien $0$ dog kun optrÃ¦der for $(x, y) = (x_{0}, y_{0})$.
+Funktionen $\rho_{(0,0)}(x,y)$, altsÃ¥ afstanden fra $(x,y)$ til $(x_{0}, y_{0}) = (0,0)$, er vist i figur \ref{figDist}. LÃ¦g mÃ¦rke til, at niveaukurverne er Ã¦kvidistante, og at grafen er 'konisk spids' i kontaktpunktet til $(x,y)$-planen!
 \end{aha}
 
 \begin{figure}[h]
 \centerline{\includegraphics[height=80mm]{plotDist.pdf}\quad \includegraphics[height=25mm]{plotDistNiveau.pdf} \quad \includegraphics[height=80mm]{plotDistNiveauUP.pdf}}
 \begin{center}
-\caption{Grafen for afstandsfunktionen  $\rho_{(0,0)}(x,y)$ til punktet $(x_{0}, y_{0}) = (0,0)$, funktionens niveaukurver, og højdesnit-kurverne på grafen.} \label{figDist}
+\caption{Grafen for afstandsfunktionen  $\rho_{(0,0)}(x,y)$ til punktet $(x_{0}, y_{0}) = (0,0)$, funktionens niveaukurver, og hÃ¸jdesnit-kurverne pÃ¥ grafen.} \label{figDist}
 \end{center}
 \end{figure}
 
@@ -295,16 +295,16 @@ Funktionen $\rho_{(0,0)}(x,y)$, altså afstanden fra $(x,y)$ til $(x_{0}, y_{0}) 
 Vi er nu klar til at definere klassen af epsilonfunktioner af to variable:
 
 \begin{definition}[Epsilonfunktioner af to variable]
-Enhver funktion $\varepsilon(x,y)$ som er defineret i et åbent område i $\mathbb{R}^{2}$ indeholdende $(0,0)$, og som antager værdien $0$ i $(x,y) = (0,0)$, og som derudover går imod $0$ når $(x,y)$ går imod $(x_{0}, y_{0})$ kaldes en \ind{epsilon-funktion af $(x,y)$}{epsilon-funktion af $(x,y)$}. Epsilon-funktioner af to variable er altså karakteriserede ved egenskaberne:
+Enhver funktion $\varepsilon(x,y)$ som er defineret i et Ã¥bent omrÃ¥de i $\mathbb{R}^{2}$ indeholdende $(0,0)$, og som antager vÃ¦rdien $0$ i $(x,y) = (0,0)$, og som derudover gÃ¥r imod $0$ nÃ¥r $(x,y)$ gÃ¥r imod $(x_{0}, y_{0})$ kaldes en \ind{epsilon-funktion af $(x,y)$}{epsilon-funktion af $(x,y)$}. Epsilon-funktioner af to variable er altsÃ¥ karakteriserede ved egenskaberne:
 \begin{equation}
 \varepsilon(0,0) = 0 \quad  \textrm{og} \quad \varepsilon(x,y) \to 0 \quad \textrm{for} \quad (x,y) \to (0,0) \quad .
 \end{equation}
-Den sidste betingelse betyder, at den numeriske værdi af funktionsværdierne $\varepsilon(x,y)$ kan gøres så lille som ønsket ved blot at vælge $(x,y)$ \emph{tilstrækkelig tæt på} $(0,0)$. Helt præcis betyder betingelsen: For ethvert helt positivt tal $k$ findes der et helt positivt tal $K$ sådan at $|\varepsilon(x,y)| < 1/k$ for alle $(x,y)$ med $\rho_{(x_{0}, y_{0})}(x,y) < 1/K\,$.
+Den sidste betingelse betyder, at den numeriske vÃ¦rdi af funktionsvÃ¦rdierne $\varepsilon(x,y)$ kan gÃ¸res sÃ¥ lille som Ã¸nsket ved blot at vÃ¦lge $(x,y)$ \emph{tilstrÃ¦kkelig tÃ¦t pÃ¥} $(0,0)$. Helt prÃ¦cis betyder betingelsen: For ethvert helt positivt tal $k$ findes der et helt positivt tal $K$ sÃ¥dan at $|\varepsilon(x,y)| < 1/k$ for alle $(x,y)$ med $\rho_{(x_{0}, y_{0})}(x,y) < 1/K\,$.
 \end{definition}
 
 
 \begin{aha}
-Det følger direkte af definitionen, at afstandsfunktionen $\rho_{(x_{0}, y_{0})}(x,y)$ til et punkt $(x_{0}, y_{0})$ selv er en epsilonfunktion af $x-x_{0}$ og $y-y_{0}$.
+Det fÃ¸lger direkte af definitionen, at afstandsfunktionen $\rho_{(x_{0}, y_{0})}(x,y)$ til et punkt $(x_{0}, y_{0})$ selv er en epsilonfunktion af $x-x_{0}$ og $y-y_{0}$.
 \end{aha}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -312,33 +312,33 @@ Det følger direkte af definitionen, at afstandsfunktionen $\rho_{(x_{0}, y_{0})}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Kontinuerte funktioner af to variable} \label{Epsilon}
-Som for funktioner af \'{e}n variabel definerer vi kontinuitet for funktioner af to variable ved hjælp af klassen af epsilonfunktioner:
+Som for funktioner af \'{e}n variabel definerer vi kontinuitet for funktioner af to variable ved hjÃ¦lp af klassen af epsilonfunktioner:
 
 \begin{definition}[Kontinuerte funktioner af to variable] \label{defKont2var}
-En funktion $f(x,y)$ er kontinuert i $(x_{0}, y_{0})$ hvis der eksisterer en epsilon-funktion $\varepsilon_{f}(x-x_{0}, y-y_{0})$ sådan at følgende gælder i et åbent område der indeholder $(x_{0}, y_{0})$:
+En funktion $f(x,y)$ er kontinuert i $(x_{0}, y_{0})$ hvis der eksisterer en epsilon-funktion $\varepsilon_{f}(x-x_{0}, y-y_{0})$ sÃ¥dan at fÃ¸lgende gÃ¦lder i et Ã¥bent omrÃ¥de der indeholder $(x_{0}, y_{0})$:
 \begin{equation}
 f(x,y) = f(x_{0}, y_{0}) + \varepsilon_{f}(x-x_{0}, y-y_{0}) \quad.
 \end{equation}
-Hvis $f(x,y)$ er kontinuert i alle $(x_{0}, y_{0})$ i et givet åbent område i $\mathcal{D}m(f)$, så siger vi, at $f(x,y)$ er kontinuert i hele området.
+Hvis $f(x,y)$ er kontinuert i alle $(x_{0}, y_{0})$ i et givet Ã¥bent omrÃ¥de i $\mathcal{D}m(f)$, sÃ¥ siger vi, at $f(x,y)$ er kontinuert i hele omrÃ¥det.
 \end{definition}
 
 
 Enhver epsilonfunktion af  $x-x_{0}$ og $y-y_{0}$ som f.eks. $\rho_{(x_{0}, y_{0})}(x,y)$ er derfor kontinuert i $(x_{0}, y_{0})$.
-Grafer og niveaukurver kan ofte afsløre, om en funktion er kontinuert i et punkt.
+Grafer og niveaukurver kan ofte afslÃ¸re, om en funktion er kontinuert i et punkt.
 
-\begin{theorem}[Inspektion af niveau-mængder] \label{thmInspektionNiveau}
-Hvis en funktion $f(x,y)$ har to niveau-mængder $\mathcal{K}_{c_{1}}$ og $\mathcal{K}_{c_{2}}$ (hvor $c_{1} \neq c_{2}$) som begge indeholder punkter $(x,y)$ vilkårligt tæt på $(x_{0}, y_{0})$, så er $f(x,y)$ ikke kontinuert i $(x_{0}, y_{0})$.
+\begin{theorem}[Inspektion af niveau-mÃ¦ngder] \label{thmInspektionNiveau}
+Hvis en funktion $f(x,y)$ har to niveau-mÃ¦ngder $\mathcal{K}_{c_{1}}$ og $\mathcal{K}_{c_{2}}$ (hvor $c_{1} \neq c_{2}$) som begge indeholder punkter $(x,y)$ vilkÃ¥rligt tÃ¦t pÃ¥ $(x_{0}, y_{0})$, sÃ¥ er $f(x,y)$ ikke kontinuert i $(x_{0}, y_{0})$.
 \end{theorem}
 \begin{bevis}
-Antag, at $f(x,y)$ er kontinuert i $(x_{0}, y_{0})$. Hvis vi går i mængden  $\mathcal{K}_{c_{1}}$ hen mod $(x_{0}, y_{0})$ så skal (pr. kontinuitet) $f(x_{0}, y_{0})$ være $c_{1}$. Hvis vi derimod går i mængden  $\mathcal{K}_{c_{2}}$ hen mod $(x_{0}, y_{0})$ får vi $f(x_{0}, y_{0}) = c_{2}$, hvilket er en modstrid, da $c_{1} \neq c_{2}$.
+Antag, at $f(x,y)$ er kontinuert i $(x_{0}, y_{0})$. Hvis vi gÃ¥r i mÃ¦ngden  $\mathcal{K}_{c_{1}}$ hen mod $(x_{0}, y_{0})$ sÃ¥ skal (pr. kontinuitet) $f(x_{0}, y_{0})$ vÃ¦re $c_{1}$. Hvis vi derimod gÃ¥r i mÃ¦ngden  $\mathcal{K}_{c_{2}}$ hen mod $(x_{0}, y_{0})$ fÃ¥r vi $f(x_{0}, y_{0}) = c_{2}$, hvilket er en modstrid, da $c_{1} \neq c_{2}$.
 \end{bevis}
 
 \begin{aha}
-To niveaukurver hørende til forskellige funktionsværdier for en funktion $f(x,y)$ kan ligge meget tæt på hinanden i $(x, y)$-planen -- men altså ikke vilkårligt tæt -- hvis funktionen er kontinuert.
+To niveaukurver hÃ¸rende til forskellige funktionsvÃ¦rdier for en funktion $f(x,y)$ kan ligge meget tÃ¦t pÃ¥ hinanden i $(x, y)$-planen -- men altsÃ¥ ikke vilkÃ¥rligt tÃ¦t -- hvis funktionen er kontinuert.
 \end{aha}
 
 \begin{example}[En funktion som ikke er kontinuert]\label{exampDiskont}
-Vi ser på $0$-udvidelsen $\widehat{f}(x,y)$ af funktionen
+Vi ser pÃ¥ $0$-udvidelsen $\widehat{f}(x,y)$ af funktionen
 \begin{equation}
 f(x,y) = \frac{x^{2}\,y}{x^{4} + y^{2}} \quad , \quad \textrm{hvor} \quad (x,y) \in \mathbb{R}^{2} \setminus \{\,(0,0) \,\} \quad.
 \end{equation}
@@ -351,8 +351,8 @@ Det vil sige:
            \end{array}
          \right.
 \end{equation}
-Funktionen kan inspiceres i figur \ref{figDiskont}. Ved den inspektion bemærkes, at niveaukurverne 'ligner parabler' igennem $(0,0)$.
-Vi vil teste den hypotese, at det faktisk er parabler: Hvis vi sætter $y = c\,x^{2}$ (parabelligning) får vi følgende udregninger:
+Funktionen kan inspiceres i figur \ref{figDiskont}. Ved den inspektion bemÃ¦rkes, at niveaukurverne 'ligner parabler' igennem $(0,0)$.
+Vi vil teste den hypotese, at det faktisk er parabler: Hvis vi sÃ¦tter $y = c\,x^{2}$ (parabelligning) fÃ¥r vi fÃ¸lgende udregninger:
 \begin{equation}
 \begin{aligned}
 f(x,y) &= f(x, c\,x^{2})  \\
@@ -361,31 +361,31 @@ f(x,y) &= f(x, c\,x^{2})  \\
 &= \frac{c}{1 + c^{2}} \quad,
 \end{aligned}
 \end{equation}
-hvilket netop betyder, at parablerne $y = c\,x^{2}$ er (indeholdt i) niveau-mængden $\mathcal{K}_{c/(1 + c^{2})}$. Da alle parablerne går igennem $(0,0)$ følger det af sætning \ref{thmInspektionNiveau} at funktionen $f(x,y)$ ikke er kontinuert i $(0,0)$.
+hvilket netop betyder, at parablerne $y = c\,x^{2}$ er (indeholdt i) niveau-mÃ¦ngden $\mathcal{K}_{c/(1 + c^{2})}$. Da alle parablerne gÃ¥r igennem $(0,0)$ fÃ¸lger det af sÃ¦tning \ref{thmInspektionNiveau} at funktionen $f(x,y)$ ikke er kontinuert i $(0,0)$.
 
 \end{example}
 
 \begin{figure}[h]
 \centerline{\includegraphics[height=90mm]{plotDiskontRes.pdf}\quad \includegraphics[height=35mm]{plotDiskontNiveau.pdf}}
 \begin{center}
-\caption{Grafen i rummet  og niveaukurve-forløbet i planen for funktionen i eksempel \ref{exampDiskont}.} \label{figDiskont}
+\caption{Grafen i rummet  og niveaukurve-forlÃ¸bet i planen for funktionen i eksempel \ref{exampDiskont}.} \label{figDiskont}
 \end{center}
 \end{figure}
 
 \begin{exercise}
-Vis, at $0$-udvidelsen $\widehat{f}(x,y)$ af følgende funktion ikke er kontinuert i $(0,0)$:
+Vis, at $0$-udvidelsen $\widehat{f}(x,y)$ af fÃ¸lgende funktion ikke er kontinuert i $(0,0)$:
 \begin{equation}
 f(x,y) = \frac{x}{x^{2} + y^{2}} \quad .
 \end{equation}
 \end{exercise}
 
-\begin{example}[Første-grads-polynomier er kontinuerte]
+\begin{example}[FÃ¸rste-grads-polynomier er kontinuerte]
 Vi vil vise, at $f(x,y) = \alpha x + \beta y + \gamma$ er kontinuert i $(x_{0}, y_{0})$.
-Det følger direkte af, at
+Det fÃ¸lger direkte af, at
 \begin{equation}
 f(x,y) - f(x_{0}, y_{0}) =  \alpha (x-x_{0}) + \beta (y-y_{0}) \to 0 \quad \textrm{for} \quad (x,y) \to (x_{0}, y_{0})) \quad,
 \end{equation}
-sådan at
+sÃ¥dan at
 \begin{equation}
 f(x,y) = f(x_{0}, y_{0}) + \varepsilon_{f}(x-x_{0}, y-y_{0})
 \end{equation}
@@ -393,14 +393,14 @@ med epsilonfunktionen $ \varepsilon_{f}(x-x_{0}, y-y_{0}) = \alpha (x-x_{0}) + \
 \end{example}
 
 \begin{exercise}
-Vis, at følgende anden-grads polynomium er kontinuert i $(0,0)$:
+Vis, at fÃ¸lgende anden-grads polynomium er kontinuert i $(0,0)$:
 \begin{equation}
 f(x,y) = x^{2} + y^{2} \quad .
 \end{equation}
 \end{exercise}
 
 \begin{exercise}
-Vis, at $0$-udvidelsen af følgende funktion er kontinuert i $(0,0)$:
+Vis, at $0$-udvidelsen af fÃ¸lgende funktion er kontinuert i $(0,0)$:
 \begin{equation}
 f(x,y) = \frac{x\,y^{2}}{x^{2} + y^{2}} \quad .
 \end{equation}
@@ -414,7 +414,7 @@ Funktionen $f(x, y) = \sqrt{\rho_{(x_{0}, y_{0})}(x,y)}$ er -- ligesom $\rho_{(x
 \begin{figure}[h]
 \centerline{\includegraphics[height=80mm]{plotSqrt.pdf}\quad \includegraphics[height=25mm]{plotSqrtNiveau.pdf} \quad \includegraphics[height=80mm]{plotSqrtNiveauUP.pdf}}
 \begin{center}
-\caption{Grafen, niveau-kurverne, og højdesnitkurverne  for kvadratroden af afstandsfunktionen til punktet $(x_{0}, y_{0}) = (-1,1)$\, : \, $f(x, y) = \sqrt{\rho_{(x_{0}, y_{0})}(x,y)}\,$. } \label{figSqrt}
+\caption{Grafen, niveau-kurverne, og hÃ¸jdesnitkurverne  for kvadratroden af afstandsfunktionen til punktet $(x_{0}, y_{0}) = (-1,1)$\, : \, $f(x, y) = \sqrt{\rho_{(x_{0}, y_{0})}(x,y)}\,$. } \label{figSqrt}
 \end{center}
 \end{figure}
 
@@ -425,24 +425,24 @@ Funktionen $f(x, y) = \sqrt{\rho_{(x_{0}, y_{0})}(x,y)}$ er -- ligesom $\rho_{(x
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Differentiable funktioner af to variable} \label{Epsilon}
-Langt de fleste af de funktioner vi betragter i Matematik 1 er differentiable i deres definitionsområder og af den grund også kontinuerte, som vi skal se nedenfor -- jævnfør tilsvarende for funktioner af \'{e}n variabel. \\
+Langt de fleste af de funktioner vi betragter i Matematik 1 er differentiable i deres definitionsomrÃ¥der og af den grund ogsÃ¥ kontinuerte, som vi skal se nedenfor -- jÃ¦vnfÃ¸r tilsvarende for funktioner af \'{e}n variabel. \\
 
-Differentiabilitet defineres som for funktioner af \'{e}n variabel, men her igen ved brug af de indførte epsilonfunktioner af to variable:
+Differentiabilitet defineres som for funktioner af \'{e}n variabel, men her igen ved brug af de indfÃ¸rte epsilonfunktioner af to variable:
 
 \begin{definition}[Differentiabilitet og partielle afledede]
 En funktion $f(x,y)$ er differentiabel i $(x_{0}, y_{0}) \in \mathcal{D}m(f)$ hvis der findes \emph{to} konstanter $a$ og $b$ og en
-epsilon-funktion $\varepsilon_{f}(x-x_{0},y-y_{0})$ sådan at
+epsilon-funktion $\varepsilon_{f}(x-x_{0},y-y_{0})$ sÃ¥dan at
 \begin{equation}
 \begin{aligned}
 f(x,y) = &f(x_{0}, y_{0}) + a\cdot (x-x_{0}) + b\cdot (y-y_{0}) \\
 &\phantom{f(x,y) =}+ \rho_{(x_{0}, y_{0})}(x,y) \cdot \varepsilon_{f}(x-x_{0},y-y_{0}) \quad .
 \end{aligned}
 \end{equation}
-Det er de to konstanter $a$ og $b$ vi herefter (når de findes, altså når $f(x,y)$ er differentiabel) kalder de \ind{partielle afledede}{partielle afledede} af $f$ i $(x_{0}, y_{0})$. De betegnes henholdsvis:
+Det er de to konstanter $a$ og $b$ vi herefter (nÃ¥r de findes, altsÃ¥ nÃ¥r $f(x,y)$ er differentiabel) kalder de \ind{partielle afledede}{partielle afledede} af $f$ i $(x_{0}, y_{0})$. De betegnes henholdsvis:
 \begin{equation}
 a = f'_{x}(x_{0}, y_{0}) \quad \textrm{og} \quad b = f'_{y}(x_{0}, y_{0})
 \end{equation}
-Med denne notation gælder altså -- når $f(x,y)$ er differentiabel i $(x_{0}, y_{0})$:
+Med denne notation gÃ¦lder altsÃ¥ -- nÃ¥r $f(x,y)$ er differentiabel i $(x_{0}, y_{0})$:
 \begin{equation} \label{eqDifferentiabel}
 \begin{aligned}
 f(x,y) = &f(x_{0}, y_{0}) + f'_{x}(x_{0}, y_{0})\cdot (x-x_{0}) + f'_{y}(x_{0}, y_{0})\cdot (y-y_{0}) \\
@@ -453,11 +453,11 @@ f(x,y) = &f(x_{0}, y_{0}) + f'_{x}(x_{0}, y_{0})\cdot (x-x_{0}) + f'_{y}(x_{0}, 
 
 
 \begin{definition}[Partielle afledede af partielle afledede] \label{defPartialPartial}
-Hvis $f(x,y)$ er differentiabel i alle punkter $(x_{0}, y_{0})$ i et givet åbent område i $\mathcal{D}m(f) \subset \mathbb{R}^{2}$ siger vi, at $f(x,y)$ er differentiabel i hele området. Vi skriver så ofte de partielle afledede af $f(x,y)$ på følgende måde, idet de jo dermed selv er funktioner af de to \emph{variable} $(x_{0}, y_{0})$:
+Hvis $f(x,y)$ er differentiabel i alle punkter $(x_{0}, y_{0})$ i et givet Ã¥bent omrÃ¥de i $\mathcal{D}m(f) \subset \mathbb{R}^{2}$ siger vi, at $f(x,y)$ er differentiabel i hele omrÃ¥det. Vi skriver sÃ¥ ofte de partielle afledede af $f(x,y)$ pÃ¥ fÃ¸lgende mÃ¥de, idet de jo dermed selv er funktioner af de to \emph{variable} $(x_{0}, y_{0})$:
 \begin{equation}
 f'_{x}(x, y) = \frac{\partial}{\partial x}f(x,y) =  \frac{\partial f}{\partial x}(x,y)\quad \textrm{og} \quad  f'_{y}(x, y) = \frac{\partial}{\partial y}f(x,y) = \frac{\partial f}{\partial y}(x, y) \quad .
 \end{equation}
-Hvis disse partielle afledede af $f(x,y)$ selv er differentiable, kan vi fortsætte og finde de tilhørende \ind{partielle afledede af de partielle afledede}{partielle afledede af de partielle afledede}, etc. De benævnes på følgende måde:
+Hvis disse partielle afledede af $f(x,y)$ selv er differentiable, kan vi fortsÃ¦tte og finde de tilhÃ¸rende \ind{partielle afledede af de partielle afledede}{partielle afledede af de partielle afledede}, etc. De benÃ¦vnes pÃ¥ fÃ¸lgende mÃ¥de:
 \begin{equation}
 \begin{aligned}
 f''_{xx}(x, y) &= \frac{\partial}{\partial x}f'_{x}(x,y) =  \frac{\partial^{2} f}{\partial x \partial x}(x,y) \\
@@ -471,58 +471,58 @@ f''_{yy}(x, y) &= \frac{\partial}{\partial y}f'_{y}(x,y) =  \frac{\partial^{2} f
 
 
 
-Hvordan finder vi så konkret de partielle afledede af en given funktion $f(x,y)$, f.eks. $f(x,y) = x\cdot \sin(y)$? Det er ikke svært:
+Hvordan finder vi sÃ¥ konkret de partielle afledede af en given funktion $f(x,y)$, f.eks. $f(x,y) = x\cdot \sin(y)$? Det er ikke svÃ¦rt:
 
 
-\begin{theorem}[Hjælpefunktioner giver partielle afledede]
-De partielle afledede af en funktion $f(x,y)$, der er differentiabel i $(x_{0}, y_{0})$ kan findes ved sædvanlig differentiation af to funktioner af \'{e}n variabel. Sæt
+\begin{theorem}[HjÃ¦lpefunktioner giver partielle afledede]
+De partielle afledede af en funktion $f(x,y)$, der er differentiabel i $(x_{0}, y_{0})$ kan findes ved sÃ¦dvanlig differentiation af to funktioner af \'{e}n variabel. SÃ¦t
 \begin{equation}
 \begin{aligned}
 f_{1}(x) &= f(x, y_{0}) \\
 f_{2}(y) &= f(x_{0}, y) \quad.
 \end{aligned}
 \end{equation}
-Så er funktionerne $f_{1}(x)$ og $f_{2}(y)$ to funktioner af hver \'{e}n variabel, henholdsvis $x$ og $y$, og de er begge differentiable i henholdsvis $x_{0}$ og $y_{0}$, og differentialkvotienterne er netop de partielle afledede:
+SÃ¥ er funktionerne $f_{1}(x)$ og $f_{2}(y)$ to funktioner af hver \'{e}n variabel, henholdsvis $x$ og $y$, og de er begge differentiable i henholdsvis $x_{0}$ og $y_{0}$, og differentialkvotienterne er netop de partielle afledede:
 \begin{equation}
 f'_{x}(x_{0}, y_{0}) = f'_{1}(x_{0}) \quad \textrm{og} \quad f'_{y}(x_{0}, y_{0}) = f'_{2}(y_{0})
 \end{equation}
-Med andre ord: Ved at indføre de to hjælpefunktioner af \'{e}n variabel, $f_{1}(x)$ og $f_{2}(y)$, fås de partielle afledede af $f(x,y)$ ved at finde de sædvanlige differentialkvotienter af $f_{1}(x)$ og $f_{2}(y)$ i henholdsvis $x_{0}$ og $y_{0}$.
+Med andre ord: Ved at indfÃ¸re de to hjÃ¦lpefunktioner af \'{e}n variabel, $f_{1}(x)$ og $f_{2}(y)$, fÃ¥s de partielle afledede af $f(x,y)$ ved at finde de sÃ¦dvanlige differentialkvotienter af $f_{1}(x)$ og $f_{2}(y)$ i henholdsvis $x_{0}$ og $y_{0}$.
 \end{theorem}
 \begin{bevis}
-Hvis vi sætter $y=y_{0}$ overalt i ligning (\ref{eqDifferentiabel}) får vi:
+Hvis vi sÃ¦tter $y=y_{0}$ overalt i ligning (\ref{eqDifferentiabel}) fÃ¥r vi:
 \begin{equation}
 \begin{aligned}
 f_{1}(x) = f(x,y_{0}) = &f_{1}(x_{0}) + f'_{x}(x_{0}, y_{0})\cdot (x-x_{0}) \\
 &\phantom{f(x,y) =}+ \rho_{(x_{0}, y_{0})}(x,y_{0}) \cdot \varepsilon_{f}(x-x_{0},0) \quad ,
 \end{aligned}
 \end{equation}
-sådan at koefficienten til faktoren $(x-x_{0})$ lige præcis er $f'_{x}(x_{0}, y_{0})$. Vi aflæser altså for det første, at $f_{1}(x)$ er differentiabel i $x_{0}$ og for det andet, at $ f'_{1}(x_{0}) = f'_{x}(x_{0}, y_{0})$. Og det var den ene halvdel af det vi skulle vise; den anden halvdel -- vedrørende $f'_{2}(y_{0}) = f'_{y}(x_{0}, y_{0})$ -- fås på helt tilsvarende måde.
+sÃ¥dan at koefficienten til faktoren $(x-x_{0})$ lige prÃ¦cis er $f'_{x}(x_{0}, y_{0})$. Vi aflÃ¦ser altsÃ¥ for det fÃ¸rste, at $f_{1}(x)$ er differentiabel i $x_{0}$ og for det andet, at $ f'_{1}(x_{0}) = f'_{x}(x_{0}, y_{0})$. Og det var den ene halvdel af det vi skulle vise; den anden halvdel -- vedrÃ¸rende $f'_{2}(y_{0}) = f'_{y}(x_{0}, y_{0})$ -- fÃ¥s pÃ¥ helt tilsvarende mÃ¥de.
 \end{bevis}
 
 
 \begin{example}[Bestemmelse af partielle afledede]
-Vi vil bestemme de partielle afledede af funktionen $f(x,y) = 3\,x^{2} + 7\,y^{3} + 10\,x\,y^{7}$ i ethvert punkt $(x_{0}, y_{0})$ i $\mathbb{R}^{2}$. Vi opstiller først de to hjælpefunktioner $f_{1}(x) = f(x, y_{0})$ og $f_{2}(y) = f(x_{0}, y)$:
+Vi vil bestemme de partielle afledede af funktionen $f(x,y) = 3\,x^{2} + 7\,y^{3} + 10\,x\,y^{7}$ i ethvert punkt $(x_{0}, y_{0})$ i $\mathbb{R}^{2}$. Vi opstiller fÃ¸rst de to hjÃ¦lpefunktioner $f_{1}(x) = f(x, y_{0})$ og $f_{2}(y) = f(x_{0}, y)$:
 \begin{equation}
 \begin{aligned}
 f_{1}(x) &= 3\,x^{2} + 7\,y_{0}^{3} + 10\,x\,y_{0}^{7} \\
 f_{2}(y) &= 3\,x_{0}^{2} + 7\,y^{3} + 10\,x_{0}\,y^{7} \quad.
 \end{aligned}
 \end{equation}
-De to hjælpefunktioner har differentialkvotienterne henholdsvis:
+De to hjÃ¦lpefunktioner har differentialkvotienterne henholdsvis:
 \begin{equation}
 \begin{aligned}
 f_{1}'(x) &= 6\,x + 0 + 10\,y_{0}^{7} \quad \textrm{da $y_{0}$ jo er en konstant her,} \\
 f_{2}'(y) &= 0 + 21\,y^{2} + 70\,x_{0}\,y^{6} \quad \textrm{da $x_{0}$ er en konstant} \quad.
 \end{aligned}
 \end{equation}
-Heraf får vi dernæst hjælpefunktionernes differentialkvotienter i $x_{0}$ henholdsvis $y_{0}$:
+Heraf fÃ¥r vi dernÃ¦st hjÃ¦lpefunktionernes differentialkvotienter i $x_{0}$ henholdsvis $y_{0}$:
 \begin{equation}
 \begin{aligned}
 f_{1}'(x_{0}) &= 6\,x_{0} +  10\,y_{0}^{7}  = f'_{x}(x_{0}, y_{0})\\
 f_{2}'(y_{0}) &= 21\,y_{0}^{2} + 70\,x_{0}\,y_{0}^{6} = f'_{y}(x_{0}, y_{0})  \quad.
 \end{aligned}
 \end{equation}
-Heraf fås generelt, det vil sige for alle $(x,y)$ i $\mathbb{R}^{2}\,$:
+Heraf fÃ¥s generelt, det vil sige for alle $(x,y)$ i $\mathbb{R}^{2}\,$:
 \begin{equation}
 \begin{aligned}
 f'_{x}(x,y) &= 6\,x +  10\,y^{7}  \\
@@ -532,8 +532,8 @@ f'_{y}(x,y) &= 21\,y^{2} + 70\,x\,y^{6} \quad.
 \end{example}
 
 \begin{exercise}
-Vis (på samme måde som for differentiable funktioner af \'{e}n variabel), at hvis $f(x,y)$ er differentiabel i $(x_{0}, y_{0})$, så er de to konstanter $a$ og $b$, altså konstanterne $f'_{x}(x_{0}, y_{0})$ og $f'_{y}(x_{0}, y_{0})$, veldefinerede i følgende forstand: Der findes \emph{ikke} to forskellige par af
-konstanter $a_{1}, b_{1}$ og $a_{2}, b_{2}$ og to epsilonfunktioner $\varepsilon_{1}$ og $\varepsilon_{2}$ sådan at der samtidig gælder:
+Vis (pÃ¥ samme mÃ¥de som for differentiable funktioner af \'{e}n variabel), at hvis $f(x,y)$ er differentiabel i $(x_{0}, y_{0})$, sÃ¥ er de to konstanter $a$ og $b$, altsÃ¥ konstanterne $f'_{x}(x_{0}, y_{0})$ og $f'_{y}(x_{0}, y_{0})$, veldefinerede i fÃ¸lgende forstand: Der findes \emph{ikke} to forskellige par af
+konstanter $a_{1}, b_{1}$ og $a_{2}, b_{2}$ og to epsilonfunktioner $\varepsilon_{1}$ og $\varepsilon_{2}$ sÃ¥dan at der samtidig gÃ¦lder:
 \begin{equation}
 \begin{aligned}
 f(x,y) = &f(x_{0}, y_{0}) + a_{1}\cdot (x-x_{0}) + b_{1}\cdot (y-y_{0}) \\
@@ -555,45 +555,45 @@ Bestem samtlige partielle afledede af de partielle afledede i ethvert punkt $(x,
 \end{exercise}
 
 
-Den opmærksomme opgaveløser vil have observeret (f.eks. i opgaverne ovenfor) at $f''_{xy}(x, y)$ og $f''_{yx}(x, y)$ typisk er ens!
-Det er ikke nogen tilfældighed, det gælder sædvanligvis at man kan nøjes med at beregne den ene af de to dobbeltafledede:
+Den opmÃ¦rksomme opgavelÃ¸ser vil have observeret (f.eks. i opgaverne ovenfor) at $f''_{xy}(x, y)$ og $f''_{yx}(x, y)$ typisk er ens!
+Det er ikke nogen tilfÃ¦ldighed, det gÃ¦lder sÃ¦dvanligvis at man kan nÃ¸jes med at beregne den ene af de to dobbeltafledede:
 
 \begin{theorem}[De blandede dobbeltafledede er ens] \label{thmBlandDobbelt}
-Hvis alle de $4$ dobbelt afledede af en given funktion $f(x,y)$ er kontinuerte i et åbent område, så gælder i hele området:
+Hvis alle de $4$ dobbelt afledede af en given funktion $f(x,y)$ er kontinuerte i et Ã¥bent omrÃ¥de, sÃ¥ gÃ¦lder i hele omrÃ¥det:
 \begin{equation}
 f''_{xy}(x,y) = f''_{yx}(x,y) \quad .
 \end{equation}
 \end{theorem}
 
 \begin{exercise}
-Vis (på samme måde som for funktioner af \'{e}n variabel) at: Hvis en funktion $f(x, y)$ af to variable er differentiabel i et punkt $(x_{0}, y_{0})$, så er funktionen også kontinuert i dette punkt. Vis også med et eksempel, at hvis en funktion er kontinuert i $(x_{0}, y_{0})$, så behøver den ikke at være differentiabel i $(x_{0}, y_{0})$. Se f.eks. på $\rho_{(x_{0}, y_{0})}(x,y)$.
+Vis (pÃ¥ samme mÃ¥de som for funktioner af \'{e}n variabel) at: Hvis en funktion $f(x, y)$ af to variable er differentiabel i et punkt $(x_{0}, y_{0})$, sÃ¥ er funktionen ogsÃ¥ kontinuert i dette punkt. Vis ogsÃ¥ med et eksempel, at hvis en funktion er kontinuert i $(x_{0}, y_{0})$, sÃ¥ behÃ¸ver den ikke at vÃ¦re differentiabel i $(x_{0}, y_{0})$. Se f.eks. pÃ¥ $\rho_{(x_{0}, y_{0})}(x,y)$.
 \end{exercise}
 
-Den opmærksomme vil også have noteret, at vi mangler en overvejelse: Hvis $f(x,y)$ er differentiabel i et punkt $(x_{0}, y_{0})$, så findes de partielle afledede
-i konsekvens af differentiabiliteten og de kan bestemmes ved hjælp af de differentiable hjælpefunktioner $f_{1}(x)$ og $f_{2}(y)$. Man kan nu med god grund  spørge: Hvis de to hjælpefunktioner findes  for en given funktion $f(x,y)$,  og det viser sig, at de er differentiable i henholdsvis $x_{0}$ og $y_{0}$, betyder det så, at $f(x,y)$ er differentiabel i $(x_{0}, y_{0})$? \\
+Den opmÃ¦rksomme vil ogsÃ¥ have noteret, at vi mangler en overvejelse: Hvis $f(x,y)$ er differentiabel i et punkt $(x_{0}, y_{0})$, sÃ¥ findes de partielle afledede
+i konsekvens af differentiabiliteten og de kan bestemmes ved hjÃ¦lp af de differentiable hjÃ¦lpefunktioner $f_{1}(x)$ og $f_{2}(y)$. Man kan nu med god grund  spÃ¸rge: Hvis de to hjÃ¦lpefunktioner findes  for en given funktion $f(x,y)$,  og det viser sig, at de er differentiable i henholdsvis $x_{0}$ og $y_{0}$, betyder det sÃ¥, at $f(x,y)$ er differentiabel i $(x_{0}, y_{0})$? \\
 
-Følgende sætning kaster lys over dette spørgsmål:
+FÃ¸lgende sÃ¦tning kaster lys over dette spÃ¸rgsmÃ¥l:
 
 \begin{theorem}[Fra partielle afledede til differentiabilitet] \label{thmPartiel2Dif}
-Hvis $f(x,y)$ har partielle afledede (fundet via hjælpefunktionerne $f_{1}(x)$ og $f_{2}(y)$)  i et åbent område $A$ indeholdende $(x_{0}, y_{0})$, og hvis de partielle afledede af $f(x,y)$ begge er kontinuerte i $A$, så er $f(x,y)$ differerentiabel.
+Hvis $f(x,y)$ har partielle afledede (fundet via hjÃ¦lpefunktionerne $f_{1}(x)$ og $f_{2}(y)$)  i et Ã¥bent omrÃ¥de $A$ indeholdende $(x_{0}, y_{0})$, og hvis de partielle afledede af $f(x,y)$ begge er kontinuerte i $A$, sÃ¥ er $f(x,y)$ differerentiabel.
 \end{theorem}
 
-At der nødvendigvis må være en ekstra betingelse i sætning \ref{thmPartiel2Dif} følger af eksemplet her:
+At der nÃ¸dvendigvis mÃ¥ vÃ¦re en ekstra betingelse i sÃ¦tning \ref{thmPartiel2Dif} fÃ¸lger af eksemplet her:
 
-\begin{example}[Differentiable hjælpefunktioner er ikke nok]
-Vi ser på $0$-udvidelsen af følgende funktion:
+\begin{example}[Differentiable hjÃ¦lpefunktioner er ikke nok]
+Vi ser pÃ¥ $0$-udvidelsen af fÃ¸lgende funktion:
 \begin{equation}
 f(x,y) = \frac{x\,y^{2}}{x^{2} + y^{4}} \quad .
 \end{equation}
-Den funktion er ikke differentiabel i $(0,0)$ -- den er nemlig ikke engang kontinuert i $(0,0)$ (!) (Hvorfor ikke?) Ikke desto mindre findes de to hjælpefunktioner
+Den funktion er ikke differentiabel i $(0,0)$ -- den er nemlig ikke engang kontinuert i $(0,0)$ (!) (Hvorfor ikke?) Ikke desto mindre findes de to hjÃ¦lpefunktioner
 \begin{equation}
 \begin{aligned}
 f_{1}(x) &= f(x, 0) = 0 \\
 f_{2}(y) &= f(0, y) = 0 \quad,
 \end{aligned}
 \end{equation}
-og som det ses, er de begge to særdeles differentiable i $(0,0)$. Selv om hjælpefunktionerne er differentiable behøver den aktuelle
-funktion selv ikke at være differentiabel.
+og som det ses, er de begge to sÃ¦rdeles differentiable i $(0,0)$. Selv om hjÃ¦lpefunktionerne er differentiable behÃ¸ver den aktuelle
+funktion selv ikke at vÃ¦re differentiabel.
 \end{example}
 
 
@@ -605,29 +605,29 @@ funktion selv ikke at være differentiabel.
 
 
 
-\section{Det approksimerende første-grads-polynomium}
+\section{Det approksimerende fÃ¸rste-grads-polynomium}
 
-Som for funktioner af \'{e}n variabel kan vi trunkere udtrykket i ligning (\ref{eqDifferentiabel}) ved simpelthen at fjerne 'epsilon-funktions-delen' hvorved vi står tilbage med et førstegrads-polynomium i de to variable $x$ og $y$:
+Som for funktioner af \'{e}n variabel kan vi trunkere udtrykket i ligning (\ref{eqDifferentiabel}) ved simpelthen at fjerne 'epsilon-funktions-delen' hvorved vi stÃ¥r tilbage med et fÃ¸rstegrads-polynomium i de to variable $x$ og $y$:
 \begin{equation}
 P_{1, (x_{0}, y_{0})}(x,y) = f(x_{0}, y_{0}) + f'_{x}(x_{0}, y_{0})\cdot (x-x_{0}) + f'_{y}(x_{0}, y_{0})\cdot (y-y_{0}) \quad .
 \end{equation}
-Funktionen $P_{1, (x_{0}, y_{0})}(x,y)$ kaldes det approksimerende første-gradspolynomium for $f(x,y)$ med udviklingspunkt $(x_{0}, y_{0})$.\\
+Funktionen $P_{1, (x_{0}, y_{0})}(x,y)$ kaldes det approksimerende fÃ¸rste-gradspolynomium for $f(x,y)$ med udviklingspunkt $(x_{0}, y_{0})$.\\
 
-Læg mærke til, at $P_{1, (x_{0}, y_{0})}(x,y)$ virkelig \emph{er} et første-grads-polynomium i de to variable $x$ og $y$ fordi de højst optræder med potensen $1$ og alle andre faktorer og addender er konstanter.
+LÃ¦g mÃ¦rke til, at $P_{1, (x_{0}, y_{0})}(x,y)$ virkelig \emph{er} et fÃ¸rste-grads-polynomium i de to variable $x$ og $y$ fordi de hÃ¸jst optrÃ¦der med potensen $1$ og alle andre faktorer og addender er konstanter.
 
 \begin{example}[Paraboloide med tangentplan]
-Vi ser på funktionen
+Vi ser pÃ¥ funktionen
 \begin{equation}
 f(x,y) = 1 - \frac{1}{2}x^{2} - \frac{1}{2}y^{2} \quad.
 \end{equation}
-Så er
+SÃ¥ er
 \begin{equation}
 \begin{aligned}
 f'_{x}(x_{0}, y_{0}) &= -x_{0}\\
 f'_{y}(x_{0}, y_{0}) &= - y_{0} \quad,
 \end{aligned}
 \end{equation}
-sådan at
+sÃ¥dan at
 \begin{equation}
 \begin{aligned}
 P_{1, (x_{0}, y_{0})}(x,y) &=  f(x_{0}, y_{0}) - x_{0}\cdot(x-x_{0}) - y_{0}\cdot (y-y_{0}) \\
@@ -636,13 +636,13 @@ P_{1, (x_{0}, y_{0})}(x,y) &=  f(x_{0}, y_{0}) - x_{0}\cdot(x-x_{0}) - y_{0}\cdo
 \quad.
 \end{aligned}
 \end{equation}
-Specielt får vi med udviklingspunktet $(x_{0}, y_{0}) = (1, -1)$:
+Specielt fÃ¥r vi med udviklingspunktet $(x_{0}, y_{0}) = (1, -1)$:
 \begin{equation}
 P_{1, (1, -1)}(x,y) = y - x + 2 \quad .
 \end{equation}
-Se figur \ref{figParabPlan}, hvor grafen for dette approksimerende første-gradspolynomium for $f(x,y)$ er plottet sammen med grafen for
-funktionen selv. Højde-snit-kurverne og niveau-kurverne er ligeledes gengivet for begge funktionerne. I og omkring det markerede udviklingspunkt er funktionerne
-meget ens - grafen for det approksimerende førstegrads-polynomium med udviklingspunkt $(x_{0}, y_{0})$ fortjener helt klart at blive kaldt \ind{tangentplan}{tangentplanen} til grafen for $f(x,y)$ i punktet $(x_{0}, y_{0}, f(x_{0}, y_{0})$.
+Se figur \ref{figParabPlan}, hvor grafen for dette approksimerende fÃ¸rste-gradspolynomium for $f(x,y)$ er plottet sammen med grafen for
+funktionen selv. HÃ¸jde-snit-kurverne og niveau-kurverne er ligeledes gengivet for begge funktionerne. I og omkring det markerede udviklingspunkt er funktionerne
+meget ens - grafen for det approksimerende fÃ¸rstegrads-polynomium med udviklingspunkt $(x_{0}, y_{0})$ fortjener helt klart at blive kaldt \ind{tangentplan}{tangentplanen} til grafen for $f(x,y)$ i punktet $(x_{0}, y_{0}, f(x_{0}, y_{0})$.
 \end{example}
 
 \begin{definition}[Tangentplan til grafen for en funktion af to variable]
@@ -650,7 +650,7 @@ Givet en differentiabel funktion $f(x,y)$. Tangentplanen til grafen for $f(x,y)$
 \begin{equation}
 z = P_{1, (x_{0}, y_{0})}(x,y) \quad,
 \end{equation}
-hvor højresiden er det approksimerende polynomium af første grad for $f(x,y)$ med udviklingspunkt $(x_{0}, y_{0})$.
+hvor hÃ¸jresiden er det approksimerende polynomium af fÃ¸rste grad for $f(x,y)$ med udviklingspunkt $(x_{0}, y_{0})$.
 \end{definition}
 
 
@@ -658,13 +658,13 @@ hvor højresiden er det approksimerende polynomium af første grad for $f(x,y)$ me
 \begin{figure}[h]
 \centerline{\includegraphics[height=90mm]{plotParabPlanUP.pdf} \quad \includegraphics[height=35mm]{plotParabPlanNiveau.pdf}}
 \begin{center}
-\caption{Tangentplanen approksimerer grafen over udviklingspunktet og niveaulinjerne for det approksimerende førstegradspolynomium approksimerer niveaulinjerne for funktionen omkring udviklingspunktet i $(x, y)$-planen} \label{figParabPlan}
+\caption{Tangentplanen approksimerer grafen over udviklingspunktet og niveaulinjerne for det approksimerende fÃ¸rstegradspolynomium approksimerer niveaulinjerne for funktionen omkring udviklingspunktet i $(x, y)$-planen} \label{figParabPlan}
 \end{center}
 \end{figure}
 
 
 \begin{exercise}
-Bestem det approksimerende første-grads-polynomium for følgende funktion i ethvert punkt $(x_{0}, y_{0})$:
+Bestem det approksimerende fÃ¸rste-grads-polynomium for fÃ¸lgende funktion i ethvert punkt $(x_{0}, y_{0})$:
 \begin{equation}
 f(x,y) = \cos(3x)\cdot \sin(3y) \quad .
 \end{equation}
@@ -680,21 +680,21 @@ f(x,y) = \cos(3x)\cdot \sin(3y) \quad .
 
 \section{Partielle afledede af sammensatte funktioner}
 
-Sammensatte funktioner af to variable optræder i rigtig mange anvendelser,
+Sammensatte funktioner af to variable optrÃ¦der i rigtig mange anvendelser,
 lige fra GPS teknologi til geologi og termodynamik. \\
 
 En sammensat funktion af to variable
-fås typisk således: Lad $f(x,y)$ være en funktion af to variable, hvor $(x,y) \in \mathcal{D}m(f) \subset \mathbb{R}^{2}$ og lad $p(u,v)$
-og $q(u,v)$ være \emph{to} andre funktioner af to variable, hvor vi så antager, at $(u,v) \in \mathcal{D}m(p) \cap \mathcal{D}m(q) \subset \mathbb{R}^{2}$. Antager vi nu yderligere, at $(u,v)$ tilhører et område $A$ i $\mathbb{R}^{2}$ sådan at der gælder, at \emph{værdierne} af $p(u,v)$ og $q(u,v)$ ligger i definitionsmængden for $f(x,y)$ i den forstand, at $(p(u,v), q(u,v)) \in \mathcal{D}m(f)$ for $(u,v) \in A$,
-så er den sammensatte funktion
+fÃ¥s typisk sÃ¥ledes: Lad $f(x,y)$ vÃ¦re en funktion af to variable, hvor $(x,y) \in \mathcal{D}m(f) \subset \mathbb{R}^{2}$ og lad $p(u,v)$
+og $q(u,v)$ vÃ¦re \emph{to} andre funktioner af to variable, hvor vi sÃ¥ antager, at $(u,v) \in \mathcal{D}m(p) \cap \mathcal{D}m(q) \subset \mathbb{R}^{2}$. Antager vi nu yderligere, at $(u,v)$ tilhÃ¸rer et omrÃ¥de $A$ i $\mathbb{R}^{2}$ sÃ¥dan at der gÃ¦lder, at \emph{vÃ¦rdierne} af $p(u,v)$ og $q(u,v)$ ligger i definitionsmÃ¦ngden for $f(x,y)$ i den forstand, at $(p(u,v), q(u,v)) \in \mathcal{D}m(f)$ for $(u,v) \in A$,
+sÃ¥ er den sammensatte funktion
 \begin{equation}
 h(u,v) = f(p(u,v), q(u,v)) \quad \textrm{veldefineret for alle} \quad (x,y) \in A \quad.
 \end{equation}
 
-Vi vil sædvanligvis kun se på sammensatte funktioner som er definerede i hele planen, sådan at  $A = \mathbb{R}^{2}$.
+Vi vil sÃ¦dvanligvis kun se pÃ¥ sammensatte funktioner som er definerede i hele planen, sÃ¥dan at  $A = \mathbb{R}^{2}$.
 
 \begin{example}[Sammensatte funktioner af to variable]
-Lad $f(x,y)$, $p(u,v)$, og $q(u,v)$ være bestemt ved de angivne funktioner nedenfor.  Så fås de tilsvarende sammensatte funktioner $h(u,v)$ ved at sætte $x= p(u,v)$, $y=q(u,v)$, og $h(u,v) = f(x,y) = f(p(u,v), q(u,v))$ i de respektive definitions-områder (de anføres ikke her):
+Lad $f(x,y)$, $p(u,v)$, og $q(u,v)$ vÃ¦re bestemt ved de angivne funktioner nedenfor.  SÃ¥ fÃ¥s de tilsvarende sammensatte funktioner $h(u,v)$ ved at sÃ¦tte $x= p(u,v)$, $y=q(u,v)$, og $h(u,v) = f(x,y) = f(p(u,v), q(u,v))$ i de respektive definitions-omrÃ¥der (de anfÃ¸res ikke her):
 \begin{equation}
 \begin{array}{lllllll}
   f(x,y) = x+y & , & p(u,v) = 2u \cdot v  & , & q(u,v)= u^{2} + v^{2}& , & h(u,v) = (u + v)^{2}\\
@@ -704,15 +704,15 @@ Lad $f(x,y)$, $p(u,v)$, og $q(u,v)$ være bestemt ved de angivne funktioner neden
 \end{equation}
 \end{example}
 
-\begin{theorem}[Kædereglen i planen] \label{thmChain2VarA}
-Lad $f(x,y)$, $p(u,v)$, og $q(u,v)$ være tre differentiable funktioner - hver af to variable.
+\begin{theorem}[KÃ¦dereglen i planen] \label{thmChain2VarA}
+Lad $f(x,y)$, $p(u,v)$, og $q(u,v)$ vÃ¦re tre differentiable funktioner - hver af to variable.
 Lad $h(u,v)$ betegne den sammensatte funktion
 \begin{equation}
 h(u,v) = f(p(u,v), q(u,v)) \quad .
  \end{equation}
-Så kan de partielle afledede af $h(u,v)$ udtrykkes ved hjælp af dels de partielle afledede af $f(x,y)$, dels de partielle afledede af $p(u,v)$, og dels de partielle afledede af $q(u,v)$. Vi vil udtrykke de partielle afledede af $h(u,v)$ i $(u_{0}, v_{0})$ så vi sætter $x_{0}= p(u_{0},v_{0})$ og $y_{0}= q(u_{0},v_{0})$.
+SÃ¥ kan de partielle afledede af $h(u,v)$ udtrykkes ved hjÃ¦lp af dels de partielle afledede af $f(x,y)$, dels de partielle afledede af $p(u,v)$, og dels de partielle afledede af $q(u,v)$. Vi vil udtrykke de partielle afledede af $h(u,v)$ i $(u_{0}, v_{0})$ sÃ¥ vi sÃ¦tter $x_{0}= p(u_{0},v_{0})$ og $y_{0}= q(u_{0},v_{0})$.
 
- Så har vi:
+ SÃ¥ har vi:
 \begin{equation}
 \begin{aligned}
 h'_{u}(u_{0},v_{0}) &=  f'_{x}(x_{0}, y_{0})\cdot p'_{u}(u_{0}, v_{0}) + f'_{y}(x_{0}, y_{0})\cdot q'_{u}(u_{0}, v_{0})\\
@@ -721,13 +721,13 @@ h'_{v}(u_{0},v_{0}) &=  f'_{x}(x_{0}, y_{0})\cdot p'_{v}(u_{0}, v_{0}) + f'_{y}(
 \end{equation}
 \end{theorem}
 \begin{bevis}
-Resultatet følger efter præcis samme opskrift som beviset for differentiation af den sammensatte funktion $f(g(x))$ af \'{e}n variabel -- der er bare lidt flere konstanter og funktioner at holde styr på.
+Resultatet fÃ¸lger efter prÃ¦cis samme opskrift som beviset for differentiation af den sammensatte funktion $f(g(x))$ af \'{e}n variabel -- der er bare lidt flere konstanter og funktioner at holde styr pÃ¥.
 \end{bevis}
 
 
 
 \begin{exercise}
-Bestem de partielle afledede i ethvert punkt $(u,v)$ for hver af de sammensatte funktioner nedenfor -- dels ved at beregne dem direkte ud fra det givne eksplicitte udtryk for $h(u,v)$ og dels ved at benytte kædereglen og de parteille afledede af ingredienserne i $h(u,v)$, altså de partielle afledede af $f(x,y)$, $p(u,v)$ og $q(u,v)$.
+Bestem de partielle afledede i ethvert punkt $(u,v)$ for hver af de sammensatte funktioner nedenfor -- dels ved at beregne dem direkte ud fra det givne eksplicitte udtryk for $h(u,v)$ og dels ved at benytte kÃ¦dereglen og de parteille afledede af ingredienserne i $h(u,v)$, altsÃ¥ de partielle afledede af $f(x,y)$, $p(u,v)$ og $q(u,v)$.
 \begin{equation}
 \begin{array}{lllllll}
   f(x,y) = x+y & , & p(u,v) = 2u \cdot v  & , & q(u,v)= u^{2} + v^{2}& , & h(u,v) = (u + v)^{2}\\
@@ -740,7 +740,7 @@ Bestem de partielle afledede i ethvert punkt $(u,v)$ for hver af de sammensatte 
 
 
 \begin{aha}
-Læg mærke til, at hver af de partielle afledede af den sammensatte funktion $h(u,v) = f(p(u,v), q(u,v))$ i et punkt $(u_{0}, v_{0})$ effektivt kan udtrykkes ved prikprodukter hvori indgår en fælles faktor, nemlig vektoren $\left(f'_{x}(x_{0}, y_{0})\, , \,\,f'_{y}(x_{0}, y_{0})\right)$ hvor $x_{0}= p(u_{0}, v_{0})$ og $y_{0}= q(u_{0}, v_{0})$:
+LÃ¦g mÃ¦rke til, at hver af de partielle afledede af den sammensatte funktion $h(u,v) = f(p(u,v), q(u,v))$ i et punkt $(u_{0}, v_{0})$ effektivt kan udtrykkes ved prikprodukter hvori indgÃ¥r en fÃ¦lles faktor, nemlig vektoren $\left(f'_{x}(x_{0}, y_{0})\, , \,\,f'_{y}(x_{0}, y_{0})\right)$ hvor $x_{0}= p(u_{0}, v_{0})$ og $y_{0}= q(u_{0}, v_{0})$:
 \begin{equation*}
 \begin{aligned}
 h'_{u}(u_{0},v_{0}) &=  \left(f'_{x}(x_{0}, y_{0})\, , \,\, f'_{y}(x_{0}, y_{0})\right) \bm{\cdot} \left(p'_{u}(u_{0}, v_{0})\, , \,\,q'_{u}(u_{0}, v_{0})\right)\\
@@ -754,33 +754,33 @@ h'_{v}(u_{0},v_{0}) &=  \left(f'_{x}(x_{0}, y_{0})\, , \,\, f'_{y}(x_{0}, y_{0})
 
 \begin{definition}[Gradientvektor]
 Lad $f(x,y)$ betegne en differentiabel funktion af to variable. De partielle afledede af $f(x,y)$ i et punkt $(x_{0}, y_{0})$ definerer
-\ind{gradientvektoren for $f(x,y)$}{gradientvektoren for $f(x,y)$} i $(x_{0}, y_{0})$ på følgende måde:
+\ind{gradientvektoren for $f(x,y)$}{gradientvektoren for $f(x,y)$} i $(x_{0}, y_{0})$ pÃ¥ fÃ¸lgende mÃ¥de:
 \begin{equation}
 {\bm{\nabla}}f(x_{0}, y_{0}) = \left(f'_{x}(x_{0}, y_{0})\, , \, \, f'_{y}(x_{0}, y_{0}) \right) \quad .
 \end{equation}
-På denne måde får vi altså defineret en ganske bestemt vektor i ethvert punkt, hvor $f(x,y)$ er differentiabel:
+PÃ¥ denne mÃ¥de fÃ¥r vi altsÃ¥ defineret en ganske bestemt vektor i ethvert punkt, hvor $f(x,y)$ er differentiabel:
 \begin{equation}
 {\bm{\nabla}}f(x,y) = \left(f'_{x}(x,y)\, , \, \, f'_{y}(x,y) \right) \quad .
 \end{equation}
 \end{definition}
 
-Hvis vi for ethvert fodpunkt $(x_{0}, y_{0})$ afsætter gradientvektoren ${\bm{\nabla}}f(x_{0},y_{0})$ for $f(x,y)$ ud fra det fodpunkt i planen $\mathbb{R}^{2}$ får vi konstrueret \ind{gradientvektorfelt}{gradientvektorfeltet} for $f(x,y)$.
+Hvis vi for ethvert fodpunkt $(x_{0}, y_{0})$ afsÃ¦tter gradientvektoren ${\bm{\nabla}}f(x_{0},y_{0})$ for $f(x,y)$ ud fra det fodpunkt i planen $\mathbb{R}^{2}$ fÃ¥r vi konstrueret \ind{gradientvektorfelt}{gradientvektorfeltet} for $f(x,y)$.
 
 \begin{exercise}
-Bestem gradientvektorfeltet  i ethvert punkt $(x,y)$ for hver af følgende funktioner i deres respektive definitionsmængder:
+Bestem gradientvektorfeltet  i ethvert punkt $(x,y)$ for hver af fÃ¸lgende funktioner i deres respektive definitionsmÃ¦ngder:
 $f(x,y) = x+y$, $f(x,y) = y\cdot\e^{x}$,  og $f(x,y) = \rho_{x_{0}, y_{0}}^{2}(x,y)$.
 \end{exercise}
 
-Ved hjælp af gradientvektorfeltet ${\bm{\nabla}}f(x,y)$ for $f(x,y)$ kan vi nu formulere de partielle afledede af den sammensatte funktion
+Ved hjÃ¦lp af gradientvektorfeltet ${\bm{\nabla}}f(x,y)$ for $f(x,y)$ kan vi nu formulere de partielle afledede af den sammensatte funktion
 $h(u,v) = f(p(u,v), q(u,v))$ lidt smartere:
 
-\begin{theorem}[Kædereglen udtrykt med gradienten af $f(x,y)$] \label{thmChain2VarB}
-Lad $f(x,y)$, $p(u,v)$, og $q(u,v)$ være tre differentiable funktioner - hver af to variable.
+\begin{theorem}[KÃ¦dereglen udtrykt med gradienten af $f(x,y)$] \label{thmChain2VarB}
+Lad $f(x,y)$, $p(u,v)$, og $q(u,v)$ vÃ¦re tre differentiable funktioner - hver af to variable.
 Lad $h(u,v)$ betegne den sammensatte funktion
 \begin{equation}
 h(u,v) = f(p(u,v), q(u,v)) \quad .
  \end{equation}
-Så kan de partielle afledede af $h(u_{0},v_{0})$ med hensyn til henholdsvis $u$ og $v$ i $(u_{0},v_{0})$ udtrykkes ved gradienten af $f(x,y)$ i $(x_{0}, y_{0}) = (\,p(u_{0},v_{0}), q(u_{0},v_{0})\,)\,$:
+SÃ¥ kan de partielle afledede af $h(u_{0},v_{0})$ med hensyn til henholdsvis $u$ og $v$ i $(u_{0},v_{0})$ udtrykkes ved gradienten af $f(x,y)$ i $(x_{0}, y_{0}) = (\,p(u_{0},v_{0}), q(u_{0},v_{0})\,)\,$:
 \begin{equation} \label{eqGeneralChain}
 \begin{aligned}
 h'_{u}(u_{0},v_{0}) &= {\bm{\nabla}}f(x_{0}, y_{0}) \bm{\cdot} \left(p'_{u}(u_{0},v_{0}), q'_{u}(u_{0},v_{0}) \right) \\
@@ -792,31 +792,31 @@ h'_{v}(u_{0},v_{0}) &= {\bm{\nabla}}f(x_{0}, y_{0}) \bm{\cdot} \left(p'_{v}(u_{0
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Kædereglen 'langs' kurver i planen}
-Hvis funktionerne $p(u,v)$ og $q(u,v)$ kun afhænger af den ene variable $u$ kan vi selvfølgelig betegne funktionerne med henholdsvis  $p(u)$ og $q(u)$.
-Den sammensattte funktion $h(u) = f(p(u), q(u))$ -- hvor $f(x,y)$ er en givet differerentiabel funktion i planen -- angiver så de funktionsværdier, som $f(x,y)$ antager \emph{langs den kurve} i planen, som er givet ved de to funktioner $p(u)$ og $q(u)$:
+\subsection{KÃ¦dereglen 'langs' kurver i planen}
+Hvis funktionerne $p(u,v)$ og $q(u,v)$ kun afhÃ¦nger af den ene variable $u$ kan vi selvfÃ¸lgelig betegne funktionerne med henholdsvis  $p(u)$ og $q(u)$.
+Den sammensattte funktion $h(u) = f(p(u), q(u))$ -- hvor $f(x,y)$ er en givet differerentiabel funktion i planen -- angiver sÃ¥ de funktionsvÃ¦rdier, som $f(x,y)$ antager \emph{langs den kurve} i planen, som er givet ved de to funktioner $p(u)$ og $q(u)$:
 
 \begin{definition}[Parametriserede kurver i planen]
-En \ind{kurve i planen}{kurve i planen} består af en punktmængde $\mathcal{C}$ i planen, som vi vil antage er givet ved to funktioner $p(u)$ og $q(u)$ på følgende måde:
+En \ind{kurve i planen}{kurve i planen} bestÃ¥r af en punktmÃ¦ngde $\mathcal{C}$ i planen, som vi vil antage er givet ved to funktioner $p(u)$ og $q(u)$ pÃ¥ fÃ¸lgende mÃ¥de:
 \begin{equation}
 \mathcal{C}_{\mathbf{r}}\quad : \quad \mathbf{r}(u) = (p(u), q(u)) \quad \textrm{hvor} \quad u \in \, ]\alpha, \beta[ \, \subset \mathbb{R} \quad .
 \end{equation}
-Det vil sige, at kurven er en parametriseret punktmængde med stedvektorerne $\mathbf{r}(u)$ og parameteren $u$ i et givet interval.
+Det vil sige, at kurven er en parametriseret punktmÃ¦ngde med stedvektorerne $\mathbf{r}(u)$ og parameteren $u$ i et givet interval.
 Kurven er \ind{differentiabel kurve}{differentiabel} hvis de to funktioner $p(u)$ og $q(u)$ begge er differentiable i hele intervallet $\,]\alpha, \beta[ \,$.\\
 
-Den parametriserede kurve siges at være \ind{regulær kurve}{regulær}, hvis $\mathbf{r}'(u) \neq \mathbf{0}$ for alle $u \in \, ]\alpha, \beta[\,$.
+Den parametriserede kurve siges at vÃ¦re \ind{regulÃ¦r kurve}{regulÃ¦r}, hvis $\mathbf{r}'(u) \neq \mathbf{0}$ for alle $u \in \, ]\alpha, \beta[\,$.
 \end{definition}
 
 
 \begin{theorem}[Tangent til kurve]
 Lad $\mathcal{C}_{\mathbf{r}}$ betegne en differentiabel kurve med parameterfremstillingen $\mathbf{r}(u)$ og antag at $\mathbf{r}'(u_{0}) \neq (0, 0)$.
-Tangenten $L_{u_{0}}$ (igennem punktet $\mathbf{r}(u_{0})$) til  $\mathcal{C}_{\mathbf{r}}$ er så givet ved følgende parameterfremstilling:
+Tangenten $L_{u_{0}}$ (igennem punktet $\mathbf{r}(u_{0})$) til  $\mathcal{C}_{\mathbf{r}}$ er sÃ¥ givet ved fÃ¸lgende parameterfremstilling:
 \begin{equation}
 L_{u_{0}}\quad : \quad \mathbf{T}(t) =  \mathbf{r}(u_{0}) + t \cdot \mathbf{r}'(u_{0}) \quad \textrm{hvor} \quad t \in \mathbb{R} \quad.
 \end{equation}
 \end{theorem}
 \begin{bevis}
-Vi nøjes med at se på det tilfælde hvor $p(u)$ er meget elementær: $p(u) = u$. Så er $\mathcal{C}_{\mathbf{r}}$ simpelthen grafen for funktionen $q(x)$ i $(x,y)$-planen. Grafen for den funktion har en tangent i punktet $(x_{0}, q(x_{0})$, som er givet ved ved det velkendte udtryk: $y = q(x_{0}) + q'(x_{0})(x-x_{0})$. En parameterfremstilling for den tangent er derfor:
+Vi nÃ¸jes med at se pÃ¥ det tilfÃ¦lde hvor $p(u)$ er meget elementÃ¦r: $p(u) = u$. SÃ¥ er $\mathcal{C}_{\mathbf{r}}$ simpelthen grafen for funktionen $q(x)$ i $(x,y)$-planen. Grafen for den funktion har en tangent i punktet $(x_{0}, q(x_{0})$, som er givet ved ved det velkendte udtryk: $y = q(x_{0}) + q'(x_{0})(x-x_{0})$. En parameterfremstilling for den tangent er derfor:
 \begin{equation}
 \begin{aligned}
 \mathbf{T}(t) &= (x_{0}, q(x_{0})) + t \cdot (1, q'(x_{0})) \\
@@ -827,20 +827,20 @@ Vi nøjes med at se på det tilfælde hvor $p(u)$ er meget elementær: $p(u) = u$. S
 og det var det, vi skulle indse.
 \end{bevis}
 
-Vi kan nu undersøge hvordan kædereglen ser ud og simplificeres langs parametriserede kurver -- vi skal blot 'bruge' den generelle kæderegel på de to $v$-uafhængige funktioner $p(u)$ og $q(u)$:
+Vi kan nu undersÃ¸ge hvordan kÃ¦dereglen ser ud og simplificeres langs parametriserede kurver -- vi skal blot 'bruge' den generelle kÃ¦deregel pÃ¥ de to $v$-uafhÃ¦ngige funktioner $p(u)$ og $q(u)$:
 
-\begin{theorem}[Kædereglen langs kurver] \label{thmKurveChainrule}
-Lad $\mathbf{r}(u) = (p(u), q(u))$ være en differentiabel parametriseret kurve i $(x,y)$-planen. En differentiabel funktion $f(x,y)$ antager så værdierne  $h(u) = f(p(u), q(u)) = f(\mathbf{r}(u))$ langs kurven. Den sammensatte funktion $h(u)$ af den ene variabel $u$ er differentiabel, og
+\begin{theorem}[KÃ¦dereglen langs kurver] \label{thmKurveChainrule}
+Lad $\mathbf{r}(u) = (p(u), q(u))$ vÃ¦re en differentiabel parametriseret kurve i $(x,y)$-planen. En differentiabel funktion $f(x,y)$ antager sÃ¥ vÃ¦rdierne  $h(u) = f(p(u), q(u)) = f(\mathbf{r}(u))$ langs kurven. Den sammensatte funktion $h(u)$ af den ene variabel $u$ er differentiabel, og
 \begin{equation} \label{eqKurveChain}
 h'(u) = {\bm{\nabla}}f(p(u), q(u)) {\bm{\cdot}} (p'(u), q'(u) ) = {\bm{\nabla}}f(\mathbf{r}(u))\, {\bm{\cdot}} \,{\mathbf{r}}'(u)\quad .
 \end{equation}
 \end{theorem}
 \begin{bevis}
-Resultatet følger direkte af den øverste ligning i (\ref{eqGeneralChain}). Bemærk, at funktionerne $h(u)$, $p(u)$, og $q(u)$ jo ikke afhænger af $v$, sådan at den nederste ligning i (\ref{eqGeneralChain}) reducerer til $0 = 0$.
+Resultatet fÃ¸lger direkte af den Ã¸verste ligning i (\ref{eqGeneralChain}). BemÃ¦rk, at funktionerne $h(u)$, $p(u)$, og $q(u)$ jo ikke afhÃ¦nger af $v$, sÃ¥dan at den nederste ligning i (\ref{eqGeneralChain}) reducerer til $0 = 0$.
 \end{bevis}
 
 
-Motiveret af dette simple udtryk for den afledede af funktionen $f(x,y)$ langs en parametriseret kurve $\mathbf{r}(u)$ indfører vi den \ind{retningsafledet af en funktion}{retningsafledede af funktionen} i den retning fra et givet punkt $(x_{0}, y_{0})$ som er givet ved en enhedsvektor $\mathbf{e}$:
+Motiveret af dette simple udtryk for den afledede af funktionen $f(x,y)$ langs en parametriseret kurve $\mathbf{r}(u)$ indfÃ¸rer vi den \ind{retningsafledet af en funktion}{retningsafledede af funktionen} i den retning fra et givet punkt $(x_{0}, y_{0})$ som er givet ved en enhedsvektor $\mathbf{e}$:
 
 
 \begin{definition}[Retningsafledede]
@@ -851,17 +851,17 @@ f'((x_{0}, y_{0}); \mathbf{e}) = {\bm{\nabla}}f(x_{0}, y_{0}) {\bm{\cdot}} \math
 \end{equation}
 \end{definition}
 
-Kædereglen langs kurver kan nu formuleres ved hjælp af den retningsafledede:
+KÃ¦dereglen langs kurver kan nu formuleres ved hjÃ¦lp af den retningsafledede:
 
-\begin{theorem}[Kæderegel langs kurver udtrykt ved retningsafledede]
-Funktionen $f(x,y)$ antager værdierne  $h(u) = f(p(u), q(u)) = f(\mathbf{r}(u))$ langs $\mathbf{r}(u)$. Hvis $\mathbf{r}(u)$ er en regulær parameterfremstilling for kurven får vi differentialkvotienten af $h(u)$:
+\begin{theorem}[KÃ¦deregel langs kurver udtrykt ved retningsafledede]
+Funktionen $f(x,y)$ antager vÃ¦rdierne  $h(u) = f(p(u), q(u)) = f(\mathbf{r}(u))$ langs $\mathbf{r}(u)$. Hvis $\mathbf{r}(u)$ er en regulÃ¦r parameterfremstilling for kurven fÃ¥r vi differentialkvotienten af $h(u)$:
 \begin{equation} \label{eqKurveChain}
 h'(u) = {\bm{\nabla}}f(p(u), q(u)) {\bm{\cdot}} (p'(u), q'(u) ) = f'((x_{0}, y_{0}); \mathbf{e})\cdot |\mathbf{r}'(u)| \quad .
 \end{equation}
 \end{theorem}
 
 \begin{aha}
-Læg mærke til, at den afledede af den sammensatte funktion $h(u) = f(\mathbf{r}(u))$ i et punkt på kurven $\mathbf{r}(u)$ kun afhænger af tangentvektoren til kurven i punktet -- $h'(u)$ er uafhængig af 'resten' af kurven.
+LÃ¦g mÃ¦rke til, at den afledede af den sammensatte funktion $h(u) = f(\mathbf{r}(u))$ i et punkt pÃ¥ kurven $\mathbf{r}(u)$ kun afhÃ¦nger af tangentvektoren til kurven i punktet -- $h'(u)$ er uafhÃ¦ngig af 'resten' af kurven.
 \end{aha}
 
 \begin{example}[Retningsafledede]\label{exampRetningsafledede}
@@ -883,35 +883,35 @@ f'((1,1); (\cos(\theta), \sin(\theta))) = 4\cos(\theta) + 6\sin(\theta) \quad .
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Kædereglen 'langs' \emph{niveau}-kurver for en funktion}
+\subsection{KÃ¦dereglen 'langs' \emph{niveau}-kurver for en funktion}
 
 
 En kurve  $(p(u), q(u))$ som er niveaukurve for en funktion $f(x,y)$
-giver anledning til en særlig simpel -- og meget vigtig -- version af kædereglen:
+giver anledning til en sÃ¦rlig simpel -- og meget vigtig -- version af kÃ¦dereglen:
 
-\begin{theorem}[Kædereglen langs niveaukurver] \label{thmLevelChainrule}
-Lad $\mathbf{r}(u) = (p(u), q(u))$ være en parametriseret kurve i $(x,y)$-planen.
+\begin{theorem}[KÃ¦dereglen langs niveaukurver] \label{thmLevelChainrule}
+Lad $\mathbf{r}(u) = (p(u), q(u))$ vÃ¦re en parametriseret kurve i $(x,y)$-planen.
 Antag, at kurven er en niveau-kurve for $f(x,y)$, dvs. $f(x,y)$ er en konstant $c$ langs hele kurven,
 \begin{equation}
 f(p(u), q(u)) = c \quad  \textrm{for alle $u$} \quad.
 \end{equation}
-Så  er
+SÃ¥  er
 \begin{equation}
 {\bm{\nabla}}f(\mathbf{r}(u)) {\bm{\cdot}} \mathbf{r}'(u) = 0 \quad .
 \end{equation}
-Med andre ord: Gradienten for en funktion $f(x,y)$ er i ethvert punkt hvor den ikke er $\mathbf{0}$ vinkelret på den niveau-kurve for $f(x,y)$ som går igennem punktet:
+Med andre ord: Gradienten for en funktion $f(x,y)$ er i ethvert punkt hvor den ikke er $\mathbf{0}$ vinkelret pÃ¥ den niveau-kurve for $f(x,y)$ som gÃ¥r igennem punktet:
 \begin{equation}
 {\bm{\nabla}}f(\mathbf{r}(u))\,\, \bot  \,\, \mathbf{r}'(u) \quad .
 \end{equation}
 \end{theorem}
 \begin{bevis}
-Funktionen $h(u) = f(p(u), q(u)) = c$ har tydeligvis $h'(u) = 0$ og da sætning \ref{thmKurveChainrule} giver $h'(u) = {\bm{\nabla}}f(p(u), q(u)) {\bm{\cdot}} (p'(u), q'(u) )$ fås resultatet.
+Funktionen $h(u) = f(p(u), q(u)) = c$ har tydeligvis $h'(u) = 0$ og da sÃ¦tning \ref{thmKurveChainrule} giver $h'(u) = {\bm{\nabla}}f(p(u), q(u)) {\bm{\cdot}} (p'(u), q'(u) )$ fÃ¥s resultatet.
 \end{bevis}
 
 \begin{aha}
-Læg mærke til, at sætning \ref{thmLevelChainrule} mere end antyder en anden sætning, som vi dog ikke vil vise her:
+LÃ¦g mÃ¦rke til, at sÃ¦tning \ref{thmLevelChainrule} mere end antyder en anden sÃ¦tning, som vi dog ikke vil vise her:
 Hvis en differentiabel funktion $f(x,y)$ har et egentligt gradientvektorfelt --
-dvs. hvis ${\bm{\nabla}}f(x,y) \neq (0,0)$ for alle $(x,y)$ i et givet åbent område $A$ i definitionsmængden --  så består alle niveau-mængderne for $f(x,y)$ i $A$ af pæne kurver, dvs. de kan parametriseres med differentiable vektorfunktioner $\mathbf{r}(u)$ som ovenfor.
+dvs. hvis ${\bm{\nabla}}f(x,y) \neq (0,0)$ for alle $(x,y)$ i et givet Ã¥bent omrÃ¥de $A$ i definitionsmÃ¦ngden --  sÃ¥ bestÃ¥r alle niveau-mÃ¦ngderne for $f(x,y)$ i $A$ af pÃ¦ne kurver, dvs. de kan parametriseres med differentiable vektorfunktioner $\mathbf{r}(u)$ som ovenfor.
 \end{aha}
 
 
@@ -921,16 +921,16 @@ dvs. hvis ${\bm{\nabla}}f(x,y) \neq (0,0)$ for alle $(x,y)$ i et givet åbent omr
 
 \begin{summary}
 Funktioner af to variable er behandlet i denne eNote efter samme 'skema' som funktioner af \'{e}n variabel:
-Definitionsmængderne er her delmængder af planen og giver derfor anledning til nye begreber og deskriptorer,
-som kan bruges til  beskrivelse af generelle mængder i planen. Vi har indført og illustreret begreberne:
-Åbne, afsluttede, begrænsede, og stjerneformede mængder samt defineret det
-indre af en mængde og det ydre af en mængde. Grafer og niveau-mængder for en funktion er vigtige hjælpemidler til at
- forstå hvordan funktionsværdierne $f(x,y)$ 'opfører sig' i afhængighed af hvor punktet $(x,y)$ befinder sig i
-definitionsmængden. Kontinuitet og differentiabilitet (eller mangel på samme) for en funktion kan ofte inspiceres ved at konstruere eller tegne
-grafen for funktionen eller ved at tegne niveau-mængderne for funktionen.
+DefinitionsmÃ¦ngderne er her delmÃ¦ngder af planen og giver derfor anledning til nye begreber og deskriptorer,
+som kan bruges til  beskrivelse af generelle mÃ¦ngder i planen. Vi har indfÃ¸rt og illustreret begreberne:
+Ã…bne, afsluttede, begrÃ¦nsede, og stjerneformede mÃ¦ngder samt defineret det
+indre af en mÃ¦ngde og det ydre af en mÃ¦ngde. Grafer og niveau-mÃ¦ngder for en funktion er vigtige hjÃ¦lpemidler til at
+ forstÃ¥ hvordan funktionsvÃ¦rdierne $f(x,y)$ 'opfÃ¸rer sig' i afhÃ¦ngighed af hvor punktet $(x,y)$ befinder sig i
+definitionsmÃ¦ngden. Kontinuitet og differentiabilitet (eller mangel pÃ¥ samme) for en funktion kan ofte inspiceres ved at konstruere eller tegne
+grafen for funktionen eller ved at tegne niveau-mÃ¦ngderne for funktionen.
 
 \begin{itemize}
-\item Niveaumængden hørende til værdien $c$ for funktionen $f(x,y)$ er givet ved
+\item NiveaumÃ¦ngden hÃ¸rende til vÃ¦rdien $c$ for funktionen $f(x,y)$ er givet ved
 \begin{equation}
 \mathcal{K}_{c}(f) = \maengde{(x,y) \in \mathcal{D}m(f)}{f(x,y) = c} \quad .
 \end{equation}
@@ -945,12 +945,12 @@ f(x,y) = &f(x_{0}, y_{0}) + f'_{x}(x_{0}, y_{0})\cdot (x-x_{0}) + f'_{y}(x_{0}, 
 &\phantom{f(x,y) =}+ \rho_{(x_{0}, y_{0})}(x,y) \cdot \varepsilon_{f}(x-x_{0},y-y_{0}) \quad .
 \end{aligned}
 \end{equation}
-\item De partielle afledede af $f(x,y)$ i et punkt $(x_{0}, y_{0})$ kan findes  ved at beregne de sædvanlige differentialkvotienter af de to hjælpefunktioner $f_{1}(x) = f(x, y_{0})$ og
+\item De partielle afledede af $f(x,y)$ i et punkt $(x_{0}, y_{0})$ kan findes  ved at beregne de sÃ¦dvanlige differentialkvotienter af de to hjÃ¦lpefunktioner $f_{1}(x) = f(x, y_{0})$ og
 $f_{2}(y) = f(x_{0}, y)$ i henholdsvis $x_{0}$ og $y_{0}$:
 \begin{equation}
 f'_{x}(x_{0}, y_{0}) = f'_{1}(x_{0}) \quad \textrm{og} \quad f'_{y}(x_{0}, y_{0}) = f'_{2}(y_{0})
 \end{equation}
-\item Det approksimerende førstegradspolynomium for $f(x,y)$ med udviklingspunkt $(x_{0}, y_{0})$ er givet ved:
+\item Det approksimerende fÃ¸rstegradspolynomium for $f(x,y)$ med udviklingspunkt $(x_{0}, y_{0})$ er givet ved:
 \begin{equation}
 P_{1, (x_{0}, y_{0})}(x,y) = f(x_{0}, y_{0}) + f'_{x}(x_{0}, y_{0})\cdot (x-x_{0}) + f'_{y}(x_{0}, y_{0})\cdot (y-y_{0}) \quad .
 \end{equation}

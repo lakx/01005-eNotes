@@ -1,122 +1,122 @@
 \input{../Strukturfiler/preambel}
-\setcounter{chapter}{12} %SÆT DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
+\setcounter{chapter}{12} %SÃ†T DETTE TAL TIL 1 MINDRE END DET AKTUELLE TRANSFERNOTE-NUMMER!!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% HERFRA SKAL DU SKRIVE ELLER INDSÆTTE %%%%
-%%% DEN FIL DU ØNSKER %%%%%%%%%%%%%%%%%%%%%%%
+%%% HERFRA SKAL DU SKRIVE ELLER INDSÃ†TTE %%%%
+%%% DEN FIL DU Ã˜NSKER %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter[Lineære 2. ordens differentialligninger]{Lineære 2. ordens differentialligninger med konstante koefficienter} \label{tn13}
+\chapter[LineÃ¦re 2. ordens differentialligninger]{LineÃ¦re 2. ordens differentialligninger med konstante koefficienter} \label{tn13}
 
 \begin{basis}
-I forlængelse af \tref{NUID10-tn11}{eNote} og \tref{NUID13-tn12}{eNote} om differentialligninger, kommer nu denne eNote omkring 2. ordens differentialligninger. Dele af bevisførelser m.m. læner sig op af de foregående noter, hvorfor det forudsættes, at man har kendskab til dem. Endvidere benyttes de komplekse tal.
+I forlÃ¦ngelse af \tref{NUID10-tn11}{eNote} og \tref{NUID13-tn12}{eNote} om differentialligninger, kommer nu denne eNote omkring 2. ordens differentialligninger. Dele af bevisfÃ¸relser m.m. lÃ¦ner sig op af de foregÃ¥ende noter, hvorfor det forudsÃ¦ttes, at man har kendskab til dem. Endvidere benyttes de komplekse tal.
 \end{basis}
 
-Lineære 2. ordens differentialligninger med konstante koefficienter har følgende udseende:
+LineÃ¦re 2. ordens differentialligninger med konstante koefficienter har fÃ¸lgende udseende:
 \begin{equation}
 x''(t) + a_1x'(t) + a_0x(t) = q(t), \quad t \in I, q : I \rightarrow \reel
 \end{equation}
-$ a_0, a_1 \in \reel $ er konstante koefficienter til $ x(t) $ henholdsvis $ x'(t) $. Højresiden $ q(t) $ er en kontinuert reel funktion, hvis definitionsmængde er et interval $I$ (som undertiden er hele $\reel\,$). Differentialligningen kaldes homogen hvis $q(t)=0$ for alle $t\in I\,$ og i modsat fald inhomogen.\bs 
-At denne type differentialligning er lineær, vises ved at dens venstreside opfattet som en afbildning $\,f:C^{\infty}(\reel)\rightarrow C^{\infty}(\reel)\,$ givet ved
+$ a_0, a_1 \in \reel $ er konstante koefficienter til $ x(t) $ henholdsvis $ x'(t) $. HÃ¸jresiden $ q(t) $ er en kontinuert reel funktion, hvis definitionsmÃ¦ngde er et interval $I$ (som undertiden er hele $\reel\,$). Differentialligningen kaldes homogen hvis $q(t)=0$ for alle $t\in I\,$ og i modsat fald inhomogen.\bs 
+At denne type differentialligning er lineÃ¦r, vises ved at dens venstreside opfattet som en afbildning $\,f:C^{\infty}(\reel)\rightarrow C^{\infty}(\reel)\,$ givet ved
 \begin{equation}
 f\big(\,x(t)\,)=x''(t)+a_1x'(t)+a_0x(t)
 \end{equation}
-opfylder linearitetskravene $L_1$ og $L_2\,$. Den fremgangsmetode der benyttes i denne eNote til at løse den inhomogene differentialligning, udnytter denne egenskab.
+opfylder linearitetskravene $L_1$ og $L_2\,$. Den fremgangsmetode der benyttes i denne eNote til at lÃ¸se den inhomogene differentialligning, udnytter denne egenskab.
 
-\begin{method}[Løsninger og deres struktur] \label{saet.difflig2.struk1}
+\begin{method}[LÃ¸sninger og deres struktur] \label{saet.difflig2.struk1}
 \begin{enumerate}
 \item
-Den fuldstændige løsningsmængde $L_{hom}$ for en homogen lineær 2. ordens differentialligning
+Den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde $L_{hom}$ for en homogen lineÃ¦r 2. ordens differentialligning
 \begin{equation}
 x''(t) + a_1x'(t) + a_0x(t) = 0, \quad t \in I \label{lig.saet.difflig2.struk1}
 \end{equation}
-hvor $ a_0, a_1 \in \reel\,,$ kan bestemmes ved hjælp af sætning \ref{saet.difflig2.hom1}.
+hvor $ a_0, a_1 \in \reel\,,$ kan bestemmes ved hjÃ¦lp af sÃ¦tning \ref{saet.difflig2.hom1}.
 \item
-Den fuldstændige løsningsmængde $ L_{inhom} $ for en inhomogen lineær 2. ordens differentialligning
+Den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde $ L_{inhom} $ for en inhomogen lineÃ¦r 2. ordens differentialligning
 \begin{equation}
 x''(t) + a_1x'(t) + a_0x(t) = q(t), \quad t \in I\,,\, q : I \rightarrow \reel, \label{lig.saet.difflig2.struk1}
 \end{equation}
-hvor $ a_0, a_1 \in \reel\,,$ kan ved hjælp af \tref{NUID10-saet.hovedstruktur1}{sætning} opdeles i to:
+hvor $ a_0, a_1 \in \reel\,,$ kan ved hjÃ¦lp af \tref{NUID10-saet.hovedstruktur1}{sÃ¦tning} opdeles i to:
 \begin{enumerate}
-\item Først bestemmes den fuldstændige løsningsmængde $ L_{hom} $ til den \textit{tilsvarende homogene differentialligning}. Denne fremkommer ved at man i (\ref{lig.saet.difflig2.struk1}) erstatter $q(t)$ med $0\,$.
-\item Dernæst bestemmes en partikulær løsning $ x_0(t) $ til (\ref{lig.saet.difflig2.struk1}) for eksempel ved at gæt. Se angående dette afsnit \ref{subsek.difflig2.inhom1}.
+\item FÃ¸rst bestemmes den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde $ L_{hom} $ til den \textit{tilsvarende homogene differentialligning}. Denne fremkommer ved at man i (\ref{lig.saet.difflig2.struk1}) erstatter $q(t)$ med $0\,$.
+\item DernÃ¦st bestemmes en partikulÃ¦r lÃ¸sning $ x_0(t) $ til (\ref{lig.saet.difflig2.struk1}) for eksempel ved at gÃ¦t. Se angÃ¥ende dette afsnit \ref{subsek.difflig2.inhom1}.
 \end{enumerate}
-Den fuldstændige løsning har da følgende struktur
+Den fuldstÃ¦ndige lÃ¸sning har da fÃ¸lgende struktur
 \begin{equation}
 L_{inhom} = x_0(t) + L_{hom}\,.
 \end{equation}
 \end{enumerate}
 \end{method}
 
-%Eksempler på bestemmelse af den fuldstændige løsningsmængde til den 2. ordens inhomogene differentialligning kan findes sidst i noten (for eksempel eksempel \ref{eks.difflig2.eksent21}).
+%Eksempler pÃ¥ bestemmelse af den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde til den 2. ordens inhomogene differentialligning kan findes sidst i noten (for eksempel eksempel \ref{eks.difflig2.eksent21}).
 
 \section{Den homogene differentialligning} \label{subsek.difflig2.hom1}
 
-Vi betragter nu den lineære homogene 2. ordens differentialligning 
+Vi betragter nu den lineÃ¦re homogene 2. ordens differentialligning 
 \begin{equation}
 x''(t) + a_1x'(t) + a_0x(t) = 0, \quad t \in \reel \,, 
 \end{equation}
-hvor $a_0$ og $a_1$ er reelle konstanter. Vi ønsker at bestemme den fuldstændige løsningsmængde. Det kan gøres ved hjælp af eksakte formler, som afhængiger af ligningens udseende.
+hvor $a_0$ og $a_1$ er reelle konstanter. Vi Ã¸nsker at bestemme den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde. Det kan gÃ¸res ved hjÃ¦lp af eksakte formler, som afhÃ¦ngiger af ligningens udseende.
 
-\begin{theorem}[Løsning til den homogene ligning] \label{saet.difflig2.hom1}
+\begin{theorem}[LÃ¸sning til den homogene ligning] \label{saet.difflig2.hom1}
 Den homogene differentialligning
 \begin{equation}
 x''(t) + a_1x'(t) + a_0x(t) = 0, \quad t \in \reel, \label{lig.difflig2.hom1}
 \end{equation}
-har den såkaldte \ind{karakterligning}{karakterligning}
+har den sÃ¥kaldte \ind{karakterligning}{karakterligning}
 \begin{equation}
 \lambda^2 + a_1 \lambda + a_0 = 0.
 \end{equation}
-Typen af rødder til denne ligning afgør udseendet af den fuldstændige løsningsmængde $ L_{hom} $ til den homogene differentialligning.
+Typen af rÃ¸dder til denne ligning afgÃ¸r udseendet af den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde $ L_{hom} $ til den homogene differentialligning.
 \begin{itemize}
-\item \textbf{To forskellige reelle rødder} $ \lambda_1 $ og $ \lambda_2 $ giver løsningen 
+\item \textbf{To forskellige reelle rÃ¸dder} $ \lambda_1 $ og $ \lambda_2 $ giver lÃ¸sningen 
 \begin{equation}
 x(t) = c_1\e^{\lambda_1 t} + c_2\e^{\lambda_2 t}, \quad t \in \reel.
 \end{equation}
-\item \textbf{To komplekse rødder} $ \lambda = \alpha \pm \beta i $ giver den reelle løsning
+\item \textbf{To komplekse rÃ¸dder} $ \lambda = \alpha \pm \beta i $ giver den reelle lÃ¸sning
 \begin{equation} \label{lig.kompl1}
 x(t) = c_1\e^{\alpha t}\cos(\beta t) + c_2\e^{\alpha t}\sin(\beta t), \quad t \in \reel.
 \end{equation}
-\item \textbf{Dobbeltroden} $ \lambda $ giver løsningen
+\item \textbf{Dobbeltroden} $ \lambda $ giver lÃ¸sningen
 \begin{equation}
 x(t) = c_1\e^{\lambda t} + c_2 t \e^{\lambda t}, \quad t \in \reel.
 \end{equation}
 \end{itemize}
-For alle tre tilfælde gælder, at de respektive funktioner for alle $ c_1,c_2 \in \reel $ udgør den fuldstændige løsningsmængde $ L_{hom} $.
+For alle tre tilfÃ¦lde gÃ¦lder, at de respektive funktioner for alle $ c_1,c_2 \in \reel $ udgÃ¸r den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde $ L_{hom} $.
 \end{theorem}
 
 \begin{info}
-I \tref{NUID13-subsek.omf1}{afsnit} gennemgås teorien for at omforme netop denne type differentialligning til et system af 1. ordens differentialligninger. Det er en brugbar metode her. Systemet vil da se således ud:
+I \tref{NUID13-subsek.omf1}{afsnit} gennemgÃ¥s teorien for at omforme netop denne type differentialligning til et system af 1. ordens differentialligninger. Det er en brugbar metode her. Systemet vil da se sÃ¥ledes ud:
 \begin{equation}
 \begin{matr}{c} x_1'(t) \\ x_2'(t) \end{matr} = \begin{matr}{cc} 0 & 1 \\ -a_0 & -a_1 \end{matr} \begin{matr}{c} x_1(t) \\ x_2(t) \end{matr}
 \end{equation}
-hvor $ x_1(t) = x(t) $ og $ x_2(t) = x_1'(t) = x'(t) $. Vi kan nu bruge teorien i det nævnte afsnit til at løse problemet.
+hvor $ x_1(t) = x(t) $ og $ x_2(t) = x_1'(t) = x'(t) $. Vi kan nu bruge teorien i det nÃ¦vnte afsnit til at lÃ¸se problemet.
 \end{info}
 
 \begin{bevis} \label{bed.difflig2.hom21}
-Den homogene 2. ordens lineære differentialligning \eqref{lig.difflig2.hom1} omformes til et 1. ordens differentialligningsystem:
+Den homogene 2. ordens lineÃ¦re differentialligning \eqref{lig.difflig2.hom1} omformes til et 1. ordens differentialligningsystem:
 \begin{equation}
 \begin{matr}{c} x_1'(t) \\ x_2'(t) \end{matr} = \begin{matr}{cc} 0 & 1 \\ -a_0 & -a_1 \end{matr} \begin{matr}{c} x_1(t) \\ x_2(t) \end{matr} = \mA \begin{matr}{c} x_1(t) \\ x_2(t) \end{matr}
 \end{equation}
-hvor $ x_1(t) = x(t) $ er den søgte løsning, som udgør den fuldstændige løsningsmængde. Bevisførelsen tager udgangspunkt i sætningerne og metoderne i \tref{NUID13-sek.diffsys.struktur1}{afsnit}. Til det skal man bruge egenværdierne til systemmatricen $ \mA $:
+hvor $ x_1(t) = x(t) $ er den sÃ¸gte lÃ¸sning, som udgÃ¸r den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde. BevisfÃ¸relsen tager udgangspunkt i sÃ¦tningerne og metoderne i \tref{NUID13-sek.diffsys.struktur1}{afsnit}. Til det skal man bruge egenvÃ¦rdierne til systemmatricen $ \mA $:
 \begin{equation}
 \mathrm{det}(\mA - \lambda \mE) = \begin{vmatrix} -\lambda & 1 \\ -a_0 & -a_1-\lambda \end{vmatrix} = \lambda^2 + a_1\lambda + a_0 = 0,
 \end{equation}
-hvilket netop er karakterligningen tilhørende differentialligningen, og $ \lambda $ er egenværdier til systemmatricen $ \mA $. Røddernes udseende i denne ligning er afgørende for løsningen $ x(t) = x_1(t) $, hvilket giver følgende tre delbeviser: \bs
-\textbf{Første del} \\
-Karakterligningen har to forskellige reelle rødder: $ \lambda_1 $ og $ \lambda_2 $. Ved hjælp af \tref{NUID13-saet.diffsys.strukturloes1}{metode} findes derved to lineært uafhængige løsninger $ \mathbf{u}_1(t) = \mv_1 \e^{\lambda_1 t} $ og $ \mathbf{u}_2(t) = \mv_2 \e^{\lambda_2 t} $, hvor $ \mv_1 $ og $ \mv_2 $ er egenvektorer tilhørende de to egenværdier respektivt. Den fuldstændige løsning er da udspændt af:
+hvilket netop er karakterligningen tilhÃ¸rende differentialligningen, og $ \lambda $ er egenvÃ¦rdier til systemmatricen $ \mA $. RÃ¸ddernes udseende i denne ligning er afgÃ¸rende for lÃ¸sningen $ x(t) = x_1(t) $, hvilket giver fÃ¸lgende tre delbeviser: \bs
+\textbf{FÃ¸rste del} \\
+Karakterligningen har to forskellige reelle rÃ¸dder: $ \lambda_1 $ og $ \lambda_2 $. Ved hjÃ¦lp af \tref{NUID13-saet.diffsys.strukturloes1}{metode} findes derved to lineÃ¦rt uafhÃ¦ngige lÃ¸sninger $ \mathbf{u}_1(t) = \mv_1 \e^{\lambda_1 t} $ og $ \mathbf{u}_2(t) = \mv_2 \e^{\lambda_2 t} $, hvor $ \mv_1 $ og $ \mv_2 $ er egenvektorer tilhÃ¸rende de to egenvÃ¦rdier respektivt. Den fuldstÃ¦ndige lÃ¸sning er da udspÃ¦ndt af:
 \begin{equation}
 \mx(t) = k_1 \mathbf{u}_1(t) + k_2 \mathbf{u}_2(t) = k_1 \e^{\lambda_1 t} \mv_1 + k_2 \e^{\lambda_2 t} \mv_2,
 \end{equation}
-for alle $ k_1,k_2 \in \reel $. Førstekoordinaten $ x_1(t) = x(t) $ er den søgte løsning:
+for alle $ k_1,k_2 \in \reel $. FÃ¸rstekoordinaten $ x_1(t) = x(t) $ er den sÃ¸gte lÃ¸sning:
 \begin{equation}
 x_1(t) = x(t) = c_1 \e^{\lambda_1 t} + c_2 \e^{\lambda_2 t},
 \end{equation}
-der for alle de arbitrære konstanter $ c_1,c_2 \in \reel $ udgør den fuldstændige løsningsmængde. $ c_1 $ og $ c_2 $ er to nye indførte arbitrære konstanter og de er produktet mellem $ k $-konstanterne og egenvektorernes førstekoordinat: $ c_1 = k_1 v_{1_1} $ og $ c_2 = k_2 v_{2_1} $.\bs
+der for alle de arbitrÃ¦re konstanter $ c_1,c_2 \in \reel $ udgÃ¸r den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde. $ c_1 $ og $ c_2 $ er to nye indfÃ¸rte arbitrÃ¦re konstanter og de er produktet mellem $ k $-konstanterne og egenvektorernes fÃ¸rstekoordinat: $ c_1 = k_1 v_{1_1} $ og $ c_2 = k_2 v_{2_1} $.\bs
 \textbf{Anden del} \\
-Karakterligningen har det komplekse rodpar $ \lambda = \alpha + \beta i $ og $ \bar{\lambda} = \alpha - \beta i $. Den fuldstændige løsningsmængde er mulig at finde med \tref{NUID13-saet.diffsys.kompleks1}{metode}.
+Karakterligningen har det komplekse rodpar $ \lambda = \alpha + \beta i $ og $ \bar{\lambda} = \alpha - \beta i $. Den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde er mulig at finde med \tref{NUID13-saet.diffsys.kompleks1}{metode}.
 \begin{equation}
 \begin{aligned}
 &\mx(t) = k_1 \mathbf{u}_1(t) + k_2 \mathbf{u}_2(t) \\
@@ -124,26 +124,26 @@ Karakterligningen har det komplekse rodpar $ \lambda = \alpha + \beta i $ og $ \
 &= \e^{\alpha t} \cos(\beta t) \cdot (k_1 \re(\mv) + k_2 \im(\mv)) + \e^{\alpha t} \sin(\beta t) \cdot (-k_1 \im(\mv) + k_2 \re(\mv)).
 \end{aligned}
 \end{equation}
-$ \mv $ er en egenvektor tilhørende $ \lambda $ og $ k_1 $ og $ k_2 $ er arbitrære konstanter. Førstekoordinaten $ x_1(t) = x(t) $ er den søgte løsning, og er med ovenstående givet ved
+$ \mv $ er en egenvektor tilhÃ¸rende $ \lambda $ og $ k_1 $ og $ k_2 $ er arbitrÃ¦re konstanter. FÃ¸rstekoordinaten $ x_1(t) = x(t) $ er den sÃ¸gte lÃ¸sning, og er med ovenstÃ¥ende givet ved
 \begin{equation}
 x_1(t) = x(t) = c_1\e^{\alpha t}\cos(\beta t) + c_2\e^{\alpha t}\sin(\beta t).
 \end{equation}
-For alle $ c_1,c_2 \in \reel $ udgør $ x(t) $ den fuldstændige løsningsmængde. $ c_1 $ og $ c_2 $ er to nye indførte arbitrære konstanter, som er givet ved $ c_1 = k_1 \mathrm{Re}(v_1) + k_2 \mathrm{Im}(v_1) $ og $ c_2 = -k_1 \mathrm{Im}(v_1) + k_2 \mathrm{Re}(v_1) $. $ v_1 $ er førstekoordinaten til $ \mv $.\bs
+For alle $ c_1,c_2 \in \reel $ udgÃ¸r $ x(t) $ den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde. $ c_1 $ og $ c_2 $ er to nye indfÃ¸rte arbitrÃ¦re konstanter, som er givet ved $ c_1 = k_1 \mathrm{Re}(v_1) + k_2 \mathrm{Im}(v_1) $ og $ c_2 = -k_1 \mathrm{Im}(v_1) + k_2 \mathrm{Re}(v_1) $. $ v_1 $ er fÃ¸rstekoordinaten til $ \mv $.\bs
 \textbf{Tredje del} \\
-Karakterligningen har dobbeltroden $ \lambda $. Pga. systemmatricens udseende (matricen er ækvivalent med en øvre trekantsmatrix) er det muligt at se, at den geometriske multiplicitet af det tilhørende egenvektorrum er 1, og det er da muligt at bruge \tref{NUID13-saet.diffsys.dobbeltrod1}{metode} til at finde den fuldstændige løsning.
+Karakterligningen har dobbeltroden $ \lambda $. Pga. systemmatricens udseende (matricen er Ã¦kvivalent med en Ã¸vre trekantsmatrix) er det muligt at se, at den geometriske multiplicitet af det tilhÃ¸rende egenvektorrum er 1, og det er da muligt at bruge \tref{NUID13-saet.diffsys.dobbeltrod1}{metode} til at finde den fuldstÃ¦ndige lÃ¸sning.
 \begin{equation}
 \mx(t) = k_1 \mathbf{u}_1(t) + k_2 \mathbf{u}_2(t) = k_1 \e^{\lambda t} \mv + k_2 (t \e^{\lambda t} \mv + \e^{\lambda t} \mb) = \e^{\lambda t} (k_1 \mv + k_2 \mb) + k_2 t \e^{\lambda t} \mv,
 \end{equation}
-hvor $ \mv $ er en egenvektor tilhørende $ \lambda $, $ \mb $ er løsning til ligningssystemet $ (\mA - \lambda \mE)\mb = \mv $ og $ k_1,k_2 $ er to arbitrære konstanter. Udtages førstekoordinaten, fås
+hvor $ \mv $ er en egenvektor tilhÃ¸rende $ \lambda $, $ \mb $ er lÃ¸sning til ligningssystemet $ (\mA - \lambda \mE)\mb = \mv $ og $ k_1,k_2 $ er to arbitrÃ¦re konstanter. Udtages fÃ¸rstekoordinaten, fÃ¥s
 \begin{equation}
 x(t) = c_1 \e^{\lambda t} + c_2 t \e^{\lambda t},
 \end{equation}
-der for alle $ c_1,c_2 \in \reel $ udgør den fuldstændige løsningsmængde. $ c_1 $ og $ c_2 $ er to nye indførte arbitrære konstanter, givet ved $ c_1 = k_1 v_1 + k_2 b_1 $ og $ c_2 = k_2 v_1 $, hvor $ v_1 $ er førstekoordinaten i $ \mv $, ligesom $ b_1 $ er førstekoordinaten i $ \mb $.
+der for alle $ c_1,c_2 \in \reel $ udgÃ¸r den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde. $ c_1 $ og $ c_2 $ er to nye indfÃ¸rte arbitrÃ¦re konstanter, givet ved $ c_1 = k_1 v_1 + k_2 b_1 $ og $ c_2 = k_2 v_1 $, hvor $ v_1 $ er fÃ¸rstekoordinaten i $ \mv $, ligesom $ b_1 $ er fÃ¸rstekoordinaten i $ \mb $.
 
-Alle de tre forskellige tilfælde af rødder i karakterligningen er nu gennemgået, og sætningen er derfor bevist. 
+Alle de tre forskellige tilfÃ¦lde af rÃ¸dder i karakterligningen er nu gennemgÃ¥et, og sÃ¦tningen er derfor bevist. 
 
 \begin{info}
-Læg mærke til, at det også er muligt at nå frem til karakterligningen ved at gætte på en løsning til differentialligningen med formen $ x(t) = \e^{\lambda t} $. Man får da følgende:
+LÃ¦g mÃ¦rke til, at det ogsÃ¥ er muligt at nÃ¥ frem til karakterligningen ved at gÃ¦tte pÃ¥ en lÃ¸sning til differentialligningen med formen $ x(t) = \e^{\lambda t} $. Man fÃ¥r da fÃ¸lgende:
 \begin{equation}
 x''(t) + a_1x'(t) + a_0x(t) = 0 \quad \Rightarrow \quad \lambda^2 \e^{\lambda t} + a_1 \lambda \e^{\lambda t} + a_0 \e^{\lambda t} = 0
 \end{equation}
@@ -152,7 +152,7 @@ Divideres denne ligning igennem med $ \e^{\lambda t} $, der er forskelligt fra n
 
 \end{bevis}
 
-\begin{example}[Løsning til homogen ligning] \label{eks.difflig2.hom11}
+\begin{example}[LÃ¸sning til homogen ligning] \label{eks.difflig2.hom11}
 Givet den homogene differentialligning
 \begin{equation}
 x''(t) + x'(t) - 20x(t) = 0, \quad t \in \reel,
@@ -161,39 +161,39 @@ som har karakterligningen
 \begin{equation}
 \lambda^2 + \lambda - 20 = 0.
 \end{equation}
-Vi ønsker at bestemme den fuldstændige løsningsmængde $ L_{hom} $ til denne homogene differentialligning. \bs
-Karakterligningen har rødderne $ \lambda_1 = -5 $ og $ \lambda = 4 $, idet $ -5 \cdot 4 = -20 $ og $ -(-5+4) = 1 $ er karakterligningens koefficienter. Derfor er den fuldstændige løsningsmængde til den homogene differentialligning
+Vi Ã¸nsker at bestemme den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde $ L_{hom} $ til denne homogene differentialligning. \bs
+Karakterligningen har rÃ¸dderne $ \lambda_1 = -5 $ og $ \lambda = 4 $, idet $ -5 \cdot 4 = -20 $ og $ -(-5+4) = 1 $ er karakterligningens koefficienter. Derfor er den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde til den homogene differentialligning
 \begin{equation}
 L_{hom} = \maengde{c_1 \e^{-5 t} + c_2 \e^{4 t}\,,t \in \reel\,}{c_1,c_2 \in \reel},
 \end{equation}
-som er fundet ved hjælp af sætning \ref{saet.difflig2.hom1}.
+som er fundet ved hjÃ¦lp af sÃ¦tning \ref{saet.difflig2.hom1}.
 \end{example}
 
-\begin{example}[Løsning til homogen ligning] \label{eks.difflig2.hom31}
+\begin{example}[LÃ¸sning til homogen ligning] \label{eks.difflig2.hom31}
 Givet er den homogene 2. ordens differentialligning med konstante koefficienter
 \begin{equation}
 x''(t) - 8x'(t) + 16 x(t) = 0, \quad t \in \reel.
 \end{equation}
-Vi ønsker at bestemme $ L_{hom} $, som er den fuldstændige løsningsmængde til denne homogene differentialligning. Karakterligningen er
+Vi Ã¸nsker at bestemme $ L_{hom} $, som er den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde til denne homogene differentialligning. Karakterligningen er
 \begin{equation}
 \lambda^2 - 8\lambda + 16 = 0 \Leftrightarrow (\lambda - 4)^2 = 0
 \end{equation}
-Vi har altså dobbeltroden $ \lambda = 4 $, og den fuldstændige løsningsmængde er udgjort af følgende funktioner for alle $ c_1,c_2 \in \reel $:
+Vi har altsÃ¥ dobbeltroden $ \lambda = 4 $, og den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde er udgjort af fÃ¸lgende funktioner for alle $ c_1,c_2 \in \reel $:
 \begin{equation}
 x(t) = c_1\e^{4t} + c_2t\e^{4t}, \quad t \in \reel.
 \end{equation}
-Resultatet er bestemt ved hjælp sætning \ref{saet.difflig2.hom1}. 
+Resultatet er bestemt ved hjÃ¦lp sÃ¦tning \ref{saet.difflig2.hom1}. 
 \end{example}
 
-Som det ses er det forholds trivielt at bestemme løsningen til den homogene differentialligning. Det er oven i købet muligt at bestemme differentialligningen, hvis man har løsningen, altså ``gå baglæns''. Det illustreres i nedenstående eksempel.
+Som det ses er det forholds trivielt at bestemme lÃ¸sningen til den homogene differentialligning. Det er oven i kÃ¸bet muligt at bestemme differentialligningen, hvis man har lÃ¸sningen, altsÃ¥ ``gÃ¥ baglÃ¦ns''. Det illustreres i nedenstÃ¥ende eksempel.
 
-\begin{example}[Fra løsning til ligning] \label{eks.baglaens}
-Løsningen til en differentialligning kendes:
+\begin{example}[Fra lÃ¸sning til ligning] \label{eks.baglaens}
+LÃ¸sningen til en differentialligning kendes:
 \begin{equation}
 x(t) = c_1\e^{2t}\cos(7t) + c_2\e^{2t}\sin(7t), \quad t \in \reel,
 \end{equation}
-som for de arbitrære konstanter $ c_1,c_2 $ udgør den fuldstændige løsningsmængde. \bs
-Siden løsningen udelukkende indeholder led med arbitrære konstanter, må differentialligningen være homogen. Endvidere ses, at løsningsstrukturen ligner den i ligning \eqref{lig.kompl1} i sætning \ref{saet.difflig2.hom1}. Det betyder, at karakterligningen til den 2. ordens differentialligning har to komplekse rødder: $ \lambda = 2 \pm 7i $. Karakterligningen sættes op:
+som for de arbitrÃ¦re konstanter $ c_1,c_2 $ udgÃ¸r den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde. \bs
+Siden lÃ¸sningen udelukkende indeholder led med arbitrÃ¦re konstanter, mÃ¥ differentialligningen vÃ¦re homogen. Endvidere ses, at lÃ¸sningsstrukturen ligner den i ligning \eqref{lig.kompl1} i sÃ¦tning \ref{saet.difflig2.hom1}. Det betyder, at karakterligningen til den 2. ordens differentialligning har to komplekse rÃ¸dder: $ \lambda = 2 \pm 7i $. Karakterligningen sÃ¦ttes op:
 \begin{equation}
 \begin{aligned}
 (\lambda - 2 + 7i)(\lambda - 2 - 7i) = (\lambda-2)^2 - (7i)^2 &= \\
@@ -204,35 +204,35 @@ Direkte ud fra karakterligningens koefficienter kan differentialligningen opstil
 \begin{equation}
 x''(t) -4x'(t) + 53x(t) = 0, \quad t \in \reel.
 \end{equation}
-Det ses også af sætning \ref{saet.difflig2.hom1}.
+Det ses ogsÃ¥ af sÃ¦tning \ref{saet.difflig2.hom1}.
 \end{example}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Den inhomogene ligning} \label{subsek.difflig2.inhom1}
 
-I dette afsnit ønsker vi at bestemme en partikulær løsning $ x_0(t) $ til den inhomogene differentialligning
+I dette afsnit Ã¸nsker vi at bestemme en partikulÃ¦r lÃ¸sning $ x_0(t) $ til den inhomogene differentialligning
 \begin{equation}
 x''(t) + a_1x'(t) + a_0x(t) = q(t), \quad t \in I, q : I \rightarrow \reel.
 \end{equation}
-Vi ønsker at finde en partikulær løsning, fordi den indgår i den fuldstændige løs\-nings\-mæng\-de $ L_{inhom} $ sammen med den fuldstændige løsningsmængde $ L_{hom} $ til den tilsvarende homogene differentialligning jævnfør metode \ref{saet.difflig2.struk1}. \bs
-I denne eNote bruges ikke nogen konkret løsningsformel, i stedet bruges forskellige metoder, alt efter formen af $ q(t) $. Generelt kan man sige, at den partikulære løsning $ x_0(t) $ har en form som ligner $ q(t) $, hvilket fremgår af følgende metoder. Læg mærke til, at disse metoder dækker nogle ofte forekommende former på $ q(t) $, men ikke alle. \bs
-Endvidere vil et begrebet \textit{superpositionsprincippet} blive behandlet. Superposition er en grundlæggende egenskab ved lineære ligninger og lineære differentialligninger. Pointen er at opsplitte en differentialligning i flere, hvor venstresiderne er ens, mens summen af højresiderne er lig den oprindelige differentiallignings højreside. Hvis den oprindelige differentialligning har højresiden $ q(t) = \sin(2t) + 2t^2 $, kan det være en ide, at opdele differentialligningen i to, hvor højresiderne bliver $ q_1(t) = \sin(2t) $ henholdsvis $ q_2(t) = 2t^2 $. De to differentialligninger er nemmere at bestemme partikulære løsninger til. En partikulær løsning til den egentlige differentialligning vil da være summen af de to partikulære løsninger. \bs
-Slutteligt vil \textit{den komplekse gættemetode} blive introduceret. Den komplekse gættemetode kan bruges, hvis højresiden $ q(t) $ i differentialligningen er realdelen af et simplere komplekst udtryk. Det kunne for eksempel være, at $ q(t) = \e^t \sin(3t) $, som er realdelen af $ -i \e^{(1+3i)t} $. Det er nemmere at finde en løsning til en differentialligning, hvor højresiden er simpel, og derfor løses den tilsvarende komplekse ligning i stedet. Løsningerne til den reelle differentialligning og den tilsvarende komplekse differentialligning er nært forbundet. \bs
-%Disse tre overordnede metoder vil kunne give partikulære løsninger et stort spænd af inhomogene 2. ordens differentialligninger. Det er de mest gængse løsningsmetoder, som findes indenfor alle typer af lineære differentialligninger, og bruges altså ikke kun til 2. ordens differentialligninger.
+Vi Ã¸nsker at finde en partikulÃ¦r lÃ¸sning, fordi den indgÃ¥r i den fuldstÃ¦ndige lÃ¸s\-nings\-mÃ¦ng\-de $ L_{inhom} $ sammen med den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde $ L_{hom} $ til den tilsvarende homogene differentialligning jÃ¦vnfÃ¸r metode \ref{saet.difflig2.struk1}. \bs
+I denne eNote bruges ikke nogen konkret lÃ¸sningsformel, i stedet bruges forskellige metoder, alt efter formen af $ q(t) $. Generelt kan man sige, at den partikulÃ¦re lÃ¸sning $ x_0(t) $ har en form som ligner $ q(t) $, hvilket fremgÃ¥r af fÃ¸lgende metoder. LÃ¦g mÃ¦rke til, at disse metoder dÃ¦kker nogle ofte forekommende former pÃ¥ $ q(t) $, men ikke alle. \bs
+Endvidere vil et begrebet \textit{superpositionsprincippet} blive behandlet. Superposition er en grundlÃ¦ggende egenskab ved lineÃ¦re ligninger og lineÃ¦re differentialligninger. Pointen er at opsplitte en differentialligning i flere, hvor venstresiderne er ens, mens summen af hÃ¸jresiderne er lig den oprindelige differentiallignings hÃ¸jreside. Hvis den oprindelige differentialligning har hÃ¸jresiden $ q(t) = \sin(2t) + 2t^2 $, kan det vÃ¦re en ide, at opdele differentialligningen i to, hvor hÃ¸jresiderne bliver $ q_1(t) = \sin(2t) $ henholdsvis $ q_2(t) = 2t^2 $. De to differentialligninger er nemmere at bestemme partikulÃ¦re lÃ¸sninger til. En partikulÃ¦r lÃ¸sning til den egentlige differentialligning vil da vÃ¦re summen af de to partikulÃ¦re lÃ¸sninger. \bs
+Slutteligt vil \textit{den komplekse gÃ¦ttemetode} blive introduceret. Den komplekse gÃ¦ttemetode kan bruges, hvis hÃ¸jresiden $ q(t) $ i differentialligningen er realdelen af et simplere komplekst udtryk. Det kunne for eksempel vÃ¦re, at $ q(t) = \e^t \sin(3t) $, som er realdelen af $ -i \e^{(1+3i)t} $. Det er nemmere at finde en lÃ¸sning til en differentialligning, hvor hÃ¸jresiden er simpel, og derfor lÃ¸ses den tilsvarende komplekse ligning i stedet. LÃ¸sningerne til den reelle differentialligning og den tilsvarende komplekse differentialligning er nÃ¦rt forbundet. \bs
+%Disse tre overordnede metoder vil kunne give partikulÃ¦re lÃ¸sninger et stort spÃ¦nd af inhomogene 2. ordens differentialligninger. Det er de mest gÃ¦ngse lÃ¸sningsmetoder, som findes indenfor alle typer af lineÃ¦re differentialligninger, og bruges altsÃ¥ ikke kun til 2. ordens differentialligninger.
 
-\subsection{Generelle løsningsmetoder}
+\subsection{Generelle lÃ¸sningsmetoder}
 
 \begin{method}[Polynomium] \label{saet.difflig2.poly1}
-En partikulær løsning $ x_0(t) $ til den inhomogene differentialligning
+En partikulÃ¦r lÃ¸sning $ x_0(t) $ til den inhomogene differentialligning
 \begin{equation}
 x''(t) + a_1x'(t) + a_0x(t) = q(t), \quad t \in I,
 \end{equation}
-hvor $ q $ er et $ n $-te grads polynomium, er også et polynomium af højst grad $ n $:
+hvor $ q $ er et $ n $-te grads polynomium, er ogsÃ¥ et polynomium af hÃ¸jst grad $ n $:
 \begin{equation}
 x_0(t) = b_n t^n + b_{n-1} t^{n-1} + \ldots + b_1 t + b_0, \quad t \in I,
 \end{equation}
-hvor $ b_0,b_1,\ldots,b_n $ bestemmes ved indsættelse af udtrykket for $ x_0(t) $ som løsning i den inhomogene differentialligning.
+hvor $ b_0,b_1,\ldots,b_n $ bestemmes ved indsÃ¦ttelse af udtrykket for $ x_0(t) $ som lÃ¸sning i den inhomogene differentialligning.
 \end{method}
 
 \begin{example}[Polynomium] \label{eks.difflig2.poly1}
@@ -240,11 +240,11 @@ Givet er den inhomogene 2. ordens differentialligning med konstante koefficiente
 \begin{equation}
 x''(t) - 3x'(t) + x(t) = 2t^2 - 16t + 25, \quad t \in \reel. \label{lig.difflig2.poly1}
 \end{equation}
-Vi ønsker at bestemme en partikulær løsning $ x_0(t) $ til den inhomogene differentialligning. Da højresiden er et andengradspolynomium, er denne løsning også et polynomium af højst grad 2 jævnfør metode \ref{saet.difflig2.poly1}, altså er
+Vi Ã¸nsker at bestemme en partikulÃ¦r lÃ¸sning $ x_0(t) $ til den inhomogene differentialligning. Da hÃ¸jresiden er et andengradspolynomium, er denne lÃ¸sning ogsÃ¥ et polynomium af hÃ¸jst grad 2 jÃ¦vnfÃ¸r metode \ref{saet.difflig2.poly1}, altsÃ¥ er
 \begin{equation}
 x_0(t) = b_2t^2 + b_1t + b_0, \quad t \in \reel.
 \end{equation}
-Koefficienterne bestemmes ved at indsætte udtrykket i differentialligningen sammen med $ x_0'(t) = 2b_2t + b_1 $ og $ x_0''(t) = 2b_2 $.
+Koefficienterne bestemmes ved at indsÃ¦tte udtrykket i differentialligningen sammen med $ x_0'(t) = 2b_2t + b_1 $ og $ x_0''(t) = 2b_2 $.
 \begin{equation}
 \begin{aligned}
 2b_2 - 3(2b_2t + b_1) + b_2t^2 + b_1t + b_0 = 2t^2 - 16t + 25 & \Leftrightarrow \\
@@ -252,14 +252,14 @@ Koefficienterne bestemmes ved at indsætte udtrykket i differentialligningen samm
 b_2 - 2 = 0 \,\,\,\mathrm{og}\,\,\, -6b_2 + b_1 + 16 = 0 \,\,\,\mathrm{og}\,\,\, 2b_2 - 3b_1 + b_0 - 25 = 0 &
 \end{aligned}
 \end{equation}
-Den første ligning giver nemt $ b_2 = 2 $, hvilket indsat i den anden ligning giver $ b_1 = -4 $. Slutteligt giver dette i den sidste ligning, at $ b_0 = 9 $. Derfor er en partikulær løsning til ligning \eqref{lig.difflig2.poly1} givet ved
+Den fÃ¸rste ligning giver nemt $ b_2 = 2 $, hvilket indsat i den anden ligning giver $ b_1 = -4 $. Slutteligt giver dette i den sidste ligning, at $ b_0 = 9 $. Derfor er en partikulÃ¦r lÃ¸sning til ligning \eqref{lig.difflig2.poly1} givet ved
 \begin{equation}
 x_0(t) = 2t^2 - 4t + 9, \quad t \in \reel.
 \end{equation}
 \end{example}
 
 \begin{method}[Trigonometrisk] \label{saet.difflig2.trig1}
-En partikulær løsning $ x_0(t) $ til den inhomogene differentialligning
+En partikulÃ¦r lÃ¸sning $ x_0(t) $ til den inhomogene differentialligning
 \begin{equation}
 x''(t) + a_1x'(t) + a_0x(t) = q(t), \quad t \in I,
 \end{equation}
@@ -267,11 +267,11 @@ hvor $ q(t) = a\cos(\omega t) + b\sin(\omega t) $, har samme form:
 \begin{equation}
 x_0(t) =  A\sin(\omega t) + B\cos(\omega t), \quad t \in I,
 \end{equation}
-hvor $ A $ og $ B $ bestemmes ved at indsætte udtrykket for $ x_0(t) $ som løsning i den inhomogene differentialligning.
+hvor $ A $ og $ B $ bestemmes ved at indsÃ¦tte udtrykket for $ x_0(t) $ som lÃ¸sning i den inhomogene differentialligning.
 \end{method}
 
 \begin{info}
-Det er også muligt at bestemme en partikulær løsning til en differentialligning som den i metode \ref{saet.difflig2.trig1} ved hjælp af \textit{den komplekse gættemetode}. Se derfor eventuelt afsnit \ref{af.kompleks}.
+Det er ogsÃ¥ muligt at bestemme en partikulÃ¦r lÃ¸sning til en differentialligning som den i metode \ref{saet.difflig2.trig1} ved hjÃ¦lp af \textit{den komplekse gÃ¦ttemetode}. Se derfor eventuelt afsnit \ref{af.kompleks}.
 \end{info}
 
 \begin{example}[Trigonometrisk] \label{eks.difflig2.trig1}
@@ -279,7 +279,7 @@ Givet er differentialligningen
 \begin{equation}
 x''(t) + x'(t) - x(t) = -20\sin(3t) + 6\cos(3t), \quad t \in \reel.
 \end{equation}
-En partikulær løsning $ x_0(t) $ til differentialligningen ønskes bestemt. Ved hjælp af metode \ref{saet.difflig2.trig1} er en partikulær løsning
+En partikulÃ¦r lÃ¸sning $ x_0(t) $ til differentialligningen Ã¸nskes bestemt. Ved hjÃ¦lp af metode \ref{saet.difflig2.trig1} er en partikulÃ¦r lÃ¸sning
 \begin{equation}
 x_0(t) = A\sin(\omega t) + B\cos(\omega t) = A\sin(3t) + B\cos(3t).
 \end{equation}
@@ -290,7 +290,7 @@ x_0'(t) &= 3A\cos(3t) - 3B\sin(3t) \\
 x_0''(t) &= -9A\sin(3t) - 9B\cos(3t)
 \end{aligned}
 \end{equation}
-Dette indsættes i differentialligningen.
+Dette indsÃ¦ttes i differentialligningen.
 \begin{equation}
 \begin{aligned}
 (-9A\sin(3t) - 9B\cos(3t)) + (3A\cos(3t) - 3B\sin(3t)) - (A\sin(3t) &+ B\cos(3t)) \\
@@ -299,34 +299,34 @@ Dette indsættes i differentialligningen.
 -9A-3B-A+20 = 0 \,\,\,\mathrm{og}\,\,\, -9B+3A-B-6 = 0 &
 \end{aligned}
 \end{equation}
-Dette er to ligninger med to ubekendte. Indsættes $ A = -\frac{3}{10}B + 2 $ fra den første ligning i den anden fås
+Dette er to ligninger med to ubekendte. IndsÃ¦ttes $ A = -\frac{3}{10}B + 2 $ fra den fÃ¸rste ligning i den anden fÃ¥s
 \begin{equation}
 -9B+3\left(-\frac{3}{10}B + 2\right)-B-6 = 0 \Leftrightarrow -10B - \frac{9}{10}B = 0 \Leftrightarrow B = 0
 \end{equation}
-Af dette fås $ A = 2 $, og en partikulær løsning til differentialligningen er da
+Af dette fÃ¥s $ A = 2 $, og en partikulÃ¦r lÃ¸sning til differentialligningen er da
 \begin{equation}
 x_0(t) = 2\sin(3t), \quad t \in \reel.
 \end{equation}
 \end{example}
 
 \begin{obs}
-Læg mærke til at tallet $ \omega = 3 $ er det samme under både cosinus og sinus i eksempel \ref{eks.difflig2.trig1}, hvilket også er det eneste metode \ref{saet.difflig2.trig1} faciliterer. Hvis der optræder to forskellige tal er metode \ref{saet.difflig2.trig1} ikke brugbar, for eksempel $ q(t) = 3\sin(t) + \cos(10t) $. Det er \textit{superpositionsprincippet} eller \textit{den komplekse gættemetode} til gengæld, og dette bliver beskrevet i afsnit \ref{subsek.difflig2.super1} og afsnit \ref{af.kompleks}.
+LÃ¦g mÃ¦rke til at tallet $ \omega = 3 $ er det samme under bÃ¥de cosinus og sinus i eksempel \ref{eks.difflig2.trig1}, hvilket ogsÃ¥ er det eneste metode \ref{saet.difflig2.trig1} faciliterer. Hvis der optrÃ¦der to forskellige tal er metode \ref{saet.difflig2.trig1} ikke brugbar, for eksempel $ q(t) = 3\sin(t) + \cos(10t) $. Det er \textit{superpositionsprincippet} eller \textit{den komplekse gÃ¦ttemetode} til gengÃ¦ld, og dette bliver beskrevet i afsnit \ref{subsek.difflig2.super1} og afsnit \ref{af.kompleks}.
 \end{obs}
 
 \begin{method}[Eksponentialfunktion] \label{saet.difflig2.eksp1}
-En partikulær løsning $ x_0(t) $ til den inhomogene differentialligning
+En partikulÃ¦r lÃ¸sning $ x_0(t) $ til den inhomogene differentialligning
 \begin{equation}
 x''(t) + a_1x'(t) + a_0x(t) = q(t), \quad t \in I,
 \end{equation}
-hvor $ q(t) = \beta \e^{\alpha t} $ og $ \alpha,\beta \in \reel $, er også en eksponentialfunktion:
+hvor $ q(t) = \beta \e^{\alpha t} $ og $ \alpha,\beta \in \reel $, er ogsÃ¥ en eksponentialfunktion:
 \begin{equation}
 x_0(t) = \gamma \e^{\alpha t}, \quad t \in I,
 \end{equation}
-hvor $ \gamma $ bestemmes ved indsættelse af udtrykket for $ x_0(t) $ som løsning i den inhomogene differentialligning. Det præciseres, at $ \alpha $ ikke må være rod i differentialligningens karakterligning.
+hvor $ \gamma $ bestemmes ved indsÃ¦ttelse af udtrykket for $ x_0(t) $ som lÃ¸sning i den inhomogene differentialligning. Det prÃ¦ciseres, at $ \alpha $ ikke mÃ¥ vÃ¦re rod i differentialligningens karakterligning.
 \end{method}
 
 \begin{info}
-Som det kommenteres til sidst i metode \ref{saet.difflig2.eksp1} må eksponenten $ \alpha $ ikke være rod i karakterligningen. Hvis det er tilfældet vil gættet være en løsning til den tilsvarende homogene differentialligning jævnfør sætning \ref{saet.difflig2.hom1}. Dette er et gennemgående ``problem'' i alle ordener af differentialligninger.
+Som det kommenteres til sidst i metode \ref{saet.difflig2.eksp1} mÃ¥ eksponenten $ \alpha $ ikke vÃ¦re rod i karakterligningen. Hvis det er tilfÃ¦ldet vil gÃ¦ttet vÃ¦re en lÃ¸sning til den tilsvarende homogene differentialligning jÃ¦vnfÃ¸r sÃ¦tning \ref{saet.difflig2.hom1}. Dette er et gennemgÃ¥ende ``problem'' i alle ordener af differentialligninger.
 \end{info}
 
 \begin{example}[Eksponentialfunktion] \label{eks.difflig2.eksp1}
@@ -334,27 +334,27 @@ Givet er differentialligningen
 \begin{equation}
 x''(t) + 11x'(t) + 5x(t) = -20\e^{-t}, \quad t \in \reel.
 \end{equation}
-Vi ønsker at bestemme en partikulær løsning $ x_0(t) $ til differentialligningen. Ifølge metode \ref{saet.difflig2.eksp1} er en partikulær løsning givet ved $ x_0(t) = \gamma \e^{\alpha t} = \gamma \e^{- t} $. Vi ved endnu ikke om $ \alpha = -1 $ er rod i karakterligningen, men hvis det går godt med at finde $ \gamma $, er den ikke. Vi har $ x_0'(t) = -\gamma \e^{- t} $ og $ x_0''(t) = \gamma \e^{- t} $, og dette indsættes i differentialligningen:
+Vi Ã¸nsker at bestemme en partikulÃ¦r lÃ¸sning $ x_0(t) $ til differentialligningen. IfÃ¸lge metode \ref{saet.difflig2.eksp1} er en partikulÃ¦r lÃ¸sning givet ved $ x_0(t) = \gamma \e^{\alpha t} = \gamma \e^{- t} $. Vi ved endnu ikke om $ \alpha = -1 $ er rod i karakterligningen, men hvis det gÃ¥r godt med at finde $ \gamma $, er den ikke. Vi har $ x_0'(t) = -\gamma \e^{- t} $ og $ x_0''(t) = \gamma \e^{- t} $, og dette indsÃ¦ttes i differentialligningen:
 \begin{equation}
 \gamma \e^{- t} + 11(-\gamma \e^{- t}) + 5\gamma \e^{-t} = -20\e^{-t} \Leftrightarrow \\
 -5 \gamma = -20 \Leftrightarrow \gamma = 4
 \end{equation}
-Det er altså lykkedes at bestemme $ \gamma $, og derfor haves en partikulær løsning til differentialligningen:
+Det er altsÃ¥ lykkedes at bestemme $ \gamma $, og derfor haves en partikulÃ¦r lÃ¸sning til differentialligningen:
 \begin{equation}
 x_0(t) = 4\e^{-t}, \quad t \in \reel.
 \end{equation}
 \end{example}
 
 \begin{method}[Uheldig eksponentialfunktion] \label{saet.difflig2.eksprod1}
-En partikulær løsning $ x_0(t) $ til den inhomogene differentialligning
+En partikulÃ¦r lÃ¸sning $ x_0(t) $ til den inhomogene differentialligning
 \begin{equation}
 x''(t) + a_1x'(t) + a_0x(t) = q(t), \quad t \in I,
 \end{equation}
-hvor $ q(t) = \beta \e^{\lambda t} $, $ \beta \in \reel $ og $ \lambda $ er rod i differentialligningens karakterligning, har følgende form:
+hvor $ q(t) = \beta \e^{\lambda t} $, $ \beta \in \reel $ og $ \lambda $ er rod i differentialligningens karakterligning, har fÃ¸lgende form:
 \begin{equation}
 x_0(t) = \gamma t \e^{\lambda t}, \quad t \in I,
 \end{equation}
-hvor $ \gamma $ bestemmes ved indsættelse af udtrykket for $ x_0(t) $ som løsning i den inhomogene differentialligning.
+hvor $ \gamma $ bestemmes ved indsÃ¦ttelse af udtrykket for $ x_0(t) $ som lÃ¸sning i den inhomogene differentialligning.
 \end{method}
 
 \begin{example}[Uheldig eksponentialfunktion] \label{eks.difflig2.eksprod1}
@@ -362,23 +362,23 @@ Givet er differentialligningen
 \begin{equation}
 x''(t) -7x'(t) + 10x(t) = -3\e^{2t}, \quad t \in \reel.
 \end{equation}
-Vi ønsker at bestemme en partikulær løsning til differentialligningen. Vi prøver først at bruge metode \ref{saet.difflig2.eksp1}, og gætter på en løsning af formen $ x_0(t) = \gamma \e^{\alpha t} = \gamma \e^{2t} $. Man har da $ x_0'(t) = 2\gamma \e^{2t} $ og $ x_0''(t) = 4\gamma \e^{2t} $, hvilket ved indsættelse i differentialligningen giver
+Vi Ã¸nsker at bestemme en partikulÃ¦r lÃ¸sning til differentialligningen. Vi prÃ¸ver fÃ¸rst at bruge metode \ref{saet.difflig2.eksp1}, og gÃ¦tter pÃ¥ en lÃ¸sning af formen $ x_0(t) = \gamma \e^{\alpha t} = \gamma \e^{2t} $. Man har da $ x_0'(t) = 2\gamma \e^{2t} $ og $ x_0''(t) = 4\gamma \e^{2t} $, hvilket ved indsÃ¦ttelse i differentialligningen giver
 \begin{equation}
 4\gamma \e^{2t} -7 \cdot 2\gamma \e^{2t} + 10\gamma \e^{2t} = -3\e^{2t} \Leftrightarrow 0 = -3
 \end{equation}
-Det ses at $ \gamma $ ikke optræder i den sidste ligning, og at ligningen iøvrigt er usand. Derfor må $ \alpha = \lambda $ være rod i det karakterligningen. Karakterligningen ser således ud:
+Det ses at $ \gamma $ ikke optrÃ¦der i den sidste ligning, og at ligningen iÃ¸vrigt er usand. Derfor mÃ¥ $ \alpha = \lambda $ vÃ¦re rod i det karakterligningen. Karakterligningen ser sÃ¥ledes ud:
 \begin{equation}
 \lambda^2 - 7\lambda + 10 = 0
 \end{equation}  
-Denne andengradsligning har rødderne 2 og 5, da $ 2 \cdot 5 = 10 $ og $ -(2+5) = -7 $. Det passer altså, at $ \alpha = 2 $ er rod. \bs
-På grund af overstående bruges nu metode \ref{saet.difflig2.eksprod1}, og vi gætter på en løsning af formen $ x_0(t) = \gamma t \e^{\lambda t} = \gamma t \e^{2 t} $. Vi har da
+Denne andengradsligning har rÃ¸dderne 2 og 5, da $ 2 \cdot 5 = 10 $ og $ -(2+5) = -7 $. Det passer altsÃ¥, at $ \alpha = 2 $ er rod. \bs
+PÃ¥ grund af overstÃ¥ende bruges nu metode \ref{saet.difflig2.eksprod1}, og vi gÃ¦tter pÃ¥ en lÃ¸sning af formen $ x_0(t) = \gamma t \e^{\lambda t} = \gamma t \e^{2 t} $. Vi har da
 \begin{equation}
 \begin{aligned}
 x_0'(t) &= \gamma \e^{2 t} + 2 \gamma t \e^{2 t} \\
 x_0''(t) &= 2 \gamma \e^{2 t} + 2 \gamma \e^{2 t} + 4 \gamma t \e^{2 t} = 4 \gamma \e^{2 t} + 4 \gamma t \e^{2 t}
 \end{aligned}
 \end{equation}
-Dette indsættes i differentialligningen for at bestemme $ \gamma $.
+Dette indsÃ¦ttes i differentialligningen for at bestemme $ \gamma $.
 \begin{equation}
 \begin{aligned}
 4 \gamma \e^{2 t} + 4 \gamma t \e^{2 t} -7(\gamma \e^{2 t} + 2 \gamma t \e^{2 t}) + 10\gamma t \e^{2 t} &= -3\e^{2t} \; \Leftrightarrow \\
@@ -386,7 +386,7 @@ Dette indsættes i differentialligningen for at bestemme $ \gamma $.
 \gamma &= 1
 \end{aligned}
 \end{equation}
-Det er nu lykkedes at finde $ \gamma $, og derfor er en partikulær løsning til differentialligningen
+Det er nu lykkedes at finde $ \gamma $, og derfor er en partikulÃ¦r lÃ¸sning til differentialligningen
 \begin{equation}
 x_0(t) = t \e^{2 t}, \quad t \in \reel.
 \end{equation}
@@ -394,10 +394,10 @@ x_0(t) = t \e^{2 t}, \quad t \in \reel.
 
 \subsection{Superpositionsprincippet} \label{subsek.difflig2.super1}
 
-Inden for alle typer af lineære differentialligninger findes konceptet \ind{superpositionsprincippet}{superpositionsprincippet}. Vi gennemgår det her for 2. ordens lineære differentialligninger med konstante koefficienter. Superpositionsprincippet bruges her til at bestemme en partikulær løsning til den inhomgene differentialligning, når højresiden ($ q(t) $) er en kombination (addition) af flere typer af funktioner, f.eks. en sinusfunktion lagt sammen med et polynomium.
+Inden for alle typer af lineÃ¦re differentialligninger findes konceptet \ind{superpositionsprincippet}{superpositionsprincippet}. Vi gennemgÃ¥r det her for 2. ordens lineÃ¦re differentialligninger med konstante koefficienter. Superpositionsprincippet bruges her til at bestemme en partikulÃ¦r lÃ¸sning til den inhomgene differentialligning, nÃ¥r hÃ¸jresiden ($ q(t) $) er en kombination (addition) af flere typer af funktioner, f.eks. en sinusfunktion lagt sammen med et polynomium.
 
 \begin{theorem}[Superpositionsprincippet] \label{saet.difflig2.super1}
-Hvis $ x_{0_i}(t) $ er en partikulær løsning til den inhomogene differentialligning
+Hvis $ x_{0_i}(t) $ er en partikulÃ¦r lÃ¸sning til den inhomogene differentialligning
 \begin{equation}
 x''(t) + a_1x'(t) + a_0x(t) = q_i(t)
 \end{equation}
@@ -405,21 +405,21 @@ for ethvert $ i = 1,\ldots,n $, er
 \begin{equation}
 x_0(t) = x_{0_1}(t) + x_{0_2}(t) + \ldots + x_{0_n}(t)
 \end{equation}
-en partikulær løsning til
+en partikulÃ¦r lÃ¸sning til
 \begin{equation}
 x''(t) + a_1x'(t) + a_0x(t) = q(t) = q_1(t) + q_2(t) + \ldots + q_n(t),
 \end{equation}
-hvor højresiderne $ q $ og $ q_1, q_2, \ldots, q_n $ er kontinuerte funktioner i et interval $ I $. \bs
-%Superpositionsprincippet er gældende inden for alle typer lineære differentialligninger.
+hvor hÃ¸jresiderne $ q $ og $ q_1, q_2, \ldots, q_n $ er kontinuerte funktioner i et interval $ I $. \bs
+%Superpositionsprincippet er gÃ¦ldende inden for alle typer lineÃ¦re differentialligninger.
 \end{theorem}
 
 \begin{bevis} \label{bev.difflig2.super1}
-Superposition er en følge af at differentialligningerne er lineære. Vi gennemfører her et generelt bevis for alle typer af lineære differentialligninger. \bs
+Superposition er en fÃ¸lge af at differentialligningerne er lineÃ¦re. Vi gennemfÃ¸rer her et generelt bevis for alle typer af lineÃ¦re differentialligninger. \bs
 Venstresiden af en differentialligning kaldes $ f(x(t)) $. Vi opstiller nu $ n $ differentialligninger:
 \begin{equation}
 f(x_{0_1}(t)) = q_1(t), \; f(x_{0_2}(t)) = q_2(t), \; \ldots, \; f(x_{0_n}(t)) = q_n(t)
 \end{equation}
-hvor $ x_{0_1}, x_{0_2}, \ldots, x_{0_n} $ er partikulære løsninger til de respektive inhomogene differentialligninger. Vi definerer nu $ x_{0} = x_{0_1} + x_{0_2} + \ldots + x_{0_n} $ og indsætter denne i venstresiden:
+hvor $ x_{0_1}, x_{0_2}, \ldots, x_{0_n} $ er partikulÃ¦re lÃ¸sninger til de respektive inhomogene differentialligninger. Vi definerer nu $ x_{0} = x_{0_1} + x_{0_2} + \ldots + x_{0_n} $ og indsÃ¦tter denne i venstresiden:
 \begin{equation}
 \begin{aligned}
 f(x_{0}(t)) &= f(x_{0_1}(t) + x_{0_2}(t) + \ldots + x_{0_n}(t)) \\
@@ -427,7 +427,7 @@ f(x_{0}(t)) &= f(x_{0_1}(t) + x_{0_2}(t) + \ldots + x_{0_n}(t)) \\
 &= q_1(t) + q_2(t) + \ldots + q_n(t)
 \end{aligned}
 \end{equation}
-På højresiden fås en sum af funktionerne $ q_1,q_2,\ldots,q_n $, som kaldes for $ q $. Sætningen er da bevist.
+PÃ¥ hÃ¸jresiden fÃ¥s en sum af funktionerne $ q_1,q_2,\ldots,q_n $, som kaldes for $ q $. SÃ¦tningen er da bevist.
 \end{bevis}
 
 \begin{example}[Superposition] \label{eks.difflig2.super1}
@@ -435,54 +435,54 @@ Givet er den inhomgene differentialligning
 \begin{equation}
 x''(t) -x'(t) -3 x(t) = 9\e^{4t} + 3t - 14, \quad t \in \reel. \label{lig.difflig2.super3}
 \end{equation}
-Vi ønsker at bestemme en partikulær løsning $ x_0(t) $ til differentialligningen. Det ses, at højresiden er en kombination af en eksponentialfunktion ($q_1(t) = 9\e^{4t} $) og et polynomium ($ q_2(t) = 3t - 14 $). Derfor bruges superpositionsprincippet \ref{saet.difflig2.super1} og differentialligningen opsplittes i to dele.
+Vi Ã¸nsker at bestemme en partikulÃ¦r lÃ¸sning $ x_0(t) $ til differentialligningen. Det ses, at hÃ¸jresiden er en kombination af en eksponentialfunktion ($q_1(t) = 9\e^{4t} $) og et polynomium ($ q_2(t) = 3t - 14 $). Derfor bruges superpositionsprincippet \ref{saet.difflig2.super1} og differentialligningen opsplittes i to dele.
 \eqnl \begin{eqnarray}
 x''(t) -x'(t) -3 x(t) &=& 9\e^{4t} = q_1(t) \label{lig.difflig2.super1} \\
 x''(t) -x'(t) -3 x(t) &=& 3t - 14 = q_2(t) \label{lig.difflig2.super2}
 \end{eqnarray}
-Først behandles ligning \eqref{lig.difflig2.super1}, hvortil vi skal bruge metode \ref{saet.difflig2.eksp1}. En partikulær løsning er da af formen $ x_{0_1}(t) = \gamma \e^{\alpha t} = \gamma \e^{4t} $. Vi har $ x_{0_1}'(t) = 4 \gamma \e^{4t} $ og $ x_{0_1}''(t) = 16 \gamma \e^{4t} $. Dette indsættes i ligningen.
+FÃ¸rst behandles ligning \eqref{lig.difflig2.super1}, hvortil vi skal bruge metode \ref{saet.difflig2.eksp1}. En partikulÃ¦r lÃ¸sning er da af formen $ x_{0_1}(t) = \gamma \e^{\alpha t} = \gamma \e^{4t} $. Vi har $ x_{0_1}'(t) = 4 \gamma \e^{4t} $ og $ x_{0_1}''(t) = 16 \gamma \e^{4t} $. Dette indsÃ¦ttes i ligningen.
 \begin{equation}
 16 \gamma \e^{4t} -4 \gamma \e^{4t} -3 \gamma \e^{4t} = 9\e^{4t} \, \Leftrightarrow \, \gamma = 1
 \end{equation}
 Derfor er $ x_{0_1}(t) = \e^{4t} $. \bs
-Nu behandles ligning \eqref{lig.difflig2.super2}, hvor en partikulær løsning er et polynomium af højst grad 1, jf. metode \ref{saet.difflig2.poly1}, altså er $ x_{0_2}(t) = b_1t + b_0 $. Derfor er $ x_{0_2}'(t) = b_1 $ og $ x_{0_2}''(t) = 0 $. Dette indsættes i differentialligningen.
+Nu behandles ligning \eqref{lig.difflig2.super2}, hvor en partikulÃ¦r lÃ¸sning er et polynomium af hÃ¸jst grad 1, jf. metode \ref{saet.difflig2.poly1}, altsÃ¥ er $ x_{0_2}(t) = b_1t + b_0 $. Derfor er $ x_{0_2}'(t) = b_1 $ og $ x_{0_2}''(t) = 0 $. Dette indsÃ¦ttes i differentialligningen.
 \begin{equation}
 0 -b_1 -3(b_1t + b_0) = 3t - 14 \Leftrightarrow (-3b_1 - 3) t + (-b_1 - 3b_0 + 14) = 0
 \end{equation}
-Vi har således to ligninger med to ubekendte, og vi finder, at $ b_1 = -1 $, og derfor er $ b_0 = 5 $. Altså er en partikulær løsning $ x_{0_2}(t) = -t + 5 $. Den samlede partikulære løsning til \eqref{lig.difflig2.super3} findes da som summen af de to allerede fundne partikulære løsninger til de to opsplittede ligninger:
+Vi har sÃ¥ledes to ligninger med to ubekendte, og vi finder, at $ b_1 = -1 $, og derfor er $ b_0 = 5 $. AltsÃ¥ er en partikulÃ¦r lÃ¸sning $ x_{0_2}(t) = -t + 5 $. Den samlede partikulÃ¦re lÃ¸sning til \eqref{lig.difflig2.super3} findes da som summen af de to allerede fundne partikulÃ¦re lÃ¸sninger til de to opsplittede ligninger:
 \begin{equation}
 x_{0}(t) = x_{0_1}(t) + x_{0_2}(t) = \e^{4t} - t + 5, \quad t \in \reel.
 \end{equation}
 \end{example}
 
-\subsection{Den komplekse gættemetode} \label{af.kompleks}
+\subsection{Den komplekse gÃ¦ttemetode} \label{af.kompleks}
 
-%\textit{Den komplekse gættemetode} %er ligeså meget en gættemetode, som metoderne i sidste delafsnit. Det handler altså ikke om at skulle gætte sig til en partikulær løsning ud af den blå luft.
+%\textit{Den komplekse gÃ¦ttemetode} %er ligesÃ¥ meget en gÃ¦ttemetode, som metoderne i sidste delafsnit. Det handler altsÃ¥ ikke om at skulle gÃ¦tte sig til en partikulÃ¦r lÃ¸sning ud af den blÃ¥ luft.
 
-\ind{den komplekse gættemetoden}{Den komplekse gættemetode} benyttes når det er bekvemt at omskrive differentialligningens højreside til en kompleks højreside, således at den givne reelle højreside er realdelen af den komplekse.\bs
-Er højresiden for eksempel $2\e^{2t}\cos(3t)\,$, og  man til denne lægger $i(-2\e^{2t}\sin(3t))\,, $ fås 
+\ind{den komplekse gÃ¦ttemetoden}{Den komplekse gÃ¦ttemetode} benyttes nÃ¥r det er bekvemt at omskrive differentialligningens hÃ¸jreside til en kompleks hÃ¸jreside, sÃ¥ledes at den givne reelle hÃ¸jreside er realdelen af den komplekse.\bs
+Er hÃ¸jresiden for eksempel $2\e^{2t}\cos(3t)\,$, og  man til denne lÃ¦gger $i(-2\e^{2t}\sin(3t))\,, $ fÃ¥s 
 \begin{equation}
 2 \e^{2t} (\cos(3t) - i \sin(3t)) = 2 \e^{(2-3i)t} \,.
 \end{equation}
-Her gælder der klart nok at $\mathrm{Re}( 2 \e^{(2-3i)t})=2\e^{2t}\cos(3t)\,$.
-Man finder nu en kompleks partikulær løsning til differentialligningen med den komplekse højreside. Den ønskede reelle partikulære løsning til den oprindelige differentialligning er da realdelen af den fundne komplekse løsning.\bs
-Bemærk at denne metode kan kun benyttes fordi differentialligningen er lineær. Det er netop lineariteten der sikrer at realdelen af den fundne komplekse løsning er den ønskede reelle løsning. Dette vises ved at vi opfatter differentialligningens venstreside som en lineær afbildning $f(z(t))$ i mængden af komplekse funktioner af en reel variabel og bruger følgende generelle sætning:
+Her gÃ¦lder der klart nok at $\mathrm{Re}( 2 \e^{(2-3i)t})=2\e^{2t}\cos(3t)\,$.
+Man finder nu en kompleks partikulÃ¦r lÃ¸sning til differentialligningen med den komplekse hÃ¸jreside. Den Ã¸nskede reelle partikulÃ¦re lÃ¸sning til den oprindelige differentialligning er da realdelen af den fundne komplekse lÃ¸sning.\bs
+BemÃ¦rk at denne metode kan kun benyttes fordi differentialligningen er lineÃ¦r. Det er netop lineariteten der sikrer at realdelen af den fundne komplekse lÃ¸sning er den Ã¸nskede reelle lÃ¸sning. Dette vises ved at vi opfatter differentialligningens venstreside som en lineÃ¦r afbildning $f(z(t))$ i mÃ¦ngden af komplekse funktioner af en reel variabel og bruger fÃ¸lgende generelle sÃ¦tning:
 
 \begin{theorem} \label{saet.kompl}
-Der er givet en lineær afbildning $\,f: (C^{\infty}(\reel),\compl) \rightarrow  (C^{\infty}(\reel),\compl)\,$ og ligningen
+Der er givet en lineÃ¦r afbildning $\,f: (C^{\infty}(\reel),\compl) \rightarrow  (C^{\infty}(\reel),\compl)\,$ og ligningen
 \begin{equation}\label{lin_eq}
 f(z(t)))=s(t)\,.
 \end{equation}
-Hvis vi sætter $z(t)$ og $s(t)$ på rektangulær form ved $z(t)=x(t)+i\cdot y(t)$ og $s(t)=q(t)+i\cdot r(t)\,,$ så gælder der at (\ref{lin_eq}) sand hvis og kun hvis
+Hvis vi sÃ¦tter $z(t)$ og $s(t)$ pÃ¥ rektangulÃ¦r form ved $z(t)=x(t)+i\cdot y(t)$ og $s(t)=q(t)+i\cdot r(t)\,,$ sÃ¥ gÃ¦lder der at (\ref{lin_eq}) sand hvis og kun hvis
 \begin{equation} \label{lig.kompl6}
 f(x(t)) = q(t) \quad \mathrm{og} \quad f(y(t)) = r(t)\,.
 \end{equation}
 \end{theorem}
 
-%Sætning \ref{saet.kompl} tager udgangspunkt i at afbildningen er lineær, og det forklares yderligere i følgende tilhørende bevis. Læg mærke til at sætningen virker to veje: Hvis der tages udgangspunkt i ligning \eqref{lig.kompl5} gælder ligning \eqref{lig.kompl6} også og omvendt. Det fremgår af ordene `hvis og kun hvis'.
+%SÃ¦tning \ref{saet.kompl} tager udgangspunkt i at afbildningen er lineÃ¦r, og det forklares yderligere i fÃ¸lgende tilhÃ¸rende bevis. LÃ¦g mÃ¦rke til at sÃ¦tningen virker to veje: Hvis der tages udgangspunkt i ligning \eqref{lig.kompl5} gÃ¦lder ligning \eqref{lig.kompl6} ogsÃ¥ og omvendt. Det fremgÃ¥r af ordene `hvis og kun hvis'.
 
 \begin{bevis}
-Givet er funktionen $ z(t) $ og Lad den lineære afbildning $ f $ og funktionerne $ z(t) $ og $ s(t) $ være givet som i sætning \ref{saet.kompl}. Som følge af egenskaberne ved lineære afbildninger, se \tref{NUID10-saet.lindiff1}{definition}, gælder der følgende:
+Givet er funktionen $ z(t) $ og Lad den lineÃ¦re afbildning $ f $ og funktionerne $ z(t) $ og $ s(t) $ vÃ¦re givet som i sÃ¦tning \ref{saet.kompl}. Som fÃ¸lge af egenskaberne ved lineÃ¦re afbildninger, se \tref{NUID10-saet.lindiff1}{definition}, gÃ¦lder der fÃ¸lgende:
 \begin{equation}
 \begin{aligned}
 f(z(t)) &= s(t) \Leftrightarrow \\
@@ -491,15 +491,15 @@ f(x(t)) + i\cdot f(y(t)) &= q(t) + i \cdot r(t) \Leftrightarrow \\
 f(x(t)) = q(t) \;\, \mathrm{og} \,\; f(y(t)) &= r(t) \,.
 \end{aligned}
 \end{equation}
-Sætningen er dermed bevist.
-%Man udnytter altså både, at differentialligningen er lineær, men også skelnen mellem real- og imaginærdel på begge sider af lighedstegnet. Det er også muligt at bevise at $ f(z(t)) = s(t) $, som følge af at $ f(x(t)) = q(t) $ og $ f(y(t)) = r(t) $, ved hjælp af superpositionsprincippet.
+SÃ¦tningen er dermed bevist.
+%Man udnytter altsÃ¥ bÃ¥de, at differentialligningen er lineÃ¦r, men ogsÃ¥ skelnen mellem real- og imaginÃ¦rdel pÃ¥ begge sider af lighedstegnet. Det er ogsÃ¥ muligt at bevise at $ f(z(t)) = s(t) $, som fÃ¸lge af at $ f(x(t)) = q(t) $ og $ f(y(t)) = r(t) $, ved hjÃ¦lp af superpositionsprincippet.
 \end{bevis}
 
 
 
 
-\begin{method}[Den komplekse gættemetode] \label{met.kompl}
-En partikulær løsning $ x_0(t) $ til den reelle inhomogene differentialligning
+\begin{method}[Den komplekse gÃ¦ttemetode] \label{met.kompl}
+En partikulÃ¦r lÃ¸sning $ x_0(t) $ til den reelle inhomogene differentialligning
 \begin{equation}
 x''(t) + a_1x'(t) + a_0x(t) = q(t), \quad t \in \reel, \label{lig.kompl4}
 \end{equation}
@@ -507,12 +507,12 @@ hvor $ a_0 $ og $ a_1 $ er reelle koefficienter og
 \begin{equation}
 q(t) = \re \! \left((a+bi) \e^{(\alpha + \omega i)t}\right) = a \e^{\alpha t}\cos(\omega t) - b \e^{\alpha t} \sin(\omega t),
 \end{equation}
-bestemmes i første omgang ved at finde den tilsvarende komplekse partikulære løsning til følgende komplekse differentialligning
+bestemmes i fÃ¸rste omgang ved at finde den tilsvarende komplekse partikulÃ¦re lÃ¸sning til fÃ¸lgende komplekse differentialligning
 \begin{equation} \label{lig.kompl2}
 z''(t) + a_1z'(t) + a_0z(t) = (a+bi) \e^{(\alpha + \omega i)t}, \quad t \in \reel,
 \end{equation}
-Den komplekse partikulære løsning har formen $ z_{0}(t) = (c+di) \e^{(\alpha + \omega i)t} $, hvor $ c $ og $ d $ bestemmes ved indsættelse af $ z_{0}(t) $ i differentialligningen \eqref{lig.kompl2}. \bs
-Efterfølgende er en partikulær løsning til differentialligningen \eqref{lig.kompl4} givet ved
+Den komplekse partikulÃ¦re lÃ¸sning har formen $ z_{0}(t) = (c+di) \e^{(\alpha + \omega i)t} $, hvor $ c $ og $ d $ bestemmes ved indsÃ¦ttelse af $ z_{0}(t) $ i differentialligningen \eqref{lig.kompl2}. \bs
+EfterfÃ¸lgende er en partikulÃ¦r lÃ¸sning til differentialligningen \eqref{lig.kompl4} givet ved
 \begin{equation}
 \begin{aligned}
 x_0(t) &= \re \! \left(z_{0}(t)\right).
@@ -521,30 +521,30 @@ x_0(t) &= \re \! \left(z_{0}(t)\right).
 \end{method}
 
 \begin{aha}
-En afgørende grund til at man benytter den komplekse gættemetoder, er at det er så enkelt at differentiere eksponentialfuntionen, selv når den er kompleks.
+En afgÃ¸rende grund til at man benytter den komplekse gÃ¦ttemetoder, er at det er sÃ¥ enkelt at differentiere eksponentialfuntionen, selv nÃ¥r den er kompleks.
 \end{aha}
 
-\begin{example}[Den komplekse gættemetode]\label{complexGuess}
+\begin{example}[Den komplekse gÃ¦ttemetode]\label{complexGuess}
 Givet er en 2. ordens inhomogene differentialligning:
 \begin{equation}
 x''(t) - 2x'(t) - 2x(t) = 19\e^{4t}\cos(t)-35\e^{4t}\sin(t), \quad t \in \reel. \label{lig.ekskompl}
 \end{equation}
-Vi ønsker at bestemme en partikulær løsning til denne differentialligning. Det er oplagt at bruge \textit{den komplekse gættemetode} i metode \ref{met.kompl}. Det ses i første omgang at der gælder følgende omkring højresiden:
+Vi Ã¸nsker at bestemme en partikulÃ¦r lÃ¸sning til denne differentialligning. Det er oplagt at bruge \textit{den komplekse gÃ¦ttemetode} i metode \ref{met.kompl}. Det ses i fÃ¸rste omgang at der gÃ¦lder fÃ¸lgende omkring hÃ¸jresiden:
 \begin{equation}
 q(t) = 19\e^{4t}\cos(t)-35\e^{4t}\sin(t) = \re \! \left( (19+35i)\e^{(4+i)t} \right).
 \end{equation}
-Vi skal nu i stedet finde en kompleks partikulær løsning til denne differentialligning
+Vi skal nu i stedet finde en kompleks partikulÃ¦r lÃ¸sning til denne differentialligning
 \begin{equation}
 z''(t) - 2z'(t) - 2z(t) = (19+35i)\e^{(4+i)t}, \quad t \in \reel.
 \end{equation}
-ved at gætte på at $ z_{0}(t) = (c+di)\e^{(4+i)t} $ er en løsning. Vi har også
+ved at gÃ¦tte pÃ¥ at $ z_{0}(t) = (c+di)\e^{(4+i)t} $ er en lÃ¸sning. Vi har ogsÃ¥
 \begin{equation}
 \begin{aligned}
 z_{0}'(t) &= (c+di)(4+i)\e^{(4+i)t} = \left(4c-d+(c+4d)i\right)\e^{(4+i)t} \quad \mathrm{og}\\
 z_{0}''(t) &= (4c-d+(c+4d)i)(4+i)\e^{(4+i)t} = (15c-8d + (8c+15d)i)\e^{(4+i)t}
 \end{aligned}
 \end{equation}
-Disse udtryk indsættes i den komplekse differentialligning for at bestemme $ c $ og $ d $:
+Disse udtryk indsÃ¦ttes i den komplekse differentialligning for at bestemme $ c $ og $ d $:
 \begin{equation}
 \begin{aligned}
 (15c-8d + (8c+15d)i)\e^{(4+i)t} - 2(4c-d+(c+4d)i)\e^{(4+i)t}& - 2(c+di)\e^{(4+i)t} \\
@@ -558,24 +558,24 @@ Dette er to ligninger med to ubekendte. Ligningssystemets totalmatrix opskrives:
 \begin{equation}
 \begin{matr}{rr|r} 5 &-6 & 19 \\ 6 & 5 & 35 \end{matr} \rightarrow \begin{matr}{rr|r} 1 & -\frac{6}{5} & \frac{19}{5} \\ 0 & \frac{61}{5} & \frac{61}{5} \end{matr} \rightarrow \begin{matr}{rr|r} 1 & 0 & 5 \\ 0 & 1 & 1 \end{matr}\,.
 \end{equation}
-Vi har altså at $ c=5 $ og $ d=1 $, hvilket giver $ z_{0}(t) = (5+i)\e^{(4+i)t} $. En partikulær løsning til differentialligning \eqref{lig.ekskompl} er derfor
+Vi har altsÃ¥ at $ c=5 $ og $ d=1 $, hvilket giver $ z_{0}(t) = (5+i)\e^{(4+i)t} $. En partikulÃ¦r lÃ¸sning til differentialligning \eqref{lig.ekskompl} er derfor
 \begin{equation}
 x_0(t) = \re (z_{0}(t)) = \re \! \left((5+i)\e^{(4+i)t}\right) = 5\e^{4t}\cos(t) - \e^{4t}\sin(t), \quad t \in \reel.
 \end{equation}
 \end{example}
 
-%Som det fremgår af metoden og eksemplet ovenfor går \textit{den komplekse gættemetode} ud på, at man omformer en differentialligning til den tilsvarende komplekse ligning. Det gøres fordi differentiation i disse tilfælde er simplere: det er for eksempel nemmere at differentiere $ \e^{(1+i)t} $ end $ \e^t\cos(t) $. Det er ikke kun 2. ordens differentialligninger, som kan løses på denne måde. Den komplekse gættemetode bruges til mange typer af lineære differentialligninger.
+%Som det fremgÃ¥r af metoden og eksemplet ovenfor gÃ¥r \textit{den komplekse gÃ¦ttemetode} ud pÃ¥, at man omformer en differentialligning til den tilsvarende komplekse ligning. Det gÃ¸res fordi differentiation i disse tilfÃ¦lde er simplere: det er for eksempel nemmere at differentiere $ \e^{(1+i)t} $ end $ \e^t\cos(t) $. Det er ikke kun 2. ordens differentialligninger, som kan lÃ¸ses pÃ¥ denne mÃ¥de. Den komplekse gÃ¦ttemetode bruges til mange typer af lineÃ¦re differentialligninger.
 
 \section{Eksistens og entydighed} \label{subsek.difflig2.eksent1}
 
-Vi formulerer her en sætning om \ind{2. ordens differentialligning!eksistens og entydighed}{eksistens og entydighed} for differentialligninger af 2. orden med konstante koefficienter. Vi har behov for to \textit{begyndelsesværdibetingelser}, funktionens værdi og den aflededes værdi i den valgte begyndelsesværdi.
+Vi formulerer her en sÃ¦tning om \ind{2. ordens differentialligning!eksistens og entydighed}{eksistens og entydighed} for differentialligninger af 2. orden med konstante koefficienter. Vi har behov for to \textit{begyndelsesvÃ¦rdibetingelser}, funktionens vÃ¦rdi og den aflededes vÃ¦rdi i den valgte begyndelsesvÃ¦rdi.
 
 \begin{theorem}[Eksistens og entydighed] \label{saet.difflig2.eksent1}
-Til ethvert talsæt $ (t_0,x_0,v_0) $ (\textit{dobbelt begyndelsesværdibetingelse}), findes netop én løsning $ x(t) $ til differentialligningen
+Til ethvert talsÃ¦t $ (t_0,x_0,v_0) $ (\textit{dobbelt begyndelsesvÃ¦rdibetingelse}), findes netop Ã©n lÃ¸sning $ x(t) $ til differentialligningen
 \begin{equation}
 x''(t) + a_1x'(t) + a_0x(t) = q(t), \quad t \in I, q : I \rightarrow \reel,
 \end{equation}
-således at
+sÃ¥ledes at
 \begin{equation}
 x(t_0) = x_0 \quad \mathrm{og} \quad x'(t_0) = v_0, 
 \end{equation}
@@ -591,8 +591,8 @@ Det ses at differentialligningen er homogen. Den har karakterligningen
 \begin{equation}
 \lambda^2 - 5\lambda - 36 = 0.
 \end{equation}
-Vi ønsker at bestemme en funktion $ x(t) $, som er løsning til differentialligningen og har begyndelsesværdibetingelsen $ (t_0,x_0,v_0) = (0,5,6) $.
-Karakterligningen har rødderne $ \lambda_1 = -4 $ og $ \lambda_2 = 9 $, da $ -4 \cdot 9 = -36 $ og $ -(9+(-4)) = 5 $ er ligningens koefficienter. Derfor er den fuldstændige løsningsmængde til den homogene differentialligning (ved hjælp af sætning \ref{saet.difflig2.hom1}) udspændt af følgende funktioner for alle $ c_1,c_2 \in \reel $:
+Vi Ã¸nsker at bestemme en funktion $ x(t) $, som er lÃ¸sning til differentialligningen og har begyndelsesvÃ¦rdibetingelsen $ (t_0,x_0,v_0) = (0,5,6) $.
+Karakterligningen har rÃ¸dderne $ \lambda_1 = -4 $ og $ \lambda_2 = 9 $, da $ -4 \cdot 9 = -36 $ og $ -(9+(-4)) = 5 $ er ligningens koefficienter. Derfor er den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde til den homogene differentialligning (ved hjÃ¦lp af sÃ¦tning \ref{saet.difflig2.hom1}) udspÃ¦ndt af fÃ¸lgende funktioner for alle $ c_1,c_2 \in \reel $:
 \begin{equation}
 x(t) = c_1 \e^{-4 t} + c_2 \e^{9 t}, \quad t \in \reel.
 \end{equation}
@@ -600,42 +600,42 @@ Man har da
 \begin{equation}
 x'(t) = -4 c_1 \e^{-4 t} + 9 c_2 \e^{9 t}
 \end{equation}
-Indsættes begyndelsesværdibetingelsen ($ x(0) = 5 $ og $ x'(0) = 6 $) i de to ligninger, kan man løse for $ (c_1,c_2) $.
+IndsÃ¦ttes begyndelsesvÃ¦rdibetingelsen ($ x(0) = 5 $ og $ x'(0) = 6 $) i de to ligninger, kan man lÃ¸se for $ (c_1,c_2) $.
 \begin{eqnalign}{rcrcr}
 5 & = & c_1 & + & c_2 \\
 6 & = & -4 c_1 & + & 9 c_2
 \end{eqnalign}
-da $ \e^0 = 1 $. Indsættes $ c_2 = 5 - c_1 $ i den anden ligning fås
+da $ \e^0 = 1 $. IndsÃ¦ttes $ c_2 = 5 - c_1 $ i den anden ligning fÃ¥s
 \begin{equation}
 6 = -4c_1 + 9(5 - c_1) = -13c_1 + 45 \, \Leftrightarrow \, c_1 = \frac{6-45}{-13} = 3
 \end{equation}
-Derfor er $ c_2 = 5 - 3 = 2 $, og den betingede løsning er
+Derfor er $ c_2 = 5 - 3 = 2 $, og den betingede lÃ¸sning er
 \begin{equation}
 x(t) = 3 \e^{-4 t} + 2 \e^{9 t}, \quad t \in \reel
 \end{equation}
 
 \begin{info}
-Læg mærke til, at man godt kan bestemme en entydig og betinget løsning til en homogen differentialligning, som i dette tilfælde. Højresiden behøver ikke være forskellig fra nul. Den fuldstændige løsningsmængde til differentialligningen er nemlig $ L_{inhom} = L_{hom} $, da $ x_0(t) = 0 $.
+LÃ¦g mÃ¦rke til, at man godt kan bestemme en entydig og betinget lÃ¸sning til en homogen differentialligning, som i dette tilfÃ¦lde. HÃ¸jresiden behÃ¸ver ikke vÃ¦re forskellig fra nul. Den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde til differentialligningen er nemlig $ L_{inhom} = L_{hom} $, da $ x_0(t) = 0 $.
 \end{info}
 \end{example}
 
-Herunder er et eksempel som gennemgår hele løsningsproceduren for en inhomogen differentialligning med en dobbelt begyndelsesværdibetingelse. Efter det kommer et eksempel, hvor formålet er at finde en differentialligning, hvor den fuldstændige løs\-nings\-mæng\-de er opgivet. Den falder derfor i tråd med eksempel \ref{eks.baglaens}, og nu er der også en højreside forskellig fra nul.
+Herunder er et eksempel som gennemgÃ¥r hele lÃ¸sningsproceduren for en inhomogen differentialligning med en dobbelt begyndelsesvÃ¦rdibetingelse. Efter det kommer et eksempel, hvor formÃ¥let er at finde en differentialligning, hvor den fuldstÃ¦ndige lÃ¸s\-nings\-mÃ¦ng\-de er opgivet. Den falder derfor i trÃ¥d med eksempel \ref{eks.baglaens}, og nu er der ogsÃ¥ en hÃ¸jreside forskellig fra nul.
 
 \begin{example}[Opsamlende eksempel] \label{eks.difflig2.eksent21}
 Givet differentialligningen
 \begin{equation}
 x''(t) + 6x'(t) + 5x(t) = 20t^2 + 48t + 13, \quad t \in \reel.
 \end{equation}
-Vi bestemmer den fuldstændige løsningsmængde $ L_{inhom} $. Derefter skal den betingede løsning $ x(t)$ som opfylder begyndelsesværdibetingelserne $ (t_0,x_0,v_0) = (0,5,-8)\,, $ bestemmes.\bs
-Først løses den tilsvarende homogene differentialligning, og karakterligningen ser således ud:
+Vi bestemmer den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde $ L_{inhom} $. Derefter skal den betingede lÃ¸sning $ x(t)$ som opfylder begyndelsesvÃ¦rdibetingelserne $ (t_0,x_0,v_0) = (0,5,-8)\,, $ bestemmes.\bs
+FÃ¸rst lÃ¸ses den tilsvarende homogene differentialligning, og karakterligningen ser sÃ¥ledes ud:
 \begin{equation}
 \lambda^2 + 6\lambda + 5 = 0
 \end{equation}
-Denne har rødderne $ \lambda_1 = -5 $ og $ \lambda_2 = -1 $, da $ (\lambda + 5)(\lambda + 1) = \lambda^2 + 6\lambda + 5 $. Da disse rødder er reelle og forskellige, jævnfør sætning \ref{saet.difflig2.hom1}, er den fuldstændige homogene løsningsmængde givet ved
+Denne har rÃ¸dderne $ \lambda_1 = -5 $ og $ \lambda_2 = -1 $, da $ (\lambda + 5)(\lambda + 1) = \lambda^2 + 6\lambda + 5 $. Da disse rÃ¸dder er reelle og forskellige, jÃ¦vnfÃ¸r sÃ¦tning \ref{saet.difflig2.hom1}, er den fuldstÃ¦ndige homogene lÃ¸sningsmÃ¦ngde givet ved
 \begin{equation}
 L_{hom} = \maengde{c_1 \e^{-5t} + c_2 \e^{-t}\,\,,t \in \reel\,}{c_1,c_2 \in \reel}.
 \end{equation}
-Nu bestemmes en partikulær løsning til den inhomogene ligning. Da højresiden er et andengradspolynomium gætter vi på, at $ x_{0}(t) = b_2t^2 + b_1t + b_0 $, ved hjælp af metode \ref{saet.difflig2.poly1}. Vi har da, at $ x_{0}'(t) = 2b_2t + b_1 $ og $ x_{0}''(t) = 2b_2 $. Dette indsættes i differentialligningen.
+Nu bestemmes en partikulÃ¦r lÃ¸sning til den inhomogene ligning. Da hÃ¸jresiden er et andengradspolynomium gÃ¦tter vi pÃ¥, at $ x_{0}(t) = b_2t^2 + b_1t + b_0 $, ved hjÃ¦lp af metode \ref{saet.difflig2.poly1}. Vi har da, at $ x_{0}'(t) = 2b_2t + b_1 $ og $ x_{0}''(t) = 2b_2 $. Dette indsÃ¦ttes i differentialligningen.
 \begin{equation}
 \begin{aligned}
 2b_2 + 6(2b_2t + b_1) + 5(b_2t^2 + b_1t + b_0) = 20t^2 + 48t + 13 &\Leftrightarrow \\
@@ -643,15 +643,15 @@ Nu bestemmes en partikulær løsning til den inhomogene ligning. Da højresiden er 
 5b_2 - 20 = 0 \,\,\,\mathrm{og}\,\,\, 12b_2 + 5b_1 - 48 = 0 \,\,\,\mathrm{og}\,\,\, 2b_2 + 6b_1 + 5b_0 - 13 = 0 & 
 \end{aligned}
 \end{equation}
-Den første ligning giver nemt $ b_2 = 4 $. Indsættes det i den anden ligning fås ved lidt hovedregning $ b_1 = 0 $. Til sidst i den tredje ligning får man $ b_0 = 1 $. En partikulær løsning til den inhomogene differentialligning er derfor
+Den fÃ¸rste ligning giver nemt $ b_2 = 4 $. IndsÃ¦ttes det i den anden ligning fÃ¥s ved lidt hovedregning $ b_1 = 0 $. Til sidst i den tredje ligning fÃ¥r man $ b_0 = 1 $. En partikulÃ¦r lÃ¸sning til den inhomogene differentialligning er derfor
 \begin{equation}
 x_0(t) = 4t^2 + 1, \quad t \in \reel.
 \end{equation}
-Ifølge struktursætningen, for eksempel metode \ref{saet.difflig2.struk1}, er den fuldstændige løsningsmængde til den inhomogene differentialligning givet ved
+IfÃ¸lge struktursÃ¦tningen, for eksempel metode \ref{saet.difflig2.struk1}, er den fuldstÃ¦ndige lÃ¸sningsmÃ¦ngde til den inhomogene differentialligning givet ved
 \begin{equation}
 L_{inhom} = x_0(t) + L_{hom} = \maengde{4t^2 + 1 + c_1 \e^{-5t} + c_2 \e^{-t}\,,t \in \reel\,}{ c_1,c_2 \in \reel}
 \end{equation}
-Vi bestemmer nu den løsning der opfylder de givne begyndelsesværdibetingelser. En vilkårlig løsning har formen
+Vi bestemmer nu den lÃ¸sning der opfylder de givne begyndelsesvÃ¦rdibetingelser. En vilkÃ¥rlig lÃ¸sning har formen
 \begin{equation}
 x(t) = 4t^2 + 1 + c_1 \e^{-5t} + c_2 \e^{-t}, \quad t \in \reel.
 \end{equation}
@@ -659,44 +659,44 @@ Nu bestemmes den afledede.
 \begin{equation}
 x'(t) =  8t -5 c_1 \e^{-5t} - c_2 \e^{-t}, \quad t \in \reel.
 \end{equation}
-Indsættes $ x(0) = 5 $ og $ x'(0) = -8 $ fås de to ligninger
+IndsÃ¦ttes $ x(0) = 5 $ og $ x'(0) = -8 $ fÃ¥s de to ligninger
 \begin{eqnalign}{rcrcrcr}
 5 &=& c_1 &+& c_2 &+& 1 \\
 -8 &=& -5c_1 &-& c_2
 \end{eqnalign}
-Indsættes $ c_1 = 4 - c_2 $ fra den første ligning i den anden fås
+IndsÃ¦ttes $ c_1 = 4 - c_2 $ fra den fÃ¸rste ligning i den anden fÃ¥s
 \begin{equation}
 -8 = -5(4 - c_2) - c_2 \Leftrightarrow -8 + 20 = 4c_2 \Leftrightarrow c_2 = 3
 \end{equation}
-Det giver $ c_1 = 1 $, og den betingede løsning er derfor
+Det giver $ c_1 = 1 $, og den betingede lÃ¸sning er derfor
 \begin{equation}
 x(t) = \e^{-5t} + 3 \e^{-t} + 4t^2 + 1, \quad t \in \reel.
 \end{equation}
 \end{example}
 
-\begin{example}[Fra løsning til ligning]
-Givet den fuldstændige løsning til en lineær 2. ordens differentialligning med konstante koefficienter:
+\begin{example}[Fra lÃ¸sning til ligning]
+Givet den fuldstÃ¦ndige lÃ¸sning til en lineÃ¦r 2. ordens differentialligning med konstante koefficienter:
 \begin{equation}
 L_{inhom} = \maengde{c_1 \e^{-2t} + c_2 \e^{2t} - \tfrac{1}{2}\sin(2t)\,,t \in \reel\,}{ c_1,c_2 \in \reel}
 \end{equation}
-Det er nu formålet at opstille differentialligningen, som generelt har dette udseende:
+Det er nu formÃ¥let at opstille differentialligningen, som generelt har dette udseende:
 \begin{equation}
 x''(t) + a_1x'(t) + a_0x(t) = q(t)
 \end{equation}
-Vi skal altså bestemme $ a_1 $, $ a_0 $ og $ q(t) $. \bs
-I første omgang splittes løsningen op i en partikulær løsning og den fuldstændige homogene løsningsmængde:
+Vi skal altsÃ¥ bestemme $ a_1 $, $ a_0 $ og $ q(t) $. \bs
+I fÃ¸rste omgang splittes lÃ¸sningen op i en partikulÃ¦r lÃ¸sning og den fuldstÃ¦ndige homogene lÃ¸sningsmÃ¦ngde:
 \begin{equation}
 x_0(t) =  - \tfrac{1}{2}\sin(2t),\; t \in \reel \quad \mathrm{og} \quad L_{hom} = \maengde{c_1 \e^{-2t} + c_2 \e^{2t}\,\,t \in \reel\,}{c_1,c_2 \in \reel}
 \end{equation}
-Nu betragtes den fuldstændige homogene løsning. Udseendet på denne stemmer overens med den første situation i sætning \ref{saet.difflig2.hom1}. Karakterligningen har altså to reelle rødder, og de er $ \lambda_1 = -2 $ og $ \lambda_2 = 2 $. Karakterligningen er derfor
+Nu betragtes den fuldstÃ¦ndige homogene lÃ¸sning. Udseendet pÃ¥ denne stemmer overens med den fÃ¸rste situation i sÃ¦tning \ref{saet.difflig2.hom1}. Karakterligningen har altsÃ¥ to reelle rÃ¸dder, og de er $ \lambda_1 = -2 $ og $ \lambda_2 = 2 $. Karakterligningen er derfor
 \begin{equation}
 (\lambda + 2)(\lambda - 2) = \lambda^2 - 4 = 0
 \end{equation}
-Dette afgør koefficienterne på venstresiden af differentialligningen: $ a_1 = 0 $ og $ a_0 = -4 $. Differentialligningen ser altså indtil videre således ud:
+Dette afgÃ¸r koefficienterne pÃ¥ venstresiden af differentialligningen: $ a_1 = 0 $ og $ a_0 = -4 $. Differentialligningen ser altsÃ¥ indtil videre sÃ¥ledes ud:
 \begin{equation}
 x''(t) -4x(t) = q(t), \quad t \in \reel.
 \end{equation}
-Da $ x_0(t) $ er en partikulær løsning til den inhomogene differentialligning kan højresiden $ q(t) $ bestemmes ved at indsætte $ x_0(t) $. Vi har, at $ x_0''(t) = 2\sin(2t) $.
+Da $ x_0(t) $ er en partikulÃ¦r lÃ¸sning til den inhomogene differentialligning kan hÃ¸jresiden $ q(t) $ bestemmes ved at indsÃ¦tte $ x_0(t) $. Vi har, at $ x_0''(t) = 2\sin(2t) $.
 \begin{equation}
 \begin{aligned}
 x_0''(t) -4x_0(t) &= q(t) \, \Leftrightarrow \\
@@ -711,29 +711,29 @@ x''(t) - 4 x(t) = 4\sin(2t), \quad t \in \reel.
 \end{example}
 
 \begin{info}
-I dette notesystem beskæftiger vi os ikke med systemer af 2. ordens homogene lineære differentialligninger med konstante koefficienter. Det skal dog tilføjes at vi allerede med den gennemgåede teori og lidt snilde kan løse sådanne problemer. Hvis vi har et system af 2. ordens homogene differentialligninger, kan vi betragte hver differentialligning for sig. Ved hjælp af \tref{NUID13-subsek.omf1}{afsnit} kan en sådan ligning omformes til 2 ligninger af 1. orden. Gøres det med alle differentialligningerne i systemet, ender vi med dobbelt så mange differentialligninger, nu af 1. orden. Dette nye system kan vi løse med den gennemgåede teori i \tref{NUID13-tn12}{eNote}. Systemer af 2. ordens homogene lineære differentialligninger findes mange steder i mekanisk fysik, kemi, elektromagnetisme m.fl.
+I dette notesystem beskÃ¦ftiger vi os ikke med systemer af 2. ordens homogene lineÃ¦re differentialligninger med konstante koefficienter. Det skal dog tilfÃ¸jes at vi allerede med den gennemgÃ¥ede teori og lidt snilde kan lÃ¸se sÃ¥danne problemer. Hvis vi har et system af 2. ordens homogene differentialligninger, kan vi betragte hver differentialligning for sig. Ved hjÃ¦lp af \tref{NUID13-subsek.omf1}{afsnit} kan en sÃ¥dan ligning omformes til 2 ligninger af 1. orden. GÃ¸res det med alle differentialligningerne i systemet, ender vi med dobbelt sÃ¥ mange differentialligninger, nu af 1. orden. Dette nye system kan vi lÃ¸se med den gennemgÃ¥ede teori i \tref{NUID13-tn12}{eNote}. Systemer af 2. ordens homogene lineÃ¦re differentialligninger findes mange steder i mekanisk fysik, kemi, elektromagnetisme m.fl.
 \end{info}
 
 \begin{summary}
-I denne note skrives lineære 2. ordens differentialligninger med konstante koefficienter, som generelt har dette udseende:
+I denne note skrives lineÃ¦re 2. ordens differentialligninger med konstante koefficienter, som generelt har dette udseende:
 \begin{equation}
 x''(t) + a_1 x'(t) + a_0 x(t) = q(t)
 \end{equation}
 \begin{itemize}
-\item Disse differentialligninger løses ved først at bestemme den fuldstændige løsning til den tilsvarende homogene differentialligning og derefter lægge den sammen med en partikulær løsning til den inhomogene differentialligning, se metode \ref{saet.difflig2.struk1}.
-\item Den fuldstændige løsning til den tilsvarende homogene differentialligning bestemmes ved at finde rødderne til differentialligningens \textit{karakterligning}:
+\item Disse differentialligninger lÃ¸ses ved fÃ¸rst at bestemme den fuldstÃ¦ndige lÃ¸sning til den tilsvarende homogene differentialligning og derefter lÃ¦gge den sammen med en partikulÃ¦r lÃ¸sning til den inhomogene differentialligning, se metode \ref{saet.difflig2.struk1}.
+\item Den fuldstÃ¦ndige lÃ¸sning til den tilsvarende homogene differentialligning bestemmes ved at finde rÃ¸dderne til differentialligningens \textit{karakterligning}:
 \begin{equation}
 \lambda^2 + a_1 \lambda + a_0 = 0
 \end{equation}
-Der er principielt tre udfald, se sætning \ref{saet.difflig2.hom1}.
-\item En partikulær løsning bestemmes ved at ``gætte'' på en løsning, som har samme udseende som højresiden $ q(t) $. Er $ q(t) $ for eksempel et polynomium er $ x_0(t) $ også et polynomium af højst samme grad. I noten gives mange eksempler på udseender, se afsnit \ref{subsek.difflig2.inhom1}.
-\item Specielt findes \textit{den komplekse gættemetode} til at bestemme den partikulære løsning $ x_0(t) $. Den komplekse gættemetode kan bruges, når højresiden har dette udseende:
+Der er principielt tre udfald, se sÃ¦tning \ref{saet.difflig2.hom1}.
+\item En partikulÃ¦r lÃ¸sning bestemmes ved at ``gÃ¦tte'' pÃ¥ en lÃ¸sning, som har samme udseende som hÃ¸jresiden $ q(t) $. Er $ q(t) $ for eksempel et polynomium er $ x_0(t) $ ogsÃ¥ et polynomium af hÃ¸jst samme grad. I noten gives mange eksempler pÃ¥ udseender, se afsnit \ref{subsek.difflig2.inhom1}.
+\item Specielt findes \textit{den komplekse gÃ¦ttemetode} til at bestemme den partikulÃ¦re lÃ¸sning $ x_0(t) $. Den komplekse gÃ¦ttemetode kan bruges, nÃ¥r hÃ¸jresiden har dette udseende:
 \begin{equation}
 q(t) = \re \! \left((a+bi) \e^{(\alpha + \omega i)t}\right) = a \e^{\alpha t}\cos(\omega t) - b \e^{\alpha t} \sin(\omega t).
 \end{equation}
-Løsningen bestemmes da ved at omdanne differentialligningen til den tilsvarende komplekse form, se metode \ref{met.kompl}.
-\item Endvidere introduceres \textit{superpositionsprincippet}, som er et generelt princip, der findes indenfor alle typer af lineære differentialligninger. Ideen er at to partikulære løsninger kan lægges sammen. Når de sættes ind i differentialligningen vil de ikke have nogen indflydelse på hinanden, hvorfor højresiden ligeså vil kunne deles i to led, der hver tilhører en af de to løsninger. Det kan bruges til at bestemme partikulære løsning, når højresiden er en sum af for eksempel en sinusfunktion og et polynomium. Se for eksempel eksempel \ref{eks.difflig2.super1}.
-\item Endvidere formuleres en \textit{eksistens- og entydighedssætning}, se sætning \ref{saet.difflig2.eksent1}. Her står at man med to særlige \textit{begyndelsesværdibetingelser} kan bestemme en entydig og betinget løsning til en 2. ordens differentialligning.
+LÃ¸sningen bestemmes da ved at omdanne differentialligningen til den tilsvarende komplekse form, se metode \ref{met.kompl}.
+\item Endvidere introduceres \textit{superpositionsprincippet}, som er et generelt princip, der findes indenfor alle typer af lineÃ¦re differentialligninger. Ideen er at to partikulÃ¦re lÃ¸sninger kan lÃ¦gges sammen. NÃ¥r de sÃ¦ttes ind i differentialligningen vil de ikke have nogen indflydelse pÃ¥ hinanden, hvorfor hÃ¸jresiden ligesÃ¥ vil kunne deles i to led, der hver tilhÃ¸rer en af de to lÃ¸sninger. Det kan bruges til at bestemme partikulÃ¦re lÃ¸sning, nÃ¥r hÃ¸jresiden er en sum af for eksempel en sinusfunktion og et polynomium. Se for eksempel eksempel \ref{eks.difflig2.super1}.
+\item Endvidere formuleres en \textit{eksistens- og entydighedssÃ¦tning}, se sÃ¦tning \ref{saet.difflig2.eksent1}. Her stÃ¥r at man med to sÃ¦rlige \textit{begyndelsesvÃ¦rdibetingelser} kan bestemme en entydig og betinget lÃ¸sning til en 2. ordens differentialligning.
 \end{itemize}
 \end{summary}
 
