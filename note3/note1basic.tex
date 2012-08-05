@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 % Include preamble for enote (PDF-ref, PDF-print, PDF-screen og PDF-book as you like during authoring)
 % This line will be substituted on the server during automatic rendering to include the preamble of the user-chosen output format.
 \input{../../common/preamble_PDF_enote-ref.tex}
@@ -72,4 +73,80 @@ Proin lorem enim, ultricies et volutpat gravida, ultrices at metus. Quisque eges
 Fusce imperdiet, urna nec placerat consectetur, odio eros bibendum urna, in pulvinar libero eros in diam. Proin ligula nulla, varius sed vestibulum vel, iaculis eget sapien.
 
 % Include the post-amble before ending the document:
+=======
+% Include preamble for enote (PDF-ref, PDF-print, PDF-screen og PDF-book as you like during authoring)
+% This line will be substituted on the server during automatic rendering to include the preamble of the user-chosen output format.
+\input{../../common/preamble_PDF_enote-ref.tex}
+
+%Chapters within a book must have unique numbers. 
+% Set the number below to one below(!) the actual chapter number of this note. 
+% The number will be incremented automatically to the right value.
+\setcounter{chapter}{0} 
+
+% Chapter title. It has a label. Label usage must be unique within a single chapter or note.
+\chapter{Lorem Ipsum Dolor} \label{mychapter}
+
+% Some bodytext with a small equation inside:
+Lorem ippssssum dolor sit amet, coectetur adipiscing elit. Donec dolor nibh, facilisis non $a^2 + b^2 = c^2$ semper at, ullamcorper ultrices felis. Aliquam ut dui diam. Cras porta posuere dolor vitae laoreet. In eu sem purus. 
+
+% A section starts. It has a label:
+\section{Donec dolor nibh}
+\label{myfirstsection}
+
+Vivamus \ind{pharetra turpis}{Pharetra Turpis} eu sem viverra $n$ pharetra
+
+% An equation:
+\begin{equation} \label{myeq.1}
+a_1\cdot x_1+a_2\cdot x_2+...+a_n\cdot x_n=b\,.
+\end{equation}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+Cras nisisse magnama $a_1,\,a_2,\,...\,,a_n$ rutrum \textit{ac tincidunt} ut, pretium eu sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam bibendum interdum faucibus. \textbf{Curabitur neque} eros, ultricies in mollis sed, aliquam et elit. 
+=======
+Crasssebørstig nisi magna $a_1,\,a_2,\,...\,,a_n$ rutrum \textit{ac tincidunt} ut, pretium eu sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam bibendum interdum faucibus. \textbf{Curabitur neque} eros, ultricies in mollis sed, aliquam et elit. 
+>>>>>>> Test
+=======
+Crasssebørstig nisitissi magna $a_1,\,a_2,\,...\,,a_n$ rutrum \textit{ac tincidunt} ut, pretium eu sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam bibendum interdum faucibus. \textbf{Curabitur neque} eros, ultricies in mollis sed, aliquam et elit. 
+>>>>>>> Test
+
+Nunc sit amet ipsum ac nisi fringilla tincidunt. Proin egestas urna in dui pharetra bibendum. Vivamus massa erat, accumsan elementum bibendum id, venenatis nec leo. Sed vel mattis sem. Vivamus pharetra turpis eu sem viverra pharetra. Aliquam porttitor augue ac erat dapibus sit amet sagittis tellus rhoncus. Praesent lorem orci, ultricies et luctus ut, viverra ac nulla. Donec varius facilisis risus ut dictum. Nam est libero, tempus eu tincidunt eget, viverra at risus. Donec non erat in ante vehicula vulputate.
+
+TEST Aliquam erat volutpat. Etiam aliquam, magna sit amet luctus condimentum, nisl tortor tempus augue, eu tristique urna arcu nec felis. Morbi sed arcu sem, ut malesuada neque.
+
+Some non ASCII characters: ÆØÅæøå
+
+% Now we have an "example" box-environment. It has a label.
+\begin{example}[Nunc sit amet ipsum]\label{myexample.1}
+Aliquam porttitor augue
+\begin{equation}
+0x_1+0x_2+0x_3+0x_4= \frac{x^2}{x^3+2x}\,\,\Leftrightarrow\,\,0=0
+\end{equation}
+Quisque et risus vitae mi gravida pharetra ac condimentum ligula. Sed dolor elit, ornare rutrum semper eu, fermentum dapibus elit. Nunc a magna felis, eget adipiscing erat. Etiam a augue sem. Aliquam at leo eget lectus aliquet tristique. Sed blandit pulvinar hendrerit. Proin vel lorem quis arcu faucibus lacinia id et diam. Suspendisse eget elit purus. Nam molestie nibh eu odio vulputate pellentesque $x=(x_1,\,x_2,\,x_3,\,x_4) \in R^4$.
+
+Morbi rhoncus rutrum ipsum, ac sollicitudin eros interdum quis \ind{aliquet tristique}{aliquet} venenatis blandit purus, id ornare libero dignissim ac
+\begin{equation}
+0x_1+0x_2+0x_3+0x_4=1\,\,\Leftrightarrow\,\,0=1\,.
+\end{equation}
+\end{example}
+
+% Now we have a "case" box-environment. It contains some references.
+\begin{case}[My Casestory Title!]
+
+Morbi rhoncus rutrum ipsum, ac sollicitudin eros interdum quis. Ut gravida arcu nec turpis commodo lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In adipiscing, est at mattis luctus, magna nibh dapibus lorem, non pharetra orci neque ac metus. Phasellus tincidunt, orci ut vestibulum sagittis, magna tortor tristique odio, eu porttitor nibh leo at eros. Nullam dictum placerat sodales. Curabitur elementum hendrerit risus vel tristique. Pellentesque augue nulla, dignissim in consectetur non, rhoncus a enim. Fusce in sem purus, sit amet consectetur eros. In feugiat fermentum urna, in porttitor sem sagittis ut example \ref{myexample.1}. 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit pulvinar velit eget ultrices. Donec eleifend velit at elit volutpat at tincidunt nisi rutrum. Aenean ultricies aliquam sapien chapter \ref{NOTE2-mychapter}. Proin lorem enim, ultricies et volutpat gravida, ultrices at metus. Quisque egestas arcu imperdiet ipsum varius hendrerit. Phasellus a ipsum arcu, auctor varius felis. Sed orci eros, aliquet in porta vitae, adipiscing nec libero. Integer laoreet rhoncus porta. Cras nisi magna, rutrum ac tincidunt ut, pretium eu sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam bibendum interdum faucibus. Curabitur neque eros, ultricies in mollis sed, aliquam et elit. Nunc adipiscing sagittis dui et scelerisque equation \ref{myeq.1}.
+
+\end{case}
+
+Donec arcu mauris, suscipit sed pulvinar vel, consequat imperdiet eros. Fusce sit amet ipsum metus, id facilisis turpis. Donec sed diam sed purus tristique imperdiet eu vel enim. Vestibulum venenatis blandit purus, id ornare libero dignissim ac.
+
+\begin{info}
+Proin lorem enim, ultricies et volutpat gravida, ultrices at metus. Quisque egestas arcu imperdiet ipsum varius hendrerit. Phasellus a ipsum arcu, auctor varius felis.
+\end{info}
+
+Fusce imperdiet, urna nec placerat consectetur, odio eros bibendum urna, in pulvinar libero eros in diam. Proin ligula nulla, varius sed vestibulum vel, iaculis eget sapien.
+
+% Include the post-amble before ending the document:
+>>>>>>> ..
 \input{../../common/postamble_PDF_enote-ref.tex}
